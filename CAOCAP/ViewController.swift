@@ -20,7 +20,13 @@ class ViewController: UIViewController {
         //Setup scrollview
         view.insertSubview(scrollView, at: 0)
         scrollView.addSubview(canvas)
-        canvas.addSubview(node)
+        let firstNode = AddNode()
+        let secondNode = AddNode(color: .systemGreen)
+        let thirdNode = AddNode(color: .systemPink)
+        canvas.addSubview(firstNode)
+        canvas.addSubview(secondNode)
+        canvas.addSubview(thirdNode)
+        
         NSLayoutConstraint.activate([
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -34,10 +40,20 @@ class ViewController: UIViewController {
             canvas.heightAnchor.constraint(equalToConstant: view.frame.height + 200),
             canvas.widthAnchor.constraint(equalToConstant: view.frame.width + 200 ),
             
-            node.centerXAnchor.constraint(equalTo: canvas.centerXAnchor),
-            node.centerYAnchor.constraint(equalTo: canvas.centerYAnchor),
-            node.heightAnchor.constraint(equalToConstant: 100),
-            node.widthAnchor.constraint(equalToConstant: 200)
+            firstNode.centerXAnchor.constraint(equalTo: canvas.centerXAnchor),
+            firstNode.centerYAnchor.constraint(equalTo: canvas.centerYAnchor),
+            firstNode.heightAnchor.constraint(equalToConstant: 100),
+            firstNode.widthAnchor.constraint(equalToConstant: 200),
+            
+            secondNode.centerXAnchor.constraint(equalTo: canvas.centerXAnchor, constant: 250),
+            secondNode.centerYAnchor.constraint(equalTo: canvas.centerYAnchor, constant: 100),
+            secondNode.heightAnchor.constraint(equalToConstant: 100),
+            secondNode.widthAnchor.constraint(equalToConstant: 200),
+            
+            thirdNode.centerXAnchor.constraint(equalTo: canvas.centerXAnchor, constant: 250),
+            thirdNode.centerYAnchor.constraint(equalTo: canvas.centerYAnchor, constant: -100),
+            thirdNode.heightAnchor.constraint(equalToConstant: 100),
+            thirdNode.widthAnchor.constraint(equalToConstant: 200)
         ])
         
         
@@ -54,17 +70,18 @@ class ViewController: UIViewController {
     let canvas: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 10
         view.backgroundColor = .secondarySystemFill
         return view
     }()
     
-    let node: UIView = {
+    func AddNode(color: UIColor = .systemBlue) -> UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 10
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = color
         return view
-    }()
+    }
     
     
 }
