@@ -11,7 +11,10 @@ import WebKit
 class ViewController: UIViewController {
     
     var nodeTree = [UIView]()
+    var undoneNodeTree = [UIView]()
     @IBOutlet weak var webview: WKWebView!
+    @IBOutlet weak var undoButton: UIButton!
+    @IBOutlet weak var redoButton: UIButton!
     
     var canvasHeightConstraint = NSLayoutConstraint()
     var canvasWidthConstraint = NSLayoutConstraint()
@@ -29,7 +32,7 @@ class ViewController: UIViewController {
         view.backgroundColor = .secondarySystemFill
         return view
     }()
-
+    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -41,6 +44,15 @@ class ViewController: UIViewController {
         view.insertSubview(scrollView, at: 0)
         scrollView.addSubview(canvas)
         
+        let startingNode = AddNode()
+        nodeTree.append(startingNode)
+        canvas.addSubview(startingNode)
+        
+        canvasHeightConstraint = canvas.heightAnchor.constraint(equalToConstant: view.frame.height + 200)
+        canvasWidthConstraint = canvas.widthAnchor.constraint(equalToConstant: view.frame.width + 200 )
+        canvasHeightConstraint.isActive = true
+        canvasWidthConstraint.isActive = true
+        
         NSLayoutConstraint.activate([
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
@@ -51,12 +63,14 @@ class ViewController: UIViewController {
             canvas.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
             canvas.topAnchor.constraint(equalTo: scrollView.topAnchor),
             canvas.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            
+            startingNode.leadingAnchor.constraint(equalTo: canvas.leadingAnchor, constant: canvasWidthConstraint.constant / 2),
+            startingNode.centerYAnchor.constraint(equalTo: canvas.centerYAnchor),
+            startingNode.heightAnchor.constraint(equalToConstant: 60),
+            startingNode.widthAnchor.constraint(equalToConstant: 150),
         ])
         
-        canvasHeightConstraint = canvas.heightAnchor.constraint(equalToConstant: view.frame.height + 200)
-        canvasWidthConstraint = canvas.widthAnchor.constraint(equalToConstant: view.frame.width + 200 )
-        canvasHeightConstraint.isActive = true
-        canvasWidthConstraint.isActive = true
+        
         
         
         //Load HTML
@@ -71,31 +85,59 @@ class ViewController: UIViewController {
         return view
     }
     
-    @IBAction func didPressAdd(_ sender: Any) {
-        let newNode = AddNode()
-        nodeTree.append(newNode)
-        canvas.addSubview(newNode)
-        print(nodeTree.count)
-        
-        if nodeTree.count == 1 {
+    @IBAction func didPressAddNode(_ sender: UIButton) {
+        undoneNodeTree.removeAll()
+        redoButton.isEnabled = false
+        let newNode: UIView
+        if sender.tag == 0 {
+            newNode = AddNode(color: .systemGreen)
+            canvas.addSubview(newNode)
             NSLayoutConstraint.activate([
-                newNode.leadingAnchor.constraint(equalTo: canvas.leadingAnchor, constant: canvasWidthConstraint.constant / 2),
-                newNode.centerYAnchor.constraint(equalTo: canvas.centerYAnchor),
-                newNode.heightAnchor.constraint(equalToConstant: 60),
-                newNode.widthAnchor.constraint(equalToConstant: 150),
+                newNode.leadingAnchor.constraint(equalTo: nodeTree[nodeTree.count - 1].trailingAnchor, constant: 30),
+                newNode.bottomAnchor.constraint(equalTo: nodeTree[nodeTree.count - 1].topAnchor, constant: 0),
             ])
         } else {
-            canvasHeightConstraint.constant += 90
-            canvasWidthConstraint.constant += 180
+            newNode = AddNode(color: .systemPink)
+            canvas.addSubview(newNode)
             NSLayoutConstraint.activate([
-                newNode.leadingAnchor.constraint(equalTo: nodeTree[nodeTree.count - 2].trailingAnchor, constant: 30),
-                newNode.bottomAnchor.constraint(equalTo: nodeTree[nodeTree.count - 2].topAnchor, constant: 30),
-                newNode.heightAnchor.constraint(equalToConstant: 60),
-                newNode.widthAnchor.constraint(equalToConstant: 150),
+                newNode.leadingAnchor.constraint(equalTo: nodeTree[nodeTree.count - 1].trailingAnchor, constant: 30),
+                newNode.topAnchor.constraint(equalTo: nodeTree[nodeTree.count - 1].bottomAnchor, constant: 0),
             ])
         }
         
+        NSLayoutConstraint.activate([
+            newNode.heightAnchor.constraint(equalToConstant: 60),
+            newNode.widthAnchor.constraint(equalToConstant: 150),
+        ])
         
+        
+        undoButton.isEnabled = true
+        canvasHeightConstraint.constant += 90
+        canvasWidthConstraint.constant += 180
+        nodeTree.append(newNode)
+        print(nodeTree.count)
+    }
+    
+    @IBAction func didPressUndo(_ sender: UIButton) {
+        if nodeTree.count > 1 {
+            let removedNode = nodeTree.removeLast()
+            removedNode.removeFromSuperview()
+            print(nodeTree.count)
+            canvasHeightConstraint.constant -= 90
+            canvasWidthConstraint.constant -= 180
+            undoButton.isEnabled = nodeTree.count > 1
+            undoneNodeTree.append(removedNode)
+            redoButton.isEnabled = true
+        }
+    }
+    
+    @IBAction func didPressRedo(_ sender: UIButton) {
+        if !undoneNodeTree.isEmpty {
+            let recoveredNode = undoneNodeTree.removeFirst()
+            nodeTree.append(recoveredNode)
+            canvas.addSubview(recoveredNode)
+            redoButton.isEnabled = !undoneNodeTree.isEmpty
+        }
     }
 }
 
