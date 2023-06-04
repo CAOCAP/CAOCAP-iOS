@@ -20,9 +20,23 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAS-jS-Vj6">
                                 <rect key="frame" x="20" y="532" width="353" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0y0-Zf-mFi">
+                                        <rect key="frame" x="20" y="132.66666666666663" width="313" height="35"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Add"/>
+                                        <connections>
+                                            <action selector="didPressAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1zh-af-gBN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                                 <constraints>
+                                    <constraint firstItem="0y0-Zf-mFi" firstAttribute="centerX" secondItem="nAS-jS-Vj6" secondAttribute="centerX" id="Yxb-10-4QE"/>
+                                    <constraint firstItem="0y0-Zf-mFi" firstAttribute="centerY" secondItem="nAS-jS-Vj6" secondAttribute="centerY" id="msw-dt-hze"/>
                                     <constraint firstAttribute="height" constant="300" id="qKo-Oz-r75"/>
+                                    <constraint firstAttribute="trailing" secondItem="0y0-Zf-mFi" secondAttribute="trailing" constant="20" id="v1c-In-hJA"/>
                                 </constraints>
                             </view>
                             <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAm-8E-NFz">
