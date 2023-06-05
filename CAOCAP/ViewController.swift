@@ -64,10 +64,11 @@ class ViewController: UIViewController {
             canvas.topAnchor.constraint(equalTo: scrollView.topAnchor),
             canvas.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
             
-            startingNode.leadingAnchor.constraint(equalTo: canvas.leadingAnchor, constant: canvasWidthConstraint.constant / 2),
-            startingNode.centerYAnchor.constraint(equalTo: canvas.centerYAnchor),
+            
             startingNode.heightAnchor.constraint(equalToConstant: 60),
             startingNode.widthAnchor.constraint(equalToConstant: 150),
+            startingNode.leadingAnchor.constraint(equalTo: canvas.leadingAnchor, constant: canvasWidthConstraint.constant / 2 - 75),
+            startingNode.centerYAnchor.constraint(equalTo: canvas.centerYAnchor),
         ])
         
         
