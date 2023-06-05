@@ -78,11 +78,17 @@ class ViewController: UIViewController {
         webview.loadHTMLString("<h1>Hello CAOCAP</h1>", baseURL: nil)
     }
     
-    func AddNode(color: UIColor = .systemBlue) -> UIView {
+    func AddNode(title: String = "Start", color: UIColor = .systemBlue) -> UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 10
         view.backgroundColor = color
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 60))
+        label.textAlignment = .center
+        label.text = title
+        
+        label.font
+        view.addSubview(label)
         return view
     }
     
@@ -91,14 +97,14 @@ class ViewController: UIViewController {
         redoButton.isEnabled = false
         let newNode: UIView
         if sender.tag == 0 {
-            newNode = AddNode(color: .systemGreen)
+            newNode = AddNode(title: "Head", color: .systemGreen)
             canvas.addSubview(newNode)
             NSLayoutConstraint.activate([
                 newNode.leadingAnchor.constraint(equalTo: nodeTree[nodeTree.count - 1].trailingAnchor, constant: 30),
                 newNode.bottomAnchor.constraint(equalTo: nodeTree[nodeTree.count - 1].topAnchor, constant: 0),
             ])
         } else {
-            newNode = AddNode(color: .systemPink)
+            newNode = AddNode(title: "Body", color: .systemPink)
             canvas.addSubview(newNode)
             NSLayoutConstraint.activate([
                 newNode.leadingAnchor.constraint(equalTo: nodeTree[nodeTree.count - 1].trailingAnchor, constant: 30),
