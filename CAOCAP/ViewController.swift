@@ -86,8 +86,7 @@ class ViewController: UIViewController {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 60))
         label.textAlignment = .center
         label.text = title
-        
-        label.font
+        label.font = UIFont.boldSystemFont(ofSize: 16.0)
         view.addSubview(label)
         return view
     }
