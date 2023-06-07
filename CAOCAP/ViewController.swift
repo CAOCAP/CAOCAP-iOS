@@ -8,10 +8,31 @@
 import UIKit
 import WebKit
 
+struct Node {
+    let id = UUID.init()
+    let title: String
+    let color: UIColor
+    var children: [Node]
+    
+    init(title: String = "Start", color: UIColor = .systemBlue, children: [Node] = []) {
+        self.title = title
+        self.color = color
+        self.children = children
+    }
+}
+
+struct NodeTree {
+    var root = Node()
+    var selectedID: UUID
+    
+    init() { selectedID = root.id }
+}
+
+
 class ViewController: UIViewController {
     
-    var nodeTree = [UIView]()
-    var undoneNodeTree = [UIView]()
+    var nodeTree = NodeTree()
+    var nodeTreeHistory = [NodeTree]()
     @IBOutlet weak var webview: WKWebView!
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var redoButton: UIButton!
@@ -44,14 +65,12 @@ class ViewController: UIViewController {
         view.insertSubview(scrollView, at: 0)
         scrollView.addSubview(canvas)
         
-        let startingNode = AddNode()
-        nodeTree.append(startingNode)
-        canvas.addSubview(startingNode)
-        
         canvasHeightConstraint = canvas.heightAnchor.constraint(equalToConstant: view.frame.height + 200)
         canvasWidthConstraint = canvas.widthAnchor.constraint(equalToConstant: view.frame.width + 200 )
         canvasHeightConstraint.isActive = true
         canvasWidthConstraint.isActive = true
+        
+        loadMindMap()
         
         NSLayoutConstraint.activate([
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -63,86 +82,82 @@ class ViewController: UIViewController {
             canvas.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
             canvas.topAnchor.constraint(equalTo: scrollView.topAnchor),
             canvas.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            
-            
-            startingNode.heightAnchor.constraint(equalToConstant: 60),
-            startingNode.widthAnchor.constraint(equalToConstant: 150),
-            startingNode.leadingAnchor.constraint(equalTo: canvas.leadingAnchor, constant: canvasWidthConstraint.constant / 2 - 75),
-            startingNode.centerYAnchor.constraint(equalTo: canvas.centerYAnchor),
         ])
-        
-        
-        
         
         //Load HTML
         webview.loadHTMLString("<h1>Hello CAOCAP</h1>", baseURL: nil)
     }
     
-    func AddNode(title: String = "Start", color: UIColor = .systemBlue) -> UIView {
+    
+    func loadMindMap() {
+        let startingNode = createNodeView(from: nodeTree.root)
+        canvas.addSubview(startingNode)
+        NSLayoutConstraint.activate([
+            startingNode.heightAnchor.constraint(equalToConstant: 60),
+            startingNode.widthAnchor.constraint(equalToConstant: 150),
+            startingNode.leadingAnchor.constraint(equalTo: canvas.leadingAnchor, constant: canvasWidthConstraint.constant / 2 - 75),
+            startingNode.centerYAnchor.constraint(equalTo: canvas.centerYAnchor),
+        ])
+    }
+    
+    func updateMindMap() {
+        var node = nodeTree.root
+        while true {
+            let nodeView = createNodeView(from: node)
+            canvas.addSubview(nodeView)
+            NSLayoutConstraint.activate([
+                nodeView.heightAnchor.constraint(equalToConstant: 60),
+                nodeView.widthAnchor.constraint(equalToConstant: 150),
+    //            nodeView.leadingAnchor.constraint(equalTo: .trailingAnchor, constant: 30),
+    //            nodeView.topAnchor.constraint(equalTo: .bottomAnchor, constant: 0),
+            ])
+            canvasHeightConstraint.constant += 60
+            canvasWidthConstraint.constant += 180
+            node = node.children[0]
+            break
+        }
+    }
+    
+    func createNodeView(from node: Node) -> UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 10
-        view.backgroundColor = color
+        view.backgroundColor = node.color
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 60))
         label.textAlignment = .center
-        label.text = title
+        label.text = node.title
         label.font = UIFont.boldSystemFont(ofSize: 16.0)
         view.addSubview(label)
         return view
     }
     
     @IBAction func didPressAddNode(_ sender: UIButton) {
-        undoneNodeTree.removeAll()
+        nodeTreeHistory.removeAll()
         redoButton.isEnabled = false
-        let newNode: UIView
-        if sender.tag == 0 {
-            newNode = AddNode(title: "Head", color: .systemGreen)
-            canvas.addSubview(newNode)
-            NSLayoutConstraint.activate([
-                newNode.leadingAnchor.constraint(equalTo: nodeTree[nodeTree.count - 1].trailingAnchor, constant: 30),
-                newNode.bottomAnchor.constraint(equalTo: nodeTree[nodeTree.count - 1].topAnchor, constant: 0),
-            ])
-        } else {
-            newNode = AddNode(title: "Body", color: .systemPink)
-            canvas.addSubview(newNode)
-            NSLayoutConstraint.activate([
-                newNode.leadingAnchor.constraint(equalTo: nodeTree[nodeTree.count - 1].trailingAnchor, constant: 30),
-                newNode.topAnchor.constraint(equalTo: nodeTree[nodeTree.count - 1].bottomAnchor, constant: 0),
-            ])
-        }
-        
-        NSLayoutConstraint.activate([
-            newNode.heightAnchor.constraint(equalToConstant: 60),
-            newNode.widthAnchor.constraint(equalToConstant: 150),
-        ])
-        
-        
         undoButton.isEnabled = true
-        canvasHeightConstraint.constant += 90
-        canvasWidthConstraint.constant += 180
-        nodeTree.append(newNode)
-        print(nodeTree.count)
+        let node = sender.tag == 0 ? Node(title: "Head", color: .systemGreen) : Node(title: "Body", color: .systemPink)
+        nodeTree.root.children.append(node)
+        print(nodeTree.root.children.count)
+        updateMindMap()
     }
     
     @IBAction func didPressUndo(_ sender: UIButton) {
-        if nodeTree.count > 1 {
-            let removedNode = nodeTree.removeLast()
-            removedNode.removeFromSuperview()
-            print(nodeTree.count)
-            canvasHeightConstraint.constant -= 90
-            canvasWidthConstraint.constant -= 180
-            undoButton.isEnabled = nodeTree.count > 1
-            undoneNodeTree.append(removedNode)
+        if nodeTree.root.children.count > 1 {
+            let removedNode = nodeTree.root.children.removeLast()
+            print(nodeTree.root.children.count)
+            undoButton.isEnabled = nodeTree.root.children.count > 1
             redoButton.isEnabled = true
+            nodeTreeHistory.append(nodeTree)
+            updateMindMap()
         }
     }
     
     @IBAction func didPressRedo(_ sender: UIButton) {
-        if !undoneNodeTree.isEmpty {
-            let recoveredNode = undoneNodeTree.removeFirst()
-            nodeTree.append(recoveredNode)
-            canvas.addSubview(recoveredNode)
-            redoButton.isEnabled = !undoneNodeTree.isEmpty
+        if !nodeTreeHistory.isEmpty {
+            let recoveredNodeTree = nodeTreeHistory.removeFirst()
+            nodeTree = recoveredNodeTree
+            redoButton.isEnabled = !nodeTreeHistory.isEmpty
+            updateMindMap()
         }
     }
 }
