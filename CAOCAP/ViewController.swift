@@ -8,31 +8,12 @@
 import UIKit
 import WebKit
 
-struct Node {
-    let id = UUID.init()
-    let title: String
-    let color: UIColor
-    var children: [Node]
-    
-    init(title: String = "Start", color: UIColor = .systemBlue, children: [Node] = []) {
-        self.title = title
-        self.color = color
-        self.children = children
-    }
-}
 
-struct NodeTree {
-    var root = Node()
-    var selectedID: UUID
-    
-    init() { selectedID = root.id }
-}
-
-
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIScrollViewDelegate {
     
     var nodeTree = NodeTree()
     var nodeTreeHistory = [NodeTree]()
+    
     @IBOutlet weak var webview: WKWebView!
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var redoButton: UIButton!
@@ -64,6 +45,10 @@ class ViewController: UIViewController {
         //Setup scrollview
         view.insertSubview(scrollView, at: 0)
         scrollView.addSubview(canvas)
+        scrollView.delegate = self
+        scrollView.minimumZoomScale = 0.3
+        scrollView.maximumZoomScale = 3.0
+        scrollView.zoomScale = 1.0
         
         canvasHeightConstraint = canvas.heightAnchor.constraint(equalToConstant: view.frame.height + 200)
         canvasWidthConstraint = canvas.widthAnchor.constraint(equalToConstant: view.frame.width + 200 )
@@ -160,5 +145,8 @@ class ViewController: UIViewController {
             updateMindMap()
         }
     }
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return canvas
+    }
 }
-
