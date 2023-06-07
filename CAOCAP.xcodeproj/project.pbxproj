@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2186DB0D2A30946900773C5E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2186DB0C2A30946900773C5E /* Extensions.swift */; };
 		218DA9C92A2B205800459C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218DA9C82A2B205800459C61 /* AppDelegate.swift */; };
 		218DA9CB2A2B205800459C61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218DA9CA2A2B205800459C61 /* SceneDelegate.swift */; };
 		218DA9CD2A2B205800459C61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218DA9CC2A2B205800459C61 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2186DB0C2A30946900773C5E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		218DA9C52A2B205800459C61 /* CAOCAP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAOCAP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		218DA9C82A2B205800459C61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		218DA9CA2A2B205800459C61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				218DA9C82A2B205800459C61 /* AppDelegate.swift */,
 				218DA9CA2A2B205800459C61 /* SceneDelegate.swift */,
 				218DA9CC2A2B205800459C61 /* ViewController.swift */,
+				2186DB0C2A30946900773C5E /* Extensions.swift */,
 				218DA9CE2A2B205800459C61 /* Main.storyboard */,
 				218DA9D12A2B205900459C61 /* Assets.xcassets */,
 				218DA9D32A2B205900459C61 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				218DA9CD2A2B205800459C61 /* ViewController.swift in Sources */,
 				218DA9C92A2B205800459C61 /* AppDelegate.swift in Sources */,
 				218DA9CB2A2B205800459C61 /* SceneDelegate.swift in Sources */,
+				2186DB0D2A30946900773C5E /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
