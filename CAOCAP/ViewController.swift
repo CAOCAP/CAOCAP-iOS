@@ -31,7 +31,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 10
-        view.backgroundColor = .secondarySystemFill
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "dot")!)
         return view
     }()
     
