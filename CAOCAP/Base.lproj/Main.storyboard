@@ -301,7 +301,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="-309" y="-218"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fR9-Jp-f0Z">
@@ -320,41 +320,164 @@
                                 <color key="tintColor" systemColor="labelColor"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0W1-Vc-RQe">
-                                <rect key="frame" x="96.666666666666686" y="408.66666666666669" width="200" height="35"/>
+                                <rect key="frame" x="71.666666666666686" y="381" width="250" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="1ME-4d-ZHL"/>
+                                    <constraint firstAttribute="width" constant="250" id="1ME-4d-ZHL"/>
+                                    <constraint firstAttribute="height" constant="50" id="mvF-n4-6bG"/>
                                 </constraints>
                                 <color key="tintColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Start"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Create Project"/>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="show" id="VvA-2K-oWU"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7YE-o0-JlD">
+                                <rect key="frame" x="51.666666666666657" y="461" width="290" height="34.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpg-LF-Slc">
+                                        <rect key="frame" x="0.0" y="0.0" width="57.333333333333336" height="34.333333333333336"/>
+                                        <color key="tintColor" systemColor="systemPurpleColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <buttonConfiguration key="configuration" style="tinted" image="paintpalette" catalog="system"/>
+                                        <connections>
+                                            <segue destination="rJq-Wj-2QX" kind="show" id="4UZ-Bo-Ath"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Se3-lA-1P6">
+                                        <rect key="frame" x="77.333333333333343" y="0.0" width="57.666666666666657" height="34.333333333333336"/>
+                                        <color key="tintColor" systemColor="systemYellowColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <buttonConfiguration key="configuration" style="tinted" image="cart" catalog="system"/>
+                                        <connections>
+                                            <segue destination="fhq-Ws-50g" kind="show" id="KE1-pw-Sgi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLH-rZ-w5a">
+                                        <rect key="frame" x="155" y="0.0" width="57.333333333333343" height="34.333333333333336"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="gear" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="gray" image="gear" catalog="system"/>
+                                        <connections>
+                                            <segue destination="f8E-Cg-PNO" kind="show" id="a4M-tP-Sbh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4c-ir-eD3">
+                                        <rect key="frame" x="232.33333333333334" y="0.0" width="57.666666666666657" height="34.333333333333336"/>
+                                        <color key="tintColor" systemColor="systemPinkColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="gear" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="tinted" image="bookmark" catalog="system"/>
+                                        <connections>
+                                            <segue destination="BKB-g1-NBX" kind="show" id="34a-r7-50C"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oAw-u5-Uif">
+                                <rect key="frame" x="223" y="763.66666666666652" width="150" height="34.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="MJN-zj-KR3"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="40y-qT-otl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="0W1-Vc-RQe" firstAttribute="centerX" secondItem="NWE-1t-ghM" secondAttribute="centerX" id="7jo-f6-sAp"/>
                             <constraint firstItem="q1j-2D-hDY" firstAttribute="trailing" secondItem="NWE-1t-ghM" secondAttribute="trailing" id="8Z9-eT-prS"/>
+                            <constraint firstItem="7YE-o0-JlD" firstAttribute="top" secondItem="0W1-Vc-RQe" secondAttribute="bottom" constant="30" id="EuB-qi-Qys"/>
                             <constraint firstItem="q1j-2D-hDY" firstAttribute="leading" secondItem="NWE-1t-ghM" secondAttribute="leading" id="PW3-TH-d08"/>
+                            <constraint firstItem="40y-qT-otl" firstAttribute="trailing" secondItem="oAw-u5-Uif" secondAttribute="trailing" constant="20" id="WId-Dr-xjR"/>
                             <constraint firstItem="q1j-2D-hDY" firstAttribute="top" secondItem="NWE-1t-ghM" secondAttribute="top" id="anJ-Ik-L2r"/>
-                            <constraint firstItem="0W1-Vc-RQe" firstAttribute="centerY" secondItem="NWE-1t-ghM" secondAttribute="centerY" id="fLp-wf-7Hl"/>
+                            <constraint firstItem="0W1-Vc-RQe" firstAttribute="centerY" secondItem="NWE-1t-ghM" secondAttribute="centerY" constant="-20" id="fLp-wf-7Hl"/>
+                            <constraint firstItem="40y-qT-otl" firstAttribute="bottom" secondItem="oAw-u5-Uif" secondAttribute="bottom" constant="20" id="hey-6p-dfQ"/>
                             <constraint firstAttribute="bottom" secondItem="q1j-2D-hDY" secondAttribute="bottom" id="tIk-pj-EBg"/>
+                            <constraint firstItem="7YE-o0-JlD" firstAttribute="centerX" secondItem="NWE-1t-ghM" secondAttribute="centerX" id="v5H-Lq-Ib4"/>
+                            <constraint firstItem="7YE-o0-JlD" firstAttribute="leading" secondItem="0W1-Vc-RQe" secondAttribute="leading" constant="-20" id="yzJ-6g-gZD"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aBE-Ww-O05" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-808" y="4"/>
+            <point key="canvasLocation" x="-1120" y="-218"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CGp-xd-Gep">
+            <objects>
+                <viewController id="rJq-Wj-2QX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UeM-nm-HSn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="iRW-lT-yjw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VRN-od-Iln"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ELs-0z-lWx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2178" y="723"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ze9-Xh-tBD">
+            <objects>
+                <viewController id="fhq-Ws-50g" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ACi-ma-4ib">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="zpm-7Y-pMg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OUO-eE-bQk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DoN-0n-QQJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1465" y="723"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="50w-kj-1TB">
+            <objects>
+                <viewController id="f8E-Cg-PNO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LyF-UT-FDf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="PE3-hc-yB2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dlR-TM-k1t"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hdj-rd-HtH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-789" y="723"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5pi-xE-rFc">
+            <objects>
+                <viewController id="BKB-g1-NBX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZQy-gv-u9S">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="S9N-Jy-NHY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hTu-UC-fJh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y2f-Lv-Ams" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-112" y="723"/>
         </scene>
     </scenes>
     <resources>
         <image name="SpaceSketchBG" width="1661" height="2214"/>
+        <image name="bookmark" catalog="system" width="110" height="128"/>
+        <image name="cart" catalog="system" width="128" height="102"/>
         <image name="chevron.compact.down" catalog="system" width="128" height="42"/>
         <image name="chevron.compact.left" catalog="system" width="62" height="128"/>
         <image name="chevron.compact.right" catalog="system" width="62" height="128"/>
         <image name="chevron.compact.up" catalog="system" width="128" height="42"/>
+        <image name="gear" catalog="system" width="128" height="122"/>
+        <image name="paintpalette" catalog="system" width="128" height="105"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.65499997138977051" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -384,6 +507,12 @@
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
