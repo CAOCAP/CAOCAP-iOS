@@ -8,7 +8,6 @@
 import UIKit
 import WebKit
 
-
 class ViewController: UIViewController, UIScrollViewDelegate {
     
     var nodeTree = NodeTree()
@@ -24,6 +23,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.minimumZoomScale = 0.3
+        scrollView.maximumZoomScale = 3.0
+        scrollView.zoomScale = 1.0
         return scrollView
     }()
     
@@ -35,7 +37,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         return view
     }()
     
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         scrollView.setContentOffset(CGPoint(x: 100, y: 100), animated: false)
@@ -46,9 +47,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         view.insertSubview(scrollView, at: 0)
         scrollView.addSubview(canvas)
         scrollView.delegate = self
-        scrollView.minimumZoomScale = 0.3
-        scrollView.maximumZoomScale = 3.0
-        scrollView.zoomScale = 1.0
         
         canvasHeightConstraint = canvas.heightAnchor.constraint(equalToConstant: view.frame.height + 200)
         canvasWidthConstraint = canvas.widthAnchor.constraint(equalToConstant: view.frame.width + 200 )

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gTz-hA-32a">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAS-jS-Vj6">
-                                <rect key="frame" x="20" y="586.33333333333337" width="353" height="245.66666666666663"/>
+                                <rect key="frame" x="20" y="596.33333333333337" width="353" height="245.66666666666663"/>
                                 <subviews>
                                     <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cP2-L4-azG">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="245.66666666666666"/>
@@ -218,46 +218,63 @@
                                         <real key="value" value="0.20000000000000001"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                        <size key="value" width="1" height="1"/>
+                                        <size key="value" width="0.0" height="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                         <color key="value" systemColor="labelColor"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAm-8E-NFz">
-                                <rect key="frame" x="20" y="20" width="200" height="300"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAm-8E-NFz">
+                                <rect key="frame" x="20" y="10" width="200" height="300"/>
                                 <subviews>
-                                    <wkWebView alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="diV-kw-ft4">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNI-cb-CRC">
                                         <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
-                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <wkWebViewConfiguration key="configuration">
-                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                            <wkPreferences key="preferences"/>
-                                        </wkWebViewConfiguration>
-                                    </wkWebView>
+                                        <subviews>
+                                            <wkWebView alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="diV-kw-ft4">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <wkWebViewConfiguration key="configuration">
+                                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                    <wkPreferences key="preferences"/>
+                                                </wkWebViewConfiguration>
+                                            </wkWebView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="diV-kw-ft4" secondAttribute="trailing" id="2Go-vo-BXY"/>
+                                            <constraint firstItem="diV-kw-ft4" firstAttribute="leading" secondItem="xNI-cb-CRC" secondAttribute="leading" id="5aF-m8-2wC"/>
+                                            <constraint firstAttribute="bottom" secondItem="diV-kw-ft4" secondAttribute="bottom" id="GLV-dA-ap5"/>
+                                            <constraint firstItem="diV-kw-ft4" firstAttribute="top" secondItem="xNI-cb-CRC" secondAttribute="top" id="bep-oo-Kf5"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                                 <constraints>
-                                    <constraint firstItem="diV-kw-ft4" firstAttribute="top" secondItem="pAm-8E-NFz" secondAttribute="top" id="0Kj-Kt-Qes"/>
-                                    <constraint firstItem="diV-kw-ft4" firstAttribute="centerY" secondItem="pAm-8E-NFz" secondAttribute="centerY" id="Ttd-vr-b7O"/>
+                                    <constraint firstItem="xNI-cb-CRC" firstAttribute="leading" secondItem="pAm-8E-NFz" secondAttribute="leading" id="PH9-rZ-xMP"/>
+                                    <constraint firstItem="xNI-cb-CRC" firstAttribute="top" secondItem="pAm-8E-NFz" secondAttribute="top" id="RZC-WT-uJn"/>
                                     <constraint firstAttribute="width" constant="200" id="aQZ-nU-jP4"/>
-                                    <constraint firstItem="diV-kw-ft4" firstAttribute="leading" secondItem="pAm-8E-NFz" secondAttribute="leading" id="eKm-wv-Luj"/>
                                     <constraint firstAttribute="height" constant="300" id="fZG-TQ-0x0"/>
-                                    <constraint firstItem="diV-kw-ft4" firstAttribute="centerX" secondItem="pAm-8E-NFz" secondAttribute="centerX" id="vNt-rg-lAF"/>
+                                    <constraint firstAttribute="trailing" secondItem="xNI-cb-CRC" secondAttribute="trailing" id="u2K-nB-JMl"/>
+                                    <constraint firstAttribute="bottom" secondItem="xNI-cb-CRC" secondAttribute="bottom" id="u3Q-oK-QdT"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="1"/>
+                                        <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
                                         <real key="value" value="0.20000000000000001"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                        <size key="value" width="1" height="1"/>
+                                        <size key="value" width="0.0" height="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                         <color key="value" systemColor="labelColor"/>
@@ -270,8 +287,8 @@
                         <constraints>
                             <constraint firstItem="nAS-jS-Vj6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8eM-ar-6e0"/>
                             <constraint firstItem="pAm-8E-NFz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="8w1-qL-zwv"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="nAS-jS-Vj6" secondAttribute="bottom" constant="20" id="ALn-cW-2pX"/>
-                            <constraint firstItem="pAm-8E-NFz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="GKK-SU-lJs"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="nAS-jS-Vj6" secondAttribute="bottom" constant="10" id="ALn-cW-2pX"/>
+                            <constraint firstItem="pAm-8E-NFz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="GKK-SU-lJs"/>
                             <constraint firstItem="nAS-jS-Vj6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="YhE-8I-bD9"/>
                         </constraints>
                     </view>
