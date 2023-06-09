@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2186DB0D2A30946900773C5E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2186DB0C2A30946900773C5E /* Extensions.swift */; };
-		2186DB0F2A30BD6600773C5E /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2186DB0E2A30BD6600773C5E /* Structs.swift */; };
+		2186DB0F2A30BD6600773C5E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2186DB0E2A30BD6600773C5E /* Node.swift */; };
 		2186DB112A30DF4700773C5E /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2186DB102A30DF4700773C5E /* ScrollView.swift */; };
 		218DA9C92A2B205800459C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218DA9C82A2B205800459C61 /* AppDelegate.swift */; };
 		218DA9CB2A2B205800459C61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218DA9CA2A2B205800459C61 /* SceneDelegate.swift */; };
@@ -20,7 +20,7 @@
 
 /* Begin PBXFileReference section */
 		2186DB0C2A30946900773C5E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		2186DB0E2A30BD6600773C5E /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		2186DB0E2A30BD6600773C5E /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		2186DB102A30DF4700773C5E /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
 		218DA9C52A2B205800459C61 /* CAOCAP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAOCAP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		218DA9C82A2B205800459C61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 				218DA9CA2A2B205800459C61 /* SceneDelegate.swift */,
 				218DA9CC2A2B205800459C61 /* ViewController.swift */,
 				2186DB102A30DF4700773C5E /* ScrollView.swift */,
-				2186DB0E2A30BD6600773C5E /* Structs.swift */,
+				2186DB0E2A30BD6600773C5E /* Node.swift */,
 				2186DB0C2A30946900773C5E /* Extensions.swift */,
 				218DA9CE2A2B205800459C61 /* Main.storyboard */,
 				218DA9D12A2B205900459C61 /* Assets.xcassets */,
@@ -149,7 +149,7 @@
 			files = (
 				218DA9CD2A2B205800459C61 /* ViewController.swift in Sources */,
 				218DA9C92A2B205800459C61 /* AppDelegate.swift in Sources */,
-				2186DB0F2A30BD6600773C5E /* Structs.swift in Sources */,
+				2186DB0F2A30BD6600773C5E /* Node.swift in Sources */,
 				218DA9CB2A2B205800459C61 /* SceneDelegate.swift in Sources */,
 				2186DB0D2A30946900773C5E /* Extensions.swift in Sources */,
 				2186DB112A30DF4700773C5E /* ScrollView.swift in Sources */,

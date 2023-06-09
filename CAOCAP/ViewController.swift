@@ -119,14 +119,14 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         redoButton.isEnabled = false
         undoButton.isEnabled = true
         let node = sender.tag == 0 ? Node(title: "Head", color: .systemGreen) : Node(title: "Body", color: .systemPink)
-        nodeTree.root.children.append(node)
+        nodeTree.root.add(child: node)
         print(nodeTree.root.children.count)
         updateMindMap()
     }
     
     @IBAction func didPressUndo(_ sender: UIButton) {
         if nodeTree.root.children.count > 1 {
-            let removedNode = nodeTree.root.children.removeLast()
+            nodeTree.root.removeLastNode()
             print(nodeTree.root.children.count)
             undoButton.isEnabled = nodeTree.root.children.count > 1
             redoButton.isEnabled = true
