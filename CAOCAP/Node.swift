@@ -14,7 +14,6 @@ struct NodeTree {
     init() { selectedID = root.id }
 }
 
-
 class Node: NSObject {
     // MARK: Stored properties
     let id = UUID()
@@ -90,5 +89,26 @@ class Node: NSObject {
     
 }
 
+class NodeView: UIView {
+    var node: Node
+    
+    init(_ node: Node) {
+        self.node = node
+        super.init(frame: .zero)
+        translatesAutoresizingMaskIntoConstraints = false
+        layer.cornerRadius = 10
+        backgroundColor = node.color
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 60))
+        label.textAlignment = .center
+        label.text = node.title
+        label.textColor = .white
+        label.font = UIFont.boldSystemFont(ofSize: 16.0)
+        addSubview(label)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
 
 

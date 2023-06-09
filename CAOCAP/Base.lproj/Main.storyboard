@@ -337,38 +337,43 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpg-LF-Slc">
                                         <rect key="frame" x="0.0" y="0.0" width="57.333333333333336" height="34.333333333333336"/>
-                                        <color key="tintColor" systemColor="systemPurpleColor"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <buttonConfiguration key="configuration" style="tinted" image="paintpalette" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="tinted" image="paintpalette" catalog="system">
+                                            <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
+                                            <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="rJq-Wj-2QX" kind="show" id="4UZ-Bo-Ath"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Se3-lA-1P6">
                                         <rect key="frame" x="77.333333333333343" y="0.0" width="57.666666666666657" height="34.333333333333336"/>
-                                        <color key="tintColor" systemColor="systemYellowColor"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <buttonConfiguration key="configuration" style="tinted" image="cart" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="tinted" image="cart" catalog="system">
+                                            <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                            <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="fhq-Ws-50g" kind="show" id="KE1-pw-Sgi"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLH-rZ-w5a">
                                         <rect key="frame" x="155" y="0.0" width="57.333333333333343" height="34.333333333333336"/>
-                                        <color key="tintColor" name="AccentColor"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="gear" catalog="system"/>
-                                        <buttonConfiguration key="configuration" style="gray" image="gear" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="tinted" image="gear" catalog="system"/>
                                         <connections>
                                             <segue destination="f8E-Cg-PNO" kind="show" id="a4M-tP-Sbh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4c-ir-eD3">
                                         <rect key="frame" x="232.33333333333334" y="0.0" width="57.666666666666657" height="34.333333333333336"/>
-                                        <color key="tintColor" systemColor="systemPinkColor"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="gear" catalog="system"/>
-                                        <buttonConfiguration key="configuration" style="tinted" image="bookmark" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="tinted" image="bookmark" catalog="system">
+                                            <color key="baseForegroundColor" systemColor="systemPinkColor"/>
+                                            <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <segue destination="BKB-g1-NBX" kind="show" id="34a-r7-50C"/>
                                         </connections>
