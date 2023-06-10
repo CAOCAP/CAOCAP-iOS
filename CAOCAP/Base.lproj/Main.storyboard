@@ -400,10 +400,10 @@
             </objects>
             <point key="canvasLocation" x="-1120" y="-218"/>
         </scene>
-        <!--View Controller-->
+        <!--PaletteVC-->
         <scene sceneID="CGp-xd-Gep">
             <objects>
-                <viewController id="rJq-Wj-2QX" sceneMemberID="viewController">
+                <viewController id="rJq-Wj-2QX" customClass="PaletteVC" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UeM-nm-HSn">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -450,10 +450,10 @@
             </objects>
             <point key="canvasLocation" x="-2178" y="723"/>
         </scene>
-        <!--View Controller-->
+        <!--PurchaseVC-->
         <scene sceneID="ze9-Xh-tBD">
             <objects>
-                <viewController id="fhq-Ws-50g" sceneMemberID="viewController">
+                <viewController id="fhq-Ws-50g" customClass="PurchaseVC" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ACi-ma-4ib">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -500,10 +500,10 @@
             </objects>
             <point key="canvasLocation" x="-1465" y="723"/>
         </scene>
-        <!--View Controller-->
+        <!--SettingsVC-->
         <scene sceneID="50w-kj-1TB">
             <objects>
-                <viewController id="f8E-Cg-PNO" sceneMemberID="viewController">
+                <viewController id="f8E-Cg-PNO" customClass="SettingsVC" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LyF-UT-FDf">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -545,10 +545,10 @@
             </objects>
             <point key="canvasLocation" x="-789" y="723"/>
         </scene>
-        <!--View Controller-->
+        <!--ProjectsVC-->
         <scene sceneID="5pi-xE-rFc">
             <objects>
-                <viewController id="BKB-g1-NBX" sceneMemberID="viewController">
+                <viewController id="BKB-g1-NBX" customClass="ProjectsVC" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZQy-gv-u9S">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
