@@ -34,6 +34,11 @@ class ViewController: UIViewController {
         ])
     }
     
+    
+    @IBAction func didPressArrow(_ sender: UIButton) {
+        mindMap.updateSelectedNode(sender.tag)
+    }
+    
     @IBAction func didPressAddNode(_ sender: UIButton) {
         print("\(#function)ing...")
         /*🤔 🤔 🤔*/

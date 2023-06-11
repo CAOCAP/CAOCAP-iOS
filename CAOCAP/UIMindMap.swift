@@ -56,13 +56,33 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func updateSelectedNode(_ n: Int) {
+        print("current PrevuesNode \(nodeTree.selectedID)")
+        switch n {
+        case 0:
+            print("select prevues sibling")
+            let selected = nodeTree.root.search(id: nodeTree.selectedID)!
+            nodeTree.selectedID = (selected.parent?.children[selected.position-1].id)!
+        case 1:
+            print("select parent")
+            nodeTree.selectedID = (nodeTree.root.search(id: nodeTree.selectedID)?.parent!.id)!
+        case 2:
+            print("select first child")
+            nodeTree.selectedID = (nodeTree.root.search(id: nodeTree.selectedID)?.children.first!.id)!
+        default:
+            print("select next sibling")
+            let selected = nodeTree.root.search(id: nodeTree.selectedID)!
+            nodeTree.selectedID = (selected.parent?.children[selected.position+1].id)!
+        }
+        print("current SelectedNode \(nodeTree.selectedID)")/*🤔 this is bad code on purpose  🤔*/
+    }
+    
     func add(_ node: Node) {
         print("\(#function)ing...")
         canvas.subviews.forEach({ $0.removeFromSuperview() })
         nodeTree.root.add(child: node)
-        load(root: nodeTree.root)
+        load(root: nodeTree.root)/*🤔 🤔 🤔*/
     }
-    
     
     func load(root: Node) {
         print("\(#function)ing...")
@@ -73,7 +93,6 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     
     func load(children: [Node]) {
         print("\(#function)ing...")
-        /*🤔 🤔 🤔*/
         children.forEach { node in
             draw(node)
             if !node.children.isEmpty { load(children: node.children) }
