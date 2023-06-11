@@ -56,34 +56,6 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func updateSelectedNode(_ n: Int) {
-        print("current PrevuesNode \(nodeTree.selectedID)")
-        switch n {
-        case 0:
-            print("select prevues sibling")
-            let selected = nodeTree.root.search(id: nodeTree.selectedID)!
-            nodeTree.selectedID = (selected.parent?.children[selected.position-1].id)!
-        case 1:
-            print("select parent")
-            nodeTree.selectedID = (nodeTree.root.search(id: nodeTree.selectedID)?.parent!.id)!
-        case 2:
-            print("select first child")
-            nodeTree.selectedID = (nodeTree.root.search(id: nodeTree.selectedID)?.children.first!.id)!
-        default:
-            print("select next sibling")
-            let selected = nodeTree.root.search(id: nodeTree.selectedID)!
-            nodeTree.selectedID = (selected.parent?.children[selected.position+1].id)!
-        }
-        print("current SelectedNode \(nodeTree.selectedID)")/*🤔 this is bad code on purpose  🤔*/
-    }
-    
-    func add(_ node: Node) {
-        print("\(#function)ing...")
-        canvas.subviews.forEach({ $0.removeFromSuperview() })
-        nodeTree.root.add(child: node)
-        load(root: nodeTree.root)/*🤔 🤔 🤔*/
-    }
-    
     func load(root: Node) {
         print("\(#function)ing...")
         draw(root)
@@ -100,6 +72,13 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         
     }
     
+    func add(_ node: Node) {
+        print("\(#function)ing...")
+        canvas.subviews.forEach({ $0.removeFromSuperview() })
+        nodeTree.root.add(child: node)
+        load(root: nodeTree.root)/*🤔 🤔 🤔*/
+    }
+    
     func draw(_ node: Node) -> NodeView {
         print("\(#function)ing... \(node.title)")
         let view = NodeView(node)
@@ -114,6 +93,39 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
                                           constant: CGFloat(100 * node.depthOfNode())),
         ])
         return view
+    }
+    
+    func updateSelectedNode(_ direction: Direction?) {
+        guard let direction = direction else { return }
+        print("Previously Selected Node ID: \(nodeTree.selectedID)")
+        switch direction {
+        case .left:
+            guard let selected = nodeTree.root.search(id: nodeTree.selectedID),
+                  let parent = selected.parent,
+                  selected.position > 0
+            else { return }
+            print("select prevues sibling")
+            nodeTree.selectedID = parent.children[selected.position-1].id
+        case .up:
+            guard let selected = nodeTree.root.search(id: nodeTree.selectedID),
+                  let parent = selected.parent
+            else { return }
+            print("select parent")
+            nodeTree.selectedID = parent.id
+        case .down:
+            guard let firstChild = nodeTree.root.search(id: nodeTree.selectedID)?.children.first
+            else { return }
+            print("select first child")
+            nodeTree.selectedID = firstChild.id
+        case .right:
+            guard let selected = nodeTree.root.search(id: nodeTree.selectedID),
+                  let parent = selected.parent,
+                  parent.children.count > selected.position + 1
+            else { return }
+            print("select next sibling")
+            nodeTree.selectedID = parent.children[selected.position + 1].id
+        }
+        print("Current Selected Node ID: \(nodeTree.selectedID)")/*🤔*/
     }
     
     func center() {

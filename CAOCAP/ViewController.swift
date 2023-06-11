@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func didPressArrow(_ sender: UIButton) {
-        mindMap.updateSelectedNode(sender.tag)
+        mindMap.updateSelectedNode(Direction(rawValue: sender.tag))
     }
     
     @IBAction func didPressAddNode(_ sender: UIButton) {

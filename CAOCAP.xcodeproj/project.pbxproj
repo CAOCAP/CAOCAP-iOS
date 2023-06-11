@@ -21,6 +21,7 @@
 		21C21C4D2A34B61900F40BE3 /* PurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C21C4C2A34B61900F40BE3 /* PurchaseVC.swift */; };
 		21C21C4F2A34B62E00F40BE3 /* PaletteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C21C4E2A34B62E00F40BE3 /* PaletteVC.swift */; };
 		21C21C522A34B7C400F40BE3 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21C21C512A34B7C400F40BE3 /* IQKeyboardManagerSwift */; };
+		21C21C542A36145200F40BE3 /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C21C532A36145200F40BE3 /* Enumerations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		21C21C4A2A34B60200F40BE3 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		21C21C4C2A34B61900F40BE3 /* PurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseVC.swift; sourceTree = "<group>"; };
 		21C21C4E2A34B62E00F40BE3 /* PaletteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteVC.swift; sourceTree = "<group>"; };
+		21C21C532A36145200F40BE3 /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +84,10 @@
 				21C21C4A2A34B60200F40BE3 /* SettingsVC.swift */,
 				21C21C482A34B5D800F40BE3 /* ProjectsVC.swift */,
 				2186DB0E2A30BD6600773C5E /* Node.swift */,
+				21C21C532A36145200F40BE3 /* Enumerations.swift */,
 				218DA9CE2A2B205800459C61 /* Main.storyboard */,
-				218DA9D12A2B205900459C61 /* Assets.xcassets */,
 				218DA9D32A2B205900459C61 /* LaunchScreen.storyboard */,
+				218DA9D12A2B205900459C61 /* Assets.xcassets */,
 				218DA9D62A2B205900459C61 /* Info.plist */,
 			);
 			path = CAOCAP;
@@ -177,6 +180,7 @@
 				21C21C4B2A34B60200F40BE3 /* SettingsVC.swift in Sources */,
 				2186DB112A30DF4700773C5E /* UIMindMap.swift in Sources */,
 				21C21C492A34B5D800F40BE3 /* ProjectsVC.swift in Sources */,
+				21C21C542A36145200F40BE3 /* Enumerations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
