@@ -72,16 +72,16 @@
 		218DA9C72A2B205800459C61 /* CAOCAP */ = {
 			isa = PBXGroup;
 			children = (
+				2186DB0C2A30946900773C5E /* Extensions.swift */,
 				218DA9C82A2B205800459C61 /* AppDelegate.swift */,
 				218DA9CA2A2B205800459C61 /* SceneDelegate.swift */,
 				218DA9CC2A2B205800459C61 /* ViewController.swift */,
 				2186DB102A30DF4700773C5E /* UIMindMap.swift */,
-				2186DB0E2A30BD6600773C5E /* Node.swift */,
-				2186DB0C2A30946900773C5E /* Extensions.swift */,
-				21C21C482A34B5D800F40BE3 /* ProjectsVC.swift */,
-				21C21C4A2A34B60200F40BE3 /* SettingsVC.swift */,
-				21C21C4C2A34B61900F40BE3 /* PurchaseVC.swift */,
 				21C21C4E2A34B62E00F40BE3 /* PaletteVC.swift */,
+				21C21C4C2A34B61900F40BE3 /* PurchaseVC.swift */,
+				21C21C4A2A34B60200F40BE3 /* SettingsVC.swift */,
+				21C21C482A34B5D800F40BE3 /* ProjectsVC.swift */,
+				2186DB0E2A30BD6600773C5E /* Node.swift */,
 				218DA9CE2A2B205800459C61 /* Main.storyboard */,
 				218DA9D12A2B205900459C61 /* Assets.xcassets */,
 				218DA9D32A2B205900459C61 /* LaunchScreen.storyboard */,
