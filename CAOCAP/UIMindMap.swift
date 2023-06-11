@@ -1,5 +1,5 @@
 //
-//  MindMapScrollView.swift
+//  UIMindMap.swift
 //  CAOCAP
 //
 //  Created by Azzam AL-Rashed on 07/06/2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MindMapScrollView: UIScrollView, UIScrollViewDelegate {
+class UIMindMap: UIScrollView, UIScrollViewDelegate {
     
     var nodeTree: NodeTree
     var nodeTreeHistory: [NodeTree]
@@ -28,7 +28,7 @@ class MindMapScrollView: UIScrollView, UIScrollViewDelegate {
         nodeTree = tree
         nodeTreeHistory = history
         super.init(frame: .zero)
-        delegate = self // ?🤔
+        delegate = self
         translatesAutoresizingMaskIntoConstraints = false
         minimumZoomScale = 0.5
         maximumZoomScale = 3.0
@@ -49,35 +49,51 @@ class MindMapScrollView: UIScrollView, UIScrollViewDelegate {
         layoutIfNeeded()
         canvas.addGestureRecognizer(doubleTapZoom)
         canvas.isUserInteractionEnabled = true
-        load()
+        load(root: nodeTree.root)
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    func load() {
+    func add(_ node: Node) {
         print("\(#function)ing...")
-        let startingNode = draw(node: nodeTree.root)
-        canvas.addSubview(startingNode)
-        NSLayoutConstraint.activate([
-            startingNode.heightAnchor.constraint(equalToConstant: 60),
-            startingNode.widthAnchor.constraint(equalToConstant: 150),
-            startingNode.leadingAnchor.constraint(equalTo: canvas.leadingAnchor, constant: canvasWidthConstraint.constant / 2 - 75),
-            startingNode.centerYAnchor.constraint(equalTo: canvas.centerYAnchor),
-        ])
+        canvas.subviews.forEach({ $0.removeFromSuperview() })
+        nodeTree.root.add(child: node)
+        load(root: nodeTree.root)
     }
     
-    func update() {
+    
+    func load(root: Node) {
+        print("\(#function)ing...")
+        draw(root)
+        if !root.children.isEmpty { load(children: root.children) }
+        
+    }
+    
+    func load(children: [Node]) {
         print("\(#function)ing...")
         /*🤔 🤔 🤔*/
+        children.forEach { node in
+            draw(node)
+            if !node.children.isEmpty { load(children: node.children) }
+        }
+        
     }
     
-    func draw(node: Node) -> NodeView {
-        print("\(#function)ing...")
+    func draw(_ node: Node) -> NodeView {
+        print("\(#function)ing... \(node.title)")
         let view = NodeView(node)
-        /*🤔 🤔 🤔*/
+        canvas.addSubview(view)
+        nodeViews.append(view)
+        NSLayoutConstraint.activate([
+            view.heightAnchor.constraint(equalToConstant: 60),
+            view.widthAnchor.constraint(equalToConstant: 150),
+            view.centerXAnchor.constraint(equalTo: canvas.centerXAnchor,
+                                          constant: CGFloat(180 * node.position)),
+            view.centerYAnchor.constraint(equalTo: canvas.centerYAnchor,
+                                          constant: CGFloat(100 * node.depthOfNode())),
+        ])
         return view
     }
     

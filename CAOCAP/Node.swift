@@ -19,7 +19,7 @@ class Node: NSObject {
     let id = UUID()
     var title: String
     var color: UIColor
-    var centerPosition: CGPoint?
+    var position = 0
     
     private (set) var children: [Node] = []
     weak var parent: Node?
@@ -40,6 +40,7 @@ class Node: NSObject {
     
     // MARK: Methods
     func add(child: Node) {
+        child.position = children.count
         children.append(child)
         child.parent = self
     }
@@ -69,6 +70,14 @@ class Node: NSObject {
                 nodeToDelete == childNode
             })
         }
+    }
+    
+    func depthOfNode() -> Int {
+        var depth = 0
+        if let parent = parent {
+            depth = parent.depthOfNode() + 1
+        }
+        return depth
     }
     
     func depthOfNode(id: UUID) -> Int {

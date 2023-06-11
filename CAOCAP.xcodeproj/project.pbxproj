@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		2186DB0D2A30946900773C5E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2186DB0C2A30946900773C5E /* Extensions.swift */; };
 		2186DB0F2A30BD6600773C5E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2186DB0E2A30BD6600773C5E /* Node.swift */; };
-		2186DB112A30DF4700773C5E /* MindMapScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2186DB102A30DF4700773C5E /* MindMapScrollView.swift */; };
+		2186DB112A30DF4700773C5E /* UIMindMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2186DB102A30DF4700773C5E /* UIMindMap.swift */; };
 		218DA9C92A2B205800459C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218DA9C82A2B205800459C61 /* AppDelegate.swift */; };
 		218DA9CB2A2B205800459C61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218DA9CA2A2B205800459C61 /* SceneDelegate.swift */; };
 		218DA9CD2A2B205800459C61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218DA9CC2A2B205800459C61 /* ViewController.swift */; };
@@ -26,7 +26,7 @@
 /* Begin PBXFileReference section */
 		2186DB0C2A30946900773C5E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		2186DB0E2A30BD6600773C5E /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
-		2186DB102A30DF4700773C5E /* MindMapScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindMapScrollView.swift; sourceTree = "<group>"; };
+		2186DB102A30DF4700773C5E /* UIMindMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMindMap.swift; sourceTree = "<group>"; };
 		218DA9C52A2B205800459C61 /* CAOCAP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAOCAP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		218DA9C82A2B205800459C61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		218DA9CA2A2B205800459C61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 				218DA9C82A2B205800459C61 /* AppDelegate.swift */,
 				218DA9CA2A2B205800459C61 /* SceneDelegate.swift */,
 				218DA9CC2A2B205800459C61 /* ViewController.swift */,
-				2186DB102A30DF4700773C5E /* MindMapScrollView.swift */,
+				2186DB102A30DF4700773C5E /* UIMindMap.swift */,
 				2186DB0E2A30BD6600773C5E /* Node.swift */,
 				2186DB0C2A30946900773C5E /* Extensions.swift */,
 				21C21C482A34B5D800F40BE3 /* ProjectsVC.swift */,
@@ -175,7 +175,7 @@
 				218DA9CB2A2B205800459C61 /* SceneDelegate.swift in Sources */,
 				2186DB0D2A30946900773C5E /* Extensions.swift in Sources */,
 				21C21C4B2A34B60200F40BE3 /* SettingsVC.swift in Sources */,
-				2186DB112A30DF4700773C5E /* MindMapScrollView.swift in Sources */,
+				2186DB112A30DF4700773C5E /* UIMindMap.swift in Sources */,
 				21C21C492A34B5D800F40BE3 /* ProjectsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
