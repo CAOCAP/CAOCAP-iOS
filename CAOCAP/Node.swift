@@ -106,6 +106,7 @@ class NodeView: UIView {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         layer.cornerRadius = 10
+        layer.borderColor = UIColor.blue.cgColor
         backgroundColor = node.color
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 60))
         label.textAlignment = .center

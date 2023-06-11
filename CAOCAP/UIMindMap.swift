@@ -98,6 +98,7 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     func updateSelectedNode(_ direction: Direction?) {
         guard let direction = direction else { return }
         print("Previously Selected Node ID: \(nodeTree.selectedID)")
+        let previouslySelectedID = nodeTree.selectedID
         switch direction {
         case .left:
             guard let selected = nodeTree.root.search(id: nodeTree.selectedID),
@@ -125,6 +126,10 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
             print("select next sibling")
             nodeTree.selectedID = parent.children[selected.position + 1].id
         }
+        let previousNodeView = nodeViews.first { $0.node.id == previouslySelectedID }
+        let currentNodeView = nodeViews.first { $0.node.id == nodeTree.selectedID }
+        previousNodeView?.layer.borderWidth = 0
+        currentNodeView?.layer.borderWidth = 2
         print("Current Selected Node ID: \(nodeTree.selectedID)")/*🤔*/
     }
     
