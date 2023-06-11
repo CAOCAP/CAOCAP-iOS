@@ -74,8 +74,10 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     
     func add(_ node: Node) {
         print("\(#function)ing...")
+        guard let selectedNode = nodeTree.root.search(id: nodeTree.selectedID) else { return }
         canvas.subviews.forEach({ $0.removeFromSuperview() })
-        nodeTree.root.add(child: node)
+        selectedNode.add(child: node)
+        updateSelectedNode(.down)
         load(root: nodeTree.root)/*🤔 🤔 🤔*/
     }
     
@@ -88,7 +90,8 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
             view.heightAnchor.constraint(equalToConstant: 60),
             view.widthAnchor.constraint(equalToConstant: 150),
             view.centerXAnchor.constraint(equalTo: canvas.centerXAnchor,
-                                          constant: CGFloat(180 * node.position)),
+                                          constant: CGFloat(180 * (node.position + (node.parent?.position ?? 0)))),
+            /*🤔it's not working as expected 🤔*/
             view.centerYAnchor.constraint(equalTo: canvas.centerYAnchor,
                                           constant: CGFloat(100 * node.depthOfNode())),
         ])
