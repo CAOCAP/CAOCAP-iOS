@@ -595,11 +595,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.64999997615814209" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpaceSketchBG" translatesAutoresizingMaskIntoConstraints="NO" id="nI9-kf-bgl">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LRX-UU-kYJ">
                                 <rect key="frame" x="20" y="532" width="353" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="35$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfu-Pa-zgF">
+                                        <rect key="frame" x="78.333333333333329" y="40.333333333333378" width="196.66666666666669" height="119.66666666666669"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="100"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="separatorColor"/>
                                 <constraints>
+                                    <constraint firstItem="Hfu-Pa-zgF" firstAttribute="centerX" secondItem="LRX-UU-kYJ" secondAttribute="centerX" id="hLP-Qn-j6s"/>
                                     <constraint firstAttribute="height" constant="200" id="nwb-NM-Fw1"/>
+                                    <constraint firstItem="Hfu-Pa-zgF" firstAttribute="centerY" secondItem="LRX-UU-kYJ" secondAttribute="centerY" id="q3S-ZM-cra"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -619,15 +633,125 @@
                                     <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                 </buttonConfiguration>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="YWP-YE-S2g">
+                                <rect key="frame" x="44.666666666666657" y="336.66666666666669" width="304" height="169"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try CAOCAP Premium for free" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sby-h7-ijT">
+                                        <rect key="frame" x="0.0" y="0.0" width="304" height="27.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jFB-kF-vsN">
+                                        <rect key="frame" x="59" y="42.666666666666629" width="186" height="20.333333333333329"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.seal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="UqZ-xx-0mv">
+                                                <rect key="frame" x="0.0" y="-0.66666666666666785" width="22.333333333333332" height="21.666666666666664"/>
+                                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infinite notes nesting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9et-vb-d3v">
+                                                <rect key="frame" x="27.333333333333329" y="0.0" width="158.66666666666669" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IQV-nB-6uq">
+                                        <rect key="frame" x="59" y="78" width="186" height="20.333333333333329"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.seal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="N49-vw-jGP">
+                                                <rect key="frame" x="0.0" y="-0.66666666666666785" width="22.333333333333332" height="21.666666666666664"/>
+                                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infinite notes nesting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ub-ET-Zb4">
+                                                <rect key="frame" x="27.333333333333329" y="0.0" width="158.66666666666669" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xdV-mp-g7t">
+                                        <rect key="frame" x="59" y="113.33333333333331" width="186" height="20.333333333333343"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.seal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JN1-AQ-wxI">
+                                                <rect key="frame" x="0.0" y="-0.66666666666666785" width="22.333333333333332" height="21.666666666666664"/>
+                                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infinite notes nesting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="py7-ZD-7Um">
+                                                <rect key="frame" x="27.333333333333329" y="0.0" width="158.66666666666669" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5xS-rW-R7F">
+                                        <rect key="frame" x="59" y="148.66666666666663" width="186" height="20.333333333333343"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.seal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="w3a-1e-jut">
+                                                <rect key="frame" x="0.0" y="-0.66666666666666785" width="22.333333333333332" height="21.666666666666664"/>
+                                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infinite notes nesting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sds-tb-TwC">
+                                                <rect key="frame" x="27.333333333333329" y="0.0" width="158.66666666666669" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAOCAP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oc4-se-ig7">
+                                <rect key="frame" x="73" y="100" width="207" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHd-7R-8Lz">
+                                <rect key="frame" x="290" y="105" width="60" height="33.666666666666657"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdP-wg-Ru1">
+                                        <rect key="frame" x="10.333333333333314" y="2" width="39.666666666666664" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.83921568627450982" blue="0.039215686274509803" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cHd-7R-8Lz" secondAttribute="height" multiplier="16:9" id="G22-EV-Aec"/>
+                                    <constraint firstItem="GdP-wg-Ru1" firstAttribute="centerX" secondItem="cHd-7R-8Lz" secondAttribute="centerX" id="RtT-lN-32x"/>
+                                    <constraint firstAttribute="width" constant="60" id="lPh-v5-LMQ"/>
+                                    <constraint firstItem="GdP-wg-Ru1" firstAttribute="centerY" secondItem="cHd-7R-8Lz" secondAttribute="centerY" id="xxf-3p-Avp"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zpm-7Y-pMg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="nI9-kf-bgl" firstAttribute="leading" secondItem="ACi-ma-4ib" secondAttribute="leading" id="7vf-SD-EMt"/>
                             <constraint firstItem="to5-0A-bY1" firstAttribute="centerX" secondItem="ACi-ma-4ib" secondAttribute="centerX" id="8VU-uw-0GM"/>
+                            <constraint firstItem="YWP-YE-S2g" firstAttribute="centerX" secondItem="ACi-ma-4ib" secondAttribute="centerX" id="99u-1C-rK4"/>
+                            <constraint firstItem="oc4-se-ig7" firstAttribute="top" secondItem="zpm-7Y-pMg" secondAttribute="top" constant="100" id="A0l-va-DzI"/>
                             <constraint firstItem="LRX-UU-kYJ" firstAttribute="centerX" secondItem="ACi-ma-4ib" secondAttribute="centerX" id="ASE-RO-dw8"/>
                             <constraint firstItem="to5-0A-bY1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zpm-7Y-pMg" secondAttribute="leading" constant="20" id="CZU-Lh-4ea"/>
+                            <constraint firstItem="oc4-se-ig7" firstAttribute="centerX" secondItem="ACi-ma-4ib" secondAttribute="centerX" constant="-20" id="DtA-5u-joH"/>
                             <constraint firstItem="zpm-7Y-pMg" firstAttribute="bottom" secondItem="to5-0A-bY1" secondAttribute="bottom" constant="40" id="FW0-Hg-aby"/>
+                            <constraint firstItem="cHd-7R-8Lz" firstAttribute="top" secondItem="oc4-se-ig7" secondAttribute="top" constant="5" id="Jd1-at-tzs"/>
+                            <constraint firstAttribute="trailing" secondItem="nI9-kf-bgl" secondAttribute="trailing" id="Njq-1T-01e"/>
+                            <constraint firstItem="cHd-7R-8Lz" firstAttribute="leading" secondItem="oc4-se-ig7" secondAttribute="trailing" constant="10" id="VA7-PM-zbh"/>
+                            <constraint firstItem="nI9-kf-bgl" firstAttribute="top" secondItem="ACi-ma-4ib" secondAttribute="top" id="Wso-uW-OaL"/>
+                            <constraint firstAttribute="bottom" secondItem="nI9-kf-bgl" secondAttribute="bottom" id="ZeK-aV-S9b"/>
                             <constraint firstItem="to5-0A-bY1" firstAttribute="top" secondItem="LRX-UU-kYJ" secondAttribute="bottom" constant="20" id="a2t-qy-ael"/>
+                            <constraint firstItem="YWP-YE-S2g" firstAttribute="centerY" secondItem="ACi-ma-4ib" secondAttribute="centerY" id="a9p-x8-exN"/>
                             <constraint firstItem="LRX-UU-kYJ" firstAttribute="leading" secondItem="to5-0A-bY1" secondAttribute="leading" id="bXH-Sh-0me"/>
                         </constraints>
                     </view>
@@ -635,7 +759,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DoN-0n-QQJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1465" y="723"/>
+            <point key="canvasLocation" x="-1466.4122137404579" y="722.53521126760563"/>
         </scene>
         <!--SettingsVC-->
         <scene sceneID="50w-kj-1TB">
@@ -767,6 +891,7 @@
         <image name="SpaceSketchBG" width="1661" height="2214"/>
         <image name="bookmark" catalog="system" width="110" height="128"/>
         <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="checkmark.seal" catalog="system" width="128" height="124"/>
         <image name="chevron.compact.down" catalog="system" width="128" height="42"/>
         <image name="chevron.compact.left" catalog="system" width="62" height="128"/>
         <image name="chevron.compact.right" catalog="system" width="62" height="128"/>
