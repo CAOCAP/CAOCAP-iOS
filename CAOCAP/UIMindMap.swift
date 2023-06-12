@@ -77,8 +77,8 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         guard let selectedNode = nodeTree.root.search(id: nodeTree.selectedID) else { return }
         canvas.subviews.forEach({ $0.removeFromSuperview() })
         selectedNode.add(child: node)
-        updateSelectedNode(.down)
         load(root: nodeTree.root)/*🤔 🤔 🤔*/
+        updateSelectedNode(.down)
     }
     
     func draw(_ node: Node) -> NodeView {
@@ -129,10 +129,15 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
             print("select next sibling")
             nodeTree.selectedID = parent.children[selected.position + 1].id
         }
-        let previousNodeView = nodeViews.first { $0.node.id == previouslySelectedID }
-        let currentNodeView = nodeViews.first { $0.node.id == nodeTree.selectedID }
-        previousNodeView?.layer.borderWidth = 0
-        currentNodeView?.layer.borderWidth = 2
+        guard
+            let previousNodeView = nodeViews.first(where: { $0.node.id == previouslySelectedID }),
+            let currentNodeView = nodeViews.first(where: { $0.node.id == nodeTree.selectedID })
+        else { return }
+        previousNodeView.layer.borderWidth = 0
+        currentNodeView.layer.borderWidth = 2
+        print(currentNodeView.center)
+        setContentOffset(currentNodeView.center, animated: true)
+        layoutIfNeeded()
         print("Current Selected Node ID: \(nodeTree.selectedID)")/*🤔*/
     }
     
