@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Mind MapVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="MindMapVC" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -452,10 +452,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpaceSketchBG" translatesAutoresizingMaskIntoConstraints="NO" id="q1j-2D-hDY">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                                <color key="tintColor" systemColor="labelColor"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0W1-Vc-RQe">
                                 <rect key="frame" x="71.666666666666686" y="381" width="250" height="50"/>
                                 <constraints>
@@ -522,12 +518,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="0W1-Vc-RQe" firstAttribute="centerX" secondItem="NWE-1t-ghM" secondAttribute="centerX" id="7jo-f6-sAp"/>
-                            <constraint firstItem="q1j-2D-hDY" firstAttribute="trailing" secondItem="NWE-1t-ghM" secondAttribute="trailing" id="8Z9-eT-prS"/>
                             <constraint firstItem="7YE-o0-JlD" firstAttribute="top" secondItem="0W1-Vc-RQe" secondAttribute="bottom" constant="30" id="EuB-qi-Qys"/>
-                            <constraint firstItem="q1j-2D-hDY" firstAttribute="leading" secondItem="NWE-1t-ghM" secondAttribute="leading" id="PW3-TH-d08"/>
-                            <constraint firstItem="q1j-2D-hDY" firstAttribute="top" secondItem="NWE-1t-ghM" secondAttribute="top" id="anJ-Ik-L2r"/>
                             <constraint firstItem="0W1-Vc-RQe" firstAttribute="centerY" secondItem="NWE-1t-ghM" secondAttribute="centerY" constant="-20" id="fLp-wf-7Hl"/>
-                            <constraint firstAttribute="bottom" secondItem="q1j-2D-hDY" secondAttribute="bottom" id="tIk-pj-EBg"/>
                             <constraint firstItem="7YE-o0-JlD" firstAttribute="centerX" secondItem="NWE-1t-ghM" secondAttribute="centerX" id="v5H-Lq-Ib4"/>
                             <constraint firstItem="7YE-o0-JlD" firstAttribute="leading" secondItem="0W1-Vc-RQe" secondAttribute="leading" constant="-20" id="yzJ-6g-gZD"/>
                         </constraints>

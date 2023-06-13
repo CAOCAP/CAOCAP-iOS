@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MindMapVC.swift
 //  CAOCAP
 //
 //  Created by Azzam AL-Rashed on 03/06/2023.
@@ -8,11 +8,12 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController {
+class MindMapVC: UIViewController {
     
     @IBOutlet weak var webview: WKWebView!
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var redoButton: UIButton!
+    var elements = [String]()
     
     var mindMap: UIMindMap!
     
@@ -20,7 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         setupMindMapLayout()
-        webview.loadHTMLString("<h1>Hello CAOCAP</h1>", baseURL: nil)
+        webview.loadHTMLString(build(html: elements), baseURL: nil)
     }
     
     func setupMindMapLayout() {
@@ -43,6 +44,17 @@ class ViewController: UIViewController {
         print("\(#function)ing...")
         /*🤔 🤔 🤔*/
         mindMap.add(sender.tag == 0 ? Node(title: "Head", color: .systemGreen) : Node(title: "Body", color: .systemRed))
+        elements.append("<h1>Hello CAOCAP</h1>")
+        print(elements.split(separator: ""))
+        webview.loadHTMLString(build(html: elements), baseURL: nil)
+    }
+    
+    func build(html: [String]) -> String {
+        var result = ""
+        for element in elements {
+            result += element
+        }
+        return result
     }
     
     @IBAction func didPressUndo(_ sender: UIButton) {
