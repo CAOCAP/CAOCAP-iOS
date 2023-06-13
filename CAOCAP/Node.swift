@@ -8,8 +8,8 @@
 import UIKit
 
 struct NodeTree {
-    var root = Node(title: "Start", color: .systemBlue)
     var selectedID: UUID
+    var root = Node(title: "HTML", color: .systemBlue)
     
     init() { selectedID = root.id }
 }
@@ -17,23 +17,37 @@ struct NodeTree {
 class Node: NSObject {
     // MARK: Stored properties
     let id = UUID()
-    var title: String
-    var color: UIColor
+    let title: String
+    let element: String
+    let textContent: String
+    let color: UIColor
     var position = 0
     
     private (set) var children: [Node] = []
     weak var parent: Node?
     
     override var description: String {
-        var text = "\(title)"
+        var text = title
         if !children.isEmpty {
             text += " [" + children.map { $0.description }.joined(separator: ", ") + "] "
         }
         return text
     }
     
+    var dom: String {
+        var result = ""
+        if children.isEmpty {
+            result += "<\(element)>\(textContent)</\(element)>"
+        } else {
+            result += "<\(element)>" + children.map { $0.dom }.joined(separator: "") + "</\(element)>"
+        }
+        return result
+    }
+    
     // MARK: Initialize
-    init(title: String, color: UIColor) {
+    init(title: String, color: UIColor, text: String = "Hello CAOCAP" /* 🤔 */) {
+        element = title.lowercased()
+        textContent = text
         self.title = title
         self.color = color
     }

@@ -90,7 +90,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ohl-8V-enY">
                                                 <rect key="frame" x="0.0" y="39" width="333" height="31.666666666666671"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjV-OB-wTZ">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjV-OB-wTZ">
                                                         <rect key="frame" x="0.0" y="0.0" width="162.66666666666666" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Head">
@@ -100,7 +100,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q6E-J8-AzK"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0y0-Zf-mFi">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0y0-Zf-mFi">
                                                         <rect key="frame" x="170.66666666666663" y="0.0" width="162.33333333333337" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Body">
@@ -118,7 +118,7 @@
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xz-xn-g91">
                                                         <rect key="frame" x="0.0" y="0.0" width="105.66666666666667" height="32"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="meta">
+                                                        <buttonConfiguration key="configuration" style="filled" title="Meta">
                                                             <color key="baseBackgroundColor" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </buttonConfiguration>
                                                         <connections>
@@ -128,7 +128,7 @@
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLX-fc-heg">
                                                         <rect key="frame" x="113.66666666666666" y="0.0" width="105.66666666666666" height="32"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="title">
+                                                        <buttonConfiguration key="configuration" style="filled" title="Title">
                                                             <color key="baseBackgroundColor" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </buttonConfiguration>
                                                         <connections>
@@ -138,7 +138,7 @@
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnV-mR-AYB">
                                                         <rect key="frame" x="227.33333333333329" y="0.0" width="105.66666666666666" height="32"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="style">
+                                                        <buttonConfiguration key="configuration" style="filled" title="Style">
                                                             <color key="baseBackgroundColor" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </buttonConfiguration>
                                                         <connections>
@@ -150,40 +150,40 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uFe-gN-8Fm">
                                                 <rect key="frame" x="0.0" y="116.66666666666664" width="333" height="31.666666666666671"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRm-w4-KUn">
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRm-w4-KUn">
                                                         <rect key="frame" x="0.0" y="0.0" width="77.333333333333329" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="button">
+                                                        <buttonConfiguration key="configuration" style="filled" title="Button">
                                                             <color key="baseBackgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EX2-hv-OR9"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ym-at-0gj">
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ym-at-0gj">
                                                         <rect key="frame" x="85.333333333333343" y="0.0" width="77.333333333333343" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="div">
+                                                        <buttonConfiguration key="configuration" style="filled" title="Div">
                                                             <color key="baseBackgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3v4-bz-Q4u"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ols-WK-5Z7">
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ols-WK-5Z7">
                                                         <rect key="frame" x="170.66666666666666" y="0.0" width="77" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="image">
+                                                        <buttonConfiguration key="configuration" style="filled" title="Image">
                                                             <color key="baseBackgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ppx-Rj-sSk"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9A-1V-iqa">
+                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9A-1V-iqa">
                                                         <rect key="frame" x="255.66666666666671" y="0.0" width="77.333333333333343" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="script">
+                                                        <buttonConfiguration key="configuration" style="filled" title="Script">
                                                             <color key="baseBackgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </buttonConfiguration>
                                                         <connections>
@@ -195,7 +195,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hgq-Ge-VTF">
                                                 <rect key="frame" x="0.0" y="155.33333333333337" width="333" height="32"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OJ-ek-gHl">
+                                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OJ-ek-gHl">
                                                         <rect key="frame" x="0.0" y="0.0" width="55" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="55" id="1Fy-ij-Tib"/>
@@ -205,8 +205,11 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                             <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fm1-5G-HqP"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nQ-Wf-nuQ">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nQ-Wf-nuQ">
                                                         <rect key="frame" x="63" y="0.0" width="55" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="55" id="8xq-EU-fH0"/>
@@ -216,16 +219,22 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                             <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N2p-UY-CQc"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wf-f5-U7G">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wf-f5-U7G">
                                                         <rect key="frame" x="126" y="0.0" width="81" height="32"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="span">
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                             <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="05O-ac-ZeV"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Im1-ya-rPz">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Im1-ya-rPz">
                                                         <rect key="frame" x="215" y="0.0" width="55" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="55" id="fMd-IQ-cgr"/>
@@ -235,8 +244,11 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                             <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Hv-EB-0fp"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFA-rP-2N7">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFA-rP-2N7">
                                                         <rect key="frame" x="278" y="0.0" width="55" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="55" id="H07-bH-bSA"/>
@@ -246,59 +258,80 @@
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                             <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ew-E4-Rnm"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="242-Vn-rF2">
                                                 <rect key="frame" x="0.0" y="194.33333333333337" width="333" height="31.666666666666657"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRV-3B-BdY">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRV-3B-BdY">
                                                         <rect key="frame" x="0.0" y="0.0" width="49" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="UL">
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                             <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="awu-sa-4dx"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzS-ed-cGG">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzS-ed-cGG">
                                                         <rect key="frame" x="57" y="0.0" width="48.666666666666657" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="OL">
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                             <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xGr-Dr-ku7"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxp-Tf-vUz">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxp-Tf-vUz">
                                                         <rect key="frame" x="113.66666666666666" y="0.0" width="49" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="LI">
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                             <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FfB-3s-BVT"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJg-UJ-XLA">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJg-UJ-XLA">
                                                         <rect key="frame" x="170.66666666666666" y="0.0" width="48.666666666666657" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="EM">
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                             <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7t2-qA-rCv"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAL-nh-Q6a">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAL-nh-Q6a">
                                                         <rect key="frame" x="227.33333333333331" y="0.0" width="49" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="B">
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                             <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bJx-oP-Rp1"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eae-Hg-fhI">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eae-Hg-fhI">
                                                         <rect key="frame" x="284.33333333333331" y="0.0" width="48.666666666666686" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="I">
                                                             <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
                                                             <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pgC-4D-Dih"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>

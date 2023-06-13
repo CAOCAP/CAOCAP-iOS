@@ -13,7 +13,6 @@ class MindMapVC: UIViewController {
     @IBOutlet weak var webview: WKWebView!
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var redoButton: UIButton!
-    var elements = [String]()
     
     var mindMap: UIMindMap!
     
@@ -21,7 +20,7 @@ class MindMapVC: UIViewController {
         super.viewDidLoad()
         
         setupMindMapLayout()
-        webview.loadHTMLString(build(html: elements), baseURL: nil)
+        webview.loadHTMLString(mindMap.nodeTree.root.dom, baseURL: nil)
     }
     
     func setupMindMapLayout() {
@@ -42,19 +41,35 @@ class MindMapVC: UIViewController {
     
     @IBAction func didPressAddNode(_ sender: UIButton) {
         print("\(#function)ing...")
-        /*🤔 🤔 🤔*/
-        mindMap.add(sender.tag == 0 ? Node(title: "Head", color: .systemGreen) : Node(title: "Body", color: .systemRed))
-        elements.append("<h1>Hello CAOCAP</h1>")
-        print(elements.split(separator: ""))
-        webview.loadHTMLString(build(html: elements), baseURL: nil)
-    }
-    
-    func build(html: [String]) -> String {
-        var result = ""
-        for element in elements {
-            result += element
+        let newNode: Node
+        switch sender.tag {
+        case 1:
+            newNode = Node(title: "Head", color: .systemGreen)
+        case 2:
+            newNode = Node(title: "Body", color: .systemPink)
+        case 3:
+            newNode = Node(title: "Meta", color: .purple)
+        case 4:
+            newNode = Node(title: "Title", color: .purple)
+        case 5:
+            newNode = Node(title: "Style", color: .purple)
+        case 6:
+            newNode = Node(title: "Button", color: .systemGreen)
+        case 7:
+            newNode = Node(title: "Div", color: .systemPink)
+        case 8:
+            newNode = Node(title: "Image", color: .purple) // 🤔
+        case 9:
+            newNode = Node(title: "Script", color: .purple)
+        case 10:
+            newNode = Node(title: "H1", color: .systemGray)
+        default:
+            newNode = Node(title: "P", color: .systemGray)
         }
-        return result
+        mindMap.add(newNode)
+        print(mindMap.nodeTree.root.dom)
+        webview.loadHTMLString(mindMap.nodeTree.root.dom, baseURL: nil)
+        /*🤔 🤔 🤔*/
     }
     
     @IBAction func didPressUndo(_ sender: UIButton) {
