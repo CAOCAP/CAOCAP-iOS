@@ -126,7 +126,7 @@ class NodeView: UIView {
         label.textAlignment = .center
         label.text = node.title
         label.textColor = .white
-        label.font = UIFont.boldSystemFont(ofSize: 16.0)
+        label.font = UIFont.ubuntu(.medium, size: 20)
         addSubview(label)
     }
     

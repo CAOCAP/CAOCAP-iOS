@@ -1,5 +1,5 @@
 //
-//  Extensions.swift
+//  UIView+Extensions.swift
 //  CAOCAP
 //
 //  Created by Azzam AL-Rashed on 07/06/2023.
