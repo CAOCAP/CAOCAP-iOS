@@ -579,7 +579,7 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4e-mx-hqi">
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4e-mx-hqi">
                                         <rect key="frame" x="0.0" y="55.666666666666679" width="330.33333333333331" height="84.333333333333314"/>
                                         <string key="text">The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It is often assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.</string>
                                         <fontDescription key="fontDescription" name="Ubuntu-LightItalic" family="Ubuntu" pointSize="15"/>
@@ -713,16 +713,16 @@
                                         <rect key="frame" x="20" y="10" width="310" height="140"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dUQ-ys-sHg">
-                                                <rect key="frame" x="0.0" y="0.0" width="310" height="65"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="310" height="40"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bR-fi-AIV">
-                                                        <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="40"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="altIcon 1" translatesAutoresizingMaskIntoConstraints="NO" id="94z-I2-KYn">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="altIcon" translatesAutoresizingMaskIntoConstraints="NO" id="94z-I2-KYn">
+                                                                <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="40"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cbp-GK-qLa">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="40"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             </button>
                                                         </subviews>
@@ -737,80 +737,14 @@
                                                             <constraint firstAttribute="bottom" secondItem="94z-I2-KYn" secondAttribute="bottom" id="zTq-ZB-Aq0"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DQQ-nV-m8W">
-                                                        <rect key="frame" x="53.333333333333329" y="0.0" width="43.333333333333329" height="65"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="altIcon 2" translatesAutoresizingMaskIntoConstraints="NO" id="ws4-il-U5i">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
-                                                            </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="db7-j6-tuh">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
-                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                            </button>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstAttribute="bottom" secondItem="db7-j6-tuh" secondAttribute="bottom" id="MB5-8l-cTr"/>
-                                                            <constraint firstItem="db7-j6-tuh" firstAttribute="leading" secondItem="DQQ-nV-m8W" secondAttribute="leading" id="RUc-Mi-BCO"/>
-                                                            <constraint firstAttribute="trailing" secondItem="db7-j6-tuh" secondAttribute="trailing" id="V11-pz-Sdh"/>
-                                                            <constraint firstItem="ws4-il-U5i" firstAttribute="leading" secondItem="DQQ-nV-m8W" secondAttribute="leading" id="d8g-6k-iAT"/>
-                                                            <constraint firstAttribute="bottom" secondItem="ws4-il-U5i" secondAttribute="bottom" id="h1C-50-SAX"/>
-                                                            <constraint firstItem="db7-j6-tuh" firstAttribute="top" secondItem="DQQ-nV-m8W" secondAttribute="top" id="jmX-af-Pi0"/>
-                                                            <constraint firstItem="ws4-il-U5i" firstAttribute="top" secondItem="DQQ-nV-m8W" secondAttribute="top" id="jnl-Uy-XeZ"/>
-                                                            <constraint firstAttribute="trailing" secondItem="ws4-il-U5i" secondAttribute="trailing" id="sDf-qq-AY8"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rwn-Rm-Hw3">
-                                                        <rect key="frame" x="106.66666666666664" y="0.0" width="43.333333333333329" height="65"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="altIcon 3" translatesAutoresizingMaskIntoConstraints="NO" id="kPX-d8-dMr">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
-                                                            </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fW0-gs-lJa">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
-                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                            </button>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstItem="kPX-d8-dMr" firstAttribute="leading" secondItem="Rwn-Rm-Hw3" secondAttribute="leading" id="4CQ-5b-AcP"/>
-                                                            <constraint firstItem="fW0-gs-lJa" firstAttribute="leading" secondItem="Rwn-Rm-Hw3" secondAttribute="leading" id="5Dm-aN-P6X"/>
-                                                            <constraint firstAttribute="trailing" secondItem="fW0-gs-lJa" secondAttribute="trailing" id="7WY-7n-EhU"/>
-                                                            <constraint firstItem="fW0-gs-lJa" firstAttribute="top" secondItem="Rwn-Rm-Hw3" secondAttribute="top" id="BAu-fZ-FWi"/>
-                                                            <constraint firstAttribute="trailing" secondItem="kPX-d8-dMr" secondAttribute="trailing" id="F6E-CS-U40"/>
-                                                            <constraint firstAttribute="bottom" secondItem="fW0-gs-lJa" secondAttribute="bottom" id="JGK-eJ-DUX"/>
-                                                            <constraint firstAttribute="bottom" secondItem="kPX-d8-dMr" secondAttribute="bottom" id="W9H-Oe-8tM"/>
-                                                            <constraint firstItem="kPX-d8-dMr" firstAttribute="top" secondItem="Rwn-Rm-Hw3" secondAttribute="top" id="w6c-Tb-gCR"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ZM-UV-KMn">
-                                                        <rect key="frame" x="160" y="0.0" width="43.333333333333343" height="65"/>
-                                                        <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="altIcon 4" translatesAutoresizingMaskIntoConstraints="NO" id="JPF-NK-zha">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
-                                                            </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ug5-Ny-yVO">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
-                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                            </button>
-                                                        </subviews>
-                                                        <constraints>
-                                                            <constraint firstItem="Ug5-Ny-yVO" firstAttribute="leading" secondItem="2ZM-UV-KMn" secondAttribute="leading" id="10V-0Z-cUg"/>
-                                                            <constraint firstItem="Ug5-Ny-yVO" firstAttribute="top" secondItem="2ZM-UV-KMn" secondAttribute="top" id="5lm-aT-AuJ"/>
-                                                            <constraint firstAttribute="bottom" secondItem="JPF-NK-zha" secondAttribute="bottom" id="Axl-zz-niG"/>
-                                                            <constraint firstAttribute="trailing" secondItem="JPF-NK-zha" secondAttribute="trailing" id="cyX-Hy-cv8"/>
-                                                            <constraint firstItem="JPF-NK-zha" firstAttribute="top" secondItem="2ZM-UV-KMn" secondAttribute="top" id="gAE-dT-tGK"/>
-                                                            <constraint firstAttribute="bottom" secondItem="Ug5-Ny-yVO" secondAttribute="bottom" id="hWY-5V-UdV"/>
-                                                            <constraint firstItem="JPF-NK-zha" firstAttribute="leading" secondItem="2ZM-UV-KMn" secondAttribute="leading" id="kpg-ix-Ugc"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Ug5-Ny-yVO" secondAttribute="trailing" id="zOg-zg-TaQ"/>
-                                                        </constraints>
-                                                    </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d08-Kx-FWm">
-                                                        <rect key="frame" x="213.33333333333334" y="0.0" width="43.333333333333343" height="65"/>
+                                                        <rect key="frame" x="106.66666666666666" y="0.0" width="96.666666666666657" height="40"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="altIcon" translatesAutoresizingMaskIntoConstraints="NO" id="fcr-5f-PoD">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="altIcon 14" translatesAutoresizingMaskIntoConstraints="NO" id="fcr-5f-PoD">
+                                                                <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="40"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rs-dw-uwp">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="40"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             </button>
                                                         </subviews>
@@ -825,41 +759,178 @@
                                                             <constraint firstItem="5Rs-dw-uwp" firstAttribute="leading" secondItem="d08-Kx-FWm" secondAttribute="leading" id="oLT-i4-8Gp"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hk-it-eL3">
-                                                        <rect key="frame" x="266.66666666666669" y="0.0" width="43.333333333333314" height="65"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DQQ-nV-m8W">
+                                                        <rect key="frame" x="213.33333333333334" y="0.0" width="96.666666666666657" height="40"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="altIcon 5" translatesAutoresizingMaskIntoConstraints="NO" id="iqy-u3-ddT">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="altIcon 12" translatesAutoresizingMaskIntoConstraints="NO" id="ws4-il-U5i">
+                                                                <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="40"/>
                                                             </imageView>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ekc-e6-105">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="db7-j6-tuh">
+                                                                <rect key="frame" x="0.0" y="0.0" width="96.666666666666671" height="40"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             </button>
                                                         </subviews>
                                                         <constraints>
-                                                            <constraint firstAttribute="trailing" secondItem="iqy-u3-ddT" secondAttribute="trailing" id="9TZ-JP-NjF"/>
-                                                            <constraint firstItem="iqy-u3-ddT" firstAttribute="leading" secondItem="1hk-it-eL3" secondAttribute="leading" id="LTT-3D-lM1"/>
-                                                            <constraint firstAttribute="bottom" secondItem="iqy-u3-ddT" secondAttribute="bottom" id="VQo-ti-czf"/>
-                                                            <constraint firstAttribute="bottom" secondItem="Ekc-e6-105" secondAttribute="bottom" id="WZH-eS-lSl"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Ekc-e6-105" secondAttribute="trailing" id="XeV-aH-aoc"/>
-                                                            <constraint firstItem="Ekc-e6-105" firstAttribute="leading" secondItem="1hk-it-eL3" secondAttribute="leading" id="eiN-ub-waA"/>
-                                                            <constraint firstItem="iqy-u3-ddT" firstAttribute="top" secondItem="1hk-it-eL3" secondAttribute="top" id="qnP-Au-rhv"/>
-                                                            <constraint firstItem="Ekc-e6-105" firstAttribute="top" secondItem="1hk-it-eL3" secondAttribute="top" id="zPF-Tr-tnr"/>
+                                                            <constraint firstAttribute="bottom" secondItem="db7-j6-tuh" secondAttribute="bottom" id="MB5-8l-cTr"/>
+                                                            <constraint firstItem="db7-j6-tuh" firstAttribute="leading" secondItem="DQQ-nV-m8W" secondAttribute="leading" id="RUc-Mi-BCO"/>
+                                                            <constraint firstAttribute="trailing" secondItem="db7-j6-tuh" secondAttribute="trailing" id="V11-pz-Sdh"/>
+                                                            <constraint firstItem="ws4-il-U5i" firstAttribute="leading" secondItem="DQQ-nV-m8W" secondAttribute="leading" id="d8g-6k-iAT"/>
+                                                            <constraint firstAttribute="bottom" secondItem="ws4-il-U5i" secondAttribute="bottom" id="h1C-50-SAX"/>
+                                                            <constraint firstItem="db7-j6-tuh" firstAttribute="top" secondItem="DQQ-nV-m8W" secondAttribute="top" id="jmX-af-Pi0"/>
+                                                            <constraint firstItem="ws4-il-U5i" firstAttribute="top" secondItem="DQQ-nV-m8W" secondAttribute="top" id="jnl-Uy-XeZ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="ws4-il-U5i" secondAttribute="trailing" id="sDf-qq-AY8"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xBD-DX-MTh">
+                                                <rect key="frame" x="0.0" y="50" width="310" height="40"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PfF-XI-Uce">
+                                                        <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="altIcon 1" translatesAutoresizingMaskIntoConstraints="NO" id="afK-1N-dxv">
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
+                                                            </imageView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZq-jF-Vys">
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="nZq-jF-Vys" firstAttribute="top" secondItem="PfF-XI-Uce" secondAttribute="top" id="5Mj-Up-725"/>
+                                                            <constraint firstAttribute="bottom" secondItem="afK-1N-dxv" secondAttribute="bottom" id="9Po-DZ-R08"/>
+                                                            <constraint firstItem="nZq-jF-Vys" firstAttribute="leading" secondItem="PfF-XI-Uce" secondAttribute="leading" id="TMc-vc-bOi"/>
+                                                            <constraint firstItem="afK-1N-dxv" firstAttribute="leading" secondItem="PfF-XI-Uce" secondAttribute="leading" id="Vty-TJ-tUY"/>
+                                                            <constraint firstAttribute="trailing" secondItem="nZq-jF-Vys" secondAttribute="trailing" id="Ywx-1U-PBL"/>
+                                                            <constraint firstAttribute="bottom" secondItem="nZq-jF-Vys" secondAttribute="bottom" id="dIk-nf-Khr"/>
+                                                            <constraint firstItem="afK-1N-dxv" firstAttribute="top" secondItem="PfF-XI-Uce" secondAttribute="top" id="uc4-0j-iYE"/>
+                                                            <constraint firstAttribute="trailing" secondItem="afK-1N-dxv" secondAttribute="trailing" id="wAN-7h-cWp"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysP-3V-6IL">
+                                                        <rect key="frame" x="53.333333333333329" y="0.0" width="43.333333333333329" height="40"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="altIcon 0" translatesAutoresizingMaskIntoConstraints="NO" id="wXc-qi-I0d">
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
+                                                            </imageView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7TR-7a-mpX">
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="wXc-qi-I0d" firstAttribute="top" secondItem="ysP-3V-6IL" secondAttribute="top" id="L7z-Um-mM0"/>
+                                                            <constraint firstAttribute="bottom" secondItem="7TR-7a-mpX" secondAttribute="bottom" id="RMV-3m-aHc"/>
+                                                            <constraint firstItem="wXc-qi-I0d" firstAttribute="leading" secondItem="ysP-3V-6IL" secondAttribute="leading" id="TOn-rf-27V"/>
+                                                            <constraint firstItem="7TR-7a-mpX" firstAttribute="top" secondItem="ysP-3V-6IL" secondAttribute="top" id="VMb-K0-w3c"/>
+                                                            <constraint firstAttribute="trailing" secondItem="7TR-7a-mpX" secondAttribute="trailing" id="XHR-CX-wwk"/>
+                                                            <constraint firstAttribute="trailing" secondItem="wXc-qi-I0d" secondAttribute="trailing" id="fag-M9-PkW"/>
+                                                            <constraint firstItem="7TR-7a-mpX" firstAttribute="leading" secondItem="ysP-3V-6IL" secondAttribute="leading" id="tut-jE-P2P"/>
+                                                            <constraint firstAttribute="bottom" secondItem="wXc-qi-I0d" secondAttribute="bottom" id="y19-n1-8g2"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ah3-rA-fom">
+                                                        <rect key="frame" x="106.66666666666664" y="0.0" width="43.333333333333329" height="40"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="altIcon 2" translatesAutoresizingMaskIntoConstraints="NO" id="Go6-X9-5be">
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
+                                                            </imageView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrm-nI-p6L">
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="Go6-X9-5be" firstAttribute="top" secondItem="Ah3-rA-fom" secondAttribute="top" id="96y-oq-2oU"/>
+                                                            <constraint firstAttribute="trailing" secondItem="jrm-nI-p6L" secondAttribute="trailing" id="E08-5m-2Hv"/>
+                                                            <constraint firstItem="jrm-nI-p6L" firstAttribute="top" secondItem="Ah3-rA-fom" secondAttribute="top" id="Nci-hq-qWy"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Go6-X9-5be" secondAttribute="trailing" id="jW9-8Z-92d"/>
+                                                            <constraint firstAttribute="bottom" secondItem="jrm-nI-p6L" secondAttribute="bottom" id="lDJ-yM-10i"/>
+                                                            <constraint firstAttribute="bottom" secondItem="Go6-X9-5be" secondAttribute="bottom" id="qWM-eb-kaC"/>
+                                                            <constraint firstItem="Go6-X9-5be" firstAttribute="leading" secondItem="Ah3-rA-fom" secondAttribute="leading" id="t2D-1T-qSc"/>
+                                                            <constraint firstItem="jrm-nI-p6L" firstAttribute="leading" secondItem="Ah3-rA-fom" secondAttribute="leading" id="wmz-on-j34"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OJ2-Jb-QeH">
+                                                        <rect key="frame" x="160" y="0.0" width="43.333333333333343" height="40"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="altIcon 3" translatesAutoresizingMaskIntoConstraints="NO" id="0ya-JD-nCs">
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
+                                                            </imageView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bML-Ls-uBB">
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="bML-Ls-uBB" secondAttribute="bottom" id="609-wt-Ke9"/>
+                                                            <constraint firstItem="bML-Ls-uBB" firstAttribute="leading" secondItem="OJ2-Jb-QeH" secondAttribute="leading" id="8DU-35-6ql"/>
+                                                            <constraint firstItem="0ya-JD-nCs" firstAttribute="leading" secondItem="OJ2-Jb-QeH" secondAttribute="leading" id="McR-Wk-UYa"/>
+                                                            <constraint firstAttribute="bottom" secondItem="0ya-JD-nCs" secondAttribute="bottom" id="ZeM-U3-f4G"/>
+                                                            <constraint firstItem="bML-Ls-uBB" firstAttribute="top" secondItem="OJ2-Jb-QeH" secondAttribute="top" id="dib-0e-TJc"/>
+                                                            <constraint firstAttribute="trailing" secondItem="bML-Ls-uBB" secondAttribute="trailing" id="jV3-fD-PTB"/>
+                                                            <constraint firstAttribute="trailing" secondItem="0ya-JD-nCs" secondAttribute="trailing" id="kRt-ww-cuo"/>
+                                                            <constraint firstItem="0ya-JD-nCs" firstAttribute="top" secondItem="OJ2-Jb-QeH" secondAttribute="top" id="mG7-AF-RHH"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bh-qc-nQ4">
+                                                        <rect key="frame" x="213.33333333333334" y="0.0" width="43.333333333333343" height="40"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="altIcon 4" translatesAutoresizingMaskIntoConstraints="NO" id="mvO-xW-E6z">
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
+                                                            </imageView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4kk-ne-73a">
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="4kk-ne-73a" firstAttribute="leading" secondItem="3bh-qc-nQ4" secondAttribute="leading" id="7hm-F2-RmF"/>
+                                                            <constraint firstItem="4kk-ne-73a" firstAttribute="top" secondItem="3bh-qc-nQ4" secondAttribute="top" id="D4m-0W-QwT"/>
+                                                            <constraint firstItem="mvO-xW-E6z" firstAttribute="leading" secondItem="3bh-qc-nQ4" secondAttribute="leading" id="QBr-9c-Nr7"/>
+                                                            <constraint firstAttribute="bottom" secondItem="4kk-ne-73a" secondAttribute="bottom" id="Y7T-wO-iCc"/>
+                                                            <constraint firstAttribute="trailing" secondItem="mvO-xW-E6z" secondAttribute="trailing" id="e4l-N5-0Ni"/>
+                                                            <constraint firstAttribute="trailing" secondItem="4kk-ne-73a" secondAttribute="trailing" id="vMh-R8-5RM"/>
+                                                            <constraint firstItem="mvO-xW-E6z" firstAttribute="top" secondItem="3bh-qc-nQ4" secondAttribute="top" id="ww8-Yb-6uN"/>
+                                                            <constraint firstAttribute="bottom" secondItem="mvO-xW-E6z" secondAttribute="bottom" id="ymI-Za-R0R"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e8a-Fr-e7j">
+                                                        <rect key="frame" x="266.66666666666669" y="0.0" width="43.333333333333314" height="40"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="altIcon 5" translatesAutoresizingMaskIntoConstraints="NO" id="9eH-xp-u6J">
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
+                                                            </imageView>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekw-xR-7Ig">
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="9eH-xp-u6J" secondAttribute="bottom" id="0aG-hF-E0E"/>
+                                                            <constraint firstItem="ekw-xR-7Ig" firstAttribute="top" secondItem="e8a-Fr-e7j" secondAttribute="top" id="4TM-S9-kAT"/>
+                                                            <constraint firstItem="ekw-xR-7Ig" firstAttribute="leading" secondItem="e8a-Fr-e7j" secondAttribute="leading" id="5rw-L6-Q0Z"/>
+                                                            <constraint firstAttribute="bottom" secondItem="ekw-xR-7Ig" secondAttribute="bottom" id="8bc-il-8ca"/>
+                                                            <constraint firstItem="9eH-xp-u6J" firstAttribute="leading" secondItem="e8a-Fr-e7j" secondAttribute="leading" id="MjZ-uC-irG"/>
+                                                            <constraint firstAttribute="trailing" secondItem="ekw-xR-7Ig" secondAttribute="trailing" id="OSL-mA-UfY"/>
+                                                            <constraint firstItem="9eH-xp-u6J" firstAttribute="top" secondItem="e8a-Fr-e7j" secondAttribute="top" id="qKc-wX-6xC"/>
+                                                            <constraint firstAttribute="trailing" secondItem="9eH-xp-u6J" secondAttribute="trailing" id="uQe-wd-Th9"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zfs-xy-B8I">
-                                                <rect key="frame" x="0.0" y="75" width="310" height="65"/>
+                                                <rect key="frame" x="0.0" y="100" width="310" height="40"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zub-MX-ssj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="altIcon 6" translatesAutoresizingMaskIntoConstraints="NO" id="qdL-54-BuO">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUD-ab-wcu">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             </button>
                                                         </subviews>
@@ -875,13 +946,13 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fBK-8U-Xpf">
-                                                        <rect key="frame" x="53.333333333333329" y="0.0" width="43.333333333333329" height="65"/>
+                                                        <rect key="frame" x="53.333333333333329" y="0.0" width="43.333333333333329" height="40"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="altIcon 7" translatesAutoresizingMaskIntoConstraints="NO" id="fVK-FM-ehV">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zf0-vG-bDu">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             </button>
                                                         </subviews>
@@ -897,13 +968,13 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Slt-lo-0Hw">
-                                                        <rect key="frame" x="106.66666666666664" y="0.0" width="43.333333333333329" height="65"/>
+                                                        <rect key="frame" x="106.66666666666664" y="0.0" width="43.333333333333329" height="40"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="altIcon 8" translatesAutoresizingMaskIntoConstraints="NO" id="zvI-U4-daO">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lui-w7-3fI">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             </button>
                                                         </subviews>
@@ -919,13 +990,13 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3v-vR-KFB">
-                                                        <rect key="frame" x="160" y="0.0" width="43.333333333333343" height="65"/>
+                                                        <rect key="frame" x="160" y="0.0" width="43.333333333333343" height="40"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="altIcon 9" translatesAutoresizingMaskIntoConstraints="NO" id="zUF-lL-vfM">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ux-ol-U7C">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             </button>
                                                         </subviews>
@@ -941,13 +1012,13 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vxg-e2-Pmy">
-                                                        <rect key="frame" x="213.33333333333334" y="0.0" width="43.333333333333343" height="65"/>
+                                                        <rect key="frame" x="213.33333333333334" y="0.0" width="43.333333333333343" height="40"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="altIcon 10" translatesAutoresizingMaskIntoConstraints="NO" id="dmr-hN-9WV">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoE-HC-4qs">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             </button>
                                                         </subviews>
@@ -963,13 +1034,13 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9qY-et-auC">
-                                                        <rect key="frame" x="266.66666666666669" y="0.0" width="43.333333333333314" height="65"/>
+                                                        <rect key="frame" x="266.66666666666669" y="0.0" width="43.333333333333314" height="40"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="altIcon 11" translatesAutoresizingMaskIntoConstraints="NO" id="RDh-gb-w4R">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
                                                             </imageView>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhA-oy-ClU">
-                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="65"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.333333333333336" height="40"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                             </button>
                                                         </subviews>
@@ -1326,9 +1397,12 @@
         <image name="Plant-S" width="122" height="218"/>
         <image name="SpaceSketchBG" width="1661" height="2214"/>
         <image name="altIcon" width="1024" height="1024"/>
+        <image name="altIcon 0" width="1024" height="1024"/>
         <image name="altIcon 1" width="1024" height="1024"/>
         <image name="altIcon 10" width="1024" height="1024"/>
         <image name="altIcon 11" width="1024" height="1024"/>
+        <image name="altIcon 12" width="1024" height="1024"/>
+        <image name="altIcon 14" width="1024" height="1024"/>
         <image name="altIcon 2" width="1024" height="1024"/>
         <image name="altIcon 3" width="1024" height="1024"/>
         <image name="altIcon 4" width="1024" height="1024"/>
