@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gTz-hA-32a">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -107,9 +107,9 @@
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjV-OB-wTZ">
                                                         <rect key="frame" x="0.0" y="0.0" width="161" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="Head">
+                                                        <buttonConfiguration key="configuration" style="gray" title="Head">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
-                                                            <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                                            <color key="baseForegroundColor" systemColor="systemGreenColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q6E-J8-AzK"/>
@@ -118,9 +118,9 @@
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0y0-Zf-mFi">
                                                         <rect key="frame" x="169" y="0.0" width="161" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="Body">
+                                                        <buttonConfiguration key="configuration" style="gray" title="Body">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
-                                                            <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                                            <color key="baseForegroundColor" systemColor="systemPinkColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R79-0W-Dv3"/>
@@ -134,9 +134,9 @@
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xz-xn-g91">
                                                         <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="32"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="Meta">
+                                                        <buttonConfiguration key="configuration" style="gray" title="Meta">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
-                                                            <color key="baseBackgroundColor" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cPb-RV-c93"/>
@@ -145,9 +145,9 @@
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLX-fc-heg">
                                                         <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="32"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="Title">
+                                                        <buttonConfiguration key="configuration" style="gray" title="Title">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
-                                                            <color key="baseBackgroundColor" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yyM-BV-ASm"/>
@@ -156,9 +156,9 @@
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnV-mR-AYB">
                                                         <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="32"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="Style">
+                                                        <buttonConfiguration key="configuration" style="gray" title="Style">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
-                                                            <color key="baseBackgroundColor" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tZn-O5-lDG"/>
@@ -172,9 +172,9 @@
                                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRm-w4-KUn">
                                                         <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="Button">
+                                                        <buttonConfiguration key="configuration" style="gray" title="Button">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
-                                                            <color key="baseBackgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="baseForegroundColor" name="AccentColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EX2-hv-OR9"/>
@@ -183,9 +183,9 @@
                                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ym-at-0gj">
                                                         <rect key="frame" x="84.666666666666686" y="0.0" width="76.333333333333314" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="Div">
+                                                        <buttonConfiguration key="configuration" style="gray" title="Div">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
-                                                            <color key="baseBackgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="baseForegroundColor" name="AccentColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3v4-bz-Q4u"/>
@@ -194,9 +194,9 @@
                                                     <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ols-WK-5Z7">
                                                         <rect key="frame" x="169" y="0.0" width="76.666666666666686" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="Image">
+                                                        <buttonConfiguration key="configuration" style="gray" title="Image">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
-                                                            <color key="baseBackgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="baseForegroundColor" name="AccentColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ppx-Rj-sSk"/>
@@ -205,9 +205,9 @@
                                                     <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9A-1V-iqa">
                                                         <rect key="frame" x="253.66666666666671" y="0.0" width="76.333333333333343" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="Script">
+                                                        <buttonConfiguration key="configuration" style="gray" title="Script">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
-                                                            <color key="baseBackgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="baseForegroundColor" name="AccentColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xxW-1x-4Yu"/>
@@ -550,8 +550,8 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAOCAP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZs-a8-rXs">
-                                <rect key="frame" x="125.33333333333333" y="120.33333333333333" width="139.33333333333337" height="39.333333333333329"/>
-                                <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="35"/>
+                                <rect key="frame" x="124.33333333333333" y="122.66666666666669" width="141.66666666666669" height="35"/>
+                                <fontDescription key="fontDescription" name="STIXTwoMath-Regular" family="STIX Two Math" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
