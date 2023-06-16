@@ -14,6 +14,7 @@ class MindMapVC: UIViewController {
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var redoButton: UIButton!
     
+    @IBOutlet weak var keyboardStackView: UIStackView!
     var mindMap: UIMindMap!
     
     override func viewDidLoad() {
