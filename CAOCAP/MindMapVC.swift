@@ -13,15 +13,83 @@ class MindMapVC: UIViewController {
     @IBOutlet weak var webview: WKWebView!
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var redoButton: UIButton!
-    
-    @IBOutlet weak var keyboardStackView: UIStackView!
+    @IBOutlet weak var keyboardView: UIView!
+    @IBOutlet weak var keyboardStack: UIStackView!
     var mindMap: UIMindMap!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupKeyboardGestureRecognizer()
         setupMindMapLayout()
         webview.loadHTMLString(mindMap.nodeTree.root.dom, baseURL: nil)
+    }
+    
+    func setupKeyboardGestureRecognizer() {
+        let upSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
+        let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
+        upSwipe.direction = .up
+        downSwipe.direction = .down
+        keyboardView.addGestureRecognizer(upSwipe)
+        keyboardView.addGestureRecognizer(downSwipe)
+    }
+    
+    @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
+        if sender.state == .ended {
+            switch sender.direction {
+            case .up:
+                UIView.animate(withDuration: 0.15) { 
+                    if self.keyboardStack.arrangedSubviews[12].isHidden {
+                        //skip 1-10
+                        for n in 11...12 {
+                            let view = self.keyboardStack.arrangedSubviews[n]
+                            view.alpha = 1
+                            view.isHidden = false
+                        }
+                    } else if self.keyboardStack.arrangedSubviews[1].isHidden {
+                        //skip 3,4,5,8,9
+                        for n in 1...12 {
+                            if [3,4,5,8,9].contains(n) { continue }
+                            let view = self.keyboardStack.arrangedSubviews[n]
+                            view.alpha = 1
+                            view.isHidden = false
+                        }
+                    } else {
+                        for n in 1...12 {
+                            let view = self.keyboardStack.arrangedSubviews[n]
+                            view.alpha = 1
+                            view.isHidden = false
+                        }
+                    }
+                }
+                loadViewIfNeeded()
+            case .down:
+                UIView.animate(withDuration: 0.15) {
+                    if self.keyboardStack.arrangedSubviews[1].isHidden {
+                        for n in 11...12 {
+                            let view = self.keyboardStack.arrangedSubviews[n]
+                            view.alpha = 0
+                            view.isHidden = true
+                        }
+                    } else if self.keyboardStack.arrangedSubviews[3].isHidden {
+                        for n in 1...10 {
+                            let view = self.keyboardStack.arrangedSubviews[n]
+                            view.alpha = 0
+                            view.isHidden = true
+                        }
+                    } else {
+                        for n in 3...9 {
+                            if [6,7].contains(n) { continue }
+                            let view = self.keyboardStack.arrangedSubviews[n]
+                            view.alpha = 0
+                            view.isHidden = true
+                        }
+                    }
+                }
+                loadViewIfNeeded()
+            default:
+                break
+            }
+        }
     }
     
     func setupMindMapLayout() {
@@ -76,14 +144,14 @@ class MindMapVC: UIViewController {
     @IBAction func didPressUndo(_ sender: UIButton) {
         print("\(#function)ing...")
         /*🤔 🤔 🤔*/
-//        mindMap.undo()
+        //        mindMap.undo()
         
     }
     
     @IBAction func didPressRedo(_ sender: UIButton) {
         print("\(#function)ing...")
         /*🤔 🤔 🤔*/
-//        mindMap.redo()
+        //        mindMap.redo()
     }
     
 }

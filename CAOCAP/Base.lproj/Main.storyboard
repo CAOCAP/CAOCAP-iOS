@@ -33,6 +33,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAm-8E-NFz">
+                                <rect key="frame" x="20" y="10" width="200" height="300"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNI-cb-CRC">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                                        <subviews>
+                                            <wkWebView alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="diV-kw-ft4">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <wkWebViewConfiguration key="configuration">
+                                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                    <wkPreferences key="preferences"/>
+                                                </wkWebViewConfiguration>
+                                            </wkWebView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="diV-kw-ft4" secondAttribute="trailing" id="2Go-vo-BXY"/>
+                                            <constraint firstItem="diV-kw-ft4" firstAttribute="leading" secondItem="xNI-cb-CRC" secondAttribute="leading" id="5aF-m8-2wC"/>
+                                            <constraint firstAttribute="bottom" secondItem="diV-kw-ft4" secondAttribute="bottom" id="GLV-dA-ap5"/>
+                                            <constraint firstItem="diV-kw-ft4" firstAttribute="top" secondItem="xNI-cb-CRC" secondAttribute="top" id="bep-oo-Kf5"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                                <constraints>
+                                    <constraint firstItem="xNI-cb-CRC" firstAttribute="leading" secondItem="pAm-8E-NFz" secondAttribute="leading" id="PH9-rZ-xMP"/>
+                                    <constraint firstItem="xNI-cb-CRC" firstAttribute="top" secondItem="pAm-8E-NFz" secondAttribute="top" id="RZC-WT-uJn"/>
+                                    <constraint firstAttribute="width" constant="200" id="aQZ-nU-jP4"/>
+                                    <constraint firstAttribute="height" constant="300" id="fZG-TQ-0x0"/>
+                                    <constraint firstAttribute="trailing" secondItem="xNI-cb-CRC" secondAttribute="trailing" id="u2K-nB-JMl"/>
+                                    <constraint firstAttribute="bottom" secondItem="xNI-cb-CRC" secondAttribute="bottom" id="u3Q-oK-QdT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" systemColor="labelColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAS-jS-Vj6">
                                 <rect key="frame" x="15" y="496" width="360" height="348"/>
                                 <subviews>
@@ -701,62 +757,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAm-8E-NFz">
-                                <rect key="frame" x="20" y="10" width="200" height="300"/>
-                                <subviews>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNI-cb-CRC">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
-                                        <subviews>
-                                            <wkWebView alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="diV-kw-ft4">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
-                                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <wkWebViewConfiguration key="configuration">
-                                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                                    <wkPreferences key="preferences"/>
-                                                </wkWebViewConfiguration>
-                                            </wkWebView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="diV-kw-ft4" secondAttribute="trailing" id="2Go-vo-BXY"/>
-                                            <constraint firstItem="diV-kw-ft4" firstAttribute="leading" secondItem="xNI-cb-CRC" secondAttribute="leading" id="5aF-m8-2wC"/>
-                                            <constraint firstAttribute="bottom" secondItem="diV-kw-ft4" secondAttribute="bottom" id="GLV-dA-ap5"/>
-                                            <constraint firstItem="diV-kw-ft4" firstAttribute="top" secondItem="xNI-cb-CRC" secondAttribute="top" id="bep-oo-Kf5"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
-                                <constraints>
-                                    <constraint firstItem="xNI-cb-CRC" firstAttribute="leading" secondItem="pAm-8E-NFz" secondAttribute="leading" id="PH9-rZ-xMP"/>
-                                    <constraint firstItem="xNI-cb-CRC" firstAttribute="top" secondItem="pAm-8E-NFz" secondAttribute="top" id="RZC-WT-uJn"/>
-                                    <constraint firstAttribute="width" constant="200" id="aQZ-nU-jP4"/>
-                                    <constraint firstAttribute="height" constant="300" id="fZG-TQ-0x0"/>
-                                    <constraint firstAttribute="trailing" secondItem="xNI-cb-CRC" secondAttribute="trailing" id="u2K-nB-JMl"/>
-                                    <constraint firstAttribute="bottom" secondItem="xNI-cb-CRC" secondAttribute="bottom" id="u3Q-oK-QdT"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="0.20000000000000001"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                        <size key="value" width="0.0" height="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" systemColor="labelColor"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -770,7 +770,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="kxU-NY-rOk"/>
                     <connections>
-                        <outlet property="keyboardStackView" destination="Grg-nX-Or3" id="C8P-4U-C4K"/>
+                        <outlet property="keyboardStack" destination="Grg-nX-Or3" id="C8P-4U-C4K"/>
+                        <outlet property="keyboardView" destination="nAS-jS-Vj6" id="nYk-I8-mpi"/>
                         <outlet property="redoButton" destination="5oB-EC-gwP" id="Ylt-JX-XYE"/>
                         <outlet property="undoButton" destination="psu-98-Dih" id="Kge-PT-vHi"/>
                         <outlet property="webview" destination="diV-kw-ft4" id="wqi-9k-wgq"/>
@@ -1433,7 +1434,7 @@
                                 </buttonConfiguration>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="YWP-YE-S2g">
-                                <rect key="frame" x="34" y="351" width="322.33333333333331" height="132"/>
+                                <rect key="frame" x="34" y="351" width="322.33333333333337" height="132"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try CAOCAP Premium for free" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sby-h7-ijT">
                                         <rect key="frame" x="0.0" y="0.0" width="322.33333333333331" height="26"/>

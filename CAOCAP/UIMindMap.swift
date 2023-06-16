@@ -30,9 +30,9 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         super.init(frame: .zero)
         delegate = self
         translatesAutoresizingMaskIntoConstraints = false
-        minimumZoomScale = 0.5
+        minimumZoomScale = 0.3
         maximumZoomScale = 3.0
-        zoomScale = 1.0
+        zoomScale = 0.5
         addSubview(canvas)
         canvasHeightConstraint = canvas.heightAnchor.constraint(equalToConstant: frame.height + 200)
         canvasWidthConstraint = canvas.widthAnchor.constraint(equalToConstant: frame.width + 200 )
@@ -45,7 +45,7 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
             canvas.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
         contentInset = UIEdgeInsets(top: 200, left: 100, bottom: 200 , right: 100)
-        contentOffset = CGPoint(x: 100, y: 100)
+        contentOffset = CGPoint(x: -50, y: -150)
         layoutIfNeeded()
         canvas.addGestureRecognizer(doubleTapZoom)
         canvas.isUserInteractionEnabled = true
