@@ -81,7 +81,7 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         updateSelectedNode(.down)
     }
     
-    func draw(_ node: Node) -> NodeView {
+    func draw(_ node: Node) {
         print("\(#function)ing... \(node.title)")
         let view = NodeView(node)
         canvas.addSubview(view)
@@ -95,7 +95,6 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
             view.centerYAnchor.constraint(equalTo: canvas.centerYAnchor,
                                           constant: CGFloat(100 * node.depthOfNode())),
         ])
-        return view
     }
     
     func updateSelectedNode(_ direction: Direction?) {
