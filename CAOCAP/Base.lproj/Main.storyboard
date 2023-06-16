@@ -34,10 +34,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAS-jS-Vj6">
-                                <rect key="frame" x="15" y="549" width="360" height="295"/>
+                                <rect key="frame" x="15" y="356.33333333333326" width="360" height="487.66666666666674"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Wp-Ld-xaC">
+                                        <rect key="frame" x="140" y="10" width="80" height="4"/>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="Lty-nz-fHV"/>
+                                            <constraint firstAttribute="height" constant="4" id="fUf-gK-lUM"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                     <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cP2-L4-azG">
-                                        <rect key="frame" x="0.0" y="0.0" width="360" height="295"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="487.66666666666669"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -46,13 +59,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Grg-nX-Or3">
-                                        <rect key="frame" x="15" y="15" width="330" height="265"/>
+                                        <rect key="frame" x="15" y="20" width="330" height="447.66666666666669"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5a4-wx-aMy">
-                                                <rect key="frame" x="0.0" y="0.0" width="330" height="32"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="34.333333333333336"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfp-2z-eXU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="32"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="34.333333333333336"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="chevron.compact.up" catalog="system"/>
                                                         <buttonConfiguration key="configuration" style="tinted" image="chevron.compact.left" catalog="system">
@@ -64,7 +77,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URk-NW-Nke">
-                                                        <rect key="frame" x="84.666666666666686" y="0.0" width="76.333333333333314" height="32"/>
+                                                        <rect key="frame" x="84.666666666666686" y="0.0" width="76.333333333333314" height="34.333333333333336"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="chevron.compact.up" catalog="system"/>
                                                         <buttonConfiguration key="configuration" style="tinted" image="chevron.compact.up" catalog="system">
@@ -76,7 +89,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJi-El-CrY">
-                                                        <rect key="frame" x="169" y="0.0" width="76.666666666666686" height="32"/>
+                                                        <rect key="frame" x="169" y="0.0" width="76.666666666666686" height="34.333333333333336"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="chevron.compact.up" catalog="system"/>
                                                         <buttonConfiguration key="configuration" style="tinted" image="chevron.compact.down" catalog="system">
@@ -88,7 +101,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPI-46-O5d">
-                                                        <rect key="frame" x="253.66666666666671" y="0.0" width="76.333333333333343" height="32"/>
+                                                        <rect key="frame" x="253.66666666666671" y="0.0" width="76.333333333333343" height="34.333333333333336"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="chevron.compact.up" catalog="system"/>
                                                         <buttonConfiguration key="configuration" style="tinted" image="chevron.compact.right" catalog="system">
@@ -102,10 +115,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ohl-8V-enY">
-                                                <rect key="frame" x="0.0" y="39" width="330" height="31.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="41.333333333333371" width="330" height="34.333333333333343"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjV-OB-wTZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="161" height="31.666666666666668"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="161" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Head">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -116,7 +129,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0y0-Zf-mFi">
-                                                        <rect key="frame" x="169" y="0.0" width="161" height="31.666666666666668"/>
+                                                        <rect key="frame" x="169" y="0.0" width="161" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Body">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -129,10 +142,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1od-Np-80j">
-                                                <rect key="frame" x="0.0" y="77.666666666666629" width="330" height="32"/>
+                                                <rect key="frame" x="0.0" y="82.666666666666686" width="330" height="34.333333333333343"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xz-xn-g91">
-                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="32"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Meta">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -143,7 +156,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLX-fc-heg">
-                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="32"/>
+                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Title">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -154,7 +167,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnV-mR-AYB">
-                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="32"/>
+                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Style">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -166,13 +179,29 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SXF-lw-8MF">
+                                                <rect key="frame" x="0.0" y="123.99999999999999" width="330" height="34.333333333333329"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLE-4T-6A3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="34.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="Canvas">
+                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
+                                                            <color key="baseForegroundColor" name="AccentColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yIo-lQ-cKc"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uFe-gN-8Fm">
-                                                <rect key="frame" x="0.0" y="116.66666666666664" width="330" height="31.666666666666671"/>
+                                                <rect key="frame" x="0.0" y="165.33333333333331" width="330" height="34.333333333333343"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRm-w4-KUn">
-                                                        <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="31.666666666666668"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Button">
+                                                        <buttonConfiguration key="configuration" style="gray" title="Main">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
                                                             <color key="baseForegroundColor" name="AccentColor"/>
                                                         </buttonConfiguration>
@@ -180,10 +209,21 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EX2-hv-OR9"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ym-at-0gj">
-                                                        <rect key="frame" x="84.666666666666686" y="0.0" width="76.333333333333314" height="31.666666666666668"/>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBI-qf-F4J">
+                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Div">
+                                                        <buttonConfiguration key="configuration" style="gray" title="Navigation">
+                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
+                                                            <color key="baseForegroundColor" name="AccentColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n72-ap-PQs"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ym-at-0gj">
+                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="34.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="Aside">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
                                                             <color key="baseForegroundColor" name="AccentColor"/>
                                                         </buttonConfiguration>
@@ -191,10 +231,15 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3v4-bz-Q4u"/>
                                                         </connections>
                                                     </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="64c-ci-TPD">
+                                                <rect key="frame" x="0.0" y="206.66666666666669" width="330" height="34.333333333333343"/>
+                                                <subviews>
                                                     <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ols-WK-5Z7">
-                                                        <rect key="frame" x="169" y="0.0" width="76.666666666666686" height="31.666666666666668"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Image">
+                                                        <buttonConfiguration key="configuration" style="gray" title="Article">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
                                                             <color key="baseForegroundColor" name="AccentColor"/>
                                                         </buttonConfiguration>
@@ -202,10 +247,32 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ppx-Rj-sSk"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9A-1V-iqa">
-                                                        <rect key="frame" x="253.66666666666671" y="0.0" width="76.333333333333343" height="31.666666666666668"/>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPt-xK-c2K">
+                                                        <rect key="frame" x="84.666666666666686" y="0.0" width="76.333333333333314" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Script">
+                                                        <buttonConfiguration key="configuration" style="gray" title="Header">
+                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
+                                                            <color key="baseForegroundColor" name="AccentColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MVN-ry-HZa"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTl-uQ-pVg">
+                                                        <rect key="frame" x="169" y="0.0" width="76.666666666666686" height="34.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="Footer">
+                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
+                                                            <color key="baseForegroundColor" name="AccentColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NNb-DE-0CM"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9A-1V-iqa">
+                                                        <rect key="frame" x="253.66666666666671" y="0.0" width="76.333333333333343" height="34.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="Section">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
                                                             <color key="baseForegroundColor" name="AccentColor"/>
                                                         </buttonConfiguration>
@@ -215,13 +282,100 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hgq-Ge-VTF">
-                                                <rect key="frame" x="0.0" y="155.33333333333337" width="330" height="32"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="m8Y-Op-eFP">
+                                                <rect key="frame" x="0.0" y="248.00000000000009" width="330" height="34.333333333333343"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2OJ-ek-gHl">
-                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="32"/>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWc-Oh-6RT">
+                                                        <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="34.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="Button">
+                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
+                                                            <color key="baseForegroundColor" name="AccentColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mmG-RR-xzF"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhc-eW-SV0">
+                                                        <rect key="frame" x="84.666666666666686" y="0.0" width="76.333333333333314" height="34.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="Div">
+                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
+                                                            <color key="baseForegroundColor" name="AccentColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MhM-Dy-wch"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8j-yL-QDI">
+                                                        <rect key="frame" x="169" y="0.0" width="76.666666666666686" height="34.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="Image">
+                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
+                                                            <color key="baseForegroundColor" name="AccentColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RAD-tn-bwD"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAx-ZU-skU">
+                                                        <rect key="frame" x="253.66666666666671" y="0.0" width="76.333333333333343" height="34.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="Script">
+                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
+                                                            <color key="baseForegroundColor" name="AccentColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yhb-w3-uTU"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7de-CS-ln9">
+                                                <rect key="frame" x="0.0" y="289.33333333333331" width="330" height="34.333333333333314"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJq-iD-CrR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="34.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="Video">
+                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
+                                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ikx-4H-5h9"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvo-RV-aFL">
+                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="34.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="Source">
+                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
+                                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sNv-MA-L9T"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lG-K0-Jvb">
+                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="34.333333333333336"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="Audio">
+                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
+                                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BjH-LN-Jmy"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zLx-3B-1F9">
+                                                <rect key="frame" x="0.0" y="330.66666666666669" width="330" height="34.333333333333314"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bA-jO-wr1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="34.333333333333336"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="55" id="1Fy-ij-Tib"/>
+                                                            <constraint firstAttribute="width" constant="55" id="UXi-u7-x5K"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="H">
@@ -229,13 +383,13 @@
                                                             <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fm1-5G-HqP"/>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2rR-hL-pPZ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nQ-Wf-nuQ">
-                                                        <rect key="frame" x="63" y="0.0" width="55" height="32"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCu-4Q-HmC">
+                                                        <rect key="frame" x="63" y="0.0" width="55" height="34.333333333333336"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="55" id="8xq-EU-fH0"/>
+                                                            <constraint firstAttribute="width" constant="55" id="Eca-MT-YZW"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="P">
@@ -243,24 +397,24 @@
                                                             <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N2p-UY-CQc"/>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hsf-wo-ifC"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Wf-f5-U7G">
-                                                        <rect key="frame" x="126" y="0.0" width="78" height="32"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZ3-6G-ege">
+                                                        <rect key="frame" x="126" y="0.0" width="78" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="span">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
                                                             <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="05O-ac-ZeV"/>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gxj-Yl-42C"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Im1-ya-rPz">
-                                                        <rect key="frame" x="212" y="0.0" width="55" height="32"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42f-Qf-I5O">
+                                                        <rect key="frame" x="212" y="0.0" width="55" height="34.333333333333336"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="55" id="fMd-IQ-cgr"/>
+                                                            <constraint firstAttribute="width" constant="55" id="lhw-ce-BKR"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="BR">
@@ -268,13 +422,13 @@
                                                             <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Hv-EB-0fp"/>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Yg-0h-edb"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFA-rP-2N7">
-                                                        <rect key="frame" x="275" y="0.0" width="55" height="32"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTN-EE-CZL">
+                                                        <rect key="frame" x="275" y="0.0" width="55" height="34.333333333333336"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="55" id="H07-bH-bSA"/>
+                                                            <constraint firstAttribute="width" constant="55" id="UxR-e9-Zxa"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="A">
@@ -282,87 +436,87 @@
                                                             <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ew-E4-Rnm"/>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="46d-Pn-Dm5"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="242-Vn-rF2">
-                                                <rect key="frame" x="0.0" y="194.33333333333337" width="330" height="31.666666666666657"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OVN-gY-ydS">
+                                                <rect key="frame" x="0.0" y="372.00000000000006" width="330" height="34.333333333333314"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRV-3B-BdY">
-                                                        <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="31.666666666666668"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53o-JJ-1ay">
+                                                        <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="UL">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
                                                             <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="awu-sa-4dx"/>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rer-rZ-ljj"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzS-ed-cGG">
-                                                        <rect key="frame" x="56.333333333333329" y="0.0" width="48.333333333333329" height="31.666666666666668"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2I-Z8-Dnv">
+                                                        <rect key="frame" x="56.333333333333329" y="0.0" width="48.333333333333329" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="OL">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
                                                             <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xGr-Dr-ku7"/>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IhX-Vo-Sxh"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxp-Tf-vUz">
-                                                        <rect key="frame" x="112.66666666666664" y="0.0" width="48.333333333333329" height="31.666666666666668"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9p-5f-c4b">
+                                                        <rect key="frame" x="112.66666666666664" y="0.0" width="48.333333333333329" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="LI">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
                                                             <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FfB-3s-BVT"/>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nuQ-IN-sUE"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJg-UJ-XLA">
-                                                        <rect key="frame" x="169" y="0.0" width="48.333333333333343" height="31.666666666666668"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaU-qi-sgA">
+                                                        <rect key="frame" x="169" y="0.0" width="48.333333333333343" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="EM">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
                                                             <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7t2-qA-rCv"/>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B01-QK-pEo"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAL-nh-Q6a">
-                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="48.333333333333343" height="31.666666666666668"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zyi-j6-Oxe">
+                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="48.333333333333343" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="B">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
                                                             <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bJx-oP-Rp1"/>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wZx-B4-Gu0"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eae-Hg-fhI">
-                                                        <rect key="frame" x="281.66666666666669" y="0.0" width="48.333333333333314" height="31.666666666666668"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0T-w2-eeO">
+                                                        <rect key="frame" x="281.66666666666669" y="0.0" width="48.333333333333314" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="I">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
                                                             <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pgC-4D-Dih"/>
+                                                            <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7pp-6m-1sx"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jrP-Hk-tSk">
-                                                <rect key="frame" x="0.0" y="233" width="330" height="32"/>
+                                                <rect key="frame" x="0.0" y="413.33333333333331" width="330" height="34.333333333333314"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psu-98-Dih">
-                                                        <rect key="frame" x="0.0" y="0.0" width="161" height="32"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="161" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="undo">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -373,7 +527,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oB-EC-gwP">
-                                                        <rect key="frame" x="169" y="0.0" width="161" height="32"/>
+                                                        <rect key="frame" x="169" y="0.0" width="161" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="redo">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -386,20 +540,19 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="265" id="4Ip-gX-pbN"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="cP2-L4-azG" secondAttribute="bottom" id="9sC-4o-cxr"/>
                                     <constraint firstItem="cP2-L4-azG" firstAttribute="leading" secondItem="nAS-jS-Vj6" secondAttribute="leading" id="Ftd-iu-lMk"/>
+                                    <constraint firstItem="0Wp-Ld-xaC" firstAttribute="centerX" secondItem="nAS-jS-Vj6" secondAttribute="centerX" id="Pmq-zf-E7o"/>
                                     <constraint firstItem="Grg-nX-Or3" firstAttribute="centerX" secondItem="nAS-jS-Vj6" secondAttribute="centerX" id="TVm-7z-3X1"/>
                                     <constraint firstAttribute="trailing" secondItem="Grg-nX-Or3" secondAttribute="trailing" constant="15" id="Xqr-w2-SfT"/>
                                     <constraint firstAttribute="trailing" secondItem="cP2-L4-azG" secondAttribute="trailing" id="dh4-Wi-WDU"/>
                                     <constraint firstItem="Grg-nX-Or3" firstAttribute="centerY" secondItem="nAS-jS-Vj6" secondAttribute="centerY" id="jM7-Pk-czA"/>
-                                    <constraint firstItem="Grg-nX-Or3" firstAttribute="top" secondItem="nAS-jS-Vj6" secondAttribute="top" constant="15" id="koO-Dl-zsv"/>
+                                    <constraint firstItem="Grg-nX-Or3" firstAttribute="top" secondItem="nAS-jS-Vj6" secondAttribute="top" constant="20" id="koO-Dl-zsv"/>
+                                    <constraint firstItem="0Wp-Ld-xaC" firstAttribute="top" secondItem="nAS-jS-Vj6" secondAttribute="top" constant="10" id="quF-DN-2r1"/>
                                     <constraint firstItem="cP2-L4-azG" firstAttribute="top" secondItem="nAS-jS-Vj6" secondAttribute="top" id="r3B-yM-hkb"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -489,6 +642,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="kxU-NY-rOk"/>
                     <connections>
+                        <outlet property="keyboardStackView" destination="Grg-nX-Or3" id="C8P-4U-C4K"/>
                         <outlet property="redoButton" destination="5oB-EC-gwP" id="Ylt-JX-XYE"/>
                         <outlet property="undoButton" destination="psu-98-Dih" id="Kge-PT-vHi"/>
                         <outlet property="webview" destination="diV-kw-ft4" id="wqi-9k-wgq"/>
@@ -1452,6 +1606,9 @@
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
