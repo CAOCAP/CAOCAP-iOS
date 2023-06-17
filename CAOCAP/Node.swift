@@ -20,11 +20,13 @@ class Node: NSObject {
     let title: String
     let element: String
     let textContent: String
-    let color: UIColor
     var position = 0
     
-    private (set) var children: [Node] = []
     weak var parent: Node?
+    weak var previous: Node?
+    weak var next: Node?
+    private (set) var children: [Node] = []
+    private (set) var view: NodeView
     
     override var description: String {
         var text = title
@@ -46,10 +48,10 @@ class Node: NSObject {
     
     // MARK: Initialize
     init(title: String, color: UIColor, text: String = "" /* 🤔 */) {
+        self.title = title
         element = title.lowercased()
         textContent = text
-        self.title = title
-        self.color = color
+        view = NodeView(id: self.id, title: title, color: color)
     }
     
     // MARK: Methods
@@ -113,18 +115,18 @@ class Node: NSObject {
 }
 
 class NodeView: UIView {
-    var node: Node
+    let nodeID: UUID
     
-    init(_ node: Node) {
-        self.node = node
+    init(id: UUID, title: String, color: UIColor) {
+        nodeID = id
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         layer.cornerRadius = 10
         layer.borderColor = UIColor.blue.cgColor
-        backgroundColor = node.color
+        backgroundColor = color
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 60))
         label.textAlignment = .center
-        label.text = node.title
+        label.text = title
         label.textColor = .white
         label.font = UIFont.ubuntu(.medium, size: 20)
         addSubview(label)

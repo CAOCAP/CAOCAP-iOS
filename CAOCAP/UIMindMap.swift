@@ -12,7 +12,7 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     var nodeTree: NodeTree
     var nodeTreeHistory: [NodeTree]
     var nodeViews = [NodeView]()
-
+    
     var canvasHeightConstraint = NSLayoutConstraint()
     var canvasWidthConstraint = NSLayoutConstraint()
     
@@ -51,7 +51,7 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         canvas.isUserInteractionEnabled = true
         load(root: nodeTree.root)
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -83,20 +83,48 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     
     func draw(_ node: Node) {
         print("\(#function)ing... \(node.title)")
-        let view = NodeView(node)
-        canvas.addSubview(view)
-        nodeViews.append(view)
-        NSLayoutConstraint.activate([
-            view.heightAnchor.constraint(equalToConstant: 60),
-            view.widthAnchor.constraint(equalToConstant: 150),
-            view.centerXAnchor.constraint(equalTo: canvas.centerXAnchor,
-                                          constant: CGFloat(180 * (node.position + (node.parent?.position ?? 0)))),
-            /*🤔it's not working as expected 🤔*/
-            view.centerYAnchor.constraint(equalTo: canvas.centerYAnchor,
-                                          constant: CGFloat(100 * node.depthOfNode())),
-        ])
-        canvasWidthConstraint.constant += 20
-        canvasHeightConstraint.constant += 20
+        canvas.addSubview(node.view)
+        nodeViews.append(node.view)
+        node.view.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        node.view.widthAnchor.constraint(equalToConstant: 150).isActive = true
+
+        
+        if let parent = node.parent {
+            let centerPosition = Int(parent.children.count/2)
+            if parent.children.count % 2 == 0 {
+                // even number of children ( two near centre children )
+                if node.position == centerPosition {
+                    //near centre right child
+                    node.view.centerXAnchor.constraint(equalTo: parent.view.centerXAnchor, constant: 90).isActive = true
+                } else if node.position == centerPosition - 1 {
+                    //near centre left child
+                    node.view.centerXAnchor.constraint(equalTo: parent.view.centerXAnchor, constant: -90).isActive = true
+                } else {
+                    //push to the right or left| i am 0 of 4 -> 0 - 2 + 0.5 -> -1.5*180, i am 3 of 4 -> 3 - 2 + 0.5 -> 1.5*180
+                    let multiplier = Double(node.position - centerPosition) + 0.5
+                    node.view.centerXAnchor.constraint(equalTo: parent.view.centerXAnchor, constant: CGFloat(multiplier * 180)).isActive = true
+                }
+            } else {
+                // odd number of children ( one centered child )
+                if node.position == centerPosition {
+                    //centered child
+                    node.view.centerXAnchor.constraint(equalTo: parent.view.centerXAnchor).isActive = true
+                } else {
+                    //push to the right or left
+                    let multiplier = node.position - centerPosition
+                    node.view.centerXAnchor.constraint(equalTo: parent.view.centerXAnchor, constant: CGFloat(multiplier * 180)).isActive = true
+                }
+            }
+            
+            
+            node.view.centerYAnchor.constraint(equalTo: parent.view.centerYAnchor, constant: 90).isActive = true
+        } else {
+            node.view.centerXAnchor.constraint(equalTo: canvas.centerXAnchor).isActive = true
+            node.view.centerYAnchor.constraint(equalTo: canvas.centerYAnchor).isActive = true
+        }
+        
+        canvasWidthConstraint.constant += 30
+        canvasHeightConstraint.constant += 30
     }
     
     func selectedNew(node: Node) {
@@ -104,12 +132,11 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         let previouslySelectedID = nodeTree.selectedID
         print("select new child")
         nodeTree.selectedID = node.id
-        guard let previousNodeView = nodeViews.first(where: { $0.node.id == previouslySelectedID }),
-            let currentNodeView = nodeViews.first(where: { $0.node.id == nodeTree.selectedID })
-        else { return }
-        previousNodeView.layer.borderWidth = 0
+        let currentNodeView = node.view
         currentNodeView.layer.borderWidth = 2
-        print("Current Selected Node ID: \(nodeTree.selectedID)")/*🤔*/
+        print("Current Selected Node ID: \(nodeTree.selectedID)")
+        guard let previousNodeView = nodeTree.root.search(id: previouslySelectedID)?.view else { return }
+        previousNodeView.layer.borderWidth = 0
         
     }
     
@@ -144,20 +171,19 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
             print("select next sibling")
             nodeTree.selectedID = parent.children[selected.position + 1].id
         }
-        guard
-            let previousNodeView = nodeViews.first(where: { $0.node.id == previouslySelectedID }),
-            let currentNodeView = nodeViews.first(where: { $0.node.id == nodeTree.selectedID })
-        else { return }
-        previousNodeView.layer.borderWidth = 0
+        
+        print("Current Selected Node ID: \(nodeTree.selectedID)")
+        guard let previousNodeView = nodeTree.root.search(id: previouslySelectedID)?.view,
+              let currentNodeView = nodeTree.root.search(id: nodeTree.selectedID)?.view else { return }
         currentNodeView.layer.borderWidth = 2
-        print("Current Selected Node ID: \(nodeTree.selectedID)")/*🤔*/
+        previousNodeView.layer.borderWidth = 0
     }
     
     func center() {
         print("\(#function)ing...")
         /*🤔 🤔 🤔*/
     }
-
+    
     //MARK: - handle Zooming in/out
     lazy var doubleTapZoom: UITapGestureRecognizer = {
         let zoomingTap = UITapGestureRecognizer(target: self, action: #selector(handleZoomingTap))
