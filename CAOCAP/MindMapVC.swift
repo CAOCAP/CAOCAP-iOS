@@ -13,15 +13,83 @@ class MindMapVC: UIViewController {
     @IBOutlet weak var webview: WKWebView!
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var redoButton: UIButton!
-    
-    @IBOutlet weak var keyboardStackView: UIStackView!
+    @IBOutlet weak var keyboardView: UIView!
+    @IBOutlet weak var keyboardStack: UIStackView!
     var mindMap: UIMindMap!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupKeyboardGestureRecognizer()
         setupMindMapLayout()
         webview.loadHTMLString(mindMap.nodeTree.root.dom, baseURL: nil)
+    }
+    
+    func setupKeyboardGestureRecognizer() {
+        let upSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
+        let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
+        upSwipe.direction = .up
+        downSwipe.direction = .down
+        keyboardView.addGestureRecognizer(upSwipe)
+        keyboardView.addGestureRecognizer(downSwipe)
+    }
+    
+    @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
+        if sender.state == .ended {
+            switch sender.direction {
+            case .up:
+                UIView.animate(withDuration: 0.15) {
+                    if self.keyboardStack.arrangedSubviews[12].isHidden {
+                        //skip 1-10
+                        for n in 11...12 {
+                            let view = self.keyboardStack.arrangedSubviews[n]
+                            view.alpha = 1
+                            view.isHidden = false
+                        }
+                    } else if self.keyboardStack.arrangedSubviews[1].isHidden {
+                        //skip 3,4,5,8,9
+                        for n in 1...12 {
+                            if [3,4,5,8,9].contains(n) { continue }
+                            let view = self.keyboardStack.arrangedSubviews[n]
+                            view.alpha = 1
+                            view.isHidden = false
+                        }
+                    } else {
+                        for n in 1...12 {
+                            let view = self.keyboardStack.arrangedSubviews[n]
+                            view.alpha = 1
+                            view.isHidden = false
+                        }
+                    }
+                }
+                loadViewIfNeeded()
+            case .down:
+                UIView.animate(withDuration: 0.15) {
+                    if self.keyboardStack.arrangedSubviews[1].isHidden {
+                        for n in 11...12 {
+                            let view = self.keyboardStack.arrangedSubviews[n]
+                            view.alpha = 0
+                            view.isHidden = true
+                        }
+                    } else if self.keyboardStack.arrangedSubviews[3].isHidden {
+                        for n in 1...10 {
+                            let view = self.keyboardStack.arrangedSubviews[n]
+                            view.alpha = 0
+                            view.isHidden = true
+                        }
+                    } else {
+                        for n in 3...9 {
+                            if [6,7].contains(n) { continue }
+                            let view = self.keyboardStack.arrangedSubviews[n]
+                            view.alpha = 0
+                            view.isHidden = true
+                        }
+                    }
+                }
+                loadViewIfNeeded()
+            default:
+                break
+            }
+        }
     }
     
     func setupMindMapLayout() {
@@ -42,6 +110,7 @@ class MindMapVC: UIViewController {
     
     @IBAction func didPressAddNode(_ sender: UIButton) {
         print("\(#function)ing...")
+        /* warning : you are about to witness ugly code*/
         let newNode: Node
         switch sender.tag {
         case 1:
@@ -49,23 +118,83 @@ class MindMapVC: UIViewController {
         case 2:
             newNode = Node(title: "Body", color: .systemPink)
         case 3:
-            newNode = Node(title: "Meta", color: .purple)
+            newNode = Node(title: "Meta", color: .systemPurple)
         case 4:
-            newNode = Node(title: "Title", color: .purple)
+            newNode = Node(title: "Title", color: .systemPurple, text: "MyBlog")
         case 5:
-            newNode = Node(title: "Style", color: .purple)
+            newNode = Node(title: "Style", color: .systemPurple)
         case 6:
-            newNode = Node(title: "Button", color: .systemGreen)
+            newNode = Node(title: "Canvas", color: .systemBlue)
         case 7:
-            newNode = Node(title: "Div", color: .systemPink)
+            newNode = Node(title: "Main", color: .systemBlue)
         case 8:
-            newNode = Node(title: "Image", color: .purple) // 🤔
+            newNode = Node(title: "Nav", color: .systemBlue)
         case 9:
-            newNode = Node(title: "Script", color: .purple)
+            newNode = Node(title: "Aside", color: .systemBlue)
         case 10:
-            newNode = Node(title: "H1", color: .systemGray)
+            newNode = Node(title: "Article", color: .systemBlue)
+        case 11:
+            newNode = Node(title: "Header", color: .systemBlue)
+        case 12:
+            newNode = Node(title: "Footer", color: .systemBlue)
+        case 13:
+            newNode = Node(title: "Section", color: .systemBlue)
+        case 14:
+            newNode = Node(title: "Button", color: .systemBlue, text: "Click Me!")
+        case 15:
+            newNode = Node(title: "Div", color: .systemBlue)
+        case 16:
+            newNode = Node(title: "Img", color: .systemBlue)
+        case 17:
+            newNode = Node(title: "Script", color: .systemBlue)
+        case 18:
+            newNode = Node(title: "Input", color: .systemTeal)
+        case 19:
+            newNode = Node(title: "Form", color: .systemTeal)
+        case 20:
+            newNode = Node(title: "Output", color: .systemTeal)
+        case 21:
+            newNode = Node(title: "Label", color: .systemTeal, text: "First name:")
+        case 22:
+            newNode = Node(title: "Option", color: .systemTeal, text: "CAOCAP")
+        case 23:
+            newNode = Node(title: "Legend", color: .systemTeal, text: "Personalia:")
+        case 24:
+            newNode = Node(title: "Select", color: .systemTeal)
+        case 25:
+            newNode = Node(title: "FieldSet", color: .systemTeal)
+        case 26:
+            newNode = Node(title: "OptGroup", color: .systemTeal)
+        case 27:
+            newNode = Node(title: "TextArea", color: .systemTeal, text: "The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It is often assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.")
+        case 28:
+            newNode = Node(title: "Video", color: .systemYellow)
+        case 29:
+            newNode = Node(title: "Source", color: .systemYellow)
+        case 30:
+            newNode = Node(title: "Audio", color: .systemYellow)
+        case 31:
+            newNode = Node(title: "H1", color: .systemGray, text: "Hello CAOCAP!")
+        case 32:
+            newNode = Node(title: "P", color: .systemGray, text: "At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.")
+        case 33:
+            newNode = Node(title: "Span", color: .systemGray, text: "caocap")
+        case 34:
+            newNode = Node(title: "BR", color: .systemGray)
+        case 35:
+            newNode = Node(title: "A", color: .systemGray, text: "Visit W3Schools.com!")
+        case 36:
+            newNode = Node(title: "UL", color: .systemGray)
+        case 37:
+            newNode = Node(title: "OL", color: .systemGray)
+        case 38:
+            newNode = Node(title: "LI", color: .systemGray, text: "Coffee")
+        case 39:
+            newNode = Node(title: "EM", color: .systemGray, text: "displayed in italic")
+        case 40:
+            newNode = Node(title: "B", color: .systemGray, text: "this is bold text")
         default:
-            newNode = Node(title: "P", color: .systemGray)
+            newNode = Node(title: "I", color: .systemGray, text: "alternate voice or mood")
         }
         mindMap.add(newNode)
         print(mindMap.nodeTree.root.dom)
@@ -76,14 +205,14 @@ class MindMapVC: UIViewController {
     @IBAction func didPressUndo(_ sender: UIButton) {
         print("\(#function)ing...")
         /*🤔 🤔 🤔*/
-//        mindMap.undo()
+        //        mindMap.undo()
         
     }
     
     @IBAction func didPressRedo(_ sender: UIButton) {
         print("\(#function)ing...")
         /*🤔 🤔 🤔*/
-//        mindMap.redo()
+        //        mindMap.redo()
     }
     
 }

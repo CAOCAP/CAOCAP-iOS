@@ -33,6 +33,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAm-8E-NFz">
+                                <rect key="frame" x="20" y="10" width="200" height="300"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNI-cb-CRC">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                                        <subviews>
+                                            <wkWebView alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="diV-kw-ft4">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
+                                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <wkWebViewConfiguration key="configuration">
+                                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                    <wkPreferences key="preferences"/>
+                                                </wkWebViewConfiguration>
+                                            </wkWebView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="diV-kw-ft4" secondAttribute="trailing" id="2Go-vo-BXY"/>
+                                            <constraint firstItem="diV-kw-ft4" firstAttribute="leading" secondItem="xNI-cb-CRC" secondAttribute="leading" id="5aF-m8-2wC"/>
+                                            <constraint firstAttribute="bottom" secondItem="diV-kw-ft4" secondAttribute="bottom" id="GLV-dA-ap5"/>
+                                            <constraint firstItem="diV-kw-ft4" firstAttribute="top" secondItem="xNI-cb-CRC" secondAttribute="top" id="bep-oo-Kf5"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                                <constraints>
+                                    <constraint firstItem="xNI-cb-CRC" firstAttribute="leading" secondItem="pAm-8E-NFz" secondAttribute="leading" id="PH9-rZ-xMP"/>
+                                    <constraint firstItem="xNI-cb-CRC" firstAttribute="top" secondItem="pAm-8E-NFz" secondAttribute="top" id="RZC-WT-uJn"/>
+                                    <constraint firstAttribute="width" constant="200" id="aQZ-nU-jP4"/>
+                                    <constraint firstAttribute="height" constant="300" id="fZG-TQ-0x0"/>
+                                    <constraint firstAttribute="trailing" secondItem="xNI-cb-CRC" secondAttribute="trailing" id="u2K-nB-JMl"/>
+                                    <constraint firstAttribute="bottom" secondItem="xNI-cb-CRC" secondAttribute="bottom" id="u3Q-oK-QdT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" systemColor="labelColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAS-jS-Vj6">
                                 <rect key="frame" x="15" y="496" width="360" height="348"/>
                                 <subviews>
@@ -185,7 +241,7 @@
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SXF-lw-8MF">
                                                 <rect key="frame" x="0.0" y="101.66666666666663" width="330" height="0.0"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLE-4T-6A3">
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLE-4T-6A3">
                                                         <rect key="frame" x="0.0" y="0.0" width="330" height="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Canvas">
@@ -201,7 +257,7 @@
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uFe-gN-8Fm">
                                                 <rect key="frame" x="0.0" y="101.66666666666663" width="330" height="0.0"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRm-w4-KUn">
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRm-w4-KUn">
                                                         <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Main">
@@ -223,7 +279,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n72-ap-PQs"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ym-at-0gj">
+                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ym-at-0gj">
                                                         <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Aside">
@@ -239,7 +295,7 @@
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="64c-ci-TPD">
                                                 <rect key="frame" x="0.0" y="101.66666666666663" width="330" height="0.0"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ols-WK-5Z7">
+                                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ols-WK-5Z7">
                                                         <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Article">
@@ -250,7 +306,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ppx-Rj-sSk"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPt-xK-c2K">
+                                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPt-xK-c2K">
                                                         <rect key="frame" x="84.666666666666686" y="0.0" width="76.333333333333314" height="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Header">
@@ -261,7 +317,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MVN-ry-HZa"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTl-uQ-pVg">
+                                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTl-uQ-pVg">
                                                         <rect key="frame" x="169" y="0.0" width="76.666666666666686" height="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Footer">
@@ -272,7 +328,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NNb-DE-0CM"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9A-1V-iqa">
+                                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9A-1V-iqa">
                                                         <rect key="frame" x="253.66666666666671" y="0.0" width="76.333333333333343" height="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Section">
@@ -288,7 +344,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="m8Y-Op-eFP">
                                                 <rect key="frame" x="0.0" y="105" width="330" height="28"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWc-Oh-6RT">
+                                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWc-Oh-6RT">
                                                         <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="28"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Button">
@@ -299,7 +355,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mmG-RR-xzF"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhc-eW-SV0">
+                                                    <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhc-eW-SV0">
                                                         <rect key="frame" x="84.666666666666686" y="0.0" width="76.333333333333314" height="28"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Div">
@@ -310,7 +366,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MhM-Dy-wch"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8j-yL-QDI">
+                                                    <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8j-yL-QDI">
                                                         <rect key="frame" x="169" y="0.0" width="76.666666666666686" height="28"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Image">
@@ -321,7 +377,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RAD-tn-bwD"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAx-ZU-skU">
+                                                    <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAx-ZU-skU">
                                                         <rect key="frame" x="253.66666666666671" y="0.0" width="76.333333333333343" height="28"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Script">
@@ -337,7 +393,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vSn-JT-Xgo">
                                                 <rect key="frame" x="0.0" y="140" width="330" height="28"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNW-dU-aTl">
+                                                    <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNW-dU-aTl">
                                                         <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="28"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Input">
@@ -348,7 +404,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lkp-rq-PzR"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4s-nA-Vvl">
+                                                    <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4s-nA-Vvl">
                                                         <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="28"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Form">
@@ -359,7 +415,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QSK-Ac-xPT"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nc-gF-jS0">
+                                                    <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nc-gF-jS0">
                                                         <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="28"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Output">
@@ -375,7 +431,7 @@
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3V9-WE-W8l">
                                                 <rect key="frame" x="0.0" y="171.66666666666663" width="330" height="0.0"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkf-L8-Xzr">
+                                                    <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkf-L8-Xzr">
                                                         <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Label">
@@ -386,7 +442,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sh6-37-Iv9"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efp-23-Zij">
+                                                    <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efp-23-Zij">
                                                         <rect key="frame" x="84.666666666666686" y="0.0" width="76.333333333333314" height="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Option">
@@ -397,7 +453,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QnG-0N-gRi"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atC-mH-xW6">
+                                                    <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atC-mH-xW6">
                                                         <rect key="frame" x="169" y="0.0" width="76.666666666666686" height="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Legend">
@@ -408,7 +464,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="glv-qR-AFX"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYV-TP-Hmz">
+                                                    <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYV-TP-Hmz">
                                                         <rect key="frame" x="253.66666666666671" y="0.0" width="76.333333333333343" height="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Select">
@@ -424,7 +480,7 @@
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ivc-vn-iLU">
                                                 <rect key="frame" x="0.0" y="171.66666666666663" width="330" height="0.0"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCH-G1-eLl">
+                                                    <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCH-G1-eLl">
                                                         <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Field Set">
@@ -435,7 +491,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vqJ-PF-63v"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Yo-6g-03W">
+                                                    <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Yo-6g-03W">
                                                         <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Opt-Group">
@@ -446,7 +502,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4C2-5v-ReT"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Olq-Vr-8zg">
+                                                    <button opaque="NO" tag="27" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Olq-Vr-8zg">
                                                         <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="0.0"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Text Area">
@@ -462,7 +518,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7de-CS-ln9">
                                                 <rect key="frame" x="0.0" y="175" width="330" height="28"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJq-iD-CrR">
+                                                    <button opaque="NO" tag="28" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJq-iD-CrR">
                                                         <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="28"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Video">
@@ -473,7 +529,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ikx-4H-5h9"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvo-RV-aFL">
+                                                    <button opaque="NO" tag="29" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvo-RV-aFL">
                                                         <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="28"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Source">
@@ -484,7 +540,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sNv-MA-L9T"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lG-K0-Jvb">
+                                                    <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lG-K0-Jvb">
                                                         <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="28"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Audio">
@@ -500,7 +556,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zLx-3B-1F9">
                                                 <rect key="frame" x="0.0" y="210" width="330" height="28"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bA-jO-wr1">
+                                                    <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bA-jO-wr1">
                                                         <rect key="frame" x="0.0" y="0.0" width="55" height="28"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="55" id="UXi-u7-x5K"/>
@@ -514,7 +570,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2rR-hL-pPZ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCu-4Q-HmC">
+                                                    <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCu-4Q-HmC">
                                                         <rect key="frame" x="63" y="0.0" width="55" height="28"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="55" id="Eca-MT-YZW"/>
@@ -528,10 +584,10 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hsf-wo-ifC"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZ3-6G-ege">
+                                                    <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZ3-6G-ege">
                                                         <rect key="frame" x="126" y="0.0" width="78" height="28"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="span">
+                                                        <buttonConfiguration key="configuration" style="filled" title="Span">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
                                                             <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
                                                         </buttonConfiguration>
@@ -539,7 +595,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gxj-Yl-42C"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42f-Qf-I5O">
+                                                    <button opaque="NO" tag="34" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42f-Qf-I5O">
                                                         <rect key="frame" x="212" y="0.0" width="55" height="28"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="55" id="lhw-ce-BKR"/>
@@ -553,7 +609,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Yg-0h-edb"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTN-EE-CZL">
+                                                    <button opaque="NO" tag="35" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTN-EE-CZL">
                                                         <rect key="frame" x="275" y="0.0" width="55" height="28"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="55" id="UxR-e9-Zxa"/>
@@ -572,7 +628,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OVN-gY-ydS">
                                                 <rect key="frame" x="0.0" y="245" width="330" height="28"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53o-JJ-1ay">
+                                                    <button opaque="NO" tag="36" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53o-JJ-1ay">
                                                         <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="28"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="UL">
@@ -583,7 +639,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rer-rZ-ljj"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2I-Z8-Dnv">
+                                                    <button opaque="NO" tag="37" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2I-Z8-Dnv">
                                                         <rect key="frame" x="56.333333333333329" y="0.0" width="48.333333333333329" height="28"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="OL">
@@ -594,7 +650,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IhX-Vo-Sxh"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9p-5f-c4b">
+                                                    <button opaque="NO" tag="38" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9p-5f-c4b">
                                                         <rect key="frame" x="112.66666666666664" y="0.0" width="48.333333333333329" height="28"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="LI">
@@ -605,7 +661,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nuQ-IN-sUE"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaU-qi-sgA">
+                                                    <button opaque="NO" tag="39" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaU-qi-sgA">
                                                         <rect key="frame" x="169" y="0.0" width="48.333333333333343" height="28"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="EM">
@@ -616,7 +672,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B01-QK-pEo"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zyi-j6-Oxe">
+                                                    <button opaque="NO" tag="40" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zyi-j6-Oxe">
                                                         <rect key="frame" x="225.33333333333334" y="0.0" width="48.333333333333343" height="28"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="B">
@@ -627,7 +683,7 @@
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wZx-B4-Gu0"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0T-w2-eeO">
+                                                    <button opaque="NO" tag="41" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0T-w2-eeO">
                                                         <rect key="frame" x="281.66666666666669" y="0.0" width="48.333333333333314" height="28"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="I">
@@ -701,62 +757,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAm-8E-NFz">
-                                <rect key="frame" x="20" y="10" width="200" height="300"/>
-                                <subviews>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xNI-cb-CRC">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
-                                        <subviews>
-                                            <wkWebView alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="diV-kw-ft4">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
-                                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <wkWebViewConfiguration key="configuration">
-                                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                                    <wkPreferences key="preferences"/>
-                                                </wkWebViewConfiguration>
-                                            </wkWebView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="diV-kw-ft4" secondAttribute="trailing" id="2Go-vo-BXY"/>
-                                            <constraint firstItem="diV-kw-ft4" firstAttribute="leading" secondItem="xNI-cb-CRC" secondAttribute="leading" id="5aF-m8-2wC"/>
-                                            <constraint firstAttribute="bottom" secondItem="diV-kw-ft4" secondAttribute="bottom" id="GLV-dA-ap5"/>
-                                            <constraint firstItem="diV-kw-ft4" firstAttribute="top" secondItem="xNI-cb-CRC" secondAttribute="top" id="bep-oo-Kf5"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
-                                <constraints>
-                                    <constraint firstItem="xNI-cb-CRC" firstAttribute="leading" secondItem="pAm-8E-NFz" secondAttribute="leading" id="PH9-rZ-xMP"/>
-                                    <constraint firstItem="xNI-cb-CRC" firstAttribute="top" secondItem="pAm-8E-NFz" secondAttribute="top" id="RZC-WT-uJn"/>
-                                    <constraint firstAttribute="width" constant="200" id="aQZ-nU-jP4"/>
-                                    <constraint firstAttribute="height" constant="300" id="fZG-TQ-0x0"/>
-                                    <constraint firstAttribute="trailing" secondItem="xNI-cb-CRC" secondAttribute="trailing" id="u2K-nB-JMl"/>
-                                    <constraint firstAttribute="bottom" secondItem="xNI-cb-CRC" secondAttribute="bottom" id="u3Q-oK-QdT"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="20"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                        <real key="value" value="0.20000000000000001"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                        <size key="value" width="0.0" height="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                        <color key="value" systemColor="labelColor"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -770,7 +770,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="kxU-NY-rOk"/>
                     <connections>
-                        <outlet property="keyboardStackView" destination="Grg-nX-Or3" id="C8P-4U-C4K"/>
+                        <outlet property="keyboardStack" destination="Grg-nX-Or3" id="C8P-4U-C4K"/>
+                        <outlet property="keyboardView" destination="nAS-jS-Vj6" id="nYk-I8-mpi"/>
                         <outlet property="redoButton" destination="5oB-EC-gwP" id="Ylt-JX-XYE"/>
                         <outlet property="undoButton" destination="psu-98-Dih" id="Kge-PT-vHi"/>
                         <outlet property="webview" destination="diV-kw-ft4" id="wqi-9k-wgq"/>
