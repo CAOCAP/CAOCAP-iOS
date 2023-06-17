@@ -95,8 +95,8 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
             view.centerYAnchor.constraint(equalTo: canvas.centerYAnchor,
                                           constant: CGFloat(100 * node.depthOfNode())),
         ])
-        canvasWidthConstraint.constant += 200
-        canvasHeightConstraint.constant += 200
+        canvasWidthConstraint.constant += 20
+        canvasHeightConstraint.constant += 20
     }
     
     func selectedNew(node: Node) {
