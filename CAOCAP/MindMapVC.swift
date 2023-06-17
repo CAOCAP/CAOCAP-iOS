@@ -120,7 +120,7 @@ class MindMapVC: UIViewController {
         case 3:
             newNode = Node(title: "Meta", color: .systemPurple)
         case 4:
-            newNode = Node(title: "Title", color: .systemPurple)
+            newNode = Node(title: "Title", color: .systemPurple, text: "MyBlog")
         case 5:
             newNode = Node(title: "Style", color: .systemPurple)
         case 6:
@@ -140,7 +140,7 @@ class MindMapVC: UIViewController {
         case 13:
             newNode = Node(title: "Section", color: .systemBlue)
         case 14:
-            newNode = Node(title: "Button", color: .systemBlue)
+            newNode = Node(title: "Button", color: .systemBlue, text: "Click Me!")
         case 15:
             newNode = Node(title: "Div", color: .systemBlue)
         case 16:
@@ -154,11 +154,11 @@ class MindMapVC: UIViewController {
         case 20:
             newNode = Node(title: "Output", color: .systemTeal)
         case 21:
-            newNode = Node(title: "Label", color: .systemTeal)
+            newNode = Node(title: "Label", color: .systemTeal, text: "First name:")
         case 22:
-            newNode = Node(title: "Option", color: .systemTeal)
+            newNode = Node(title: "Option", color: .systemTeal, text: "CAOCAP")
         case 23:
-            newNode = Node(title: "Legend", color: .systemTeal)
+            newNode = Node(title: "Legend", color: .systemTeal, text: "Personalia:")
         case 24:
             newNode = Node(title: "Select", color: .systemTeal)
         case 25:
@@ -166,7 +166,7 @@ class MindMapVC: UIViewController {
         case 26:
             newNode = Node(title: "OptGroup", color: .systemTeal)
         case 27:
-            newNode = Node(title: "TextArea", color: .systemTeal)
+            newNode = Node(title: "TextArea", color: .systemTeal, text: "The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It is often assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.")
         case 28:
             newNode = Node(title: "Video", color: .systemYellow)
         case 29:
@@ -174,27 +174,27 @@ class MindMapVC: UIViewController {
         case 30:
             newNode = Node(title: "Audio", color: .systemYellow)
         case 31:
-            newNode = Node(title: "H1", color: .systemGray)
+            newNode = Node(title: "H1", color: .systemGray, text: "Hello CAOCAP!")
         case 32:
-            newNode = Node(title: "P", color: .systemGray)
+            newNode = Node(title: "P", color: .systemGray, text: "At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.")
         case 33:
-            newNode = Node(title: "Span", color: .systemGray)
+            newNode = Node(title: "Span", color: .systemGray, text: "caocap")
         case 34:
             newNode = Node(title: "BR", color: .systemGray)
         case 35:
-            newNode = Node(title: "A", color: .systemGray)
+            newNode = Node(title: "A", color: .systemGray, text: "Visit W3Schools.com!")
         case 36:
             newNode = Node(title: "UL", color: .systemGray)
         case 37:
             newNode = Node(title: "OL", color: .systemGray)
         case 38:
-            newNode = Node(title: "LI", color: .systemGray)
+            newNode = Node(title: "LI", color: .systemGray, text: "Coffee")
         case 39:
-            newNode = Node(title: "EM", color: .systemGray)
+            newNode = Node(title: "EM", color: .systemGray, text: "displayed in italic")
         case 40:
-            newNode = Node(title: "B", color: .systemGray)
+            newNode = Node(title: "B", color: .systemGray, text: "this is bold text")
         default:
-            newNode = Node(title: "I", color: .systemGray)
+            newNode = Node(title: "I", color: .systemGray, text: "alternate voice or mood")
         }
         mindMap.add(newNode)
         print(mindMap.nodeTree.root.dom)

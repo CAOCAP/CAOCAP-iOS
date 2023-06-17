@@ -45,7 +45,7 @@ class Node: NSObject {
     }
     
     // MARK: Initialize
-    init(title: String, color: UIColor, text: String = "Hello CAOCAP" /* 🤔 */) {
+    init(title: String, color: UIColor, text: String = "" /* 🤔 */) {
         element = title.lowercased()
         textContent = text
         self.title = title
