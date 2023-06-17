@@ -95,6 +95,8 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
             view.centerYAnchor.constraint(equalTo: canvas.centerYAnchor,
                                           constant: CGFloat(100 * node.depthOfNode())),
         ])
+        canvasWidthConstraint.constant += 200
+        canvasHeightConstraint.constant += 200
     }
     
     func updateSelectedNode(_ direction: Direction?) {
@@ -135,8 +137,6 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         previousNodeView.layer.borderWidth = 0
         currentNodeView.layer.borderWidth = 2
         print(currentNodeView.center)
-        setContentOffset(currentNodeView.center, animated: true)
-        layoutIfNeeded()
         print("Current Selected Node ID: \(nodeTree.selectedID)")/*🤔*/
     }
     
