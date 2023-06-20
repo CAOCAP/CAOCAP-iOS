@@ -20,7 +20,9 @@ class Node: NSObject {
     let title: String
     let element: String
     let textContent: String
-    var position = 0
+    var position: Int {
+        return parent?.children.firstIndex(of: self) ?? 0
+    }
     
     weak var parent: Node?
     weak var previous: Node? /* 🤔 */
@@ -56,7 +58,6 @@ class Node: NSObject {
     
     // MARK: Methods
     func add(child: Node) {
-        child.position = children.count
         children.append(child)
         child.parent = self
     }

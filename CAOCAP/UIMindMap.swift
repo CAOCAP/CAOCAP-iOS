@@ -11,7 +11,7 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     
     var nodeTree: NodeTree
     var nodeTreeHistory: [NodeTree]
-    var nodeViews = [NodeView]()
+//    var nodeViews = [NodeView]()
     
     var canvasHeightConstraint = NSLayoutConstraint()
     var canvasWidthConstraint = NSLayoutConstraint()
@@ -58,6 +58,9 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     
     func load(root: Node) {
         print("\(#function)ing...")
+        
+        canvas.subviews.forEach({ $0.removeFromSuperview() })
+//        nodeViews.removeAll()
         draw(root)
         if !root.children.isEmpty { load(children: root.children) }
         
@@ -75,7 +78,6 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     func add(_ node: Node) {
         print("\(#function)ing...")
         guard let selectedNode = nodeTree.root.search(id: nodeTree.selectedID) else { return }
-        canvas.subviews.forEach({ $0.removeFromSuperview() })
         selectedNode.add(child: node)
         load(root: nodeTree.root)/*🤔 🤔 🤔*/
         select(node)
@@ -84,21 +86,15 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     func delete(_ node: Node) {
         print("\(#function)ing...")
         guard let parent = node.parent else { return }
-        var deletedIds = [UUID]()
-        node.forEachDepthFirst { deletedIds.append($0.id) }
         parent.remove(node: node)
-        nodeViews.forEach {
-            if deletedIds.contains($0.nodeID) {
-                $0.delete()
-            }
-        }
+        load(root: nodeTree.root)/*🤔 🤔 🤔*/
         select(parent)
     }
     
     func draw(_ node: Node) {
         print("\(#function)ing... \(node.title)")
         canvas.addSubview(node.view)
-        nodeViews.append(node.view)
+//        nodeViews.append(node.view)
         node.view.delegate = self
         node.view.heightAnchor.constraint(equalToConstant: 60).isActive = true
         node.view.widthAnchor.constraint(equalToConstant: 150).isActive = true
@@ -234,7 +230,9 @@ extension UIMindMap: NodeViewDelegate {
     func delete(nodeID: UUID) {
         print("\(#function)ing...")
         guard let node = nodeTree.root.search(id: nodeID) else { return }
-        delete(node)
+        DispatchQueue.main.async {
+            self.delete(node)
+        }
     }
     
 }
