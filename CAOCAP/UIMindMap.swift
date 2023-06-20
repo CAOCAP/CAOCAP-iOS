@@ -78,13 +78,14 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         canvas.subviews.forEach({ $0.removeFromSuperview() })
         selectedNode.add(child: node)
         load(root: nodeTree.root)/*🤔 🤔 🤔*/
-        selectedNew(node: node)
+        select(node: node)
     }
     
     func draw(_ node: Node) {
         print("\(#function)ing... \(node.title)")
         canvas.addSubview(node.view)
         nodeViews.append(node.view)
+        node.view.delegate = self
         node.view.heightAnchor.constraint(equalToConstant: 60).isActive = true
         node.view.widthAnchor.constraint(equalToConstant: 150).isActive = true
 
@@ -127,10 +128,9 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         canvasHeightConstraint.constant += 30
     }
     
-    func selectedNew(node: Node) {
+    func select(node: Node) {
         print("Previously Selected Node ID: \(nodeTree.selectedID)")
         let previouslySelectedID = nodeTree.selectedID
-        print("select new child")
         nodeTree.selectedID = node.id
         let currentNodeView = node.view
         currentNodeView.layer.borderWidth = 2
@@ -208,4 +208,18 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
         /* center() 🤔 🤔 🤔*/
     }
+}
+
+
+extension UIMindMap: NodeViewDelegate {
+    func select(nodeID: UUID) {
+        guard let node = nodeTree.root.search(id: nodeID) else { return }
+        select(node: node)
+    }
+    
+    func delete(nodeID: UUID) {
+        nodeTree.root.removeNode(with: nodeID)
+        load(root: nodeTree.root) /*🤔 🤔 🤔*/
+    }
+    
 }

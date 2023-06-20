@@ -23,7 +23,7 @@ class Node: NSObject {
     var position = 0
     
     weak var parent: Node?
-    weak var previous: Node?
+    weak var previous: Node? /* 🤔 */
     weak var next: Node?
     private (set) var children: [Node] = []
     private (set) var view: NodeView
@@ -81,11 +81,14 @@ class Node: NSObject {
     }
     
     func remove(node: Node) {
-        if let nodeToDelete = search(id: node.id), let parentNodeToDelete = nodeToDelete.parent {
-            parentNodeToDelete.children.removeAll(where: { childNode in
-                nodeToDelete == childNode
-            })
-        }
+        guard let parent = node.parent else { return }
+        parent.children.removeAll { $0 == node }
+    }
+    
+    func removeNode(with id: UUID) {
+        guard let node = search(id: id),
+            let parent = node.parent else { return }
+        parent.children.removeAll { $0 == node }
     }
     
     func depthOfNode() -> Int {
@@ -114,9 +117,14 @@ class Node: NSObject {
     
 }
 
+protocol NodeViewDelegate {
+    func select(nodeID: UUID)
+    func delete(nodeID: UUID)
+}
+
 class NodeView: UIView {
     let nodeID: UUID
-    
+    var delegate: NodeViewDelegate?
     init(id: UUID, title: String, color: UIColor) {
         nodeID = id
         super.init(frame: .zero)
@@ -130,10 +138,17 @@ class NodeView: UIView {
         label.textColor = .white
         label.font = UIFont.ubuntu(.medium, size: 20)
         addSubview(label)
+        
+        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTap(gesture:))))
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    @objc func didTap(gesture: UITapGestureRecognizer) {
+        print("did tap node:\(nodeID)")
+        delegate?.select(nodeID: nodeID)
     }
 }
 
