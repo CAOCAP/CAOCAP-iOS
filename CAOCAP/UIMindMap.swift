@@ -78,7 +78,21 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         canvas.subviews.forEach({ $0.removeFromSuperview() })
         selectedNode.add(child: node)
         load(root: nodeTree.root)/*🤔 🤔 🤔*/
-        select(node: node)
+        select(node)
+    }
+    
+    func delete(_ node: Node) {
+        print("\(#function)ing...")
+        guard let parent = node.parent else { return }
+        var deletedIds = [UUID]()
+        node.forEachDepthFirst { deletedIds.append($0.id) }
+        parent.remove(node: node)
+        nodeViews.forEach {
+            if deletedIds.contains($0.nodeID) {
+                $0.delete()
+            }
+        }
+        select(parent)
     }
     
     func draw(_ node: Node) {
@@ -128,7 +142,7 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         canvasHeightConstraint.constant += 30
     }
     
-    func select(node: Node) {
+    func select(_ node: Node) {
         print("Previously Selected Node ID: \(nodeTree.selectedID)")
         let previouslySelectedID = nodeTree.selectedID
         nodeTree.selectedID = node.id
@@ -214,12 +228,13 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
 extension UIMindMap: NodeViewDelegate {
     func select(nodeID: UUID) {
         guard let node = nodeTree.root.search(id: nodeID) else { return }
-        select(node: node)
+        select(node)
     }
     
     func delete(nodeID: UUID) {
-        nodeTree.root.removeNode(with: nodeID)
-        load(root: nodeTree.root) /*🤔 🤔 🤔*/
+        print("\(#function)ing...")
+        guard let node = nodeTree.root.search(id: nodeID) else { return }
+        delete(node)
     }
     
 }

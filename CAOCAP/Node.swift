@@ -122,7 +122,7 @@ protocol NodeViewDelegate {
     func delete(nodeID: UUID)
 }
 
-class NodeView: UIView {
+class NodeView: UIView, UIContextMenuInteractionDelegate {
     let nodeID: UUID
     var delegate: NodeViewDelegate?
     init(id: UUID, title: String, color: UIColor) {
@@ -140,6 +140,7 @@ class NodeView: UIView {
         addSubview(label)
         
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTap(gesture:))))
+        addInteraction(UIContextMenuInteraction(delegate: self))
     }
     
     required init?(coder: NSCoder) {
@@ -150,6 +151,37 @@ class NodeView: UIView {
         print("did tap node:\(nodeID)")
         delegate?.select(nodeID: nodeID)
     }
+    
+    func delete() {
+        DispatchQueue.main.async {
+            self.removeFromSuperview()
+        }
+    }
+
+    func contextMenuInteraction(_ interaction: UIContextMenuInteraction, configurationForMenuAtLocation location: CGPoint) -> UIContextMenuConfiguration? {
+        return UIContextMenuConfiguration(actionProvider:  { _ in
+            return UIMenu(options: [.displayInline], children: [UIAction(title: "Remove", attributes: .destructive, handler: { _ in
+                self.delegate?.delete(nodeID: self.nodeID)
+            })])
+        })
+    }
+    
+    
+    //MARK: - Stolen from https://kylebashour.com/posts/context-menu-guide
+    // improved UI behaviour
+    private func makeTargetedPreview(for configuration: UIContextMenuConfiguration) -> UITargetedPreview? {
+        let visiblePath = UIBezierPath(roundedRect: self.bounds, cornerRadius: 16)
+        let parameters = UIPreviewParameters()
+        parameters.visiblePath = visiblePath
+        parameters.backgroundColor = .clear
+        return UITargetedPreview(view: self, parameters: parameters)
+    }
+    
+    func contextMenuInteraction(_ interaction: UIContextMenuInteraction, previewForHighlightingMenuWithConfiguration configuration: UIContextMenuConfiguration) -> UITargetedPreview? {
+        return self.makeTargetedPreview(for: configuration)
+    }
+    
+    func contextMenuInteraction(_ interaction: UIContextMenuInteraction, previewForDismissingMenuWithConfiguration configuration: UIContextMenuConfiguration) -> UITargetedPreview? {
+        return self.makeTargetedPreview(for: configuration)
+    }
 }
-
-
