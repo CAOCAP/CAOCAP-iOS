@@ -8,47 +8,64 @@
 import UIKit
 
 class StrokeView: UIView {
-    
-    var parentView: NodeView?
-    var childView: NodeView?
+    var lines = 0
     var color = UIColor.label
+    var heightConstraint = NSLayoutConstraint()
+    var widthConstraint = NSLayoutConstraint()
     
-    
-    init(node: Node) {
+    init(lines: Int = 0) {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
-        childView = node.view
-        parentView = node.parent?.view
         backgroundColor = UIColor.clear
+        self.lines = lines
+        heightConstraint = heightAnchor.constraint(equalToConstant: 60)
+        widthConstraint = widthAnchor.constraint(equalToConstant: 0)
+        heightConstraint.isActive = true
+        widthConstraint.isActive = true
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    func update() {
-        if let parentView = parentView, let childView = childView {
-            frame = parentView.frame.union(childView.frame)
-            setNeedsDisplay()
-        }
-    }
-    
-    
     override func draw(_ rect: CGRect) {
         let path = UIBezierPath()
-        path.lineWidth = 2.5
+        path.lineWidth = 4
         color.setStroke()
-        if let parentView = parentView, let childView = childView {
-            let parentCenter = CGPoint(x: parentView.center.x - frame.origin.x, y: parentView.center.y - frame.origin.y)
-            let childCenter = CGPoint(x: childView.center.x - frame.origin.x, y: childView.center.y - frame.origin.y)
-
-            path.move(to: parentCenter)
+        
+        let centerPosition = Int(lines/2)
+        let point1 = CGPoint(x: widthConstraint.constant/2, y: heightConstraint.constant/2)
+        for index in 0...lines - 1 {
+            path.move(to: CGPoint(x: widthConstraint.constant/2, y: 0))
+            var xConstant: CGFloat
+            if lines % 2 == 0 {
+                // even number of lines ( two lines near the centre )
+                if index == centerPosition {
+                    //near centre right line
+                    xConstant = widthConstraint.constant/2 + 90
+                } else if index == centerPosition - 1 {
+                    //near centre left line
+                    xConstant = widthConstraint.constant/2 - 90
+                } else {
+                    //push to the right or left| i am 0 of 4 -> 0 - 2 + 0.5 -> -1.5*180, i am 3 of 4 -> 3 - 2 + 0.5 -> 1.5*180
+                    let multiplier = Double(index - centerPosition) + 0.5
+                    xConstant = widthConstraint.constant/2 + multiplier * 180
+                }
+            } else {
+                // odd number of lines ( one centered line )
+                if index == centerPosition {
+                    //centered line
+                    xConstant = widthConstraint.constant/2
+                } else {
+                    //push to the right or left
+                    let multiplier = Double(index - centerPosition)
+                    xConstant = widthConstraint.constant/2 + multiplier * 180
+                }
+            }
             
-            let point1 = CGPoint(x: parentCenter.x + (childCenter.x - parentCenter.x) / 2, y: parentCenter.y)
-            let point2 = CGPoint(x: childCenter.x - (childCenter.x - parentCenter.x) / 2, y: childCenter.y)
-            
-            path.addCurve(to: childCenter, controlPoint1: point1, controlPoint2: point2)
-            path.stroke()
+            let point2 = CGPoint(x: xConstant, y: heightConstraint.constant/3)
+            path.addCurve(to: CGPoint(x: xConstant, y: heightConstraint.constant), controlPoint1: point1, controlPoint2: point2)
         }
+        path.stroke()
     }
 }

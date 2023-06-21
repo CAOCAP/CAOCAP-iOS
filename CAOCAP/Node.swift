@@ -29,6 +29,7 @@ class Node: NSObject {
     weak var next: Node?
     private (set) var children: [Node] = []
     private (set) var view: NodeView
+    private (set) var stroke = StrokeView()
     
     override var description: String {
         var text = title
@@ -53,13 +54,14 @@ class Node: NSObject {
         self.title = title
         element = title.lowercased()
         textContent = text
-        view = NodeView(id: self.id, title: title, color: color)
+        view = NodeView(id: id, title: title, color: color)
     }
     
     // MARK: Methods
     func add(child: Node) {
         children.append(child)
         child.parent = self
+        stroke = StrokeView(lines: children.count)
     }
     
     func search(id: UUID) -> Node? {

@@ -92,16 +92,16 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         print("\(#function)ing... \(node.title)")
         canvas.addSubview(node.view)
         node.view.delegate = self
-        node.view.heightAnchor.constraint(equalToConstant: 60).isActive = true
-        node.view.widthAnchor.constraint(equalToConstant: 150).isActive = true
-
+        
+        if !node.children.isEmpty {
+            canvas.insertSubview(node.stroke, at: 0)
+            node.stroke.widthConstraint.constant = CGFloat(node.children.count * 180)
+            node.stroke.centerXAnchor.constraint(equalTo: node.view.centerXAnchor).isActive = true
+            node.stroke.topAnchor.constraint(equalTo: node.view.bottomAnchor).isActive = true
+        }
+        
         
         if let parent = node.parent {
-            // draw Stroke line
-            let stroke = StrokeView(node: node)
-            canvas.insertSubview(stroke, at: 0)
-            stroke.update()
-            
             //set nodeView constraints
             let centerPosition = Int(parent.children.count/2)
             if parent.children.count % 2 == 0 {
@@ -128,7 +128,7 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
                     node.view.centerXAnchor.constraint(equalTo: parent.view.centerXAnchor, constant: CGFloat(multiplier * 180)).isActive = true
                 }
             }
-            node.view.centerYAnchor.constraint(equalTo: parent.view.centerYAnchor, constant: 90).isActive = true
+            node.view.centerYAnchor.constraint(equalTo: parent.view.centerYAnchor, constant: 120).isActive = true
         } else {
             node.view.centerXAnchor.constraint(equalTo: canvas.centerXAnchor).isActive = true
             node.view.centerYAnchor.constraint(equalTo: canvas.centerYAnchor).isActive = true

@@ -19,6 +19,8 @@ class NodeView: UIView, UIContextMenuInteractionDelegate {
         nodeID = id
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
+        heightAnchor.constraint(equalToConstant: 60).isActive = true
+        widthAnchor.constraint(equalToConstant: 150).isActive = true
         layer.cornerRadius = 10
         layer.borderColor = UIColor.blue.cgColor
         backgroundColor = color
