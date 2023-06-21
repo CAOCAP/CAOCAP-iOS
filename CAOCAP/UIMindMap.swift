@@ -11,7 +11,6 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     
     var nodeTree: NodeTree
     var nodeTreeHistory: [NodeTree]
-//    var nodeViews = [NodeView]()
     
     var canvasHeightConstraint = NSLayoutConstraint()
     var canvasWidthConstraint = NSLayoutConstraint()
@@ -58,9 +57,7 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     
     func load(root: Node) {
         print("\(#function)ing...")
-        
         canvas.subviews.forEach({ $0.removeFromSuperview() })
-//        nodeViews.removeAll()
         draw(root)
         if !root.children.isEmpty { load(children: root.children) }
         
@@ -94,13 +91,18 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     func draw(_ node: Node) {
         print("\(#function)ing... \(node.title)")
         canvas.addSubview(node.view)
-//        nodeViews.append(node.view)
         node.view.delegate = self
         node.view.heightAnchor.constraint(equalToConstant: 60).isActive = true
         node.view.widthAnchor.constraint(equalToConstant: 150).isActive = true
 
         
         if let parent = node.parent {
+            // draw Stroke line
+            let stroke = StrokeView(node: node)
+            canvas.insertSubview(stroke, at: 0)
+            stroke.update()
+            
+            //set nodeView constraints
             let centerPosition = Int(parent.children.count/2)
             if parent.children.count % 2 == 0 {
                 // even number of children ( two near centre children )
@@ -126,8 +128,6 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
                     node.view.centerXAnchor.constraint(equalTo: parent.view.centerXAnchor, constant: CGFloat(multiplier * 180)).isActive = true
                 }
             }
-            
-            
             node.view.centerYAnchor.constraint(equalTo: parent.view.centerYAnchor, constant: 90).isActive = true
         } else {
             node.view.centerXAnchor.constraint(equalTo: canvas.centerXAnchor).isActive = true

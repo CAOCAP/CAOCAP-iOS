@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		210F19AE2A42DBE100D71A66 /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210F19AD2A42DBE100D71A66 /* NodeView.swift */; };
+		210F19B02A42DC9800D71A66 /* StrokeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210F19AF2A42DC9800D71A66 /* StrokeView.swift */; };
 		2186DB0D2A30946900773C5E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2186DB0C2A30946900773C5E /* UIView+Extensions.swift */; };
 		2186DB0F2A30BD6600773C5E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2186DB0E2A30BD6600773C5E /* Node.swift */; };
 		2186DB112A30DF4700773C5E /* UIMindMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2186DB102A30DF4700773C5E /* UIMindMap.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		210F19AD2A42DBE100D71A66 /* NodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeView.swift; sourceTree = "<group>"; };
+		210F19AF2A42DC9800D71A66 /* StrokeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeView.swift; sourceTree = "<group>"; };
 		2186DB0C2A30946900773C5E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		2186DB0E2A30BD6600773C5E /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		2186DB102A30DF4700773C5E /* UIMindMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMindMap.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				21C21C4C2A34B61900F40BE3 /* PurchaseVC.swift */,
 				21C21C4A2A34B60200F40BE3 /* SettingsVC.swift */,
 				21C21C482A34B5D800F40BE3 /* ProjectsVC.swift */,
+				210F19AD2A42DBE100D71A66 /* NodeView.swift */,
+				210F19AF2A42DC9800D71A66 /* StrokeView.swift */,
 				2186DB0E2A30BD6600773C5E /* Node.swift */,
 				21DBA0022A39E18C00DFAC66 /* Store.swift */,
 				218DA9CE2A2B205800459C61 /* Main.storyboard */,
@@ -257,6 +263,8 @@
 				21DBA0012A38F4C800DFAC66 /* InitialVC.swift in Sources */,
 				21C21C492A34B5D800F40BE3 /* ProjectsVC.swift in Sources */,
 				21C21C542A36145200F40BE3 /* Enumerations.swift in Sources */,
+				210F19B02A42DC9800D71A66 /* StrokeView.swift in Sources */,
+				210F19AE2A42DBE100D71A66 /* NodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
