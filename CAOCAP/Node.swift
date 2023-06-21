@@ -86,12 +86,14 @@ class Node: NSObject {
     func remove(node: Node) {
         guard let parent = node.parent else { return }
         parent.children.removeAll { $0 == node }
+        stroke = StrokeView(lines: children.count)
     }
     
     func removeNode(with id: UUID) {
         guard let node = search(id: id),
             let parent = node.parent else { return }
         parent.children.removeAll { $0 == node }
+        stroke = StrokeView(lines: children.count)
     }
     
     func depthOfNode() -> Int {
