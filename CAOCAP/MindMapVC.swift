@@ -24,6 +24,17 @@ class MindMapVC: UIViewController {
         webview.loadHTMLString(mindMap.nodeTree.root.dom, baseURL: nil)
     }
     
+    func setupMindMapLayout() {
+        mindMap = UIMindMap(frame: view.frame, tree: NodeTree())
+        view.insertSubview(mindMap, at: 0)
+        NSLayoutConstraint.activate([
+            mindMap.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            mindMap.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            mindMap.topAnchor.constraint(equalTo: view.topAnchor),
+            mindMap.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        ])
+    }
+    
     func setupKeyboardGestureRecognizer() {
         let upSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
         let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
@@ -92,17 +103,9 @@ class MindMapVC: UIViewController {
         }
     }
     
-    func setupMindMapLayout() {
-        mindMap = UIMindMap(frame: view.frame, tree: NodeTree())
-        view.insertSubview(mindMap, at: 0)
-        NSLayoutConstraint.activate([
-            mindMap.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            mindMap.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            mindMap.topAnchor.constraint(equalTo: view.topAnchor),
-            mindMap.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-        ])
+    @IBAction func didPressCloseButton(_ sender: Any) {
+        dismiss(animated: true)
     }
-    
     
     @IBAction func didPressArrow(_ sender: UIButton) {
         mindMap.updateSelectedNode(Direction(rawValue: sender.tag))
