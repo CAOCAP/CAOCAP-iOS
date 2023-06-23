@@ -10,7 +10,10 @@ import WebKit
 
 class MindMapVC: UIViewController {
     
-    @IBOutlet weak var webview: WKWebView!
+    @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var resizeIcon: UIImageView!
+    @IBOutlet weak var webViewWidthConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var redoButton: UIButton!
     @IBOutlet weak var keyboardView: UIView!
@@ -19,9 +22,12 @@ class MindMapVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let resizeGR = UIPanGestureRecognizer(target: self, action: #selector(handleResizingWebView(sender:)))
+        resizeIcon.addGestureRecognizer(resizeGR)
+        
         setupKeyboardGestureRecognizer()
         setupMindMapLayout()
-        webview.loadHTMLString(mindMap.nodeTree.root.dom, baseURL: nil)
+        webView.loadHTMLString(mindMap.nodeTree.root.dom, baseURL: nil)
     }
     
     func setupMindMapLayout() {
@@ -36,15 +42,38 @@ class MindMapVC: UIViewController {
     }
     
     func setupKeyboardGestureRecognizer() {
-        let upSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
-        let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
+        let upSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
+        let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
         upSwipe.direction = .up
         downSwipe.direction = .down
         keyboardView.addGestureRecognizer(upSwipe)
         keyboardView.addGestureRecognizer(downSwipe)
     }
     
-    @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
+    @objc func handleResizingWebView(sender: UIPanGestureRecognizer) {
+        switch sender.state {
+        case .began, .changed:
+            let touchPoint = sender.location(in: view).x - 20
+            if touchPoint > 60 && touchPoint < 240 {
+                webViewWidthConstraint.constant =
+                touchPoint
+            }
+            print(touchPoint)
+        default:
+            print("ended")
+            if webViewWidthConstraint.constant < 90 {
+                webViewWidthConstraint.constant = 80
+            } else if webViewWidthConstraint.constant >= 90 && webViewWidthConstraint.constant < 130 {
+                webViewWidthConstraint.constant = 120
+            } else if webViewWidthConstraint.constant >= 130 && webViewWidthConstraint.constant < 170 {
+                webViewWidthConstraint.constant = 160
+            } else {
+                webViewWidthConstraint.constant = 200
+            }
+        }
+    }
+    
+    @objc func handleKeyboardSwipe(sender: UISwipeGestureRecognizer) {
         if sender.state == .ended {
             switch sender.direction {
             case .up:
@@ -201,7 +230,7 @@ class MindMapVC: UIViewController {
         }
         mindMap.add(newNode)
         print(mindMap.nodeTree.root.dom)
-        webview.loadHTMLString(mindMap.nodeTree.root.dom, baseURL: nil)
+        webView.loadHTMLString(mindMap.nodeTree.root.dom, baseURL: nil)
         /*🤔 🤔 🤔*/
     }
     

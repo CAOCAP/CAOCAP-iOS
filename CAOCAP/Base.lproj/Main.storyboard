@@ -47,12 +47,21 @@
                                                     <wkPreferences key="preferences"/>
                                                 </wkWebViewConfiguration>
                                             </wkWebView>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="side-resize" translatesAutoresizingMaskIntoConstraints="NO" id="6CB-c1-YZ5">
+                                                <rect key="frame" x="130" y="210" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="UGe-Op-7pP"/>
+                                                    <constraint firstAttribute="width" constant="30" id="oby-em-QUy"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="6CB-c1-YZ5" secondAttribute="bottom" id="1Y6-DB-fR1"/>
                                             <constraint firstAttribute="trailing" secondItem="diV-kw-ft4" secondAttribute="trailing" id="2Go-vo-BXY"/>
                                             <constraint firstItem="diV-kw-ft4" firstAttribute="leading" secondItem="xNI-cb-CRC" secondAttribute="leading" id="5aF-m8-2wC"/>
                                             <constraint firstAttribute="bottom" secondItem="diV-kw-ft4" secondAttribute="bottom" id="GLV-dA-ap5"/>
+                                            <constraint firstAttribute="trailing" secondItem="6CB-c1-YZ5" secondAttribute="trailing" id="UaY-77-da3"/>
                                             <constraint firstItem="diV-kw-ft4" firstAttribute="top" secondItem="xNI-cb-CRC" secondAttribute="top" id="bep-oo-Kf5"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
@@ -64,10 +73,10 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="pAm-8E-NFz" secondAttribute="height" multiplier="2:3" id="DlW-Xi-7Od"/>
                                     <constraint firstItem="xNI-cb-CRC" firstAttribute="leading" secondItem="pAm-8E-NFz" secondAttribute="leading" id="PH9-rZ-xMP"/>
                                     <constraint firstItem="xNI-cb-CRC" firstAttribute="top" secondItem="pAm-8E-NFz" secondAttribute="top" id="RZC-WT-uJn"/>
                                     <constraint firstAttribute="width" constant="160" id="aQZ-nU-jP4"/>
-                                    <constraint firstAttribute="height" constant="240" id="fZG-TQ-0x0"/>
                                     <constraint firstAttribute="trailing" secondItem="xNI-cb-CRC" secondAttribute="trailing" id="u2K-nB-JMl"/>
                                     <constraint firstAttribute="bottom" secondItem="xNI-cb-CRC" secondAttribute="bottom" id="u3Q-oK-QdT"/>
                                 </constraints>
@@ -790,8 +799,10 @@
                         <outlet property="keyboardStack" destination="Grg-nX-Or3" id="C8P-4U-C4K"/>
                         <outlet property="keyboardView" destination="nAS-jS-Vj6" id="nYk-I8-mpi"/>
                         <outlet property="redoButton" destination="5oB-EC-gwP" id="Ylt-JX-XYE"/>
+                        <outlet property="resizeIcon" destination="6CB-c1-YZ5" id="P1s-Q6-bk3"/>
                         <outlet property="undoButton" destination="psu-98-Dih" id="Kge-PT-vHi"/>
-                        <outlet property="webview" destination="diV-kw-ft4" id="wqi-9k-wgq"/>
+                        <outlet property="webView" destination="diV-kw-ft4" id="wqi-9k-wgq"/>
+                        <outlet property="webViewWidthConstraint" destination="aQZ-nU-jP4" id="Yy4-Bk-1F7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -1720,6 +1731,7 @@
         <image name="chevron.compact.up" catalog="system" width="128" height="42"/>
         <image name="gear" catalog="system" width="128" height="122"/>
         <image name="paintpalette" catalog="system" width="128" height="105"/>
+        <image name="side-resize" width="600" height="600"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="123"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.65499997138977051" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
