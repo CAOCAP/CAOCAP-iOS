@@ -78,23 +78,24 @@ class MindMapVC: UIViewController {
             switch sender.direction {
             case .up:
                 UIView.animate(withDuration: 0.15) {
-                    if self.keyboardStack.arrangedSubviews[12].isHidden {
-                        //skip 1-10
-                        for n in 11...12 {
+                    if self.keyboardStack.arrangedSubviews[11].isHidden {
+                        //skip 0-9
+                        for n in 10...11 {
                             let view = self.keyboardStack.arrangedSubviews[n]
                             view.alpha = 1
                             view.isHidden = false
                         }
-                    } else if self.keyboardStack.arrangedSubviews[1].isHidden {
-                        //skip 3,4,5,8,9
-                        for n in 1...12 {
-                            if [3,4,5,8,9].contains(n) { continue }
+                    } else if self.keyboardStack.arrangedSubviews[0].isHidden {
+                        //skip 2,3,4,7,8
+                        for n in 0...11 {
+                            if [2,3,4,7,8].contains(n) { continue }
                             let view = self.keyboardStack.arrangedSubviews[n]
                             view.alpha = 1
                             view.isHidden = false
                         }
                     } else {
-                        for n in 1...12 {
+                        self.webViewWidthConstraint.constant = 80
+                        for n in 0...11 {
                             let view = self.keyboardStack.arrangedSubviews[n]
                             view.alpha = 1
                             view.isHidden = false
@@ -104,21 +105,22 @@ class MindMapVC: UIViewController {
                 loadViewIfNeeded()
             case .down:
                 UIView.animate(withDuration: 0.15) {
-                    if self.keyboardStack.arrangedSubviews[1].isHidden {
-                        for n in 11...12 {
+                    if self.keyboardStack.arrangedSubviews[0].isHidden {
+                        for n in 10...11 {
                             let view = self.keyboardStack.arrangedSubviews[n]
                             view.alpha = 0
                             view.isHidden = true
                         }
-                    } else if self.keyboardStack.arrangedSubviews[3].isHidden {
-                        for n in 1...10 {
+                    } else if self.keyboardStack.arrangedSubviews[2].isHidden {
+                        for n in 0...9 {
                             let view = self.keyboardStack.arrangedSubviews[n]
                             view.alpha = 0
                             view.isHidden = true
                         }
                     } else {
-                        for n in 3...9 {
-                            if [6,7].contains(n) { continue }
+                        self.webViewWidthConstraint.constant = 160
+                        for n in 2...8 {
+                            if [5,6].contains(n) { continue }
                             let view = self.keyboardStack.arrangedSubviews[n]
                             view.alpha = 0
                             view.isHidden = true

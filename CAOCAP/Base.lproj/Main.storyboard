@@ -113,8 +113,117 @@
                                     <action selector="didPressCloseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0WX-SL-2uo"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="mGp-hQ-IkZ">
+                                <rect key="frame" x="26" y="470" width="338" height="65"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5a4-wx-aMy">
+                                        <rect key="frame" x="0.0" y="0.0" width="155" height="65"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfp-2z-eXU">
+                                                <rect key="frame" x="0.0" y="35" width="48.333333333333336" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Wyf-q3-qfG"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="chevron.compact.up" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="chevron.compact.left" catalog="system">
+                                                    <color key="baseForegroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didPressArrow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ujh-u6-SBi"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="e8H-lK-kiM">
+                                                <rect key="frame" x="53.333333333333329" y="0.0" width="48.333333333333329" height="65"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URk-NW-Nke">
+                                                        <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="30"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="chevron.compact.up" catalog="system"/>
+                                                        <buttonConfiguration key="configuration" style="tinted" image="chevron.compact.up" catalog="system">
+                                                            <color key="baseForegroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didPressArrow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JFs-Vi-thf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJi-El-CrY">
+                                                        <rect key="frame" x="0.0" y="35" width="48.333333333333336" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="v7b-b2-eo2"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="chevron.compact.up" catalog="system"/>
+                                                        <buttonConfiguration key="configuration" style="tinted" image="chevron.compact.down" catalog="system">
+                                                            <color key="baseForegroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="didPressArrow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KJy-Cx-Pua"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPI-46-O5d">
+                                                <rect key="frame" x="106.66666666666664" y="35" width="48.333333333333329" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="MZL-ql-cdb"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="chevron.compact.up" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="chevron.compact.right" catalog="system">
+                                                    <color key="baseForegroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didPressArrow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NJh-vO-ENv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="swv-AQ-sZO">
+                                        <rect key="frame" x="288.33333333333331" y="0.0" width="49.666666666666686" height="65"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22A-CW-8eM">
+                                                <rect key="frame" x="0.0" y="0.0" width="49.666666666666664" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="qfO-qK-Sti"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="chevron.compact.up" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="arrow.uturn.forward" catalog="system">
+                                                    <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didPressArrow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CjX-B6-nSu"/>
+                                                    <action selector="didPressRedo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cFF-3U-oB0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XtZ-wd-Acw">
+                                                <rect key="frame" x="0.0" y="35" width="49.666666666666664" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="OZ8-O9-vXv"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="chevron.compact.up" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="arrow.uturn.backward" catalog="system">
+                                                    <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didPressArrow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="flG-cl-VWg"/>
+                                                    <action selector="didPressUndo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cJe-ww-r8Z"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAS-jS-Vj6">
-                                <rect key="frame" x="15" y="496" width="360" height="348"/>
+                                <rect key="frame" x="15" y="545" width="360" height="299"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Wp-Ld-xaC">
                                         <rect key="frame" x="140" y="10" width="80" height="4"/>
@@ -130,7 +239,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cP2-L4-azG">
-                                        <rect key="frame" x="0.0" y="0.0" width="360" height="348"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="299"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -139,69 +248,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Grg-nX-Or3">
-                                        <rect key="frame" x="15" y="20" width="330" height="308"/>
+                                        <rect key="frame" x="15" y="20" width="330" height="259"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5a4-wx-aMy">
-                                                <rect key="frame" x="0.0" y="0.0" width="330" height="28"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfp-2z-eXU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="28"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="chevron.compact.up" catalog="system"/>
-                                                        <buttonConfiguration key="configuration" style="tinted" image="chevron.compact.left" catalog="system">
-                                                            <color key="baseForegroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressArrow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ujh-u6-SBi"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URk-NW-Nke">
-                                                        <rect key="frame" x="84.666666666666686" y="0.0" width="76.333333333333314" height="28"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="chevron.compact.up" catalog="system"/>
-                                                        <buttonConfiguration key="configuration" style="tinted" image="chevron.compact.up" catalog="system">
-                                                            <color key="baseForegroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressArrow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JFs-Vi-thf"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJi-El-CrY">
-                                                        <rect key="frame" x="169" y="0.0" width="76.666666666666686" height="28"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="chevron.compact.up" catalog="system"/>
-                                                        <buttonConfiguration key="configuration" style="tinted" image="chevron.compact.down" catalog="system">
-                                                            <color key="baseForegroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressArrow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KJy-Cx-Pua"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPI-46-O5d">
-                                                        <rect key="frame" x="253.66666666666671" y="0.0" width="76.333333333333343" height="28"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="chevron.compact.up" catalog="system"/>
-                                                        <buttonConfiguration key="configuration" style="tinted" image="chevron.compact.right" catalog="system">
-                                                            <color key="baseForegroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressArrow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NJh-vO-ENv"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="28" id="XTA-O9-Qp0"/>
-                                                </constraints>
-                                            </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ohl-8V-enY">
-                                                <rect key="frame" x="0.0" y="35" width="330" height="28"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="31"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjV-OB-wTZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="161" height="28"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="161" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Head">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -212,7 +265,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0y0-Zf-mFi">
-                                                        <rect key="frame" x="169" y="0.0" width="161" height="28"/>
+                                                        <rect key="frame" x="169" y="0.0" width="161" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Body">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -225,10 +278,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1od-Np-80j">
-                                                <rect key="frame" x="0.0" y="70" width="330" height="28"/>
+                                                <rect key="frame" x="0.0" y="38" width="330" height="31"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xz-xn-g91">
-                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="28"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Meta">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -239,7 +292,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLX-fc-heg">
-                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="28"/>
+                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Title">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -250,7 +303,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnV-mR-AYB">
-                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="28"/>
+                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Style">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -263,7 +316,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="SXF-lw-8MF">
-                                                <rect key="frame" x="0.0" y="101.66666666666663" width="330" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="72.666666666666629" width="330" height="0.0"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLE-4T-6A3">
                                                         <rect key="frame" x="0.0" y="0.0" width="330" height="0.0"/>
@@ -279,7 +332,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uFe-gN-8Fm">
-                                                <rect key="frame" x="0.0" y="101.66666666666663" width="330" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="72.666666666666629" width="330" height="0.0"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HRm-w4-KUn">
                                                         <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="0.0"/>
@@ -317,7 +370,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="64c-ci-TPD">
-                                                <rect key="frame" x="0.0" y="101.66666666666663" width="330" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="72.666666666666629" width="330" height="0.0"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ols-WK-5Z7">
                                                         <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="0.0"/>
@@ -366,10 +419,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="m8Y-Op-eFP">
-                                                <rect key="frame" x="0.0" y="105" width="330" height="28"/>
+                                                <rect key="frame" x="0.0" y="76" width="330" height="31"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWc-Oh-6RT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="28"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Button">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -380,7 +433,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhc-eW-SV0">
-                                                        <rect key="frame" x="84.666666666666686" y="0.0" width="76.333333333333314" height="28"/>
+                                                        <rect key="frame" x="84.666666666666686" y="0.0" width="76.333333333333314" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Div">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -391,7 +444,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8j-yL-QDI">
-                                                        <rect key="frame" x="169" y="0.0" width="76.666666666666686" height="28"/>
+                                                        <rect key="frame" x="169" y="0.0" width="76.666666666666686" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Image">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -402,7 +455,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAx-ZU-skU">
-                                                        <rect key="frame" x="253.66666666666671" y="0.0" width="76.333333333333343" height="28"/>
+                                                        <rect key="frame" x="253.66666666666671" y="0.0" width="76.333333333333343" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Script">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -415,10 +468,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vSn-JT-Xgo">
-                                                <rect key="frame" x="0.0" y="140" width="330" height="28"/>
+                                                <rect key="frame" x="0.0" y="114" width="330" height="31"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNW-dU-aTl">
-                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="28"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Input">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -429,7 +482,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4s-nA-Vvl">
-                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="28"/>
+                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Form">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -440,7 +493,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nc-gF-jS0">
-                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="28"/>
+                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Output">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -453,7 +506,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3V9-WE-W8l">
-                                                <rect key="frame" x="0.0" y="171.66666666666663" width="330" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="148.66666666666663" width="330" height="0.0"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkf-L8-Xzr">
                                                         <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="0.0"/>
@@ -502,7 +555,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ivc-vn-iLU">
-                                                <rect key="frame" x="0.0" y="171.66666666666663" width="330" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="148.66666666666663" width="330" height="0.0"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCH-G1-eLl">
                                                         <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="0.0"/>
@@ -540,10 +593,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7de-CS-ln9">
-                                                <rect key="frame" x="0.0" y="175" width="330" height="28"/>
+                                                <rect key="frame" x="0.0" y="152" width="330" height="31"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="28" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJq-iD-CrR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="28"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Video">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -554,7 +607,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="29" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvo-RV-aFL">
-                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="28"/>
+                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Source">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -565,7 +618,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lG-K0-Jvb">
-                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="28"/>
+                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Audio">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -578,10 +631,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zLx-3B-1F9">
-                                                <rect key="frame" x="0.0" y="210" width="330" height="28"/>
+                                                <rect key="frame" x="0.0" y="190" width="330" height="31"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bA-jO-wr1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="28"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="31"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="55" id="UXi-u7-x5K"/>
                                                         </constraints>
@@ -595,7 +648,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCu-4Q-HmC">
-                                                        <rect key="frame" x="63" y="0.0" width="55" height="28"/>
+                                                        <rect key="frame" x="63" y="0.0" width="55" height="31"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="55" id="Eca-MT-YZW"/>
                                                         </constraints>
@@ -609,7 +662,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZ3-6G-ege">
-                                                        <rect key="frame" x="126" y="0.0" width="78" height="28"/>
+                                                        <rect key="frame" x="126" y="0.0" width="78" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Span">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -620,7 +673,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="34" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42f-Qf-I5O">
-                                                        <rect key="frame" x="212" y="0.0" width="55" height="28"/>
+                                                        <rect key="frame" x="212" y="0.0" width="55" height="31"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="55" id="lhw-ce-BKR"/>
                                                         </constraints>
@@ -634,7 +687,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="35" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTN-EE-CZL">
-                                                        <rect key="frame" x="275" y="0.0" width="55" height="28"/>
+                                                        <rect key="frame" x="275" y="0.0" width="55" height="31"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="55" id="UxR-e9-Zxa"/>
                                                         </constraints>
@@ -650,10 +703,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OVN-gY-ydS">
-                                                <rect key="frame" x="0.0" y="245" width="330" height="28"/>
+                                                <rect key="frame" x="0.0" y="228" width="330" height="31"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="36" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53o-JJ-1ay">
-                                                        <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="28"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="UL">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -664,7 +717,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="37" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2I-Z8-Dnv">
-                                                        <rect key="frame" x="56.333333333333329" y="0.0" width="48.333333333333329" height="28"/>
+                                                        <rect key="frame" x="56.333333333333329" y="0.0" width="48.333333333333329" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="OL">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -675,7 +728,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="38" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9p-5f-c4b">
-                                                        <rect key="frame" x="112.66666666666664" y="0.0" width="48.333333333333329" height="28"/>
+                                                        <rect key="frame" x="112.66666666666664" y="0.0" width="48.333333333333329" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="LI">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -686,7 +739,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="39" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaU-qi-sgA">
-                                                        <rect key="frame" x="169" y="0.0" width="48.333333333333343" height="28"/>
+                                                        <rect key="frame" x="169" y="0.0" width="48.333333333333343" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="EM">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -697,7 +750,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="40" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zyi-j6-Oxe">
-                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="48.333333333333343" height="28"/>
+                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="48.333333333333343" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="B">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -708,7 +761,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="41" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0T-w2-eeO">
-                                                        <rect key="frame" x="281.66666666666669" y="0.0" width="48.333333333333314" height="28"/>
+                                                        <rect key="frame" x="281.66666666666669" y="0.0" width="48.333333333333314" height="31"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="I">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -716,33 +769,6 @@
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7pp-6m-1sx"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jrP-Hk-tSk">
-                                                <rect key="frame" x="0.0" y="280" width="330" height="28"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psu-98-Dih">
-                                                        <rect key="frame" x="0.0" y="0.0" width="161" height="28"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="undo">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
-                                                            <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressUndo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OHb-0Q-mhQ"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oB-EC-gwP">
-                                                        <rect key="frame" x="169" y="0.0" width="161" height="28"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="redo">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
-                                                            <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressRedo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5IU-5H-hkH"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -792,22 +818,23 @@
                             <constraint firstItem="pAm-8E-NFz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="GKK-SU-lJs"/>
                             <constraint firstItem="nAS-jS-Vj6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="YhE-8I-bD9"/>
                             <constraint firstItem="qci-87-zc2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="b8H-YL-Qe8"/>
+                            <constraint firstItem="mGp-hQ-IkZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fIn-ZM-MLb"/>
+                            <constraint firstItem="mGp-hQ-IkZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="o4Q-ca-5QO"/>
+                            <constraint firstItem="nAS-jS-Vj6" firstAttribute="top" secondItem="mGp-hQ-IkZ" secondAttribute="bottom" constant="10" id="qBM-de-VAH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kxU-NY-rOk"/>
                     <connections>
                         <outlet property="keyboardStack" destination="Grg-nX-Or3" id="C8P-4U-C4K"/>
                         <outlet property="keyboardView" destination="nAS-jS-Vj6" id="nYk-I8-mpi"/>
-                        <outlet property="redoButton" destination="5oB-EC-gwP" id="Ylt-JX-XYE"/>
                         <outlet property="resizeIcon" destination="6CB-c1-YZ5" id="P1s-Q6-bk3"/>
-                        <outlet property="undoButton" destination="psu-98-Dih" id="Kge-PT-vHi"/>
                         <outlet property="webView" destination="diV-kw-ft4" id="wqi-9k-wgq"/>
                         <outlet property="webViewWidthConstraint" destination="aQZ-nU-jP4" id="Yy4-Bk-1F7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-309" y="-218"/>
+            <point key="canvasLocation" x="-309.23076923076923" y="-218.24644549763033"/>
         </scene>
         <!--InitialVC-->
         <scene sceneID="fR9-Jp-f0Z">
@@ -1722,6 +1749,8 @@
         <image name="altIcon 7" width="1024" height="1024"/>
         <image name="altIcon 8" width="1024" height="1024"/>
         <image name="altIcon 9" width="1024" height="1024"/>
+        <image name="arrow.uturn.backward" catalog="system" width="128" height="113"/>
+        <image name="arrow.uturn.forward" catalog="system" width="128" height="113"/>
         <image name="bookmark" catalog="system" width="110" height="128"/>
         <image name="cart" catalog="system" width="128" height="102"/>
         <image name="checkmark.seal" catalog="system" width="128" height="124"/>
