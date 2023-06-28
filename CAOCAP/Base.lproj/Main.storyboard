@@ -773,19 +773,63 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Btk-BP-8I5">
+                                        <rect key="frame" x="15" y="20" width="330" height="259"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YzG-MF-adK">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="259"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQr-i7-73F">
+                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="259"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="CSS">
+                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                            <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="YME-rF-dWq">
+                                        <rect key="frame" x="15" y="20" width="330" height="259"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ilr-NZ-J26">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="259"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pt-wO-h0C">
+                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="259"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="JS">
+                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                            <color key="baseForegroundColor" systemColor="systemPinkColor"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="cP2-L4-azG" secondAttribute="bottom" id="9sC-4o-cxr"/>
                                     <constraint firstItem="cP2-L4-azG" firstAttribute="leading" secondItem="nAS-jS-Vj6" secondAttribute="leading" id="Ftd-iu-lMk"/>
+                                    <constraint firstItem="Btk-BP-8I5" firstAttribute="centerX" secondItem="nAS-jS-Vj6" secondAttribute="centerX" id="HJL-PT-OuT"/>
+                                    <constraint firstItem="Btk-BP-8I5" firstAttribute="centerY" secondItem="nAS-jS-Vj6" secondAttribute="centerY" id="J8k-dD-aLy"/>
+                                    <constraint firstAttribute="trailing" secondItem="YME-rF-dWq" secondAttribute="trailing" constant="15" id="JG0-1F-spB"/>
+                                    <constraint firstItem="YME-rF-dWq" firstAttribute="centerX" secondItem="nAS-jS-Vj6" secondAttribute="centerX" id="NAB-Mq-1PM"/>
                                     <constraint firstItem="0Wp-Ld-xaC" firstAttribute="centerX" secondItem="nAS-jS-Vj6" secondAttribute="centerX" id="Pmq-zf-E7o"/>
                                     <constraint firstItem="Grg-nX-Or3" firstAttribute="centerX" secondItem="nAS-jS-Vj6" secondAttribute="centerX" id="TVm-7z-3X1"/>
+                                    <constraint firstItem="YME-rF-dWq" firstAttribute="top" secondItem="nAS-jS-Vj6" secondAttribute="top" constant="20" id="VPB-1d-fnU"/>
                                     <constraint firstAttribute="trailing" secondItem="Grg-nX-Or3" secondAttribute="trailing" constant="15" id="Xqr-w2-SfT"/>
+                                    <constraint firstAttribute="trailing" secondItem="Btk-BP-8I5" secondAttribute="trailing" constant="15" id="abI-Pk-KQn"/>
+                                    <constraint firstItem="Btk-BP-8I5" firstAttribute="top" secondItem="nAS-jS-Vj6" secondAttribute="top" constant="20" id="arO-At-WHr"/>
                                     <constraint firstAttribute="trailing" secondItem="cP2-L4-azG" secondAttribute="trailing" id="dh4-Wi-WDU"/>
                                     <constraint firstItem="Grg-nX-Or3" firstAttribute="centerY" secondItem="nAS-jS-Vj6" secondAttribute="centerY" id="jM7-Pk-czA"/>
                                     <constraint firstItem="Grg-nX-Or3" firstAttribute="top" secondItem="nAS-jS-Vj6" secondAttribute="top" constant="20" id="koO-Dl-zsv"/>
                                     <constraint firstItem="0Wp-Ld-xaC" firstAttribute="top" secondItem="nAS-jS-Vj6" secondAttribute="top" constant="10" id="quF-DN-2r1"/>
                                     <constraint firstItem="cP2-L4-azG" firstAttribute="top" secondItem="nAS-jS-Vj6" secondAttribute="top" id="r3B-yM-hkb"/>
+                                    <constraint firstItem="YME-rF-dWq" firstAttribute="centerY" secondItem="nAS-jS-Vj6" secondAttribute="centerY" id="tL7-tm-Rdb"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -828,9 +872,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="kxU-NY-rOk"/>
                     <connections>
-                        <outlet property="keyboardStack" destination="Grg-nX-Or3" id="C8P-4U-C4K"/>
+                        <outlet property="cssKeyboard" destination="Btk-BP-8I5" id="N7I-ym-lvx"/>
+                        <outlet property="htmlKeyboard" destination="Grg-nX-Or3" id="C8P-4U-C4K"/>
+                        <outlet property="jsKeyboard" destination="YME-rF-dWq" id="xwB-qN-9pH"/>
                         <outlet property="keyboardView" destination="nAS-jS-Vj6" id="nYk-I8-mpi"/>
+                        <outlet property="redoButton" destination="22A-CW-8eM" id="Enz-y8-Wsk"/>
                         <outlet property="resizeIcon" destination="6CB-c1-YZ5" id="P1s-Q6-bk3"/>
+                        <outlet property="undoButton" destination="XtZ-wd-Acw" id="aQX-aa-Wiy"/>
                         <outlet property="webView" destination="diV-kw-ft4" id="wqi-9k-wgq"/>
                         <outlet property="webViewWidthConstraint" destination="aQZ-nU-jP4" id="Yy4-Bk-1F7"/>
                     </connections>

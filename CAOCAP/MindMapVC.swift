@@ -17,7 +17,9 @@ class MindMapVC: UIViewController {
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var redoButton: UIButton!
     @IBOutlet weak var keyboardView: UIView!
-    @IBOutlet weak var keyboardStack: UIStackView!
+    @IBOutlet weak var htmlKeyboard: UIStackView!
+    @IBOutlet weak var cssKeyboard: UIStackView!
+    @IBOutlet weak var jsKeyboard: UIStackView!
     var mindMap: UIMindMap!
     
     override func viewDidLoad() {
@@ -39,15 +41,6 @@ class MindMapVC: UIViewController {
             mindMap.topAnchor.constraint(equalTo: view.topAnchor),
             mindMap.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
-    }
-    
-    func setupKeyboardGestureRecognizer() {
-        let upSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
-        let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
-        upSwipe.direction = .up
-        downSwipe.direction = .down
-        keyboardView.addGestureRecognizer(upSwipe)
-        keyboardView.addGestureRecognizer(downSwipe)
     }
     
     @objc func handleResizingWebView(sender: UIPanGestureRecognizer) {
@@ -73,47 +66,85 @@ class MindMapVC: UIViewController {
         }
     }
     
+    func setupKeyboardGestureRecognizer() {
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
+        let upSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
+        let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
+        rightSwipe.direction = .right
+        leftSwipe.direction = .left
+        upSwipe.direction = .up
+        downSwipe.direction = .down
+        keyboardView.addGestureRecognizer(rightSwipe)
+        keyboardView.addGestureRecognizer(leftSwipe)
+        keyboardView.addGestureRecognizer(upSwipe)
+        keyboardView.addGestureRecognizer(downSwipe)
+    }
+    
+    
     @objc func handleKeyboardSwipe(sender: UISwipeGestureRecognizer) {
         if sender.state == .ended {
             switch sender.direction {
-            case .up:
+            case .right:
+                if !htmlKeyboard.isHidden {
+                    htmlKeyboard.isHidden = true
+                    jsKeyboard.isHidden = false
+                } else if !jsKeyboard.isHidden {
+                    jsKeyboard.isHidden = true
+                    cssKeyboard.isHidden = false
+                } else {
+                    cssKeyboard.isHidden = true
+                    htmlKeyboard.isHidden = false
+                }
+            case .left:
+                if !htmlKeyboard.isHidden {
+                    htmlKeyboard.isHidden = true
+                    cssKeyboard.isHidden = false
+                } else if !jsKeyboard.isHidden {
+                    jsKeyboard.isHidden = true
+                    htmlKeyboard.isHidden = false
+                } else {
+                    cssKeyboard.isHidden = true
+                    jsKeyboard.isHidden = false
+                }
+            case .up where !htmlKeyboard.isHidden:
                 UIView.animate(withDuration: 0.15) {
-                    if self.keyboardStack.arrangedSubviews[11].isHidden {
+                    if self.htmlKeyboard.arrangedSubviews[11].isHidden {
                         //skip 0-9
                         for n in 10...11 {
-                            let view = self.keyboardStack.arrangedSubviews[n]
+                            let view = self.htmlKeyboard.arrangedSubviews[n]
                             view.alpha = 1
                             view.isHidden = false
                         }
-                    } else if self.keyboardStack.arrangedSubviews[0].isHidden {
+                    } else if self.htmlKeyboard.arrangedSubviews[0].isHidden {
                         //skip 2,3,4,7,8
                         for n in 0...11 {
                             if [2,3,4,7,8].contains(n) { continue }
-                            let view = self.keyboardStack.arrangedSubviews[n]
+                            let view = self.htmlKeyboard.arrangedSubviews[n]
                             view.alpha = 1
                             view.isHidden = false
                         }
                     } else {
                         self.webViewWidthConstraint.constant = 80
                         for n in 0...11 {
-                            let view = self.keyboardStack.arrangedSubviews[n]
+                            let view = self.htmlKeyboard.arrangedSubviews[n]
                             view.alpha = 1
                             view.isHidden = false
                         }
                     }
                 }
                 loadViewIfNeeded()
-            case .down:
+            case .down where !htmlKeyboard.isHidden:
                 UIView.animate(withDuration: 0.15) {
-                    if self.keyboardStack.arrangedSubviews[0].isHidden {
+                    if self.htmlKeyboard.arrangedSubviews[0].isHidden {
                         for n in 10...11 {
-                            let view = self.keyboardStack.arrangedSubviews[n]
+                            let view = self.htmlKeyboard.arrangedSubviews[n]
                             view.alpha = 0
                             view.isHidden = true
                         }
-                    } else if self.keyboardStack.arrangedSubviews[2].isHidden {
+                    } else if self.htmlKeyboard.arrangedSubviews[2].isHidden {
                         for n in 0...9 {
-                            let view = self.keyboardStack.arrangedSubviews[n]
+                            let view = self.htmlKeyboard.arrangedSubviews[n]
                             view.alpha = 0
                             view.isHidden = true
                         }
@@ -121,7 +152,7 @@ class MindMapVC: UIViewController {
                         self.webViewWidthConstraint.constant = 160
                         for n in 2...8 {
                             if [5,6].contains(n) { continue }
-                            let view = self.keyboardStack.arrangedSubviews[n]
+                            let view = self.htmlKeyboard.arrangedSubviews[n]
                             view.alpha = 0
                             view.isHidden = true
                         }
