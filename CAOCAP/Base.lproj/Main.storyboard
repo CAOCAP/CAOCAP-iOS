@@ -98,21 +98,41 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qci-87-zc2">
-                                <rect key="frame" x="330" y="10" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="5AT-0N-zqa"/>
-                                    <constraint firstAttribute="width" constant="40" id="qGP-ov-qjR"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="chevron.compact.up" catalog="system"/>
-                                <buttonConfiguration key="configuration" style="plain" image="xmark.circle.fill" catalog="system">
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="didPressCloseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0WX-SL-2uo"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HCA-IB-AaJ">
+                                <rect key="frame" x="330" y="10" width="40" height="88"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qci-87-zc2">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="5AT-0N-zqa"/>
+                                            <constraint firstAttribute="width" constant="40" id="qGP-ov-qjR"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="chevron.compact.up" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="xmark.circle.fill" catalog="system">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didPressCloseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0WX-SL-2uo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBO-uq-Txc">
+                                        <rect key="frame" x="0.0" y="48" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="fUP-9j-Kpr"/>
+                                            <constraint firstAttribute="height" constant="40" id="l0b-3l-Mif"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="chevron.compact.up" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="gear.circle.fill" catalog="system">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="ihW-Sv-FVz" kind="show" id="nDr-9q-4Mg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfp-2z-eXU">
                                 <rect key="frame" x="20" y="505" width="45" height="30"/>
                                 <constraints>
@@ -853,7 +873,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qci-87-zc2" secondAttribute="trailing" constant="20" id="29G-XD-C4F"/>
                             <constraint firstItem="nAS-jS-Vj6" firstAttribute="top" secondItem="swv-AQ-sZO" secondAttribute="bottom" constant="10" id="5V9-b8-22x"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nAS-jS-Vj6" secondAttribute="bottom" id="66E-Nh-8gR"/>
                             <constraint firstItem="nAS-jS-Vj6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8eM-ar-6e0"/>
@@ -865,7 +884,6 @@
                             <constraint firstItem="e8H-lK-kiM" firstAttribute="leading" secondItem="Mfp-2z-eXU" secondAttribute="trailing" constant="5" id="V0m-XK-v7h"/>
                             <constraint firstItem="e8H-lK-kiM" firstAttribute="bottom" secondItem="swv-AQ-sZO" secondAttribute="bottom" id="VWD-Ar-J3Y"/>
                             <constraint firstItem="nAS-jS-Vj6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="YhE-8I-bD9"/>
-                            <constraint firstItem="qci-87-zc2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="b8H-YL-Qe8"/>
                             <constraint firstItem="JPI-46-O5d" firstAttribute="leading" secondItem="e8H-lK-kiM" secondAttribute="trailing" constant="5" id="h86-Dh-O8y"/>
                             <constraint firstItem="JPI-46-O5d" firstAttribute="bottom" secondItem="e8H-lK-kiM" secondAttribute="bottom" id="vGT-CF-Z7R"/>
                         </constraints>
@@ -886,6 +904,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-309.23076923076923" y="-218.24644549763033"/>
+        </scene>
+        <!--Project SettingsVC-->
+        <scene sceneID="elP-iC-bqe">
+            <objects>
+                <viewController id="ihW-Sv-FVz" customClass="ProjectSettingsVC" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6kC-jZ-hsB">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="l8j-2R-YIf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BKy-HP-0zm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="001-4u-oUJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="431" y="-219"/>
         </scene>
         <!--InitialVC-->
         <scene sceneID="fR9-Jp-f0Z">
@@ -1810,6 +1844,7 @@
         <image name="chevron.compact.right" catalog="system" width="62" height="128"/>
         <image name="chevron.compact.up" catalog="system" width="128" height="42"/>
         <image name="gear" catalog="system" width="128" height="122"/>
+        <image name="gear.circle.fill" catalog="system" width="128" height="123"/>
         <image name="paintpalette" catalog="system" width="128" height="105"/>
         <image name="side-resize" width="600" height="600"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="123"/>
