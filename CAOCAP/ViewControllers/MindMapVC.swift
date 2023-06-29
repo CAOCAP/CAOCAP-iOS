@@ -184,9 +184,9 @@ class MindMapVC: UIViewController {
         let newNode: Node
         switch sender.tag {
         case 1:
-            newNode = Node(title: "Head", color: .systemGreen)
+            newNode = Node(title: "Span", color: .systemGreen)
         case 2:
-            newNode = Node(title: "Body", color: .systemPink)
+            newNode = Node(title: "Div", color: .systemPink)
         case 3:
             newNode = Node(title: "Meta", color: .systemPurple)
         case 4:
