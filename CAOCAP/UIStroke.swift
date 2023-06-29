@@ -1,5 +1,5 @@
 //
-//  StrokeView.swift
+//  UIStroke.swift
 //  CAOCAP
 //
 //  Created by Azzam AL-Rashed on 21/06/2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StrokeView: UIView {
+class UIStroke: UIView {
     var lines = 0
     var color = UIColor.label
     var heightConstraint = NSLayoutConstraint()

@@ -1,5 +1,5 @@
 //
-//  NodeView.swift
+//  UINodeView.swift
 //  CAOCAP
 //
 //  Created by Azzam AL-Rashed on 21/06/2023.
@@ -7,14 +7,14 @@
 
 import UIKit
 
-protocol NodeViewDelegate {
+protocol UINodeViewDelegate {
     func select(nodeID: UUID)
     func delete(nodeID: UUID)
 }
 
-class NodeView: UIView, UIContextMenuInteractionDelegate {
+class UINodeView: UIView, UIContextMenuInteractionDelegate {
     let nodeID: UUID
-    var delegate: NodeViewDelegate?
+    var delegate: UINodeViewDelegate?
     init(id: UUID, title: String, color: UIColor) {
         nodeID = id
         super.init(frame: .zero)

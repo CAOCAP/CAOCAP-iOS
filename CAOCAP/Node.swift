@@ -28,8 +28,8 @@ class Node: NSObject {
     weak var previous: Node? /* 🤔 */
     weak var next: Node?
     private (set) var children: [Node] = []
-    private (set) var view: NodeView
-    private (set) var stroke = StrokeView()
+    private (set) var view: UINodeView
+    private (set) var stroke = UIStroke()
     
     override var description: String {
         var text = title
@@ -54,14 +54,14 @@ class Node: NSObject {
         self.title = title
         element = title.lowercased()
         textContent = text
-        view = NodeView(id: id, title: title, color: color)
+        view = UINodeView(id: id, title: title, color: color)
     }
     
     // MARK: Methods
     func add(child: Node) {
         children.append(child)
         child.parent = self
-        stroke = StrokeView(lines: children.count)
+        stroke = UIStroke(lines: children.count)
     }
     
     func search(id: UUID) -> Node? {
@@ -86,14 +86,14 @@ class Node: NSObject {
     func remove(node: Node) {
         guard let parent = node.parent else { return }
         parent.children.removeAll { $0 == node }
-        stroke = StrokeView(lines: children.count)
+        stroke = UIStroke(lines: children.count)
     }
     
     func removeNode(with id: UUID) {
         guard let node = search(id: id),
             let parent = node.parent else { return }
         parent.children.removeAll { $0 == node }
-        stroke = StrokeView(lines: children.count)
+        stroke = UIStroke(lines: children.count)
     }
     
     func depthOfNode() -> Int {

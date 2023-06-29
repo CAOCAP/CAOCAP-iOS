@@ -221,7 +221,7 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
 }
 
 
-extension UIMindMap: NodeViewDelegate {
+extension UIMindMap: UINodeViewDelegate {
     func select(nodeID: UUID) {
         guard let node = nodeTree.root.search(id: nodeID) else { return }
         select(node)

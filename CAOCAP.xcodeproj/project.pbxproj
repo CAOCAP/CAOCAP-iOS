@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		210F19AE2A42DBE100D71A66 /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210F19AD2A42DBE100D71A66 /* NodeView.swift */; };
-		210F19B02A42DC9800D71A66 /* StrokeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210F19AF2A42DC9800D71A66 /* StrokeView.swift */; };
+		210F19AE2A42DBE100D71A66 /* UINodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210F19AD2A42DBE100D71A66 /* UINodeView.swift */; };
+		210F19B02A42DC9800D71A66 /* UIStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210F19AF2A42DC9800D71A66 /* UIStroke.swift */; };
 		2178C19D2A4D92A300876BB6 /* ProjectSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */; };
+		2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */; };
+		2178C1A22A4DA2AB00876BB6 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */; };
+		2178C1A42A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C1A32A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift */; };
 		2186DB0D2A30946900773C5E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2186DB0C2A30946900773C5E /* UIView+Extensions.swift */; };
 		2186DB0F2A30BD6600773C5E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2186DB0E2A30BD6600773C5E /* Node.swift */; };
 		2186DB112A30DF4700773C5E /* UIMindMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2186DB102A30DF4700773C5E /* UIMindMap.swift */; };
@@ -41,9 +44,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		210F19AD2A42DBE100D71A66 /* NodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeView.swift; sourceTree = "<group>"; };
-		210F19AF2A42DC9800D71A66 /* StrokeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeView.swift; sourceTree = "<group>"; };
+		210F19AD2A42DBE100D71A66 /* UINodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINodeView.swift; sourceTree = "<group>"; };
+		210F19AF2A42DC9800D71A66 /* UIStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStroke.swift; sourceTree = "<group>"; };
 		2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsVC.swift; sourceTree = "<group>"; };
+		2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSettingsVC.swift; sourceTree = "<group>"; };
+		2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		2178C1A32A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwitchTableViewCell.swift; sourceTree = "<group>"; };
 		2186DB0C2A30946900773C5E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		2186DB0E2A30BD6600773C5E /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		2186DB102A30DF4700773C5E /* UIMindMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMindMap.swift; sourceTree = "<group>"; };
@@ -87,6 +93,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2178C1A02A4D992000876BB6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				21DBA0002A38F4C800DFAC66 /* InitialVC.swift */,
+				218DA9CC2A2B205800459C61 /* MindMapVC.swift */,
+				21C21C482A34B5D800F40BE3 /* ProjectsVC.swift */,
+				21C21C4E2A34B62E00F40BE3 /* PaletteVC.swift */,
+				21C21C4C2A34B61900F40BE3 /* PurchaseVC.swift */,
+				21C21C4A2A34B60200F40BE3 /* SettingsVC.swift */,
+				2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */,
+				2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		218DA9BC2A2B205800459C61 = {
 			isa = PBXGroup;
 			children = (
@@ -111,16 +132,12 @@
 				21C21C532A36145200F40BE3 /* Enumerations.swift */,
 				218DA9C82A2B205800459C61 /* AppDelegate.swift */,
 				218DA9CA2A2B205800459C61 /* SceneDelegate.swift */,
-				21DBA0002A38F4C800DFAC66 /* InitialVC.swift */,
-				218DA9CC2A2B205800459C61 /* MindMapVC.swift */,
+				2178C1A02A4D992000876BB6 /* ViewControllers */,
+				2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */,
+				2178C1A32A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift */,
 				2186DB102A30DF4700773C5E /* UIMindMap.swift */,
-				21C21C4E2A34B62E00F40BE3 /* PaletteVC.swift */,
-				21C21C4C2A34B61900F40BE3 /* PurchaseVC.swift */,
-				21C21C4A2A34B60200F40BE3 /* SettingsVC.swift */,
-				2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */,
-				21C21C482A34B5D800F40BE3 /* ProjectsVC.swift */,
-				210F19AD2A42DBE100D71A66 /* NodeView.swift */,
-				210F19AF2A42DC9800D71A66 /* StrokeView.swift */,
+				210F19AF2A42DC9800D71A66 /* UIStroke.swift */,
+				210F19AD2A42DBE100D71A66 /* UINodeView.swift */,
 				2186DB0E2A30BD6600773C5E /* Node.swift */,
 				21DBA0022A39E18C00DFAC66 /* Store.swift */,
 				218DA9CE2A2B205800459C61 /* Main.storyboard */,
@@ -256,6 +273,9 @@
 				218DA9CD2A2B205800459C61 /* MindMapVC.swift in Sources */,
 				218DA9C92A2B205800459C61 /* AppDelegate.swift in Sources */,
 				2178C19D2A4D92A300876BB6 /* ProjectSettingsVC.swift in Sources */,
+				2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */,
+				2178C1A42A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift in Sources */,
+				2178C1A22A4DA2AB00876BB6 /* SettingsTableViewCell.swift in Sources */,
 				2186DB0F2A30BD6600773C5E /* Node.swift in Sources */,
 				21C21C4D2A34B61900F40BE3 /* PurchaseVC.swift in Sources */,
 				218DA9CB2A2B205800459C61 /* SceneDelegate.swift in Sources */,
@@ -267,8 +287,8 @@
 				21DBA0012A38F4C800DFAC66 /* InitialVC.swift in Sources */,
 				21C21C492A34B5D800F40BE3 /* ProjectsVC.swift in Sources */,
 				21C21C542A36145200F40BE3 /* Enumerations.swift in Sources */,
-				210F19B02A42DC9800D71A66 /* StrokeView.swift in Sources */,
-				210F19AE2A42DBE100D71A66 /* NodeView.swift in Sources */,
+				210F19B02A42DC9800D71A66 /* UIStroke.swift in Sources */,
+				210F19AE2A42DBE100D71A66 /* UINodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
