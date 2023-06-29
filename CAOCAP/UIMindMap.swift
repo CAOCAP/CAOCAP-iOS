@@ -48,18 +48,18 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         layoutIfNeeded()
         canvas.addGestureRecognizer(doubleTapZoom)
         canvas.isUserInteractionEnabled = true
-        load(root: nodeTree.root)
+        load(body: nodeTree.body)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func load(root: Node) {
+    func load(body: Node) {
         print("\(#function)ing...")
         canvas.subviews.forEach({ $0.removeFromSuperview() })
-        draw(root)
-        if !root.children.isEmpty { load(children: root.children) }
+        draw(body)
+        if !body.children.isEmpty { load(children: body.children) }
         
     }
     
@@ -74,9 +74,9 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     
     func add(_ node: Node) {
         print("\(#function)ing...")
-        guard let selectedNode = nodeTree.root.search(id: nodeTree.selectedID) else { return }
+        guard let selectedNode = nodeTree.body.search(id: nodeTree.selectedID) else { return }
         selectedNode.add(child: node)
-        load(root: nodeTree.root)/*🤔 🤔 🤔*/
+        load(body: nodeTree.body)/*🤔 🤔 🤔*/
         select(node)
     }
     
@@ -84,7 +84,7 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         print("\(#function)ing...")
         guard let parent = node.parent else { return }
         parent.remove(node: node)
-        load(root: nodeTree.root)/*🤔 🤔 🤔*/
+        load(body: nodeTree.body)/*🤔 🤔 🤔*/
         select(parent)
     }
     
@@ -145,7 +145,7 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         let currentNodeView = node.view
         currentNodeView.layer.borderWidth = 2
         print("Current Selected Node ID: \(nodeTree.selectedID)")
-        guard let previousNodeView = nodeTree.root.search(id: previouslySelectedID)?.view else { return }
+        guard let previousNodeView = nodeTree.body.search(id: previouslySelectedID)?.view else { return }
         previousNodeView.layer.borderWidth = 0
         
     }
@@ -156,25 +156,25 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         let previouslySelectedID = nodeTree.selectedID
         switch direction {
         case .left:
-            guard let selected = nodeTree.root.search(id: nodeTree.selectedID),
+            guard let selected = nodeTree.body.search(id: nodeTree.selectedID),
                   let parent = selected.parent,
                   selected.position > 0
             else { return }
             print("select prevues sibling")
             nodeTree.selectedID = parent.children[selected.position-1].id
         case .up:
-            guard let selected = nodeTree.root.search(id: nodeTree.selectedID),
+            guard let selected = nodeTree.body.search(id: nodeTree.selectedID),
                   let parent = selected.parent
             else { return }
             print("select parent")
             nodeTree.selectedID = parent.id
         case .down:
-            guard let firstChild = nodeTree.root.search(id: nodeTree.selectedID)?.children.first
+            guard let firstChild = nodeTree.body.search(id: nodeTree.selectedID)?.children.first
             else { return }
             print("select first child")
             nodeTree.selectedID = firstChild.id
         case .right:
-            guard let selected = nodeTree.root.search(id: nodeTree.selectedID),
+            guard let selected = nodeTree.body.search(id: nodeTree.selectedID),
                   let parent = selected.parent,
                   parent.children.count > selected.position + 1
             else { return }
@@ -183,8 +183,8 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         }
         
         print("Current Selected Node ID: \(nodeTree.selectedID)")
-        guard let previousNodeView = nodeTree.root.search(id: previouslySelectedID)?.view,
-              let currentNodeView = nodeTree.root.search(id: nodeTree.selectedID)?.view else { return }
+        guard let previousNodeView = nodeTree.body.search(id: previouslySelectedID)?.view,
+              let currentNodeView = nodeTree.body.search(id: nodeTree.selectedID)?.view else { return }
         currentNodeView.layer.borderWidth = 2
         previousNodeView.layer.borderWidth = 0
     }
@@ -223,13 +223,13 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
 
 extension UIMindMap: UINodeViewDelegate {
     func select(nodeID: UUID) {
-        guard let node = nodeTree.root.search(id: nodeID) else { return }
+        guard let node = nodeTree.body.search(id: nodeID) else { return }
         select(node)
     }
     
     func delete(nodeID: UUID) {
         print("\(#function)ing...")
-        guard let node = nodeTree.root.search(id: nodeID) else { return }
+        guard let node = nodeTree.body.search(id: nodeID) else { return }
         DispatchQueue.main.async {
             self.delete(node)
         }

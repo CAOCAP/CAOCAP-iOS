@@ -29,7 +29,14 @@ class MindMapVC: UIViewController {
         
         setupKeyboardGestureRecognizer()
         setupMindMapLayout()
-        webView.loadHTMLString(mindMap.nodeTree.root.dom, baseURL: nil)
+        
+        loadWebView()
+    }
+    
+    func loadWebView() {
+        let htmlCode = "<!DOCTYPE html><html><head></head>\(mindMap.nodeTree.body.dom)</html>"
+        webView.loadHTMLString(htmlCode, baseURL: nil)
+        print(htmlCode)
     }
     
     func setupMindMapLayout() {
@@ -51,9 +58,7 @@ class MindMapVC: UIViewController {
                 webViewWidthConstraint.constant =
                 touchPoint
             }
-            print(touchPoint)
         default:
-            print("ended")
             if webViewWidthConstraint.constant < 90 {
                 webViewWidthConstraint.constant = 80
             } else if webViewWidthConstraint.constant >= 90 && webViewWidthConstraint.constant < 130 {
@@ -185,7 +190,7 @@ class MindMapVC: UIViewController {
         case 3:
             newNode = Node(title: "Meta", color: .systemPurple)
         case 4:
-            newNode = Node(title: "Title", color: .systemPurple, text: "MyBlog")
+            newNode = Node(title: "A", color: .systemPurple, text: "Visit W3Schools.com!")
         case 5:
             newNode = Node(title: "Style", color: .systemPurple)
         case 6:
@@ -211,7 +216,7 @@ class MindMapVC: UIViewController {
         case 16:
             newNode = Node(title: "Img", color: .systemBlue)
         case 17:
-            newNode = Node(title: "Script", color: .systemBlue)
+            newNode = Node(title: "Center", color: .systemBlue)
         case 18:
             newNode = Node(title: "Input", color: .systemTeal)
         case 19:
@@ -247,7 +252,7 @@ class MindMapVC: UIViewController {
         case 34:
             newNode = Node(title: "BR", color: .systemGray)
         case 35:
-            newNode = Node(title: "A", color: .systemGray, text: "Visit W3Schools.com!")
+            newNode = Node(title: "HR", color: .systemGray)
         case 36:
             newNode = Node(title: "UL", color: .systemGray)
         case 37:
@@ -255,15 +260,14 @@ class MindMapVC: UIViewController {
         case 38:
             newNode = Node(title: "LI", color: .systemGray, text: "Coffee")
         case 39:
-            newNode = Node(title: "EM", color: .systemGray, text: "displayed in italic")
+            newNode = Node(title: "U", color: .systemGray, text: "content underline")
         case 40:
             newNode = Node(title: "B", color: .systemGray, text: "this is bold text")
         default:
-            newNode = Node(title: "I", color: .systemGray, text: "alternate voice or mood")
+            newNode = Node(title: "I", color: .systemGray, text: "displayed in italic")
         }
         mindMap.add(newNode)
-        print(mindMap.nodeTree.root.dom)
-        webView.loadHTMLString(mindMap.nodeTree.root.dom, baseURL: nil)
+        loadWebView()
         /*🤔 🤔 🤔*/
     }
     

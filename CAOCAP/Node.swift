@@ -9,9 +9,9 @@ import UIKit
 
 struct NodeTree {
     var selectedID: UUID
-    var root = Node(title: "HTML", color: .systemBlue)
+    var body = Node(title: "Body", color: .systemBlue)
     
-    init() { selectedID = root.id }
+    init() { selectedID = body.id }
 }
 
 class Node: NSObject {
