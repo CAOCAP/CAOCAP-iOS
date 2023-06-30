@@ -273,15 +273,27 @@ class MindMapVC: UIViewController {
     
     @IBAction func didPressUndo(_ sender: UIButton) {
         print("\(#function)ing...")
-        /*🤔 🤔 🤔*/
-        //        mindMap.undo()
-        
+        //mindMap.undo()🤔
     }
     
     @IBAction func didPressRedo(_ sender: UIButton) {
         print("\(#function)ing...")
-        /*🤔 🤔 🤔*/
-        //        mindMap.redo()
+        //mindMap.redo()🤔
     }
     
+}
+
+extension MindMapVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 30
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cssCell", for: indexPath)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 100, height: 30)
+    }
 }
