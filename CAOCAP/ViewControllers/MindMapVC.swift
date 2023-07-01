@@ -34,7 +34,15 @@ class MindMapVC: UIViewController {
     }
     
     func loadWebView() {
-        let htmlCode = "<!DOCTYPE html><html><head></head>\(mindMap.nodeTree.body.dom)</html>"
+        let htmlCode = #"""
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <script src="https://cdn.tailwindcss.com"></script>
+            </head>
+            \#(mindMap.nodeTree.body.dom)
+        </html>
+        """#
         webView.loadHTMLString(htmlCode, baseURL: nil)
         print(htmlCode)
     }
