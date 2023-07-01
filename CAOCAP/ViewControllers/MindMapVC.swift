@@ -122,24 +122,24 @@ class MindMapVC: UIViewController {
                 }
             case .up where !htmlKeyboard.isHidden:
                 UIView.animate(withDuration: 0.15) {
-                    if self.htmlKeyboard.arrangedSubviews[11].isHidden {
+                    if self.htmlKeyboard.arrangedSubviews[10].isHidden {
                         //skip 0-9
-                        for n in 10...11 {
+                        for n in 9...10 {
                             let view = self.htmlKeyboard.arrangedSubviews[n]
                             view.alpha = 1
                             view.isHidden = false
                         }
                     } else if self.htmlKeyboard.arrangedSubviews[0].isHidden {
-                        //skip 2,3,4,7,8
-                        for n in 0...11 {
-                            if [2,3,4,7,8].contains(n) { continue }
+                        //skip 2,3,6,7
+                        for n in 0...10 {
+                            if [2,3,6,7].contains(n) { continue }
                             let view = self.htmlKeyboard.arrangedSubviews[n]
                             view.alpha = 1
                             view.isHidden = false
                         }
                     } else {
                         self.webViewWidthConstraint.constant = 80
-                        for n in 0...11 {
+                        for n in 0...10 {
                             let view = self.htmlKeyboard.arrangedSubviews[n]
                             view.alpha = 1
                             view.isHidden = false
@@ -150,21 +150,21 @@ class MindMapVC: UIViewController {
             case .down where !htmlKeyboard.isHidden:
                 UIView.animate(withDuration: 0.15) {
                     if self.htmlKeyboard.arrangedSubviews[0].isHidden {
-                        for n in 10...11 {
+                        for n in 9...10 {
                             let view = self.htmlKeyboard.arrangedSubviews[n]
                             view.alpha = 0
                             view.isHidden = true
                         }
                     } else if self.htmlKeyboard.arrangedSubviews[2].isHidden {
-                        for n in 0...9 {
+                        for n in 0...8 {
                             let view = self.htmlKeyboard.arrangedSubviews[n]
                             view.alpha = 0
                             view.isHidden = true
                         }
                     } else {
                         self.webViewWidthConstraint.constant = 160
-                        for n in 2...8 {
-                            if [5,6].contains(n) { continue }
+                        for n in 2...7 {
+                            if [4,5].contains(n) { continue }
                             let view = self.htmlKeyboard.arrangedSubviews[n]
                             view.alpha = 0
                             view.isHidden = true
@@ -196,83 +196,77 @@ class MindMapVC: UIViewController {
         case 2:
             newNode = Node(title: "Div", color: .systemPink)
         case 3:
-            newNode = Node(title: "Meta", color: .systemPurple)
+            newNode = Node(title: "Button", color: .systemPurple, text: "Click Me!")
         case 4:
             newNode = Node(title: "A", color: .systemPurple, text: "Visit W3Schools.com!")
         case 5:
-            newNode = Node(title: "Style", color: .systemPurple)
+            newNode = Node(title: "Input", color: .systemPurple)
         case 6:
-            newNode = Node(title: "Canvas", color: .systemBlue)
+            newNode = Node(title: "Header", color: .systemBlue)
         case 7:
             newNode = Node(title: "Main", color: .systemBlue)
         case 8:
-            newNode = Node(title: "Nav", color: .systemBlue)
-        case 9:
-            newNode = Node(title: "Aside", color: .systemBlue)
-        case 10:
-            newNode = Node(title: "Article", color: .systemBlue)
-        case 11:
-            newNode = Node(title: "Header", color: .systemBlue)
-        case 12:
             newNode = Node(title: "Footer", color: .systemBlue)
-        case 13:
+        case 9:
+            newNode = Node(title: "Article", color: .systemBlue)
+        case 10:
             newNode = Node(title: "Section", color: .systemBlue)
+        case 11:
+            newNode = Node(title: "Aside", color: .systemBlue)
+        case 12:
+            newNode = Node(title: "Canvas", color: .systemBlue)
+        case 13:
+            newNode = Node(title: "Nav", color: .systemBlue)
         case 14:
-            newNode = Node(title: "Button", color: .systemBlue, text: "Click Me!")
-        case 15:
-            newNode = Node(title: "Div", color: .systemBlue)
-        case 16:
-            newNode = Node(title: "Img", color: .systemBlue)
-        case 17:
             newNode = Node(title: "Center", color: .systemBlue)
-        case 18:
-            newNode = Node(title: "Input", color: .systemTeal)
-        case 19:
-            newNode = Node(title: "Form", color: .systemTeal)
-        case 20:
-            newNode = Node(title: "Output", color: .systemTeal)
-        case 21:
-            newNode = Node(title: "Label", color: .systemTeal, text: "First name:")
-        case 22:
-            newNode = Node(title: "Option", color: .systemTeal, text: "CAOCAP")
-        case 23:
-            newNode = Node(title: "Legend", color: .systemTeal, text: "Personalia:")
-        case 24:
-            newNode = Node(title: "Select", color: .systemTeal)
-        case 25:
-            newNode = Node(title: "FieldSet", color: .systemTeal)
-        case 26:
-            newNode = Node(title: "OptGroup", color: .systemTeal)
-        case 27:
+        case 15:
             newNode = Node(title: "TextArea", color: .systemTeal, text: "The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It is often assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.")
-        case 28:
+        case 16:
+            newNode = Node(title: "Form", color: .systemTeal)
+        case 17:
+            newNode = Node(title: "Label", color: .systemTeal, text: "First name:")
+        case 18:
+            newNode = Node(title: "Option", color: .systemTeal, text: "CAOCAP")
+        case 19:
+            newNode = Node(title: "Legend", color: .systemTeal, text: "Personalia:")
+        case 20:
+            newNode = Node(title: "Select", color: .systemTeal)
+        case 21:
+            newNode = Node(title: "FieldSet", color: .systemTeal)
+        case 22:
+            newNode = Node(title: "OptGroup", color: .systemTeal)
+        case 23:
+            newNode = Node(title: "Output", color: .systemTeal)
+        case 24:
             newNode = Node(title: "Video", color: .systemYellow)
-        case 29:
-            newNode = Node(title: "Source", color: .systemYellow)
-        case 30:
+        case 25:
+            newNode = Node(title: "Img", color: .systemYellow)
+        case 26:
             newNode = Node(title: "Audio", color: .systemYellow)
-        case 31:
-            newNode = Node(title: "H1", color: .systemGray, text: "Hello CAOCAP!")
-        case 32:
-            newNode = Node(title: "P", color: .systemGray, text: "At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.")
-        case 33:
-            newNode = Node(title: "Span", color: .systemGray, text: "caocap")
-        case 34:
-            newNode = Node(title: "BR", color: .systemGray)
-        case 35:
-            newNode = Node(title: "HR", color: .systemGray)
-        case 36:
+        case 27:
+            newNode = Node(title: "Source", color: .systemYellow)
+        case 28:
             newNode = Node(title: "UL", color: .systemGray)
-        case 37:
+        case 29:
             newNode = Node(title: "OL", color: .systemGray)
-        case 38:
+        case 30:
             newNode = Node(title: "LI", color: .systemGray, text: "Coffee")
-        case 39:
-            newNode = Node(title: "U", color: .systemGray, text: "content underline")
-        case 40:
-            newNode = Node(title: "B", color: .systemGray, text: "this is bold text")
+        case 31:
+            newNode = Node(title: "BR", color: .systemGray)
+        case 32:
+            newNode = Node(title: "HR", color: .systemGray)
+        case 33:
+            newNode = Node(title: "H1", color: .systemGray2, text: "Hello CAOCAP!")
+        case 34:
+            newNode = Node(title: "P", color: .systemGray2, text: "At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.")
+        case 35:
+            newNode = Node(title: "B", color: .systemGray2, text: "this is bold text")
+        case 36:
+            newNode = Node(title: "I", color: .systemGray2, text: "displayed in italic")
+        case 37:
+            newNode = Node(title: "U", color: .systemGray2, text: "content underline")
         default:
-            newNode = Node(title: "I", color: .systemGray, text: "displayed in italic")
+            newNode = Node(title: "S", color: .systemGray2, text: "content deleted")
         }
         mindMap.add(newNode)
         loadWebView()
