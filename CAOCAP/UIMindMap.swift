@@ -7,11 +7,15 @@
 
 import UIKit
 
+protocol UIMindMapDelegate {
+    func didRemoveNode()
+}
+
 class UIMindMap: UIScrollView, UIScrollViewDelegate {
     
     var nodeTree: NodeTree
     var nodeTreeHistory: [NodeTree]
-    
+    var mindMapDelegate: UIMindMapDelegate?
     var canvasHeightConstraint = NSLayoutConstraint()
     var canvasWidthConstraint = NSLayoutConstraint()
     
@@ -232,6 +236,7 @@ extension UIMindMap: UINodeViewDelegate {
         guard let node = nodeTree.body.search(id: nodeID) else { return }
         DispatchQueue.main.async {
             self.delete(node)
+            self.mindMapDelegate?.didRemoveNode()
         }
     }
     

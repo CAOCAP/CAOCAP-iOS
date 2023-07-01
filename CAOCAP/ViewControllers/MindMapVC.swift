@@ -38,6 +38,7 @@ class MindMapVC: UIViewController {
         <!DOCTYPE html>
         <html>
             <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <script src="https://cdn.tailwindcss.com"></script>
             </head>
             \#(mindMap.nodeTree.body.dom)
@@ -49,6 +50,7 @@ class MindMapVC: UIViewController {
     
     func setupMindMapLayout() {
         mindMap = UIMindMap(frame: view.frame, tree: NodeTree())
+        mindMap.mindMapDelegate = self
         view.insertSubview(mindMap, at: 0)
         NSLayoutConstraint.activate([
             mindMap.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -138,7 +140,7 @@ class MindMapVC: UIViewController {
                             view.isHidden = false
                         }
                     } else {
-                        self.webViewWidthConstraint.constant = 80
+                        self.webViewWidthConstraint.constant = 120
                         for n in 0...10 {
                             let view = self.htmlKeyboard.arrangedSubviews[n]
                             view.alpha = 1
@@ -297,5 +299,12 @@ extension MindMapVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 100, height: 30)
+    }
+}
+
+
+extension MindMapVC: UIMindMapDelegate {
+    func didRemoveNode() {
+        loadWebView()
     }
 }
