@@ -83,10 +83,10 @@
                                                         <real key="value" value="3"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                        <real key="value" value="0.29999999999999999"/>
+                                                        <real key="value" value="0.20000000000000001"/>
                                                     </userDefinedRuntimeAttribute>
                                                     <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                                        <size key="value" width="0.0" height="0.29999999999999999"/>
+                                                        <size key="value" width="0.0" height="0.0"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
@@ -180,7 +180,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfp-2z-eXU">
-                                <rect key="frame" x="20" y="505" width="45" height="30"/>
+                                <rect key="frame" x="20" y="500.33333333333326" width="45" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Wyf-q3-qfG"/>
                                     <constraint firstAttribute="width" constant="45" id="dNB-UU-UGL"/>
@@ -196,7 +196,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="e8H-lK-kiM">
-                                <rect key="frame" x="70" y="470" width="45" height="65"/>
+                                <rect key="frame" x="70" y="465.33333333333331" width="45" height="64.999999999999943"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URk-NW-Nke">
                                         <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
@@ -231,7 +231,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPI-46-O5d">
-                                <rect key="frame" x="120" y="505" width="45" height="30"/>
+                                <rect key="frame" x="120" y="500.33333333333326" width="45" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="MZL-ql-cdb"/>
                                     <constraint firstAttribute="width" constant="45" id="dKw-Bh-pJM"/>
@@ -247,7 +247,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="swv-AQ-sZO">
-                                <rect key="frame" x="325" y="470" width="45" height="65"/>
+                                <rect key="frame" x="325" y="465.33333333333331" width="45" height="64.999999999999943"/>
                                 <subviews>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22A-CW-8eM">
                                         <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
@@ -285,7 +285,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAS-jS-Vj6">
-                                <rect key="frame" x="15" y="545" width="360" height="299"/>
+                                <rect key="frame" x="15" y="540.33333333333337" width="360" height="303.66666666666663"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Wp-Ld-xaC">
                                         <rect key="frame" x="140" y="10" width="80" height="4"/>
@@ -301,7 +301,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cP2-L4-azG">
-                                        <rect key="frame" x="0.0" y="0.0" width="360" height="299"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="303.66666666666669"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -310,13 +310,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Grg-nX-Or3">
-                                        <rect key="frame" x="15" y="20" width="330" height="259"/>
+                                        <rect key="frame" x="15" y="20" width="330" height="263.66666666666669"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ohl-8V-enY">
-                                                <rect key="frame" x="0.0" y="0.0" width="330" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="31.666666666666668"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjV-OB-wTZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="161" height="31"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="161" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Span">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -327,7 +327,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0y0-Zf-mFi">
-                                                        <rect key="frame" x="169" y="0.0" width="161" height="31"/>
+                                                        <rect key="frame" x="169" y="0.0" width="161" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Div">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -340,10 +340,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1od-Np-80j">
-                                                <rect key="frame" x="0.0" y="38" width="330" height="31"/>
+                                                <rect key="frame" x="0.0" y="38.666666666666629" width="330" height="31.666666666666671"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Xz-xn-g91">
-                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="31"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Button">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -354,7 +354,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLX-fc-heg">
-                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="31"/>
+                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="A">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -365,7 +365,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnV-mR-AYB">
-                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="31"/>
+                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Input">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -378,7 +378,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uFe-gN-8Fm">
-                                                <rect key="frame" x="0.0" y="72.666666666666629" width="330" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="74" width="330" height="0.0"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPt-xK-c2K">
                                                         <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="0.0"/>
@@ -416,7 +416,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="64c-ci-TPD">
-                                                <rect key="frame" x="0.0" y="72.666666666666629" width="330" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="74" width="330" height="0.0"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ols-WK-5Z7">
                                                         <rect key="frame" x="0.0" y="0.0" width="161" height="0.0"/>
@@ -443,10 +443,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="m8Y-Op-eFP">
-                                                <rect key="frame" x="0.0" y="76" width="330" height="31"/>
+                                                <rect key="frame" x="0.0" y="77.333333333333258" width="330" height="31.666666666666671"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cWc-Oh-6RT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="31"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Aside">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -457,7 +457,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phV-7D-yCn">
-                                                        <rect key="frame" x="84.666666666666686" y="0.0" width="76.333333333333314" height="31"/>
+                                                        <rect key="frame" x="84.666666666666686" y="0.0" width="76.333333333333314" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Canvas">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -468,7 +468,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBI-qf-F4J">
-                                                        <rect key="frame" x="169" y="0.0" width="76.666666666666686" height="31"/>
+                                                        <rect key="frame" x="169" y="0.0" width="76.666666666666686" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Nav">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -479,7 +479,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAx-ZU-skU">
-                                                        <rect key="frame" x="253.66666666666671" y="0.0" width="76.333333333333343" height="31"/>
+                                                        <rect key="frame" x="253.66666666666671" y="0.0" width="76.333333333333343" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Center">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -492,10 +492,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vSn-JT-Xgo">
-                                                <rect key="frame" x="0.0" y="114" width="330" height="31"/>
+                                                <rect key="frame" x="0.0" y="116.00000000000001" width="330" height="31.666666666666671"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Olq-Vr-8zg">
-                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="31"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Text Area">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -506,7 +506,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4s-nA-Vvl">
-                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="31"/>
+                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Form">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -517,7 +517,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkf-L8-Xzr">
-                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="31"/>
+                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Label">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -530,7 +530,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3V9-WE-W8l">
-                                                <rect key="frame" x="0.0" y="148.66666666666663" width="330" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="151.33333333333326" width="330" height="0.0"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efp-23-Zij">
                                                         <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="0.0"/>
@@ -568,7 +568,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ivc-vn-iLU">
-                                                <rect key="frame" x="0.0" y="148.66666666666663" width="330" height="0.0"/>
+                                                <rect key="frame" x="0.0" y="151.33333333333326" width="330" height="0.0"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCH-G1-eLl">
                                                         <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="0.0"/>
@@ -606,10 +606,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7de-CS-ln9">
-                                                <rect key="frame" x="0.0" y="152" width="330" height="31"/>
+                                                <rect key="frame" x="0.0" y="154.66666666666663" width="330" height="31.666666666666657"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJq-iD-CrR">
-                                                        <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="31"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Video">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -620,7 +620,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kE-CK-NjA">
-                                                        <rect key="frame" x="84.666666666666686" y="0.0" width="76.333333333333314" height="31"/>
+                                                        <rect key="frame" x="84.666666666666686" y="0.0" width="76.333333333333314" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Image">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -631,7 +631,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="26" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lG-K0-Jvb">
-                                                        <rect key="frame" x="169" y="0.0" width="76.666666666666686" height="31"/>
+                                                        <rect key="frame" x="169" y="0.0" width="76.666666666666686" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Audio">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -642,7 +642,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="27" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvo-RV-aFL">
-                                                        <rect key="frame" x="253.66666666666671" y="0.0" width="76.333333333333343" height="31"/>
+                                                        <rect key="frame" x="253.66666666666671" y="0.0" width="76.333333333333343" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="gray" title="Source">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -655,10 +655,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zLx-3B-1F9">
-                                                <rect key="frame" x="0.0" y="190" width="330" height="31"/>
+                                                <rect key="frame" x="0.0" y="193.33333333333326" width="330" height="31.666666666666657"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="28" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bA-jO-wr1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="59.666666666666664" height="31"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="59.666666666666664" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="UL">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -669,7 +669,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="29" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCu-4Q-HmC">
-                                                        <rect key="frame" x="67.666666666666671" y="0.0" width="59.666666666666671" height="31"/>
+                                                        <rect key="frame" x="67.666666666666671" y="0.0" width="59.666666666666671" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="OL">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -680,7 +680,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="30" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZ3-6G-ege">
-                                                        <rect key="frame" x="135.33333333333334" y="0.0" width="59.333333333333343" height="31"/>
+                                                        <rect key="frame" x="135.33333333333334" y="0.0" width="59.333333333333343" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="LI">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -691,7 +691,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="31" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42f-Qf-I5O">
-                                                        <rect key="frame" x="202.66666666666666" y="0.0" width="59.666666666666657" height="31"/>
+                                                        <rect key="frame" x="202.66666666666666" y="0.0" width="59.666666666666657" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="BR">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -702,7 +702,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="32" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTN-EE-CZL">
-                                                        <rect key="frame" x="270.33333333333331" y="0.0" width="59.666666666666686" height="31"/>
+                                                        <rect key="frame" x="270.33333333333331" y="0.0" width="59.666666666666686" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="HR">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -715,10 +715,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OVN-gY-ydS">
-                                                <rect key="frame" x="0.0" y="228" width="330" height="31"/>
+                                                <rect key="frame" x="0.0" y="232" width="330" height="31.666666666666686"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="33" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53o-JJ-1ay">
-                                                        <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="31"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="48.333333333333336" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="H">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -729,7 +729,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="34" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2I-Z8-Dnv">
-                                                        <rect key="frame" x="56.333333333333329" y="0.0" width="48.333333333333329" height="31"/>
+                                                        <rect key="frame" x="56.333333333333329" y="0.0" width="48.333333333333329" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="P">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -740,7 +740,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="35" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zyi-j6-Oxe">
-                                                        <rect key="frame" x="112.66666666666664" y="0.0" width="48.333333333333329" height="31"/>
+                                                        <rect key="frame" x="112.66666666666664" y="0.0" width="48.333333333333329" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="B">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -751,7 +751,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="36" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0T-w2-eeO">
-                                                        <rect key="frame" x="169" y="0.0" width="48.333333333333343" height="31"/>
+                                                        <rect key="frame" x="169" y="0.0" width="48.333333333333343" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="I">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -762,7 +762,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="37" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaU-qi-sgA">
-                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="48.333333333333343" height="31"/>
+                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="48.333333333333343" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="U">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -773,7 +773,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="38" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9p-5f-c4b">
-                                                        <rect key="frame" x="281.66666666666669" y="0.0" width="48.333333333333314" height="31"/>
+                                                        <rect key="frame" x="281.66666666666669" y="0.0" width="48.333333333333314" height="31.666666666666668"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="S">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
@@ -953,12 +953,6 @@
                                         <color key="value" systemColor="labelColor"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="Btk-BP-8I5"/>
-                                        <exclude reference="YME-rF-dWq"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -1035,7 +1029,7 @@
         <!--InitialVC-->
         <scene sceneID="fR9-Jp-f0Z">
             <objects>
-                <viewController id="gTz-hA-32a" customClass="InitialVC" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="gTz-hA-32a" customClass="InitialVC" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nrm-je-h0Y"/>
                         <viewControllerLayoutGuide type="bottom" id="yl9-1h-oFc"/>
@@ -1044,13 +1038,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Grid" translatesAutoresizingMaskIntoConstraints="NO" id="bcu-vU-Tei">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="280"/>
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="280" id="Pkm-WS-veM"/>
-                                </constraints>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-B" translatesAutoresizingMaskIntoConstraints="NO" id="P6x-kE-Ig5">
                                 <rect key="frame" x="190" y="544" width="200" height="300"/>
                                 <color key="tintColor" systemColor="labelColor"/>
@@ -1059,28 +1046,35 @@
                                     <constraint firstAttribute="height" constant="300" id="Rqt-oP-C0r"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-A" translatesAutoresizingMaskIntoConstraints="NO" id="s58-kH-oFX">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-A" translatesAutoresizingMaskIntoConstraints="NO" id="rlR-E4-3k0">
                                 <rect key="frame" x="0.0" y="694" width="100" height="150"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="Tg9-2b-FwM"/>
-                                    <constraint firstAttribute="width" constant="100" id="h7G-Vy-hHx"/>
+                                    <constraint firstAttribute="height" constant="150" id="EGV-yz-COU"/>
+                                    <constraint firstAttribute="width" constant="100" id="dte-sH-1oK"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-S" translatesAutoresizingMaskIntoConstraints="NO" id="2Lj-bf-RiX">
-                                <rect key="frame" x="-10" y="494" width="80" height="140"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-S" translatesAutoresizingMaskIntoConstraints="NO" id="gVl-VX-9FT">
+                                <rect key="frame" x="-20" y="340" width="80" height="140"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="MLb-C1-6Pg"/>
-                                    <constraint firstAttribute="width" constant="80" id="QGn-Bh-Vkg"/>
+                                    <constraint firstAttribute="width" constant="80" id="6qF-QG-ye3"/>
+                                    <constraint firstAttribute="height" constant="140" id="b3d-iD-ZId"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-E" translatesAutoresizingMaskIntoConstraints="NO" id="i0j-Rb-agb">
-                                <rect key="frame" x="320" y="444" width="50" height="100"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-E" translatesAutoresizingMaskIntoConstraints="NO" id="GMr-kB-R2U">
+                                <rect key="frame" x="320" y="324" width="50" height="100"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="9Kc-yv-KQv"/>
-                                    <constraint firstAttribute="height" constant="100" id="v1t-ej-b4P"/>
+                                    <constraint firstAttribute="height" constant="100" id="cXf-pd-fFm"/>
+                                    <constraint firstAttribute="width" constant="50" id="qDp-h3-xLf"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Grid" translatesAutoresizingMaskIntoConstraints="NO" id="bcu-vU-Tei">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="280"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="Pkm-WS-veM"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAOCAP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZs-a8-rXs">
@@ -1089,113 +1083,103 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Zb3-gS-zub">
-                                <rect key="frame" x="20" y="230" width="330.33333333333331" height="140"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="flH-sb-3DB">
+                                <rect key="frame" x="45" y="453.66666666666669" width="300" height="254.33333333333331"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="4En-fv-uaj">
-                                        <rect key="frame" x="0.0" y="0.0" width="330.33333333333331" height="47.666666666666664"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0W1-Vc-RQe">
+                                        <rect key="frame" x="25" y="0.0" width="250" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="mvF-n4-6bG"/>
+                                            <constraint firstAttribute="width" constant="250" id="nqb-91-04S"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="16"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Create Project">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <buttonConfiguration key="configuration" style="gray" title="Create Project">
+                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="20"/>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="VvA-2K-oWU"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7YE-o0-JlD">
+                                        <rect key="frame" x="12.666666666666657" y="69.999999999999943" width="274.66666666666674" height="34.333333333333343"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVc-zv-ICS">
-                                                <rect key="frame" x="0.0" y="0.0" width="50.333333333333336" height="39.333333333333336"/>
-                                                <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="35"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="UserName" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ulY-Bm-K7r">
-                                                <rect key="frame" x="50.333333333333314" y="0.0" width="280" height="44.666666666666664"/>
-                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
-                                                <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="35"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="nickname"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpg-LF-Slc">
+                                                <rect key="frame" x="0.0" y="0.0" width="53.666666666666664" height="34.333333333333336"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="paintpalette" catalog="system">
+                                                    <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                                </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="didEndEditingUserName:" destination="gTz-hA-32a" eventType="editingDidEnd" id="LIt-M4-L1W"/>
-                                                    <outlet property="delegate" destination="gTz-hA-32a" id="abr-cl-q3V"/>
+                                                    <segue destination="rJq-Wj-2QX" kind="show" id="4UZ-Bo-Ath"/>
                                                 </connections>
-                                            </textField>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Se3-lA-1P6">
+                                                <rect key="frame" x="73.666666666666686" y="0.0" width="53.666666666666657" height="34.333333333333336"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="cart" catalog="system">
+                                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="fhq-Ws-50g" kind="show" id="KE1-pw-Sgi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLH-rZ-w5a">
+                                                <rect key="frame" x="147.33333333333334" y="0.0" width="53.666666666666657" height="34.333333333333336"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="gear" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="gear" catalog="system"/>
+                                                <connections>
+                                                    <segue destination="f8E-Cg-PNO" kind="show" id="a4M-tP-Sbh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4c-ir-eD3">
+                                                <rect key="frame" x="221.00000000000003" y="0.0" width="53.666666666666657" height="34.333333333333336"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="gear" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="bookmark" catalog="system">
+                                                    <color key="baseForegroundColor" systemColor="systemPinkColor"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="BKB-g1-NBX" kind="show" id="34a-r7-50C"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4e-mx-hqi">
-                                        <rect key="frame" x="0.0" y="55.666666666666679" width="330.33333333333331" height="84.333333333333314"/>
-                                        <string key="text">The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It is often assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.</string>
-                                        <fontDescription key="fontDescription" name="Ubuntu-LightItalic" family="Ubuntu" pointSize="15"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="Hye-pc-Cwb"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="340" id="uFB-eH-LRS"/>
-                                </constraints>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0W1-Vc-RQe">
-                                <rect key="frame" x="70" y="445" width="250" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="1ME-4d-ZHL"/>
-                                    <constraint firstAttribute="height" constant="50" id="mvF-n4-6bG"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="16"/>
-                                <color key="tintColor" name="AccentColor"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Create Project">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                </state>
-                                <buttonConfiguration key="configuration" style="gray" title="Create Project">
-                                    <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="20"/>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="VvA-2K-oWU"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7YE-o0-JlD">
-                                <rect key="frame" x="50" y="525" width="290" height="34.333333333333371"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpg-LF-Slc">
-                                        <rect key="frame" x="0.0" y="0.0" width="57.666666666666664" height="34.333333333333336"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <buttonConfiguration key="configuration" style="tinted" image="paintpalette" catalog="system">
-                                            <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
-                                            <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <segue destination="rJq-Wj-2QX" kind="show" id="4UZ-Bo-Ath"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Se3-lA-1P6">
-                                        <rect key="frame" x="77.666666666666671" y="0.0" width="57.333333333333329" height="34.333333333333336"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <buttonConfiguration key="configuration" style="tinted" image="cart" catalog="system">
-                                            <color key="baseForegroundColor" systemColor="systemYellowColor"/>
-                                            <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <segue destination="fhq-Ws-50g" kind="show" id="KE1-pw-Sgi"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLH-rZ-w5a">
-                                        <rect key="frame" x="155" y="0.0" width="57.666666666666657" height="34.333333333333336"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="gear" catalog="system"/>
-                                        <buttonConfiguration key="configuration" style="tinted" image="gear" catalog="system"/>
-                                        <connections>
-                                            <segue destination="f8E-Cg-PNO" kind="show" id="a4M-tP-Sbh"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4c-ir-eD3">
-                                        <rect key="frame" x="232.66666666666671" y="0.0" width="57.333333333333343" height="34.333333333333336"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="gear" catalog="system"/>
-                                        <buttonConfiguration key="configuration" style="tinted" image="bookmark" catalog="system">
-                                            <color key="baseForegroundColor" systemColor="systemPinkColor"/>
-                                            <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <segue destination="BKB-g1-NBX" kind="show" id="34a-r7-50C"/>
-                                        </connections>
-                                    </button>
+                                    <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BIa-0x-zs6">
+                                        <rect key="frame" x="0.0" y="124.33333333333331" width="300" height="130"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="0Yd-XL-GPB">
+                                                <rect key="frame" x="10" y="10" width="280" height="110"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="0Yd-XL-GPB" firstAttribute="top" secondItem="BIa-0x-zs6" secondAttribute="top" constant="10" id="R4W-ca-0xV"/>
+                                            <constraint firstItem="0Yd-XL-GPB" firstAttribute="leading" secondItem="BIa-0x-zs6" secondAttribute="leading" constant="10" id="Tdb-kz-qBR"/>
+                                            <constraint firstItem="0Yd-XL-GPB" firstAttribute="centerY" secondItem="BIa-0x-zs6" secondAttribute="centerY" id="YxX-wT-pkf"/>
+                                            <constraint firstItem="0Yd-XL-GPB" firstAttribute="centerX" secondItem="BIa-0x-zs6" secondAttribute="centerX" id="eco-Cc-nuw"/>
+                                            <constraint firstAttribute="height" constant="130" id="j2S-Sy-KO9"/>
+                                            <constraint firstAttribute="width" constant="300" id="kZV-QK-uR3"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0.0 (0)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKa-FB-Hq1">
-                                <rect key="frame" x="170.33333333333334" y="794" width="49.666666666666657" height="11"/>
+                                <rect key="frame" x="170.33333333333334" y="828" width="49.666666666666657" height="11"/>
                                 <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1204,42 +1188,35 @@
                         <viewLayoutGuide key="safeArea" id="40y-qT-otl"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="s58-kH-oFX" firstAttribute="leading" secondItem="NWE-1t-ghM" secondAttribute="leading" id="2Sn-QO-8ZC"/>
                             <constraint firstItem="vZs-a8-rXs" firstAttribute="centerX" secondItem="bcu-vU-Tei" secondAttribute="centerX" id="2pi-7u-Xya"/>
-                            <constraint firstItem="i0j-Rb-agb" firstAttribute="top" secondItem="2Lj-bf-RiX" secondAttribute="top" constant="-50" id="2u8-10-npr"/>
-                            <constraint firstItem="0W1-Vc-RQe" firstAttribute="centerX" secondItem="NWE-1t-ghM" secondAttribute="centerX" id="7jo-f6-sAp"/>
+                            <constraint firstItem="gVl-VX-9FT" firstAttribute="top" secondItem="bcu-vU-Tei" secondAttribute="bottom" constant="60" id="B3L-LS-IWo"/>
+                            <constraint firstItem="40y-qT-otl" firstAttribute="trailing" secondItem="GMr-kB-R2U" secondAttribute="trailing" constant="20" id="CIw-9E-AFg"/>
                             <constraint firstItem="P6x-kE-Ig5" firstAttribute="trailing" secondItem="40y-qT-otl" secondAttribute="trailing" id="Dqj-dc-fjD"/>
-                            <constraint firstItem="7YE-o0-JlD" firstAttribute="top" secondItem="0W1-Vc-RQe" secondAttribute="bottom" constant="30" id="EuB-qi-Qys"/>
-                            <constraint firstItem="Zb3-gS-zub" firstAttribute="top" secondItem="bcu-vU-Tei" secondAttribute="bottom" constant="-50" id="FBb-tO-NyF"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Zb3-gS-zub" secondAttribute="trailing" constant="10" id="GFe-1U-Q6W"/>
+                            <constraint firstItem="P6x-kE-Ig5" firstAttribute="top" secondItem="GMr-kB-R2U" secondAttribute="bottom" constant="120" id="IYW-jq-sdJ"/>
+                            <constraint firstItem="flH-sb-3DB" firstAttribute="centerX" secondItem="NWE-1t-ghM" secondAttribute="centerX" id="J6P-d1-Awz"/>
+                            <constraint firstItem="rlR-E4-3k0" firstAttribute="leading" secondItem="40y-qT-otl" secondAttribute="leading" id="JSv-0C-eFC"/>
                             <constraint firstItem="bcu-vU-Tei" firstAttribute="top" secondItem="NWE-1t-ghM" secondAttribute="top" id="JnF-NL-LQW"/>
+                            <constraint firstAttribute="bottom" secondItem="rlR-E4-3k0" secondAttribute="bottom" id="O8D-Ad-xho"/>
+                            <constraint firstItem="gVl-VX-9FT" firstAttribute="leading" secondItem="NWE-1t-ghM" secondAttribute="leading" constant="-20" id="Qbz-gG-bq4"/>
                             <constraint firstAttribute="bottom" secondItem="P6x-kE-Ig5" secondAttribute="bottom" id="RMy-Ac-pzN"/>
                             <constraint firstItem="vZs-a8-rXs" firstAttribute="centerY" secondItem="bcu-vU-Tei" secondAttribute="centerY" id="ReZ-2v-YCu"/>
                             <constraint firstItem="40y-qT-otl" firstAttribute="bottom" secondItem="JKa-FB-Hq1" secondAttribute="bottom" constant="5" id="T86-zK-C6Y"/>
-                            <constraint firstItem="2Lj-bf-RiX" firstAttribute="leading" secondItem="NWE-1t-ghM" secondAttribute="leading" constant="-10" id="Vbx-ah-TC7"/>
                             <constraint firstAttribute="trailing" secondItem="bcu-vU-Tei" secondAttribute="trailing" id="Z6v-eD-2hu"/>
-                            <constraint firstAttribute="bottom" secondItem="s58-kH-oFX" secondAttribute="bottom" id="adG-n0-S1J"/>
-                            <constraint firstItem="Zb3-gS-zub" firstAttribute="leading" secondItem="NWE-1t-ghM" secondAttribute="leading" constant="20" id="dP3-Ga-xc6"/>
                             <constraint firstItem="bcu-vU-Tei" firstAttribute="centerX" secondItem="NWE-1t-ghM" secondAttribute="centerX" id="eQU-Hq-vXJ"/>
-                            <constraint firstItem="0W1-Vc-RQe" firstAttribute="top" secondItem="Zb3-gS-zub" secondAttribute="bottom" constant="75" id="mUM-Od-cdD"/>
                             <constraint firstItem="JKa-FB-Hq1" firstAttribute="centerX" secondItem="NWE-1t-ghM" secondAttribute="centerX" id="s8s-rK-FdP"/>
-                            <constraint firstAttribute="trailing" secondItem="i0j-Rb-agb" secondAttribute="trailing" constant="20" id="uBC-is-9j3"/>
-                            <constraint firstItem="7YE-o0-JlD" firstAttribute="centerX" secondItem="NWE-1t-ghM" secondAttribute="centerX" id="v5H-Lq-Ib4"/>
                             <constraint firstItem="bcu-vU-Tei" firstAttribute="leading" secondItem="NWE-1t-ghM" secondAttribute="leading" id="xu5-vb-nzd"/>
-                            <constraint firstItem="7YE-o0-JlD" firstAttribute="leading" secondItem="0W1-Vc-RQe" secondAttribute="leading" constant="-20" id="yzJ-6g-gZD"/>
-                            <constraint firstItem="s58-kH-oFX" firstAttribute="top" secondItem="2Lj-bf-RiX" secondAttribute="bottom" constant="60" id="zzU-kz-fPh"/>
+                            <constraint firstItem="JKa-FB-Hq1" firstAttribute="top" secondItem="flH-sb-3DB" secondAttribute="bottom" constant="120" id="yAr-sY-oeE"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="7Zh-z8-o07"/>
                     <connections>
                         <outlet property="appVersion" destination="JKa-FB-Hq1" id="kgb-n2-Rpb"/>
-                        <outlet property="greetingsLabel" destination="DVc-zv-ICS" id="TSx-jQ-I2g"/>
-                        <outlet property="subjectLabel" destination="W4e-mx-hqi" id="dd9-Yf-nl2"/>
-                        <outlet property="usernameTF" destination="ulY-Bm-K7r" id="Lav-3K-YQ3"/>
+                        <outlet property="stackView" destination="0Yd-XL-GPB" id="0T8-yy-F0Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aBE-Ww-O05" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1120.8" y="-218.7192118226601"/>
+            <point key="canvasLocation" x="-1121.5384615384614" y="-218.95734597156397"/>
         </scene>
         <!--PaletteVC-->
         <scene sceneID="CGp-xd-Gep">
@@ -1900,6 +1877,155 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y2f-Lv-Ams" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-112.30769230769231" y="722.98578199052133"/>
+        </scene>
+        <!--IntroVC-->
+        <scene sceneID="es5-iM-h5g">
+            <objects>
+                <viewController id="Khw-2v-C9w" customClass="IntroVC" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ofu-hL-M7A"/>
+                        <viewControllerLayoutGuide type="bottom" id="GeC-U0-KgB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E9Y-9b-2Wv">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Grid" translatesAutoresizingMaskIntoConstraints="NO" id="Tbz-0c-pnB">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="280"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="bSb-38-PrG"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-B" translatesAutoresizingMaskIntoConstraints="NO" id="U07-e3-NRV">
+                                <rect key="frame" x="190" y="544" width="200" height="300"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="9ao-Ba-xxc"/>
+                                    <constraint firstAttribute="height" constant="300" id="TXM-Lt-rJX"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-A" translatesAutoresizingMaskIntoConstraints="NO" id="kNQ-lV-DfM">
+                                <rect key="frame" x="0.0" y="694" width="100" height="150"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="QA1-Kv-Ynb"/>
+                                    <constraint firstAttribute="height" constant="150" id="epj-Xq-EjH"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-S" translatesAutoresizingMaskIntoConstraints="NO" id="BwF-SC-oEo">
+                                <rect key="frame" x="-10" y="494" width="80" height="140"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="LDg-YK-8Nn"/>
+                                    <constraint firstAttribute="width" constant="80" id="pyz-bi-PR5"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-E" translatesAutoresizingMaskIntoConstraints="NO" id="zmi-Ac-kBU">
+                                <rect key="frame" x="320" y="444" width="50" height="100"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="8DN-bu-FCf"/>
+                                    <constraint firstAttribute="width" constant="50" id="c4b-ek-Xbf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAOCAP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Scm-N9-4DV">
+                                <rect key="frame" x="124.33333333333333" y="122.66666666666669" width="141.66666666666669" height="35"/>
+                                <fontDescription key="fontDescription" name="STIXTwoMath-Regular" family="STIX Two Math" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Sgb-rP-qG3">
+                                <rect key="frame" x="20" y="230" width="330.33333333333331" height="140"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="v0S-7H-bm6">
+                                        <rect key="frame" x="0.0" y="0.0" width="330.33333333333331" height="47.666666666666664"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsD-2r-FsL">
+                                                <rect key="frame" x="0.0" y="0.0" width="50.333333333333336" height="39.333333333333336"/>
+                                                <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="UserName" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PVA-xc-Hdu">
+                                                <rect key="frame" x="50.333333333333314" y="0.0" width="280" height="44.666666666666664"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="35"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="nickname"/>
+                                                <connections>
+                                                    <action selector="didEndEditingUserName:" destination="Khw-2v-C9w" eventType="editingDidEnd" id="DY0-sP-y6B"/>
+                                                    <outlet property="delegate" destination="Khw-2v-C9w" id="t0T-vF-2AA"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCr-QE-gxW">
+                                        <rect key="frame" x="0.0" y="55.666666666666679" width="330.33333333333331" height="84.333333333333314"/>
+                                        <string key="text">The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It is often assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.</string>
+                                        <fontDescription key="fontDescription" name="Ubuntu-LightItalic" family="Ubuntu" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="340" id="N3e-2O-YXQ"/>
+                                    <constraint firstAttribute="height" constant="140" id="kcH-uV-jg2"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kt-Qf-USo">
+                                <rect key="frame" x="70" y="445" width="250" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QSW-eK-mxc"/>
+                                    <constraint firstAttribute="width" constant="250" id="R4H-v8-V5Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="16"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Create Project">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="gray" title="Start">
+                                    <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="20"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="gTz-hA-32a" kind="show" id="etr-gm-QCF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DRt-kq-hcS"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Tbz-0c-pnB" secondAttribute="trailing" id="Afi-uH-hD2"/>
+                            <constraint firstItem="kNQ-lV-DfM" firstAttribute="leading" secondItem="E9Y-9b-2Wv" secondAttribute="leading" id="BIh-Hh-Dvh"/>
+                            <constraint firstItem="Scm-N9-4DV" firstAttribute="centerY" secondItem="Tbz-0c-pnB" secondAttribute="centerY" id="CDa-9b-U6U"/>
+                            <constraint firstItem="Tbz-0c-pnB" firstAttribute="top" secondItem="E9Y-9b-2Wv" secondAttribute="top" id="Grh-zw-4VQ"/>
+                            <constraint firstItem="U07-e3-NRV" firstAttribute="trailing" secondItem="DRt-kq-hcS" secondAttribute="trailing" id="JGb-de-fcg"/>
+                            <constraint firstItem="2kt-Qf-USo" firstAttribute="centerX" secondItem="E9Y-9b-2Wv" secondAttribute="centerX" id="JrQ-xy-W2z"/>
+                            <constraint firstItem="zmi-Ac-kBU" firstAttribute="top" secondItem="BwF-SC-oEo" secondAttribute="top" constant="-50" id="MTd-xc-BXz"/>
+                            <constraint firstItem="2kt-Qf-USo" firstAttribute="top" secondItem="Sgb-rP-qG3" secondAttribute="bottom" constant="75" id="RPx-OC-klW"/>
+                            <constraint firstAttribute="bottom" secondItem="kNQ-lV-DfM" secondAttribute="bottom" id="SIj-aB-QHx"/>
+                            <constraint firstItem="Tbz-0c-pnB" firstAttribute="centerX" secondItem="E9Y-9b-2Wv" secondAttribute="centerX" id="WSq-m4-oXB"/>
+                            <constraint firstItem="Sgb-rP-qG3" firstAttribute="leading" secondItem="E9Y-9b-2Wv" secondAttribute="leading" constant="20" id="azY-0v-DKK"/>
+                            <constraint firstItem="BwF-SC-oEo" firstAttribute="leading" secondItem="E9Y-9b-2Wv" secondAttribute="leading" constant="-10" id="ewf-6g-SnE"/>
+                            <constraint firstAttribute="bottom" secondItem="U07-e3-NRV" secondAttribute="bottom" id="fls-FB-Csn"/>
+                            <constraint firstAttribute="trailing" secondItem="zmi-Ac-kBU" secondAttribute="trailing" constant="20" id="g5R-sz-cJ0"/>
+                            <constraint firstItem="Scm-N9-4DV" firstAttribute="centerX" secondItem="Tbz-0c-pnB" secondAttribute="centerX" id="kdv-nB-tz7"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Sgb-rP-qG3" secondAttribute="trailing" constant="10" id="tM6-LD-vp2"/>
+                            <constraint firstItem="Sgb-rP-qG3" firstAttribute="top" secondItem="Tbz-0c-pnB" secondAttribute="bottom" constant="-50" id="uNQ-JZ-OHz"/>
+                            <constraint firstItem="kNQ-lV-DfM" firstAttribute="top" secondItem="BwF-SC-oEo" secondAttribute="bottom" constant="60" id="uqU-08-3Nq"/>
+                            <constraint firstItem="Tbz-0c-pnB" firstAttribute="leading" secondItem="E9Y-9b-2Wv" secondAttribute="leading" id="ycI-8t-FKa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="greetingsLabel" destination="fsD-2r-FsL" id="d9I-D8-uP1"/>
+                        <outlet property="subjectLabel" destination="MCr-QE-gxW" id="MdR-Ys-71Q"/>
+                        <outlet property="usernameTF" destination="PVA-xc-Hdu" id="67x-vR-aWz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ONT-Y7-xoo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1122" y="-976"/>
         </scene>
     </scenes>
     <resources>

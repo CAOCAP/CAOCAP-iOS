@@ -1,0 +1,33 @@
+//
+//  IntroVC.swift
+//  CAOCAP
+//
+//  Created by Azzam AL-Rashed on 03/07/2023.
+//
+
+import UIKit
+
+class IntroVC: UIViewController {
+
+    @IBOutlet weak var greetingsLabel: UILabel!
+    @IBOutlet weak var usernameTF: UITextField!
+    @IBOutlet weak var subjectLabel: UILabel!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+    
+    
+    @IBAction func didEndEditingUserName(_ sender: UITextField) {
+        if sender.text == "" {
+            sender.text = "Anonymous User"
+        }
+    }
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+    }
+
+}

@@ -9,26 +9,37 @@ import UIKit
 
 class InitialVC: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var greetingsLabel: UILabel!
-    @IBOutlet weak var usernameTF: UITextField!
-    @IBOutlet weak var subjectLabel: UILabel!
     @IBOutlet weak var appVersion: UILabel!
+    @IBOutlet weak var stackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         appVersion.text = getVersion()
+        setupStackView()
     }
     
-    @IBAction func didEndEditingUserName(_ sender: UITextField) {
-        if sender.text == "" {
-            sender.text = "Anonymous User"
+    func setupStackView() {
+        for stackIndex in 0...16 {
+            let stack = UIStackView()
+            for squareIndex in 0...6 {
+                let square = UIView()
+                let random = Int.random(in: 0...100)
+                if random % 3 == 0 {
+                    square.backgroundColor = .systemBlue
+                } else {
+                    square.backgroundColor = .systemGray2
+                }
+                square.cornerRadius = 2
+                square.alpha = 0.75
+                stack.addArrangedSubview(square)
+            }
+            stack.spacing = 3
+            stack.axis = .vertical
+            stack.distribution = .fillEqually
+            stackView.addArrangedSubview(stack)
         }
     }
     
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        view.endEditing(true)
-    }
     
     func getVersion() -> String {
         guard let dictionary = Bundle.main.infoDictionary,

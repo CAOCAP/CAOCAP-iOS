@@ -13,6 +13,7 @@
 		2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */; };
 		2178C1A22A4DA2AB00876BB6 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */; };
 		2178C1A42A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C1A32A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift */; };
+		2184CCFA2A522E6200B39882 /* IntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184CCF92A522E6200B39882 /* IntroVC.swift */; };
 		2186DB0D2A30946900773C5E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2186DB0C2A30946900773C5E /* UIView+Extensions.swift */; };
 		2186DB0F2A30BD6600773C5E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2186DB0E2A30BD6600773C5E /* Node.swift */; };
 		2186DB112A30DF4700773C5E /* UIMindMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2186DB102A30DF4700773C5E /* UIMindMap.swift */; };
@@ -50,6 +51,7 @@
 		2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSettingsVC.swift; sourceTree = "<group>"; };
 		2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		2178C1A32A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwitchTableViewCell.swift; sourceTree = "<group>"; };
+		2184CCF92A522E6200B39882 /* IntroVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroVC.swift; sourceTree = "<group>"; };
 		2186DB0C2A30946900773C5E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		2186DB0E2A30BD6600773C5E /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		2186DB102A30DF4700773C5E /* UIMindMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMindMap.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				21DBA0002A38F4C800DFAC66 /* InitialVC.swift */,
+				2184CCF92A522E6200B39882 /* IntroVC.swift */,
 				218DA9CC2A2B205800459C61 /* MindMapVC.swift */,
 				21C21C482A34B5D800F40BE3 /* ProjectsVC.swift */,
 				21C21C4E2A34B62E00F40BE3 /* PaletteVC.swift */,
@@ -274,6 +277,7 @@
 				218DA9C92A2B205800459C61 /* AppDelegate.swift in Sources */,
 				2178C19D2A4D92A300876BB6 /* ProjectSettingsVC.swift in Sources */,
 				2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */,
+				2184CCFA2A522E6200B39882 /* IntroVC.swift in Sources */,
 				2178C1A42A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift in Sources */,
 				2178C1A22A4DA2AB00876BB6 /* SettingsTableViewCell.swift in Sources */,
 				2186DB0F2A30BD6600773C5E /* Node.swift in Sources */,
