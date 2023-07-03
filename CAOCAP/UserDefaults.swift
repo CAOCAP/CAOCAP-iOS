@@ -18,4 +18,17 @@ extension UserDefaults {
         set(true, forKey: "introCompleted")
     }
     
+    func getCommitHistory() -> [Date] {
+        return array(forKey: "CommitHistory") as? [Date] ?? []
+    }
+    
+    func addCommit() {
+        var newCommitHistory = getCommitHistory()
+        newCommitHistory.append(.now)
+        set(newCommitHistory, forKey: "CommitHistory")
+    }
+    
+    func resetCommitHistory() {
+        removeObject(forKey: "CommitHistory")
+    }
 }

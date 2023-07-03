@@ -19,24 +19,35 @@ class InitialVC: UIViewController, UITextFieldDelegate {
     }
     
     func setupStackView() {
-        for stackIndex in 0...16 {
+        var squares = [UIView]()
+        let commitHistory = UserDefaults.standard.getCommitHistory()
+        
+        for _ in 0...16 {
             let stack = UIStackView()
-            for squareIndex in 0...6 {
+            for _ in 0...6 {
                 let square = UIView()
-                let random = Int.random(in: 0...100)
-                if random % 3 == 0 {
-                    square.backgroundColor = .label
-                } else {
-                    square.backgroundColor = .systemGray5
-                }
+                square.alpha = 0.4
+                square.backgroundColor = .systemGray5
                 square.cornerRadius = 2
-                square.alpha = 0.75
+                squares.append(square)
                 stack.addArrangedSubview(square)
             }
             stack.spacing = 3
             stack.axis = .vertical
             stack.distribution = .fillEqually
             stackView.addArrangedSubview(stack)
+        }
+        squares.reverse()
+        for commit in commitHistory {
+            if let numberOfDays = Calendar.current.dateComponents([.day], from: commit, to: .now).day {
+                if numberOfDays >= 0 && numberOfDays < squares.count {
+                    let square = squares[numberOfDays]
+                    square.backgroundColor = .label
+                    if square.alpha < 1.0 {
+                        square.alpha += 0.1
+                    }
+                }
+            }
         }
     }
     
