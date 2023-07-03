@@ -18,6 +18,10 @@ class IntroVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func didPressStart(_ sender: Any) {
+        UserDefaults.standard.introCompleted()
+        dismiss(animated: true)
+    }
     
     @IBAction func didEndEditingUserName(_ sender: UITextField) {
         if sender.text == "" {
