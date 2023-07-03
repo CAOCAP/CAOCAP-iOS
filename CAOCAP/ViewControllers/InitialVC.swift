@@ -25,9 +25,9 @@ class InitialVC: UIViewController, UITextFieldDelegate {
                 let square = UIView()
                 let random = Int.random(in: 0...100)
                 if random % 3 == 0 {
-                    square.backgroundColor = .systemBlue
+                    square.backgroundColor = .label
                 } else {
-                    square.backgroundColor = .systemGray2
+                    square.backgroundColor = .systemGray5
                 }
                 square.cornerRadius = 2
                 square.alpha = 0.75
