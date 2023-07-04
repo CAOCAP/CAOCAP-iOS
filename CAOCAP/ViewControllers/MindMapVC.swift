@@ -18,8 +18,9 @@ class MindMapVC: UIViewController {
     @IBOutlet weak var redoButton: UIButton!
     @IBOutlet weak var keyboardView: UIView!
     @IBOutlet weak var htmlKeyboard: UIStackView!
-    @IBOutlet weak var cssKeyboard: UIStackView!
-    @IBOutlet weak var jsKeyboard: UIStackView!
+    @IBOutlet weak var htmlView: UIView!
+    @IBOutlet weak var cssView: UIView!
+    @IBOutlet weak var jsView: UIView!
     var mindMap: UIMindMap!
     
     override func viewDidLoad() {
@@ -101,28 +102,28 @@ class MindMapVC: UIViewController {
         if sender.state == .ended {
             switch sender.direction {
             case .right:
-                if !htmlKeyboard.isHidden {
-                    htmlKeyboard.isHidden = true
-                    jsKeyboard.isHidden = false
-                } else if !jsKeyboard.isHidden {
-                    jsKeyboard.isHidden = true
-                    cssKeyboard.isHidden = false
+                if !htmlView.isHidden {
+                    htmlView.isHidden = true
+                    jsView.isHidden = false
+                } else if !jsView.isHidden {
+                    jsView.isHidden = true
+                    cssView.isHidden = false
                 } else {
-                    cssKeyboard.isHidden = true
-                    htmlKeyboard.isHidden = false
+                    cssView.isHidden = true
+                    htmlView.isHidden = false
                 }
             case .left:
-                if !htmlKeyboard.isHidden {
-                    htmlKeyboard.isHidden = true
-                    cssKeyboard.isHidden = false
-                } else if !jsKeyboard.isHidden {
-                    jsKeyboard.isHidden = true
-                    htmlKeyboard.isHidden = false
+                if !htmlView.isHidden {
+                    htmlView.isHidden = true
+                    cssView.isHidden = false
+                } else if !jsView.isHidden {
+                    jsView.isHidden = true
+                    htmlView.isHidden = false
                 } else {
-                    cssKeyboard.isHidden = true
-                    jsKeyboard.isHidden = false
+                    cssView.isHidden = true
+                    jsView.isHidden = false
                 }
-            case .up where !htmlKeyboard.isHidden:
+            case .up where !htmlView.isHidden:
                 UIView.animate(withDuration: 0.15) {
                     if self.htmlKeyboard.arrangedSubviews[10].isHidden {
                         //skip 0-9
@@ -149,7 +150,7 @@ class MindMapVC: UIViewController {
                     }
                 }
                 loadViewIfNeeded()
-            case .down where !htmlKeyboard.isHidden:
+            case .down where !htmlView.isHidden:
                 UIView.animate(withDuration: 0.15) {
                     if self.htmlKeyboard.arrangedSubviews[0].isHidden {
                         for n in 9...10 {
