@@ -13,10 +13,11 @@ class MindMapVC: UIViewController {
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var resizeIcon: UIImageView!
     @IBOutlet weak var webViewWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var toolsViewHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var redoButton: UIButton!
-    @IBOutlet weak var keyboardView: UIView!
+    @IBOutlet weak var toolsView: UIView!
     @IBOutlet weak var htmlKeyboard: UIStackView!
     @IBOutlet weak var htmlView: UIView!
     @IBOutlet weak var cssView: UIView!
@@ -28,7 +29,7 @@ class MindMapVC: UIViewController {
         let resizeGR = UIPanGestureRecognizer(target: self, action: #selector(handleResizingWebView(sender:)))
         resizeIcon.addGestureRecognizer(resizeGR)
         
-        setupKeyboardGestureRecognizer()
+        setupToolsViewGestureRecognizer()
         setupMindMapLayout()
         
         loadWebView()
@@ -82,7 +83,7 @@ class MindMapVC: UIViewController {
         }
     }
     
-    func setupKeyboardGestureRecognizer() {
+    func setupToolsViewGestureRecognizer() {
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
         let upSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
@@ -91,10 +92,10 @@ class MindMapVC: UIViewController {
         leftSwipe.direction = .left
         upSwipe.direction = .up
         downSwipe.direction = .down
-        keyboardView.addGestureRecognizer(rightSwipe)
-        keyboardView.addGestureRecognizer(leftSwipe)
-        keyboardView.addGestureRecognizer(upSwipe)
-        keyboardView.addGestureRecognizer(downSwipe)
+        toolsView.addGestureRecognizer(rightSwipe)
+        toolsView.addGestureRecognizer(leftSwipe)
+        toolsView.addGestureRecognizer(upSwipe)
+        toolsView.addGestureRecognizer(downSwipe)
     }
     
     
@@ -123,60 +124,67 @@ class MindMapVC: UIViewController {
                     cssView.isHidden = true
                     jsView.isHidden = false
                 }
-            case .up where !htmlView.isHidden:
-                UIView.animate(withDuration: 0.15) {
-                    if self.htmlKeyboard.arrangedSubviews[10].isHidden {
-                        //skip 0-9
-                        for n in 9...10 {
-                            let view = self.htmlKeyboard.arrangedSubviews[n]
-                            view.alpha = 1
-                            view.isHidden = false
-                        }
-                    } else if self.htmlKeyboard.arrangedSubviews[0].isHidden {
-                        //skip 2,3,6,7
-                        for n in 0...10 {
-                            if [2,3,6,7].contains(n) { continue }
-                            let view = self.htmlKeyboard.arrangedSubviews[n]
-                            view.alpha = 1
-                            view.isHidden = false
-                        }
-                    } else {
-                        self.webViewWidthConstraint.constant = 120
-                        for n in 0...10 {
-                            let view = self.htmlKeyboard.arrangedSubviews[n]
-                            view.alpha = 1
-                            view.isHidden = false
-                        }
+            case .up:
+                if toolsViewHeightConstraint.constant == 40 {
+                    //only show 9,10 { h=110 }
+                    toolsViewHeightConstraint.constant = 110
+                    for n in 9...10 {
+                        let view = htmlKeyboard.arrangedSubviews[n]
+                        view.alpha = 1
+                        view.isHidden = false
+                    }
+                } else if toolsViewHeightConstraint.constant == 110 {
+                    //show all but not 2,3,6,7 { h=300 }
+                    toolsViewHeightConstraint.constant = 300
+                    for n in 0...10 {
+                        if [2,3,6,7].contains(n) { continue }
+                        let view = htmlKeyboard.arrangedSubviews[n]
+                        view.alpha = 1
+                        view.isHidden = false
+                    }
+                } else if toolsViewHeightConstraint.constant == 300 {
+                    //show all { h=450 }
+                    webViewWidthConstraint.constant = 120
+                    toolsViewHeightConstraint.constant = 450
+                    for n in 0...10 {
+                        let view = htmlKeyboard.arrangedSubviews[n]
+                        view.alpha = 1
+                        view.isHidden = false
                     }
                 }
-                loadViewIfNeeded()
-            case .down where !htmlView.isHidden:
-                UIView.animate(withDuration: 0.15) {
-                    if self.htmlKeyboard.arrangedSubviews[0].isHidden {
-                        for n in 9...10 {
-                            let view = self.htmlKeyboard.arrangedSubviews[n]
-                            view.alpha = 0
-                            view.isHidden = true
-                        }
-                    } else if self.htmlKeyboard.arrangedSubviews[2].isHidden {
-                        for n in 0...8 {
-                            let view = self.htmlKeyboard.arrangedSubviews[n]
-                            view.alpha = 0
-                            view.isHidden = true
-                        }
-                    } else {
-                        self.webViewWidthConstraint.constant = 160
-                        for n in 2...7 {
-                            if [4,5].contains(n) { continue }
-                            let view = self.htmlKeyboard.arrangedSubviews[n]
-                            view.alpha = 0
-                            view.isHidden = true
-                        }
+            case .down:
+                if toolsViewHeightConstraint.constant == 110 {
+                    //hide all { h=40 }
+                    toolsViewHeightConstraint.constant = 40
+                    for n in 9...10 {
+                        let view = htmlKeyboard.arrangedSubviews[n]
+                        view.alpha = 0
+                        view.isHidden = true
+                    }
+                } else if toolsViewHeightConstraint.constant == 300 {
+                    //only show 9,10 { h=110 }
+                    toolsViewHeightConstraint.constant = 110
+                    for n in 0...8 {
+                        let view = htmlKeyboard.arrangedSubviews[n]
+                        view.alpha = 0
+                        view.isHidden = true
+                    }
+                } else if toolsViewHeightConstraint.constant == 450 {
+                    //show all but not 2,3,6,7 { h=300 }
+                    webViewWidthConstraint.constant = 160
+                    toolsViewHeightConstraint.constant = 300
+                    for n in 2...7 {
+                        if [4,5].contains(n) { continue }
+                        let view = htmlKeyboard.arrangedSubviews[n]
+                        view.alpha = 0
+                        view.isHidden = true
                     }
                 }
-                loadViewIfNeeded()
             default:
                 break
+            }
+            UIView.animate(withDuration: 0.15) {
+                self.view.layoutIfNeeded()
             }
         }
     }
