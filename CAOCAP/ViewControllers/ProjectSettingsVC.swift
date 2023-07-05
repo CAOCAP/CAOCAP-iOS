@@ -12,6 +12,10 @@ class ProjectSettingsVC: SettingsVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         sections = [
+            Section(title: "HTML", options: [
+                .staticCell(option: SettingsOption(title: "Language", icon: UIImage(systemName: "globe"), color: .systemPink, handler: {print("did press")})),
+            ]),
+            
             Section(title: "Head", options: [
                 .staticCell(option: SettingsOption(title: "Title", icon: UIImage(systemName: "t.square"), color: .systemGray, handler: {print("did press")})),
                 .staticCell(option: SettingsOption(title: "Style", icon: UIImage(systemName: "character.cursor.ibeam"), color: .systemGray, handler: {print("did press")})),

@@ -13,15 +13,22 @@ class MindMapVC: UIViewController {
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var resizeIcon: UIImageView!
     @IBOutlet weak var webViewWidthConstraint: NSLayoutConstraint!
-    @IBOutlet weak var toolsViewHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var redoButton: UIButton!
+    
     @IBOutlet weak var toolsView: UIView!
-    @IBOutlet weak var htmlKeyboard: UIStackView!
+    @IBOutlet weak var toolsViewHeightConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var htmlView: UIView!
-    @IBOutlet weak var cssView: UIView!
+    @IBOutlet weak var htmlKeyboard: UIStackView!
+    
+    @IBOutlet weak var attributesView: UIView!
+    @IBOutlet weak var attributesSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var contentTextField: UITextField!
+    
     @IBOutlet weak var jsView: UIView!
+    
     var mindMap: UIMindMap!
     
     override func viewDidLoad() {
@@ -108,20 +115,20 @@ class MindMapVC: UIViewController {
                     jsView.isHidden = false
                 } else if !jsView.isHidden {
                     jsView.isHidden = true
-                    cssView.isHidden = false
+                    attributesView.isHidden = false
                 } else {
-                    cssView.isHidden = true
+                    attributesView.isHidden = true
                     htmlView.isHidden = false
                 }
             case .left:
                 if !htmlView.isHidden {
                     htmlView.isHidden = true
-                    cssView.isHidden = false
+                    attributesView.isHidden = false
                 } else if !jsView.isHidden {
                     jsView.isHidden = true
                     htmlView.isHidden = false
                 } else {
-                    cssView.isHidden = true
+                    attributesView.isHidden = true
                     jsView.isHidden = false
                 }
             case .up:
