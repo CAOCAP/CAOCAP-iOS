@@ -1153,12 +1153,6 @@
                                     <constraint firstItem="nAS-jS-Vj6" firstAttribute="centerY" secondItem="zkr-ys-dhB" secondAttribute="centerY" id="uxk-RD-uQu"/>
                                     <constraint firstItem="cvx-Yu-rkX" firstAttribute="centerX" secondItem="zkr-ys-dhB" secondAttribute="centerX" id="vod-Hq-Z2D"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="nAS-jS-Vj6"/>
-                                        <exclude reference="ubS-XK-Ard"/>
-                                    </mask>
-                                </variation>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
