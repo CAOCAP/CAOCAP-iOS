@@ -24,8 +24,11 @@ class MindMapVC: UIViewController {
     @IBOutlet weak var htmlKeyboard: UIStackView!
     
     @IBOutlet weak var attributesView: UIView!
+    @IBOutlet weak var attributesStackView: UIStackView!
     @IBOutlet weak var attributesSegmentedControl: UISegmentedControl!
     @IBOutlet weak var contentTextField: UITextField!
+    @IBOutlet weak var typeTextField: UITextField!
+    @IBOutlet weak var idTextField: UITextField!
     
     @IBOutlet weak var jsView: UIView!
     
@@ -104,7 +107,6 @@ class MindMapVC: UIViewController {
         toolsView.addGestureRecognizer(upSwipe)
         toolsView.addGestureRecognizer(downSwipe)
     }
-    
     
     @objc func handleKeyboardSwipe(sender: UISwipeGestureRecognizer) {
         if sender.state == .ended {
@@ -301,6 +303,23 @@ class MindMapVC: UIViewController {
         //mindMap.redo()🤔
     }
     
+    
+    @IBAction func didChangeAttributesViewSegmentedControl(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            attributesStackView.arrangedSubviews[1].isHidden = false
+            attributesStackView.arrangedSubviews[2].isHidden = true
+            attributesStackView.arrangedSubviews[3].isHidden = true
+        case 1:
+            attributesStackView.arrangedSubviews[1].isHidden = true
+            attributesStackView.arrangedSubviews[2].isHidden = false
+            attributesStackView.arrangedSubviews[3].isHidden = true
+        default:
+            attributesStackView.arrangedSubviews[1].isHidden = true
+            attributesStackView.arrangedSubviews[2].isHidden = true
+            attributesStackView.arrangedSubviews[3].isHidden = false
+        }
+    }
 }
 
 extension MindMapVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

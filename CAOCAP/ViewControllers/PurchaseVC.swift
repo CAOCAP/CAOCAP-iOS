@@ -12,5 +12,17 @@ class PurchaseVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func didPressPurchaseButton(_ sender: Any) {
+        
+    }
+    
+    @IBAction func didPressRestoreButton(_ sender: Any) {
+        
+    }
+    
+    @IBAction func didPressContactButton(_ sender: Any) {
+        
+    }
 }
 
