@@ -12,6 +12,7 @@ class IntroVC: UIViewController {
     @IBOutlet weak var greetingsLabel: UILabel!
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var subjectLabel: UILabel!
+    @IBOutlet weak var pageControl: UIPageControl!
     override func viewDidLoad() {
         super.viewDidLoad()
 

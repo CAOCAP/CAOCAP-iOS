@@ -1300,6 +1300,53 @@
                                     <constraint firstAttribute="height" constant="280" id="Pkm-WS-veM"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="D1z-0W-tSm">
+                                <rect key="frame" x="20.000000000000014" y="230" width="251.33333333333337" height="110"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsV-rf-E2M">
+                                        <rect key="frame" x="0.0" y="0.0" width="126.33333333333333" height="33.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="303-UT-Cfs">
+                                        <rect key="frame" x="0.0" y="41.666666666666686" width="202.33333333333334" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="back," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsU-Et-il3">
+                                                <rect key="frame" x="0.0" y="0.0" width="70.333333333333329" height="33.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="User" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r58-pO-K3T">
+                                                <rect key="frame" x="75.333333333333329" y="0.0" width="95.999999999999986" height="40"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="nickname"/>
+                                                <connections>
+                                                    <action selector="didEndEditingUserName:" destination="Khw-2v-C9w" eventType="editingDidEnd" id="WHs-V0-wYb"/>
+                                                    <outlet property="delegate" destination="Khw-2v-C9w" id="Nzj-Kc-h9T"/>
+                                                </connections>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIf-LV-aAY">
+                                                <rect key="frame" x="176.33333333333334" y="0.0" width="26" height="28.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please go build something fun." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1v-jl-QoD">
+                                        <rect key="frame" x="0.0" y="89.666666666666686" width="251.33333333333334" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="340" id="7yq-bF-7oN"/>
+                                </constraints>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAOCAP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZs-a8-rXs">
                                 <rect key="frame" x="124.33333333333333" y="122.66666666666669" width="141.66666666666669" height="35"/>
                                 <fontDescription key="fontDescription" name="STIXTwoMath-Regular" family="STIX Two Math" pointSize="35"/>
@@ -1435,9 +1482,11 @@
                             <constraint firstItem="40y-qT-otl" firstAttribute="bottom" secondItem="JKa-FB-Hq1" secondAttribute="bottom" constant="5" id="T86-zK-C6Y"/>
                             <constraint firstAttribute="trailing" secondItem="bcu-vU-Tei" secondAttribute="trailing" id="Z6v-eD-2hu"/>
                             <constraint firstItem="bcu-vU-Tei" firstAttribute="centerX" secondItem="NWE-1t-ghM" secondAttribute="centerX" id="eQU-Hq-vXJ"/>
+                            <constraint firstItem="D1z-0W-tSm" firstAttribute="top" secondItem="bcu-vU-Tei" secondAttribute="bottom" constant="-50" id="lzT-E5-yNd"/>
                             <constraint firstItem="JKa-FB-Hq1" firstAttribute="centerX" secondItem="NWE-1t-ghM" secondAttribute="centerX" id="s8s-rK-FdP"/>
                             <constraint firstItem="bcu-vU-Tei" firstAttribute="leading" secondItem="NWE-1t-ghM" secondAttribute="leading" id="xu5-vb-nzd"/>
                             <constraint firstItem="JKa-FB-Hq1" firstAttribute="top" secondItem="flH-sb-3DB" secondAttribute="bottom" constant="120" id="yAr-sY-oeE"/>
+                            <constraint firstItem="D1z-0W-tSm" firstAttribute="leading" secondItem="NWE-1t-ghM" secondAttribute="leading" constant="20" id="zkc-0P-3PT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7Zh-z8-o07"/>
@@ -2297,10 +2346,20 @@ There are no other in-app purchases.</string>
                                     <action selector="didPressStart:" destination="Khw-2v-C9w" eventType="touchUpInside" id="0uY-OQ-n7u"/>
                                 </connections>
                             </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="HYR-QN-wyU">
+                                <rect key="frame" x="135" y="754" width="120" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="95R-8V-igY"/>
+                                    <constraint firstAttribute="width" constant="120" id="ow4-9N-8pu"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" systemColor="separatorColor"/>
+                                <color key="currentPageIndicatorTintColor" systemColor="labelColor"/>
+                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DRt-kq-hcS"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="HYR-QN-wyU" firstAttribute="centerX" secondItem="E9Y-9b-2Wv" secondAttribute="centerX" id="7y4-sy-WhR"/>
                             <constraint firstAttribute="trailing" secondItem="Tbz-0c-pnB" secondAttribute="trailing" id="Afi-uH-hD2"/>
                             <constraint firstItem="kNQ-lV-DfM" firstAttribute="leading" secondItem="E9Y-9b-2Wv" secondAttribute="leading" id="BIh-Hh-Dvh"/>
                             <constraint firstItem="Scm-N9-4DV" firstAttribute="centerY" secondItem="Tbz-0c-pnB" secondAttribute="centerY" id="CDa-9b-U6U"/>
@@ -2311,6 +2370,7 @@ There are no other in-app purchases.</string>
                             <constraint firstItem="2kt-Qf-USo" firstAttribute="top" secondItem="Sgb-rP-qG3" secondAttribute="bottom" constant="75" id="RPx-OC-klW"/>
                             <constraint firstAttribute="bottom" secondItem="kNQ-lV-DfM" secondAttribute="bottom" id="SIj-aB-QHx"/>
                             <constraint firstItem="Tbz-0c-pnB" firstAttribute="centerX" secondItem="E9Y-9b-2Wv" secondAttribute="centerX" id="WSq-m4-oXB"/>
+                            <constraint firstItem="DRt-kq-hcS" firstAttribute="bottom" secondItem="HYR-QN-wyU" secondAttribute="bottom" constant="30" id="XUU-47-psA"/>
                             <constraint firstItem="Sgb-rP-qG3" firstAttribute="leading" secondItem="E9Y-9b-2Wv" secondAttribute="leading" constant="20" id="azY-0v-DKK"/>
                             <constraint firstItem="BwF-SC-oEo" firstAttribute="leading" secondItem="E9Y-9b-2Wv" secondAttribute="leading" constant="-10" id="ewf-6g-SnE"/>
                             <constraint firstAttribute="bottom" secondItem="U07-e3-NRV" secondAttribute="bottom" id="fls-FB-Csn"/>
@@ -2324,6 +2384,7 @@ There are no other in-app purchases.</string>
                     </view>
                     <connections>
                         <outlet property="greetingsLabel" destination="fsD-2r-FsL" id="d9I-D8-uP1"/>
+                        <outlet property="pageControl" destination="HYR-QN-wyU" id="cyS-iw-WLk"/>
                         <outlet property="subjectLabel" destination="MCr-QE-gxW" id="MdR-Ys-71Q"/>
                         <outlet property="usernameTF" destination="PVA-xc-Hdu" id="67x-vR-aWz"/>
                     </connections>
