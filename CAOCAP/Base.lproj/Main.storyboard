@@ -1300,6 +1300,12 @@
                                     <constraint firstAttribute="height" constant="280" id="Pkm-WS-veM"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAOCAP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZs-a8-rXs">
+                                <rect key="frame" x="124.33333333333333" y="122.66666666666669" width="141.66666666666669" height="35"/>
+                                <fontDescription key="fontDescription" name="STIXTwoMath-Regular" family="STIX Two Math" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="D1z-0W-tSm">
                                 <rect key="frame" x="20.000000000000014" y="230" width="251.33333333333337" height="110"/>
                                 <subviews>
@@ -1323,10 +1329,6 @@
                                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="nickname"/>
-                                                <connections>
-                                                    <action selector="didEndEditingUserName:" destination="Khw-2v-C9w" eventType="editingDidEnd" id="WHs-V0-wYb"/>
-                                                    <outlet property="delegate" destination="Khw-2v-C9w" id="Nzj-Kc-h9T"/>
-                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIf-LV-aAY">
                                                 <rect key="frame" x="176.33333333333334" y="0.0" width="26" height="28.333333333333332"/>
@@ -1347,85 +1349,11 @@
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="340" id="7yq-bF-7oN"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAOCAP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZs-a8-rXs">
-                                <rect key="frame" x="124.33333333333333" y="122.66666666666669" width="141.66666666666669" height="35"/>
-                                <fontDescription key="fontDescription" name="STIXTwoMath-Regular" family="STIX Two Math" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="flH-sb-3DB">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="flH-sb-3DB">
                                 <rect key="frame" x="45" y="419.66666666666669" width="300" height="254.33333333333331"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0W1-Vc-RQe">
-                                        <rect key="frame" x="25" y="0.0" width="250" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="mvF-n4-6bG"/>
-                                            <constraint firstAttribute="width" constant="250" id="nqb-91-04S"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="16"/>
-                                        <color key="tintColor" name="AccentColor"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Create Project">
-                                            <color key="titleColor" systemColor="labelColor"/>
-                                        </state>
-                                        <buttonConfiguration key="configuration" style="gray" title="Create Project">
-                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="20"/>
-                                            <color key="baseForegroundColor" systemColor="labelColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="VvA-2K-oWU"/>
-                                        </connections>
-                                    </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7YE-o0-JlD">
-                                        <rect key="frame" x="12.666666666666657" y="70" width="274.66666666666674" height="34.333333333333343"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpg-LF-Slc">
-                                                <rect key="frame" x="0.0" y="0.0" width="53.666666666666664" height="34.333333333333336"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <buttonConfiguration key="configuration" style="tinted" image="paintpalette" catalog="system">
-                                                    <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
-                                                    <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <segue destination="rJq-Wj-2QX" kind="show" id="4UZ-Bo-Ath"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Se3-lA-1P6">
-                                                <rect key="frame" x="73.666666666666686" y="0.0" width="53.666666666666657" height="34.333333333333336"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <buttonConfiguration key="configuration" style="tinted" image="cart" catalog="system">
-                                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
-                                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <segue destination="fhq-Ws-50g" kind="show" id="KE1-pw-Sgi"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLH-rZ-w5a">
-                                                <rect key="frame" x="147.33333333333334" y="0.0" width="53.666666666666657" height="34.333333333333336"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="gear" catalog="system"/>
-                                                <buttonConfiguration key="configuration" style="tinted" image="gear" catalog="system"/>
-                                                <connections>
-                                                    <segue destination="f8E-Cg-PNO" kind="show" id="a4M-tP-Sbh"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4c-ir-eD3">
-                                                <rect key="frame" x="221.00000000000003" y="0.0" width="53.666666666666657" height="34.333333333333336"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="gear" catalog="system"/>
-                                                <buttonConfiguration key="configuration" style="tinted" image="bookmark" catalog="system">
-                                                    <color key="baseForegroundColor" systemColor="systemPinkColor"/>
-                                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <segue destination="BKB-g1-NBX" kind="show" id="34a-r7-50C"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
                                     <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BIa-0x-zs6">
-                                        <rect key="frame" x="0.0" y="124.33333333333331" width="300" height="130"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="130"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="0Yd-XL-GPB">
                                                 <rect key="frame" x="10" y="10" width="280" height="110"/>
@@ -1455,6 +1383,76 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7YE-o0-JlD">
+                                        <rect key="frame" x="0.0" y="149.99999999999994" width="300" height="34.333333333333343"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpg-LF-Slc">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="34.333333333333336"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="paintpalette" catalog="system">
+                                                    <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="rJq-Wj-2QX" kind="show" id="4UZ-Bo-Ath"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Se3-lA-1P6">
+                                                <rect key="frame" x="80" y="0.0" width="60" height="34.333333333333336"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="crown" catalog="system">
+                                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="fhq-Ws-50g" kind="show" id="KE1-pw-Sgi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4c-ir-eD3">
+                                                <rect key="frame" x="160" y="0.0" width="60" height="34.333333333333336"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="gear" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="bookmark" catalog="system">
+                                                    <color key="baseForegroundColor" systemColor="systemPinkColor"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="BKB-g1-NBX" kind="show" id="34a-r7-50C"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLH-rZ-w5a">
+                                                <rect key="frame" x="240" y="0.0" width="60" height="34.333333333333336"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="gear" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="gear" catalog="system">
+                                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                                    <color key="baseBackgroundColor" name="AccentColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="f8E-Cg-PNO" kind="show" id="a4M-tP-Sbh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0W1-Vc-RQe">
+                                        <rect key="frame" x="0.0" y="204.33333333333331" width="300" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="mvF-n4-6bG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="16"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Create Project">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <buttonConfiguration key="configuration" style="gray" title="Create Project">
+                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="25"/>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="VvA-2K-oWU"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0.0 (0)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKa-FB-Hq1">
@@ -1927,7 +1925,7 @@
                                                 <rect key="frame" x="39.666666666666671" y="0.0" width="250.66666666666663" height="79"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gift.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nAq-9u-soO">
-                                                        <rect key="frame" x="0.0" y="-3.5527136788005009e-15" width="250.66666666666666" height="34.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="0.66666666666666607" width="250.66666666666666" height="33.000000000000007"/>
                                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="fXU-Rg-CB1"/>
@@ -2181,7 +2179,7 @@ There are no other in-app purchases.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hdj-rd-HtH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-789.23076923076917" y="722.98578199052133"/>
+            <point key="canvasLocation" x="-32" y="723"/>
         </scene>
         <!--ProjectsVC-->
         <scene sceneID="5pi-xE-rFc">
@@ -2230,7 +2228,7 @@ There are no other in-app purchases.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y2f-Lv-Ams" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-112.30769230769231" y="722.98578199052133"/>
+            <point key="canvasLocation" x="-737" y="722"/>
         </scene>
         <!--IntroVC-->
         <scene sceneID="es5-iM-h5g">
@@ -2419,13 +2417,13 @@ There are no other in-app purchases.</string>
         <image name="arrow.uturn.backward" catalog="system" width="128" height="113"/>
         <image name="arrow.uturn.forward" catalog="system" width="128" height="113"/>
         <image name="bookmark" catalog="system" width="110" height="128"/>
-        <image name="cart" catalog="system" width="128" height="102"/>
         <image name="checkmark.seal" catalog="system" width="128" height="124"/>
         <image name="chevron.compact.down" catalog="system" width="128" height="42"/>
         <image name="chevron.compact.left" catalog="system" width="62" height="128"/>
         <image name="chevron.compact.right" catalog="system" width="62" height="128"/>
         <image name="chevron.compact.up" catalog="system" width="128" height="42"/>
         <image name="clock.arrow.circlepath" catalog="system" width="128" height="112"/>
+        <image name="crown" catalog="system" width="128" height="92"/>
         <image name="gear" catalog="system" width="128" height="122"/>
         <image name="gear.circle.fill" catalog="system" width="128" height="123"/>
         <image name="gift.fill" catalog="system" width="128" height="125"/>
