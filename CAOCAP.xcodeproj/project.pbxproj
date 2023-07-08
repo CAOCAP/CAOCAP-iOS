@@ -20,6 +20,8 @@
 		21534D942A59B38B00E8078B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534D932A59B38B00E8078B /* Coordinator.swift */; };
 		21534D962A59B3B300E8078B /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534D952A59B3B300E8078B /* Storyboarded.swift */; };
 		21534D982A59B40A00E8078B /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534D972A59B40A00E8078B /* MainCoordinator.swift */; };
+		21534D9B2A59CD2B00E8078B /* ChartsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534D9A2A59CD2B00E8078B /* ChartsVC.swift */; };
+		21534D9D2A59CD8600E8078B /* UIDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534D9C2A59CD8600E8078B /* UIDashboardView.swift */; };
 		2178C19D2A4D92A300876BB6 /* ProjectSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */; };
 		2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */; };
 		2178C1A22A4DA2AB00876BB6 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */; };
@@ -65,6 +67,8 @@
 		21534D932A59B38B00E8078B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		21534D952A59B3B300E8078B /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		21534D972A59B40A00E8078B /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		21534D9A2A59CD2B00E8078B /* ChartsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsVC.swift; sourceTree = "<group>"; };
+		21534D9C2A59CD8600E8078B /* UIDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDashboardView.swift; sourceTree = "<group>"; };
 		2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsVC.swift; sourceTree = "<group>"; };
 		2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSettingsVC.swift; sourceTree = "<group>"; };
 		2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -136,6 +140,19 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		21534D992A59CA9400E8078B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */,
+				2178C1A32A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift */,
+				2186DB102A30DF4700773C5E /* UIMindMap.swift */,
+				210F19AF2A42DC9800D71A66 /* UIStroke.swift */,
+				210F19AD2A42DBE100D71A66 /* UINodeView.swift */,
+				21534D9C2A59CD8600E8078B /* UIDashboardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		2178C1A02A4D992000876BB6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +160,7 @@
 				21534D8E2A59B26F00E8078B /* NavigationVC.swift */,
 				2184CCF92A522E6200B39882 /* IntroVC.swift */,
 				21DBA0002A38F4C800DFAC66 /* InitialVC.swift */,
+				21534D9A2A59CD2B00E8078B /* ChartsVC.swift */,
 				218DA9CC2A2B205800459C61 /* MindMapVC.swift */,
 				21C21C482A34B5D800F40BE3 /* ProjectsVC.swift */,
 				21C21C4E2A34B62E00F40BE3 /* PaletteVC.swift */,
@@ -179,11 +197,7 @@
 				21C21C532A36145200F40BE3 /* Enumerations.swift */,
 				21534D922A59B36800E8078B /* Coordinator */,
 				2178C1A02A4D992000876BB6 /* ViewControllers */,
-				2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */,
-				2178C1A32A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift */,
-				2186DB102A30DF4700773C5E /* UIMindMap.swift */,
-				210F19AF2A42DC9800D71A66 /* UIStroke.swift */,
-				210F19AD2A42DBE100D71A66 /* UINodeView.swift */,
+				21534D992A59CA9400E8078B /* Views */,
 				2186DB0E2A30BD6600773C5E /* Node.swift */,
 				21DBA0022A39E18C00DFAC66 /* Store.swift */,
 				218DA9CE2A2B205800459C61 /* Main.storyboard */,
@@ -331,8 +345,10 @@
 				218DA9CD2A2B205800459C61 /* MindMapVC.swift in Sources */,
 				218DA9C92A2B205800459C61 /* AppDelegate.swift in Sources */,
 				2178C19D2A4D92A300876BB6 /* ProjectSettingsVC.swift in Sources */,
+				21534D9D2A59CD8600E8078B /* UIDashboardView.swift in Sources */,
 				21534D962A59B3B300E8078B /* Storyboarded.swift in Sources */,
 				2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */,
+				21534D9B2A59CD2B00E8078B /* ChartsVC.swift in Sources */,
 				2184CCFA2A522E6200B39882 /* IntroVC.swift in Sources */,
 				2178C1A42A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift in Sources */,
 				2178C1A22A4DA2AB00876BB6 /* SettingsTableViewCell.swift in Sources */,

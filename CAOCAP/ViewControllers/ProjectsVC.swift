@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProjectsVC: UIViewController {
+class ProjectsVC: UIViewController, Storyboarded {
 
     
     @IBOutlet weak var tableView: UITableView!

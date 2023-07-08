@@ -21,10 +21,41 @@ final class MainCoordinator: Coordinator {
         let navigationVC = NavigationVC.instantiate()
         
         let initialVC = InitialVC.instantiate()
+        let chartsVC = ChartsVC.instantiate()
+        
+        initialVC.coordinator = self
+        chartsVC.viewControllers = [UIHostingController(rootView: UIDashboardView())]
+        
         
         navigationVC.coordinator = self
-        navigationVC.viewControllers = [initialVC]
+        navigationVC.viewControllers = [initialVC, chartsVC]
+        
         navigationController.pushViewController(navigationVC, animated: false)
+    }
+    
+    func createNewProject() {
+        let vc = MindMapVC.instantiate()
+        navigationController.present(vc, animated: true)
+    }
+    
+    func viewMainSettings() {
+        let vc = MainSettingsVC.instantiate()
+        navigationController.present(vc, animated: true)
+    }
+    
+    func viewProjects() {
+        let vc = ProjectsVC.instantiate()
+        navigationController.present(vc, animated: true)
+    }
+    
+    func viewPurchase() {
+        let vc = PurchaseVC.instantiate()
+        navigationController.present(vc, animated: true)
+    }
+    
+    func viewPalette() {
+        let vc = PaletteVC.instantiate()
+        navigationController.present(vc, animated: true)
     }
     
 }

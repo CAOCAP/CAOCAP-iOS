@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PurchaseVC: UIViewController {
+class PurchaseVC: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()

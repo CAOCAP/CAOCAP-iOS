@@ -51,7 +51,7 @@ class NavigationVC: ContainerVC, Storyboarded {
     }
     
     @IBAction func didPressPlusButton(_ sender: UIButton) {
-        
+        coordinator?.createNewProject()
     }
     
     

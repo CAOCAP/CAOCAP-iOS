@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class MindMapVC: UIViewController {
+class MindMapVC: UIViewController, Storyboarded {
     
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var resizeIcon: UIImageView!

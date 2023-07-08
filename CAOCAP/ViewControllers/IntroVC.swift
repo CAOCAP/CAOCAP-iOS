@@ -7,7 +7,7 @@
 
 import UIKit
 
-class IntroVC: UIViewController, UITextFieldDelegate {
+class IntroVC: UIViewController {
 
     @IBOutlet weak var greetingsLabel: UILabel!
     @IBOutlet weak var usernameTF: UITextField!
@@ -31,8 +31,11 @@ class IntroVC: UIViewController, UITextFieldDelegate {
     }
     
     
+
+}
+
+extension IntroVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
     }
-
 }

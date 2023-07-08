@@ -32,7 +32,7 @@ struct SettingsOption {
     let handler: ()->Void
 }
 
-class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Storyboarded {
     
     @IBOutlet weak var tableView: UITableView!
     var sections = [Section]()

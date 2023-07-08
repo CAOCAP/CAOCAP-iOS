@@ -8,6 +8,7 @@
 import UIKit
 
 class InitialVC: UIViewController, Storyboarded {
+    var coordinator: MainCoordinator?
 
     @IBOutlet weak var appVersion: UILabel!
     @IBOutlet weak var stackView: UIStackView!
@@ -60,5 +61,28 @@ class InitialVC: UIViewController, Storyboarded {
         return "\(version) (\(build))"
     }
     
+    @IBAction func didPressSettingsButton(_ sender: Any) {
+        coordinator?.viewMainSettings()
+    }
+    
+    @IBAction func didPressProjectsButton(_ sender: Any) {
+        coordinator?.viewProjects()
+    }
+    
+    @IBAction func didPressPurchaseButton(_ sender: Any) {
+        coordinator?.viewPurchase()
+    }
+    
+    @IBAction func didPressPaletteButton(_ sender: Any) {
+        coordinator?.viewPalette()
+    }
+    
+    
+    
 }
 
+extension InitialVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+    }
+}

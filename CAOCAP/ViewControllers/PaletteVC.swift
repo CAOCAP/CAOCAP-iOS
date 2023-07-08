@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PaletteVC: UIViewController {
+class PaletteVC: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
