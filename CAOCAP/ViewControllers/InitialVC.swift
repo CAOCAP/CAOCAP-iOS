@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InitialVC: UIViewController, UITextFieldDelegate {
+class InitialVC: UIViewController, Storyboarded {
 
     @IBOutlet weak var appVersion: UILabel!
     @IBOutlet weak var stackView: UIStackView!

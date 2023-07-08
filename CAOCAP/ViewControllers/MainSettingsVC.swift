@@ -9,10 +9,12 @@
 import UIKit
 
 class MainSettingsVC: SettingsVC {
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+
         sections = [
             Section(title: "Main", options: [
                 .staticCell(option: SettingsOption(title: "Language", icon: UIImage(systemName: "globe"), color: .systemPink, handler: {
@@ -28,7 +30,6 @@ class MainSettingsVC: SettingsVC {
                     
                 }, isOn: false)),
                 .staticCell(option: SettingsOption(title: "What's New?", icon: UIImage(systemName: "sparkles"), color: .systemYellow, handler: {
-                    let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
                     let whatsNewVC = storyboard.instantiateViewController(withIdentifier: "WhatsNewVC")
                     self.present(whatsNewVC, animated: true)
                     

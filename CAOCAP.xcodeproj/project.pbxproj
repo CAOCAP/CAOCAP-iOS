@@ -15,6 +15,11 @@
 		213DF5E62A58A92F00679BB2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 213DF5E52A58A92F00679BB2 /* Lottie */; };
 		21534D8B2A59916F00E8078B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 21534D8A2A59916F00E8078B /* FirebaseAnalytics */; };
 		21534D8D2A59924F00E8078B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21534D8C2A59924F00E8078B /* GoogleService-Info.plist */; };
+		21534D8F2A59B26F00E8078B /* NavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534D8E2A59B26F00E8078B /* NavigationVC.swift */; };
+		21534D912A59B2E200E8078B /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534D902A59B2E200E8078B /* ContainerVC.swift */; };
+		21534D942A59B38B00E8078B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534D932A59B38B00E8078B /* Coordinator.swift */; };
+		21534D962A59B3B300E8078B /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534D952A59B3B300E8078B /* Storyboarded.swift */; };
+		21534D982A59B40A00E8078B /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534D972A59B40A00E8078B /* MainCoordinator.swift */; };
 		2178C19D2A4D92A300876BB6 /* ProjectSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */; };
 		2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */; };
 		2178C1A22A4DA2AB00876BB6 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */; };
@@ -55,6 +60,11 @@
 		210F19AF2A42DC9800D71A66 /* UIStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStroke.swift; sourceTree = "<group>"; };
 		21326ECF2A530CAE00255570 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		21534D8C2A59924F00E8078B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		21534D8E2A59B26F00E8078B /* NavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationVC.swift; sourceTree = "<group>"; };
+		21534D902A59B2E200E8078B /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
+		21534D932A59B38B00E8078B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		21534D952A59B3B300E8078B /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		21534D972A59B40A00E8078B /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsVC.swift; sourceTree = "<group>"; };
 		2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSettingsVC.swift; sourceTree = "<group>"; };
 		2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -116,9 +126,21 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		21534D922A59B36800E8078B /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				21534D932A59B38B00E8078B /* Coordinator.swift */,
+				21534D952A59B3B300E8078B /* Storyboarded.swift */,
+				21534D972A59B40A00E8078B /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		2178C1A02A4D992000876BB6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				21534D902A59B2E200E8078B /* ContainerVC.swift */,
+				21534D8E2A59B26F00E8078B /* NavigationVC.swift */,
 				2184CCF92A522E6200B39882 /* IntroVC.swift */,
 				21DBA0002A38F4C800DFAC66 /* InitialVC.swift */,
 				218DA9CC2A2B205800459C61 /* MindMapVC.swift */,
@@ -155,6 +177,7 @@
 				218DA9CA2A2B205800459C61 /* SceneDelegate.swift */,
 				21326ECF2A530CAE00255570 /* UserDefaults.swift */,
 				21C21C532A36145200F40BE3 /* Enumerations.swift */,
+				21534D922A59B36800E8078B /* Coordinator */,
 				2178C1A02A4D992000876BB6 /* ViewControllers */,
 				2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */,
 				2178C1A32A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift */,
@@ -303,10 +326,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21534D912A59B2E200E8078B /* ContainerVC.swift in Sources */,
 				21C21C4F2A34B62E00F40BE3 /* PaletteVC.swift in Sources */,
 				218DA9CD2A2B205800459C61 /* MindMapVC.swift in Sources */,
 				218DA9C92A2B205800459C61 /* AppDelegate.swift in Sources */,
 				2178C19D2A4D92A300876BB6 /* ProjectSettingsVC.swift in Sources */,
+				21534D962A59B3B300E8078B /* Storyboarded.swift in Sources */,
 				2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */,
 				2184CCFA2A522E6200B39882 /* IntroVC.swift in Sources */,
 				2178C1A42A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift in Sources */,
@@ -323,7 +348,10 @@
 				21DBA0012A38F4C800DFAC66 /* InitialVC.swift in Sources */,
 				21C21C492A34B5D800F40BE3 /* ProjectsVC.swift in Sources */,
 				21C21C542A36145200F40BE3 /* Enumerations.swift in Sources */,
+				21534D8F2A59B26F00E8078B /* NavigationVC.swift in Sources */,
+				21534D942A59B38B00E8078B /* Coordinator.swift in Sources */,
 				210F19B02A42DC9800D71A66 /* UIStroke.swift in Sources */,
+				21534D982A59B40A00E8078B /* MainCoordinator.swift in Sources */,
 				210F19AE2A42DBE100D71A66 /* UINodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

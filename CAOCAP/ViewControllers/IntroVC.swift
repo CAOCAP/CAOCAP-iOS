@@ -7,7 +7,7 @@
 
 import UIKit
 
-class IntroVC: UIViewController {
+class IntroVC: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var greetingsLabel: UILabel!
     @IBOutlet weak var usernameTF: UITextField!
