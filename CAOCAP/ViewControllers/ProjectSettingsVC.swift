@@ -40,13 +40,7 @@ class ProjectSettingsVC: SettingsVC {
             Section(title: "Files", options: [
                 .staticCell(option:SettingsOption(title: "Import", icon: UIImage(systemName: "doc.badge.plus"), color: .systemGreen, handler: {print("did press")})),
                 .staticCell(option:SettingsOption(title: "Export", icon: UIImage(systemName: "square.and.arrow.up"), color: .systemPink, handler: {print("did press")})),
-            ]),
-            
-            Section(title: "info", options: [
-                .staticCell(option:SettingsOption(title: "test", icon: UIImage(systemName: "info.circle"), color: .systemGray , handler: {print("did press")})),
-                .switchCell(option: SettingsSwitchOption(title: "test", icon: UIImage(systemName: "flag.square.fill"), color: .systemYellow, handler: {print("did press")}, isOn: false))
-            ])
-        ]
+            ]),        ]
     }
     
 }

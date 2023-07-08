@@ -22,6 +22,7 @@
 		21534D982A59B40A00E8078B /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534D972A59B40A00E8078B /* MainCoordinator.swift */; };
 		21534D9B2A59CD2B00E8078B /* ChartsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534D9A2A59CD2B00E8078B /* ChartsVC.swift */; };
 		21534D9D2A59CD8600E8078B /* UIDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534D9C2A59CD8600E8078B /* UIDashboardView.swift */; };
+		21534D9F2A59E58100E8078B /* ProjectFilesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534D9E2A59E58100E8078B /* ProjectFilesVC.swift */; };
 		2178C19D2A4D92A300876BB6 /* ProjectSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */; };
 		2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */; };
 		2178C1A22A4DA2AB00876BB6 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */; };
@@ -69,6 +70,7 @@
 		21534D972A59B40A00E8078B /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		21534D9A2A59CD2B00E8078B /* ChartsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsVC.swift; sourceTree = "<group>"; };
 		21534D9C2A59CD8600E8078B /* UIDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDashboardView.swift; sourceTree = "<group>"; };
+		21534D9E2A59E58100E8078B /* ProjectFilesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFilesVC.swift; sourceTree = "<group>"; };
 		2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsVC.swift; sourceTree = "<group>"; };
 		2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSettingsVC.swift; sourceTree = "<group>"; };
 		2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				21C21C4A2A34B60200F40BE3 /* SettingsVC.swift */,
 				2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */,
 				2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */,
+				21534D9E2A59E58100E8078B /* ProjectFilesVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				21534D9D2A59CD8600E8078B /* UIDashboardView.swift in Sources */,
 				21534D962A59B3B300E8078B /* Storyboarded.swift in Sources */,
 				2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */,
+				21534D9F2A59E58100E8078B /* ProjectFilesVC.swift in Sources */,
 				21534D9B2A59CD2B00E8078B /* ChartsVC.swift in Sources */,
 				2184CCFA2A522E6200B39882 /* IntroVC.swift in Sources */,
 				2178C1A42A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift in Sources */,
