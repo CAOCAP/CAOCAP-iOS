@@ -13,6 +13,8 @@
 		213DF5E02A5883D300679BB2 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 213DF5DF2A5883D300679BB2 /* SwiftSoup */; };
 		213DF5E32A5886B300679BB2 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 213DF5E22A5886B300679BB2 /* ReSwift */; };
 		213DF5E62A58A92F00679BB2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 213DF5E52A58A92F00679BB2 /* Lottie */; };
+		21534D8B2A59916F00E8078B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 21534D8A2A59916F00E8078B /* FirebaseAnalytics */; };
+		21534D8D2A59924F00E8078B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21534D8C2A59924F00E8078B /* GoogleService-Info.plist */; };
 		2178C19D2A4D92A300876BB6 /* ProjectSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */; };
 		2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */; };
 		2178C1A22A4DA2AB00876BB6 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */; };
@@ -52,6 +54,7 @@
 		210F19AD2A42DBE100D71A66 /* UINodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINodeView.swift; sourceTree = "<group>"; };
 		210F19AF2A42DC9800D71A66 /* UIStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStroke.swift; sourceTree = "<group>"; };
 		21326ECF2A530CAE00255570 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		21534D8C2A59924F00E8078B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsVC.swift; sourceTree = "<group>"; };
 		2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSettingsVC.swift; sourceTree = "<group>"; };
 		2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -96,6 +99,7 @@
 				213DF5E32A5886B300679BB2 /* ReSwift in Frameworks */,
 				21C21C522A34B7C400F40BE3 /* IQKeyboardManagerSwift in Frameworks */,
 				213DF5E02A5883D300679BB2 /* SwiftSoup in Frameworks */,
+				21534D8B2A59916F00E8078B /* FirebaseAnalytics in Frameworks */,
 				213DF5E62A58A92F00679BB2 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +107,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21534D882A598F7300E8078B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2186DB0C2A30946900773C5E /* UIView+Extensions.swift */,
+				21DBA0042A39EC5500DFAC66 /* UIFont+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2178C1A02A4D992000876BB6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,12 +151,10 @@
 		218DA9C72A2B205800459C61 /* CAOCAP */ = {
 			isa = PBXGroup;
 			children = (
-				2186DB0C2A30946900773C5E /* UIView+Extensions.swift */,
-				21DBA0042A39EC5500DFAC66 /* UIFont+Extensions.swift */,
-				21C21C532A36145200F40BE3 /* Enumerations.swift */,
 				218DA9C82A2B205800459C61 /* AppDelegate.swift */,
 				218DA9CA2A2B205800459C61 /* SceneDelegate.swift */,
 				21326ECF2A530CAE00255570 /* UserDefaults.swift */,
+				21C21C532A36145200F40BE3 /* Enumerations.swift */,
 				2178C1A02A4D992000876BB6 /* ViewControllers */,
 				2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */,
 				2178C1A32A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift */,
@@ -156,7 +167,9 @@
 				218DA9D32A2B205900459C61 /* LaunchScreen.storyboard */,
 				218DA9D12A2B205900459C61 /* Assets.xcassets */,
 				21C21C562A38DD7D00F40BE3 /* Fonts */,
+				21534D882A598F7300E8078B /* Extensions */,
 				218DA9D62A2B205900459C61 /* Info.plist */,
+				21534D8C2A59924F00E8078B /* GoogleService-Info.plist */,
 			);
 			path = CAOCAP;
 			sourceTree = "<group>";
@@ -215,6 +228,7 @@
 				213DF5DF2A5883D300679BB2 /* SwiftSoup */,
 				213DF5E22A5886B300679BB2 /* ReSwift */,
 				213DF5E52A58A92F00679BB2 /* Lottie */,
+				21534D8A2A59916F00E8078B /* FirebaseAnalytics */,
 			);
 			productName = CAOCAP;
 			productReference = 218DA9C52A2B205800459C61 /* CAOCAP.app */;
@@ -249,6 +263,7 @@
 				213DF5DE2A5883D300679BB2 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 				213DF5E12A5886B300679BB2 /* XCRemoteSwiftPackageReference "ReSwift" */,
 				213DF5E42A58A92F00679BB2 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+				21534D892A59916F00E8078B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 218DA9C62A2B205800459C61 /* Products */;
 			projectDirPath = "";
@@ -277,6 +292,7 @@
 				21C21C642A38DFAD00F40BE3 /* Ubuntu-Regular.ttf in Resources */,
 				218DA9D02A2B205800459C61 /* Main.storyboard in Resources */,
 				21C21C662A38DFAD00F40BE3 /* Ubuntu-MediumItalic.ttf in Resources */,
+				21534D8D2A59924F00E8078B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +572,14 @@
 				minimumVersion = 4.2.0;
 			};
 		};
+		21534D892A59916F00E8078B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.4.0;
+			};
+		};
 		21C21C502A34B7C400F40BE3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
@@ -581,6 +605,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 213DF5E42A58A92F00679BB2 /* XCRemoteSwiftPackageReference "lottie-spm" */;
 			productName = Lottie;
+		};
+		21534D8A2A59916F00E8078B /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21534D892A59916F00E8078B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
 		};
 		21C21C512A34B7C400F40BE3 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
