@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class InitialVC: UIViewController, Storyboarded {
     var coordinator: MainCoordinator?
@@ -17,6 +18,12 @@ class InitialVC: UIViewController, Storyboarded {
         super.viewDidLoad()
         appVersion.text = getVersion()
         setupStackView()
+        
+        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+          AnalyticsParameterItemID: "id-testingFirebaseAnalytics",
+          AnalyticsParameterItemName: "testingFirebaseAnalytics",
+          AnalyticsParameterContentType: "cont",
+        ])
     }
     
     func setupStackView() {
