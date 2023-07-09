@@ -124,51 +124,459 @@ let tailwindCSS = [
     "z-0","z-10","z-20","z-30","z-40","z-50","z-auto",
     
     // MARK: Flexbox & Grid
+    
+    /* Flex Basis */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Flex Direction */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Flex Wrap */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Flex */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Flex Grow */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Flex Shrink */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Order */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Grid Template Columns */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Grid Column Start / End */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Grid Template Rows */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Grid Row Start / End */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Grid Auto Flow */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Grid Auto Columns */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Grid Auto Rows */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Gap */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Justify Content */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Justify Items */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Justify Self */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Align Content */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Align Items */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Align Self */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Place Content */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Place Items */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Place Self */
     "","","","","","","","","","","","","","","","","","","",
     
     
     // MARK: Spacing
+    
+    /* Padding */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Margin */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Space Between */
     "","","","","","","","","","","","","","","","","","","",
     
     
     // MARK: Sizing
+    
+    /* Width */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Min-Width */
+    "min-w-0","min-w-full","min-w-min","min-w-max","min-w-fit",
+    
+    /* Max-Width */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Height */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Min-Height */
+    "min-h-0","min-h-full","min-h-screen","min-h-min","min-h-max","min-h-fit",
+    
+    /* Max-Height */
     "","","","","","","","","","","","","","","","","","","",
     
     
     // MARK: Typography
+    
+    /* Font Family */
+    "font-sans","font-serif","font-mono",
+    
+    /* Font Size */
+    "text-xs","text-sm","text-base","text-lg","text-xl","text-2xl","text-3xl","text-4xl","text-5xl","text-6xl","text-7xl","text-8xl","text-9xl",
+    
+    /* Font Smoothing */
+    "antialiased","subpixel-antialiased",
+    
+    /* Font Style */
+    "italic","not-italic",
+    
+    /* Font Weight */
+    "font-thin","font-extralight","font-light","font-normal","font-medium","font-semibold","font-bold","font-extrabold","font-black",
+    
+    /* Font Variant Numeric */
+    "normal-nums","ordinal","slashed-zero","lining-nums","oldstyle-nums","proportional-nums","tabular-nums","diagonal-fractions","stacked-fractions",
+    
+    /* Letter Spacing */
+    "tracking-tighter","tracking-tight","tracking-normal","tracking-wide","tracking-wider","tracking-widest",
+    
+    /* Line Clamp */
+    "line-clamp-1","line-clamp-2","line-clamp-3","line-clamp-4","line-clamp-5","line-clamp-6","line-clamp-none",
+    
+    /* Line Height */
+    "leading-3","leading-4","leading-5","leading-6","leading-7","leading-8","leading-9","leading-10","leading-none","leading-tight","leading-snug","leading-normal","leading-relaxed","leading-loose",
+    
+    /* List Style Image */
+    "list-image-none",
+    
+    /* List Style Position */
+    "list-inside","list-outside",
+    
+    /* List Style Type */
+    "list-none","list-disc","list-decimal",
+    
+    /* Text Align */
+    "text-left","text-center","text-right","text-justify","text-start","text-end",
+    
+    /* Text Color */
     "","","","","","","","","","","","","","","","","","","",
+    
+    /* Text Decoration */
+    "underline","overline","line-through","no-underline",
+    
+    /* Text Decoration Color */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Text Decoration Style */
+    "decoration-solid","decoration-double","decoration-dotted","decoration-dashed","decoration-wavy",
+    
+    /* Text Decoration Thickness */
+    "decoration-auto","decoration-from-font","decoration-0","decoration-1","decoration-2","decoration-4","decoration-8",
+    
+    /* Text Underline Offset */
+    "underline-offset-auto","underline-offset-0","underline-offset-1","underline-offset-2","underline-offset-4","underline-offset-8",
+    
+    /* Text Transform */
+    "uppercase","lowercase","capitalize","normal-case",
+    
+    /* Text Overflow */
+    "truncate","text-ellipsis","text-clip",
+    
+    /* Text Indent */
+    "","","","","","","","","","","","","","","","","","",
+    
+    /* Vertical Align */
+    "align-baseline","align-top","align-middle","align-bottom","align-text-top","align-text-bottom","align-sub","align-super",
+    
+    /* Whitespace */
+    "whitespace-normal","whitespace-nowrap","whitespace-pre","whitespace-pre-line","whitespace-pre-wrap","whitespace-break-spaces",
+    
+    /* Word Break */
+    "break-normal","break-words","break-all","break-keep",
+    
+    /* Hyphens */
+    "hyphens-none","hyphens-manual","hyphens-auto",
+    
+    /* Content */
+    "content-none",
     
     
     // MARK: Backgrounds
+    
+    /* Background Attachment */
+    "bg-fixed","bg-local","bg-scroll",
+    
+    /* Background Clip */
+    "bg-clip-border","bg-clip-padding","bg-clip-content","bg-clip-text",
+    
+    /* Background Color */
     "","","","","","","","","","","","","","","","","","","",
+    
+    /* Background Origin */
+    "bg-origin-border","bg-origin-padding","bg-origin-content",
+    
+    /* Background Position */
+    "bg-bottom","bg-center","bg-left","bg-left-bottom","bg-left-top","bg-right","bg-right-bottom","bg-right-top","bg-top",
+    
+    /* Background Repeat */
+    "bg-repeat","bg-no-repeat","bg-repeat-x","bg-repeat-y","bg-repeat-round","bg-repeat-space",
+    
+    /* Background Size */
+    "bg-auto","bg-cover","bg-contain",
+    
+    /* Background Image */
+    "bg-none","bg-gradient-to-t","bg-gradient-to-tr","bg-gradient-to-r","bg-gradient-to-br","bg-gradient-to-b","bg-gradient-to-bl","bg-gradient-to-l","bg-gradient-to-tl",
+    
+    /* Gradient Color Stops */
+    "from-inherit","from-current","from-transparent","from-black",
     
     
     // MARK: Borders
+    
+    /* Border Radius */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Border Width */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Border Color */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Border Style */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Divide Width */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Divide Color */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Divide Style */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Outline Width */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Outline Color */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Outline Style */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Outline Offset */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Ring Width */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Ring Color */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Ring Offset Width */
+    "ring-offset-0","ring-offset-1","ring-offset-2","ring-offset-4","ring-offset-8",
+    
+    /* Ring Offset Color */
     "","","","","","","","","","","","","","","","","","","",
     
     // MARK: Effects
+    
+    /* Box Shadow */
+    "shadow-sm","shadow","shadow-md","shadow-lg","shadow-xl","shadow-2xl","shadow-inner","shadow-none",
+    
+    /* Box Shadow Color */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Opacity */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Mix Blend Mode */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Background Blend Mode */
     "","","","","","","","","","","","","","","","","","","",
     
     
     // MARK: Filters
-    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Blur */
+    "blur-none","blur-sm","blur","blur-md","blur-lg","blur-xl","blur-2xl","blur-3xl",
+    
+    /* Brightness */
+    "brightness-0","brightness-50","brightness-75","brightness-90","brightness-95","brightness-100","brightness-105","brightness-110","brightness-125","brightness-150","brightness-200",
+    
+    /* Contrast */
+    "contrast-0","contrast-50","contrast-75","contrast-100","contrast-125","contrast-150","contrast-200",
+    
+    /* Drop Shadow */
+    "drop-shadow-sm","drop-shadow","drop-shadow-md","drop-shadow-lg","drop-shadow-xl","drop-shadow-2xl","drop-shadow-none",
+    
+    /* Grayscale */
+    "grayscale-0","grayscale",
+    
+    /* Hue Rotate */
+    "hue-rotate-0","hue-rotate-15","hue-rotate-30","hue-rotate-60","hue-rotate-90","hue-rotate-180",
+    
+    /* Invert */
+    "invert-0","invert",
+    
+    /* Saturate */
+    "saturate-0","saturate-50","saturate-100","saturate-150","saturate-200",
+    
+    /* Sepia */
+    "sepia-0","sepia",
+    
+    /* Backdrop Blur */
+    "backdrop-blur-none","backdrop-blur-sm","backdrop-blur","backdrop-blur-md","backdrop-blur-lg","backdrop-blur-xl","backdrop-blur-2xl","backdrop-blur-3xl",
+    
+    /* Backdrop Brightness */
+    "backdrop-brightness-0","backdrop-brightness-50","backdrop-brightness-75","backdrop-brightness-90","backdrop-brightness-95","backdrop-brightness-100","backdrop-brightness-105","backdrop-brightness-110","backdrop-brightness-125","backdrop-brightness-150","backdrop-brightness-200",
+    
+    /* Backdrop Contrast */
+    "backdrop-contrast-0","backdrop-contrast-50","backdrop-contrast-75","backdrop-contrast-100","backdrop-contrast-125","backdrop-contrast-150","backdrop-contrast-200",
+    
+    /* Backdrop Grayscale */
+    "backdrop-grayscale-0","backdrop-grayscale",
+    
+    /* Backdrop Hue Rotate */
+    "backdrop-hue-rotate-0","backdrop-hue-rotate-15","backdrop-hue-rotate-30","backdrop-hue-rotate-60","backdrop-hue-rotate-90","backdrop-hue-rotate-180",
+    
+    /* Backdrop Invert */
+    "backdrop-invert-0","backdrop-invert",
+    
+    /* Backdrop Opacity */
+    "backdrop-opacity-0","backdrop-opacity-5","backdrop-opacity-10","backdrop-opacity-20","backdrop-opacity-25","backdrop-opacity-30","backdrop-opacity-40","backdrop-opacity-50","backdrop-opacity-60","backdrop-opacity-70","backdrop-opacity-75","backdrop-opacity-80","backdrop-opacity-90","backdrop-opacity-95","backdrop-opacity-100",
+    
+    /* Backdrop Saturate */
+    "backdrop-saturate-0","backdrop-saturate-50","backdrop-saturate-100","backdrop-saturate-150","backdrop-saturate-200",
+    
+    /* Backdrop Sepia */
+    "backdrop-sepia-0","backdrop-sepia",
     
     // MARK: Tables
+    
+    /* Border Collapse */
+    "border-collapse","border-separate",
+    
+    /* Border Spacing */
     "","","","","","","","","","","","","","","","","","","",
+    
+    /* Table Layout */
+    "table-auto","table-fixed",
+    
+    /* Caption Side */
+    "caption-top","caption-bottom",
     
     // MARK: Transitions & Animation
-    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Transition Property */
+    "transition-none","transition-all","transition","transition-colors","transition-opacity","transition-shadow","transition-transform",
+    
+    /* Transition Duration */
+    "duration-0","duration-75","duration-100","duration-150","duration-200","duration-300","duration-500","duration-700","duration-1000",
+    
+    /* Transition Timing Function */
+    "ease-linear","ease-in","ease-out","ease-in-out",
+    
+    /* Transition Delay */
+    "delay-0","delay-75","delay-100","delay-150","delay-200","delay-300","delay-500","delay-700","delay-1000",
+    
+    /* Animation */
+    "animate-none","animate-spin","animate-ping","animate-pulse","animate-bounce",
+    
     
     // MARK: Transforms
+    
+    /* Scale */
     "","","","","","","","","","","","","","","","","","","",
+    
+    /* Rotate */
+    "rotate-0","rotate-1","rotate-2","rotate-3","rotate-6","rotate-12","rotate-45","rotate-90","rotate-180",
+    
+    /* Translate */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Skew */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Transform Origin */
+    "origin-center","origin-top","origin-top-right","origin-right","origin-bottom-right","origin-bottom","origin-bottom-left","origin-left","origin-top-left",
     
     // MARK: Interactivity
+    
+    /* Accent Color */
     "","","","","","","","","","","","","","","","","","","",
+    
+    /* Appearance */
+    "appearance-none",
+    
+    /* Cursor */
+    "cursor-auto","cursor-default","cursor-pointer","cursor-wait","cursor-text","cursor-move","cursor-help","cursor-not-allowed","cursor-none","cursor-context-menu","cursor-progress","cursor-cell","cursor-crosshair","cursor-vertical-text","cursor-alias","cursor-copy","cursor-no-drop","cursor-grab","cursor-grabbing","cursor-all-scroll","cursor-col-resize","cursor-row-resize","cursor-n-resize","cursor-e-resize","cursor-s-resize","cursor-w-resize","cursor-ne-resize","cursor-nw-resize","cursor-se-resize","cursor-sw-resize","cursor-ew-resize","cursor-ns-resize","cursor-nesw-resize","cursor-nwse-resize","cursor-zoom-in","cursor-zoom-out",
+    
+    /* Caret Color */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Pointer Events */
+    "pointer-events-none","pointer-events-auto",
+    
+    /* Resize */
+    "resize-none","resize-y","resize-x","resize",
+    
+    /* Scroll Behavior */
+    "scroll-auto","scroll-smooth",
+    
+    /* Scroll Margin */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Scroll Padding */
+    "","","","","","","","","","","","","","","","","","","",
+    
+    /* Scroll Snap Align */
+    "snap-start","snap-end","snap-center","snap-align-none",
+    
+    /* Scroll Snap Stop */
+    "snap-normal","snap-always",
+    
+    /* Scroll Snap Type */
+    "snap-none","snap-x","snap-y","snap-both","snap-mandatory","snap-proximity",
+    
+    /* Touch Action */
+    "touch-auto","touch-none","touch-pan-x","touch-pan-left","touch-pan-right","touch-pan-y","touch-pan-up","touch-pan-down","touch-pinch-zoom","touch-manipulation",
+    
+    /* User Select */
+    "select-none","select-text","select-all","select-auto",
+    
+    /* Will Change */
+    "will-change-auto","will-change-scroll","will-change-contents","will-change-transform",
     
     // MARK: SVG
+    
+    /* Fill */
     "","","","","","","","","","","","","","","","","","","",
     
-    // MARK: Accessibility
+    /* Stroke */
     "","","","","","","","","","","","","","","","","","","",
+    
+    /* Stroke Width */
+    "stroke-0","stroke-1","stroke-2",
+    
+    // MARK: Accessibility
+    
+    /* Screen Readers */
+    "sr-only","not-sr-only",
+    
     
 ]
