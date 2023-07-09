@@ -320,15 +320,18 @@ class MindMapVC: UIViewController, Storyboarded {
             attributesStackView.arrangedSubviews[3].isHidden = false
         }
     }
+    
 }
 
 extension MindMapVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return tailwindCSS.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cssCell", for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tailwindCell", for: indexPath) as? TailwindCollectionViewCell else { return UICollectionViewCell() }
+        cell.configure(title: tailwindCSS[indexPath.row])
         return cell
     }
     

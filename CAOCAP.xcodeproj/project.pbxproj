@@ -23,6 +23,8 @@
 		21534D9B2A59CD2B00E8078B /* ChartsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534D9A2A59CD2B00E8078B /* ChartsVC.swift */; };
 		21534D9D2A59CD8600E8078B /* UIDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534D9C2A59CD8600E8078B /* UIDashboardView.swift */; };
 		21534D9F2A59E58100E8078B /* ProjectFilesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534D9E2A59E58100E8078B /* ProjectFilesVC.swift */; };
+		21534DA12A5A9B3B00E8078B /* TailwindCSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534DA02A5A9B3B00E8078B /* TailwindCSS.swift */; };
+		21534DA32A5A9ED000E8078B /* TailwindCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534DA22A5A9ED000E8078B /* TailwindCollectionViewCell.swift */; };
 		2178C19D2A4D92A300876BB6 /* ProjectSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */; };
 		2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */; };
 		2178C1A22A4DA2AB00876BB6 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */; };
@@ -71,6 +73,8 @@
 		21534D9A2A59CD2B00E8078B /* ChartsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsVC.swift; sourceTree = "<group>"; };
 		21534D9C2A59CD8600E8078B /* UIDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDashboardView.swift; sourceTree = "<group>"; };
 		21534D9E2A59E58100E8078B /* ProjectFilesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFilesVC.swift; sourceTree = "<group>"; };
+		21534DA02A5A9B3B00E8078B /* TailwindCSS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TailwindCSS.swift; sourceTree = "<group>"; };
+		21534DA22A5A9ED000E8078B /* TailwindCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TailwindCollectionViewCell.swift; sourceTree = "<group>"; };
 		2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsVC.swift; sourceTree = "<group>"; };
 		2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSettingsVC.swift; sourceTree = "<group>"; };
 		2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 			children = (
 				2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */,
 				2178C1A32A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift */,
+				21534DA22A5A9ED000E8078B /* TailwindCollectionViewCell.swift */,
 				2186DB102A30DF4700773C5E /* UIMindMap.swift */,
 				210F19AF2A42DC9800D71A66 /* UIStroke.swift */,
 				210F19AD2A42DBE100D71A66 /* UINodeView.swift */,
@@ -203,6 +208,7 @@
 				21534D992A59CA9400E8078B /* Views */,
 				2186DB0E2A30BD6600773C5E /* Node.swift */,
 				21DBA0022A39E18C00DFAC66 /* Store.swift */,
+				21534DA02A5A9B3B00E8078B /* TailwindCSS.swift */,
 				218DA9CE2A2B205800459C61 /* Main.storyboard */,
 				218DA9D32A2B205900459C61 /* LaunchScreen.storyboard */,
 				218DA9D12A2B205900459C61 /* Assets.xcassets */,
@@ -349,6 +355,7 @@
 				218DA9C92A2B205800459C61 /* AppDelegate.swift in Sources */,
 				2178C19D2A4D92A300876BB6 /* ProjectSettingsVC.swift in Sources */,
 				21534D9D2A59CD8600E8078B /* UIDashboardView.swift in Sources */,
+				21534DA12A5A9B3B00E8078B /* TailwindCSS.swift in Sources */,
 				21534D962A59B3B300E8078B /* Storyboarded.swift in Sources */,
 				2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */,
 				21534D9F2A59E58100E8078B /* ProjectFilesVC.swift in Sources */,
@@ -370,6 +377,7 @@
 				21C21C542A36145200F40BE3 /* Enumerations.swift in Sources */,
 				21534D8F2A59B26F00E8078B /* NavigationVC.swift in Sources */,
 				21534D942A59B38B00E8078B /* Coordinator.swift in Sources */,
+				21534DA32A5A9ED000E8078B /* TailwindCollectionViewCell.swift in Sources */,
 				210F19B02A42DC9800D71A66 /* UIStroke.swift in Sources */,
 				21534D982A59B40A00E8078B /* MainCoordinator.swift in Sources */,
 				210F19AE2A42DBE100D71A66 /* UINodeView.swift in Sources */,

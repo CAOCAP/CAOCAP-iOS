@@ -872,8 +872,8 @@
                                                         </constraints>
                                                         <segments>
                                                             <segment title="" image="slider.horizontal.3" catalog="system"/>
-                                                            <segment title="" image="newspaper" catalog="system"/>
                                                             <segment title="" image="paintbrush.pointed" catalog="system"/>
+                                                            <segment title="" image="newspaper" catalog="system"/>
                                                         </segments>
                                                         <connections>
                                                             <action selector="didChangeAttributesViewSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="Prc-YI-hD3"/>
@@ -964,7 +964,7 @@
                                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                 </collectionViewFlowLayout>
                                                                 <cells>
-                                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cssCell" id="DVD-DZ-Urk">
+                                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tailwindCell" id="DVD-DZ-Urk" customClass="TailwindCollectionViewCell" customModule="CAOCAP" customModuleProvider="target">
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="UOh-29-RbV">
                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -999,6 +999,9 @@
                                                                                 <constraint firstItem="fJS-QH-Gwt" firstAttribute="leading" secondItem="UOh-29-RbV" secondAttribute="leading" id="mpL-I0-QWy"/>
                                                                             </constraints>
                                                                         </collectionViewCellContentView>
+                                                                        <connections>
+                                                                            <outlet property="label" destination="Klq-pa-cbQ" id="KhO-KO-fbg"/>
+                                                                        </connections>
                                                                     </collectionViewCell>
                                                                 </cells>
                                                                 <connections>
@@ -1276,7 +1279,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-B" translatesAutoresizingMaskIntoConstraints="NO" id="P6x-kE-Ig5">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-B" translatesAutoresizingMaskIntoConstraints="NO" id="P6x-kE-Ig5">
                                 <rect key="frame" x="190" y="544" width="200" height="300"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <constraints>
@@ -1284,7 +1287,7 @@
                                     <constraint firstAttribute="height" constant="300" id="Rqt-oP-C0r"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-A" translatesAutoresizingMaskIntoConstraints="NO" id="rlR-E4-3k0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-A" translatesAutoresizingMaskIntoConstraints="NO" id="rlR-E4-3k0">
                                 <rect key="frame" x="0.0" y="694" width="100" height="150"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <constraints>
@@ -1292,7 +1295,7 @@
                                     <constraint firstAttribute="width" constant="100" id="dte-sH-1oK"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-S" translatesAutoresizingMaskIntoConstraints="NO" id="gVl-VX-9FT">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-S" translatesAutoresizingMaskIntoConstraints="NO" id="gVl-VX-9FT">
                                 <rect key="frame" x="-20" y="340" width="80" height="140"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <constraints>
@@ -1300,7 +1303,7 @@
                                     <constraint firstAttribute="height" constant="140" id="b3d-iD-ZId"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-E" translatesAutoresizingMaskIntoConstraints="NO" id="GMr-kB-R2U">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-E" translatesAutoresizingMaskIntoConstraints="NO" id="GMr-kB-R2U">
                                 <rect key="frame" x="320" y="324" width="50" height="100"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <constraints>
@@ -2731,7 +2734,7 @@ There are no other in-app purchases.</string>
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-B" translatesAutoresizingMaskIntoConstraints="NO" id="KpP-TH-pqj">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-B" translatesAutoresizingMaskIntoConstraints="NO" id="KpP-TH-pqj">
                                 <rect key="frame" x="190" y="544" width="200" height="300"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <constraints>
@@ -2739,7 +2742,7 @@ There are no other in-app purchases.</string>
                                     <constraint firstAttribute="height" constant="300" id="iyp-II-sfd"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-A" translatesAutoresizingMaskIntoConstraints="NO" id="Ndb-KP-8US">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-A" translatesAutoresizingMaskIntoConstraints="NO" id="Ndb-KP-8US">
                                 <rect key="frame" x="0.0" y="694" width="100" height="150"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <constraints>
@@ -2747,7 +2750,7 @@ There are no other in-app purchases.</string>
                                     <constraint firstAttribute="width" constant="100" id="kNC-MV-f2Y"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-S" translatesAutoresizingMaskIntoConstraints="NO" id="GHf-dP-pE5">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-S" translatesAutoresizingMaskIntoConstraints="NO" id="GHf-dP-pE5">
                                 <rect key="frame" x="-10" y="494" width="80" height="140"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <constraints>
@@ -2755,7 +2758,7 @@ There are no other in-app purchases.</string>
                                     <constraint firstAttribute="width" constant="80" id="qnL-Yj-xwD"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-E" translatesAutoresizingMaskIntoConstraints="NO" id="rRT-YE-umc">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plant-E" translatesAutoresizingMaskIntoConstraints="NO" id="rRT-YE-umc">
                                 <rect key="frame" x="320" y="444" width="50" height="100"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <constraints>
@@ -2868,7 +2871,7 @@ There are no other in-app purchases.</string>
         <image name="target" catalog="system" width="128" height="123"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="123"/>
         <namedColor name="AccentColor">
-            <color red="0.0" green="0.65499997138977051" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
