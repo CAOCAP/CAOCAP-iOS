@@ -1,5 +1,5 @@
 //
-//  Store.swift
+//  StoreKitRepository.swift
 //  CAOCAP
 //
 //  Created by Azzam AL-Rashed on 14/06/2023.
@@ -16,7 +16,7 @@ typealias Transaction = StoreKit.Transaction
 typealias RenewalInfo = StoreKit.Product.SubscriptionInfo.RenewalInfo
 typealias RenewalState = StoreKit.Product.SubscriptionInfo.RenewalState
 
-public enum StoreError: Error {
+public enum StoreKitError: Error {
     case failedVerification
 }
 
@@ -31,7 +31,7 @@ public enum SubscriptionTier: Int, Comparable {
 }
 
 
-class Store: ObservableObject {
+class StoreKitRepository: ObservableObject {
     
     
     

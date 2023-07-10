@@ -19,11 +19,6 @@ class InitialVC: UIViewController, Storyboarded {
         appVersion.text = getVersion()
         setupStackView()
         
-        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
-          AnalyticsParameterItemID: "id-testingFirebaseAnalytics",
-          AnalyticsParameterItemName: "testingFirebaseAnalytics",
-          AnalyticsParameterContentType: "cont",
-        ])
     }
     
     func setupStackView() {

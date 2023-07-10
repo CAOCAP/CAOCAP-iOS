@@ -13,6 +13,10 @@
 		213DF5E02A5883D300679BB2 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 213DF5DF2A5883D300679BB2 /* SwiftSoup */; };
 		213DF5E32A5886B300679BB2 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 213DF5E22A5886B300679BB2 /* ReSwift */; };
 		213DF5E62A58A92F00679BB2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 213DF5E52A58A92F00679BB2 /* Lottie */; };
+		214995242A5C3404008B9987 /* ReduxActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214995232A5C3404008B9987 /* ReduxActions.swift */; };
+		214995262A5C3414008B9987 /* ReduxReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214995252A5C3414008B9987 /* ReduxReducer.swift */; };
+		214995282A5C342D008B9987 /* ReduxState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214995272A5C342D008B9987 /* ReduxState.swift */; };
+		2149952A2A5C34C9008B9987 /* ReduxStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214995292A5C34C9008B9987 /* ReduxStore.swift */; };
 		21534D8B2A59916F00E8078B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 21534D8A2A59916F00E8078B /* FirebaseAnalytics */; };
 		21534D8D2A59924F00E8078B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21534D8C2A59924F00E8078B /* GoogleService-Info.plist */; };
 		21534D8F2A59B26F00E8078B /* NavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534D8E2A59B26F00E8078B /* NavigationVC.swift */; };
@@ -57,7 +61,7 @@
 		21C21C692A38DFAD00F40BE3 /* Ubuntu-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21C21C602A38DFAD00F40BE3 /* Ubuntu-Light.ttf */; };
 		21C21C6A2A38DFAD00F40BE3 /* UFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 21C21C612A38DFAD00F40BE3 /* UFL.txt */; };
 		21DBA0012A38F4C800DFAC66 /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DBA0002A38F4C800DFAC66 /* InitialVC.swift */; };
-		21DBA0032A39E18C00DFAC66 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DBA0022A39E18C00DFAC66 /* Store.swift */; };
+		21DBA0032A39E18C00DFAC66 /* StoreKitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DBA0022A39E18C00DFAC66 /* StoreKitRepository.swift */; };
 		21DBA0052A39EC5500DFAC66 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DBA0042A39EC5500DFAC66 /* UIFont+Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +69,10 @@
 		210F19AD2A42DBE100D71A66 /* UINodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINodeView.swift; sourceTree = "<group>"; };
 		210F19AF2A42DC9800D71A66 /* UIStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStroke.swift; sourceTree = "<group>"; };
 		21326ECF2A530CAE00255570 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		214995232A5C3404008B9987 /* ReduxActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxActions.swift; sourceTree = "<group>"; };
+		214995252A5C3414008B9987 /* ReduxReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxReducer.swift; sourceTree = "<group>"; };
+		214995272A5C342D008B9987 /* ReduxState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxState.swift; sourceTree = "<group>"; };
+		214995292A5C34C9008B9987 /* ReduxStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxStore.swift; sourceTree = "<group>"; };
 		21534D8C2A59924F00E8078B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		21534D8E2A59B26F00E8078B /* NavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationVC.swift; sourceTree = "<group>"; };
 		21534D902A59B2E200E8078B /* ContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerVC.swift; sourceTree = "<group>"; };
@@ -109,7 +117,7 @@
 		21C21C602A38DFAD00F40BE3 /* Ubuntu-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Light.ttf"; sourceTree = "<group>"; };
 		21C21C612A38DFAD00F40BE3 /* UFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UFL.txt; sourceTree = "<group>"; };
 		21DBA0002A38F4C800DFAC66 /* InitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialVC.swift; sourceTree = "<group>"; };
-		21DBA0022A39E18C00DFAC66 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		21DBA0022A39E18C00DFAC66 /* StoreKitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitRepository.swift; sourceTree = "<group>"; };
 		21DBA0042A39EC5500DFAC66 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +138,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2149951C2A5C3209008B9987 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				218DA9C82A2B205800459C61 /* AppDelegate.swift */,
+				218DA9CA2A2B205800459C61 /* SceneDelegate.swift */,
+				218DA9D62A2B205900459C61 /* Info.plist */,
+				21534D8C2A59924F00E8078B /* GoogleService-Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		2149951D2A5C3213008B9987 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				2149951F2A5C3258008B9987 /* Models */,
+				21534D992A59CA9400E8078B /* Views */,
+				2178C1A02A4D992000876BB6 /* ViewControllers */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		2149951E2A5C321B008B9987 /* Redux */ = {
+			isa = PBXGroup;
+			children = (
+				214995292A5C34C9008B9987 /* ReduxStore.swift */,
+				214995272A5C342D008B9987 /* ReduxState.swift */,
+				214995232A5C3404008B9987 /* ReduxActions.swift */,
+				214995252A5C3414008B9987 /* ReduxReducer.swift */,
+			);
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		2149951F2A5C3258008B9987 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2186DB0E2A30BD6600773C5E /* Node.swift */,
+				21534DA02A5A9B3B00E8078B /* TailwindCSS.swift */,
+				21C21C532A36145200F40BE3 /* Enumerations.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		214995202A5C32E7008B9987 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				21326ECF2A530CAE00255570 /* UserDefaults.swift */,
+				21DBA0022A39E18C00DFAC66 /* StoreKitRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		214995212A5C338B008B9987 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				218DA9D12A2B205900459C61 /* Assets.xcassets */,
+				21C21C562A38DD7D00F40BE3 /* Fonts */,
+				214995222A5C33AC008B9987 /* Lottie */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		214995222A5C33AC008B9987 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 		21534D882A598F7300E8078B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +228,8 @@
 		21534D992A59CA9400E8078B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				218DA9CE2A2B205800459C61 /* Main.storyboard */,
+				218DA9D32A2B205900459C61 /* LaunchScreen.storyboard */,
 				2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */,
 				2178C1A32A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift */,
 				21534DA22A5A9ED000E8078B /* TailwindCollectionViewCell.swift */,
@@ -211,23 +289,13 @@
 		218DA9C72A2B205800459C61 /* CAOCAP */ = {
 			isa = PBXGroup;
 			children = (
-				218DA9C82A2B205800459C61 /* AppDelegate.swift */,
-				218DA9CA2A2B205800459C61 /* SceneDelegate.swift */,
-				21326ECF2A530CAE00255570 /* UserDefaults.swift */,
-				21C21C532A36145200F40BE3 /* Enumerations.swift */,
+				2149951C2A5C3209008B9987 /* App */,
+				2149951D2A5C3213008B9987 /* MVC */,
+				2149951E2A5C321B008B9987 /* Redux */,
 				21534D922A59B36800E8078B /* Coordinator */,
-				2178C1A02A4D992000876BB6 /* ViewControllers */,
-				21534D992A59CA9400E8078B /* Views */,
-				2186DB0E2A30BD6600773C5E /* Node.swift */,
-				21DBA0022A39E18C00DFAC66 /* Store.swift */,
-				21534DA02A5A9B3B00E8078B /* TailwindCSS.swift */,
-				218DA9CE2A2B205800459C61 /* Main.storyboard */,
-				218DA9D32A2B205900459C61 /* LaunchScreen.storyboard */,
-				218DA9D12A2B205900459C61 /* Assets.xcassets */,
-				21C21C562A38DD7D00F40BE3 /* Fonts */,
+				214995202A5C32E7008B9987 /* Repositories */,
+				214995212A5C338B008B9987 /* Resources */,
 				21534D882A598F7300E8078B /* Extensions */,
-				218DA9D62A2B205900459C61 /* Info.plist */,
-				21534D8C2A59924F00E8078B /* GoogleService-Info.plist */,
 			);
 			path = CAOCAP;
 			sourceTree = "<group>";
@@ -363,11 +431,13 @@
 			files = (
 				21534D912A59B2E200E8078B /* ContainerVC.swift in Sources */,
 				21C21C4F2A34B62E00F40BE3 /* PaletteVC.swift in Sources */,
+				214995262A5C3414008B9987 /* ReduxReducer.swift in Sources */,
 				218DA9CD2A2B205800459C61 /* MindMapVC.swift in Sources */,
 				218DA9C92A2B205800459C61 /* AppDelegate.swift in Sources */,
 				2178C19D2A4D92A300876BB6 /* ProjectSettingsVC.swift in Sources */,
 				21534D9D2A59CD8600E8078B /* UIDashboardView.swift in Sources */,
 				21534DA12A5A9B3B00E8078B /* TailwindCSS.swift in Sources */,
+				2149952A2A5C34C9008B9987 /* ReduxStore.swift in Sources */,
 				21534D962A59B3B300E8078B /* Storyboarded.swift in Sources */,
 				2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */,
 				21534D9F2A59E58100E8078B /* ProjectFilesVC.swift in Sources */,
@@ -376,11 +446,12 @@
 				2178C1A42A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift in Sources */,
 				2178C1A22A4DA2AB00876BB6 /* SettingsTableViewCell.swift in Sources */,
 				2186DB0F2A30BD6600773C5E /* Node.swift in Sources */,
+				214995282A5C342D008B9987 /* ReduxState.swift in Sources */,
 				21C21C4D2A34B61900F40BE3 /* PurchaseVC.swift in Sources */,
 				218DA9CB2A2B205800459C61 /* SceneDelegate.swift in Sources */,
 				21DBA0052A39EC5500DFAC66 /* UIFont+Extensions.swift in Sources */,
 				2186DB0D2A30946900773C5E /* UIView+Extensions.swift in Sources */,
-				21DBA0032A39E18C00DFAC66 /* Store.swift in Sources */,
+				21DBA0032A39E18C00DFAC66 /* StoreKitRepository.swift in Sources */,
 				21326ED02A530CAE00255570 /* UserDefaults.swift in Sources */,
 				21C21C4B2A34B60200F40BE3 /* SettingsVC.swift in Sources */,
 				2186DB112A30DF4700773C5E /* UIMindMap.swift in Sources */,
@@ -388,6 +459,7 @@
 				21C21C492A34B5D800F40BE3 /* ProjectsVC.swift in Sources */,
 				21C21C542A36145200F40BE3 /* Enumerations.swift in Sources */,
 				21534D8F2A59B26F00E8078B /* NavigationVC.swift in Sources */,
+				214995242A5C3404008B9987 /* ReduxActions.swift in Sources */,
 				21534D942A59B38B00E8078B /* Coordinator.swift in Sources */,
 				21534DA32A5A9ED000E8078B /* TailwindCollectionViewCell.swift in Sources */,
 				210F19B02A42DC9800D71A66 /* UIStroke.swift in Sources */,
@@ -541,7 +613,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CAOCAP/Info.plist;
+				INFOPLIST_FILE = CAOCAP/App/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -570,7 +642,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CAOCAP/Info.plist;
+				INFOPLIST_FILE = CAOCAP/App/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
