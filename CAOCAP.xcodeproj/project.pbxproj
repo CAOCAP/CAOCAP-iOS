@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2106C4152A5C95C300446620 /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2106C4142A5C95C300446620 /* Theme.xcassets */; };
+		2106C4182A5C997A00446620 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2106C4172A5C997A00446620 /* FirebaseAnalytics */; };
+		2106C41A2A5C997A00446620 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2106C4192A5C997A00446620 /* FirebaseCrashlytics */; };
 		210F19AE2A42DBE100D71A66 /* UINodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210F19AD2A42DBE100D71A66 /* UINodeView.swift */; };
 		210F19B02A42DC9800D71A66 /* UIStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210F19AF2A42DC9800D71A66 /* UIStroke.swift */; };
 		21326ED02A530CAE00255570 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21326ECF2A530CAE00255570 /* UserDefaults.swift */; };
@@ -17,7 +20,6 @@
 		214995262A5C3414008B9987 /* ReduxReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214995252A5C3414008B9987 /* ReduxReducer.swift */; };
 		214995282A5C342D008B9987 /* ReduxState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214995272A5C342D008B9987 /* ReduxState.swift */; };
 		2149952A2A5C34C9008B9987 /* ReduxStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214995292A5C34C9008B9987 /* ReduxStore.swift */; };
-		21534D8B2A59916F00E8078B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 21534D8A2A59916F00E8078B /* FirebaseAnalytics */; };
 		21534D8D2A59924F00E8078B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21534D8C2A59924F00E8078B /* GoogleService-Info.plist */; };
 		21534D8F2A59B26F00E8078B /* NavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534D8E2A59B26F00E8078B /* NavigationVC.swift */; };
 		21534D912A59B2E200E8078B /* ContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534D902A59B2E200E8078B /* ContainerVC.swift */; };
@@ -66,6 +68,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2106C4142A5C95C300446620 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
 		210F19AD2A42DBE100D71A66 /* UINodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINodeView.swift; sourceTree = "<group>"; };
 		210F19AF2A42DC9800D71A66 /* UIStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStroke.swift; sourceTree = "<group>"; };
 		21326ECF2A530CAE00255570 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
@@ -128,8 +131,9 @@
 			files = (
 				213DF5E32A5886B300679BB2 /* ReSwift in Frameworks */,
 				21C21C522A34B7C400F40BE3 /* IQKeyboardManagerSwift in Frameworks */,
+				2106C4182A5C997A00446620 /* FirebaseAnalytics in Frameworks */,
+				2106C41A2A5C997A00446620 /* FirebaseCrashlytics in Frameworks */,
 				213DF5E02A5883D300679BB2 /* SwiftSoup in Frameworks */,
-				21534D8B2A59916F00E8078B /* FirebaseAnalytics in Frameworks */,
 				213DF5E62A58A92F00679BB2 /* Lottie in Frameworks */,
 				21534DA72A5B038D00E8078B /* AdSupport.framework in Frameworks */,
 			);
@@ -193,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				218DA9D12A2B205900459C61 /* Assets.xcassets */,
+				2106C4142A5C95C300446620 /* Theme.xcassets */,
 				21C21C562A38DD7D00F40BE3 /* Fonts */,
 				214995222A5C33AC008B9987 /* Lottie */,
 			);
@@ -343,6 +348,7 @@
 				218DA9C12A2B205800459C61 /* Sources */,
 				218DA9C22A2B205800459C61 /* Frameworks */,
 				218DA9C32A2B205800459C61 /* Resources */,
+				2106C41B2A5C9B1700446620 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -354,7 +360,8 @@
 				213DF5DF2A5883D300679BB2 /* SwiftSoup */,
 				213DF5E22A5886B300679BB2 /* ReSwift */,
 				213DF5E52A58A92F00679BB2 /* Lottie */,
-				21534D8A2A59916F00E8078B /* FirebaseAnalytics */,
+				2106C4172A5C997A00446620 /* FirebaseAnalytics */,
+				2106C4192A5C997A00446620 /* FirebaseCrashlytics */,
 			);
 			productName = CAOCAP;
 			productReference = 218DA9C52A2B205800459C61 /* CAOCAP.app */;
@@ -389,7 +396,7 @@
 				213DF5DE2A5883D300679BB2 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 				213DF5E12A5886B300679BB2 /* XCRemoteSwiftPackageReference "ReSwift" */,
 				213DF5E42A58A92F00679BB2 /* XCRemoteSwiftPackageReference "lottie-spm" */,
-				21534D892A59916F00E8078B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				2106C4162A5C997A00446620 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 218DA9C62A2B205800459C61 /* Products */;
 			projectDirPath = "";
@@ -417,12 +424,34 @@
 				21C21C672A38DFAD00F40BE3 /* Ubuntu-BoldItalic.ttf in Resources */,
 				21C21C642A38DFAD00F40BE3 /* Ubuntu-Regular.ttf in Resources */,
 				218DA9D02A2B205800459C61 /* Main.storyboard in Resources */,
+				2106C4152A5C95C300446620 /* Theme.xcassets in Resources */,
 				21C21C662A38DFAD00F40BE3 /* Ubuntu-MediumItalic.ttf in Resources */,
 				21534D8D2A59924F00E8078B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2106C41B2A5C9B1700446620 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		218DA9C12A2B205800459C61 /* Sources */ = {
@@ -608,15 +637,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = Accent;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CAOCAP/App/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -625,6 +655,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 5.0.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ficruty.caocap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -637,7 +668,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = Accent;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
@@ -645,7 +676,7 @@
 				INFOPLIST_FILE = CAOCAP/App/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -654,6 +685,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 5.0.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ficruty.caocap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -686,6 +718,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2106C4162A5C997A00446620 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.11.0;
+			};
+		};
 		213DF5DE2A5883D300679BB2 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/scinfu/SwiftSoup";
@@ -710,14 +750,6 @@
 				minimumVersion = 4.2.0;
 			};
 		};
-		21534D892A59916F00E8078B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.4.0;
-			};
-		};
 		21C21C502A34B7C400F40BE3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
@@ -729,6 +761,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2106C4172A5C997A00446620 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2106C4162A5C997A00446620 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		2106C4192A5C997A00446620 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2106C4162A5C997A00446620 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
 		213DF5DF2A5883D300679BB2 /* SwiftSoup */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 213DF5DE2A5883D300679BB2 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
@@ -743,11 +785,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 213DF5E42A58A92F00679BB2 /* XCRemoteSwiftPackageReference "lottie-spm" */;
 			productName = Lottie;
-		};
-		21534D8A2A59916F00E8078B /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 21534D892A59916F00E8078B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
 		};
 		21C21C512A34B7C400F40BE3 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;

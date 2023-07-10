@@ -19,7 +19,7 @@
 import ReSwift
 
 func reduxReducer(action: Action, state: ReduxState?) -> ReduxState {
-    var state = state ?? ReduxState()
+    let state = state ?? ReduxState()
 
     switch action {
     case _ as SomeFakeAction:

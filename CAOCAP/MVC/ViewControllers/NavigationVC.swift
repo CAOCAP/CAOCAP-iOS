@@ -20,7 +20,6 @@ class NavigationVC: ContainerVC, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         navigate(to: 0)
         glowView.backgroundColor = indicatorColor
         indicatorView.backgroundColor = indicatorColor

@@ -468,7 +468,7 @@
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="gray" title="Aside">
                                                                     <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                                                    <color key="baseForegroundColor" name="Accent"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mmG-RR-xzF"/>
@@ -479,7 +479,7 @@
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="gray" title="Canvas">
                                                                     <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                                                    <color key="baseForegroundColor" name="Accent"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="opb-jm-rKA"/>
@@ -490,7 +490,7 @@
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="gray" title="Nav">
                                                                     <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                                                    <color key="baseForegroundColor" name="Accent"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n72-ap-PQs"/>
@@ -501,7 +501,7 @@
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="gray" title="Center">
                                                                     <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                                                    <color key="baseForegroundColor" name="Accent"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
                                                                     <action selector="didPressAddNode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yhb-w3-uTU"/>
@@ -2035,7 +2035,7 @@ There are no other in-app purchases.</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="YWP-YE-S2g">
-                                <rect key="frame" x="34" y="244.66666666666663" width="322.33333333333331" height="132"/>
+                                <rect key="frame" x="34" y="244.66666666666663" width="322.33333333333337" height="132"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try CAOCAP Premium for free" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sby-h7-ijT">
                                         <rect key="frame" x="0.0" y="0.0" width="322.33333333333331" height="26"/>
@@ -2443,7 +2443,7 @@ There are no other in-app purchases.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="User" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PVA-xc-Hdu">
-                                                <rect key="frame" x="50.333333333333314" y="0.0" width="279.99999999999994" height="44.666666666666664"/>
+                                                <rect key="frame" x="50.333333333333314" y="0.0" width="280" height="44.666666666666664"/>
                                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="35"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="nickname"/>
@@ -2870,6 +2870,9 @@ There are no other in-app purchases.</string>
         <image name="slider.horizontal.3" catalog="system" width="128" height="99"/>
         <image name="target" catalog="system" width="128" height="123"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="Accent">
+            <color red="0.0" green="0.65499997138977051" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="AccentColor">
             <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
