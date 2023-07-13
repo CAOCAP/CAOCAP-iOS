@@ -889,6 +889,10 @@
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="didEndEditingTextContent:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Kvc-VI-R4Q"/>
+                                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="yub-kN-YOy"/>
+                                                                </connections>
                                                             </textField>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gvH-94-iab">
                                                                 <rect key="frame" x="0.0" y="39" width="330" height="34"/>
@@ -1443,8 +1447,8 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="gear" catalog="system"/>
                                                 <buttonConfiguration key="configuration" style="tinted" image="gear" catalog="system">
-                                                    <color key="baseForegroundColor" name="AccentColor"/>
-                                                    <color key="baseBackgroundColor" name="AccentColor"/>
+                                                    <color key="baseForegroundColor" name="Accent"/>
+                                                    <color key="baseBackgroundColor" name="Accent"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="didPressSettingsButton:" destination="gTz-hA-32a" eventType="touchUpInside" id="fUm-r4-d7n"/>
@@ -2035,7 +2039,7 @@ There are no other in-app purchases.</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="YWP-YE-S2g">
-                                <rect key="frame" x="34" y="244.66666666666663" width="322.33333333333337" height="132"/>
+                                <rect key="frame" x="34" y="244.66666666666663" width="322.33333333333331" height="132"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try CAOCAP Premium for free" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sby-h7-ijT">
                                         <rect key="frame" x="0.0" y="0.0" width="322.33333333333331" height="26"/>

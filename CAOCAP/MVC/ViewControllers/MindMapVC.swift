@@ -26,6 +26,7 @@ class MindMapVC: UIViewController, Storyboarded {
     @IBOutlet weak var attributesView: UIView!
     @IBOutlet weak var attributesStackView: UIStackView!
     @IBOutlet weak var attributesSegmentedControl: UISegmentedControl!
+    
     @IBOutlet weak var contentTextField: UITextField!
     @IBOutlet weak var typeTextField: UITextField!
     @IBOutlet weak var idTextField: UITextField!
@@ -345,5 +346,15 @@ extension MindMapVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
 extension MindMapVC: UIMindMapDelegate {
     func didRemoveNode() {
         loadWebView()
+    }
+}
+
+extension MindMapVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+    }
+    
+    @IBAction func didEndEditingTextContent(_ sender: UITextField) {
+        print(sender.text)
     }
 }

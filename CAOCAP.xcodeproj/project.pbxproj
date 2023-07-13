@@ -10,6 +10,7 @@
 		2106C4152A5C95C300446620 /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2106C4142A5C95C300446620 /* Theme.xcassets */; };
 		2106C4182A5C997A00446620 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2106C4172A5C997A00446620 /* FirebaseAnalytics */; };
 		2106C41A2A5C997A00446620 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2106C4192A5C997A00446620 /* FirebaseCrashlytics */; };
+		2106C41D2A5F949400446620 /* HTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2106C41C2A5F949400446620 /* HTMLParser.swift */; };
 		210F19AE2A42DBE100D71A66 /* UINodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210F19AD2A42DBE100D71A66 /* UINodeView.swift */; };
 		210F19B02A42DC9800D71A66 /* UIStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210F19AF2A42DC9800D71A66 /* UIStroke.swift */; };
 		21326ED02A530CAE00255570 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21326ECF2A530CAE00255570 /* UserDefaults.swift */; };
@@ -69,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		2106C4142A5C95C300446620 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
+		2106C41C2A5F949400446620 /* HTMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLParser.swift; sourceTree = "<group>"; };
 		210F19AD2A42DBE100D71A66 /* UINodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINodeView.swift; sourceTree = "<group>"; };
 		210F19AF2A42DC9800D71A66 /* UIStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStroke.swift; sourceTree = "<group>"; };
 		21326ECF2A530CAE00255570 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 		214995202A5C32E7008B9987 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				2106C41C2A5F949400446620 /* HTMLParser.swift */,
 				21326ECF2A530CAE00255570 /* UserDefaults.swift */,
 				21DBA0022A39E18C00DFAC66 /* StoreKitRepository.swift */,
 			);
@@ -494,6 +497,7 @@
 				210F19B02A42DC9800D71A66 /* UIStroke.swift in Sources */,
 				21534D982A59B40A00E8078B /* MainCoordinator.swift in Sources */,
 				210F19AE2A42DBE100D71A66 /* UINodeView.swift in Sources */,
+				2106C41D2A5F949400446620 /* HTMLParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

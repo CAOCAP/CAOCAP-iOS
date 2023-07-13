@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftSoup
 
 protocol UIMindMapDelegate {
     func didRemoveNode()
