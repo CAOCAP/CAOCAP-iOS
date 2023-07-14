@@ -12,7 +12,9 @@
 
 
 import ReSwift
+import SwiftSoup
 
 struct ReduxState {
-    
+    var document: Document
+    var documentHistory: [Document]
 }

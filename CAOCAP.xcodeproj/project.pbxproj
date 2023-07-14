@@ -39,7 +39,6 @@
 		2178C1A42A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C1A32A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift */; };
 		2184CCFA2A522E6200B39882 /* IntroVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2184CCF92A522E6200B39882 /* IntroVC.swift */; };
 		2186DB0D2A30946900773C5E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2186DB0C2A30946900773C5E /* UIView+Extensions.swift */; };
-		2186DB0F2A30BD6600773C5E /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2186DB0E2A30BD6600773C5E /* Node.swift */; };
 		2186DB112A30DF4700773C5E /* UIMindMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2186DB102A30DF4700773C5E /* UIMindMap.swift */; };
 		218DA9C92A2B205800459C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218DA9C82A2B205800459C61 /* AppDelegate.swift */; };
 		218DA9CB2A2B205800459C61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218DA9CA2A2B205800459C61 /* SceneDelegate.swift */; };
@@ -96,7 +95,6 @@
 		2178C1A32A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwitchTableViewCell.swift; sourceTree = "<group>"; };
 		2184CCF92A522E6200B39882 /* IntroVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroVC.swift; sourceTree = "<group>"; };
 		2186DB0C2A30946900773C5E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		2186DB0E2A30BD6600773C5E /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		2186DB102A30DF4700773C5E /* UIMindMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMindMap.swift; sourceTree = "<group>"; };
 		218DA9C52A2B205800459C61 /* CAOCAP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAOCAP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		218DA9C82A2B205800459C61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -179,7 +177,6 @@
 		2149951F2A5C3258008B9987 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2186DB0E2A30BD6600773C5E /* Node.swift */,
 				21534DA02A5A9B3B00E8078B /* TailwindCSS.swift */,
 				21C21C532A36145200F40BE3 /* Enumerations.swift */,
 			);
@@ -298,8 +295,8 @@
 			isa = PBXGroup;
 			children = (
 				2149951C2A5C3209008B9987 /* App */,
-				2149951D2A5C3213008B9987 /* MVC */,
 				2149951E2A5C321B008B9987 /* Redux */,
+				2149951D2A5C3213008B9987 /* MVC */,
 				21534D922A59B36800E8078B /* Coordinator */,
 				214995202A5C32E7008B9987 /* Repositories */,
 				214995212A5C338B008B9987 /* Resources */,
@@ -477,7 +474,6 @@
 				2184CCFA2A522E6200B39882 /* IntroVC.swift in Sources */,
 				2178C1A42A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift in Sources */,
 				2178C1A22A4DA2AB00876BB6 /* SettingsTableViewCell.swift in Sources */,
-				2186DB0F2A30BD6600773C5E /* Node.swift in Sources */,
 				214995282A5C342D008B9987 /* ReduxState.swift in Sources */,
 				21C21C4D2A34B61900F40BE3 /* PurchaseVC.swift in Sources */,
 				218DA9CB2A2B205800459C61 /* SceneDelegate.swift in Sources */,

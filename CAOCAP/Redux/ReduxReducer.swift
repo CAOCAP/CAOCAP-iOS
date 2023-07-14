@@ -17,15 +17,16 @@
 */
 
 import ReSwift
+import SwiftSoup
 
 func reduxReducer(action: Action, state: ReduxState?) -> ReduxState {
-    let state = state ?? ReduxState()
+    let state = state ?? ReduxState(document: Document(""), documentHistory: [])
 
     switch action {
-    case _ as SomeFakeAction:
-        print("this is just a demo")
-    case _ as SomeFakeAction2:
-        print("this is just a demo2")
+    case _ as SomeDocumentAction:
+        print("this is just a demo: document did change")
+    case _ as SomeDocumentHistoryAction:
+        print("this is just a demo: document history did change")
     default:
         break
     }

@@ -14,8 +14,11 @@ protocol UIMindMapDelegate {
 
 class UIMindMap: UIScrollView, UIScrollViewDelegate {
     
-    var nodeTree: NodeTree
-    var nodeTreeHistory: [NodeTree]
+    var body: Element
+    var bodyHistory: [Element]
+    var selectedID: String
+    var nodeTree = [String: UINodeView]()
+    
     var mindMapDelegate: UIMindMapDelegate?
     var canvasHeightConstraint = NSLayoutConstraint()
     var canvasWidthConstraint = NSLayoutConstraint()
@@ -28,9 +31,10 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         return view
     }()
     
-    init(frame: CGRect, tree: NodeTree, history: [NodeTree] = [NodeTree]()) {
-        nodeTree = tree
-        nodeTreeHistory = history
+    init(frame: CGRect, body: Element, history: [Element] = [Element]()) {
+        self.body = body
+        bodyHistory = history
+        selectedID = body.id()
         super.init(frame: .zero)
         delegate = self
         translatesAutoresizingMaskIntoConstraints = false
@@ -53,145 +57,170 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         layoutIfNeeded()
         canvas.addGestureRecognizer(doubleTapZoom)
         canvas.isUserInteractionEnabled = true
-        load(body: nodeTree.body)
+        load(body: body)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func load(body: Node) {
+    func load(body: Element?) {
         print("\(#function)ing...")
+        guard let body = body else { return }
         canvas.subviews.forEach({ $0.removeFromSuperview() })
         draw(body)
-        if !body.children.isEmpty { load(children: body.children) }
+        if !body.children().isEmpty() { load(children: body.children()) }
         
     }
     
-    func load(children: [Node]) {
+    func load(children: Elements) {
         print("\(#function)ing...")
-        children.forEach { node in
-            draw(node)
-            if !node.children.isEmpty { load(children: node.children) }
+        children.forEach { child in
+            draw(child)
+            if !child.children().isEmpty() { load(children: child.children()) }
         }
         
     }
     
-    func add(_ node: Node) {
+    func add(_ element: Element) {
         print("\(#function)ing...")
-        guard let selectedNode = nodeTree.body.search(id: nodeTree.selectedID) else { return }
-        selectedNode.add(child: node)
-        load(body: nodeTree.body)/*🤔 🤔 🤔*/
-        select(node)
+        do {
+            let selectedNode = try body.getElementById(selectedID)
+            try selectedNode?.appendChild(element)
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
+        load(body: body)/*🤔 🤔 🤔*/
+        select(element)
     }
     
-    func delete(_ node: Node) {
+    func delete(_ element: Element) {
         print("\(#function)ing...")
-        guard let parent = node.parent else { return }
-        parent.remove(node: node)
-        load(body: nodeTree.body)/*🤔 🤔 🤔*/
+        guard let parent = element.parent() else { return }
+        do {
+            try parent.removeChild(element)
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
+        load(body: body)/*🤔 🤔 🤔*/
         select(parent)
     }
     
-    func draw(_ node: Node) {
-        print("\(#function)ing... \(node.title)")
-        canvas.addSubview(node.view)
-        node.view.delegate = self
+    func draw(_ element: Element) {
+        print("\(#function)ing... \(element.tagName())")
+        let nodeView = UINodeView(id: element.id(), title: element.tagName(), color: .systemBlue)
+        nodeTree[element.id()] = nodeView
+        nodeView.delegate = self
+        canvas.addSubview(nodeView)
         
-        if !node.children.isEmpty {
-            canvas.insertSubview(node.stroke, at: 0)
-            node.stroke.widthConstraint.constant = CGFloat(node.children.count * 180)
-            node.stroke.centerXAnchor.constraint(equalTo: node.view.centerXAnchor).isActive = true
-            node.stroke.topAnchor.constraint(equalTo: node.view.bottomAnchor).isActive = true
+        if element.tagName() == "body" {
+            nodeView.centerXAnchor.constraint(equalTo: canvas.centerXAnchor).isActive = true
+            nodeView.centerYAnchor.constraint(equalTo: canvas.centerYAnchor).isActive = true
+        } else {
+            guard let parent = element.parent(), let parentView = nodeTree[parent.id()] else { return }
+            do {
+                let elementSiblingIndex = try element.elementSiblingIndex()
+                //set nodeView constraints
+                let centerPosition = Int(parent.children().count/2)
+                if parent.children().count % 2 == 0 {
+                    // even number of children ( two near centre children )
+                    if elementSiblingIndex == centerPosition {
+                        //near centre right child
+                        nodeView.centerXAnchor.constraint(equalTo: parentView.centerXAnchor, constant: 90).isActive = true
+                    } else if elementSiblingIndex == centerPosition - 1 {
+                        //near centre left child
+                        nodeView.centerXAnchor.constraint(equalTo: parentView.centerXAnchor, constant: -90).isActive = true
+                    } else {
+                        //push to the right or left| i am 0 of 4 -> 0 - 2 + 0.5 -> -1.5*180, i am 3 of 4 -> 3 - 2 + 0.5 -> 1.5*180
+                        let multiplier = Double(element.siblingIndex - centerPosition) + 0.5
+                        nodeView.centerXAnchor.constraint(equalTo: parentView.centerXAnchor, constant: CGFloat(multiplier * 180)).isActive = true
+                    }
+                } else {
+                    // odd number of children ( one centered child )
+                    if elementSiblingIndex == centerPosition {
+                        //centered child
+                        nodeView.centerXAnchor.constraint(equalTo: parentView.centerXAnchor).isActive = true
+                    } else {
+                        //push to the right or left
+                        let multiplier = elementSiblingIndex - centerPosition
+                        nodeView.centerXAnchor.constraint(equalTo: parentView.centerXAnchor, constant: CGFloat(multiplier * 180)).isActive = true
+                    }
+                }
+            } catch Exception.Error(let type, let message) {
+                print(type, message)
+            } catch {
+                print("error")
+            }
+            nodeView.centerYAnchor.constraint(equalTo: parentView.centerYAnchor, constant: 120).isActive = true
         }
         
-        
-        if let parent = node.parent {
-            //set nodeView constraints
-            let centerPosition = Int(parent.children.count/2)
-            if parent.children.count % 2 == 0 {
-                // even number of children ( two near centre children )
-                if node.position == centerPosition {
-                    //near centre right child
-                    node.view.centerXAnchor.constraint(equalTo: parent.view.centerXAnchor, constant: 90).isActive = true
-                } else if node.position == centerPosition - 1 {
-                    //near centre left child
-                    node.view.centerXAnchor.constraint(equalTo: parent.view.centerXAnchor, constant: -90).isActive = true
-                } else {
-                    //push to the right or left| i am 0 of 4 -> 0 - 2 + 0.5 -> -1.5*180, i am 3 of 4 -> 3 - 2 + 0.5 -> 1.5*180
-                    let multiplier = Double(node.position - centerPosition) + 0.5
-                    node.view.centerXAnchor.constraint(equalTo: parent.view.centerXAnchor, constant: CGFloat(multiplier * 180)).isActive = true
-                }
-            } else {
-                // odd number of children ( one centered child )
-                if node.position == centerPosition {
-                    //centered child
-                    node.view.centerXAnchor.constraint(equalTo: parent.view.centerXAnchor).isActive = true
-                } else {
-                    //push to the right or left
-                    let multiplier = node.position - centerPosition
-                    node.view.centerXAnchor.constraint(equalTo: parent.view.centerXAnchor, constant: CGFloat(multiplier * 180)).isActive = true
-                }
-            }
-            node.view.centerYAnchor.constraint(equalTo: parent.view.centerYAnchor, constant: 120).isActive = true
-        } else {
-            node.view.centerXAnchor.constraint(equalTo: canvas.centerXAnchor).isActive = true
-            node.view.centerYAnchor.constraint(equalTo: canvas.centerYAnchor).isActive = true
+        if !element.children().isEmpty() {
+            let nodeStroke = UIStroke(lines: element.children().count)
+            canvas.insertSubview(nodeStroke, at: 0)
+            nodeStroke.widthConstraint.constant = CGFloat(element.children().count * 180)
+            nodeStroke.centerXAnchor.constraint(equalTo: nodeView.centerXAnchor).isActive = true
+            nodeStroke.topAnchor.constraint(equalTo: nodeView.bottomAnchor).isActive = true
         }
         
         canvasWidthConstraint.constant += 30
         canvasHeightConstraint.constant += 30
     }
     
-    func select(_ node: Node) {
-        print("Previously Selected Node ID: \(nodeTree.selectedID)")
-        let previouslySelectedID = nodeTree.selectedID
-        nodeTree.selectedID = node.id
-        let currentNodeView = node.view
-        currentNodeView.layer.borderWidth = 2
-        print("Current Selected Node ID: \(nodeTree.selectedID)")
-        guard let previousNodeView = nodeTree.body.search(id: previouslySelectedID)?.view else { return }
-        previousNodeView.layer.borderWidth = 0
+    func select(_ element: Element) {
+        print("Previously Selected Node ID: \(selectedID)")
+        let previouslySelectedID = selectedID
+        selectedID = element.id()
+        print("Current Selected Node ID: \(selectedID)")
         
+        if let selectedNodeView = nodeTree[selectedID] {
+            selectedNodeView.layer.borderWidth = 2
+        }
+        if let previousNodeView = nodeTree[previouslySelectedID] {
+            previousNodeView.layer.borderWidth = 0
+        }
     }
     
     func updateSelectedNode(_ direction: Direction?) {
         guard let direction = direction else { return }
-        print("Previously Selected Node ID: \(nodeTree.selectedID)")
-        let previouslySelectedID = nodeTree.selectedID
-        switch direction {
-        case .left:
-            guard let selected = nodeTree.body.search(id: nodeTree.selectedID),
-                  let parent = selected.parent,
-                  selected.position > 0
-            else { return }
-            print("select prevues sibling")
-            nodeTree.selectedID = parent.children[selected.position-1].id
-        case .up:
-            guard let selected = nodeTree.body.search(id: nodeTree.selectedID),
-                  let parent = selected.parent
-            else { return }
-            print("select parent")
-            nodeTree.selectedID = parent.id
-        case .down:
-            guard let firstChild = nodeTree.body.search(id: nodeTree.selectedID)?.children.first
-            else { return }
-            print("select first child")
-            nodeTree.selectedID = firstChild.id
-        case .right:
-            guard let selected = nodeTree.body.search(id: nodeTree.selectedID),
-                  let parent = selected.parent,
-                  parent.children.count > selected.position + 1
-            else { return }
-            print("select next sibling")
-            nodeTree.selectedID = parent.children[selected.position + 1].id
-        }
-        
-        print("Current Selected Node ID: \(nodeTree.selectedID)")
-        guard let previousNodeView = nodeTree.body.search(id: previouslySelectedID)?.view,
-              let currentNodeView = nodeTree.body.search(id: nodeTree.selectedID)?.view else { return }
-        currentNodeView.layer.borderWidth = 2
-        previousNodeView.layer.borderWidth = 0
+        print("Previously Selected Node ID: \(selectedID)")
+        let previouslySelectedID = selectedID
+        //        switch direction {
+        //        case .left:
+        //            guard let selected = nodeTree.body.search(id: selectedID),
+        //                  let parent = selected.parent,
+        //                  selected.position > 0
+        //            else { return }
+        //            print("select prevues sibling")
+        //            selectedID = parent.children[selected.position-1].id
+        //        case .up:
+        //            guard let selected = nodeTree.body.search(id: selectedID),
+        //                  let parent = selected.parent
+        //            else { return }
+        //            print("select parent")
+        //            selectedID = parent.id
+        //        case .down:
+        //            guard let firstChild = nodeTree.body.search(id: selectedID)?.children.first
+        //            else { return }
+        //            print("select first child")
+        //            nodeTree.selectedID = firstChild.id
+        //        case .right:
+        //            guard let selected = nodeTree.body.search(id: selectedID),
+        //                  let parent = selected.parent,
+        //                  parent.children.count > selected.position + 1
+        //            else { return }
+        //            print("select next sibling")
+        //            nodeTree.selectedID = parent.children[selected.position + 1].id
+        //        }
+        //
+        //        print("Current Selected Node ID: \(selectedID)")
+        //        guard let previousNodeView = nodeTree.body.search(id: previouslySelectedID)?.view,
+        //              let currentNodeView = nodeTree.body.search(id: nodeTree.selectedID)?.view else { return }
+        //        currentNodeView.layer.borderWidth = 2
+        //        previousNodeView.layer.borderWidth = 0
     }
     
     func center() {
@@ -227,17 +256,32 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
 
 
 extension UIMindMap: UINodeViewDelegate {
-    func select(nodeID: UUID) {
-        guard let node = nodeTree.body.search(id: nodeID) else { return }
-        select(node)
+    func select(nodeID: String) {
+        print("\(#function)ing...")
+        do {
+            if let element = try body.getElementById(nodeID) {
+                select(element)
+            }
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
     }
     
-    func delete(nodeID: UUID) {
+    func delete(nodeID: String) {
         print("\(#function)ing...")
-        guard let node = nodeTree.body.search(id: nodeID) else { return }
-        DispatchQueue.main.async {
-            self.delete(node)
-            self.mindMapDelegate?.didRemoveNode()
+        do {
+            if let element = try body.getElementById(nodeID) {
+                DispatchQueue.main.async {
+                    self.delete(element)
+                    self.mindMapDelegate?.didRemoveNode()
+                }
+            }
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
         }
     }
     

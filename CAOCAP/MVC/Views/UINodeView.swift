@@ -8,21 +8,21 @@
 import UIKit
 
 protocol UINodeViewDelegate {
-    func select(nodeID: UUID)
-    func delete(nodeID: UUID)
+    func select(nodeID: String)
+    func delete(nodeID: String)
 }
 
 class UINodeView: UIView, UIContextMenuInteractionDelegate {
-    let nodeID: UUID
+    let nodeID: String
     var delegate: UINodeViewDelegate?
-    init(id: UUID, title: String, color: UIColor) {
+    init(id: String, title: String, color: UIColor) {
         nodeID = id
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalToConstant: 60).isActive = true
         widthAnchor.constraint(equalToConstant: 150).isActive = true
         layer.cornerRadius = 10
-        layer.borderColor = UIColor.blue.cgColor
+        layer.borderColor = UIColor.purple.cgColor
         backgroundColor = color
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 60))
         label.textAlignment = .center

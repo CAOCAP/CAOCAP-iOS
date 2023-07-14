@@ -16,5 +16,5 @@
 import ReSwift
 
 // MARK: Actions for something
-struct SomeFakeAction: Action {}
-struct SomeFakeAction2: Action {}
+struct SomeDocumentAction: Action {}
+struct SomeDocumentHistoryAction: Action {}

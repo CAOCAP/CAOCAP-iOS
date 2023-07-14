@@ -7,8 +7,11 @@
 
 import UIKit
 import WebKit
+import SwiftSoup
 
 class MindMapVC: UIViewController, Storyboarded {
+    
+    var document = Document("")
     
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var resizeIcon: UIImageView!
@@ -38,6 +41,8 @@ class MindMapVC: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupHTMLDocument()
+        
         let resizeGR = UIPanGestureRecognizer(target: self, action: #selector(handleResizingWebView(sender:)))
         resizeIcon.addGestureRecognizer(resizeGR)
         
@@ -47,23 +52,42 @@ class MindMapVC: UIViewController, Storyboarded {
         loadWebView()
     }
     
+    
+    
     func loadWebView() {
-        let htmlCode = #"""
-        <!DOCTYPE html>
-        <html>
-            <head>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <script src="https://cdn.tailwindcss.com"></script>
-            </head>
-            \#(mindMap.nodeTree.body.dom)
-        </html>
-        """#
-        webView.loadHTMLString(htmlCode, baseURL: nil)
-        print(htmlCode)
+        do {
+            let htmlCode = try document.outerHtml()
+            print("loadWebView:", htmlCode)
+            webView.loadHTMLString( htmlCode, baseURL: nil)
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
+    }
+    
+    func setupHTMLDocument() {
+        do {
+           let html = #"""
+            <!DOCTYPE html>
+            <html>
+                <head>
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <script src="https://cdn.tailwindcss.com"></script>
+                </head>
+                <body id="\#(UUID())"></body>
+            </html>
+            """#
+           document = try SwiftSoup.parse(html)
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
     }
     
     func setupMindMapLayout() {
-        mindMap = UIMindMap(frame: view.frame, tree: NodeTree())
+        mindMap = UIMindMap(frame: view.frame, body: document.body()!)
         mindMap.mindMapDelegate = self
         view.insertSubview(mindMap, at: 0)
         NSLayoutConstraint.activate([
@@ -208,89 +232,37 @@ class MindMapVC: UIViewController, Storyboarded {
         mindMap.updateSelectedNode(Direction(rawValue: sender.tag))
     }
     
-    @IBAction func didPressAddNode(_ sender: UIButton) {
+    @IBAction func didPressAddElement(_ sender: UIButton) {
         print("\(#function)ing...")
-        /* warning : you are about to witness ugly code*/
-        let newNode: Node
-        switch sender.tag {
-        case 1:
-            newNode = Node(title: "Span", color: .systemGreen)
-        case 2:
-            newNode = Node(title: "Div", color: .systemPink)
-        case 3:
-            newNode = Node(title: "Button", color: .systemPurple, text: "Click Me!")
-        case 4:
-            newNode = Node(title: "A", color: .systemPurple, text: "Visit W3Schools.com!")
-        case 5:
-            newNode = Node(title: "Input", color: .systemPurple)
-        case 6:
-            newNode = Node(title: "Header", color: .systemBlue)
-        case 7:
-            newNode = Node(title: "Main", color: .systemBlue)
-        case 8:
-            newNode = Node(title: "Footer", color: .systemBlue)
-        case 9:
-            newNode = Node(title: "Article", color: .systemBlue)
-        case 10:
-            newNode = Node(title: "Section", color: .systemBlue)
-        case 11:
-            newNode = Node(title: "Aside", color: .systemBlue)
-        case 12:
-            newNode = Node(title: "Canvas", color: .systemBlue)
-        case 13:
-            newNode = Node(title: "Nav", color: .systemBlue)
-        case 14:
-            newNode = Node(title: "Center", color: .systemBlue)
-        case 15:
-            newNode = Node(title: "TextArea", color: .systemTeal, text: "The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It is often assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.")
-        case 16:
-            newNode = Node(title: "Form", color: .systemTeal)
-        case 17:
-            newNode = Node(title: "Label", color: .systemTeal, text: "First name:")
-        case 18:
-            newNode = Node(title: "Option", color: .systemTeal, text: "CAOCAP")
-        case 19:
-            newNode = Node(title: "Legend", color: .systemTeal, text: "Personalia:")
-        case 20:
-            newNode = Node(title: "Select", color: .systemTeal)
-        case 21:
-            newNode = Node(title: "FieldSet", color: .systemTeal)
-        case 22:
-            newNode = Node(title: "OptGroup", color: .systemTeal)
-        case 23:
-            newNode = Node(title: "Output", color: .systemTeal)
-        case 24:
-            newNode = Node(title: "Video", color: .systemYellow)
-        case 25:
-            newNode = Node(title: "Img", color: .systemYellow)
-        case 26:
-            newNode = Node(title: "Audio", color: .systemYellow)
-        case 27:
-            newNode = Node(title: "Source", color: .systemYellow)
-        case 28:
-            newNode = Node(title: "UL", color: .systemGray)
-        case 29:
-            newNode = Node(title: "OL", color: .systemGray)
-        case 30:
-            newNode = Node(title: "LI", color: .systemGray, text: "Coffee")
-        case 31:
-            newNode = Node(title: "BR", color: .systemGray)
-        case 32:
-            newNode = Node(title: "HR", color: .systemGray)
-        case 33:
-            newNode = Node(title: "H1", color: .systemGray2, text: "Hello CAOCAP!")
-        case 34:
-            newNode = Node(title: "P", color: .systemGray2, text: "At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.")
-        case 35:
-            newNode = Node(title: "B", color: .systemGray2, text: "this is bold text")
-        case 36:
-            newNode = Node(title: "I", color: .systemGray2, text: "displayed in italic")
-        case 37:
-            newNode = Node(title: "U", color: .systemGray2, text: "content underline")
-        default:
-            newNode = Node(title: "S", color: .systemGray2, text: "content deleted")
+        let htmlTags = [
+            "",// element buttons tags start from 1
+            "span","div",
+            "button","a","input",
+            "header","main","footer",
+            "article","section",
+            "aside","canvas","nav","center",
+            "textArea","form","label",
+            "option","legend","select",
+            "fieldSet","optGroup","output",
+            "video","img","audio","source",
+            "ul","ol","li","br","hr",
+            "h1","p","b","i","u","s",
+        ]
+        guard sender.tag > 0 && sender.tag < htmlTags.count else { return }
+        let newElement = Element(Tag(htmlTags[sender.tag]), "")
+        do {
+            try newElement.attr("id", UUID().uuidString)
+            if newElement.tagName() == "h1" {
+                try newElement.appendText("Hello CAOCAP")
+            } else if newElement.tagName() == "p" {
+                try newElement.appendText("The SwiftSoup whitelist sanitizer works by parsing the input HTML (in a safe, sand-boxed environment), and then iterating through the parse tree and only allowing known-safe tags and attributes (and values) through into the cleaned output.")
+            }
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
         }
-        mindMap.add(newNode)
+        mindMap.add(newElement)
         loadWebView()
         /*🤔 🤔 🤔*/
     }
