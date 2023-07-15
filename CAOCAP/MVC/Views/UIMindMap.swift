@@ -93,7 +93,7 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
             print("error")
         }
         load(body: body)/*🤔 🤔 🤔*/
-        select(element)
+        select(element.id())
     }
     
     func delete(_ element: Element) {
@@ -107,7 +107,7 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
             print("error")
         }
         load(body: body)/*🤔 🤔 🤔*/
-        select(parent)
+        select(parent.id())
     }
     
     func draw(_ element: Element) {
@@ -170,10 +170,10 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         canvasHeightConstraint.constant += 30
     }
     
-    func select(_ element: Element) {
+    func select(_ elementID: String) {
         print("Previously Selected Node ID: \(selectedID)")
         let previouslySelectedID = selectedID
-        selectedID = element.id()
+        selectedID = elementID
         print("Current Selected Node ID: \(selectedID)")
         
         if let selectedNodeView = nodeTree[selectedID] {
@@ -186,41 +186,32 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     
     func updateSelectedNode(_ direction: Direction?) {
         guard let direction = direction else { return }
-        print("Previously Selected Node ID: \(selectedID)")
-        let previouslySelectedID = selectedID
-        //        switch direction {
-        //        case .left:
-        //            guard let selected = nodeTree.body.search(id: selectedID),
-        //                  let parent = selected.parent,
-        //                  selected.position > 0
-        //            else { return }
-        //            print("select prevues sibling")
-        //            selectedID = parent.children[selected.position-1].id
-        //        case .up:
-        //            guard let selected = nodeTree.body.search(id: selectedID),
-        //                  let parent = selected.parent
-        //            else { return }
-        //            print("select parent")
-        //            selectedID = parent.id
-        //        case .down:
-        //            guard let firstChild = nodeTree.body.search(id: selectedID)?.children.first
-        //            else { return }
-        //            print("select first child")
-        //            nodeTree.selectedID = firstChild.id
-        //        case .right:
-        //            guard let selected = nodeTree.body.search(id: selectedID),
-        //                  let parent = selected.parent,
-        //                  parent.children.count > selected.position + 1
-        //            else { return }
-        //            print("select next sibling")
-        //            nodeTree.selectedID = parent.children[selected.position + 1].id
-        //        }
-        //
-        //        print("Current Selected Node ID: \(selectedID)")
-        //        guard let previousNodeView = nodeTree.body.search(id: previouslySelectedID)?.view,
-        //              let currentNodeView = nodeTree.body.search(id: nodeTree.selectedID)?.view else { return }
-        //        currentNodeView.layer.borderWidth = 2
-        //        previousNodeView.layer.borderWidth = 0
+        do {
+            if let element = try body.getElementById(selectedID) {
+                switch direction {
+                case .left:
+                    guard let previousSibling = try element.previousElementSibling() else { return }
+                    print("select prevues sibling")
+                    select(previousSibling.id())
+                case .up:
+                    guard let parent = element.parent() else { return }
+                    print("select parent")
+                    select(parent.id())
+                case .down:
+                    guard let firstChild = element.children().first() else { return }
+                    print("select first child")
+                    select(firstChild.id())
+                case .right:
+                    guard let nextSibling = try element.nextElementSibling() else { return }
+                    print("select next sibling")
+                    select(nextSibling.id())
+                }
+            }
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
     }
     
     func center() {
@@ -258,15 +249,7 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
 extension UIMindMap: UINodeViewDelegate {
     func select(nodeID: String) {
         print("\(#function)ing...")
-        do {
-            if let element = try body.getElementById(nodeID) {
-                select(element)
-            }
-        } catch Exception.Error(let type, let message) {
-            print(type, message)
-        } catch {
-            print("error")
-        }
+        select(nodeID)
     }
     
     func delete(nodeID: String) {
