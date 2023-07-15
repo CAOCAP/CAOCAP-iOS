@@ -112,10 +112,13 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     
     func draw(_ element: Element) {
         print("\(#function)ing... \(element.tagName())")
-        let nodeView = UINodeView(id: element.id(), title: element.tagName(), color: .systemBlue)
+        let nodeView = UINodeView(element: element)
         nodeTree[element.id()] = nodeView
         nodeView.delegate = self
         canvas.addSubview(nodeView)
+        
+        canvasWidthConstraint.constant += 30
+        canvasHeightConstraint.constant += 30
         
         if element.tagName() == "body" {
             nodeView.centerXAnchor.constraint(equalTo: canvas.centerXAnchor).isActive = true
@@ -165,9 +168,6 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
             nodeStroke.centerXAnchor.constraint(equalTo: nodeView.centerXAnchor).isActive = true
             nodeStroke.topAnchor.constraint(equalTo: nodeView.bottomAnchor).isActive = true
         }
-        
-        canvasWidthConstraint.constant += 30
-        canvasHeightConstraint.constant += 30
     }
     
     func select(_ elementID: String) {

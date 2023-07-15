@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftSoup
 
 protocol UINodeViewDelegate {
     func select(nodeID: String)
@@ -13,20 +14,21 @@ protocol UINodeViewDelegate {
 }
 
 class UINodeView: UIView, UIContextMenuInteractionDelegate {
-    let nodeID: String
+    let element: Element
     var delegate: UINodeViewDelegate?
-    init(id: String, title: String, color: UIColor) {
-        nodeID = id
+    init(element: Element) {
+        self.element = element
+        let tagName = element.tagName()
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalToConstant: 60).isActive = true
         widthAnchor.constraint(equalToConstant: 150).isActive = true
         layer.cornerRadius = 10
         layer.borderColor = UIColor.purple.cgColor
-        backgroundColor = color
+        setBackgroundColor(tagName: tagName)
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 60))
         label.textAlignment = .center
-        label.text = title
+        label.text = tagName
         label.textColor = .white
         label.font = UIFont.ubuntu(.medium, size: 20)
         addSubview(label)
@@ -35,13 +37,37 @@ class UINodeView: UIView, UIContextMenuInteractionDelegate {
         addInteraction(UIContextMenuInteraction(delegate: self))
     }
     
+    func setBackgroundColor(tagName: String) {
+        switch tagName {
+        case "span":
+            backgroundColor = .systemGreen
+        case "div":
+            backgroundColor = .systemPink
+        case "button","a","input":
+            backgroundColor = .systemPurple
+        case "body","header","main","footer","article","section","aside","canvas","nav","center":
+            backgroundColor = .systemBlue
+        case "textArea","form","label","option","legend","select","fieldSet","optGroup","output":
+            backgroundColor = .systemTeal
+        case "video","img","audio","source":
+            backgroundColor = .systemYellow
+        case "ul","ol","li","br","hr":
+            backgroundColor = .systemGray3
+        case "h1","p","b","i","u","s":
+            backgroundColor = .systemGray
+        default:
+            backgroundColor = .systemGray2
+        }
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     @objc func didTap(gesture: UITapGestureRecognizer) {
-        print("did tap node:\(nodeID)")
-        delegate?.select(nodeID: nodeID)
+        let id = element.id()
+        print("did tap node:\(id)")
+        delegate?.select(nodeID: id)
     }
     
     func delete() {
@@ -49,11 +75,11 @@ class UINodeView: UIView, UIContextMenuInteractionDelegate {
             self.removeFromSuperview()
         }
     }
-
+    
     func contextMenuInteraction(_ interaction: UIContextMenuInteraction, configurationForMenuAtLocation location: CGPoint) -> UIContextMenuConfiguration? {
         return UIContextMenuConfiguration(actionProvider:  { _ in
             return UIMenu(options: [.displayInline], children: [UIAction(title: "Remove", attributes: .destructive, handler: { _ in
-                self.delegate?.delete(nodeID: self.nodeID)
+                self.delegate?.delete(nodeID: self.element.id())
             })])
         })
     }
