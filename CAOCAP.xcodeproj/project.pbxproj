@@ -33,6 +33,9 @@
 		21534DA12A5A9B3B00E8078B /* TailwindCSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534DA02A5A9B3B00E8078B /* TailwindCSS.swift */; };
 		21534DA32A5A9ED000E8078B /* TailwindCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534DA22A5A9ED000E8078B /* TailwindCollectionViewCell.swift */; };
 		21534DA72A5B038D00E8078B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21534DA52A5AFF8F00E8078B /* AdSupport.framework */; };
+		2175FBDF2A648C9100F7E97F /* party.json in Resources */ = {isa = PBXBuildFile; fileRef = 2175FBDD2A648C9100F7E97F /* party.json */; };
+		2175FBE02A648C9100F7E97F /* confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 2175FBDE2A648C9100F7E97F /* confetti.json */; };
+		2175FBE22A648D0700F7E97F /* LottieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2175FBE12A648D0700F7E97F /* LottieRepository.swift */; };
 		2178C19D2A4D92A300876BB6 /* ProjectSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */; };
 		2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */; };
 		2178C1A22A4DA2AB00876BB6 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */; };
@@ -89,6 +92,9 @@
 		21534DA02A5A9B3B00E8078B /* TailwindCSS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TailwindCSS.swift; sourceTree = "<group>"; };
 		21534DA22A5A9ED000E8078B /* TailwindCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TailwindCollectionViewCell.swift; sourceTree = "<group>"; };
 		21534DA52A5AFF8F00E8078B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		2175FBDD2A648C9100F7E97F /* party.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = party.json; sourceTree = "<group>"; };
+		2175FBDE2A648C9100F7E97F /* confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = confetti.json; sourceTree = "<group>"; };
+		2175FBE12A648D0700F7E97F /* LottieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieRepository.swift; sourceTree = "<group>"; };
 		2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsVC.swift; sourceTree = "<group>"; };
 		2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSettingsVC.swift; sourceTree = "<group>"; };
 		2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -189,6 +195,7 @@
 				2106C41C2A5F949400446620 /* HTMLParser.swift */,
 				21326ECF2A530CAE00255570 /* UserDefaults.swift */,
 				21DBA0022A39E18C00DFAC66 /* StoreKitRepository.swift */,
+				2175FBE12A648D0700F7E97F /* LottieRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -207,6 +214,7 @@
 		214995222A5C33AC008B9987 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				2175FBDC2A648C6300F7E97F /* Celebration */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -252,6 +260,15 @@
 				21534DA52A5AFF8F00E8078B /* AdSupport.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2175FBDC2A648C6300F7E97F /* Celebration */ = {
+			isa = PBXGroup;
+			children = (
+				2175FBDE2A648C9100F7E97F /* confetti.json */,
+				2175FBDD2A648C9100F7E97F /* party.json */,
+			);
+			path = Celebration;
 			sourceTree = "<group>";
 		};
 		2178C1A02A4D992000876BB6 /* ViewControllers */ = {
@@ -414,6 +431,7 @@
 			files = (
 				21C21C682A38DFAD00F40BE3 /* Ubuntu-Italic.ttf in Resources */,
 				21C21C572A38DD8D00F40BE3 /* monogamma.otf in Resources */,
+				2175FBDF2A648C9100F7E97F /* party.json in Resources */,
 				21C21C6A2A38DFAD00F40BE3 /* UFL.txt in Resources */,
 				21C21C622A38DFAD00F40BE3 /* Ubuntu-Medium.ttf in Resources */,
 				218DA9D52A2B205900459C61 /* LaunchScreen.storyboard in Resources */,
@@ -424,6 +442,7 @@
 				21C21C672A38DFAD00F40BE3 /* Ubuntu-BoldItalic.ttf in Resources */,
 				21C21C642A38DFAD00F40BE3 /* Ubuntu-Regular.ttf in Resources */,
 				218DA9D02A2B205800459C61 /* Main.storyboard in Resources */,
+				2175FBE02A648C9100F7E97F /* confetti.json in Resources */,
 				2106C4152A5C95C300446620 /* Theme.xcassets in Resources */,
 				21C21C662A38DFAD00F40BE3 /* Ubuntu-MediumItalic.ttf in Resources */,
 				21534D8D2A59924F00E8078B /* GoogleService-Info.plist in Resources */,
@@ -464,6 +483,7 @@
 				218DA9CD2A2B205800459C61 /* MindMapVC.swift in Sources */,
 				218DA9C92A2B205800459C61 /* AppDelegate.swift in Sources */,
 				2178C19D2A4D92A300876BB6 /* ProjectSettingsVC.swift in Sources */,
+				2175FBE22A648D0700F7E97F /* LottieRepository.swift in Sources */,
 				21534D9D2A59CD8600E8078B /* UIDashboardView.swift in Sources */,
 				21534DA12A5A9B3B00E8078B /* TailwindCSS.swift in Sources */,
 				2149952A2A5C34C9008B9987 /* ReduxStore.swift in Sources */,
