@@ -42,15 +42,12 @@ class MindMapVC: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupHTMLDocument()
-        
         let resizeGR = UIPanGestureRecognizer(target: self, action: #selector(handleResizingWebView(sender:)))
         resizeIcon.addGestureRecognizer(resizeGR)
         
         setupToolsViewGestureRecognizer()
         setupMindMapLayout()
         
-        loadWebView()
     }
     
     
@@ -69,26 +66,6 @@ class MindMapVC: UIViewController, Storyboarded {
         }
     }
     
-    func setupHTMLDocument() {
-        do {
-            let html = #"""
-            <!DOCTYPE html>
-            <html>
-                <head>
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <script src="https://cdn.tailwindcss.com"></script>
-                </head>
-                <body id="\#(UUID())"></body>
-            </html>
-            """#
-            let doc = try SwiftSoup.parse(html)
-            ReduxStore.dispatch(EditProjectAction(updatedDoc: doc))
-        } catch Exception.Error(let type, let message) {
-            print(type, message)
-        } catch {
-            print("error")
-        }
-    }
     
     func setupMindMapLayout() {
         mindMap = UIMindMap(frame: view.frame)
@@ -252,22 +229,9 @@ class MindMapVC: UIViewController, Storyboarded {
             "ul","ol","li","br","hr",
             "h1","p","b","i","u","s",
         ]
-        guard sender.tag > 0 && sender.tag < htmlTags.count else { return }
-        let newElement = Element(Tag(htmlTags[sender.tag]), "")
-        do {
-            try newElement.attr("id", UUID().uuidString)
-            if newElement.tagName() == "h1" {
-                try newElement.appendText("Hello CAOCAP")
-            } else if newElement.tagName() == "p" {
-                try newElement.appendText("The SwiftSoup whitelist sanitizer works by parsing the input HTML (in a safe, sand-boxed environment), and then iterating through the parse tree and only allowing known-safe tags and attributes (and values) through into the cleaned output.")
-            }
-        } catch Exception.Error(let type, let message) {
-            print(type, message)
-        } catch {
-            print("error")
+        if sender.tag > 0 && sender.tag < htmlTags.count {
+            mindMap.add(tag: htmlTags[sender.tag])
         }
-        mindMap.add(newElement)
-        loadWebView() /*🤔 🤔 🤔*/
     }
     
     @IBAction func didPressUndo(_ sender: UIButton) {
@@ -343,8 +307,11 @@ extension MindMapVC: StoreSubscriber {
     }
     
     func newState(state: ReduxState) {
-        project = state.openedProject
-        mindMap.project = project
+        if project == nil {
+            project = state.openedProject
+            mindMap.project = project
+        }
+        loadWebView()/*🤔*/
         mindMap.loadBody()
     }
 }

@@ -78,22 +78,31 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         
     }
     
-    func add(_ element: Element) {
+    func add(tag: String) {
         print("\(#function)ing...")
         guard let body = project?.document?.body(),
               let selectedID = project?.selectedElementID
         else { return }
         
+        let newElement = Element(Tag(tag), "")
         do {
+            try newElement.attr("id", UUID().uuidString)
+            switch newElement.tagName() {
+            case "h1":
+                try newElement.appendText("Hello CAOCAP")
+            case "p":
+                try newElement.appendText("The SwiftSoup whitelist sanitizer works by parsing the input HTML (in a safe, sand-boxed environment), and then iterating through the parse tree and only allowing known-safe tags and attributes (and values) through into the cleaned output.")
+            default:
+                break
+            }
             let selectedNode = try body.getElementById(selectedID)
-            try selectedNode?.appendChild(element)
+            try selectedNode?.appendChild(newElement)
         } catch Exception.Error(let type, let message) {
             print(type, message)
         } catch {
             print("error")
         }
-        loadBody()/*🤔*/
-        select(element.id())/*🤔*/
+        select(newElement.id())/*🤔*/
     }
     
     func delete(_ element: Element) {
@@ -106,7 +115,6 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         } catch {
             print("error")
         }
-        loadBody()/*🤔*/
         select(parent.id())/*🤔*/
     }
     
@@ -171,14 +179,13 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     }
     
     func select(_ elementID: String) {
-        guard let selectedID = project?.selectedElementID else { return }
+        guard let previouslySelectedID = project?.selectedElementID else { return }
         
-        print("Previously Selected Node ID: \(selectedID)")
-        let previouslySelectedID = selectedID
-        ReduxStore.dispatch(UpdateSelectedElementAction(selectedID: selectedID))
-        print("Current Selected Node ID: \(selectedID)")
-        
-        if let selectedNodeView = nodeTree[selectedID] {
+        print("Previously Selected Node ID: \(previouslySelectedID)")
+        ReduxStore.dispatch(UpdateSelectedElementAction(selectedID: elementID))
+        print("Current Selected Node ID: \(elementID)")
+
+        if let selectedNodeView = nodeTree[elementID] {
             selectedNodeView.layer.borderWidth = 2
         }
         if let previousNodeView = nodeTree[previouslySelectedID] {
@@ -222,6 +229,10 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     
     func center() {
         print("\(#function)ing...")
+        let centerOffsetX = (contentSize.width - frame.size.width) / 2
+        let centerOffsetY = (contentSize.height - frame.size.height) / 2
+        let centerPoint = CGPoint(x: centerOffsetX, y: centerOffsetY)
+        setContentOffset(centerPoint, animated: true)
         /*🤔 🤔 🤔*/
     }
     
