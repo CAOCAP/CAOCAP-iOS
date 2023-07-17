@@ -7,6 +7,7 @@
 
 import UIKit
 import WebKit
+import ReSwift
 import SwiftSoup
 
 class MindMapVC: UIViewController, Storyboarded {
@@ -68,7 +69,7 @@ class MindMapVC: UIViewController, Storyboarded {
     
     func setupHTMLDocument() {
         do {
-           let html = #"""
+            let html = #"""
             <!DOCTYPE html>
             <html>
                 <head>
@@ -78,7 +79,7 @@ class MindMapVC: UIViewController, Storyboarded {
                 <body id="\#(UUID())"></body>
             </html>
             """#
-           document = try SwiftSoup.parse(html)
+            document = try SwiftSoup.parse(html)
         } catch Exception.Error(let type, let message) {
             print(type, message)
         } catch {
@@ -277,7 +278,6 @@ class MindMapVC: UIViewController, Storyboarded {
         //mindMap.redo()🤔
     }
     
-    
     @IBAction func didChangeAttributesViewSegmentedControl(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
@@ -327,6 +327,20 @@ extension MindMapVC: UITextFieldDelegate {
     }
     
     @IBAction func didEndEditingTextContent(_ sender: UITextField) {
-        print(sender.text)
+        print(sender.text ?? "")
+    }
+}
+
+extension MindMapVC: StoreSubscriber {
+    override func viewWillAppear(_ animated: Bool) {
+        ReduxStore.subscribe(self)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        ReduxStore.unsubscribe(self)
+    }
+    
+    func newState(state: ReduxState) {
+        
     }
 }

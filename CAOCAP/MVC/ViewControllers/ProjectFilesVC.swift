@@ -6,9 +6,9 @@
 //
 
 import UIKit
+import ReSwift
 
 class ProjectFilesVC: UIViewController {
-
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -17,7 +17,6 @@ class ProjectFilesVC: UIViewController {
         tableView.register(UITableViewCell.self,forCellReuseIdentifier: "cell")
     }
 }
-
 
 extension ProjectFilesVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,4 +30,18 @@ extension ProjectFilesVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     
+}
+
+extension ProjectFilesVC: StoreSubscriber {
+    override func viewWillAppear(_ animated: Bool) {
+        ReduxStore.subscribe(self)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        ReduxStore.unsubscribe(self)
+    }
+    
+    func newState(state: ReduxState) {
+        
+    }
 }

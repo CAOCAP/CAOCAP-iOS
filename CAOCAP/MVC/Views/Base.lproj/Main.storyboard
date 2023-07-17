@@ -1235,7 +1235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1886" y="-219"/>
+            <point key="canvasLocation" x="-1483" y="-863"/>
         </scene>
         <!--Project SettingsVC-->
         <scene sceneID="elP-iC-bqe">
@@ -1269,7 +1269,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="001-4u-oUJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2654" y="-596"/>
+            <point key="canvasLocation" x="-1800" y="-128"/>
         </scene>
         <!--InitialVC-->
         <scene sceneID="fR9-Jp-f0Z">
@@ -1496,7 +1496,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aBE-Ww-O05" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1121.5384615384614" y="-218.95734597156397"/>
+            <point key="canvasLocation" x="-4589" y="-886"/>
         </scene>
         <!--PaletteVC-->
         <scene sceneID="CGp-xd-Gep">
@@ -1902,7 +1902,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ELs-0z-lWx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2178" y="723"/>
+            <point key="canvasLocation" x="-5943" y="-220"/>
         </scene>
         <!--PurchaseVC-->
         <scene sceneID="ze9-Xh-tBD">
@@ -2039,7 +2039,7 @@ There are no other in-app purchases.</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="YWP-YE-S2g">
-                                <rect key="frame" x="34" y="244.66666666666663" width="322.33333333333337" height="132"/>
+                                <rect key="frame" x="34" y="244.66666666666663" width="322.33333333333331" height="132"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try CAOCAP Premium for free" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sby-h7-ijT">
                                         <rect key="frame" x="0.0" y="0.0" width="322.33333333333331" height="26"/>
@@ -2146,7 +2146,7 @@ There are no other in-app purchases.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DoN-0n-QQJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1467.6923076923076" y="722.2748815165877"/>
+            <point key="canvasLocation" x="-5263" y="-220"/>
         </scene>
         <!--Main SettingsVC-->
         <scene sceneID="50w-kj-1TB">
@@ -2180,7 +2180,7 @@ There are no other in-app purchases.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hdj-rd-HtH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-32" y="723"/>
+            <point key="canvasLocation" x="-3920" y="-220"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="xbn-ri-IN6">
@@ -2326,7 +2326,7 @@ There are no other in-app purchases.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ABx-c4-Crd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="708" y="723"/>
+            <point key="canvasLocation" x="-3920" y="-886"/>
         </scene>
         <!--ProjectsVC-->
         <scene sceneID="5pi-xE-rFc">
@@ -2375,7 +2375,7 @@ There are no other in-app purchases.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y2f-Lv-Ams" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-737" y="722"/>
+            <point key="canvasLocation" x="-4588" y="-220"/>
         </scene>
         <!--IntroVC-->
         <scene sceneID="es5-iM-h5g">
@@ -2535,7 +2535,7 @@ There are no other in-app purchases.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ONT-Y7-xoo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1122" y="-1546"/>
+            <point key="canvasLocation" x="-5943" y="-886"/>
         </scene>
         <!--NavigationVC-->
         <scene sceneID="OVl-J1-EMS">
@@ -2724,7 +2724,7 @@ There are no other in-app purchases.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9tB-Td-74n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1122" y="-886"/>
+            <point key="canvasLocation" x="-4931" y="-1563"/>
         </scene>
         <!--ChartsVC-->
         <scene sceneID="OJH-aP-Ool">
@@ -2787,7 +2787,7 @@ There are no other in-app purchases.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pYZ-H1-2tI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-338" y="-220"/>
+            <point key="canvasLocation" x="-5263" y="-886"/>
         </scene>
         <!--Project FilesVC-->
         <scene sceneID="Spa-sn-UJb">
@@ -2821,7 +2821,7 @@ There are no other in-app purchases.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jKk-xg-j7g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2655" y="102"/>
+            <point key="canvasLocation" x="-1109" y="-128"/>
         </scene>
     </scenes>
     <resources>

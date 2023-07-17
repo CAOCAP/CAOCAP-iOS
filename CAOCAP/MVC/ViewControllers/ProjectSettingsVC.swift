@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ReSwift
 
 class ProjectSettingsVC: SettingsVC {
     
@@ -43,4 +44,18 @@ class ProjectSettingsVC: SettingsVC {
             ]),        ]
     }
     
+}
+
+extension ProjectSettingsVC: StoreSubscriber {
+    override func viewWillAppear(_ animated: Bool) {
+        ReduxStore.subscribe(self)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        ReduxStore.unsubscribe(self)
+    }
+    
+    func newState(state: ReduxState) {
+        
+    }
 }
