@@ -12,7 +12,7 @@ import SwiftSoup
 
 class MindMapVC: UIViewController, Storyboarded {
     
-    var document = Document("")
+    var project: Project?
     
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var resizeIcon: UIImageView!
@@ -56,6 +56,8 @@ class MindMapVC: UIViewController, Storyboarded {
     
     
     func loadWebView() {
+        guard let document = project?.document else { return }
+        
         do {
             let htmlCode = try document.outerHtml()
             print("loadWebView:", htmlCode)
@@ -79,7 +81,8 @@ class MindMapVC: UIViewController, Storyboarded {
                 <body id="\#(UUID())"></body>
             </html>
             """#
-            document = try SwiftSoup.parse(html)
+            let doc = try SwiftSoup.parse(html)
+            ReduxStore.dispatch(EditProjectAction(updatedDoc: doc))
         } catch Exception.Error(let type, let message) {
             print(type, message)
         } catch {
@@ -88,7 +91,7 @@ class MindMapVC: UIViewController, Storyboarded {
     }
     
     func setupMindMapLayout() {
-        mindMap = UIMindMap(frame: view.frame, body: document.body()!)
+        mindMap = UIMindMap(frame: view.frame)
         mindMap.mindMapDelegate = self
         view.insertSubview(mindMap, at: 0)
         NSLayoutConstraint.activate([
@@ -264,8 +267,7 @@ class MindMapVC: UIViewController, Storyboarded {
             print("error")
         }
         mindMap.add(newElement)
-        loadWebView()
-        /*🤔 🤔 🤔*/
+        loadWebView() /*🤔 🤔 🤔*/
     }
     
     @IBAction func didPressUndo(_ sender: UIButton) {
@@ -341,6 +343,8 @@ extension MindMapVC: StoreSubscriber {
     }
     
     func newState(state: ReduxState) {
-        
+        project = state.openedProject
+        mindMap.project = project
+        mindMap.loadBody()
     }
 }

@@ -14,7 +14,16 @@
 
 
 import ReSwift
+import SwiftSoup
 
-// MARK: Actions for something
-struct SomeDocumentAction: Action {}
-struct SomeDocumentHistoryAction: Action {}
+// MARK: Project Actions
+
+struct CreateProjectAction: Action { let newProject: Project } 
+struct DeleteProjectAction: Action {}
+
+struct OpenProjectAction: Action {}
+struct CloseProjectAction: Action {}
+
+struct EditProjectAction: Action { let updatedDoc: Document}
+
+struct UpdateSelectedElementAction: Action { let selectedID: String }

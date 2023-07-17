@@ -14,9 +14,8 @@ protocol UIMindMapDelegate {
 
 class UIMindMap: UIScrollView, UIScrollViewDelegate {
     
-    var body: Element
-    var bodyHistory: [Element]
-    var selectedID: String
+    var project: Project?
+    
     var nodeTree = [String: UINodeView]()
     
     var mindMapDelegate: UIMindMapDelegate?
@@ -31,11 +30,8 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         return view
     }()
     
-    init(frame: CGRect, body: Element, history: [Element] = [Element]()) {
-        self.body = body
-        bodyHistory = history
-        selectedID = body.id()
-        super.init(frame: .zero)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         delegate = self
         translatesAutoresizingMaskIntoConstraints = false
         minimumZoomScale = 0.3
@@ -57,16 +53,16 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         layoutIfNeeded()
         canvas.addGestureRecognizer(doubleTapZoom)
         canvas.isUserInteractionEnabled = true
-        load(body: body)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func load(body: Element?) {
+    
+    func loadBody() {
         print("\(#function)ing...")
-        guard let body = body else { return }
+        guard let body = project?.document?.body() else { return }
         canvas.subviews.forEach({ $0.removeFromSuperview() })
         draw(body)
         if !body.children().isEmpty() { load(children: body.children()) }
@@ -84,6 +80,10 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     
     func add(_ element: Element) {
         print("\(#function)ing...")
+        guard let body = project?.document?.body(),
+              let selectedID = project?.selectedElementID
+        else { return }
+        
         do {
             let selectedNode = try body.getElementById(selectedID)
             try selectedNode?.appendChild(element)
@@ -92,8 +92,8 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         } catch {
             print("error")
         }
-        load(body: body)/*🤔 🤔 🤔*/
-        select(element.id())
+        loadBody()/*🤔*/
+        select(element.id())/*🤔*/
     }
     
     func delete(_ element: Element) {
@@ -106,8 +106,8 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         } catch {
             print("error")
         }
-        load(body: body)/*🤔 🤔 🤔*/
-        select(parent.id())
+        loadBody()/*🤔*/
+        select(parent.id())/*🤔*/
     }
     
     func draw(_ element: Element) {
@@ -171,9 +171,11 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     }
     
     func select(_ elementID: String) {
+        guard let selectedID = project?.selectedElementID else { return }
+        
         print("Previously Selected Node ID: \(selectedID)")
         let previouslySelectedID = selectedID
-        selectedID = elementID
+        ReduxStore.dispatch(UpdateSelectedElementAction(selectedID: selectedID))
         print("Current Selected Node ID: \(selectedID)")
         
         if let selectedNodeView = nodeTree[selectedID] {
@@ -185,7 +187,11 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     }
     
     func updateSelectedNode(_ direction: Direction?) {
-        guard let direction = direction else { return }
+        guard let direction = direction,
+              let body = project?.document?.body(),
+              let selectedID = project?.selectedElementID
+        else { return }
+        
         do {
             if let element = try body.getElementById(selectedID) {
                 switch direction {
@@ -254,6 +260,7 @@ extension UIMindMap: UINodeViewDelegate {
     
     func delete(nodeID: String) {
         print("\(#function)ing...")
+        guard let body = project?.document?.body() else { return }
         do {
             if let element = try body.getElementById(nodeID) {
                 DispatchQueue.main.async {
@@ -269,3 +276,5 @@ extension UIMindMap: UINodeViewDelegate {
     }
     
 }
+
+

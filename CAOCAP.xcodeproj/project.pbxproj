@@ -36,6 +36,7 @@
 		2175FBDF2A648C9100F7E97F /* party.json in Resources */ = {isa = PBXBuildFile; fileRef = 2175FBDD2A648C9100F7E97F /* party.json */; };
 		2175FBE02A648C9100F7E97F /* confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 2175FBDE2A648C9100F7E97F /* confetti.json */; };
 		2175FBE22A648D0700F7E97F /* LottieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2175FBE12A648D0700F7E97F /* LottieRepository.swift */; };
+		2175FBE42A657D1500F7E97F /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2175FBE32A657D1500F7E97F /* Project.swift */; };
 		2178C19D2A4D92A300876BB6 /* ProjectSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */; };
 		2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */; };
 		2178C1A22A4DA2AB00876BB6 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */; };
@@ -95,6 +96,7 @@
 		2175FBDD2A648C9100F7E97F /* party.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = party.json; sourceTree = "<group>"; };
 		2175FBDE2A648C9100F7E97F /* confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = confetti.json; sourceTree = "<group>"; };
 		2175FBE12A648D0700F7E97F /* LottieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieRepository.swift; sourceTree = "<group>"; };
+		2175FBE32A657D1500F7E97F /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsVC.swift; sourceTree = "<group>"; };
 		2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSettingsVC.swift; sourceTree = "<group>"; };
 		2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		2149951F2A5C3258008B9987 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2175FBE32A657D1500F7E97F /* Project.swift */,
 				21534DA02A5A9B3B00E8078B /* TailwindCSS.swift */,
 				21C21C532A36145200F40BE3 /* Enumerations.swift */,
 			);
@@ -502,6 +505,7 @@
 				21DBA0032A39E18C00DFAC66 /* StoreKitRepository.swift in Sources */,
 				21326ED02A530CAE00255570 /* UserDefaults.swift in Sources */,
 				21C21C4B2A34B60200F40BE3 /* SettingsVC.swift in Sources */,
+				2175FBE42A657D1500F7E97F /* Project.swift in Sources */,
 				2186DB112A30DF4700773C5E /* UIMindMap.swift in Sources */,
 				21DBA0012A38F4C800DFAC66 /* InitialVC.swift in Sources */,
 				21C21C492A34B5D800F40BE3 /* ProjectsVC.swift in Sources */,

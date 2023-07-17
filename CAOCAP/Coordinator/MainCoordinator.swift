@@ -34,6 +34,7 @@ final class MainCoordinator: Coordinator {
     }
     
     func createNewProject() {
+        ReduxStore.dispatch(CreateProjectAction(newProject: Project()))
         let vc = MindMapVC.instantiate()
         navigationController.present(vc, animated: true)
     }

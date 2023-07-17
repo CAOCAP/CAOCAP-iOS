@@ -12,9 +12,8 @@
 
 
 import ReSwift
-import SwiftSoup
 
 struct ReduxState {
-    var document: Document
-    var documentHistory: [Document]
+    var openedProject: Project?
+    var projects: [Project]?
 }
