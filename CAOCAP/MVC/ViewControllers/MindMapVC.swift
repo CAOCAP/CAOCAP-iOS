@@ -293,7 +293,8 @@ extension MindMapVC: UITextFieldDelegate {
     }
     
     @IBAction func didEndEditingTextContent(_ sender: UITextField) {
-        print(sender.text ?? "")
+        guard let project = project, let text = sender.text else { return }
+        project.updateSelectedElementText(content: text) // this should be in the projectReducer
     }
 }
 
@@ -313,5 +314,17 @@ extension MindMapVC: StoreSubscriber {
         }
         loadWebView()/*🤔*/
         mindMap.loadBody()
+        
+        if let selectedElementText = project?.getSelectedElement()?.ownText() {
+            contentTextField.text = selectedElementText
+        }
+        
+        if let selectedElementType = project?.getSelectedElementType() {
+            typeTextField.text = selectedElementType
+        }
+        
+        idTextField.placeholder = project?.selectedElementID
+        
+        
     }
 }

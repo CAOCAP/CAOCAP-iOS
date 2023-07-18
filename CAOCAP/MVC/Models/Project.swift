@@ -43,4 +43,38 @@ class Project {
         self.documentHistory = documentHistory
         self.selectedElementID = selectedElementID
     }
+    
+    func getSelectedElement() -> Element? {
+        if let selectedElementID = selectedElementID {
+            do {
+                return try document?.body()?.getElementById(selectedElementID)
+            } catch Exception.Error(let type, let message) {
+                print(type, message)
+            } catch {
+                print("error")
+            }
+        }
+        return nil
+    }
+    
+    func getSelectedElementType() -> String? {
+        do {
+            return try getSelectedElement()?.attr("type")
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
+        return nil
+    }
+    
+    func updateSelectedElementText(content: String) {
+        do {
+            try getSelectedElement()?.text(content)
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
+    }
 }

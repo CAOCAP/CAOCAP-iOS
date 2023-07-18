@@ -66,7 +66,6 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         canvas.subviews.forEach({ $0.removeFromSuperview() })
         draw(body)
         if !body.children().isEmpty() { load(children: body.children()) }
-        
     }
     
     func load(children: Elements) {
@@ -87,14 +86,6 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         let newElement = Element(Tag(tag), "")
         do {
             try newElement.attr("id", UUID().uuidString)
-            switch newElement.tagName() {
-            case "h1":
-                try newElement.appendText("Hello CAOCAP")
-            case "p":
-                try newElement.appendText("The SwiftSoup whitelist sanitizer works by parsing the input HTML (in a safe, sand-boxed environment), and then iterating through the parse tree and only allowing known-safe tags and attributes (and values) through into the cleaned output.")
-            default:
-                break
-            }
             let selectedNode = try body.getElementById(selectedID)
             try selectedNode?.appendChild(newElement)
         } catch Exception.Error(let type, let message) {

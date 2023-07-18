@@ -22,6 +22,26 @@ import SwiftSoup
 func reduxReducer(action: Action, state: ReduxState?) -> ReduxState {
     var state = state ?? ReduxState()
 
+    switch action { // this is not the best way, please fix this (https://reswift.github.io/ReSwift/master/getting-started-guide.html)
+    case _ as CreateProjectAction,
+         _ as OpenProjectAction,
+         _ as CloseProjectAction,
+         _ as UpdateSelectedElementAction,
+         _ as EditProjectAction,
+         _ as DeleteProjectAction:
+        state = projectReducer(action: action, state: state)
+    default:
+        break
+    }
+
+    return state
+}
+
+
+
+func projectReducer(action: Action, state: ReduxState?) -> ReduxState {
+    var state = state ?? ReduxState()
+
     switch action {
     case let action as CreateProjectAction:
         state.openedProject = action.newProject
