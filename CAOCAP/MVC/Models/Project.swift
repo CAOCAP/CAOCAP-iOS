@@ -77,4 +77,31 @@ class Project {
             print("error")
         }
     }
+    
+    func isSelectedElementHidden() -> Bool {
+         return getSelectedElement()?.hasAttr("hidden") ?? false
+    }
+    
+    func setSelectedElementHidden(_ isHidden: Bool) {
+        do {
+            if isHidden {
+                try getSelectedElement()?.attr("hidden", "")
+            } else {
+                try getSelectedElement()?.removeAttr("hidden")
+            }
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
+    }
+    
+    func setSelectedElementBackground(color: String) {
+        // TODO: find out how to set the background color
+    }
+    
+    func getSelectedElementBackgroundColor() -> String {
+        // TODO: find out how to get the background color
+        return ""
+    }
 }

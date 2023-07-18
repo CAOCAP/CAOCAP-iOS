@@ -34,6 +34,8 @@ class MindMapVC: UIViewController, Storyboarded {
     @IBOutlet weak var contentTextField: UITextField!
     @IBOutlet weak var typeTextField: UITextField!
     @IBOutlet weak var idTextField: UITextField!
+    @IBOutlet weak var backgroundColorWell: UIColorWell!
+    @IBOutlet weak var hiddenSwitch: UISwitch!
     
     @IBOutlet weak var jsView: UIView!
     
@@ -47,14 +49,10 @@ class MindMapVC: UIViewController, Storyboarded {
         
         setupToolsViewGestureRecognizer()
         setupMindMapLayout()
-        
     }
-    
-    
     
     func loadWebView() {
         guard let document = project?.document else { return }
-        
         do {
             let htmlCode = try document.outerHtml()
             print("loadWebView:", htmlCode)
@@ -261,6 +259,11 @@ class MindMapVC: UIViewController, Storyboarded {
         }
     }
     
+    @IBAction func didChangeHiddenSwitch(_ sender: UISwitch) {
+        project?.setSelectedElementHidden(sender.isOn)
+    }
+    
+    
 }
 
 extension MindMapVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -322,6 +325,11 @@ extension MindMapVC: StoreSubscriber {
         if let selectedElementType = project?.getSelectedElementType() {
             typeTextField.text = selectedElementType
         }
+        
+        if let isHidden = project?.isSelectedElementHidden() {
+            hiddenSwitch.isOn = isHidden
+        }
+            
         
         idTextField.placeholder = project?.selectedElementID
         
