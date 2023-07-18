@@ -116,8 +116,8 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         nodeView.delegate = self
         canvas.addSubview(nodeView)
         
-        canvasWidthConstraint.constant += 30
-        canvasHeightConstraint.constant += 30
+        canvasWidthConstraint.constant += 30/*🤔*/
+        canvasHeightConstraint.constant += 30/*🤔*/
         
         if element.tagName() == "body" {
             nodeView.centerXAnchor.constraint(equalTo: canvas.centerXAnchor).isActive = true

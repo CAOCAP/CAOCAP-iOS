@@ -78,9 +78,11 @@ class UINodeView: UIView, UIContextMenuInteractionDelegate {
     
     func contextMenuInteraction(_ interaction: UIContextMenuInteraction, configurationForMenuAtLocation location: CGPoint) -> UIContextMenuConfiguration? {
         return UIContextMenuConfiguration(actionProvider:  { _ in
+            guard self.element.tagName() != "body" else { return nil }
             return UIMenu(options: [.displayInline], children: [UIAction(title: "Remove", attributes: .destructive, handler: { _ in
                 self.delegate?.delete(nodeID: self.element.id())
             })])
+            
         })
     }
     
