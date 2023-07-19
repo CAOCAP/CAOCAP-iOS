@@ -8,8 +8,8 @@
 import UIKit
 
 class ProjectsVC: UIViewController, Storyboarded {
+    var coordinator: MainCoordinator?
 
-    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {

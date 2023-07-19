@@ -63,13 +63,6 @@ class InitialVC: UIViewController, Storyboarded {
         return "\(version) (\(build))"
     }
     
-    @IBAction func didPressSettingsButton(_ sender: Any) {
-        coordinator?.viewMainSettings()
-    }
-    
-    @IBAction func didPressProjectsButton(_ sender: Any) {
-        coordinator?.viewProjects()
-    }
     
     @IBAction func didPressPurchaseButton(_ sender: Any) {
         coordinator?.viewPurchase()

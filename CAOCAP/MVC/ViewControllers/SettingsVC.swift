@@ -33,6 +33,7 @@ struct SettingsOption {
 }
 
 class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Storyboarded {
+    var coordinator: MainCoordinator?
     
     @IBOutlet weak var tableView: UITableView!
     var sections = [Section]()
@@ -40,6 +41,7 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.contentInset.top = 40
+        tableView.contentInset.bottom = 40
         tableView.register(SettingsTableViewCell.self,forCellReuseIdentifier: SettingsTableViewCell.identifier)
         tableView.register(SettingsSwitchTableViewCell.self,forCellReuseIdentifier: SettingsSwitchTableViewCell.identifier)
     }

@@ -22,13 +22,17 @@ final class MainCoordinator: Coordinator {
         
         let initialVC = InitialVC.instantiate()
         let chartsVC = ChartsVC.instantiate()
+        let projectsVC = ProjectsVC.instantiate()
+        let mainSettingsVC = MainSettingsVC.instantiate()
         
         initialVC.coordinator = self
         chartsVC.viewControllers = [UIHostingController(rootView: UIDashboardView())]
+        projectsVC.coordinator = self
+        mainSettingsVC.coordinator = self
         
         
         navigationVC.coordinator = self
-        navigationVC.viewControllers = [initialVC, chartsVC]
+        navigationVC.viewControllers = [initialVC, chartsVC, projectsVC, mainSettingsVC]
         
         navigationController.pushViewController(navigationVC, animated: false)
     }

@@ -1436,7 +1436,7 @@
                                         <rect key="frame" x="0.0" y="150" width="300" height="34.333333333333343"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpg-LF-Slc">
-                                                <rect key="frame" x="0.0" y="0.0" width="60" height="34.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="34.333333333333336"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <buttonConfiguration key="configuration" style="tinted" image="paintpalette" catalog="system">
                                                     <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
@@ -1447,7 +1447,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Se3-lA-1P6">
-                                                <rect key="frame" x="80" y="0.0" width="60" height="34.333333333333336"/>
+                                                <rect key="frame" x="160" y="0.0" width="140" height="34.333333333333336"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <buttonConfiguration key="configuration" style="tinted" image="crown" catalog="system">
                                                     <color key="baseForegroundColor" systemColor="systemYellowColor"/>
@@ -1455,30 +1455,6 @@
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="didPressPurchaseButton:" destination="gTz-hA-32a" eventType="touchUpInside" id="5n3-zp-Q1q"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4c-ir-eD3">
-                                                <rect key="frame" x="160" y="0.0" width="60" height="34.333333333333336"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="gear" catalog="system"/>
-                                                <buttonConfiguration key="configuration" style="tinted" image="bookmark" catalog="system">
-                                                    <color key="baseForegroundColor" systemColor="systemPinkColor"/>
-                                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="didPressProjectsButton:" destination="gTz-hA-32a" eventType="touchUpInside" id="89d-AB-T2y"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLH-rZ-w5a">
-                                                <rect key="frame" x="240" y="0.0" width="60" height="34.333333333333336"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="gear" catalog="system"/>
-                                                <buttonConfiguration key="configuration" style="tinted" image="gear" catalog="system">
-                                                    <color key="baseForegroundColor" name="Accent"/>
-                                                    <color key="baseBackgroundColor" name="Accent"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="didPressSettingsButton:" destination="gTz-hA-32a" eventType="touchUpInside" id="fUm-r4-d7n"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -2066,7 +2042,7 @@ There are no other in-app purchases.</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="YWP-YE-S2g">
-                                <rect key="frame" x="34" y="244.66666666666663" width="322.33333333333331" height="132"/>
+                                <rect key="frame" x="34" y="244.66666666666663" width="322.33333333333337" height="132"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try CAOCAP Premium for free" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sby-h7-ijT">
                                         <rect key="frame" x="0.0" y="0.0" width="322.33333333333331" height="26"/>
@@ -2363,20 +2339,8 @@ There are no other in-app purchases.</string>
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8j-ho-JiJ">
-                                <rect key="frame" x="20" y="720" width="350" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" priority="750" constant="360" id="46g-y0-elZ"/>
-                                    <constraint firstAttribute="height" constant="50" id="Ber-fg-of9"/>
-                                </constraints>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <buttonConfiguration key="configuration" style="tinted" image="bookmark" catalog="system">
-                                    <color key="baseForegroundColor" systemColor="systemPinkColor"/>
-                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
-                                </buttonConfiguration>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZSG-xP-gEH">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="700"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BKB-g1-NBX" id="Zrh-d3-OTy"/>
                                     <outlet property="delegate" destination="BKB-g1-NBX" id="xea-zg-LwL"/>
@@ -2386,11 +2350,8 @@ There are no other in-app purchases.</string>
                         <viewLayoutGuide key="safeArea" id="S9N-Jy-NHY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="m8j-ho-JiJ" firstAttribute="top" secondItem="ZSG-xP-gEH" secondAttribute="bottom" constant="20" id="I7k-h0-WMu"/>
-                            <constraint firstItem="m8j-ho-JiJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="S9N-Jy-NHY" secondAttribute="leading" constant="20" id="Ivl-ai-x2s"/>
-                            <constraint firstAttribute="trailing" secondItem="ZSG-xP-gEH" secondAttribute="trailing" id="K6e-b9-FIO"/>
-                            <constraint firstItem="m8j-ho-JiJ" firstAttribute="centerX" secondItem="ZQy-gv-u9S" secondAttribute="centerX" id="Z0V-Qu-eCc"/>
-                            <constraint firstItem="S9N-Jy-NHY" firstAttribute="bottom" secondItem="m8j-ho-JiJ" secondAttribute="bottom" constant="40" id="cCx-p7-bRJ"/>
+                            <constraint firstItem="ZSG-xP-gEH" firstAttribute="centerX" secondItem="ZQy-gv-u9S" secondAttribute="centerX" id="F4m-Rp-gVU"/>
+                            <constraint firstItem="ZSG-xP-gEH" firstAttribute="centerY" secondItem="ZQy-gv-u9S" secondAttribute="centerY" id="eiO-IW-FvD"/>
                             <constraint firstItem="ZSG-xP-gEH" firstAttribute="leading" secondItem="ZQy-gv-u9S" secondAttribute="leading" id="jQp-eT-zPd"/>
                             <constraint firstItem="ZSG-xP-gEH" firstAttribute="top" secondItem="ZQy-gv-u9S" secondAttribute="top" id="n4v-GW-zfF"/>
                         </constraints>
@@ -2402,7 +2363,7 @@ There are no other in-app purchases.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y2f-Lv-Ams" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4588" y="-220"/>
+            <point key="canvasLocation" x="-4589.2307692307695" y="-220.37914691943126"/>
         </scene>
         <!--IntroVC-->
         <scene sceneID="es5-iM-h5g">
@@ -2474,7 +2435,7 @@ There are no other in-app purchases.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="User" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PVA-xc-Hdu">
-                                                <rect key="frame" x="50.333333333333314" y="0.0" width="280" height="44.666666666666664"/>
+                                                <rect key="frame" x="50.333333333333314" y="0.0" width="279.99999999999994" height="44.666666666666664"/>
                                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="35"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="nickname"/>
@@ -2576,7 +2537,7 @@ There are no other in-app purchases.</string>
                                 <rect key="frame" x="20" y="745" width="350" height="60"/>
                                 <subviews>
                                     <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apd-Ak-UPb">
-                                        <rect key="frame" x="10" y="25" width="104.66666666666667" height="30"/>
+                                        <rect key="frame" x="9.9999999999999964" y="25" width="59.666666666666657" height="30"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="1Kt-kg-h4g"/>
@@ -2591,7 +2552,7 @@ There are no other in-app purchases.</string>
                                         <blurEffect style="regular"/>
                                     </visualEffectView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Tw-eB-3UN">
-                                        <rect key="frame" x="37.333333333333336" y="53" width="50.000000000000007" height="2"/>
+                                        <rect key="frame" x="14.666666666666664" y="53" width="49.999999999999993" height="2"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="KJO-8f-WMc"/>
@@ -2607,18 +2568,21 @@ There are no other in-app purchases.</string>
                                         <rect key="frame" x="10" y="12" width="330" height="36"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Syk-wr-5OI">
-                                                <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="59.666666666666664" height="36"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="hHO-lO-43H">
-                                                        <rect key="frame" x="4.3333333333333357" y="5" width="96" height="26"/>
+                                                        <rect key="frame" x="16.666666666666664" y="5" width="26" height="26"/>
                                                         <color key="tintColor" systemColor="labelColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="hHO-lO-43H" secondAttribute="height" multiplier="1:1" id="0Hl-Xh-zmh"/>
+                                                        </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6p-o0-dWL">
-                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="59.666666666666664" height="36"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain"/>
                                                         <connections>
-                                                            <action selector="didPressNavigationButton:" destination="L4k-5f-aIV" eventType="touchUpInside" id="EAf-SM-MXH"/>
+                                                            <action selector="didPressNavigationButton:" destination="L4k-5f-aIV" eventType="touchUpInside" id="cjV-7F-WqO"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -2632,11 +2596,40 @@ There are no other in-app purchases.</string>
                                                     <constraint firstItem="hHO-lO-43H" firstAttribute="centerX" secondItem="Syk-wr-5OI" secondAttribute="centerX" id="neB-fk-OcH"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PnO-AX-rEq">
+                                                <rect key="frame" x="67.666666666666671" y="0.0" width="59.666666666666671" height="36"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart" translatesAutoresizingMaskIntoConstraints="NO" id="s7K-rq-YB7">
+                                                        <rect key="frame" x="16.666666666666657" y="5" width="26" height="26"/>
+                                                        <color key="tintColor" systemColor="labelColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="s7K-rq-YB7" secondAttribute="height" multiplier="1:1" id="d5o-87-8BG"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASm-rT-gtB">
+                                                        <rect key="frame" x="0.0" y="0.0" width="59.666666666666664" height="36"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="didPressNavigationButton:" destination="L4k-5f-aIV" eventType="touchUpInside" id="Q1J-p7-zZh"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="ASm-rT-gtB" firstAttribute="top" secondItem="PnO-AX-rEq" secondAttribute="top" id="2FO-Hl-rx7"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ASm-rT-gtB" secondAttribute="bottom" id="2ki-Wd-RC2"/>
+                                                    <constraint firstItem="s7K-rq-YB7" firstAttribute="centerX" secondItem="PnO-AX-rEq" secondAttribute="centerX" id="Bff-P5-2lm"/>
+                                                    <constraint firstItem="ASm-rT-gtB" firstAttribute="leading" secondItem="PnO-AX-rEq" secondAttribute="leading" id="EWV-AZ-B1t"/>
+                                                    <constraint firstItem="s7K-rq-YB7" firstAttribute="centerY" secondItem="PnO-AX-rEq" secondAttribute="centerY" id="ZDa-ef-e1C"/>
+                                                    <constraint firstItem="s7K-rq-YB7" firstAttribute="top" secondItem="PnO-AX-rEq" secondAttribute="top" constant="5" id="iuA-QM-0k0"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ASm-rT-gtB" secondAttribute="trailing" id="v95-En-U0T"/>
+                                                </constraints>
+                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pd9-KX-8a1">
-                                                <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="36"/>
+                                                <rect key="frame" x="135.33333333333334" y="0.0" width="59.333333333333343" height="36"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZn-T4-FXi">
-                                                        <rect key="frame" x="32.333333333333343" y="-2" width="40" height="40"/>
+                                                        <rect key="frame" x="9.6666666666666572" y="-2" width="40" height="40"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7r7-Cp-lhS">
                                                                 <rect key="frame" x="10" y="12.33333333333333" width="20" height="15.66666666666667"/>
@@ -2679,18 +2672,21 @@ There are no other in-app purchases.</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yA8-nf-BsP">
-                                                <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="36"/>
+                                                <rect key="frame" x="202.66666666666666" y="0.0" width="59.666666666666657" height="36"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart" translatesAutoresizingMaskIntoConstraints="NO" id="ZFC-rh-Ub1">
-                                                        <rect key="frame" x="4.3333333333333428" y="5" width="96" height="26"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bookmark" translatesAutoresizingMaskIntoConstraints="NO" id="ZFC-rh-Ub1">
+                                                        <rect key="frame" x="17" y="5" width="26" height="26"/>
                                                         <color key="tintColor" systemColor="labelColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="ZFC-rh-Ub1" secondAttribute="height" multiplier="1:1" id="KfE-rS-WNq"/>
+                                                        </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYb-lm-LJe">
-                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="59.666666666666664" height="36"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain"/>
                                                         <connections>
-                                                            <action selector="didPressNavigationButton:" destination="L4k-5f-aIV" eventType="touchUpInside" id="wAm-oP-yf0"/>
+                                                            <action selector="didPressNavigationButton:" destination="L4k-5f-aIV" eventType="touchUpInside" id="8yx-XH-e1m"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -2702,6 +2698,35 @@ There are no other in-app purchases.</string>
                                                     <constraint firstAttribute="bottom" secondItem="xYb-lm-LJe" secondAttribute="bottom" id="fBk-Qh-FCK"/>
                                                     <constraint firstItem="xYb-lm-LJe" firstAttribute="top" secondItem="yA8-nf-BsP" secondAttribute="top" id="foR-gK-6LY"/>
                                                     <constraint firstAttribute="trailing" secondItem="xYb-lm-LJe" secondAttribute="trailing" id="r7J-rp-UY9"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qup-0d-xTZ">
+                                                <rect key="frame" x="270.33333333333331" y="0.0" width="59.666666666666686" height="36"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gear" translatesAutoresizingMaskIntoConstraints="NO" id="qRm-u9-aDP">
+                                                        <rect key="frame" x="17" y="5.3333333333333321" width="26" height="25.333333333333325"/>
+                                                        <color key="tintColor" systemColor="labelColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="qRm-u9-aDP" secondAttribute="height" multiplier="1:1" id="ZIG-Cv-CNs"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfS-rz-52Z">
+                                                        <rect key="frame" x="0.0" y="0.0" width="59.666666666666664" height="36"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <action selector="didPressNavigationButton:" destination="L4k-5f-aIV" eventType="touchUpInside" id="6y9-Q6-sYF"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="qRm-u9-aDP" firstAttribute="centerX" secondItem="Qup-0d-xTZ" secondAttribute="centerX" id="09a-qW-Uie"/>
+                                                    <constraint firstItem="qRm-u9-aDP" firstAttribute="centerY" secondItem="Qup-0d-xTZ" secondAttribute="centerY" id="AAC-s0-v7t"/>
+                                                    <constraint firstItem="qfS-rz-52Z" firstAttribute="top" secondItem="Qup-0d-xTZ" secondAttribute="top" id="KnH-2I-bkp"/>
+                                                    <constraint firstItem="qfS-rz-52Z" firstAttribute="leading" secondItem="Qup-0d-xTZ" secondAttribute="leading" id="Nlk-op-leK"/>
+                                                    <constraint firstAttribute="trailing" secondItem="qfS-rz-52Z" secondAttribute="trailing" id="V3q-Ju-EXe"/>
+                                                    <constraint firstAttribute="bottom" secondItem="qfS-rz-52Z" secondAttribute="bottom" id="YIW-Es-JP4"/>
+                                                    <constraint firstItem="qRm-u9-aDP" firstAttribute="top" secondItem="Qup-0d-xTZ" secondAttribute="top" constant="5" id="brv-sw-AdE"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -2743,10 +2768,14 @@ There are no other in-app purchases.</string>
                         <outlet property="glowView" destination="apd-Ak-UPb" id="b4g-qK-K5E"/>
                         <outlet property="glowViewLeadingConstraint" destination="Jbx-qm-Jxt" id="AWN-eD-EmG"/>
                         <outlet property="indicatorView" destination="4Tw-eB-3UN" id="2tD-HC-dRh"/>
-                        <outletCollection property="navigationButtons" destination="v6p-o0-dWL" collectionClass="NSMutableArray" id="fpW-x1-4L3"/>
-                        <outletCollection property="navigationButtons" destination="xYb-lm-LJe" collectionClass="NSMutableArray" id="eV6-FU-ydF"/>
-                        <outletCollection property="navigationButtonViews" destination="Syk-wr-5OI" collectionClass="NSMutableArray" id="Vz0-Wm-49c"/>
-                        <outletCollection property="navigationButtonViews" destination="yA8-nf-BsP" collectionClass="NSMutableArray" id="DDO-EO-hC4"/>
+                        <outletCollection property="navigationButtons" destination="v6p-o0-dWL" collectionClass="NSMutableArray" id="vJT-wd-g6a"/>
+                        <outletCollection property="navigationButtons" destination="ASm-rT-gtB" collectionClass="NSMutableArray" id="8Ig-al-N4b"/>
+                        <outletCollection property="navigationButtons" destination="xYb-lm-LJe" collectionClass="NSMutableArray" id="k72-kR-cDV"/>
+                        <outletCollection property="navigationButtons" destination="qfS-rz-52Z" collectionClass="NSMutableArray" id="niw-fj-3gS"/>
+                        <outletCollection property="navigationButtonViews" destination="Syk-wr-5OI" collectionClass="NSMutableArray" id="5uZ-zC-OVR"/>
+                        <outletCollection property="navigationButtonViews" destination="PnO-AX-rEq" collectionClass="NSMutableArray" id="UoO-qP-ck5"/>
+                        <outletCollection property="navigationButtonViews" destination="yA8-nf-BsP" collectionClass="NSMutableArray" id="R94-6D-DS7"/>
+                        <outletCollection property="navigationButtonViews" destination="Qup-0d-xTZ" collectionClass="NSMutableArray" id="We7-Si-HrS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9tB-Td-74n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2852,6 +2881,8 @@ There are no other in-app purchases.</string>
         </scene>
     </scenes>
     <resources>
+        <image name="Bookmark" width="384" height="384"/>
+        <image name="Gear" width="96" height="96"/>
         <image name="Grid" width="844" height="842"/>
         <image name="Plant-A" width="210" height="279"/>
         <image name="Plant-B" width="183" height="264"/>
@@ -2875,7 +2906,6 @@ There are no other in-app purchases.</string>
         <image name="altIcon 9" width="1024" height="1024"/>
         <image name="arrow.uturn.backward" catalog="system" width="128" height="113"/>
         <image name="arrow.uturn.forward" catalog="system" width="128" height="113"/>
-        <image name="bookmark" catalog="system" width="110" height="128"/>
         <image name="chart" width="96" height="96"/>
         <image name="chart.bar.xaxis" catalog="system" width="128" height="99"/>
         <image name="checkmark.seal" catalog="system" width="128" height="124"/>
@@ -2886,7 +2916,6 @@ There are no other in-app purchases.</string>
         <image name="clock.arrow.circlepath" catalog="system" width="128" height="112"/>
         <image name="crown" catalog="system" width="128" height="92"/>
         <image name="folder.circle.fill" catalog="system" width="128" height="123"/>
-        <image name="gear" catalog="system" width="128" height="122"/>
         <image name="gear.circle.fill" catalog="system" width="128" height="123"/>
         <image name="gift.fill" catalog="system" width="128" height="125"/>
         <image name="globe.europe.africa" catalog="system" width="128" height="123"/>
