@@ -9,8 +9,9 @@ import Foundation
 import SwiftSoup
 
 class Project {
+    
     var document: Document?
-    var documentHistory: [Document]?
+    var history: [Document]?
     var selectedElementID: String?
     
     init() {
@@ -28,7 +29,7 @@ class Project {
             """#
             document = try SwiftSoup.parse(html)
             if let document = document {
-                documentHistory?.append(document)
+                history?.append(document)
             }
         } catch Exception.Error(let type, let message) {
             print(type, message)
@@ -38,9 +39,9 @@ class Project {
         
     }
     
-    init(document: Document, documentHistory: [Document]? = nil, selectedElementID: String? = nil) {
+    init(document: Document, history: [Document]? = nil, selectedElementID: String? = nil) {
         self.document = document
-        self.documentHistory = documentHistory
+        self.history = history
         self.selectedElementID = selectedElementID
     }
     

@@ -51,6 +51,10 @@
 		218DA9D22A2B205900459C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 218DA9D12A2B205900459C61 /* Assets.xcassets */; };
 		218DA9D52A2B205900459C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218DA9D32A2B205900459C61 /* LaunchScreen.storyboard */; };
 		21AF3CA52A67E44B002E96E3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 21AF3CA42A67E44B002E96E3 /* SnapKit */; };
+		21AF3CA72A6843A9002E96E3 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CA62A6843A9002E96E3 /* RealmRepository.swift */; };
+		21AF3CAA2A6844C1002E96E3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 21AF3CA92A6844C1002E96E3 /* Realm */; };
+		21AF3CAC2A6844C1002E96E3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21AF3CAB2A6844C1002E96E3 /* RealmSwift */; };
+		21AF3CB02A68565C002E96E3 /* RealmProjectModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CAF2A68565C002E96E3 /* RealmProjectModels.swift */; };
 		21C21C492A34B5D800F40BE3 /* ProjectsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C21C482A34B5D800F40BE3 /* ProjectsVC.swift */; };
 		21C21C4B2A34B60200F40BE3 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C21C4A2A34B60200F40BE3 /* SettingsVC.swift */; };
 		21C21C4D2A34B61900F40BE3 /* PurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C21C4C2A34B61900F40BE3 /* PurchaseVC.swift */; };
@@ -113,6 +117,8 @@
 		218DA9D12A2B205900459C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		218DA9D42A2B205900459C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		218DA9D62A2B205900459C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21AF3CA62A6843A9002E96E3 /* RealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
+		21AF3CAF2A68565C002E96E3 /* RealmProjectModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProjectModels.swift; sourceTree = "<group>"; };
 		21C21C482A34B5D800F40BE3 /* ProjectsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsVC.swift; sourceTree = "<group>"; };
 		21C21C4A2A34B60200F40BE3 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		21C21C4C2A34B61900F40BE3 /* PurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseVC.swift; sourceTree = "<group>"; };
@@ -144,7 +150,9 @@
 				2106C4182A5C997A00446620 /* FirebaseAnalytics in Frameworks */,
 				2106C41A2A5C997A00446620 /* FirebaseCrashlytics in Frameworks */,
 				213DF5E02A5883D300679BB2 /* SwiftSoup in Frameworks */,
+				21AF3CAA2A6844C1002E96E3 /* Realm in Frameworks */,
 				213DF5E62A58A92F00679BB2 /* Lottie in Frameworks */,
+				21AF3CAC2A6844C1002E96E3 /* RealmSwift in Frameworks */,
 				21534DA72A5B038D00E8078B /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,8 +205,9 @@
 		214995202A5C32E7008B9987 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				21AF3CAE2A685605002E96E3 /* UserDefaultsRepo */,
+				21AF3CAD2A68554B002E96E3 /* RealmRepo */,
 				2106C41C2A5F949400446620 /* HTMLParser.swift */,
-				21326ECF2A530CAE00255570 /* UserDefaults.swift */,
 				21DBA0022A39E18C00DFAC66 /* StoreKitRepository.swift */,
 				2175FBE12A648D0700F7E97F /* LottieRepository.swift */,
 			);
@@ -327,6 +336,23 @@
 			path = CAOCAP;
 			sourceTree = "<group>";
 		};
+		21AF3CAD2A68554B002E96E3 /* RealmRepo */ = {
+			isa = PBXGroup;
+			children = (
+				21AF3CA62A6843A9002E96E3 /* RealmRepository.swift */,
+				21AF3CAF2A68565C002E96E3 /* RealmProjectModels.swift */,
+			);
+			path = RealmRepo;
+			sourceTree = "<group>";
+		};
+		21AF3CAE2A685605002E96E3 /* UserDefaultsRepo */ = {
+			isa = PBXGroup;
+			children = (
+				21326ECF2A530CAE00255570 /* UserDefaults.swift */,
+			);
+			path = UserDefaultsRepo;
+			sourceTree = "<group>";
+		};
 		21C21C562A38DD7D00F40BE3 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -385,6 +411,8 @@
 				2106C4172A5C997A00446620 /* FirebaseAnalytics */,
 				2106C4192A5C997A00446620 /* FirebaseCrashlytics */,
 				21AF3CA42A67E44B002E96E3 /* SnapKit */,
+				21AF3CA92A6844C1002E96E3 /* Realm */,
+				21AF3CAB2A6844C1002E96E3 /* RealmSwift */,
 			);
 			productName = CAOCAP;
 			productReference = 218DA9C52A2B205800459C61 /* CAOCAP.app */;
@@ -421,6 +449,7 @@
 				213DF5E42A58A92F00679BB2 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				2106C4162A5C997A00446620 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				21AF3CA32A67E44B002E96E3 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				21AF3CA82A6844C1002E96E3 /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 218DA9C62A2B205800459C61 /* Products */;
 			projectDirPath = "";
@@ -491,7 +520,9 @@
 				218DA9C92A2B205800459C61 /* AppDelegate.swift in Sources */,
 				2178C19D2A4D92A300876BB6 /* ProjectSettingsVC.swift in Sources */,
 				2175FBE22A648D0700F7E97F /* LottieRepository.swift in Sources */,
+				21AF3CB02A68565C002E96E3 /* RealmProjectModels.swift in Sources */,
 				21534D9D2A59CD8600E8078B /* UIDashboardView.swift in Sources */,
+				21AF3CA72A6843A9002E96E3 /* RealmRepository.swift in Sources */,
 				21534DA12A5A9B3B00E8078B /* TailwindCSS.swift in Sources */,
 				2149952A2A5C34C9008B9987 /* ReduxStore.swift in Sources */,
 				21534D962A59B3B300E8078B /* Storyboarded.swift in Sources */,
@@ -786,6 +817,14 @@
 				minimumVersion = 5.6.0;
 			};
 		};
+		21AF3CA82A6844C1002E96E3 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.41.1;
+			};
+		};
 		21C21C502A34B7C400F40BE3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
@@ -826,6 +865,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 21AF3CA32A67E44B002E96E3 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		21AF3CA92A6844C1002E96E3 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21AF3CA82A6844C1002E96E3 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		21AF3CAB2A6844C1002E96E3 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21AF3CA82A6844C1002E96E3 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 		21C21C512A34B7C400F40BE3 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
