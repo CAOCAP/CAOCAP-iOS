@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 import SwiftSoup
 
 protocol UIMindMapDelegate {
@@ -38,16 +39,13 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         maximumZoomScale = 3.0
         zoomScale = 0.5
         addSubview(canvas)
-        canvasHeightConstraint = canvas.heightAnchor.constraint(equalToConstant: frame.height + 200)
-        canvasWidthConstraint = canvas.widthAnchor.constraint(equalToConstant: frame.width + 200 )
+        canvasHeightConstraint = canvas.heightAnchor.constraint(equalToConstant: frame.height + 200) //TODO: use SnapKit
+        canvasWidthConstraint = canvas.widthAnchor.constraint(equalToConstant: frame.width + 200 ) //TODO: use SnapKit
         canvasHeightConstraint.isActive = true
         canvasWidthConstraint.isActive = true
-        NSLayoutConstraint.activate([
-            canvas.leadingAnchor.constraint(equalTo: leadingAnchor),
-            canvas.trailingAnchor.constraint(equalTo: trailingAnchor),
-            canvas.topAnchor.constraint(equalTo: topAnchor),
-            canvas.bottomAnchor.constraint(equalTo: bottomAnchor),
-        ])
+        canvas.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
         contentInset = UIEdgeInsets(top: 200, left: 100, bottom: 200 , right: 100)
         contentOffset = CGPoint(x: -50, y: -150)
         layoutIfNeeded()
@@ -120,8 +118,8 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         canvasHeightConstraint.constant += 30/*🤔*/
         
         if element.tagName() == "body" {
-            nodeView.centerXAnchor.constraint(equalTo: canvas.centerXAnchor).isActive = true
-            nodeView.centerYAnchor.constraint(equalTo: canvas.centerYAnchor).isActive = true
+            nodeView.centerXAnchor.constraint(equalTo: canvas.centerXAnchor).isActive = true  //TODO: use SnapKit
+            nodeView.centerYAnchor.constraint(equalTo: canvas.centerYAnchor).isActive = true  //TODO: use SnapKit
         } else {
             guard let parent = element.parent(), let parentView = nodeTree[parent.id()] else { return }
             do {
@@ -132,24 +130,24 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
                     // even number of children ( two near centre children )
                     if elementSiblingIndex == centerPosition {
                         //near centre right child
-                        nodeView.centerXAnchor.constraint(equalTo: parentView.centerXAnchor, constant: 90).isActive = true
+                        nodeView.centerXAnchor.constraint(equalTo: parentView.centerXAnchor, constant: 90).isActive = true  //TODO: use SnapKit
                     } else if elementSiblingIndex == centerPosition - 1 {
                         //near centre left child
-                        nodeView.centerXAnchor.constraint(equalTo: parentView.centerXAnchor, constant: -90).isActive = true
+                        nodeView.centerXAnchor.constraint(equalTo: parentView.centerXAnchor, constant: -90).isActive = true  //TODO: use SnapKit
                     } else {
                         //push to the right or left| i am 0 of 4 -> 0 - 2 + 0.5 -> -1.5*180, i am 3 of 4 -> 3 - 2 + 0.5 -> 1.5*180
                         let multiplier = Double(element.siblingIndex - centerPosition) + 0.5
-                        nodeView.centerXAnchor.constraint(equalTo: parentView.centerXAnchor, constant: CGFloat(multiplier * 180)).isActive = true
+                        nodeView.centerXAnchor.constraint(equalTo: parentView.centerXAnchor, constant: CGFloat(multiplier * 180)).isActive = true  //TODO: use SnapKit
                     }
                 } else {
                     // odd number of children ( one centered child )
                     if elementSiblingIndex == centerPosition {
                         //centered child
-                        nodeView.centerXAnchor.constraint(equalTo: parentView.centerXAnchor).isActive = true
+                        nodeView.centerXAnchor.constraint(equalTo: parentView.centerXAnchor).isActive = true  //TODO: use SnapKit
                     } else {
                         //push to the right or left
                         let multiplier = elementSiblingIndex - centerPosition
-                        nodeView.centerXAnchor.constraint(equalTo: parentView.centerXAnchor, constant: CGFloat(multiplier * 180)).isActive = true
+                        nodeView.centerXAnchor.constraint(equalTo: parentView.centerXAnchor, constant: CGFloat(multiplier * 180)).isActive = true  //TODO: use SnapKit
                     }
                 }
             } catch Exception.Error(let type, let message) {
@@ -157,15 +155,15 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
             } catch {
                 print("error")
             }
-            nodeView.centerYAnchor.constraint(equalTo: parentView.centerYAnchor, constant: 120).isActive = true
+            nodeView.centerYAnchor.constraint(equalTo: parentView.centerYAnchor, constant: 120).isActive = true  //TODO: use SnapKit
         }
         
         if !element.children().isEmpty() {
             let nodeStroke = UIStroke(lines: element.children().count)
             canvas.insertSubview(nodeStroke, at: 0)
-            nodeStroke.widthConstraint.constant = CGFloat(element.children().count * 180)
-            nodeStroke.centerXAnchor.constraint(equalTo: nodeView.centerXAnchor).isActive = true
-            nodeStroke.topAnchor.constraint(equalTo: nodeView.bottomAnchor).isActive = true
+            nodeStroke.widthConstraint.constant = CGFloat(element.children().count * 180)  //TODO: use SnapKit
+            nodeStroke.centerXAnchor.constraint(equalTo: nodeView.centerXAnchor).isActive = true  //TODO: use SnapKit
+            nodeStroke.topAnchor.constraint(equalTo: nodeView.bottomAnchor).isActive = true  //TODO: use SnapKit
         }
     }
     

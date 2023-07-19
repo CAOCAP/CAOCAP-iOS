@@ -14,6 +14,7 @@
  it is important that the reducer is always free of side effects,
  it receives the current app state and an action and returns the new app state.
  
+ https://reswift.github.io/ReSwift/master/getting-started-guide.html
 */
 
 import ReSwift
@@ -22,7 +23,7 @@ import SwiftSoup
 func reduxReducer(action: Action, state: ReduxState?) -> ReduxState {
     var state = state ?? ReduxState()
 
-    switch action { // this is not the best way, please fix this (https://reswift.github.io/ReSwift/master/getting-started-guide.html)
+    switch action {
     case _ as CreateProjectAction,
          _ as OpenProjectAction,
          _ as CloseProjectAction,
@@ -30,6 +31,11 @@ func reduxReducer(action: Action, state: ReduxState?) -> ReduxState {
          _ as EditProjectAction,
          _ as DeleteProjectAction:
         state = projectReducer(action: action, state: state)
+        
+    case _ as UndoAction:
+        print("undo Action")
+    case _ as RedoAction:
+        print("redo Action")
     default:
         break
     }
@@ -64,3 +70,4 @@ func projectReducer(action: Action, state: ReduxState?) -> ReduxState {
 
     return state
 }
+

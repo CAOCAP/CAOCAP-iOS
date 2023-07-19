@@ -8,6 +8,7 @@
 import UIKit
 import WebKit
 import ReSwift
+import SnapKit
 import SwiftSoup
 
 class MindMapVC: UIViewController, Storyboarded {
@@ -69,12 +70,9 @@ class MindMapVC: UIViewController, Storyboarded {
         mindMap = UIMindMap(frame: view.frame)
         mindMap.mindMapDelegate = self
         view.insertSubview(mindMap, at: 0)
-        NSLayoutConstraint.activate([
-            mindMap.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            mindMap.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            mindMap.topAnchor.constraint(equalTo: view.topAnchor),
-            mindMap.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-        ])
+        mindMap.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
     }
     
     @objc func handleResizingWebView(sender: UIPanGestureRecognizer) {

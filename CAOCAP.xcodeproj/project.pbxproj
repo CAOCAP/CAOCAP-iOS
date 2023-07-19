@@ -50,6 +50,7 @@
 		218DA9D02A2B205800459C61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218DA9CE2A2B205800459C61 /* Main.storyboard */; };
 		218DA9D22A2B205900459C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 218DA9D12A2B205900459C61 /* Assets.xcassets */; };
 		218DA9D52A2B205900459C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218DA9D32A2B205900459C61 /* LaunchScreen.storyboard */; };
+		21AF3CA52A67E44B002E96E3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 21AF3CA42A67E44B002E96E3 /* SnapKit */; };
 		21C21C492A34B5D800F40BE3 /* ProjectsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C21C482A34B5D800F40BE3 /* ProjectsVC.swift */; };
 		21C21C4B2A34B60200F40BE3 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C21C4A2A34B60200F40BE3 /* SettingsVC.swift */; };
 		21C21C4D2A34B61900F40BE3 /* PurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C21C4C2A34B61900F40BE3 /* PurchaseVC.swift */; };
@@ -138,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				213DF5E32A5886B300679BB2 /* ReSwift in Frameworks */,
+				21AF3CA52A67E44B002E96E3 /* SnapKit in Frameworks */,
 				21C21C522A34B7C400F40BE3 /* IQKeyboardManagerSwift in Frameworks */,
 				2106C4182A5C997A00446620 /* FirebaseAnalytics in Frameworks */,
 				2106C41A2A5C997A00446620 /* FirebaseCrashlytics in Frameworks */,
@@ -382,6 +384,7 @@
 				213DF5E52A58A92F00679BB2 /* Lottie */,
 				2106C4172A5C997A00446620 /* FirebaseAnalytics */,
 				2106C4192A5C997A00446620 /* FirebaseCrashlytics */,
+				21AF3CA42A67E44B002E96E3 /* SnapKit */,
 			);
 			productName = CAOCAP;
 			productReference = 218DA9C52A2B205800459C61 /* CAOCAP.app */;
@@ -417,6 +420,7 @@
 				213DF5E12A5886B300679BB2 /* XCRemoteSwiftPackageReference "ReSwift" */,
 				213DF5E42A58A92F00679BB2 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				2106C4162A5C997A00446620 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				21AF3CA32A67E44B002E96E3 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 218DA9C62A2B205800459C61 /* Products */;
 			projectDirPath = "";
@@ -774,6 +778,14 @@
 				minimumVersion = 4.2.0;
 			};
 		};
+		21AF3CA32A67E44B002E96E3 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.0;
+			};
+		};
 		21C21C502A34B7C400F40BE3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
@@ -809,6 +821,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 213DF5E42A58A92F00679BB2 /* XCRemoteSwiftPackageReference "lottie-spm" */;
 			productName = Lottie;
+		};
+		21AF3CA42A67E44B002E96E3 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 21AF3CA32A67E44B002E96E3 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 		21C21C512A34B7C400F40BE3 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;

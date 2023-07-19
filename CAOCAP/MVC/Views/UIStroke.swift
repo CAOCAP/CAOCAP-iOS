@@ -18,8 +18,8 @@ class UIStroke: UIView {
         translatesAutoresizingMaskIntoConstraints = false
         backgroundColor = UIColor.clear
         self.lines = lines
-        heightConstraint = heightAnchor.constraint(equalToConstant: 60)
-        widthConstraint = widthAnchor.constraint(equalToConstant: 0)
+        heightConstraint = heightAnchor.constraint(equalToConstant: 60)  //TODO: use SnapKit
+        widthConstraint = widthAnchor.constraint(equalToConstant: 0)  //TODO: use SnapKit
         heightConstraint.isActive = true
         widthConstraint.isActive = true
     }

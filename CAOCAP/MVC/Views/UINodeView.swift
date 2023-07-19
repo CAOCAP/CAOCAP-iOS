@@ -21,8 +21,8 @@ class UINodeView: UIView, UIContextMenuInteractionDelegate {
         let tagName = element.tagName()
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
-        heightAnchor.constraint(equalToConstant: 60).isActive = true
-        widthAnchor.constraint(equalToConstant: 150).isActive = true
+        heightAnchor.constraint(equalToConstant: 60).isActive = true  //TODO: use SnapKit
+        widthAnchor.constraint(equalToConstant: 150).isActive = true  //TODO: use SnapKit
         layer.cornerRadius = 10
         layer.borderColor = UIColor.purple.cgColor
         setBackgroundColor(tagName: tagName)
