@@ -55,6 +55,13 @@
 		21AF3CAA2A6844C1002E96E3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 21AF3CA92A6844C1002E96E3 /* Realm */; };
 		21AF3CAC2A6844C1002E96E3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21AF3CAB2A6844C1002E96E3 /* RealmSwift */; };
 		21AF3CB02A68565C002E96E3 /* RealmProjectModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CAF2A68565C002E96E3 /* RealmProjectModels.swift */; };
+		21AF3CB22A6B20DF002E96E3 /* CreditsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CB12A6B20DF002E96E3 /* CreditsVC.swift */; };
+		21AF3CB42A6B20FD002E96E3 /* AboutUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CB32A6B20FD002E96E3 /* AboutUsVC.swift */; };
+		21AF3CB62A6B211E002E96E3 /* TermsOfUseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CB52A6B211E002E96E3 /* TermsOfUseVC.swift */; };
+		21AF3CB82A6B213C002E96E3 /* PrivacyPolicyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CB72A6B213C002E96E3 /* PrivacyPolicyVC.swift */; };
+		21AF3CBA2A6B2159002E96E3 /* SendFeedbackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CB92A6B2159002E96E3 /* SendFeedbackVC.swift */; };
+		21AF3CBC2A6B2170002E96E3 /* SupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CBB2A6B2170002E96E3 /* SupportVC.swift */; };
+		21AF3CBE2A6B2188002E96E3 /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CBD2A6B2188002E96E3 /* HelpVC.swift */; };
 		21C21C492A34B5D800F40BE3 /* ProjectsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C21C482A34B5D800F40BE3 /* ProjectsVC.swift */; };
 		21C21C4B2A34B60200F40BE3 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C21C4A2A34B60200F40BE3 /* SettingsVC.swift */; };
 		21C21C4D2A34B61900F40BE3 /* PurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C21C4C2A34B61900F40BE3 /* PurchaseVC.swift */; };
@@ -119,6 +126,13 @@
 		218DA9D62A2B205900459C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21AF3CA62A6843A9002E96E3 /* RealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
 		21AF3CAF2A68565C002E96E3 /* RealmProjectModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProjectModels.swift; sourceTree = "<group>"; };
+		21AF3CB12A6B20DF002E96E3 /* CreditsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsVC.swift; sourceTree = "<group>"; };
+		21AF3CB32A6B20FD002E96E3 /* AboutUsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsVC.swift; sourceTree = "<group>"; };
+		21AF3CB52A6B211E002E96E3 /* TermsOfUseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUseVC.swift; sourceTree = "<group>"; };
+		21AF3CB72A6B213C002E96E3 /* PrivacyPolicyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyVC.swift; sourceTree = "<group>"; };
+		21AF3CB92A6B2159002E96E3 /* SendFeedbackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFeedbackVC.swift; sourceTree = "<group>"; };
+		21AF3CBB2A6B2170002E96E3 /* SupportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportVC.swift; sourceTree = "<group>"; };
+		21AF3CBD2A6B2188002E96E3 /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
 		21C21C482A34B5D800F40BE3 /* ProjectsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsVC.swift; sourceTree = "<group>"; };
 		21C21C4A2A34B60200F40BE3 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		21C21C4C2A34B61900F40BE3 /* PurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseVC.swift; sourceTree = "<group>"; };
@@ -301,6 +315,13 @@
 				2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */,
 				2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */,
 				21534D9E2A59E58100E8078B /* ProjectFilesVC.swift */,
+				21AF3CB12A6B20DF002E96E3 /* CreditsVC.swift */,
+				21AF3CB32A6B20FD002E96E3 /* AboutUsVC.swift */,
+				21AF3CB52A6B211E002E96E3 /* TermsOfUseVC.swift */,
+				21AF3CB72A6B213C002E96E3 /* PrivacyPolicyVC.swift */,
+				21AF3CB92A6B2159002E96E3 /* SendFeedbackVC.swift */,
+				21AF3CBB2A6B2170002E96E3 /* SupportVC.swift */,
+				21AF3CBD2A6B2188002E96E3 /* HelpVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -515,6 +536,7 @@
 			files = (
 				21534D912A59B2E200E8078B /* ContainerVC.swift in Sources */,
 				21C21C4F2A34B62E00F40BE3 /* PaletteVC.swift in Sources */,
+				21AF3CB22A6B20DF002E96E3 /* CreditsVC.swift in Sources */,
 				214995262A5C3414008B9987 /* ReduxReducer.swift in Sources */,
 				218DA9CD2A2B205800459C61 /* MindMapVC.swift in Sources */,
 				218DA9C92A2B205800459C61 /* AppDelegate.swift in Sources */,
@@ -522,10 +544,13 @@
 				2175FBE22A648D0700F7E97F /* LottieRepository.swift in Sources */,
 				21AF3CB02A68565C002E96E3 /* RealmProjectModels.swift in Sources */,
 				21534D9D2A59CD8600E8078B /* UIDashboardView.swift in Sources */,
+				21AF3CB42A6B20FD002E96E3 /* AboutUsVC.swift in Sources */,
 				21AF3CA72A6843A9002E96E3 /* RealmRepository.swift in Sources */,
 				21534DA12A5A9B3B00E8078B /* TailwindCSS.swift in Sources */,
 				2149952A2A5C34C9008B9987 /* ReduxStore.swift in Sources */,
 				21534D962A59B3B300E8078B /* Storyboarded.swift in Sources */,
+				21AF3CB82A6B213C002E96E3 /* PrivacyPolicyVC.swift in Sources */,
+				21AF3CBC2A6B2170002E96E3 /* SupportVC.swift in Sources */,
 				2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */,
 				21534D9F2A59E58100E8078B /* ProjectFilesVC.swift in Sources */,
 				21534D9B2A59CD2B00E8078B /* ChartsVC.swift in Sources */,
@@ -533,6 +558,7 @@
 				2178C1A42A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift in Sources */,
 				2178C1A22A4DA2AB00876BB6 /* SettingsTableViewCell.swift in Sources */,
 				214995282A5C342D008B9987 /* ReduxState.swift in Sources */,
+				21AF3CBE2A6B2188002E96E3 /* HelpVC.swift in Sources */,
 				21C21C4D2A34B61900F40BE3 /* PurchaseVC.swift in Sources */,
 				218DA9CB2A2B205800459C61 /* SceneDelegate.swift in Sources */,
 				21DBA0052A39EC5500DFAC66 /* UIFont+Extensions.swift in Sources */,
@@ -543,12 +569,14 @@
 				2175FBE42A657D1500F7E97F /* Project.swift in Sources */,
 				2186DB112A30DF4700773C5E /* UIMindMap.swift in Sources */,
 				21DBA0012A38F4C800DFAC66 /* InitialVC.swift in Sources */,
+				21AF3CB62A6B211E002E96E3 /* TermsOfUseVC.swift in Sources */,
 				21C21C492A34B5D800F40BE3 /* ProjectsVC.swift in Sources */,
 				21C21C542A36145200F40BE3 /* Enumerations.swift in Sources */,
 				21534D8F2A59B26F00E8078B /* NavigationVC.swift in Sources */,
 				214995242A5C3404008B9987 /* ReduxActions.swift in Sources */,
 				21534D942A59B38B00E8078B /* Coordinator.swift in Sources */,
 				21534DA32A5A9ED000E8078B /* TailwindCollectionViewCell.swift in Sources */,
+				21AF3CBA2A6B2159002E96E3 /* SendFeedbackVC.swift in Sources */,
 				210F19B02A42DC9800D71A66 /* UIStroke.swift in Sources */,
 				21534D982A59B40A00E8078B /* MainCoordinator.swift in Sources */,
 				210F19AE2A42DBE100D71A66 /* UINodeView.swift in Sources */,

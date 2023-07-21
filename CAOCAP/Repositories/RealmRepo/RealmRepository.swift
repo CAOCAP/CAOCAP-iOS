@@ -17,7 +17,6 @@ class RealmRepository {
         return try! Realm()
     }()
     
-    
     func realmConfiguration() {
         let config = Realm.Configuration(
             // Set the new schema version. This must be greater than the previously used

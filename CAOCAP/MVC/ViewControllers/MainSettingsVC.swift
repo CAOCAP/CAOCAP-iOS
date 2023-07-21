@@ -39,8 +39,11 @@ class MainSettingsVC: SettingsVC {
                     
                 })),
                 .staticCell(option: SettingsOption(title: "Share App", icon: UIImage(systemName: "square.and.arrow.up.fill"), color: .systemCyan, handler: {
-                    print("did press")
-                    
+                    guard let url = URL(string: "https://testflight.apple.com/join/UayI188L") else { return }
+                    let shareSheetVC = UIActivityViewController(activityItems: [
+                    url
+                    ], applicationActivities: nil)
+                    self.present(shareSheetVC, animated: true)
                 })),
             ]),
             Section(title: "contact", options: [
