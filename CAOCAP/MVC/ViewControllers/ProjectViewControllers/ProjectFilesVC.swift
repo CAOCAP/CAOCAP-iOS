@@ -8,7 +8,7 @@
 import UIKit
 import ReSwift
 
-class ProjectFilesVC: UIViewController {
+class ProjectFilesVC: UIViewController, Storyboarded {
     
     @IBOutlet weak var tableView: UITableView!
     

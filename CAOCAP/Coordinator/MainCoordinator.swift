@@ -11,11 +11,11 @@ import SwiftUI
 final class MainCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
-
+    
     init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-
+    
     //MARK: Initial View Controller
     func start() {
         let navigationVC = NavigationVC.instantiate()
@@ -91,4 +91,5 @@ final class MainCoordinator: Coordinator {
         let vc = HelpVC()
         navigationController.present(vc, animated: true)
     }
+    
 }

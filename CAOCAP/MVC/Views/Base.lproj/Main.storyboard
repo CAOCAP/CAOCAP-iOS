@@ -174,7 +174,7 @@
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="ihW-Sv-FVz" kind="show" id="nDr-9q-4Mg"/>
+                                            <segue destination="ihW-Sv-FVz" kind="show" id="0dr-Sq-Jjs"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8S-vQ-irU">
@@ -189,7 +189,7 @@
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="5BW-Ht-bvw" kind="show" id="Pxc-0x-BXm"/>
+                                            <segue destination="5BW-Ht-bvw" kind="show" id="mGC-YE-eIx"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1239,6 +1239,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kxU-NY-rOk"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="attributesSegmentedControl" destination="wJ2-e6-4tK" id="sKH-0L-BUq"/>
                         <outlet property="attributesStackView" destination="5RH-dU-Kyu" id="U7y-hI-3US"/>
@@ -1269,11 +1271,11 @@
             <objects>
                 <viewController storyboardIdentifier="ProjectSettingsVC" id="ihW-Sv-FVz" customClass="ProjectSettingsVC" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6kC-jZ-hsB">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Mnv-IH-DGA">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <connections>
                                     <outlet property="dataSource" destination="ihW-Sv-FVz" id="GLf-c0-QJv"/>
                                     <outlet property="delegate" destination="ihW-Sv-FVz" id="tIU-fM-Crs"/>
@@ -2850,11 +2852,11 @@ There are no other in-app purchases.</string>
             <objects>
                 <viewController storyboardIdentifier="ProjectFilesVC" id="5BW-Ht-bvw" customClass="ProjectFilesVC" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vdk-zr-pP0">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ySQ-GG-gTL">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="834"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <connections>
                                     <outlet property="dataSource" destination="5BW-Ht-bvw" id="AQQ-X5-bo5"/>
                                     <outlet property="delegate" destination="5BW-Ht-bvw" id="Frb-oF-VKA"/>

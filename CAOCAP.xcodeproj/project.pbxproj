@@ -62,6 +62,16 @@
 		21AF3CBA2A6B2159002E96E3 /* SendFeedbackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CB92A6B2159002E96E3 /* SendFeedbackVC.swift */; };
 		21AF3CBC2A6B2170002E96E3 /* SupportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CBB2A6B2170002E96E3 /* SupportVC.swift */; };
 		21AF3CBE2A6B2188002E96E3 /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CBD2A6B2188002E96E3 /* HelpVC.swift */; };
+		21AF3CC02A6B7096002E96E3 /* ProjectLanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CBF2A6B7096002E96E3 /* ProjectLanguageVC.swift */; };
+		21AF3CC22A6B70B6002E96E3 /* ProjectTitleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CC12A6B70B6002E96E3 /* ProjectTitleVC.swift */; };
+		21AF3CC42A6B70CC002E96E3 /* ProjectStyleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CC32A6B70CC002E96E3 /* ProjectStyleVC.swift */; };
+		21AF3CC62A6B70E4002E96E3 /* ProjectMetaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CC52A6B70E4002E96E3 /* ProjectMetaVC.swift */; };
+		21AF3CC82A6B70F1002E96E3 /* ProjectLinkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CC72A6B70F1002E96E3 /* ProjectLinkVC.swift */; };
+		21AF3CCA2A6B7107002E96E3 /* ProjectScriptVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CC92A6B7107002E96E3 /* ProjectScriptVC.swift */; };
+		21AF3CCC2A6B7117002E96E3 /* ProjectBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CCB2A6B7117002E96E3 /* ProjectBaseVC.swift */; };
+		21AF3CCE2A6B7128002E96E3 /* ProjectFontsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CCD2A6B7128002E96E3 /* ProjectFontsVC.swift */; };
+		21AF3CD02A6B7139002E96E3 /* ProjectImagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CCF2A6B7139002E96E3 /* ProjectImagesVC.swift */; };
+		21AF3CD22A6B714A002E96E3 /* ProjectVideosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CD12A6B714A002E96E3 /* ProjectVideosVC.swift */; };
 		21C21C492A34B5D800F40BE3 /* ProjectsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C21C482A34B5D800F40BE3 /* ProjectsVC.swift */; };
 		21C21C4B2A34B60200F40BE3 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C21C4A2A34B60200F40BE3 /* SettingsVC.swift */; };
 		21C21C4D2A34B61900F40BE3 /* PurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C21C4C2A34B61900F40BE3 /* PurchaseVC.swift */; };
@@ -133,6 +143,16 @@
 		21AF3CB92A6B2159002E96E3 /* SendFeedbackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFeedbackVC.swift; sourceTree = "<group>"; };
 		21AF3CBB2A6B2170002E96E3 /* SupportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportVC.swift; sourceTree = "<group>"; };
 		21AF3CBD2A6B2188002E96E3 /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
+		21AF3CBF2A6B7096002E96E3 /* ProjectLanguageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectLanguageVC.swift; sourceTree = "<group>"; };
+		21AF3CC12A6B70B6002E96E3 /* ProjectTitleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTitleVC.swift; sourceTree = "<group>"; };
+		21AF3CC32A6B70CC002E96E3 /* ProjectStyleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectStyleVC.swift; sourceTree = "<group>"; };
+		21AF3CC52A6B70E4002E96E3 /* ProjectMetaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectMetaVC.swift; sourceTree = "<group>"; };
+		21AF3CC72A6B70F1002E96E3 /* ProjectLinkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectLinkVC.swift; sourceTree = "<group>"; };
+		21AF3CC92A6B7107002E96E3 /* ProjectScriptVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectScriptVC.swift; sourceTree = "<group>"; };
+		21AF3CCB2A6B7117002E96E3 /* ProjectBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectBaseVC.swift; sourceTree = "<group>"; };
+		21AF3CCD2A6B7128002E96E3 /* ProjectFontsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFontsVC.swift; sourceTree = "<group>"; };
+		21AF3CCF2A6B7139002E96E3 /* ProjectImagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectImagesVC.swift; sourceTree = "<group>"; };
+		21AF3CD12A6B714A002E96E3 /* ProjectVideosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectVideosVC.swift; sourceTree = "<group>"; };
 		21C21C482A34B5D800F40BE3 /* ProjectsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsVC.swift; sourceTree = "<group>"; };
 		21C21C4A2A34B60200F40BE3 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		21C21C4C2A34B61900F40BE3 /* PurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseVC.swift; sourceTree = "<group>"; };
@@ -313,8 +333,6 @@
 				21C21C4C2A34B61900F40BE3 /* PurchaseVC.swift */,
 				21C21C4A2A34B60200F40BE3 /* SettingsVC.swift */,
 				2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */,
-				2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */,
-				21534D9E2A59E58100E8078B /* ProjectFilesVC.swift */,
 				21AF3CB12A6B20DF002E96E3 /* CreditsVC.swift */,
 				21AF3CB32A6B20FD002E96E3 /* AboutUsVC.swift */,
 				21AF3CB52A6B211E002E96E3 /* TermsOfUseVC.swift */,
@@ -322,6 +340,7 @@
 				21AF3CB92A6B2159002E96E3 /* SendFeedbackVC.swift */,
 				21AF3CBB2A6B2170002E96E3 /* SupportVC.swift */,
 				21AF3CBD2A6B2188002E96E3 /* HelpVC.swift */,
+				21AF3CD32A6B717A002E96E3 /* ProjectViewControllers */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -372,6 +391,25 @@
 				21326ECF2A530CAE00255570 /* UserDefaults.swift */,
 			);
 			path = UserDefaultsRepo;
+			sourceTree = "<group>";
+		};
+		21AF3CD32A6B717A002E96E3 /* ProjectViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */,
+				21534D9E2A59E58100E8078B /* ProjectFilesVC.swift */,
+				21AF3CBF2A6B7096002E96E3 /* ProjectLanguageVC.swift */,
+				21AF3CC12A6B70B6002E96E3 /* ProjectTitleVC.swift */,
+				21AF3CC32A6B70CC002E96E3 /* ProjectStyleVC.swift */,
+				21AF3CC52A6B70E4002E96E3 /* ProjectMetaVC.swift */,
+				21AF3CC72A6B70F1002E96E3 /* ProjectLinkVC.swift */,
+				21AF3CC92A6B7107002E96E3 /* ProjectScriptVC.swift */,
+				21AF3CCB2A6B7117002E96E3 /* ProjectBaseVC.swift */,
+				21AF3CCD2A6B7128002E96E3 /* ProjectFontsVC.swift */,
+				21AF3CCF2A6B7139002E96E3 /* ProjectImagesVC.swift */,
+				21AF3CD12A6B714A002E96E3 /* ProjectVideosVC.swift */,
+			);
+			path = ProjectViewControllers;
 			sourceTree = "<group>";
 		};
 		21C21C562A38DD7D00F40BE3 /* Fonts */ = {
@@ -540,6 +578,7 @@
 				214995262A5C3414008B9987 /* ReduxReducer.swift in Sources */,
 				218DA9CD2A2B205800459C61 /* MindMapVC.swift in Sources */,
 				218DA9C92A2B205800459C61 /* AppDelegate.swift in Sources */,
+				21AF3CD02A6B7139002E96E3 /* ProjectImagesVC.swift in Sources */,
 				2178C19D2A4D92A300876BB6 /* ProjectSettingsVC.swift in Sources */,
 				2175FBE22A648D0700F7E97F /* LottieRepository.swift in Sources */,
 				21AF3CB02A68565C002E96E3 /* RealmProjectModels.swift in Sources */,
@@ -548,21 +587,28 @@
 				21AF3CA72A6843A9002E96E3 /* RealmRepository.swift in Sources */,
 				21534DA12A5A9B3B00E8078B /* TailwindCSS.swift in Sources */,
 				2149952A2A5C34C9008B9987 /* ReduxStore.swift in Sources */,
+				21AF3CC62A6B70E4002E96E3 /* ProjectMetaVC.swift in Sources */,
 				21534D962A59B3B300E8078B /* Storyboarded.swift in Sources */,
 				21AF3CB82A6B213C002E96E3 /* PrivacyPolicyVC.swift in Sources */,
+				21AF3CCC2A6B7117002E96E3 /* ProjectBaseVC.swift in Sources */,
 				21AF3CBC2A6B2170002E96E3 /* SupportVC.swift in Sources */,
 				2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */,
 				21534D9F2A59E58100E8078B /* ProjectFilesVC.swift in Sources */,
+				21AF3CC82A6B70F1002E96E3 /* ProjectLinkVC.swift in Sources */,
 				21534D9B2A59CD2B00E8078B /* ChartsVC.swift in Sources */,
 				2184CCFA2A522E6200B39882 /* IntroVC.swift in Sources */,
+				21AF3CCA2A6B7107002E96E3 /* ProjectScriptVC.swift in Sources */,
 				2178C1A42A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift in Sources */,
 				2178C1A22A4DA2AB00876BB6 /* SettingsTableViewCell.swift in Sources */,
 				214995282A5C342D008B9987 /* ReduxState.swift in Sources */,
 				21AF3CBE2A6B2188002E96E3 /* HelpVC.swift in Sources */,
+				21AF3CD22A6B714A002E96E3 /* ProjectVideosVC.swift in Sources */,
+				21AF3CC22A6B70B6002E96E3 /* ProjectTitleVC.swift in Sources */,
 				21C21C4D2A34B61900F40BE3 /* PurchaseVC.swift in Sources */,
 				218DA9CB2A2B205800459C61 /* SceneDelegate.swift in Sources */,
 				21DBA0052A39EC5500DFAC66 /* UIFont+Extensions.swift in Sources */,
 				2186DB0D2A30946900773C5E /* UIView+Extensions.swift in Sources */,
+				21AF3CCE2A6B7128002E96E3 /* ProjectFontsVC.swift in Sources */,
 				21DBA0032A39E18C00DFAC66 /* StoreKitRepository.swift in Sources */,
 				21326ED02A530CAE00255570 /* UserDefaults.swift in Sources */,
 				21C21C4B2A34B60200F40BE3 /* SettingsVC.swift in Sources */,
@@ -572,12 +618,14 @@
 				21AF3CB62A6B211E002E96E3 /* TermsOfUseVC.swift in Sources */,
 				21C21C492A34B5D800F40BE3 /* ProjectsVC.swift in Sources */,
 				21C21C542A36145200F40BE3 /* Enumerations.swift in Sources */,
+				21AF3CC02A6B7096002E96E3 /* ProjectLanguageVC.swift in Sources */,
 				21534D8F2A59B26F00E8078B /* NavigationVC.swift in Sources */,
 				214995242A5C3404008B9987 /* ReduxActions.swift in Sources */,
 				21534D942A59B38B00E8078B /* Coordinator.swift in Sources */,
 				21534DA32A5A9ED000E8078B /* TailwindCollectionViewCell.swift in Sources */,
 				21AF3CBA2A6B2159002E96E3 /* SendFeedbackVC.swift in Sources */,
 				210F19B02A42DC9800D71A66 /* UIStroke.swift in Sources */,
+				21AF3CC42A6B70CC002E96E3 /* ProjectStyleVC.swift in Sources */,
 				21534D982A59B40A00E8078B /* MainCoordinator.swift in Sources */,
 				210F19AE2A42DBE100D71A66 /* UINodeView.swift in Sources */,
 				2106C41D2A5F949400446620 /* HTMLParser.swift in Sources */,
