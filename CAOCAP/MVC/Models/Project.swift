@@ -8,12 +8,17 @@
 import Foundation
 import SwiftSoup
 
+struct ProjectState {
+    var document: String
+    var selectedElementID: String
+}
+
 class Project {
     
     var document: Document?
-    var undos = [String]()
-    var redos = [String]()
     var selectedElementID: String?
+    var undos = [ProjectState]()
+    var redos = [ProjectState]()
     
     init() {
         do {
@@ -37,7 +42,7 @@ class Project {
         
     }
     
-    init(document: Document, undos: [String] = [], redos: [String] = [], selectedElementID: String? = nil) {
+    init(document: Document, undos: [ProjectState] = [], redos: [ProjectState] = [], selectedElementID: String? = nil) {
         self.document = document
         self.undos = undos
         self.redos = redos
@@ -56,17 +61,23 @@ class Project {
     }
     
     
-    func saveToUndos() {
-        if let currentDoc = getOuterHtml() {
-            undos.append(currentDoc)
+    func saveToUndos() { //TODO: change function name
+        if let currentDoc = getOuterHtml(),
+            let id = selectedElementID {
+            redos.removeAll()
+            undos.append(ProjectState(document: currentDoc, selectedElementID: id))
         }
     }
     
     func undo() {
-        if let currentDoc = getOuterHtml() {
-            redos.append(currentDoc)
+        guard !undos.isEmpty else { return }
+        if let currentDoc = getOuterHtml(),
+            let id = selectedElementID {
+            redos.append(ProjectState(document: currentDoc, selectedElementID: id))
             do {
-                document = try SwiftSoup.parse(undos.removeLast())
+                let undone = undos.removeLast()
+                document = try SwiftSoup.parse(undone.document)
+                selectedElementID = undone.selectedElementID
             } catch Exception.Error(let type, let message) {
                 print(type, message)
             } catch {
@@ -76,10 +87,14 @@ class Project {
     }
     
     func redo() {
-        if let currentDoc = getOuterHtml() {
-            undos.append(currentDoc)
+        guard !redos.isEmpty else { return }
+        if let currentDoc = getOuterHtml(),
+           let id = selectedElementID {
+            undos.append(ProjectState(document: currentDoc, selectedElementID: id))
             do {
-                document = try SwiftSoup.parse(redos.removeLast())
+                let redone = redos.removeLast()
+                document = try SwiftSoup.parse(redone.document)
+                selectedElementID = redone.selectedElementID
             } catch Exception.Error(let type, let message) {
                 print(type, message)
             } catch {
