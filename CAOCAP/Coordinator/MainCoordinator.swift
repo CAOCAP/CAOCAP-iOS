@@ -43,16 +43,8 @@ final class MainCoordinator: Coordinator {
         navigationController.present(vc, animated: true)
     }
     
-    func viewMainSettings() {
-        let vc = MainSettingsVC.instantiate()
-        navigationController.present(vc, animated: true)
-    }
     
-    func viewProjects() {
-        let vc = ProjectsVC.instantiate()
-        navigationController.present(vc, animated: true)
-    }
-    
+    //MARK: Initial
     func viewPurchase() {
         let vc = PurchaseVC.instantiate()
         navigationController.present(vc, animated: true)
@@ -63,4 +55,40 @@ final class MainCoordinator: Coordinator {
         navigationController.present(vc, animated: true)
     }
     
+    
+    //MARK: Main Settings
+    func viewCredits() {
+        let vc = CreditsVC()
+        navigationController.present(vc, animated: true)
+    }
+    
+    func viewAboutUs() {
+        let vc = AboutUsVC()
+        navigationController.present(vc, animated: true)
+    }
+    
+    func viewTermsOfUse() {
+        let vc = TermsOfUseVC()
+        navigationController.present(vc, animated: true)
+    }
+    
+    func viewPrivacyPolicy() {
+        let vc = PrivacyPolicyVC()
+        navigationController.present(vc, animated: true)
+    }
+    
+    func viewSendFeedback() {
+        let vc = SendFeedbackVC()
+        navigationController.present(vc, animated: true)
+    }
+    
+    func viewSupport() {
+        let vc = SupportVC()
+        navigationController.present(vc, animated: true)
+    }
+    
+    func viewHelp() {
+        let vc = HelpVC()
+        navigationController.present(vc, animated: true)
+    }
 }

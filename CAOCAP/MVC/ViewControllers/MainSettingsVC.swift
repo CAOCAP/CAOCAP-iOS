@@ -48,33 +48,33 @@ class MainSettingsVC: SettingsVC {
             ]),
             Section(title: "contact", options: [
                 .staticCell(option: SettingsOption(title: "Help", icon: UIImage(systemName: "questionmark.circle.fill"), color: .systemTeal, handler: {
-                    print("did press")
+                    self.coordinator?.viewHelp()
                     
                 })),
                 .staticCell(option: SettingsOption(title: "Support", icon: UIImage(systemName: "message.fill"), color: .systemMint, handler: {
-                    print("did press")
+                    self.coordinator?.viewSupport()
                     
                 })),
                 .staticCell(option: SettingsOption(title: "Send Feedback", icon: UIImage(systemName: "paperplane.fill"), color: .systemGreen, handler: {
-                    print("did press")
+                    self.coordinator?.viewSendFeedback()
                     
                 })),
             ]),
             Section(title: "Info", options: [
                 .staticCell(option:SettingsOption(title: "Privacy Policy", icon: UIImage(systemName: "lock.shield.fill"), color: .systemGray, handler: {
-                    print("did press")
+                    self.coordinator?.viewPrivacyPolicy()
                     
                 })),
                 .staticCell(option:SettingsOption(title: "Terms Of Use", icon: UIImage(systemName: "doc.on.clipboard.fill"), color: .systemGray, handler: {
-                    print("did press")
+                    self.coordinator?.viewTermsOfUse()
                     
                 })),
                 .staticCell(option:SettingsOption(title: "About Us", icon: UIImage(systemName: "info.circle.fill"), color: .systemGray2, handler: {
-                    print("did press")
+                    self.coordinator?.viewAboutUs()
                     
                 })),
                 .staticCell(option: SettingsOption(title: "Credits", icon: UIImage(systemName: "person.2.fill"), color: .systemGray3, handler: {
-                    print("did press")
+                    self.coordinator?.viewCredits()
                     
                 })),
             ]),
