@@ -232,12 +232,12 @@ class MindMapVC: UIViewController, Storyboarded {
     
     @IBAction func didPressUndo(_ sender: UIButton) {
         print("\(#function)ing...")
-        //mindMap.undo()🤔
+        ReduxStore.dispatch(UndoAction())
     }
     
     @IBAction func didPressRedo(_ sender: UIButton) {
         print("\(#function)ing...")
-        //mindMap.redo()🤔
+        ReduxStore.dispatch(RedoAction())
     }
     
     @IBAction func didChangeAttributesViewSegmentedControl(_ sender: UISegmentedControl) {

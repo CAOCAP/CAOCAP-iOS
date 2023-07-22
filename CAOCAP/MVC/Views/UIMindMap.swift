@@ -77,6 +77,7 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     
     func add(tag: String) {
         print("\(#function)ing...")
+        ReduxStore.dispatch(WillEditAction())
         guard let body = project?.document?.body(),
               let selectedID = project?.selectedElementID
         else { return }
@@ -96,6 +97,7 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     
     func delete(_ element: Element) {
         print("\(#function)ing...")
+        ReduxStore.dispatch(WillEditAction())
         guard let parent = element.parent() else { return }
         do {
             try parent.removeChild(element)

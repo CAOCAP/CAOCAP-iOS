@@ -72,6 +72,7 @@
 		21AF3CCE2A6B7128002E96E3 /* ProjectFontsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CCD2A6B7128002E96E3 /* ProjectFontsVC.swift */; };
 		21AF3CD02A6B7139002E96E3 /* ProjectImagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CCF2A6B7139002E96E3 /* ProjectImagesVC.swift */; };
 		21AF3CD22A6B714A002E96E3 /* ProjectVideosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CD12A6B714A002E96E3 /* ProjectVideosVC.swift */; };
+		21AF3CD52A6BE315002E96E3 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CD42A6BE315002E96E3 /* String+Extensions.swift */; };
 		21C21C492A34B5D800F40BE3 /* ProjectsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C21C482A34B5D800F40BE3 /* ProjectsVC.swift */; };
 		21C21C4B2A34B60200F40BE3 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C21C4A2A34B60200F40BE3 /* SettingsVC.swift */; };
 		21C21C4D2A34B61900F40BE3 /* PurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C21C4C2A34B61900F40BE3 /* PurchaseVC.swift */; };
@@ -153,6 +154,7 @@
 		21AF3CCD2A6B7128002E96E3 /* ProjectFontsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFontsVC.swift; sourceTree = "<group>"; };
 		21AF3CCF2A6B7139002E96E3 /* ProjectImagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectImagesVC.swift; sourceTree = "<group>"; };
 		21AF3CD12A6B714A002E96E3 /* ProjectVideosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectVideosVC.swift; sourceTree = "<group>"; };
+		21AF3CD42A6BE315002E96E3 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		21C21C482A34B5D800F40BE3 /* ProjectsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsVC.swift; sourceTree = "<group>"; };
 		21C21C4A2A34B60200F40BE3 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		21C21C4C2A34B61900F40BE3 /* PurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseVC.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 			children = (
 				2186DB0C2A30946900773C5E /* UIView+Extensions.swift */,
 				21DBA0042A39EC5500DFAC66 /* UIFont+Extensions.swift */,
+				21AF3CD42A6BE315002E96E3 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 				21534D9F2A59E58100E8078B /* ProjectFilesVC.swift in Sources */,
 				21AF3CC82A6B70F1002E96E3 /* ProjectLinkVC.swift in Sources */,
 				21534D9B2A59CD2B00E8078B /* ChartsVC.swift in Sources */,
+				21AF3CD52A6BE315002E96E3 /* String+Extensions.swift in Sources */,
 				2184CCFA2A522E6200B39882 /* IntroVC.swift in Sources */,
 				21AF3CCA2A6B7107002E96E3 /* ProjectScriptVC.swift in Sources */,
 				2178C1A42A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift in Sources */,

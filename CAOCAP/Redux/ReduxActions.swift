@@ -24,11 +24,10 @@ struct DeleteProjectAction: Action {}
 struct OpenProjectAction: Action {}
 struct CloseProjectAction: Action {}
 
-struct EditProjectAction: Action { let updatedDoc: Document}
-
 struct UpdateSelectedElementAction: Action { let selectedID: String }
 
 
 // MARK: Undo/Redo Actions
+struct WillEditAction: Action {}
 struct UndoAction: Action {}
 struct RedoAction: Action {}

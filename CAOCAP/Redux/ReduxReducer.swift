@@ -28,14 +28,18 @@ func reduxReducer(action: Action, state: ReduxState?) -> ReduxState {
          _ as OpenProjectAction,
          _ as CloseProjectAction,
          _ as UpdateSelectedElementAction,
-         _ as EditProjectAction,
          _ as DeleteProjectAction:
         state = projectReducer(action: action, state: state)
         
+    case _ as WillEditAction: // this action before the document is edited to save last state
+        state.openedProject?.saveToUndos()
+        print("### this is the undos:", state.openedProject?.undos ?? "error")
     case _ as UndoAction:
-        print("undo Action")
+        state.openedProject?.undo()
+        
     case _ as RedoAction:
-        print("redo Action")
+        state.openedProject?.redo()
+        
     default:
         break
     }
@@ -55,14 +59,13 @@ func projectReducer(action: Action, state: ReduxState?) -> ReduxState {
     case _ as OpenProjectAction:
         print("this is just a demo: did open project")
     case _ as CloseProjectAction:
+        state.openedProject = nil
         print("this is just a demo: did close project")
     case let action as UpdateSelectedElementAction:
         state.openedProject?.selectedElementID = action.selectedID
         print("this is just a demo: did update selected element on opened project")
-    case let action as EditProjectAction:
-        state.openedProject?.document = action.updatedDoc
-        print("this is just a demo: did edit the opened project")
     case _ as DeleteProjectAction:
+        state.openedProject = nil
         print("this is just a demo: did delete the opened project")
     default:
         break

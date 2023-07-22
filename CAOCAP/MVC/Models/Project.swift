@@ -11,7 +11,8 @@ import SwiftSoup
 class Project {
     
     var document: Document?
-    var history: [Document]?
+    var undos = [String]()
+    var redos = [String]()
     var selectedElementID: String?
     
     init() {
@@ -28,9 +29,6 @@ class Project {
             </html>
             """#
             document = try SwiftSoup.parse(html)
-            if let document = document {
-                history?.append(document)
-            }
         } catch Exception.Error(let type, let message) {
             print(type, message)
         } catch {
@@ -39,10 +37,55 @@ class Project {
         
     }
     
-    init(document: Document, history: [Document]? = nil, selectedElementID: String? = nil) {
+    init(document: Document, undos: [String] = [], redos: [String] = [], selectedElementID: String? = nil) {
         self.document = document
-        self.history = history
+        self.undos = undos
+        self.redos = redos
         self.selectedElementID = selectedElementID
+    }
+    
+    func getOuterHtml() -> String? {
+        do {
+            return try document?.outerHtml()
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
+        return nil
+    }
+    
+    
+    func saveToUndos() {
+        if let currentDoc = getOuterHtml() {
+            undos.append(currentDoc)
+        }
+    }
+    
+    func undo() {
+        if let currentDoc = getOuterHtml() {
+            redos.append(currentDoc)
+            do {
+                document = try SwiftSoup.parse(undos.removeLast())
+            } catch Exception.Error(let type, let message) {
+                print(type, message)
+            } catch {
+                print("error")
+            }
+        }
+    }
+    
+    func redo() {
+        if let currentDoc = getOuterHtml() {
+            undos.append(currentDoc)
+            do {
+                document = try SwiftSoup.parse(redos.removeLast())
+            } catch Exception.Error(let type, let message) {
+                print(type, message)
+            } catch {
+                print("error")
+            }
+        }
     }
     
     func getSelectedElement() -> Element? {
