@@ -25,7 +25,9 @@ extension ProjectFilesVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "file\(indexPath.row)"
+        var configuration = cell.defaultContentConfiguration()
+        configuration.text = "file \(indexPath.row)"
+        cell.contentConfiguration = configuration
         return cell
     }
     

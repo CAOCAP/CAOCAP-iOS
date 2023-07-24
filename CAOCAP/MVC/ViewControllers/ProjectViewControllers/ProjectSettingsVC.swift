@@ -15,7 +15,7 @@ class ProjectSettingsVC: SettingsVC {
         sections = [
             Section(title: "HTML", options: [
                 .staticCell(option: SettingsOption(title: "Language", icon: UIImage(systemName: "globe"), color: .systemPink, label: "en", handler: {
-                    let vc = ProjectLanguageVC()
+                    let vc = ProjectLanguageVC.instantiate()
                     self.present(vc, animated: true)
                 })),
             ]),
