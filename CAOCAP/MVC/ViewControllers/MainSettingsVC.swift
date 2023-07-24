@@ -17,7 +17,7 @@ class MainSettingsVC: SettingsVC {
 
         sections = [
             Section(title: "Main", options: [
-                .staticCell(option: SettingsOption(title: "Language", icon: UIImage(systemName: "globe"), color: .systemPink, handler: {
+                .staticCell(option: SettingsOption(title: "Language", icon: UIImage(systemName: "globe"), color: .systemPink, label: "English", handler: {
                     print("did press")
                     
                 })),
@@ -25,11 +25,11 @@ class MainSettingsVC: SettingsVC {
                     print("did press")
                     
                 })),
-                .switchCell(option: SettingsSwitchOption(title: "Sounds", icon: UIImage(systemName: "speaker.wave.2.fill"), color: .systemOrange, handler: {
+                .switchCell(option: SettingsSwitchOption(title: "Sounds", icon: UIImage(systemName: "speaker.wave.2.fill"), color: .systemOrange, isOn: false, handler: {
                     print("did press")
                     
-                }, isOn: false)),
-                .staticCell(option: SettingsOption(title: "What's New?", icon: UIImage(systemName: "sparkles"), color: .systemYellow, handler: {
+                })),
+                .staticCell(option: SettingsOption(title: "What's New?", icon: UIImage(systemName: "sparkles"), color: .systemYellow, label: "v5.0.0", handler: {
                     let whatsNewVC = storyboard.instantiateViewController(withIdentifier: "WhatsNewVC")
                     self.present(whatsNewVC, animated: true)
                     

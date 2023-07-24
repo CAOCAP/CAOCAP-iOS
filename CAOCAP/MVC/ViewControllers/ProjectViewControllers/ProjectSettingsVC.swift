@@ -14,14 +14,14 @@ class ProjectSettingsVC: SettingsVC {
         super.viewDidLoad()
         sections = [
             Section(title: "HTML", options: [
-                .staticCell(option: SettingsOption(title: "Language", icon: UIImage(systemName: "globe"), color: .systemPink, handler: {
+                .staticCell(option: SettingsOption(title: "Language", icon: UIImage(systemName: "globe"), color: .systemPink, label: "en", handler: {
                     let vc = ProjectLanguageVC()
                     self.present(vc, animated: true)
                 })),
             ]),
             
             Section(title: "Head", options: [
-                .staticCell(option: SettingsOption(title: "Title", icon: UIImage(systemName: "t.square"), color: .systemGray, handler: {
+                .staticCell(option: SettingsOption(title: "Title", icon: UIImage(systemName: "t.square"), color: .systemGray, label: "untitled", handler: {
                     let vc = ProjectTitleVC()
                     self.present(vc, animated: true)
                     
@@ -76,10 +76,10 @@ class ProjectSettingsVC: SettingsVC {
                     print("did press")
                     
                 })),
-                .switchCell(option: SettingsSwitchOption(title: "Auto-Save", icon: UIImage(systemName: "arrow.triangle.2.circlepath.circle"), color: .systemOrange, handler: {
+                .switchCell(option: SettingsSwitchOption(title: "Auto-Save", icon: UIImage(systemName: "arrow.triangle.2.circlepath.circle"), color: .systemOrange, isOn: false, handler: {
                     print("did press")
                     
-                }, isOn: false)),
+                })),
                 .staticCell(option:SettingsOption(title: "Version control system", icon: UIImage(systemName: "externaldrive.badge.icloud"), color: .systemPink, handler: {
                     print("did press")
                     

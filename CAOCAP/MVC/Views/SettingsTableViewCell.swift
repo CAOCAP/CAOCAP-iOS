@@ -24,16 +24,32 @@ class SettingsTableViewCell: UITableViewCell {
         return imageView
     }()
     
+    private let stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.spacing = 10
+        return stackView
+    }()
+    
+    private let title: UILabel = {
+        let title = UILabel()
+        title.numberOfLines = 1
+        return title
+    }()
+    
     private let label: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
+        label.textColor = .secondaryLabel
         return label
     }()
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.addSubview(label)
+        contentView.addSubview(stackView)
+        stackView.addArrangedSubview(title)
+        stackView.addArrangedSubview(label)
         contentView.addSubview(colorView)
         colorView.addSubview(iconView)
         contentView.clipsToBounds = true
@@ -43,7 +59,8 @@ class SettingsTableViewCell: UITableViewCell {
     public func configure(with option: SettingsOption) {
         colorView.backgroundColor = option.color
         iconView.image = option.icon
-        label.text = option.title
+        title.text = option.title
+        label.text = option.label
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -62,10 +79,10 @@ class SettingsTableViewCell: UITableViewCell {
         let iconSize: CGFloat = size/1.5
         iconView.frame = CGRect(x: (size-iconSize)/2, y: (size-iconSize)/2, width: iconSize, height: iconSize)
         
-        label.frame = CGRect(
+        stackView.frame = CGRect(
             x: colorView.frame.width + 25,
             y: 0,
-            width: contentView.frame.width - colorView.frame.width - 25,
+            width: contentView.frame.width - colorView.frame.width - 35,
             height: contentView.frame.height
         )
     }

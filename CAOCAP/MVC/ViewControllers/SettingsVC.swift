@@ -21,15 +21,24 @@ struct SettingsSwitchOption {
     let title: String
     let icon: UIImage?
     let color: UIColor
-    let handler: ()->Void
     var isOn: Bool
+    let handler: ()->Void
 }
 
 struct SettingsOption {
     let title: String
     let icon: UIImage?
     let color: UIColor
+    let label: String?
     let handler: ()->Void
+    
+    init(title: String, icon: UIImage?, color: UIColor, label: String? = nil, handler: @escaping () -> Void) {
+        self.title = title
+        self.icon = icon
+        self.color = color
+        self.label = label
+        self.handler = handler
+    }
 }
 
 class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Storyboarded {
