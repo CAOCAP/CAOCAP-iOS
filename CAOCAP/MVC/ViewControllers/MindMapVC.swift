@@ -259,7 +259,10 @@ class MindMapVC: UIViewController, Storyboarded {
     }
     
     @IBAction func didChangeHiddenSwitch(_ sender: UISwitch) {
-        project?.setSelectedElementHidden(sender.isOn)
+        guard let project = project else { return }
+        ReduxStore.dispatch(UpdateAction(handler: {
+            project.setSelectedElementHidden(sender.isOn)
+        }))
     }
     
     
