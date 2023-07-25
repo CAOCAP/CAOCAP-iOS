@@ -12,6 +12,7 @@ class ProjectSettingsVC: SettingsVC {
     
     var project: Project?
     var languageCode: String?
+    var projectTitle: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +29,8 @@ class ProjectSettingsVC: SettingsVC {
             ]),
             
             Section(title: "Head", options: [
-                .staticCell(option: SettingsOption(title: "Title", icon: UIImage(systemName: "t.square"), color: .systemGray, label: "untitled", handler: {
-                    let vc = ProjectTitleVC()
+                .staticCell(option: SettingsOption(title: "Title", icon: UIImage(systemName: "t.square"), color: .systemGray, label: projectTitle, handler: {
+                    let vc = ProjectTitleVC.instantiate()
                     self.present(vc, animated: true)
                     
                 })),
@@ -120,6 +121,7 @@ extension ProjectSettingsVC: StoreSubscriber {
     func newState(state: ReduxState) {
         project = state.openedProject
         languageCode = project?.getDocumentLang()
+        projectTitle = project?.getDocumentTitle()
         setSettingSections()
     }
 }

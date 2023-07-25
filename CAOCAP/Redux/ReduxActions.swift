@@ -27,6 +27,7 @@ struct CloseProjectAction: Action {}
 struct UpdateSelectedElementAction: Action { let selectedID: String }
 
 struct UpdateProjectLangAction: Action { let lang: String }
+struct UpdateProjectTitleAction: Action { let title: String }
 
 // MARK: Undo/Redo Actions
 struct WillEditAction: Action {}

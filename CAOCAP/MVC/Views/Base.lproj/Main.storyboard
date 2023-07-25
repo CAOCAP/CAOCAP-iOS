@@ -1252,6 +1252,7 @@
                         <outlet property="htmlView" destination="nAS-jS-Vj6" id="blM-uo-0Mj"/>
                         <outlet property="idTextField" destination="yIc-pL-0pm" id="nrT-2x-DWr"/>
                         <outlet property="jsView" destination="ubS-XK-Ard" id="zxy-9v-H6b"/>
+                        <outlet property="projectTitle" destination="Dpt-m0-Ea9" id="f9Z-Lc-8qH"/>
                         <outlet property="redoButton" destination="22A-CW-8eM" id="Enz-y8-Wsk"/>
                         <outlet property="resizeIcon" destination="6CB-c1-YZ5" id="P1s-Q6-bk3"/>
                         <outlet property="toolsView" destination="zkr-ys-dhB" id="hvh-2G-ncH"/>
@@ -2044,7 +2045,7 @@ There are no other in-app purchases.</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="YWP-YE-S2g">
-                                <rect key="frame" x="34" y="244.66666666666663" width="322.33333333333331" height="132"/>
+                                <rect key="frame" x="34" y="244.66666666666663" width="322.33333333333337" height="132"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try CAOCAP Premium for free" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sby-h7-ijT">
                                         <rect key="frame" x="0.0" y="0.0" width="322.33333333333331" height="26"/>
@@ -2498,7 +2499,7 @@ There are no other in-app purchases.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="User" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PVA-xc-Hdu">
-                                                <rect key="frame" x="50.333333333333314" y="0.0" width="279.99999999999994" height="44.666666666666664"/>
+                                                <rect key="frame" x="50.333333333333314" y="0.0" width="280" height="44.666666666666664"/>
                                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="35"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="nickname"/>
@@ -2975,6 +2976,54 @@ There are no other in-app purchases.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T5l-So-0c4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1800" y="609"/>
+        </scene>
+        <!--Project TitleVC-->
+        <scene sceneID="SNj-qb-bZb">
+            <objects>
+                <viewController storyboardIdentifier="ProjectTitleVC" id="XhY-9N-ijy" customClass="ProjectTitleVC" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="olH-Ya-mhj">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="qAy-go-ZUH">
+                                <rect key="frame" x="20" y="97" width="350" height="81"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcJ-hI-1q7">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="27"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="project title" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="I2x-HE-EGB">
+                                        <rect key="frame" x="0.0" y="41" width="350" height="40"/>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="SxE-pU-xXT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="nickname"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="XhY-9N-ijy" id="jdn-R0-TpF"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aG3-27-CGm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qAy-go-ZUH" firstAttribute="centerX" secondItem="olH-Ya-mhj" secondAttribute="centerX" id="6AB-yI-gv8"/>
+                            <constraint firstItem="qAy-go-ZUH" firstAttribute="top" secondItem="aG3-27-CGm" secondAttribute="top" constant="50" id="dGl-1c-pDU"/>
+                            <constraint firstItem="qAy-go-ZUH" firstAttribute="leading" secondItem="olH-Ya-mhj" secondAttribute="leading" constant="20" id="xuI-ve-MNo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="titleTextField" destination="I2x-HE-EGB" id="uru-cR-7qu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vv4-cH-4LQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1800" y="1323"/>
         </scene>
     </scenes>
     <resources>

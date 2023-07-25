@@ -27,6 +27,7 @@ class Project {
             <!DOCTYPE html>
             <html lang="ar">
                 <head>
+                    <title>untitled</title>
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
                     <script src="https://cdn.tailwindcss.com"></script>
                 </head>
@@ -71,9 +72,30 @@ class Project {
         return nil
     }
     
-    func setDocumentLang(code: String) {
+    func setDocumentLang(_ code: String) {
         do {
             try document?.getElementsByTag("html").attr("lang", code)
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
+    }
+    
+    func getDocumentTitle() -> String? {
+        do {
+            return try document?.head()?.getElementsByTag("title").first()?.text()
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
+        return nil
+    }
+    
+    func setDocumentTitle(_ title: String) {
+        do {
+            try document?.head()?.getElementsByTag("title").first()?.text(title)
         } catch Exception.Error(let type, let message) {
             print(type, message)
         } catch {

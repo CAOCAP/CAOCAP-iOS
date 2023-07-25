@@ -33,7 +33,10 @@ func reduxReducer(action: Action, state: ReduxState?) -> ReduxState {
         
     case let action as UpdateProjectLangAction:
         state.openedProject?.saveToUndos()
-        state.openedProject?.setDocumentLang(code: action.lang)
+        state.openedProject?.setDocumentLang(action.lang)
+    case let action as UpdateProjectTitleAction:
+        state.openedProject?.saveToUndos()
+        state.openedProject?.setDocumentTitle(action.title)
     case _ as WillEditAction: // call this action before the document is edited to save last state
         state.openedProject?.saveToUndos()
     case _ as UndoAction:

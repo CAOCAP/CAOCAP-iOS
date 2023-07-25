@@ -15,6 +15,7 @@ class MindMapVC: UIViewController, Storyboarded {
     
     var project: Project?
     
+    @IBOutlet weak var projectTitle: UILabel!
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var resizeIcon: UIImageView!
     @IBOutlet weak var webViewWidthConstraint: NSLayoutConstraint!
@@ -316,6 +317,8 @@ extension MindMapVC: StoreSubscriber {
         loadWebView()/*🤔*/
         mindMap.loadBody()
         
+        projectTitle.text = project?.getDocumentTitle()
+        
         if let selectedElementText = project?.getSelectedElement()?.ownText() {
             contentTextField.text = selectedElementText
         }
@@ -327,10 +330,7 @@ extension MindMapVC: StoreSubscriber {
         if let isHidden = project?.isSelectedElementHidden() {
             hiddenSwitch.isOn = isHidden
         }
-            
-        
+
         idTextField.placeholder = project?.selectedElementID
-        
-        
     }
 }
