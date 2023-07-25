@@ -10,11 +10,18 @@ import ReSwift
 
 class ProjectSettingsVC: SettingsVC {
     
+    var project: Project?
+    var languageCode: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    func setSettingSections() {
         sections = [
             Section(title: "HTML", options: [
-                .staticCell(option: SettingsOption(title: "Language", icon: UIImage(systemName: "globe"), color: .systemPink, label: "en", handler: {
+                .staticCell(option: SettingsOption(title: "Language", icon: UIImage(systemName: "globe"), color: .systemPink, label: languageCode, handler: {
                     let vc = ProjectLanguageVC.instantiate()
                     self.present(vc, animated: true)
                 })),
@@ -96,6 +103,7 @@ class ProjectSettingsVC: SettingsVC {
                     
                 })),
             ]),        ]
+        tableView.reloadData()
     }
     
 }
@@ -110,6 +118,8 @@ extension ProjectSettingsVC: StoreSubscriber {
     }
     
     func newState(state: ReduxState) {
-        
+        project = state.openedProject
+        languageCode = project?.getDocumentLang()
+        setSettingSections()
     }
 }

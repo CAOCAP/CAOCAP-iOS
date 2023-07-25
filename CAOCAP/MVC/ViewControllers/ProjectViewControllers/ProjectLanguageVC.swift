@@ -6,12 +6,12 @@
 //
 
 import UIKit
+import ReSwift
 
 class ProjectLanguageVC: UIViewController, Storyboarded {
     
-    
     @IBOutlet weak var tableView: UITableView!
-    var selectedCode = "ar"
+    var selectedCode: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +40,21 @@ extension ProjectLanguageVC: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedCode = isoLanguageCodes[indexPath.row].code
-        print("did select iso lang code \(selectedCode)")
+        ReduxStore.dispatch(UpdateProjectLangAction(lang: isoLanguageCodes[indexPath.row].code))
+    }
+}
+
+
+extension ProjectLanguageVC: StoreSubscriber {
+    override func viewWillAppear(_ animated: Bool) {
+        ReduxStore.subscribe(self)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        ReduxStore.unsubscribe(self)
+    }
+    
+    func newState(state: ReduxState) {
+        selectedCode = state.openedProject?.getDocumentLang()
     }
 }

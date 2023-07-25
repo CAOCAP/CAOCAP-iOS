@@ -31,15 +31,15 @@ func reduxReducer(action: Action, state: ReduxState?) -> ReduxState {
          _ as DeleteProjectAction:
         state = projectReducer(action: action, state: state)
         
-    case _ as WillEditAction: // this action before the document is edited to save last state
+    case let action as UpdateProjectLangAction:
         state.openedProject?.saveToUndos()
-        print("### this is the undos:", state.openedProject?.undos ?? "error")
+        state.openedProject?.setDocumentLang(code: action.lang)
+    case _ as WillEditAction: // call this action before the document is edited to save last state
+        state.openedProject?.saveToUndos()
     case _ as UndoAction:
         state.openedProject?.undo()
-        
     case _ as RedoAction:
         state.openedProject?.redo()
-        
     default:
         break
     }

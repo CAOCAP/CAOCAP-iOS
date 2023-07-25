@@ -25,7 +25,7 @@ class Project {
             selectedElementID = UUID().uuidString
             let html = #"""
             <!DOCTYPE html>
-            <html>
+            <html lang="ar">
                 <head>
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
                     <script src="https://cdn.tailwindcss.com"></script>
@@ -60,6 +60,26 @@ class Project {
         return nil
     }
     
+    func getDocumentLang() -> String? {
+        do {
+            return try document?.getElementsByTag("html").attr("lang")
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
+        return nil
+    }
+    
+    func setDocumentLang(code: String) {
+        do {
+            try document?.getElementsByTag("html").attr("lang", code)
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
+    }
     
     func saveToUndos() { //TODO: change function name
         if let currentDoc = getOuterHtml(),
@@ -163,4 +183,5 @@ class Project {
         // TODO: find out how to get the background color
         return ""
     }
+    
 }
