@@ -30,6 +30,7 @@ struct UpdateProjectLangAction: Action { let lang: String }
 struct UpdateProjectTitleAction: Action { let title: String }
 
 // MARK: Undo/Redo Actions
+struct UpdateAction: Action { let handler: ()->Void }
 struct WillEditAction: Action {}
 struct UndoAction: Action {}
 struct RedoAction: Action {}

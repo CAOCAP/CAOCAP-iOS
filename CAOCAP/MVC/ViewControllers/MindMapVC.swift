@@ -296,7 +296,9 @@ extension MindMapVC: UITextFieldDelegate {
     
     @IBAction func didEndEditingTextContent(_ sender: UITextField) {
         guard let project = project, let text = sender.text else { return }
-        project.updateSelectedElementText(content: text) // this should be in the projectReducer
+        ReduxStore.dispatch(UpdateAction(handler: {
+            project.updateSelectedElementText(content: text)
+        })) // this should be in the projectReducer
     }
 }
 
