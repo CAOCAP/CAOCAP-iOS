@@ -15,3 +15,9 @@ enum Direction: Int {
     case down
     case right
 }
+
+enum TextAlignment: Int {
+    case alignLeft
+    case alignCenter
+    case alignRight
+}

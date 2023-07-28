@@ -34,6 +34,7 @@ class MindMapVC: UIViewController, Storyboarded {
     @IBOutlet weak var attributesSegmentedControl: UISegmentedControl!
     
     @IBOutlet weak var contentTextField: UITextField!
+    @IBOutlet weak var textAlignmentSegmentedControl: UISegmentedControl!
     @IBOutlet weak var typeTextField: UITextField!
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var backgroundColorWell: UIColorWell!
@@ -258,6 +259,13 @@ class MindMapVC: UIViewController, Storyboarded {
         }
     }
     
+    @IBAction func didChangeTextAlignmentSegmentedControl(_ sender: UISegmentedControl) {
+        ReduxStore.dispatch(UpdateAction(handler: {
+            self.project?.setSelectedElementText(alignment: TextAlignment(rawValue: sender.selectedSegmentIndex) ?? .alignLeft)
+        }))
+    }
+
+    
     @IBAction func didChangeHiddenSwitch(_ sender: UISwitch) {
         guard let project = project else { return }
         ReduxStore.dispatch(UpdateAction(handler: {
@@ -270,13 +278,17 @@ class MindMapVC: UIViewController, Storyboarded {
 
 extension MindMapVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return TailwindCSS.all.count
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return tailwindCSS.count
+        return TailwindCSS.all[section].array.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tailwindCell", for: indexPath) as? TailwindCollectionViewCell else { return UICollectionViewCell() }
-        cell.configure(title: tailwindCSS[indexPath.row])
+        cell.configure(title: TailwindCSS.all[indexPath.section].array[indexPath.row])
         return cell
     }
     

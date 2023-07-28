@@ -179,6 +179,33 @@ class Project {
         }
     }
     
+    func getSelectedElementTextAlignment() -> TextAlignment? {
+        do {
+            guard let elementClassNames = try getSelectedElement()?.classNames() else { return .alignLeft}
+                for alignment in TailwindCSS.textAlign {
+                if elementClassNames.contains(alignment) {
+                    
+                }
+            }
+            
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
+        return nil
+    }
+    
+    func setSelectedElementText(alignment: TextAlignment) {
+        do {
+//            try getSelectedElement()?.addClass(<#T##className: String##String#>)
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
+    }
+    
     func isSelectedElementHidden() -> Bool {
          return getSelectedElement()?.hasAttr("hidden") ?? false
     }
