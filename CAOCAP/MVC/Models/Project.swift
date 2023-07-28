@@ -5,7 +5,7 @@
 //  Created by Azzam AL-Rashed on 17/07/2023.
 //
 
-import Foundation
+import UIKit
 import SwiftSoup
 
 struct ProjectState {
@@ -227,12 +227,69 @@ class Project {
         }
     }
     
-    func getSelectedElementBackgroundColor() -> String {
-        // TODO: find out how to get the background color
-        return ""
+    func getSelectedElementBackgroundColor() -> String? {
+        guard let element = getSelectedElement() else { return nil }
+        do {
+            let classNames = try element.classNames()
+            for className in classNames { // is there a better way 🤔
+                if className.contains("bg-[") || TailwindCSS.backgroundColor.contains(className) {
+                    return className
+                }
+            }
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
+        
+        return nil
     }
     
-    func setSelectedElementBackground(color: String) {
-        // TODO: find out how to set the background color
+    func setSelectedElementBackground(color: UIColor) {
+        guard let element = getSelectedElement() else { return }
+        do {
+            if let previousColor = getSelectedElementBackgroundColor() {
+                try element.removeClass(previousColor)
+            }
+            
+            try element.addClass("bg-[\(color.hexString)]") 
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
+    }
+    
+    func getSelectedElementTextColor() -> String? {
+        guard let element = getSelectedElement() else { return nil }
+        do {
+            let classNames = try element.classNames()
+            for className in classNames { // is there a better way 🤔
+                if className.contains("text-[") || TailwindCSS.textColor.contains(className) {
+                    return className
+                }
+            }
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
+        
+        return nil
+    }
+    
+    func setSelectedElementText(color: UIColor) {
+        guard let element = getSelectedElement() else { return }
+        do {
+            if let previousColor = getSelectedElementTextColor() {
+                try element.removeClass(previousColor)
+            }
+            
+            try element.addClass("text-[\(color.hexString)]")
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
     }
 }

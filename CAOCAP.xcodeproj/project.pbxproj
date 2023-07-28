@@ -13,6 +13,7 @@
 		2106C41D2A5F949400446620 /* HTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2106C41C2A5F949400446620 /* HTMLParser.swift */; };
 		210F19AE2A42DBE100D71A66 /* UINodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210F19AD2A42DBE100D71A66 /* UINodeView.swift */; };
 		210F19B02A42DC9800D71A66 /* UIStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210F19AF2A42DC9800D71A66 /* UIStroke.swift */; };
+		212E2B1B2A745BBD00125C50 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212E2B1A2A745BBD00125C50 /* UIColor+Extensions.swift */; };
 		21326ED02A530CAE00255570 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21326ECF2A530CAE00255570 /* UserDefaults.swift */; };
 		213DF5E02A5883D300679BB2 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 213DF5DF2A5883D300679BB2 /* SwiftSoup */; };
 		213DF5E32A5886B300679BB2 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 213DF5E22A5886B300679BB2 /* ReSwift */; };
@@ -101,6 +102,7 @@
 		2106C41C2A5F949400446620 /* HTMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLParser.swift; sourceTree = "<group>"; };
 		210F19AD2A42DBE100D71A66 /* UINodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINodeView.swift; sourceTree = "<group>"; };
 		210F19AF2A42DC9800D71A66 /* UIStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStroke.swift; sourceTree = "<group>"; };
+		212E2B1A2A745BBD00125C50 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		21326ECF2A530CAE00255570 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		2147F5142A6F0A65004245AE /* ISOLanguageCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISOLanguageCodes.swift; sourceTree = "<group>"; };
 		2147F5182A6F2001004245AE /* ISOLanguageCodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISOLanguageCodeCell.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				2186DB0C2A30946900773C5E /* UIView+Extensions.swift */,
+				212E2B1A2A745BBD00125C50 /* UIColor+Extensions.swift */,
 				21DBA0042A39EC5500DFAC66 /* UIFont+Extensions.swift */,
 				21AF3CD42A6BE315002E96E3 /* String+Extensions.swift */,
 			);
@@ -584,6 +587,7 @@
 				21534D912A59B2E200E8078B /* ContainerVC.swift in Sources */,
 				21C21C4F2A34B62E00F40BE3 /* PaletteVC.swift in Sources */,
 				21AF3CB22A6B20DF002E96E3 /* CreditsVC.swift in Sources */,
+				212E2B1B2A745BBD00125C50 /* UIColor+Extensions.swift in Sources */,
 				214995262A5C3414008B9987 /* ReduxReducer.swift in Sources */,
 				218DA9CD2A2B205800459C61 /* MindMapVC.swift in Sources */,
 				218DA9C92A2B205800459C61 /* AppDelegate.swift in Sources */,

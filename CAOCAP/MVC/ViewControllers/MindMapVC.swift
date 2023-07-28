@@ -38,6 +38,7 @@ class MindMapVC: UIViewController, Storyboarded {
     @IBOutlet weak var typeTextField: UITextField!
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var backgroundColorWell: UIColorWell!
+    @IBOutlet weak var textColorWell: UIColorWell!
     @IBOutlet weak var hiddenSwitch: UISwitch!
     
     @IBOutlet weak var jsView: UIView!
@@ -267,6 +268,13 @@ class MindMapVC: UIViewController, Storyboarded {
         }))
     }
 
+    var selectedColorWell: UIColorWell?
+    @IBAction func didPressSelectColorButton(_ sender: UIButton) {
+        selectedColorWell = sender.tag == 0 ? textColorWell : backgroundColorWell
+        let colorPickerVC = UIColorPickerViewController()
+        colorPickerVC.delegate = self
+        present(colorPickerVC, animated: true)
+    }
     
     @IBAction func didChangeHiddenSwitch(_ sender: UISwitch) {
         guard let project = project else { return }
@@ -276,6 +284,28 @@ class MindMapVC: UIViewController, Storyboarded {
     }
     
     
+}
+
+extension MindMapVC: UIColorPickerViewControllerDelegate {
+    func colorPickerViewController(_ viewController: UIColorPickerViewController, didSelect color: UIColor, continuously: Bool) {
+        guard !continuously else { return }
+        guard let project = project else { return }
+        switch selectedColorWell {
+        case textColorWell:
+            textColorWell.selectedColor = color
+            ReduxStore.dispatch(UpdateAction(handler: {
+                project.setSelectedElementText(color: color)
+            }))
+        case backgroundColorWell:
+            backgroundColorWell.selectedColor = color
+            ReduxStore.dispatch(UpdateAction(handler: {
+                project.setSelectedElementBackground(color: color)
+            }))
+        default:
+            break
+        }
+        
+    }
 }
 
 extension MindMapVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -342,14 +372,6 @@ extension MindMapVC: StoreSubscriber {
             contentTextField.text = selectedElementText
         }
         
-        if let selectedElementType = project?.getSelectedElementType() {
-            typeTextField.text = selectedElementType
-        }
-        
-        if let isHidden = project?.isSelectedElementHidden() {
-            hiddenSwitch.isOn = isHidden
-        }
-        
         if let selectedElementTextAlignment = project?.getSelectedElementTextAlignment() {
             if let index = TailwindCSS.textAlign.firstIndex(of: selectedElementTextAlignment) {
                 textAlignmentSegmentedControl.selectedSegmentIndex = index
@@ -357,6 +379,25 @@ extension MindMapVC: StoreSubscriber {
         } else {
             textAlignmentSegmentedControl.selectedSegmentIndex = 0
         }
+        
+        if let selectedElementType = project?.getSelectedElementType() {
+            typeTextField.text = selectedElementType
+        }
+        
+        // TODO: update the backgroundColorWell & textColorWell selected color
+        if let backgroundColor = project?.getSelectedElementBackgroundColor() {
+//            backgroundColorWell.selectedColor = backgroundColor
+        }
+        
+        if let textColor = project?.getSelectedElementTextColor() {
+//            textColorWell.selectedColor = textColor
+        }
+        
+        if let isHidden = project?.isSelectedElementHidden() {
+            hiddenSwitch.isOn = isHidden
+        }
+        
+        
 
         idTextField.placeholder = project?.selectedElementID
     }
