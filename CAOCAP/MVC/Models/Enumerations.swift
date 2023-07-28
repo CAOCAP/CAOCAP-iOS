@@ -16,8 +16,11 @@ enum Direction: Int {
     case right
 }
 
-enum TextAlignment: Int {
-    case alignLeft
-    case alignCenter
-    case alignRight
+enum TextAlignment: String {
+    case textLeft = "text-left"
+    case textCenter = "text-center"
+    case textRight = "text-right"
+    case textJustify = "text-justify"
+    case textStart = "text-start"
+    case textEnd = "text-end"
 }

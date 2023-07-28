@@ -260,8 +260,10 @@ class MindMapVC: UIViewController, Storyboarded {
     }
     
     @IBAction func didChangeTextAlignmentSegmentedControl(_ sender: UISegmentedControl) {
+        guard let project = project else { return }
+        let selectedAlignment = TailwindCSS.textAlign[sender.selectedSegmentIndex]
         ReduxStore.dispatch(UpdateAction(handler: {
-            self.project?.setSelectedElementText(alignment: TextAlignment(rawValue: sender.selectedSegmentIndex) ?? .alignLeft)
+            project.setSelectedElementText(alignment: selectedAlignment)
         }))
     }
 
@@ -312,8 +314,8 @@ extension MindMapVC: UITextFieldDelegate {
     @IBAction func didEndEditingTextContent(_ sender: UITextField) {
         guard let project = project, let text = sender.text else { return }
         ReduxStore.dispatch(UpdateAction(handler: {
-            project.updateSelectedElementText(content: text)
-        })) // this should be in the projectReducer
+            project.setSelectedElementText(content: text)
+        }))
     }
 }
 
@@ -346,6 +348,14 @@ extension MindMapVC: StoreSubscriber {
         
         if let isHidden = project?.isSelectedElementHidden() {
             hiddenSwitch.isOn = isHidden
+        }
+        
+        if let selectedElementTextAlignment = project?.getSelectedElementTextAlignment() {
+            if let index = TailwindCSS.textAlign.firstIndex(of: selectedElementTextAlignment) {
+                textAlignmentSegmentedControl.selectedSegmentIndex = index
+            }
+        } else {
+            textAlignmentSegmentedControl.selectedSegmentIndex = 0
         }
 
         idTextField.placeholder = project?.selectedElementID

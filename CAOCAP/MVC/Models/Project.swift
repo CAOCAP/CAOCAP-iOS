@@ -158,6 +158,41 @@ class Project {
         return nil
     }
     
+    func setSelectedElementText(content: String) {
+        do {
+            try getSelectedElement()?.text(content)
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
+    }
+    
+    func getSelectedElementTextAlignment() -> String? {
+        guard let element = getSelectedElement() else { return nil }
+        for textAlign in TailwindCSS.textAlign {
+            if element.hasClass(textAlign) {
+                return textAlign
+            }
+        }
+        return nil
+    }
+    
+    func setSelectedElementText(alignment: String) {
+        guard let element = getSelectedElement() else { return }
+        do {
+            if let previousAlignment = getSelectedElementTextAlignment() {
+                try element.removeClass(previousAlignment)
+            }
+            
+            try element.addClass(alignment)
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
+    }
+    
     func getSelectedElementType() -> String? {
         do {
             return try getSelectedElement()?.attr("type")
@@ -169,42 +204,10 @@ class Project {
         return nil
     }
     
-    func updateSelectedElementText(content: String) {
-        do {
-            try getSelectedElement()?.text(content)
-        } catch Exception.Error(let type, let message) {
-            print(type, message)
-        } catch {
-            print("error")
-        }
+    func setSelectedElement(type: String) {
+        //TODO: setSelectedElement
     }
     
-    func getSelectedElementTextAlignment() -> TextAlignment? {
-        do {
-            guard let elementClassNames = try getSelectedElement()?.classNames() else { return .alignLeft}
-                for alignment in TailwindCSS.textAlign {
-                if elementClassNames.contains(alignment) {
-                    
-                }
-            }
-            
-        } catch Exception.Error(let type, let message) {
-            print(type, message)
-        } catch {
-            print("error")
-        }
-        return nil
-    }
-    
-    func setSelectedElementText(alignment: TextAlignment) {
-        do {
-//            try getSelectedElement()?.addClass(<#T##className: String##String#>)
-        } catch Exception.Error(let type, let message) {
-            print(type, message)
-        } catch {
-            print("error")
-        }
-    }
     
     func isSelectedElementHidden() -> Bool {
          return getSelectedElement()?.hasAttr("hidden") ?? false
@@ -224,13 +227,12 @@ class Project {
         }
     }
     
-    func setSelectedElementBackground(color: String) {
-        // TODO: find out how to set the background color
-    }
-    
     func getSelectedElementBackgroundColor() -> String {
         // TODO: find out how to get the background color
         return ""
     }
     
+    func setSelectedElementBackground(color: String) {
+        // TODO: find out how to set the background color
+    }
 }
