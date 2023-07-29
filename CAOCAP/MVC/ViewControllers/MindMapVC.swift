@@ -34,9 +34,11 @@ class MindMapVC: UIViewController, Storyboarded {
     @IBOutlet weak var attributesSegmentedControl: UISegmentedControl!
     
     @IBOutlet weak var contentTextField: UITextField!
+    @IBOutlet var textDecorationButtons: [UIButton]!
     @IBOutlet weak var textAlignmentSegmentedControl: UISegmentedControl!
     @IBOutlet weak var typeTextField: UITextField!
     @IBOutlet weak var idTextField: UITextField!
+    @IBOutlet weak var sourceTextField: UITextField!
     @IBOutlet weak var backgroundColorWell: UIColorWell!
     @IBOutlet weak var textColorWell: UIColorWell!
     @IBOutlet weak var hiddenSwitch: UISwitch!
@@ -260,6 +262,27 @@ class MindMapVC: UIViewController, Storyboarded {
         }
     }
     
+    func toggleTextDecoration(button: UIButton, turnOn: Bool? = nil) {
+        if let turnOn = turnOn {
+            button.tintColor = turnOn ? .systemBlue : .label
+        } else {
+            button.tintColor = button.tintColor == .label ? .systemBlue : .label
+        }
+    }
+    
+    @IBAction func didPressTextDecoration(_ sender: UIButton) {
+        print("\(#function)ing...")
+        guard let project = project else { return }
+        let textDecorations = TextDecoration.allCases
+        
+        toggleTextDecoration(button: sender)
+        
+        ReduxStore.dispatch(UpdateAction(handler: {
+            project.toggleSelectedElementText(decoration: textDecorations[sender.tag])
+        }))
+        
+    }
+    
     @IBAction func didChangeTextAlignmentSegmentedControl(_ sender: UISegmentedControl) {
         guard let project = project else { return }
         let selectedAlignment = TailwindCSS.textAlign[sender.selectedSegmentIndex]
@@ -347,6 +370,13 @@ extension MindMapVC: UITextFieldDelegate {
             project.setSelectedElementText(content: text)
         }))
     }
+    
+    @IBAction func didEndEditingElementSource(_ sender: UITextField) {
+        guard let project = project, let text = sender.text else { return }
+        ReduxStore.dispatch(UpdateAction(handler: {
+            project.setSelectedElement(source: text)
+        }))
+    }
 }
 
 extension MindMapVC: StoreSubscriber {
@@ -372,6 +402,13 @@ extension MindMapVC: StoreSubscriber {
             contentTextField.text = selectedElementText
         }
         
+        if let selectedElementTextDecorations = project?.getSelectedElementTextDecorations() {
+            textDecorationButtons.enumerated().forEach { (index, button) in
+                let decoration = TextDecoration.allCases[index]
+                toggleTextDecoration(button: button, turnOn: selectedElementTextDecorations.contains(.strikethrough))
+            }
+        }
+        
         if let selectedElementTextAlignment = project?.getSelectedElementTextAlignment() {
             if let index = TailwindCSS.textAlign.firstIndex(of: selectedElementTextAlignment) {
                 textAlignmentSegmentedControl.selectedSegmentIndex = index
@@ -382,6 +419,10 @@ extension MindMapVC: StoreSubscriber {
         
         if let selectedElementType = project?.getSelectedElementType() {
             typeTextField.text = selectedElementType
+        }
+        
+        if let selectedElementSource = project?.getSelectedElementSource() {
+            sourceTextField.text = selectedElementSource
         }
         
         // TODO: update the backgroundColorWell & textColorWell selected color

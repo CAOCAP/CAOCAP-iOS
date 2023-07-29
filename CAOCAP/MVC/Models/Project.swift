@@ -168,6 +168,28 @@ class Project {
         }
     }
     
+    func getSelectedElementTextDecorations() -> [TextDecoration]? {
+        guard let element = getSelectedElement() else { return nil }
+        var result = [TextDecoration]()
+        for decoration in TextDecoration.allCases {
+            if element.hasClass(decoration.rawValue) {
+                result.append(decoration)
+            }
+        }
+        return result
+    }
+    
+    func toggleSelectedElementText(decoration: TextDecoration) {
+        guard let element = getSelectedElement() else { return }
+        do {
+            try element.toggleClass(decoration.rawValue)
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
+    }
+    
     func getSelectedElementTextAlignment() -> String? {
         guard let element = getSelectedElement() else { return nil }
         for textAlign in TailwindCSS.textAlign {
@@ -205,7 +227,34 @@ class Project {
     }
     
     func setSelectedElement(type: String) {
-        //TODO: setSelectedElement
+        do {
+            try getSelectedElement()?.attr("type", type)
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
+    }
+    
+    func getSelectedElementSource() -> String? {
+        do {
+            return try getSelectedElement()?.attr("src")
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
+        return nil
+    }
+    
+    func setSelectedElement(source: String) {
+        do {
+            try getSelectedElement()?.attr("src", source)
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
     }
     
     

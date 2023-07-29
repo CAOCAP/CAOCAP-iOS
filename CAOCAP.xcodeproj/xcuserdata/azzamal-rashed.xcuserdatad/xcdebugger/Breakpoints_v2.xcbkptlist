@@ -14,8 +14,8 @@
             filePath = "CAOCAP/MVC/ViewControllers/MindMapVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "loadWebView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "CAOCAP/MVC/ViewControllers/MindMapVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "loadWebView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,8 +110,8 @@
             filePath = "CAOCAP/MVC/ViewControllers/MindMapVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "232"
-            endingLineNumber = "232"
+            startingLineNumber = "234"
+            endingLineNumber = "234"
             landmarkName = "didPressAddElement(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -270,8 +270,8 @@
             filePath = "CAOCAP/MVC/ViewControllers/MindMapVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "363"
-            endingLineNumber = "363"
+            startingLineNumber = "393"
+            endingLineNumber = "393"
             landmarkName = "newState(state:)"
             landmarkType = "7">
             <Locations>
@@ -333,8 +333,8 @@
             filePath = "CAOCAP/MVC/ViewControllers/MindMapVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "372"
-            endingLineNumber = "372"
+            startingLineNumber = "402"
+            endingLineNumber = "402"
             landmarkName = "newState(state:)"
             landmarkType = "7">
             <Locations>
@@ -396,8 +396,8 @@
             filePath = "CAOCAP/MVC/ViewControllers/MindMapVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "384"
-            endingLineNumber = "384"
+            startingLineNumber = "421"
+            endingLineNumber = "421"
             landmarkName = "newState(state:)"
             landmarkType = "7">
             <Locations>
@@ -459,8 +459,8 @@
             filePath = "CAOCAP/MVC/ViewControllers/MindMapVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "402"
-            endingLineNumber = "402"
+            startingLineNumber = "443"
+            endingLineNumber = "443"
             landmarkName = "newState(state:)"
             landmarkType = "7">
             <Locations>
@@ -996,7 +996,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "177FED69-E46E-46B7-81A8-D8BF0700A089"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CAOCAP/Redux/ReduxReducer.swift"
@@ -1348,8 +1348,8 @@
             filePath = "CAOCAP/MVC/Models/Project.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "182"
-            endingLineNumber = "182"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
             landmarkName = "setSelectedElementText(alignment:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1364,28 +1364,43 @@
             filePath = "CAOCAP/MVC/Models/Project.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
             landmarkName = "setSelectedElementText(alignment:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "372D924A-482F-4F0C-9B12-E2003016A067 - 19d577d2dee4d447"
+                  uuid = "372D924A-482F-4F0C-9B12-E2003016A067 - 1a7c405f29a40f9"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "CAOCAP.Project.setSelectedElementText(alignment: Swift.String) -&gt; ()"
+                  symbolName = "CAOCAP.Project.setSelectedElement(type: Swift.String) -&gt; ()"
                   moduleName = "CAOCAP"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/azzamal-rashed/Desktop/%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/MVC/Models/Project.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "201"
-                  endingLineNumber = "201"
-                  offsetFromSymbolStart = "616">
+                  startingLineNumber = "212"
+                  endingLineNumber = "212"
+                  offsetFromSymbolStart = "708">
                </Location>
                <Location
-                  uuid = "372D924A-482F-4F0C-9B12-E2003016A067 - 19d577d2dee4d6f2"
+                  uuid = "372D924A-482F-4F0C-9B12-E2003016A067 - 1a7c405f29a40f9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.Project.setSelectedElement(type: Swift.String) -&gt; ()"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/MVC/Models/Project.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "212"
+                  endingLineNumber = "212"
+                  offsetFromSymbolStart = "868">
+               </Location>
+               <Location
+                  uuid = "372D924A-482F-4F0C-9B12-E2003016A067 - 19d577d2dee4d52c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1395,8 +1410,8 @@
                   urlString = "file:///Users/azzamal-rashed/Desktop/%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/MVC/Models/Project.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "190"
-                  endingLineNumber = "190"
+                  startingLineNumber = "212"
+                  endingLineNumber = "212"
                   offsetFromSymbolStart = "616">
                </Location>
             </Locations>
@@ -1412,28 +1427,28 @@
             filePath = "CAOCAP/MVC/Models/Project.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
             landmarkName = "setSelectedElementText(alignment:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "B7EDF4AE-A0B9-4173-B8E8-30C1F2EF5F07 - 19d577d2dee4d405"
+                  uuid = "B7EDF4AE-A0B9-4173-B8E8-30C1F2EF5F07 - 1a7c405f29a405c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "CAOCAP.Project.setSelectedElementText(alignment: Swift.String) -&gt; ()"
+                  symbolName = "CAOCAP.Project.setSelectedElement(type: Swift.String) -&gt; ()"
                   moduleName = "CAOCAP"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/azzamal-rashed/Desktop/%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/MVC/Models/Project.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "203"
-                  endingLineNumber = "203"
-                  offsetFromSymbolStart = "840">
+                  startingLineNumber = "215"
+                  endingLineNumber = "215"
+                  offsetFromSymbolStart = "288">
                </Location>
                <Location
-                  uuid = "B7EDF4AE-A0B9-4173-B8E8-30C1F2EF5F07 - 19d577d2dee4d6b0"
+                  uuid = "B7EDF4AE-A0B9-4173-B8E8-30C1F2EF5F07 - 19d577d2dee4d5ea"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1443,8 +1458,8 @@
                   urlString = "file:///Users/azzamal-rashed/Desktop/%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/MVC/Models/Project.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "192"
-                  endingLineNumber = "192"
+                  startingLineNumber = "214"
+                  endingLineNumber = "214"
                   offsetFromSymbolStart = "840">
                </Location>
             </Locations>
@@ -1460,8 +1475,8 @@
             filePath = "CAOCAP/MVC/ViewControllers/MindMapVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "267"
-            endingLineNumber = "267"
+            startingLineNumber = "290"
+            endingLineNumber = "290"
             landmarkName = "didChangeTextAlignmentSegmentedControl(_:)"
             landmarkType = "7">
             <Locations>
@@ -1508,8 +1523,8 @@
             filePath = "CAOCAP/MVC/ViewControllers/MindMapVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "265"
-            endingLineNumber = "265"
+            startingLineNumber = "288"
+            endingLineNumber = "288"
             landmarkName = "didChangeTextAlignmentSegmentedControl(_:)"
             landmarkType = "7">
             <Locations>
@@ -1556,8 +1571,8 @@
             filePath = "CAOCAP/MVC/Models/Project.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "252"
-            endingLineNumber = "252"
+            startingLineNumber = "301"
+            endingLineNumber = "301"
             landmarkName = "setSelectedElementBackground(color:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1572,9 +1587,25 @@
             filePath = "CAOCAP/MVC/Models/Project.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "255"
-            endingLineNumber = "255"
+            startingLineNumber = "304"
+            endingLineNumber = "304"
             landmarkName = "setSelectedElementBackground(color:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE701593-C308-4386-AF68-FCD3FD45AF1C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CAOCAP/MVC/ViewControllers/MindMapVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "280"
+            endingLineNumber = "280"
+            landmarkName = "didPressTextDecoration(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

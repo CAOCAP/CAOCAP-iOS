@@ -24,3 +24,10 @@ enum TextAlignment: String {
     case textStart = "text-start"
     case textEnd = "text-end"
 }
+
+enum TextDecoration: String, CaseIterable {
+    case bold = "font-bold"
+    case italic = "italic"
+    case underline = "underline"
+    case strikethrough = "line-through"
+}
