@@ -39,21 +39,19 @@ class UINodeView: UIView, UIContextMenuInteractionDelegate {
     
     func setBackgroundColor(tagName: String) {
         switch tagName {
-        case "span":
+        case "body":
+            backgroundColor = .systemBlue
+        case "span","canvas","div","header","main","footer","article","section","aside","nav":
             backgroundColor = .systemGreen
-        case "div":
-            backgroundColor = .systemPink
         case "button","a","input":
             backgroundColor = .systemPurple
-        case "body","header","main","footer","article","section","aside","canvas","nav","center":
-            backgroundColor = .systemBlue
         case "textArea","form","label","option","legend","select","fieldSet","optGroup","output":
             backgroundColor = .systemTeal
-        case "video","img","audio","source":
+        case "video","img","audio":
             backgroundColor = .systemYellow
-        case "ul","ol","li","br","hr":
+        case "li","h1","p":
             backgroundColor = .systemGray3
-        case "h1","p","b","i","u","s":
+        case "ul","ol","br","hr":
             backgroundColor = .systemGray
         default:
             backgroundColor = .systemGray2

@@ -110,8 +110,8 @@
             filePath = "CAOCAP/MVC/ViewControllers/MindMapVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "234"
-            endingLineNumber = "234"
+            startingLineNumber = "229"
+            endingLineNumber = "229"
             landmarkName = "didPressAddElement(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -176,7 +176,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "187"
             endingLineNumber = "187"
-            landmarkName = "add(tag:)"
+            landmarkName = "updateSelectedNode(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -192,7 +192,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "184"
             endingLineNumber = "184"
-            landmarkName = "add(tag:)"
+            landmarkName = "select(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -208,7 +208,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "102"
             endingLineNumber = "102"
-            landmarkName = "add(tag:)"
+            landmarkName = "delete(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -224,7 +224,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "103"
             endingLineNumber = "103"
-            landmarkName = "add(tag:)"
+            landmarkName = "delete(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -240,7 +240,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "113"
             endingLineNumber = "113"
-            landmarkName = "add(tag:)"
+            landmarkName = "draw(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -256,7 +256,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "105"
             endingLineNumber = "105"
-            landmarkName = "add(tag:)"
+            landmarkName = "delete(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -270,8 +270,8 @@
             filePath = "CAOCAP/MVC/ViewControllers/MindMapVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "393"
-            endingLineNumber = "393"
+            startingLineNumber = "383"
+            endingLineNumber = "383"
             landmarkName = "newState(state:)"
             landmarkType = "7">
             <Locations>
@@ -333,8 +333,8 @@
             filePath = "CAOCAP/MVC/ViewControllers/MindMapVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "402"
-            endingLineNumber = "402"
+            startingLineNumber = "392"
+            endingLineNumber = "392"
             landmarkName = "newState(state:)"
             landmarkType = "7">
             <Locations>
@@ -396,8 +396,8 @@
             filePath = "CAOCAP/MVC/ViewControllers/MindMapVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "421"
-            endingLineNumber = "421"
+            startingLineNumber = "411"
+            endingLineNumber = "411"
             landmarkName = "newState(state:)"
             landmarkType = "7">
             <Locations>
@@ -459,8 +459,8 @@
             filePath = "CAOCAP/MVC/ViewControllers/MindMapVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "443"
-            endingLineNumber = "443"
+            startingLineNumber = "433"
+            endingLineNumber = "433"
             landmarkName = "newState(state:)"
             landmarkType = "7">
             <Locations>
@@ -876,7 +876,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "107"
             endingLineNumber = "107"
-            landmarkName = "add(tag:)"
+            landmarkName = "delete(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -892,7 +892,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "109"
             endingLineNumber = "109"
-            landmarkName = "add(tag:)"
+            landmarkName = "delete(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -900,22 +900,6 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D8720B80-4666-4DD8-9547-486E687D3631"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CAOCAP/MVC/Views/UINodeView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
-            landmarkName = "contextMenuInteraction(_:configurationForMenuAtLocation:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6A54168D-F984-46BE-8243-8A6CD8EAAAA8"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -931,6 +915,22 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "6A54168D-F984-46BE-8243-8A6CD8EAAAA8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CAOCAP/MVC/Views/UINodeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "contextMenuInteraction(_:configurationForMenuAtLocation:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
             uuid = "0BD6C3ED-1E29-41A6-BB2D-8AF85B910CED"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -938,8 +938,8 @@
             filePath = "CAOCAP/MVC/Views/UINodeView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "contextMenuInteraction(_:configurationForMenuAtLocation:)"
             landmarkType = "7">
             <Locations>
@@ -1475,8 +1475,8 @@
             filePath = "CAOCAP/MVC/ViewControllers/MindMapVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "290"
-            endingLineNumber = "290"
+            startingLineNumber = "279"
+            endingLineNumber = "279"
             landmarkName = "didChangeTextAlignmentSegmentedControl(_:)"
             landmarkType = "7">
             <Locations>
@@ -1523,8 +1523,8 @@
             filePath = "CAOCAP/MVC/ViewControllers/MindMapVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "288"
-            endingLineNumber = "288"
+            startingLineNumber = "277"
+            endingLineNumber = "277"
             landmarkName = "didChangeTextAlignmentSegmentedControl(_:)"
             landmarkType = "7">
             <Locations>
@@ -1603,8 +1603,8 @@
             filePath = "CAOCAP/MVC/ViewControllers/MindMapVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "280"
-            endingLineNumber = "280"
+            startingLineNumber = "269"
+            endingLineNumber = "269"
             landmarkName = "didPressTextDecoration(_:)"
             landmarkType = "7">
          </BreakpointContent>

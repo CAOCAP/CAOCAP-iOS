@@ -143,55 +143,54 @@ class MindMapVC: UIViewController, Storyboarded {
                 }
             case .up:
                 if toolsViewHeightConstraint.constant == 40 {
-                    //only show 9,10 { h=110 }
-                    toolsViewHeightConstraint.constant = 110
-                    for n in 9...10 {
+                    //only show 6,7 { h=107 }
+                    toolsViewHeightConstraint.constant = 107
+                    for n in 6...7 {
                         let view = htmlKeyboard.arrangedSubviews[n]
                         view.alpha = 1
                         view.isHidden = false
                     }
-                } else if toolsViewHeightConstraint.constant == 110 {
-                    //show all but not 2,3,6,7 { h=300 }
-                    toolsViewHeightConstraint.constant = 300
-                    for n in 0...10 {
-                        if [2,3,6,7].contains(n) { continue }
+                } else if toolsViewHeightConstraint.constant == 107 {
+                    //show all but not 3,4 { h=255 }
+                    toolsViewHeightConstraint.constant = 255
+                    for n in 0...5 {
+                        if [3,4].contains(n) { continue }
                         let view = htmlKeyboard.arrangedSubviews[n]
                         view.alpha = 1
                         view.isHidden = false
                     }
-                } else if toolsViewHeightConstraint.constant == 300 {
-                    //show all { h=450 }
+                } else if toolsViewHeightConstraint.constant == 255 {
+                    //show all { h=329 }
                     webViewWidthConstraint.constant = 120
-                    toolsViewHeightConstraint.constant = 450
-                    for n in 0...10 {
+                    toolsViewHeightConstraint.constant = 329
+                    for n in 3...4 {
                         let view = htmlKeyboard.arrangedSubviews[n]
                         view.alpha = 1
                         view.isHidden = false
                     }
                 }
             case .down:
-                if toolsViewHeightConstraint.constant == 110 {
+                if toolsViewHeightConstraint.constant == 107 {
                     //hide all { h=40 }
                     toolsViewHeightConstraint.constant = 40
-                    for n in 9...10 {
+                    for n in 6...7 {
                         let view = htmlKeyboard.arrangedSubviews[n]
                         view.alpha = 0
                         view.isHidden = true
                     }
-                } else if toolsViewHeightConstraint.constant == 300 {
-                    //only show 9,10 { h=110 }
-                    toolsViewHeightConstraint.constant = 110
-                    for n in 0...8 {
+                } else if toolsViewHeightConstraint.constant == 255 {
+                    //only show 6,7 { h=107 }
+                    toolsViewHeightConstraint.constant = 107
+                    for n in 0...5 {
                         let view = htmlKeyboard.arrangedSubviews[n]
                         view.alpha = 0
                         view.isHidden = true
                     }
-                } else if toolsViewHeightConstraint.constant == 450 {
-                    //show all but not 2,3,6,7 { h=300 }
+                } else if toolsViewHeightConstraint.constant == 329 {
+                    //show all but not 3,4 { h=255 }
                     webViewWidthConstraint.constant = 160
-                    toolsViewHeightConstraint.constant = 300
-                    for n in 2...7 {
-                        if [4,5].contains(n) { continue }
+                    toolsViewHeightConstraint.constant = 255
+                    for n in 3...4 {
                         let view = htmlKeyboard.arrangedSubviews[n]
                         view.alpha = 0
                         view.isHidden = true
@@ -217,18 +216,14 @@ class MindMapVC: UIViewController, Storyboarded {
     @IBAction func didPressAddElement(_ sender: UIButton) {
         print("\(#function)ing...")
         let htmlTags = [
-            "",// element buttons tags start from 1
-            "span","div",
+            "span","canvas","div",
             "button","a","input",
-            "header","main","footer",
-            "article","section",
-            "aside","canvas","nav","center",
             "textArea","form","label",
             "option","legend","select",
             "fieldSet","optGroup","output",
-            "video","img","audio","source",
-            "ul","ol","li","br","hr",
-            "h1","p","b","i","u","s",
+            "video","img","audio",
+            "ul","h1","p",
+            "li","br","hr",
         ]
         if sender.tag > 0 && sender.tag < htmlTags.count {
             mindMap.add(tag: htmlTags[sender.tag])
@@ -262,20 +257,14 @@ class MindMapVC: UIViewController, Storyboarded {
         }
     }
     
-    func toggleTextDecoration(button: UIButton, turnOn: Bool? = nil) {
-        if let turnOn = turnOn {
-            button.tintColor = turnOn ? .systemBlue : .label
-        } else {
-            button.tintColor = button.tintColor == .label ? .systemBlue : .label
-        }
+    func toggleTextDecoration(button: UIButton, turnOn: Bool) {
+        button.tintColor = turnOn ? .systemBlue : .label
     }
     
     @IBAction func didPressTextDecoration(_ sender: UIButton) {
         print("\(#function)ing...")
         guard let project = project else { return }
         let textDecorations = TextDecoration.allCases
-        
-        toggleTextDecoration(button: sender)
         
         ReduxStore.dispatch(UpdateAction(handler: {
             project.toggleSelectedElementText(decoration: textDecorations[sender.tag])
@@ -348,8 +337,9 @@ extension MindMapVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 30)
+        return CGSize(width: (collectionView.frame.width/2) - 20, height: 30)
     }
+    
 }
 
 
@@ -405,7 +395,7 @@ extension MindMapVC: StoreSubscriber {
         if let selectedElementTextDecorations = project?.getSelectedElementTextDecorations() {
             textDecorationButtons.enumerated().forEach { (index, button) in
                 let decoration = TextDecoration.allCases[index]
-                toggleTextDecoration(button: button, turnOn: selectedElementTextDecorations.contains(.strikethrough))
+                toggleTextDecoration(button: button, turnOn: selectedElementTextDecorations.contains(decoration))
             }
         }
         
