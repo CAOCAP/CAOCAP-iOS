@@ -168,26 +168,30 @@ class Project {
         }
     }
     
+    func toggleSelectedElement(className: String) {
+        guard let element = getSelectedElement() else { return }
+        do {
+            try element.toggleClass(className)
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
+    }
+    
     func getSelectedElementTextDecorations() -> [TextDecoration]? {
         guard let element = getSelectedElement() else { return nil }
         var result = [TextDecoration]()
         for decoration in TextDecoration.allCases {
             if element.hasClass(decoration.rawValue) {
-                result.append(decoration)
+                result.append(decoration) // 🤔 why not try .filter()
             }
         }
         return result
     }
     
     func toggleSelectedElementText(decoration: TextDecoration) {
-        guard let element = getSelectedElement() else { return }
-        do {
-            try element.toggleClass(decoration.rawValue)
-        } catch Exception.Error(let type, let message) {
-            print(type, message)
-        } catch {
-            print("error")
-        }
+        toggleSelectedElement(className: decoration.rawValue)
     }
     
     func getSelectedElementTextAlignment() -> String? {

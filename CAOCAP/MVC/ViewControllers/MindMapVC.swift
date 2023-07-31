@@ -340,6 +340,13 @@ extension MindMapVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
         return CGSize(width: (collectionView.frame.width/2) - 20, height: 30)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let project = project else { return }
+        ReduxStore.dispatch(UpdateAction(handler: {
+            project.toggleSelectedElement(className: TailwindCSS.all[indexPath.section].array[indexPath.row])
+        }))
+    }
+    
 }
 
 
