@@ -256,8 +256,8 @@ class MindMapVC: UIViewController, Storyboarded {
             "option","legend","select",
             "fieldSet","optGroup","output",
             "video","img","audio",
-            "ul","h1","p",
-            "li","br","hr",
+            "li","h1","p",
+            "ul","br","hr",
         ]
         if sender.tag > 0 && sender.tag < htmlTags.count {
             mindMap.add(tag: htmlTags[sender.tag])
