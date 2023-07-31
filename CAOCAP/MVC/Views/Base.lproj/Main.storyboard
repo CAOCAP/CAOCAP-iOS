@@ -1006,6 +1006,9 @@
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="editingTailwindSearch:" destination="BYZ-38-t0r" eventType="editingChanged" id="zpz-VM-06d"/>
+                                                                </connections>
                                                             </textField>
                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Bdm-L9-t3A">
                                                                 <rect key="frame" x="0.0" y="39" width="330" height="0.0"/>
@@ -1284,6 +1287,7 @@
                         <outlet property="resizeIcon" destination="6CB-c1-YZ5" id="P1s-Q6-bk3"/>
                         <outlet property="semanticButton" destination="Phq-b0-Fg0" id="7hk-BT-umz"/>
                         <outlet property="sourceTextField" destination="kwg-JH-yKt" id="LQ2-Ey-QyK"/>
+                        <outlet property="tailwindCollectionView" destination="Bdm-L9-t3A" id="uAC-xx-4OR"/>
                         <outlet property="textAlignmentSegmentedControl" destination="aaK-GC-HN0" id="obH-Cl-WdX"/>
                         <outlet property="textColorWell" destination="tSp-fW-p7T" id="0iY-FJ-ojV"/>
                         <outlet property="toolsView" destination="zkr-ys-dhB" id="hvh-2G-ncH"/>
@@ -2080,7 +2084,7 @@ There are no other in-app purchases.</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="YWP-YE-S2g">
-                                <rect key="frame" x="34" y="244.66666666666663" width="322.33333333333331" height="132"/>
+                                <rect key="frame" x="34" y="244.66666666666663" width="322.33333333333337" height="132"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try CAOCAP Premium for free" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sby-h7-ijT">
                                         <rect key="frame" x="0.0" y="0.0" width="322.33333333333331" height="26"/>
@@ -2534,7 +2538,7 @@ There are no other in-app purchases.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="User" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PVA-xc-Hdu">
-                                                <rect key="frame" x="50.333333333333314" y="0.0" width="279.99999999999994" height="44.666666666666664"/>
+                                                <rect key="frame" x="50.333333333333314" y="0.0" width="280" height="44.666666666666664"/>
                                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="35"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="nickname"/>

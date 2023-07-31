@@ -249,6 +249,15 @@ class Project {
         }
     }
     
+    func getSelectedElementListStyle() -> String? {
+        //TODO: get the selected element Semantic (tag name)
+        return ""
+    }
+    
+    func setSelectedElement(listStyle: String) {
+        //TODO: get the selected element Semantic (tag name)
+    }
+    
     func getSelectedElementSource() -> String? {
         do {
             return try getSelectedElement()?.attr("src")

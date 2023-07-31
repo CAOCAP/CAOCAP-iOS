@@ -9,6 +9,7 @@ import Foundation
 
 enum Tailwind: String {
     // Layout
+    case none
     case aspectRatio = "Aspect Ratio"
     case container = "Container"
     case columns = "Columns"

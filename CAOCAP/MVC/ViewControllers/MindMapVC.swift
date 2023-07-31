@@ -14,6 +14,7 @@ import SwiftSoup
 class MindMapVC: UIViewController, Storyboarded {
     
     var project: Project?
+    var tailwindClassNames = TailwindCSS.all
     
     @IBOutlet weak var projectTitle: UILabel!
     @IBOutlet weak var webView: WKWebView!
@@ -46,6 +47,7 @@ class MindMapVC: UIViewController, Storyboarded {
     @IBOutlet weak var backgroundColorWell: UIColorWell!
     @IBOutlet weak var textColorWell: UIColorWell!
     @IBOutlet weak var hiddenSwitch: UISwitch!
+    @IBOutlet weak var tailwindCollectionView: UICollectionView!
     
     @IBOutlet weak var jsView: UIView!
     
@@ -355,16 +357,16 @@ extension MindMapVC: UIColorPickerViewControllerDelegate {
 extension MindMapVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return TailwindCSS.all.count
+        return tailwindClassNames.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return TailwindCSS.all[section].array.count
+        return tailwindClassNames[section].array.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tailwindCell", for: indexPath) as? TailwindCollectionViewCell else { return UICollectionViewCell() }
-        cell.configure(title: TailwindCSS.all[indexPath.section].array[indexPath.row])
+        cell.configure(title: tailwindClassNames[indexPath.section].array[indexPath.row])
         return cell
     }
     
@@ -375,7 +377,7 @@ extension MindMapVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let project = project else { return }
         ReduxStore.dispatch(UpdateAction(handler: {
-            project.toggleSelectedElement(className: TailwindCSS.all[indexPath.section].array[indexPath.row])
+            project.toggleSelectedElement(className: self.tailwindClassNames[indexPath.section].array[indexPath.row])
         }))
     }
     
@@ -406,6 +408,22 @@ extension MindMapVC: UITextFieldDelegate {
             project.setSelectedElement(source: text)
         }))
     }
+    
+    @IBAction func editingTailwindSearch(_ sender: UITextField) {
+        guard let searchQuery = sender.text else { return }
+        tailwindClassNames = TailwindCSS.all // TODO: refactor this ugly code 🫣
+        if !searchQuery.isEmpty {
+            var filteredClassNames = [String]()
+            for classNameSet in tailwindClassNames {
+                filteredClassNames += classNameSet.array.filter { $0.contains(searchQuery)}
+            }
+            tailwindClassNames = [(name: .none, array: filteredClassNames)]
+        }
+        
+        tailwindCollectionView.reloadData()
+    }
+    
+    
 }
 
 extension MindMapVC: StoreSubscriber {
@@ -450,6 +468,10 @@ extension MindMapVC: StoreSubscriber {
             typeButton.setTitle(selectedElementType, for: .normal)
         }
         
+        if let selectedElementListStyle = project?.getSelectedElementListStyle() {
+            listStyleButton.setTitle(selectedElementListStyle, for: .normal)
+        }
+        
         if let selectedElementSemantic = project?.getSelectedElementSemantic() {
             semanticButton.setTitle(selectedElementSemantic, for: .normal)
         }
@@ -457,6 +479,8 @@ extension MindMapVC: StoreSubscriber {
         if let selectedElementSource = project?.getSelectedElementSource() {
             sourceTextField.text = selectedElementSource
         }
+        
+        idTextField.placeholder = project?.selectedElementID
         
         // TODO: update the backgroundColorWell & textColorWell selected color
         if let backgroundColor = project?.getSelectedElementBackgroundColor() {
@@ -471,8 +495,5 @@ extension MindMapVC: StoreSubscriber {
             hiddenSwitch.isOn = isHidden
         }
         
-        
-
-        idTextField.placeholder = project?.selectedElementID
     }
 }
