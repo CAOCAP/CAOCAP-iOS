@@ -219,6 +219,15 @@ class Project {
         }
     }
     
+    func getSelectedElementSemantic() -> String? {
+        //TODO: get the selected element Semantic (tag name)
+        return ""
+    }
+    
+    func setSelectedElement(semantic: String) {
+        //TODO: set the selected element Semantic (tag name)
+    }
+    
     func getSelectedElementType() -> String? {
         do {
             return try getSelectedElement()?.attr("type")

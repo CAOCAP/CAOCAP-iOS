@@ -36,7 +36,11 @@ class MindMapVC: UIViewController, Storyboarded {
     @IBOutlet weak var contentTextField: UITextField!
     @IBOutlet var textDecorationButtons: [UIButton]!
     @IBOutlet weak var textAlignmentSegmentedControl: UISegmentedControl!
-    @IBOutlet weak var typeTextField: UITextField!
+    
+    @IBOutlet weak var typeButton: UIButton!
+    @IBOutlet weak var semanticButton: UIButton!
+    @IBOutlet weak var listStyleButton: UIButton!
+    
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var sourceTextField: UITextField!
     @IBOutlet weak var backgroundColorWell: UIColorWell!
@@ -52,9 +56,11 @@ class MindMapVC: UIViewController, Storyboarded {
         
         let resizeGR = UIPanGestureRecognizer(target: self, action: #selector(handleResizingWebView(sender:)))
         resizeIcon.addGestureRecognizer(resizeGR)
+        contentTextField.isFirstResponder
         
         setupToolsViewGestureRecognizer()
         setupMindMapLayout()
+        setupMenuButtons()
     }
     
     func loadWebView() {
@@ -80,6 +86,46 @@ class MindMapVC: UIViewController, Storyboarded {
         }
     }
     
+    func setupToolsViewGestureRecognizer() {
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
+        let upSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
+        let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
+        rightSwipe.direction = .right
+        leftSwipe.direction = .left
+        upSwipe.direction = .up
+        downSwipe.direction = .down
+        toolsView.addGestureRecognizer(rightSwipe)
+        toolsView.addGestureRecognizer(leftSwipe)
+        toolsView.addGestureRecognizer(upSwipe)
+        toolsView.addGestureRecognizer(downSwipe)
+    }
+    
+    func setupMenuButtons() {
+        //TODO: clean/refactor
+        var typeArray = [
+            UIAction(title: "type 1", state: .on, handler: { print($0.title) }),
+            UIAction(title: "type 2", state: .off, handler: { print($0.title) }),
+            UIAction(title: "type 3", state: .off, handler: { print($0.title) }),
+        ]
+        
+        var semanticArray = [
+            UIAction(title: "semantic 1", state: .on, handler: { print($0.title) }),
+            UIAction(title: "semantic 2", state: .off, handler: { print($0.title) }),
+            UIAction(title: "semantic 3", state: .off, handler: { print($0.title) }),
+        ]
+        
+        var listStyleArray = [
+            UIAction(title: "none", state: .on, handler: { print($0.title) }),
+            UIAction(title: "disc", state: .off, handler: { print($0.title) }),
+            UIAction(title: "decimal", state: .off, handler: { print($0.title) }),
+        ]
+        
+        typeButton.menu = UIMenu(title: "", options: .displayInline, children: typeArray)
+        semanticButton.menu = UIMenu(title: "", options: .displayInline, children: semanticArray)
+        listStyleButton.menu = UIMenu(title: "", options: .displayInline, children: listStyleArray)
+    }
+    
     @objc func handleResizingWebView(sender: UIPanGestureRecognizer) {
         switch sender.state {
         case .began, .changed:
@@ -101,20 +147,6 @@ class MindMapVC: UIViewController, Storyboarded {
         }
     }
     
-    func setupToolsViewGestureRecognizer() {
-        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
-        let upSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
-        let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
-        rightSwipe.direction = .right
-        leftSwipe.direction = .left
-        upSwipe.direction = .up
-        downSwipe.direction = .down
-        toolsView.addGestureRecognizer(rightSwipe)
-        toolsView.addGestureRecognizer(leftSwipe)
-        toolsView.addGestureRecognizer(upSwipe)
-        toolsView.addGestureRecognizer(downSwipe)
-    }
     
     @objc func handleKeyboardSwipe(sender: UISwipeGestureRecognizer) {
         if sender.state == .ended {
@@ -415,7 +447,11 @@ extension MindMapVC: StoreSubscriber {
         }
         
         if let selectedElementType = project?.getSelectedElementType() {
-            typeTextField.text = selectedElementType
+            typeButton.setTitle(selectedElementType, for: .normal)
+        }
+        
+        if let selectedElementSemantic = project?.getSelectedElementSemantic() {
+            semanticButton.setTitle(selectedElementSemantic, for: .normal)
         }
         
         if let selectedElementSource = project?.getSelectedElementSource() {
