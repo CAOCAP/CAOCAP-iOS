@@ -159,8 +159,15 @@ class Project {
     }
     
     func setSelectedElementText(content: String) {
+        guard let element = getSelectedElement() else { return }
         do {
-            try getSelectedElement()?.text(content)
+            if let textNode = element.textNodes().first {
+                // if the element has a text node, update its value
+                textNode.text(content)
+            } else {
+                // if it don't have a text node, create one at the beginning
+                try element.prependText(content)
+            }
         } catch Exception.Error(let type, let message) {
             print(type, message)
         } catch {
