@@ -53,6 +53,7 @@
 		218DA9D02A2B205800459C61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218DA9CE2A2B205800459C61 /* Main.storyboard */; };
 		218DA9D22A2B205900459C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 218DA9D12A2B205900459C61 /* Assets.xcassets */; };
 		218DA9D52A2B205900459C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218DA9D32A2B205900459C61 /* LaunchScreen.storyboard */; };
+		21A861D82A78D2C4004D36A3 /* WhatsNewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A861D72A78D2C4004D36A3 /* WhatsNewVC.swift */; };
 		21AF3CA52A67E44B002E96E3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 21AF3CA42A67E44B002E96E3 /* SnapKit */; };
 		21AF3CA72A6843A9002E96E3 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CA62A6843A9002E96E3 /* RealmRepository.swift */; };
 		21AF3CAA2A6844C1002E96E3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 21AF3CA92A6844C1002E96E3 /* Realm */; };
@@ -141,6 +142,7 @@
 		218DA9D12A2B205900459C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		218DA9D42A2B205900459C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		218DA9D62A2B205900459C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21A861D72A78D2C4004D36A3 /* WhatsNewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewVC.swift; sourceTree = "<group>"; };
 		21AF3CA62A6843A9002E96E3 /* RealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
 		21AF3CAF2A68565C002E96E3 /* RealmProjectModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProjectModels.swift; sourceTree = "<group>"; };
 		21AF3CB12A6B20DF002E96E3 /* CreditsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsVC.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 				21AF3CB92A6B2159002E96E3 /* SendFeedbackVC.swift */,
 				21AF3CBB2A6B2170002E96E3 /* SupportVC.swift */,
 				21AF3CBD2A6B2188002E96E3 /* HelpVC.swift */,
+				21A861D72A78D2C4004D36A3 /* WhatsNewVC.swift */,
 				21AF3CD32A6B717A002E96E3 /* ProjectViewControllers */,
 			);
 			path = ViewControllers;
@@ -607,6 +610,7 @@
 				21AF3CCC2A6B7117002E96E3 /* ProjectBaseVC.swift in Sources */,
 				21AF3CBC2A6B2170002E96E3 /* SupportVC.swift in Sources */,
 				2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */,
+				21A861D82A78D2C4004D36A3 /* WhatsNewVC.swift in Sources */,
 				21534D9F2A59E58100E8078B /* ProjectFilesVC.swift in Sources */,
 				21AF3CC82A6B70F1002E96E3 /* ProjectLinkVC.swift in Sources */,
 				21534D9B2A59CD2B00E8078B /* ChartsVC.swift in Sources */,

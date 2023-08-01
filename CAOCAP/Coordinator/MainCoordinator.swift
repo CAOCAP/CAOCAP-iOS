@@ -58,12 +58,12 @@ final class MainCoordinator: Coordinator {
     
     //MARK: Main Settings
     func viewCredits() {
-        let vc = CreditsVC()
+        let vc = CreditsVC.instantiate()
         navigationController.present(vc, animated: true)
     }
     
     func viewAboutUs() {
-        let vc = AboutUsVC()
+        let vc = AboutUsVC.instantiate()
         navigationController.present(vc, animated: true)
     }
     
@@ -89,6 +89,11 @@ final class MainCoordinator: Coordinator {
     
     func viewHelp() {
         let vc = HelpVC()
+        navigationController.present(vc, animated: true)
+    }
+    
+    func viewWhatsNewVC() {
+        let vc = WhatsNewVC.instantiate()
         navigationController.present(vc, animated: true)
     }
     
