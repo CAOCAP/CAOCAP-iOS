@@ -9,14 +9,40 @@ import UIKit
 
 struct Credits {
     let title: String
-    let names: [String]
+    let contributors: [(name: String, profession: String)]
 }
 
 class CreditsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Storyboarded {
     var coordinator: MainCoordinator?
     
     @IBOutlet weak var tableView: UITableView!
-    var credits = [Credits(title: "team", names: ["Azzam Rashed Alrashed", "Omar Abdullah Al-Zahrani"])]
+    var credits = [
+        Credits(title: "C-Squad", contributors: [
+            (name: "Azzam Alrashed", profession: "Software Engineer"),
+            (name: "Meshal Alfiez", profession: "Digital Artist"),
+            (name: "Anas Alqassim", profession: "Software Engineer"),
+            (name: "Omar Al-Zahrani", profession: "Software Engineer"),
+            (name: "M", profession: "Software Engineer"),
+            (name: "F", profession: "Software Engineer"),
+            (name: "M", profession: "Software Engineer"),
+            (name: "F", profession: "Digital Artist"),
+            (name: "S", profession: "Software Engineer"),
+        ]),
+        
+        Credits(title: "Special Thanks", contributors: [
+            (name: "Mom", profession: ""),
+            (name: "Dad", profession: ""),
+        ]),
+        
+        Credits(title: "Third Party Code", contributors: [
+            (name: "SwiftSoup", profession: ""),
+            (name: "ReSwift", profession: ""),
+            (name: "Firebase", profession: ""),
+            (name: "Realm", profession: ""),
+            (name: "Lottie", profession: ""),
+            (name: "SnapKit", profession: ""),
+        ])
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +56,7 @@ class CreditsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, S
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return credits[section].names.count
+        return credits[section].contributors.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -40,7 +66,8 @@ class CreditsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, S
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "creditCell", for: indexPath)
         var configuration = cell.defaultContentConfiguration()
-        configuration.text = credits[indexPath.section].names[indexPath.row]
+        configuration.text = credits[indexPath.section].contributors[indexPath.row].name
+        configuration.secondaryText = credits[indexPath.section].contributors[indexPath.row].profession
         cell.contentConfiguration = configuration
         return cell
     }
