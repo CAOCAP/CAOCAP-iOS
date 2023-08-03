@@ -18,17 +18,15 @@ class CreditsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, S
     @IBOutlet weak var tableView: UITableView!
     var credits = [
         Credits(title: "C-Squad", contributors: [
-            (name: "Azzam Alrashed", profession: "Software Engineer"),
-            (name: "Meshal Alfiez", profession: "Digital Artist"),
-            (name: "Anas Alqassim", profession: "Software Engineer"),
+            (name: "Azzam Al-Rashed", profession: "Software Engineer"),
+            (name: "Meshal Al-Fiez", profession: "Digital Artist"),
+            (name: "Anas Al-Qassim", profession: "Software Engineer"),
             (name: "Omar Al-Zahrani", profession: "Software Engineer"),
-            (name: "M", profession: "Software Engineer"),
-            (name: "F", profession: "Software Engineer"),
-            (name: "M", profession: "Software Engineer"),
-            (name: "F", profession: "Digital Artist"),
-            (name: "S", profession: "Software Engineer"),
+            (name: "MSHARI Al-Zahrani", profession: "Software Engineer"),
+            (name: "Feras Al-Nowiser", profession: "Software Engineer"),
+            (name: "Faisal Al-Thuwaini", profession: "Digital Artist"),
         ]),
-        
+
         Credits(title: "Special Thanks", contributors: [
             (name: "Mom", profession: ""),
             (name: "Dad", profession: ""),
