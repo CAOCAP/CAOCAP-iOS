@@ -9,39 +9,39 @@ import UIKit
 
 struct Credits {
     let title: String
-    let contributors: [(name: String, profession: String)]
+    let contributors: [(name: String, profession: String?, url: String?)]
 }
 
-class CreditsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, Storyboarded {
+class CreditsVC: UIViewController, Storyboarded, UITableViewDelegate, UITableViewDataSource {
     var coordinator: MainCoordinator?
     
     @IBOutlet weak var tableView: UITableView!
     var credits = [
         Credits(title: "C-Squad", contributors: [
-            (name: "Azzam Al-Rashed", profession: "Software Engineer"),
-            (name: "Meshal Al-Fiez", profession: "Digital Artist"),
-            (name: "Anas Al-Qassim", profession: "Software Engineer"),
-            (name: "Omar Al-Zahrani", profession: "Software Engineer"),
-            (name: "MSHARI Al-Zahrani", profession: "Software Engineer"),
-            (name: "Feras Al-Nowiser", profession: "Software Engineer"),
-            (name: "Muhammad Al-Mujtaba", profession: "Software Engineer"),
-            (name: "Faisal Al-Thuwaini", profession: "Digital Artist"),
-            (name: "Saleh Al-Thini", profession: "Software Engineer"),
-            (name: "Ibrahim Al-Jumaiah", profession: "Software Engineer"),
+            (name: "Azzam Al-Rashed", profession: "Software Engineer", url: "https://twitter.com/azzam_rar"),
+            (name: "Meshal Al-Fiez", profession: "Digital Artist", url: nil),
+            (name: "Anas Al-Qassim", profession: "Software Engineer", url: "https://www.linkedin.com/in/anas-alqassim-b1190b209"),
+            (name: "Omar Al-Zahrani", profession: "Software Engineer", url: "https://twitter.com/azx0_o"),
+            (name: "Mshari Al-Zahrani", profession: "Software Engineer", url: "https://mshari.net"),
+            (name: "Feras Al-Nowiser", profession: "Software Engineer", url: "https://twitter.com/FerasNr"),
+            (name: "Muhammad Al-Mujtaba", profession: "Software Engineer", url: nil),
+            (name: "Faisal Al-Thuwaini", profession: "Digital Artist", url: "https://www.linkedin.com/in/faisal-al-thuwaini"),
+            (name: "Saleh Al-Thini", profession: "Software Engineer", url: "https://twitter.com/salehalthini"),
+            (name: "Ibrahim Al-Jumaiah", profession: nil, url: nil),
         ]),
-
+        
         Credits(title: "Special Thanks", contributors: [
-            (name: "Mom", profession: ""),
-            (name: "Dad", profession: ""),
+            (name: "Mom", profession: nil, url: nil),
+            (name: "Dad", profession: nil, url: nil),
         ]),
         
         Credits(title: "Third Party Code", contributors: [
-            (name: "SwiftSoup", profession: ""),
-            (name: "ReSwift", profession: ""),
-            (name: "Firebase", profession: ""),
-            (name: "Realm", profession: ""),
-            (name: "Lottie", profession: ""),
-            (name: "SnapKit", profession: ""),
+            (name: "SwiftSoup", profession: "HTML Parser", url: "https://github.com/scinfu/SwiftSoup"),
+            (name: "ReSwift", profession: "Unidirectional Data Flow", url: "https://github.com/ReSwift/ReSwift"),
+            (name: "SnapKit", profession: "Autolayout DSL", url: "https://github.com/SnapKit/SnapKit"),
+            (name: "Firebase", profession: "Backend", url: "https://firebase.google.com"),
+            (name: "Realm", profession: "Data storage", url: "https://realm.io/realm-swift/"),
+            (name: "Lottie", profession: "Animation", url: "https://airbnb.design/lottie/"),
         ])
     ]
     
@@ -63,7 +63,7 @@ class CreditsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, S
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return credits[section].title
     }
-   
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "creditCell", for: indexPath)
         var configuration = cell.defaultContentConfiguration()
@@ -74,7 +74,9 @@ class CreditsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, S
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        guard let urlString = credits[indexPath.section].contributors[indexPath.row].url,
+              let url = URL(string: urlString) else { return }
+            UIApplication.shared.open(url)
     }
-
+    
 }
