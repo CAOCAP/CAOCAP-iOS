@@ -7,12 +7,11 @@
 
 import UIKit
 
-class AboutUsVC: UIViewController {
+class AboutUsVC: UIViewController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .systemBackground
     }
 
 }
