@@ -24,7 +24,10 @@ class CreditsVC: UIViewController, UITableViewDelegate, UITableViewDataSource, S
             (name: "Omar Al-Zahrani", profession: "Software Engineer"),
             (name: "MSHARI Al-Zahrani", profession: "Software Engineer"),
             (name: "Feras Al-Nowiser", profession: "Software Engineer"),
+            (name: "Muhammad Al-Mujtaba", profession: "Software Engineer"),
             (name: "Faisal Al-Thuwaini", profession: "Digital Artist"),
+            (name: "Saleh Al-Thini", profession: "Software Engineer"),
+            (name: "Ibrahim Al-Jumaiah", profession: "Software Engineer"),
         ]),
 
         Credits(title: "Special Thanks", contributors: [
