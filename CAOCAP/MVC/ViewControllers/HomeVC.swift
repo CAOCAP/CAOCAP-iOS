@@ -1,5 +1,5 @@
 //
-//  InitialVC.swift
+//  HomeVC.swift
 //  CAOCAP
 //
 //  Created by Azzam AL-Rashed on 13/06/2023.
@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 
-class InitialVC: UIViewController, Storyboarded {
+class HomeVC: UIViewController, Storyboarded {
     var coordinator: MainCoordinator?
 
     @IBOutlet weak var appVersion: UILabel!
@@ -76,7 +76,7 @@ class InitialVC: UIViewController, Storyboarded {
     
 }
 
-extension InitialVC: UITextFieldDelegate {
+extension HomeVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
     }

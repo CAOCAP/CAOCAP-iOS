@@ -93,7 +93,7 @@
 		21C21C682A38DFAD00F40BE3 /* Ubuntu-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21C21C5F2A38DFAD00F40BE3 /* Ubuntu-Italic.ttf */; };
 		21C21C692A38DFAD00F40BE3 /* Ubuntu-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21C21C602A38DFAD00F40BE3 /* Ubuntu-Light.ttf */; };
 		21C21C6A2A38DFAD00F40BE3 /* UFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 21C21C612A38DFAD00F40BE3 /* UFL.txt */; };
-		21DBA0012A38F4C800DFAC66 /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DBA0002A38F4C800DFAC66 /* InitialVC.swift */; };
+		21DBA0012A38F4C800DFAC66 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DBA0002A38F4C800DFAC66 /* HomeVC.swift */; };
 		21DBA0032A39E18C00DFAC66 /* StoreKitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DBA0022A39E18C00DFAC66 /* StoreKitRepository.swift */; };
 		21DBA0052A39EC5500DFAC66 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DBA0042A39EC5500DFAC66 /* UIFont+Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -178,7 +178,7 @@
 		21C21C5F2A38DFAD00F40BE3 /* Ubuntu-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Italic.ttf"; sourceTree = "<group>"; };
 		21C21C602A38DFAD00F40BE3 /* Ubuntu-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Light.ttf"; sourceTree = "<group>"; };
 		21C21C612A38DFAD00F40BE3 /* UFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UFL.txt; sourceTree = "<group>"; };
-		21DBA0002A38F4C800DFAC66 /* InitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialVC.swift; sourceTree = "<group>"; };
+		21DBA0002A38F4C800DFAC66 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		21DBA0022A39E18C00DFAC66 /* StoreKitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitRepository.swift; sourceTree = "<group>"; };
 		21DBA0042A39EC5500DFAC66 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -339,7 +339,7 @@
 				21534D902A59B2E200E8078B /* ContainerVC.swift */,
 				21534D8E2A59B26F00E8078B /* NavigationVC.swift */,
 				2184CCF92A522E6200B39882 /* IntroVC.swift */,
-				21DBA0002A38F4C800DFAC66 /* InitialVC.swift */,
+				21DBA0002A38F4C800DFAC66 /* HomeVC.swift */,
 				21534D9A2A59CD2B00E8078B /* ChartsVC.swift */,
 				218DA9CC2A2B205800459C61 /* MindMapVC.swift */,
 				21C21C482A34B5D800F40BE3 /* ProjectsVC.swift */,
@@ -633,7 +633,7 @@
 				21C21C4B2A34B60200F40BE3 /* SettingsVC.swift in Sources */,
 				2175FBE42A657D1500F7E97F /* Project.swift in Sources */,
 				2186DB112A30DF4700773C5E /* UIMindMap.swift in Sources */,
-				21DBA0012A38F4C800DFAC66 /* InitialVC.swift in Sources */,
+				21DBA0012A38F4C800DFAC66 /* HomeVC.swift in Sources */,
 				21AF3CB62A6B211E002E96E3 /* TermsOfUseVC.swift in Sources */,
 				21C21C492A34B5D800F40BE3 /* ProjectsVC.swift in Sources */,
 				2147F5152A6F0A65004245AE /* ISOLanguageCodes.swift in Sources */,

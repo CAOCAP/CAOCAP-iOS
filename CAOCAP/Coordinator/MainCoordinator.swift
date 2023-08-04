@@ -20,7 +20,7 @@ final class MainCoordinator: Coordinator {
     func start() {
         let navigationVC = NavigationVC.instantiate()
         
-        let initialVC = InitialVC.instantiate()
+        let initialVC = HomeVC.instantiate()
         let chartsVC = ChartsVC.instantiate()
         let projectsVC = ProjectsVC.instantiate()
         let mainSettingsVC = MainSettingsVC.instantiate()
