@@ -145,7 +145,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="HCA-IB-AaJ">
-                                <rect key="frame" x="330" y="57" width="40" height="40"/>
+                                <rect key="frame" x="330" y="57" width="40" height="120"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qci-87-zc2">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -193,12 +193,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="xBO-uq-Txc"/>
-                                        <exclude reference="L8S-vQ-irU"/>
-                                    </mask>
-                                </variation>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfp-2z-eXU">
                                 <rect key="frame" x="20" y="500" width="45" height="30"/>
@@ -1459,7 +1453,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="flH-sb-3DB">
-                                <rect key="frame" x="45" y="390" width="300" height="161"/>
+                                <rect key="frame" x="45" y="390" width="300" height="215.33333333333337"/>
                                 <subviews>
                                     <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BIa-0x-zs6">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="130"/>
@@ -1520,17 +1514,12 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0.0 (0)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKa-FB-Hq1">
-                                        <rect key="frame" x="0.0" y="150" width="300" height="11"/>
+                                        <rect key="frame" x="0.0" y="204.33333333333337" width="300" height="11"/>
                                         <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="11"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="7YE-o0-JlD"/>
-                                    </mask>
-                                </variation>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="40y-qT-otl"/>

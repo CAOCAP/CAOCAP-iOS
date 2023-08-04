@@ -799,6 +799,7 @@
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CAOCAP/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "CAØCAP";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -809,7 +810,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0.1;
+				MARKETING_VERSION = 5.0.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ficruty.caocap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -829,6 +830,7 @@
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CAOCAP/App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "CAØCAP";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -839,7 +841,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0.1;
+				MARKETING_VERSION = 5.0.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ficruty.caocap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
