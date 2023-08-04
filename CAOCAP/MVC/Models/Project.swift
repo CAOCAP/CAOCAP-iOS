@@ -25,7 +25,7 @@ class Project {
             selectedElementID = UUID().uuidString
             let html = #"""
             <!DOCTYPE html>
-            <html lang="ar">
+            <html lang="en">
                 <head>
                     <title>webview</title>
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
