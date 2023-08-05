@@ -6,11 +6,12 @@
 //
 
 import UIKit
-import Firebase
+import SwiftUI
+import Popovers
 
 class HomeVC: UIViewController, Storyboarded {
     var coordinator: MainCoordinator?
-
+    
     @IBOutlet weak var appVersion: UILabel!
     @IBOutlet weak var stackView: UIStackView!
     
@@ -54,6 +55,41 @@ class HomeVC: UIViewController, Storyboarded {
         }
     }
     
+    @IBAction func didPressCommitHistory(_ sender: UIButton) {
+        var popover = Popover { Templates.Container { Text("this is your commit history") } }
+        popover.attributes.sourceFrame = { [weak sender] in sender.windowFrame() }
+        popover.attributes.position = .absolute(originAnchor: .top, popoverAnchor: .bottom)
+        popover.attributes.presentation.animation = .spring(response: 0.6, dampingFraction: 0.4, blendDuration: 1)
+        popover.attributes.presentation.transition = .offset(x: 0, y: 30).combined(with: .opacity)
+        popover.attributes.dismissal.transition = .offset(x: 0, y: 30).combined(with: .opacity)
+        
+        
+        present(popover)
+    }
+    
+    @IBAction func didPressAchievements(_ sender: UIButton) {
+        var popover = Popover { Templates.Container { Text("this is the your achievements") } }
+        popover.attributes.sourceFrame = { [weak sender] in sender.windowFrame() }
+        popover.attributes.position = .absolute(originAnchor: .left, popoverAnchor: .right)
+        popover.attributes.presentation.animation = .spring(response: 0.6, dampingFraction: 0.4, blendDuration: 1)
+        popover.attributes.presentation.transition = .offset(x: 0, y: 30).combined(with: .opacity)
+        popover.attributes.dismissal.transition = .offset(x: 0, y: 30).combined(with: .opacity)
+        
+        
+        present(popover)
+    }
+    
+    let challenges = ["change the webpage title", "change the background color of the body", "add an image with a source URL"]
+    @IBAction func didPressChallenge(_ sender: UIButton) {
+        var popover = Popover { Templates.Container { Text(self.challenges[sender.tag]) } }
+        popover.attributes.sourceFrame = { [weak sender] in sender.windowFrame() }
+        popover.attributes.screenEdgePadding.horizontal = 5
+        popover.attributes.position = .absolute(originAnchor: .bottom, popoverAnchor: .top)
+        popover.attributes.presentation.animation = .spring(response: 0.6, dampingFraction: 0.4, blendDuration: 1)
+        popover.attributes.presentation.transition = .offset(x: 0, y: 30).combined(with: .opacity)
+        popover.attributes.dismissal.transition = .offset(x: 0, y: 30).combined(with: .opacity)
+        present(popover)
+    }
     
     func getVersion() -> String {
         guard let dictionary = Bundle.main.infoDictionary,
