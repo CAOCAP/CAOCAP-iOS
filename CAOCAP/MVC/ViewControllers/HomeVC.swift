@@ -67,17 +67,7 @@ class HomeVC: UIViewController, Storyboarded {
         present(popover)
     }
     
-    @IBAction func didPressAchievements(_ sender: UIButton) {
-        var popover = Popover { Templates.Container { Text("this is the your achievements") } }
-        popover.attributes.sourceFrame = { [weak sender] in sender.windowFrame() }
-        popover.attributes.position = .absolute(originAnchor: .left, popoverAnchor: .right)
-        popover.attributes.presentation.animation = .spring(response: 0.6, dampingFraction: 0.4, blendDuration: 1)
-        popover.attributes.presentation.transition = .offset(x: 0, y: 30).combined(with: .opacity)
-        popover.attributes.dismissal.transition = .offset(x: 0, y: 30).combined(with: .opacity)
-        
-        
-        present(popover)
-    }
+    
     
     @IBAction func didPressChallenge(_ sender: UIButton) {
         let challenges = ["set a new web page title", "change <body> background color", "add an image with a source URL"]
