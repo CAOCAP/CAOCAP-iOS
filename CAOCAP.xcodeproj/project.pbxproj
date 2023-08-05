@@ -53,6 +53,7 @@
 		218DA9D02A2B205800459C61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218DA9CE2A2B205800459C61 /* Main.storyboard */; };
 		218DA9D22A2B205900459C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 218DA9D12A2B205900459C61 /* Assets.xcassets */; };
 		218DA9D52A2B205900459C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218DA9D32A2B205900459C61 /* LaunchScreen.storyboard */; };
+		219339812A7E3FAA002FDE05 /* Popovers in Frameworks */ = {isa = PBXBuildFile; productRef = 219339802A7E3FAA002FDE05 /* Popovers */; };
 		21A861D82A78D2C4004D36A3 /* WhatsNewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A861D72A78D2C4004D36A3 /* WhatsNewVC.swift */; };
 		21AF3CA52A67E44B002E96E3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 21AF3CA42A67E44B002E96E3 /* SnapKit */; };
 		21AF3CA72A6843A9002E96E3 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CA62A6843A9002E96E3 /* RealmRepository.swift */; };
@@ -188,6 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				219339812A7E3FAA002FDE05 /* Popovers in Frameworks */,
 				213DF5E32A5886B300679BB2 /* ReSwift in Frameworks */,
 				21AF3CA52A67E44B002E96E3 /* SnapKit in Frameworks */,
 				21C21C522A34B7C400F40BE3 /* IQKeyboardManagerSwift in Frameworks */,
@@ -487,6 +489,7 @@
 				21AF3CA42A67E44B002E96E3 /* SnapKit */,
 				21AF3CA92A6844C1002E96E3 /* Realm */,
 				21AF3CAB2A6844C1002E96E3 /* RealmSwift */,
+				219339802A7E3FAA002FDE05 /* Popovers */,
 			);
 			productName = CAOCAP;
 			productReference = 218DA9C52A2B205800459C61 /* CAOCAP.app */;
@@ -524,6 +527,7 @@
 				2106C4162A5C997A00446620 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				21AF3CA32A67E44B002E96E3 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				21AF3CA82A6844C1002E96E3 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				2193397F2A7E3FAA002FDE05 /* XCRemoteSwiftPackageReference "Popovers" */,
 			);
 			productRefGroup = 218DA9C62A2B205800459C61 /* Products */;
 			projectDirPath = "";
@@ -907,6 +911,14 @@
 				minimumVersion = 4.2.0;
 			};
 		};
+		2193397F2A7E3FAA002FDE05 /* XCRemoteSwiftPackageReference "Popovers" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/aheze/Popovers";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.2;
+			};
+		};
 		21AF3CA32A67E44B002E96E3 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -958,6 +970,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 213DF5E42A58A92F00679BB2 /* XCRemoteSwiftPackageReference "lottie-spm" */;
 			productName = Lottie;
+		};
+		219339802A7E3FAA002FDE05 /* Popovers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2193397F2A7E3FAA002FDE05 /* XCRemoteSwiftPackageReference "Popovers" */;
+			productName = Popovers;
 		};
 		21AF3CA42A67E44B002E96E3 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;

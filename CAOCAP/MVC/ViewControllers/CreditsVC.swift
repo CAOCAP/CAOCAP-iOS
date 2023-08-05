@@ -28,6 +28,7 @@ class CreditsVC: UIViewController, Storyboarded, UITableViewDelegate, UITableVie
             (name: "Faisal Al-Thuwaini", profession: "Digital Artist", url: "https://www.linkedin.com/in/faisal-al-thuwaini"),
             (name: "Saleh Al-Thini", profession: "Software Engineer", url: "https://twitter.com/salehalthini"),
             (name: "Ibrahim Al-Jumaiah", profession: nil, url: nil),
+            (name: "Ahmed Al-Helali", profession: "Software Engineer", url: "https://twitter.com/ahmed__alhelali"),
         ]),
         
         Credits(title: "Special Thanks", contributors: [
@@ -39,6 +40,7 @@ class CreditsVC: UIViewController, Storyboarded, UITableViewDelegate, UITableVie
             (name: "SwiftSoup", profession: "HTML Parser", url: "https://github.com/scinfu/SwiftSoup"),
             (name: "ReSwift", profession: "Unidirectional Data Flow", url: "https://github.com/ReSwift/ReSwift"),
             (name: "SnapKit", profession: "Autolayout DSL", url: "https://github.com/SnapKit/SnapKit"),
+            (name: "Popovers", profession: "Simple, modern, and highly customizable Popovers", url: "https://github.com/aheze/Popovers"),
             (name: "Firebase", profession: "Backend", url: "https://firebase.google.com"),
             (name: "Realm", profession: "Data storage", url: "https://realm.io/realm-swift/"),
             (name: "Lottie", profession: "Animation", url: "https://airbnb.design/lottie/"),
