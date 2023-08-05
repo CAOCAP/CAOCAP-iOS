@@ -79,9 +79,18 @@ class HomeVC: UIViewController, Storyboarded {
         present(popover)
     }
     
-    let challenges = ["change the webpage title", "change the background color of the body", "add an image with a source URL"]
     @IBAction func didPressChallenge(_ sender: UIButton) {
-        var popover = Popover { Templates.Container { Text(self.challenges[sender.tag]) } }
+        let challenges = ["set a new web page title", "change <body> background color", "add an image with a source URL"]
+        var popover = Popover {
+            Templates.Container {
+                Text(challenges[sender.tag])
+                    .frame(maxWidth: 150)
+                    .lineLimit(5)
+                    .scaledToFill()
+                    .minimumScaleFactor(0.5)
+                    .multilineTextAlignment(.center)
+            }
+        }
         popover.attributes.sourceFrame = { [weak sender] in sender.windowFrame() }
         popover.attributes.screenEdgePadding.horizontal = 5
         popover.attributes.position = .absolute(originAnchor: .bottom, popoverAnchor: .top)
