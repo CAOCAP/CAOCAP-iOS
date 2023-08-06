@@ -6,14 +6,16 @@
 //
 
 import UIKit
+import ReSwift
 import SwiftUI
 import Popovers
 
 class HomeVC: UIViewController, Storyboarded {
     var coordinator: MainCoordinator?
     
-    @IBOutlet weak var appVersion: UILabel!
+    @IBOutlet weak var uidLabel: UILabel!
     @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var appVersion: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -114,5 +116,22 @@ class HomeVC: UIViewController, Storyboarded {
 extension HomeVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
+    }
+}
+
+
+extension HomeVC: StoreSubscriber {
+    override func viewWillAppear(_ animated: Bool) {
+        ReduxStore.subscribe(self)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        ReduxStore.unsubscribe(self)
+    }
+    
+    func newState(state: ReduxState) {
+        if let user = state.user {
+            uidLabel.text = user.uid
+        }
     }
 }

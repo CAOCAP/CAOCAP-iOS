@@ -16,8 +16,10 @@
 import ReSwift
 import SwiftSoup
 
-// MARK: Project Actions
+// MARK: User Actions
+struct AuthUserAction: Action { let user: User }
 
+// MARK: Project Actions
 struct CreateProjectAction: Action { let newProject: Project } 
 struct DeleteProjectAction: Action {}
 

@@ -412,8 +412,8 @@
             filePath = "CAOCAP/Redux/ReduxReducer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "projectReducer(action:state:)"
             landmarkType = "9">
             <Locations>
@@ -460,8 +460,8 @@
             filePath = "CAOCAP/Redux/ReduxReducer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "projectReducer(action:state:)"
             landmarkType = "9">
             <Locations>
@@ -508,8 +508,8 @@
             filePath = "CAOCAP/Redux/ReduxReducer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "projectReducer(action:state:)"
             landmarkType = "9">
             <Locations>
@@ -556,8 +556,8 @@
             filePath = "CAOCAP/Redux/ReduxReducer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "projectReducer(action:state:)"
             landmarkType = "9">
             <Locations>
@@ -604,8 +604,8 @@
             filePath = "CAOCAP/Redux/ReduxReducer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "projectReducer(action:state:)"
             landmarkType = "9">
             <Locations>
@@ -652,8 +652,8 @@
             filePath = "CAOCAP/Redux/ReduxReducer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "projectReducer(action:state:)"
             landmarkType = "9">
             <Locations>
@@ -700,8 +700,8 @@
             filePath = "CAOCAP/Redux/ReduxReducer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "projectReducer(action:state:)"
             landmarkType = "9">
             <Locations>
@@ -860,8 +860,8 @@
             filePath = "CAOCAP/Redux/ReduxReducer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "reduxReducer(action:state:)"
             landmarkType = "9">
          </BreakpointContent>
@@ -876,8 +876,8 @@
             filePath = "CAOCAP/Redux/ReduxReducer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "reduxReducer(action:state:)"
             landmarkType = "9">
             <Locations>
@@ -987,8 +987,8 @@
             filePath = "CAOCAP/Redux/ReduxReducer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "reduxReducer(action:state:)"
             landmarkType = "9">
             <Locations>
@@ -1074,14 +1074,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "8CCC03FA-02F0-443B-B86E-C8C0F67974A3"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CAOCAP/Redux/ReduxReducer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "reduxReducer(action:state:)"
             landmarkType = "9">
             <Locations>
@@ -1137,14 +1137,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B9D969D7-9C02-4ED0-B8A1-FE53125FA957"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CAOCAP/Redux/ReduxReducer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "reduxReducer(action:state:)"
             landmarkType = "9">
             <Locations>
@@ -1206,8 +1206,8 @@
             filePath = "CAOCAP/Redux/ReduxReducer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "reduxReducer(action:state:)"
             landmarkType = "9">
          </BreakpointContent>
@@ -1466,6 +1466,38 @@
                   offsetFromSymbolStart = "168">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "53798B46-0982-438A-A740-D8DFA32D38ED"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CAOCAP/Redux/ReduxReducer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "reduxReducer(action:state:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BB3ADA94-0553-45DE-8451-81487CF6CFAE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CAOCAP/Redux/ReduxReducer.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "reduxReducer(action:state:)"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
