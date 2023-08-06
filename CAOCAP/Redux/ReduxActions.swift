@@ -18,6 +18,7 @@ import SwiftSoup
 
 // MARK: User Actions
 struct AuthUserAction: Action { let user: User }
+struct ReceivedCommitHistoryAction: Action { let commits: [String] }
 
 // MARK: Project Actions
 struct CreateProjectAction: Action { let newProject: Project } 

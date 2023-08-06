@@ -13,6 +13,8 @@ import Popovers
 class HomeVC: UIViewController, Storyboarded {
     var coordinator: MainCoordinator?
     
+    var user: User?
+    
     @IBOutlet weak var uidLabel: UILabel!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var appVersion: UILabel!
@@ -21,7 +23,6 @@ class HomeVC: UIViewController, Storyboarded {
         super.viewDidLoad()
         appVersion.text = getVersion()
         setupStackView()
-        
     }
     
     func setupStackView() {
@@ -130,8 +131,16 @@ extension HomeVC: StoreSubscriber {
     }
     
     func newState(state: ReduxState) {
-        if let user = state.user {
-            uidLabel.text = user.uid
+        if user == nil {
+            user = state.user
+            FirebaseRepository.shared.getCommits(uid: user?.uid ?? "")
+        }
+        
+        guard user != nil else { return }
+        uidLabel.text = user?.uid
+        
+        if let commits = state.commitHistory {
+            print(commits)
         }
     }
 }

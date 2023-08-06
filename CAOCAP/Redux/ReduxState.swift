@@ -16,6 +16,7 @@ import ReSwift
 struct ReduxState {
     
     var user: User?
+    var commitHistory: [String]?
     
     var openedProject: Project?
     var projects: [Project]?

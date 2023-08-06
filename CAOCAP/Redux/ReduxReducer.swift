@@ -26,7 +26,9 @@ func reduxReducer(action: Action, state: ReduxState?) -> ReduxState {
     switch action {
     case let action as AuthUserAction:
         state.user = action.user
-        
+        FirebaseRepository.shared.commit(uid: action.user.uid, value: "BatMan!123")
+    case let action as ReceivedCommitHistoryAction:
+        state.commitHistory = action.commits
     case _ as CreateProjectAction,
          _ as OpenProjectAction,
          _ as CloseProjectAction,

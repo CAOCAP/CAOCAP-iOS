@@ -10,7 +10,7 @@ import RealmSwift
 
 // MARK: - Realm Repository
 
-class RealmRepository {
+final class RealmRepository {
     static let shared = RealmRepository()
     
     private lazy var localRealm:Realm = {

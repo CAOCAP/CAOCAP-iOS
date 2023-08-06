@@ -7,12 +7,18 @@
 
 import Foundation
 import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
+// MARK: - Firebase References
+fileprivate let database: DatabaseReference = Database.database().reference()
+//fileprivate let cloudStorage: StorageReference = Storage.storage().reference()
 
 // MARK: - Firebase Repository
 
-class FirebaseRepository {
+final class FirebaseRepository {
     static let shared = FirebaseRepository()
+    
     
     func configuration() {
         FirebaseApp.configure()
@@ -27,6 +33,21 @@ class FirebaseRepository {
                 guard let user = authResult?.user else { return }
                 ReduxStore.dispatch(AuthUserAction(user: user))
             }
+        }
+    }
+    
+    func commit(uid: String, value: String) {
+        database.child("users").child(uid).setValue(["commit": value])
+    }
+    
+    func getCommits(uid: String) {
+        database.child("users").child(uid).observeSingleEvent(of: .value, with: { snapshot in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            let commit = value?["commit"] as? String ?? ""
+            ReduxStore.dispatch(ReceivedCommitHistoryAction(commits: [commit]))
+        }) { error in
+          print(error.localizedDescription)
         }
     }
 }
