@@ -131,14 +131,13 @@ extension HomeVC: StoreSubscriber {
     }
     
     func newState(state: ReduxState) {
-        if user == nil {
+        if user != state.user {
             user = state.user
-            FirebaseRepository.shared.getCommits(uid: user?.uid ?? "")
+            guard let uid = user?.uid else { return }
+            uidLabel.text = uid
+            FirebaseRepository.shared.getCommits(uid: uid)
         }
-        
-        guard user != nil else { return }
-        uidLabel.text = user?.uid
-        
+
         if let commits = state.commitHistory {
             print(commits)
         }
