@@ -104,7 +104,7 @@ class MindMapVC: UIViewController, Storyboarded {
     }
     
     func setupMenuButtons() {
-        //TODO: clean/refactor
+        //TODO: clean/refactor /replace with popovers menu 🛠️
         var typeArray = [
             UIAction(title: "type 1", state: .on, handler: { print($0.title) }),
             UIAction(title: "type 2", state: .off, handler: { print($0.title) }),
@@ -234,6 +234,7 @@ class MindMapVC: UIViewController, Storyboarded {
     }
     
     @IBAction func didPressAddElement(_ sender: UIButton) {
+        view.presentConfettiAnimation()
         print("\(#function)ing...")
         let htmlTags = [
             "span","canvas","div",

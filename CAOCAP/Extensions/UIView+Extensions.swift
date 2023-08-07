@@ -8,6 +8,11 @@
 import UIKit
 
 extension UIView {
+    
+    func presentConfettiAnimation() {
+        LottieRepository().animation(on: self, type: .confetti)
+    }
+    
     @IBInspectable
     var cornerRadius: CGFloat {
         get { layer.cornerRadius }
