@@ -29,28 +29,22 @@ func reduxReducer(action: Action, state: ReduxState?) -> ReduxState {
         FirebaseRepository.shared.commit(uid: action.user.uid, value: "BatMan!123")
     case let action as ReceivedCommitHistoryAction:
         state.commitHistory = action.commits
+        
+    case let action as ChallengeCompletedAction:
+        state.dailyChallenges.append(action.challenge) //TODO: this is temporary, you need to find a better way
+        
     case _ as CreateProjectAction,
          _ as OpenProjectAction,
          _ as CloseProjectAction,
          _ as UpdateSelectedElementAction,
-         _ as DeleteProjectAction:
+         _ as DeleteProjectAction,
+         _ as UpdateProjectLangAction,
+         _ as UpdateProjectTitleAction,
+         _ as UpdateAction,
+         _ as WillEditAction,
+         _ as UndoAction,
+         _ as RedoAction:
         state = projectReducer(action: action, state: state)
-        
-    case let action as UpdateProjectLangAction:
-        state.openedProject?.saveToUndos()
-        state.openedProject?.setDocumentLang(action.lang)
-    case let action as UpdateProjectTitleAction:
-        state.openedProject?.saveToUndos()
-        state.openedProject?.setDocumentTitle(action.title)
-    case let action as UpdateAction: // call this action before the document is edited to save last state
-        state.openedProject?.saveToUndos()
-        action.handler()
-    case _ as WillEditAction:
-        state.openedProject?.saveToUndos()
-    case _ as UndoAction:
-        state.openedProject?.undo()
-    case _ as RedoAction:
-        state.openedProject?.redo()
     default:
         break
     }
@@ -78,10 +72,49 @@ func projectReducer(action: Action, state: ReduxState?) -> ReduxState {
     case _ as DeleteProjectAction:
         state.openedProject = nil
         print("this is just a demo: did delete the opened project")
+        
+    case _ as UpdateProjectLangAction,
+         _ as UpdateProjectTitleAction,
+         _ as UpdateAction,
+         _ as WillEditAction,
+         _ as UndoAction,
+         _ as RedoAction:
+        state = documentReducer(action: action, state: state)
+
     default:
         break
     }
 
     return state
+}
+
+
+func documentReducer(action: Action, state: ReduxState?) -> ReduxState {
+    var state = state ?? ReduxState()
+    
+    switch action {
+    case let action as UpdateProjectLangAction:
+        state.openedProject?.saveToUndos()
+        state.openedProject?.setDocumentLang(action.lang)
+    case let action as UpdateProjectTitleAction:
+        state.openedProject?.saveToUndos()
+        state.openedProject?.setDocumentTitle(action.title)
+    case let action as UpdateAction:
+        state.openedProject?.saveToUndos()
+        action.handler()
+    case _ as WillEditAction:
+        state.openedProject?.saveToUndos()
+    case _ as UndoAction:
+        state.openedProject?.undo()
+    case _ as RedoAction:
+        state.openedProject?.redo()
+
+    default:
+        break
+    }
+
+    return state
+    
+    
 }
 

@@ -20,6 +20,9 @@ import SwiftSoup
 struct AuthUserAction: Action { let user: User }
 struct ReceivedCommitHistoryAction: Action { let commits: [String] }
 
+// MARK: Daily Challenges
+struct ChallengeCompletedAction: Action { let challenge: String }
+
 // MARK: Project Actions
 struct CreateProjectAction: Action { let newProject: Project } 
 struct DeleteProjectAction: Action {}
@@ -33,7 +36,7 @@ struct UpdateProjectLangAction: Action { let lang: String }
 struct UpdateProjectTitleAction: Action { let title: String }
 
 // MARK: Undo/Redo Actions
-struct UpdateAction: Action { let handler: ()->Void }
+struct UpdateAction: Action { let handler: ()->Void }  // call this action before the document is edited to save last state
 struct WillEditAction: Action {}
 struct UndoAction: Action {}
 struct RedoAction: Action {}
