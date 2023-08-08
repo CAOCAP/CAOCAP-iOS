@@ -35,7 +35,7 @@ class Project {
                     <script src="https://unpkg.com/redux@4.2.1/dist/redux.js"></script>
                     <script src="https://cdn.tailwindcss.com"></script>
                 </head>
-                <body id="_body_">
+                <body id="_body_"></body>
             </html>
             """#
             document = try SwiftSoup.parse(html)
