@@ -101,6 +101,7 @@
 		21E1480F2A7F62BE00B503C2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 21E1480E2A7F62BE00B503C2 /* FirebaseAuth */; };
 		21E148112A7F62C900B503C2 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 21E148102A7F62C900B503C2 /* FirebaseDatabase */; };
 		21E148132A7F639400B503C2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E148122A7F639400B503C2 /* User.swift */; };
+		21E148152A82031D00B503C2 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E148142A82031D00B503C2 /* Challenge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -188,6 +189,7 @@
 		21DBA0042A39EC5500DFAC66 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		21E1480C2A7F5F2000B503C2 /* FirebaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRepository.swift; sourceTree = "<group>"; };
 		21E148122A7F639400B503C2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		21E148142A82031D00B503C2 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +253,7 @@
 			children = (
 				21E148122A7F639400B503C2 /* User.swift */,
 				2175FBE32A657D1500F7E97F /* Project.swift */,
+				21E148142A82031D00B503C2 /* Challenge.swift */,
 				21534DA02A5A9B3B00E8078B /* TailwindCSS.swift */,
 				2147F5142A6F0A65004245AE /* ISOLanguageCodes.swift */,
 				21C21C532A36145200F40BE3 /* Enumerations.swift */,
@@ -625,6 +628,7 @@
 				2175FBE22A648D0700F7E97F /* LottieRepository.swift in Sources */,
 				21AF3CB02A68565C002E96E3 /* RealmProjectModels.swift in Sources */,
 				21534D9D2A59CD8600E8078B /* UIDashboardView.swift in Sources */,
+				21E148152A82031D00B503C2 /* Challenge.swift in Sources */,
 				21AF3CB42A6B20FD002E96E3 /* AboutUsVC.swift in Sources */,
 				21AF3CA72A6843A9002E96E3 /* RealmRepository.swift in Sources */,
 				21534DA12A5A9B3B00E8078B /* TailwindCSS.swift in Sources */,
@@ -836,7 +840,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0.0;
+				MARKETING_VERSION = 5.0.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ficruty.caocap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -867,7 +871,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0.0;
+				MARKETING_VERSION = 5.0.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ficruty.caocap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
