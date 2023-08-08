@@ -22,7 +22,7 @@ class Project {
     
     init() {
         do {
-            selectedElementID = UUID().uuidString
+            selectedElementID = "_body_"
             let html = #"""
             <!DOCTYPE html>
             <html lang="en">
@@ -30,9 +30,12 @@ class Project {
                     <title>webview</title>
                     <meta charset="UTF-8" />
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+                    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+                    <script src="https://unpkg.com/redux@4.2.1/dist/redux.js"></script>
                     <script src="https://cdn.tailwindcss.com"></script>
                 </head>
-                <body id="\#(selectedElementID!)"></body>
+                <body id="_body_">
             </html>
             """#
             document = try SwiftSoup.parse(html)
