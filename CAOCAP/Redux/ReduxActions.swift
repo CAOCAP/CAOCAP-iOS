@@ -21,7 +21,7 @@ struct AuthUserAction: Action { let user: User }
 struct ReceivedCommitHistoryAction: Action { let commits: [String] }
 
 // MARK: Daily Challenges
-struct ChallengeCompletedAction: Action { let challenge: String }
+struct ChallengeCompletedAction: Action { let challenge: Challenge }
 
 // MARK: Project Actions
 struct CreateProjectAction: Action { let newProject: Project } 

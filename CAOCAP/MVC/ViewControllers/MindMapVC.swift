@@ -430,15 +430,15 @@ extension MindMapVC: StoreSubscriber {
         
         
         //TODO: loop over the daily challenges, if doc contains challenge regex then the user did complete the challenge
-        //    if dailyChallenges = state.dailyChallenges {
-        for challenge in state.dailyChallenges { // we got the state.dailyChallenges 🎉
-            if let docString = state.openedProject?.getOuterHtml() {
-                if docString.contains("<button") { // to get the challenge regex, we need first to create the
-                    view.presentConfettiAnimation()
+            if let dailyChallenges = state.dailyChallenges {
+                for challenge in dailyChallenges { // we got the state.dailyChallenges 🎉
+                    if let docString = state.openedProject?.getOuterHtml() {
+                        if docString.contains("<button") { // to get the challenge regex, we need first to create the
+                            view.presentConfettiAnimation()
+                        }
+                    }
                 }
             }
-        }
-        //    }
         
         loadWebView()/*🤔*/
         mindMap.loadBody()

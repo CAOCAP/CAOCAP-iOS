@@ -925,7 +925,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "216"
             endingLineNumber = "216"
-            landmarkName = "setSelectedElementText(alignment:)"
+            landmarkName = "getSelectedElementTextAlignment()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -959,6 +959,38 @@
             endingLineNumber = "226"
             landmarkName = "setSelectedElementText(alignment:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B7EDF4AE-A0B9-4173-B8E8-30C1F2EF5F07 - 19d577d2dee4d31e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.Project.setSelectedElementText(alignment: Swift.String) -&gt; ()"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/MVC/Models/Project.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "226"
+                  endingLineNumber = "226"
+                  offsetFromSymbolStart = "392">
+               </Location>
+               <Location
+                  uuid = "B7EDF4AE-A0B9-4173-B8E8-30C1F2EF5F07 - 19d577d2dee4d31e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.Project.setSelectedElementText(alignment: Swift.String) -&gt; ()"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/MVC/Models/Project.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "226"
+                  endingLineNumber = "226"
+                  offsetFromSymbolStart = "756">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1299,7 +1331,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "F84C8162-EE42-44C0-8F29-8A76FCE489FE"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CAOCAP/Repositories/FirebaseRepo/FirebaseRepository.swift"
@@ -1377,7 +1409,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "9735CDEF-B93B-40C9-A993-DD773D27671D"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CAOCAP/Repositories/FirebaseRepo/FirebaseRepository.swift"

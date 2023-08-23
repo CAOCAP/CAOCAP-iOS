@@ -31,7 +31,7 @@ func reduxReducer(action: Action, state: ReduxState?) -> ReduxState {
         state.commitHistory = action.commits
         
     case let action as ChallengeCompletedAction:
-        state.dailyChallenges.append(action.challenge) //TODO: this is temporary, you need to find a better way
+        state.completeChallenges?.append(action.challenge)
         
     case _ as CreateProjectAction,
          _ as OpenProjectAction,
