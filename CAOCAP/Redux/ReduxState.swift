@@ -17,7 +17,9 @@ struct ReduxState {
     
     var user: User?
     var commitHistory: [String]? //TODO: Create a model for Commits
-    var dailyChallenges:  [Challenge]?
+    var dailyChallenges =  [
+        Challenge(title: "Add Image", description: "add an image with a source URL", regex:  /<img(\s.*\s|\s)(src="http.+?")/),
+    ]
     var completeChallenges: [Challenge]?
     
     var openedProject: Project?

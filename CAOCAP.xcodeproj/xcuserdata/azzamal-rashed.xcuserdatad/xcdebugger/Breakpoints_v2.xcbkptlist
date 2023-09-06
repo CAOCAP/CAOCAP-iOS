@@ -333,8 +333,8 @@
             filePath = "CAOCAP/MVC/ViewControllers/MindMapVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "449"
-            endingLineNumber = "449"
+            startingLineNumber = "451"
+            endingLineNumber = "451"
             landmarkName = "newState(state:)"
             landmarkType = "7">
             <Locations>
@@ -412,8 +412,8 @@
             filePath = "CAOCAP/Redux/ReduxReducer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "projectReducer(action:state:)"
             landmarkType = "9">
             <Locations>
@@ -460,8 +460,8 @@
             filePath = "CAOCAP/Redux/ReduxReducer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "projectReducer(action:state:)"
             landmarkType = "9">
             <Locations>
@@ -508,8 +508,8 @@
             filePath = "CAOCAP/Redux/ReduxReducer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "projectReducer(action:state:)"
             landmarkType = "9">
             <Locations>
@@ -556,8 +556,8 @@
             filePath = "CAOCAP/Redux/ReduxReducer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "projectReducer(action:state:)"
             landmarkType = "9">
             <Locations>
@@ -604,8 +604,8 @@
             filePath = "CAOCAP/Redux/ReduxReducer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "projectReducer(action:state:)"
             landmarkType = "9">
             <Locations>
@@ -652,8 +652,8 @@
             filePath = "CAOCAP/Redux/ReduxReducer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "projectReducer(action:state:)"
             landmarkType = "9">
             <Locations>
@@ -700,8 +700,8 @@
             filePath = "CAOCAP/Redux/ReduxReducer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "projectReducer(action:state:)"
             landmarkType = "9">
             <Locations>
@@ -990,6 +990,36 @@
                   endingLineNumber = "226"
                   offsetFromSymbolStart = "756">
                </Location>
+               <Location
+                  uuid = "B7EDF4AE-A0B9-4173-B8E8-30C1F2EF5F07 - 5d5a463506f48c1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.Project.setSelectedElementText(alignment: Swift.String) -&gt; ()"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Documents/%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/MVC/Models/Project.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "226"
+                  endingLineNumber = "226"
+                  offsetFromSymbolStart = "392">
+               </Location>
+               <Location
+                  uuid = "B7EDF4AE-A0B9-4173-B8E8-30C1F2EF5F07 - 5d5a463506f48c1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.Project.setSelectedElementText(alignment: Swift.String) -&gt; ()"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Documents/%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/MVC/Models/Project.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "226"
+                  endingLineNumber = "226"
+                  offsetFromSymbolStart = "756">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1227,8 +1257,8 @@
             filePath = "CAOCAP/Redux/ReduxReducer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "reduxReducer(action:state:)"
             landmarkType = "9">
          </BreakpointContent>
@@ -1237,7 +1267,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "01A507BA-D8ED-48BF-9A67-3331842AF189"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CAOCAP/MVC/ViewControllers/HomeVC.swift"
@@ -1501,24 +1531,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CDC85008-D28E-455F-AFF8-0A84E46B77FF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CAOCAP/Redux/ReduxReducer.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "reduxReducer(action:state:)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "A84240C7-8817-4D8E-8CBC-40CE6E300B8A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CAOCAP/MVC/ViewControllers/HomeVC.swift"
@@ -1683,8 +1697,8 @@
             filePath = "CAOCAP/Redux/ReduxReducer.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "reduxReducer(action:state:)"
             landmarkType = "9">
             <Locations>
@@ -1733,6 +1747,36 @@
                   endingLineNumber = "34"
                   offsetFromSymbolStart = "664">
                </Location>
+               <Location
+                  uuid = "732776E5-51FA-438E-A40D-C6BF65A0B549 - 1e3c9d1d00e11e74"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.reduxReducer(action: ReSwift.Action, state: Swift.Optional&lt;CAOCAP.ReduxState&gt;) -&gt; CAOCAP.ReduxState"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/Redux/ReduxReducer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "452">
+               </Location>
+               <Location
+                  uuid = "732776E5-51FA-438E-A40D-C6BF65A0B549 - 754050a54af2a513"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.reduxReducer(action: ReSwift.Action, state: Swift.Optional&lt;CAOCAP.ReduxState&gt;) -&gt; CAOCAP.ReduxState"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Documents/%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/Redux/ReduxReducer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "452">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1740,14 +1784,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E3B00BD2-EC5D-47AF-9FD2-DAF4A85077F5"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CAOCAP/MVC/ViewControllers/MindMapVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "435"
-            endingLineNumber = "435"
+            startingLineNumber = "436"
+            endingLineNumber = "436"
             landmarkName = "newState(state:)"
             landmarkType = "7">
             <Locations>
@@ -1781,6 +1825,36 @@
                   endingLineNumber = "435"
                   offsetFromSymbolStart = "972">
                </Location>
+               <Location
+                  uuid = "E3B00BD2-EC5D-47AF-9FD2-DAF4A85077F5 - 2a9aef1f9cf8cb4f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.MindMapVC.newState(state: CAOCAP.ReduxState) -&gt; ()"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/MVC/ViewControllers/MindMapVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "436"
+                  endingLineNumber = "436"
+                  offsetFromSymbolStart = "816">
+               </Location>
+               <Location
+                  uuid = "E3B00BD2-EC5D-47AF-9FD2-DAF4A85077F5 - 2a9aef1f9cf8cb4f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.MindMapVC.newState(state: CAOCAP.ReduxState) -&gt; ()"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/MVC/ViewControllers/MindMapVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "436"
+                  endingLineNumber = "436"
+                  offsetFromSymbolStart = "984">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1794,10 +1868,57 @@
             filePath = "CAOCAP/MVC/ViewControllers/MindMapVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "436"
-            endingLineNumber = "436"
+            startingLineNumber = "437"
+            endingLineNumber = "437"
             landmarkName = "newState(state:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3C920B42-0612-41A1-BA52-204033700530 - 2a9aef1f9cf8cb4f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.MindMapVC.newState(state: CAOCAP.ReduxState) -&gt; ()"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/MVC/ViewControllers/MindMapVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "436"
+                  endingLineNumber = "436"
+                  offsetFromSymbolStart = "1000">
+               </Location>
+               <Location
+                  uuid = "3C920B42-0612-41A1-BA52-204033700530 - 2a9aef1f9cf8cb6e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.MindMapVC.newState(state: CAOCAP.ReduxState) -&gt; ()"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/MVC/ViewControllers/MindMapVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "437"
+                  endingLineNumber = "437"
+                  offsetFromSymbolStart = "1016">
+               </Location>
+               <Location
+                  uuid = "3C920B42-0612-41A1-BA52-204033700530 - bb63ca5e546db02f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.MindMapVC.newState(state: CAOCAP.ReduxState) -&gt; ()"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Documents/%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/MVC/ViewControllers/MindMapVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "437"
+                  endingLineNumber = "437"
+                  offsetFromSymbolStart = "1096">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1810,10 +1931,57 @@
             filePath = "CAOCAP/MVC/ViewControllers/MindMapVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "437"
-            endingLineNumber = "437"
+            startingLineNumber = "438"
+            endingLineNumber = "438"
             landmarkName = "newState(state:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "561F8CCB-1923-496D-B273-F556F23C8945 - 2a9aef1f9cf8cb6e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.MindMapVC.newState(state: CAOCAP.ReduxState) -&gt; ()"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/MVC/ViewControllers/MindMapVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "437"
+                  endingLineNumber = "437"
+                  offsetFromSymbolStart = "1116">
+               </Location>
+               <Location
+                  uuid = "561F8CCB-1923-496D-B273-F556F23C8945 - 2a9aef1f9cf8c891"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.MindMapVC.newState(state: CAOCAP.ReduxState) -&gt; ()"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/MVC/ViewControllers/MindMapVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "438"
+                  endingLineNumber = "438"
+                  offsetFromSymbolStart = "1132">
+               </Location>
+               <Location
+                  uuid = "561F8CCB-1923-496D-B273-F556F23C8945 - bb63ca5e546db04e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.MindMapVC.newState(state: CAOCAP.ReduxState) -&gt; ()"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Documents/%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/MVC/ViewControllers/MindMapVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "438"
+                  endingLineNumber = "438"
+                  offsetFromSymbolStart = "1212">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

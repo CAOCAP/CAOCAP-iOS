@@ -300,7 +300,7 @@ class MindMapVC: UIViewController, Storyboarded {
             project.setSelectedElementText(alignment: selectedAlignment)
         }))
     }
-
+    
     var selectedColorWell: UIColorWell?
     @IBAction func didPressSelectColorButton(_ sender: UIButton) {
         selectedColorWell = sender.tag == 0 ? textColorWell : backgroundColorWell
@@ -429,16 +429,18 @@ extension MindMapVC: StoreSubscriber {
         }
         
         
-        //TODO: loop over the daily challenges, if doc contains challenge regex then the user did complete the challenge
-            if let dailyChallenges = state.dailyChallenges {
-                for challenge in dailyChallenges { // we got the state.dailyChallenges 🎉
-                    if let docString = state.openedProject?.getOuterHtml() {
-                        if docString.contains("<button") { // to get the challenge regex, we need first to create the
-                            view.presentConfettiAnimation()
-                        }
+        
+//        if let dailyChallenges = state.dailyChallenges {
+        for challenge in state.dailyChallenges {
+                if challenge.isComplete { continue }
+                if let docString = state.openedProject?.getOuterHtml() {
+                    if docString.contains(challenge.regex) {
+                        view.presentConfettiAnimation()
+                        challenge.isComplete = true
                     }
                 }
             }
+//        }
         
         loadWebView()/*🤔*/
         mindMap.loadBody()
@@ -484,11 +486,11 @@ extension MindMapVC: StoreSubscriber {
         
         // TODO: update the backgroundColorWell & textColorWell selected color
         if let backgroundColor = project?.getSelectedElementBackgroundColor() {
-//            backgroundColorWell.selectedColor = backgroundColor
+            //            backgroundColorWell.selectedColor = backgroundColor
         }
         
         if let textColor = project?.getSelectedElementTextColor() {
-//            textColorWell.selectedColor = textColor
+            //            textColorWell.selectedColor = textColor
         }
         
         if let isHidden = project?.isSelectedElementHidden() {

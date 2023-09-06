@@ -7,8 +7,16 @@
 
 import Foundation
 
-struct Challenge {
+class Challenge {
     let title: String
     let description: String
-    let regex: String
+    let regex: Regex<(Substring, Substring, Substring)>
+    var isComplete: Bool
+    
+    init(title: String, description: String, regex: Regex<(Substring, Substring, Substring)>, isComplete: Bool = false) {
+        self.title = title
+        self.description = description
+        self.regex = regex
+        self.isComplete = isComplete
+    }
 }
