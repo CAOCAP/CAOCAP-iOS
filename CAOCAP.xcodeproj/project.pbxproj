@@ -54,6 +54,7 @@
 		218DA9D22A2B205900459C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 218DA9D12A2B205900459C61 /* Assets.xcassets */; };
 		218DA9D52A2B205900459C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218DA9D32A2B205900459C61 /* LaunchScreen.storyboard */; };
 		219339812A7E3FAA002FDE05 /* Popovers in Frameworks */ = {isa = PBXBuildFile; productRef = 219339802A7E3FAA002FDE05 /* Popovers */; };
+		2196065F2AA82E700099FC14 /* KeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2196065E2AA82E700099FC14 /* KeyboardManager.swift */; };
 		21A861D82A78D2C4004D36A3 /* WhatsNewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A861D72A78D2C4004D36A3 /* WhatsNewVC.swift */; };
 		21AF3CA52A67E44B002E96E3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 21AF3CA42A67E44B002E96E3 /* SnapKit */; };
 		21AF3CA72A6843A9002E96E3 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CA62A6843A9002E96E3 /* RealmRepository.swift */; };
@@ -148,6 +149,7 @@
 		218DA9D12A2B205900459C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		218DA9D42A2B205900459C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		218DA9D62A2B205900459C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2196065E2AA82E700099FC14 /* KeyboardManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardManager.swift; sourceTree = "<group>"; };
 		21A861D72A78D2C4004D36A3 /* WhatsNewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewVC.swift; sourceTree = "<group>"; };
 		21AF3CA62A6843A9002E96E3 /* RealmRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
 		21AF3CAF2A68565C002E96E3 /* RealmProjectModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProjectModels.swift; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 				21AF3CAD2A68554B002E96E3 /* RealmRepo */,
 				21E1480B2A7F5F0100B503C2 /* FirebaseRepo */,
 				2106C41C2A5F949400446620 /* HTMLParser.swift */,
+				2196065E2AA82E700099FC14 /* KeyboardManager.swift */,
 				21DBA0022A39E18C00DFAC66 /* StoreKitRepository.swift */,
 				2175FBE12A648D0700F7E97F /* LottieRepository.swift */,
 			);
@@ -654,6 +657,7 @@
 				21AF3CD22A6B714A002E96E3 /* ProjectVideosVC.swift in Sources */,
 				21AF3CC22A6B70B6002E96E3 /* ProjectTitleVC.swift in Sources */,
 				21C21C4D2A34B61900F40BE3 /* PurchaseVC.swift in Sources */,
+				2196065F2AA82E700099FC14 /* KeyboardManager.swift in Sources */,
 				218DA9CB2A2B205800459C61 /* SceneDelegate.swift in Sources */,
 				21DBA0052A39EC5500DFAC66 /* UIFont+Extensions.swift in Sources */,
 				2186DB0D2A30946900773C5E /* UIView+Extensions.swift in Sources */,

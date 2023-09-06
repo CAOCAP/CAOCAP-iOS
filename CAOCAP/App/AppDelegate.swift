@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,11 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UserDefaults.standard.addCommit() // TODO: this should be called when the user makes some changes to a project
         RealmRepository.shared.configuration()
         FirebaseRepository.shared.configuration()
-        
-        IQKeyboardManager.shared.enable = true
-        IQKeyboardManager.shared.enableAutoToolbar = false
-        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
-        
+        KeyboardManager.shared.configuration()
         
         return true
     }
