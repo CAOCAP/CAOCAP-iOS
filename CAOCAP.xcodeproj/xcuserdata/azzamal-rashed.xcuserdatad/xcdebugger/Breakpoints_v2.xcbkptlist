@@ -923,9 +923,9 @@
             filePath = "CAOCAP/MVC/Models/Project.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "205"
-            endingLineNumber = "205"
-            landmarkName = "getSelectedElementTextAlignment()"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "toggleSelectedElement(className:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -939,9 +939,9 @@
             filePath = "CAOCAP/MVC/Models/Project.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "213"
-            endingLineNumber = "213"
-            landmarkName = "setSelectedElementText(alignment:)"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "toggleSelectedElement(className:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -955,10 +955,10 @@
             filePath = "CAOCAP/MVC/Models/Project.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
-            landmarkName = "setSelectedElementText(alignment:)"
-            landmarkType = "7">
+            startingLineNumber = "181"
+            endingLineNumber = "181"
+            landmarkName = "Project"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1067,10 +1067,10 @@
             filePath = "CAOCAP/MVC/Models/Project.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "320"
-            endingLineNumber = "320"
-            landmarkName = "setSelectedElementBackground(color:)"
-            landmarkType = "7">
+            startingLineNumber = "286"
+            endingLineNumber = "286"
+            landmarkName = "Project"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1083,9 +1083,9 @@
             filePath = "CAOCAP/MVC/Models/Project.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "323"
-            endingLineNumber = "323"
-            landmarkName = "setSelectedElementBackground(color:)"
+            startingLineNumber = "289"
+            endingLineNumber = "289"
+            landmarkName = "setSelectedElementHidden(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

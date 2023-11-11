@@ -18,7 +18,6 @@
 		213DF5E02A5883D300679BB2 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 213DF5DF2A5883D300679BB2 /* SwiftSoup */; };
 		213DF5E32A5886B300679BB2 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 213DF5E22A5886B300679BB2 /* ReSwift */; };
 		213DF5E62A58A92F00679BB2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 213DF5E52A58A92F00679BB2 /* Lottie */; };
-		2147F5152A6F0A65004245AE /* ISOLanguageCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2147F5142A6F0A65004245AE /* ISOLanguageCodes.swift */; };
 		2147F5192A6F2001004245AE /* ISOLanguageCodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2147F5182A6F2001004245AE /* ISOLanguageCodeCell.swift */; };
 		214995242A5C3404008B9987 /* ReduxActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214995232A5C3404008B9987 /* ReduxActions.swift */; };
 		214995262A5C3414008B9987 /* ReduxReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214995252A5C3414008B9987 /* ReduxReducer.swift */; };
@@ -113,7 +112,6 @@
 		210F19AF2A42DC9800D71A66 /* UIStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStroke.swift; sourceTree = "<group>"; };
 		212E2B1A2A745BBD00125C50 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		21326ECF2A530CAE00255570 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
-		2147F5142A6F0A65004245AE /* ISOLanguageCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISOLanguageCodes.swift; sourceTree = "<group>"; };
 		2147F5182A6F2001004245AE /* ISOLanguageCodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISOLanguageCodeCell.swift; sourceTree = "<group>"; };
 		214995232A5C3404008B9987 /* ReduxActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxActions.swift; sourceTree = "<group>"; };
 		214995252A5C3414008B9987 /* ReduxReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxReducer.swift; sourceTree = "<group>"; };
@@ -260,7 +258,6 @@
 				2175FBE32A657D1500F7E97F /* Project.swift */,
 				21E148142A82031D00B503C2 /* Challenge.swift */,
 				21534DA02A5A9B3B00E8078B /* TailwindCSS.swift */,
-				2147F5142A6F0A65004245AE /* ISOLanguageCodes.swift */,
 				21C21C532A36145200F40BE3 /* Enumerations.swift */,
 			);
 			path = Models;
@@ -673,7 +670,6 @@
 				21DBA0012A38F4C800DFAC66 /* HomeVC.swift in Sources */,
 				21AF3CB62A6B211E002E96E3 /* TermsOfUseVC.swift in Sources */,
 				21C21C492A34B5D800F40BE3 /* ProjectsVC.swift in Sources */,
-				2147F5152A6F0A65004245AE /* ISOLanguageCodes.swift in Sources */,
 				21C21C542A36145200F40BE3 /* Enumerations.swift in Sources */,
 				21AF3CC02A6B7096002E96E3 /* ProjectLanguageVC.swift in Sources */,
 				21534D8F2A59B26F00E8078B /* NavigationVC.swift in Sources */,
