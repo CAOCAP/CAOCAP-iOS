@@ -1715,6 +1715,21 @@
                   endingLineNumber = "35"
                   offsetFromSymbolStart = "452">
                </Location>
+               <Location
+                  uuid = "732776E5-51FA-438E-A40D-C6BF65A0B549 - 700bf0cecb0b0532"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.reduxReducer(action: ReSwift.Action, state: Swift.Optional&lt;CAOCAP.ReduxState&gt;) -&gt; CAOCAP.ReduxState"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/CAOCAP/CAOCAP/Redux/ReduxReducer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "452">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1871,6 +1886,21 @@
                   endingLineNumber = "437"
                   offsetFromSymbolStart = "1116">
                </Location>
+               <Location
+                  uuid = "3C920B42-0612-41A1-BA52-204033700530 - d802d6a9b11f88da"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.MindMapVC.newState(state: CAOCAP.ReduxState) -&gt; ()"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/CAOCAP/CAOCAP/MVC/ViewControllers/MindMapVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "437"
+                  endingLineNumber = "437"
+                  offsetFromSymbolStart = "1080">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -1948,6 +1978,21 @@
                   startingLineNumber = "438"
                   endingLineNumber = "438"
                   offsetFromSymbolStart = "1232">
+               </Location>
+               <Location
+                  uuid = "561F8CCB-1923-496D-B273-F556F23C8945 - d802d6a9b11f88fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.MindMapVC.newState(state: CAOCAP.ReduxState) -&gt; ()"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/CAOCAP/CAOCAP/MVC/ViewControllers/MindMapVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "438"
+                  endingLineNumber = "438"
+                  offsetFromSymbolStart = "1208">
                </Location>
             </Locations>
          </BreakpointContent>

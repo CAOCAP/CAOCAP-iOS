@@ -10,7 +10,7 @@ import UIKit
 extension UIView {
     
     func presentConfettiAnimation() {
-        LottieRepository().animation(on: self, type: .confetti)
+        LottieManager().animation(on: self, type: .confetti)
     }
     
     @IBInspectable

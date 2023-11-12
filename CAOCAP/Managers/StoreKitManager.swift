@@ -1,12 +1,12 @@
 //
-//  StoreKitRepository.swift
+//  StoreKitManager.swift
 //  CAOCAP
 //
 //  Created by Azzam AL-Rashed on 14/06/2023.
 //
 //  Abstract:
 //  The store class is responsible for requesting products from the App Store and starting purchases.
-//  https://developer.apple.com/documentation/storekit/in-app_purchase/implementing_a_store_in_your_app_using_the_storekit_api
+// https://developer.apple.com/documentation/storekit/in-app_purchase/implementing_a_store_in_your_app_using_the_storekit_api
 
 
 import Foundation
@@ -31,7 +31,7 @@ public enum SubscriptionTier: Int, Comparable {
 }
 
 
-class StoreKitRepository: ObservableObject {
+class StoreKitManager: ObservableObject {
     
     
     

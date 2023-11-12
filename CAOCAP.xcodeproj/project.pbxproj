@@ -37,7 +37,7 @@
 		21534DA72A5B038D00E8078B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21534DA52A5AFF8F00E8078B /* AdSupport.framework */; };
 		2175FBDF2A648C9100F7E97F /* party.json in Resources */ = {isa = PBXBuildFile; fileRef = 2175FBDD2A648C9100F7E97F /* party.json */; };
 		2175FBE02A648C9100F7E97F /* confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 2175FBDE2A648C9100F7E97F /* confetti.json */; };
-		2175FBE22A648D0700F7E97F /* LottieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2175FBE12A648D0700F7E97F /* LottieRepository.swift */; };
+		2175FBE22A648D0700F7E97F /* LottieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2175FBE12A648D0700F7E97F /* LottieManager.swift */; };
 		2175FBE42A657D1500F7E97F /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2175FBE32A657D1500F7E97F /* Project.swift */; };
 		2178C19D2A4D92A300876BB6 /* ProjectSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */; };
 		2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */; };
@@ -95,7 +95,7 @@
 		21C21C692A38DFAD00F40BE3 /* Ubuntu-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21C21C602A38DFAD00F40BE3 /* Ubuntu-Light.ttf */; };
 		21C21C6A2A38DFAD00F40BE3 /* UFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 21C21C612A38DFAD00F40BE3 /* UFL.txt */; };
 		21DBA0012A38F4C800DFAC66 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DBA0002A38F4C800DFAC66 /* HomeVC.swift */; };
-		21DBA0032A39E18C00DFAC66 /* StoreKitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DBA0022A39E18C00DFAC66 /* StoreKitRepository.swift */; };
+		21DBA0032A39E18C00DFAC66 /* StoreKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DBA0022A39E18C00DFAC66 /* StoreKitManager.swift */; };
 		21DBA0052A39EC5500DFAC66 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DBA0042A39EC5500DFAC66 /* UIFont+Extensions.swift */; };
 		21E1480D2A7F5F2000B503C2 /* FirebaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E1480C2A7F5F2000B503C2 /* FirebaseRepository.swift */; };
 		21E1480F2A7F62BE00B503C2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 21E1480E2A7F62BE00B503C2 /* FirebaseAuth */; };
@@ -131,7 +131,7 @@
 		21534DA52A5AFF8F00E8078B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		2175FBDD2A648C9100F7E97F /* party.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = party.json; sourceTree = "<group>"; };
 		2175FBDE2A648C9100F7E97F /* confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = confetti.json; sourceTree = "<group>"; };
-		2175FBE12A648D0700F7E97F /* LottieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieRepository.swift; sourceTree = "<group>"; };
+		2175FBE12A648D0700F7E97F /* LottieManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieManager.swift; sourceTree = "<group>"; };
 		2175FBE32A657D1500F7E97F /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSettingsVC.swift; sourceTree = "<group>"; };
 		2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSettingsVC.swift; sourceTree = "<group>"; };
@@ -186,7 +186,7 @@
 		21C21C602A38DFAD00F40BE3 /* Ubuntu-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Light.ttf"; sourceTree = "<group>"; };
 		21C21C612A38DFAD00F40BE3 /* UFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UFL.txt; sourceTree = "<group>"; };
 		21DBA0002A38F4C800DFAC66 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		21DBA0022A39E18C00DFAC66 /* StoreKitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitRepository.swift; sourceTree = "<group>"; };
+		21DBA0022A39E18C00DFAC66 /* StoreKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitManager.swift; sourceTree = "<group>"; };
 		21DBA0042A39EC5500DFAC66 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		21E1480C2A7F5F2000B503C2 /* FirebaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRepository.swift; sourceTree = "<group>"; };
 		21E148122A7F639400B503C2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -235,7 +235,7 @@
 			children = (
 				2149951F2A5C3258008B9987 /* Models */,
 				21534D992A59CA9400E8078B /* Views */,
-				2178C1A02A4D992000876BB6 /* ViewControllers */,
+				2178C1A02A4D992000876BB6 /* Controllers */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -266,13 +266,9 @@
 		214995202A5C32E7008B9987 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				21AF3CAE2A685605002E96E3 /* UserDefaultsRepo */,
-				21AF3CAD2A68554B002E96E3 /* RealmRepo */,
-				21E1480B2A7F5F0100B503C2 /* FirebaseRepo */,
-				2106C41C2A5F949400446620 /* HTMLParser.swift */,
-				2196065E2AA82E700099FC14 /* KeyboardManager.swift */,
-				21DBA0022A39E18C00DFAC66 /* StoreKitRepository.swift */,
-				2175FBE12A648D0700F7E97F /* LottieRepository.swift */,
+				21AF3CAE2A685605002E96E3 /* UserDefaults */,
+				21AF3CAD2A68554B002E96E3 /* Realm */,
+				21E1480B2A7F5F0100B503C2 /* Firebase */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -351,7 +347,7 @@
 			path = Celebration;
 			sourceTree = "<group>";
 		};
-		2178C1A02A4D992000876BB6 /* ViewControllers */ = {
+		2178C1A02A4D992000876BB6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				21534D902A59B2E200E8078B /* ContainerVC.swift */,
@@ -375,7 +371,18 @@
 				21A861D72A78D2C4004D36A3 /* WhatsNewVC.swift */,
 				21AF3CD32A6B717A002E96E3 /* ProjectViewControllers */,
 			);
-			path = ViewControllers;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2189F32D2AFFA17A00FEB125 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				2196065E2AA82E700099FC14 /* KeyboardManager.swift */,
+				21DBA0022A39E18C00DFAC66 /* StoreKitManager.swift */,
+				2175FBE12A648D0700F7E97F /* LottieManager.swift */,
+				2106C41C2A5F949400446620 /* HTMLParser.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		218DA9BC2A2B205800459C61 = {
@@ -403,27 +410,28 @@
 				2149951D2A5C3213008B9987 /* MVC */,
 				21534D922A59B36800E8078B /* Coordinator */,
 				214995202A5C32E7008B9987 /* Repositories */,
+				2189F32D2AFFA17A00FEB125 /* Managers */,
 				214995212A5C338B008B9987 /* Resources */,
 				21534D882A598F7300E8078B /* Extensions */,
 			);
 			path = CAOCAP;
 			sourceTree = "<group>";
 		};
-		21AF3CAD2A68554B002E96E3 /* RealmRepo */ = {
+		21AF3CAD2A68554B002E96E3 /* Realm */ = {
 			isa = PBXGroup;
 			children = (
 				21AF3CA62A6843A9002E96E3 /* RealmRepository.swift */,
 				21AF3CAF2A68565C002E96E3 /* RealmProjectModels.swift */,
 			);
-			path = RealmRepo;
+			path = Realm;
 			sourceTree = "<group>";
 		};
-		21AF3CAE2A685605002E96E3 /* UserDefaultsRepo */ = {
+		21AF3CAE2A685605002E96E3 /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
 				21326ECF2A530CAE00255570 /* UserDefaults.swift */,
 			);
-			path = UserDefaultsRepo;
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 		21AF3CD32A6B717A002E96E3 /* ProjectViewControllers */ = {
@@ -478,12 +486,12 @@
 			path = monogamma;
 			sourceTree = "<group>";
 		};
-		21E1480B2A7F5F0100B503C2 /* FirebaseRepo */ = {
+		21E1480B2A7F5F0100B503C2 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
 				21E1480C2A7F5F2000B503C2 /* FirebaseRepository.swift */,
 			);
-			path = FirebaseRepo;
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -628,7 +636,7 @@
 				2147F5192A6F2001004245AE /* ISOLanguageCodeCell.swift in Sources */,
 				21AF3CD02A6B7139002E96E3 /* ProjectImagesVC.swift in Sources */,
 				2178C19D2A4D92A300876BB6 /* ProjectSettingsVC.swift in Sources */,
-				2175FBE22A648D0700F7E97F /* LottieRepository.swift in Sources */,
+				2175FBE22A648D0700F7E97F /* LottieManager.swift in Sources */,
 				21AF3CB02A68565C002E96E3 /* RealmProjectModels.swift in Sources */,
 				21534D9D2A59CD8600E8078B /* UIDashboardView.swift in Sources */,
 				21E148152A82031D00B503C2 /* Challenge.swift in Sources */,
@@ -662,7 +670,7 @@
 				21DBA0052A39EC5500DFAC66 /* UIFont+Extensions.swift in Sources */,
 				2186DB0D2A30946900773C5E /* UIView+Extensions.swift in Sources */,
 				21AF3CCE2A6B7128002E96E3 /* ProjectFontsVC.swift in Sources */,
-				21DBA0032A39E18C00DFAC66 /* StoreKitRepository.swift in Sources */,
+				21DBA0032A39E18C00DFAC66 /* StoreKitManager.swift in Sources */,
 				21326ED02A530CAE00255570 /* UserDefaults.swift in Sources */,
 				21C21C4B2A34B60200F40BE3 /* SettingsVC.swift in Sources */,
 				2175FBE42A657D1500F7E97F /* Project.swift in Sources */,
