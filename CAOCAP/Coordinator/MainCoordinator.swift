@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SwiftUI
 
 final class MainCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
@@ -20,19 +19,19 @@ final class MainCoordinator: Coordinator {
     func start() {
         let navigationVC = NavigationVC.instantiate()
         
-        let initialVC = HomeVC.instantiate()
+        let homeVC = HomeVC.instantiate()
         let chartsVC = ChartsVC.instantiate()
         let projectsVC = ProjectsVC.instantiate()
         let mainSettingsVC = MainSettingsVC.instantiate()
         
-        initialVC.coordinator = self
-        chartsVC.viewControllers = [UIHostingController(rootView: UIDashboardView())]
+        homeVC.coordinator = self
+        chartsVC.coordinator = self
         projectsVC.coordinator = self
         mainSettingsVC.coordinator = self
         
         
         navigationVC.coordinator = self
-        navigationVC.viewControllers = [initialVC, chartsVC, projectsVC, mainSettingsVC]
+        navigationVC.viewControllers = [homeVC, chartsVC, projectsVC, mainSettingsVC]
         
         navigationController.pushViewController(navigationVC, animated: false)
     }
