@@ -315,14 +315,8 @@
 			children = (
 				218DA9CE2A2B205800459C61 /* Main.storyboard */,
 				218DA9D32A2B205900459C61 /* LaunchScreen.storyboard */,
-				2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */,
-				2147F5182A6F2001004245AE /* ISOLanguageCodeCell.swift */,
-				2178C1A32A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift */,
-				21534DA22A5A9ED000E8078B /* TailwindCollectionViewCell.swift */,
-				2186DB102A30DF4700773C5E /* UIMindMap.swift */,
-				210F19AF2A42DC9800D71A66 /* UIStroke.swift */,
-				210F19AD2A42DBE100D71A66 /* UINodeView.swift */,
-				21534D9C2A59CD8600E8078B /* UIDashboardView.swift */,
+				21E3A2102B0119AE0041A561 /* UIKit */,
+				21E3A2112B0119D40041A561 /* SwiftUI */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -347,26 +341,10 @@
 		2178C1A02A4D992000876BB6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				21534D902A59B2E200E8078B /* ContainerVC.swift */,
-				21534D8E2A59B26F00E8078B /* NavigationVC.swift */,
-				2184CCF92A522E6200B39882 /* IntroVC.swift */,
-				21DBA0002A38F4C800DFAC66 /* HomeVC.swift */,
-				21534D9A2A59CD2B00E8078B /* ChartsVC.swift */,
-				218DA9CC2A2B205800459C61 /* MindMapVC.swift */,
-				21C21C482A34B5D800F40BE3 /* ProjectsVC.swift */,
-				21C21C4E2A34B62E00F40BE3 /* PaletteVC.swift */,
-				21C21C4C2A34B61900F40BE3 /* PurchaseVC.swift */,
-				21C21C4A2A34B60200F40BE3 /* SettingsVC.swift */,
-				2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */,
-				21AF3CB12A6B20DF002E96E3 /* CreditsVC.swift */,
-				21AF3CB32A6B20FD002E96E3 /* AboutUsVC.swift */,
-				21AF3CB52A6B211E002E96E3 /* TermsOfUseVC.swift */,
-				21AF3CB72A6B213C002E96E3 /* PrivacyPolicyVC.swift */,
-				21AF3CB92A6B2159002E96E3 /* SendFeedbackVC.swift */,
-				21AF3CBB2A6B2170002E96E3 /* SupportVC.swift */,
-				21AF3CBD2A6B2188002E96E3 /* HelpVC.swift */,
-				21A861D72A78D2C4004D36A3 /* WhatsNewVC.swift */,
-				21AF3CD32A6B717A002E96E3 /* ProjectViewControllers */,
+				21E3A20D2B0118E90041A561 /* GenericVCs */,
+				21E3A20E2B0118FD0041A561 /* MainVCs */,
+				21E3A20C2B0118A80041A561 /* OtherVCs */,
+				21E3A20F2B0119510041A561 /* Cells */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -432,10 +410,10 @@
 			path = UserDefaults;
 			sourceTree = "<group>";
 		};
-		21AF3CD32A6B717A002E96E3 /* ProjectViewControllers */ = {
+		21AF3CD32A6B717A002E96E3 /* ProjectVCs */ = {
 			isa = PBXGroup;
 			children = (
-				2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */,
+				21C21C482A34B5D800F40BE3 /* ProjectsVC.swift */,
 				21534D9E2A59E58100E8078B /* ProjectFilesVC.swift */,
 				21AF3CBF2A6B7096002E96E3 /* ProjectLanguageVC.swift */,
 				21AF3CC12A6B70B6002E96E3 /* ProjectTitleVC.swift */,
@@ -448,7 +426,7 @@
 				21AF3CCF2A6B7139002E96E3 /* ProjectImagesVC.swift */,
 				21AF3CD12A6B714A002E96E3 /* ProjectVideosVC.swift */,
 			);
-			path = ProjectViewControllers;
+			path = ProjectVCs;
 			sourceTree = "<group>";
 		};
 		21C21C562A38DD7D00F40BE3 /* Fonts */ = {
@@ -500,6 +478,100 @@
 				21C21C532A36145200F40BE3 /* Enumerations.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		21E3A2092B0116060041A561 /* SettingsVCs */ = {
+			isa = PBXGroup;
+			children = (
+				21C21C4A2A34B60200F40BE3 /* SettingsVC.swift */,
+				2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */,
+				2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */,
+				2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */,
+				2178C1A32A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift */,
+			);
+			path = SettingsVCs;
+			sourceTree = "<group>";
+		};
+		21E3A20A2B0117520041A561 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				2147F5182A6F2001004245AE /* ISOLanguageCodeCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		21E3A20B2B01176B0041A561 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				21534DA22A5A9ED000E8078B /* TailwindCollectionViewCell.swift */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		21E3A20C2B0118A80041A561 /* OtherVCs */ = {
+			isa = PBXGroup;
+			children = (
+				2184CCF92A522E6200B39882 /* IntroVC.swift */,
+				21C21C4E2A34B62E00F40BE3 /* PaletteVC.swift */,
+				21C21C4C2A34B61900F40BE3 /* PurchaseVC.swift */,
+				21AF3CB12A6B20DF002E96E3 /* CreditsVC.swift */,
+				21AF3CB32A6B20FD002E96E3 /* AboutUsVC.swift */,
+				21AF3CB52A6B211E002E96E3 /* TermsOfUseVC.swift */,
+				21AF3CB72A6B213C002E96E3 /* PrivacyPolicyVC.swift */,
+				21AF3CB92A6B2159002E96E3 /* SendFeedbackVC.swift */,
+				21AF3CBB2A6B2170002E96E3 /* SupportVC.swift */,
+				21AF3CBD2A6B2188002E96E3 /* HelpVC.swift */,
+				21A861D72A78D2C4004D36A3 /* WhatsNewVC.swift */,
+			);
+			path = OtherVCs;
+			sourceTree = "<group>";
+		};
+		21E3A20D2B0118E90041A561 /* GenericVCs */ = {
+			isa = PBXGroup;
+			children = (
+				21534D902A59B2E200E8078B /* ContainerVC.swift */,
+				21534D8E2A59B26F00E8078B /* NavigationVC.swift */,
+			);
+			path = GenericVCs;
+			sourceTree = "<group>";
+		};
+		21E3A20E2B0118FD0041A561 /* MainVCs */ = {
+			isa = PBXGroup;
+			children = (
+				21DBA0002A38F4C800DFAC66 /* HomeVC.swift */,
+				21534D9A2A59CD2B00E8078B /* ChartsVC.swift */,
+				218DA9CC2A2B205800459C61 /* MindMapVC.swift */,
+				21AF3CD32A6B717A002E96E3 /* ProjectVCs */,
+				21E3A2092B0116060041A561 /* SettingsVCs */,
+			);
+			path = MainVCs;
+			sourceTree = "<group>";
+		};
+		21E3A20F2B0119510041A561 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				21E3A20B2B01176B0041A561 /* CollectionViewCells */,
+				21E3A20A2B0117520041A561 /* TableViewCells */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		21E3A2102B0119AE0041A561 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				2186DB102A30DF4700773C5E /* UIMindMap.swift */,
+				210F19AF2A42DC9800D71A66 /* UIStroke.swift */,
+				210F19AD2A42DBE100D71A66 /* UINodeView.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		21E3A2112B0119D40041A561 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				21534D9C2A59CD8600E8078B /* UIDashboardView.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
