@@ -486,26 +486,26 @@
 				21C21C4A2A34B60200F40BE3 /* SettingsVC.swift */,
 				2178C19E2A4D981D00876BB6 /* MainSettingsVC.swift */,
 				2178C19C2A4D92A300876BB6 /* ProjectSettingsVC.swift */,
-				2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */,
-				2178C1A32A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift */,
 			);
 			path = SettingsVCs;
 			sourceTree = "<group>";
 		};
-		21E3A20A2B0117520041A561 /* TableViewCells */ = {
+		21E3A20A2B0117520041A561 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */,
+				2178C1A32A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift */,
 				2147F5182A6F2001004245AE /* ISOLanguageCodeCell.swift */,
 			);
-			path = TableViewCells;
+			path = TableView;
 			sourceTree = "<group>";
 		};
-		21E3A20B2B01176B0041A561 /* CollectionViewCells */ = {
+		21E3A20B2B01176B0041A561 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
 				21534DA22A5A9ED000E8078B /* TailwindCollectionViewCell.swift */,
 			);
-			path = CollectionViewCells;
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		21E3A20C2B0118A80041A561 /* OtherVCs */ = {
@@ -550,8 +550,8 @@
 		21E3A20F2B0119510041A561 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				21E3A20B2B01176B0041A561 /* CollectionViewCells */,
-				21E3A20A2B0117520041A561 /* TableViewCells */,
+				21E3A20A2B0117520041A561 /* TableView */,
+				21E3A20B2B01176B0041A561 /* CollectionView */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -560,8 +560,8 @@
 			isa = PBXGroup;
 			children = (
 				2186DB102A30DF4700773C5E /* UIMindMap.swift */,
-				210F19AF2A42DC9800D71A66 /* UIStroke.swift */,
 				210F19AD2A42DBE100D71A66 /* UINodeView.swift */,
+				210F19AF2A42DC9800D71A66 /* UIStroke.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
