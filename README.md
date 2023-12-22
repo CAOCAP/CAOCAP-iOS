@@ -1,4 +1,8 @@
+CAOCAP is an iOS app that ranked in the top 10 Developer tools on the AppStore &  has more than 7.5K users
 
+- Build simple HTML5 webpages using MindMaps
+- visually organize your HTML elements structure
+- You can also use TailwindCSS's utility classes to style your elements
 
 # ■ CAOCAP - MindMap Your HTML5
 
@@ -15,3 +19,9 @@ Using CAOCAP, you can build anything from a simple landing page to a full-fledge
 
 # ■ Get Started Today
 Start building beautiful and responsive web apps with CAOCAP today!
+
+
+
+CAOCAP gained significant attention as a tool for learning HTML by using mind maps
+
+But if we analyse the AppStore reviews, criticisms reveals key areas for improvement to enhance user satisfaction and overall functionality.
