@@ -150,18 +150,19 @@ class MindMapVC: UIViewController, Storyboarded {
         }
     }
     
-    
+    var keyboardSwipeIndex = 1
     @objc func handleKeyboardSwipe(sender: UISwipeGestureRecognizer) {
+        let keyboardViews = [jsView, htmlView, attributesView]
         if sender.state == .ended {
             switch sender.direction {
-            case .right, .left:
-                if !htmlView.isHidden {
-                    htmlView.isHidden = true
-                    attributesView.isHidden = false
-                } else {
-                    attributesView.isHidden = true
-                    htmlView.isHidden = false
-                }
+            case .right:
+                if keyboardSwipeIndex > 0 { keyboardSwipeIndex -= 1 } else { keyboardSwipeIndex = 2 }
+                keyboardViews.forEach { $0?.isHidden = true }
+                keyboardViews[keyboardSwipeIndex]?.isHidden = false
+            case .left:
+                if keyboardSwipeIndex < 2 { keyboardSwipeIndex += 1 } else { keyboardSwipeIndex = 0 }
+                keyboardViews.forEach { $0?.isHidden = true }
+                keyboardViews[keyboardSwipeIndex]?.isHidden = false
             case .up:
                 if toolsViewHeightConstraint.constant == 40 {
                     //only show 6,7 { h=107 }
