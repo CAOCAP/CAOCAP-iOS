@@ -150,7 +150,7 @@ class MindMapVC: UIViewController, Storyboarded {
         }
     }
     
-    var keyboardSwipeIndex = 1
+    var keyboardSwipeIndex = 0
     @objc func handleKeyboardSwipe(sender: UISwipeGestureRecognizer) {
         let keyboardViews = [jsView, htmlView, attributesView]
         if sender.state == .ended {
