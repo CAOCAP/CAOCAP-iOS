@@ -16,20 +16,8 @@ protocol UIMindMapDelegate {
 class UIMindMap: UIScrollView, UIScrollViewDelegate {
     
     var project: Project?
-    
     var nodeTree = [String: UINodeView]()
-    
     var mindMapDelegate: UIMindMapDelegate?
-    var canvasHeightConstraint = NSLayoutConstraint()
-    var canvasWidthConstraint = NSLayoutConstraint()
-    
-    let canvas: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.cornerRadius = 10
-        view.backgroundColor = UIColor(patternImage: UIImage(named: "dot")!)
-        return view
-    }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,7 +26,29 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         minimumZoomScale = 0.3
         maximumZoomScale = 3.0
         zoomScale = 0.5
+        setupCanvas()
+        contentInset = UIEdgeInsets(top: 200, left: 100, bottom: 200 , right: 100)
+        contentOffset = CGPoint(x: -50, y: -150)
+        layoutIfNeeded()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    let canvas: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 10
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "dot")!)
+        return view
+    }() /*🤔 Canvas should be its own class*/
+    var canvasHeightConstraint = NSLayoutConstraint()
+    var canvasWidthConstraint = NSLayoutConstraint()
+    func setupCanvas() {
         addSubview(canvas)
+        canvas.addGestureRecognizer(doubleTapZoom)
+        canvas.isUserInteractionEnabled = true
         canvasHeightConstraint = canvas.heightAnchor.constraint(equalToConstant: frame.height + 200) //TODO: use SnapKit
         canvasWidthConstraint = canvas.widthAnchor.constraint(equalToConstant: frame.width + 200 ) //TODO: use SnapKit
         canvasHeightConstraint.isActive = true
@@ -46,67 +56,14 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         canvas.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-        contentInset = UIEdgeInsets(top: 200, left: 100, bottom: 200 , right: 100)
-        contentOffset = CGPoint(x: -50, y: -150)
-        layoutIfNeeded()
-        canvas.addGestureRecognizer(doubleTapZoom)
-        canvas.isUserInteractionEnabled = true
     }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    func expandCanvas(width: CGFloat, height: CGFloat) {
+        canvasWidthConstraint.constant += width
+        canvasHeightConstraint.constant += height
     }
-    
-    
-    func loadBody() {
-        print("\(#function)ing...")
-        guard let body = project?.document?.body() else { return }
+    func clearCanvas() {
+        // this clears the canvas befor updating it with the new content
         canvas.subviews.forEach({ $0.removeFromSuperview() })
-        draw(body)
-        if !body.children().isEmpty() { load(children: body.children()) }
-    }
-    
-    func load(children: Elements) {
-        print("\(#function)ing...")
-        children.forEach { child in
-            draw(child)
-            if !child.children().isEmpty() { load(children: child.children()) }
-        }
-        
-    }
-    
-    func add(tag: String) {
-        print("\(#function)ing...")
-        ReduxStore.dispatch(WillEditAction())
-        guard let body = project?.document?.body(),
-              let selectedID = project?.selectedElementID
-        else { return }
-        
-        let newElement = Element(Tag(tag), "")
-        do {
-            try newElement.attr("id", UUID().uuidString)
-            let selectedNode = try body.getElementById(selectedID)
-            try selectedNode?.appendChild(newElement)
-        } catch Exception.Error(let type, let message) {
-            print(type, message)
-        } catch {
-            print("error")
-        }
-        select(newElement.id())/*🤔*/
-    }
-    
-    func delete(_ element: Element) {
-        print("\(#function)ing...")
-        ReduxStore.dispatch(WillEditAction())
-        guard let parent = element.parent() else { return }
-        do {
-            try parent.removeChild(element)
-        } catch Exception.Error(let type, let message) {
-            print(type, message)
-        } catch {
-            print("error")
-        }
-        select(parent.id())/*🤔*/
     }
     
     func draw(_ element: Element) {
@@ -115,9 +72,7 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         nodeTree[element.id()] = nodeView
         nodeView.delegate = self
         canvas.addSubview(nodeView)
-        
-        canvasWidthConstraint.constant += 30/*🤔*/
-        canvasHeightConstraint.constant += 30/*🤔*/
+        expandCanvas(width: 30, height: 30)/*🤔*/
         
         if element.tagName() == "body" {
             nodeView.centerXAnchor.constraint(equalTo: canvas.centerXAnchor).isActive = true  //TODO: use SnapKit
@@ -167,6 +122,56 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
             nodeStroke.centerXAnchor.constraint(equalTo: nodeView.centerXAnchor).isActive = true  //TODO: use SnapKit
             nodeStroke.topAnchor.constraint(equalTo: nodeView.bottomAnchor).isActive = true  //TODO: use SnapKit
         }
+    }
+    
+    func loadBody() {
+        print("\(#function)ing...")
+        guard let body = project?.document?.body() else { return }
+        clearCanvas()
+        draw(body)
+        if !body.children().isEmpty() { load(children: body.children()) }
+    }
+    
+    func load(children: Elements) {
+        print("\(#function)ing...")
+        children.forEach { child in
+            draw(child)
+            if !child.children().isEmpty() { load(children: child.children()) }
+        }
+    }
+    
+    func add(tag: String) {
+        print("\(#function)ing...")
+        ReduxStore.dispatch(WillEditAction())
+        guard let body = project?.document?.body(),
+              let selectedID = project?.selectedElementID
+        else { return }
+        
+        let newElement = Element(Tag(tag), "")
+        do {
+            try newElement.attr("id", UUID().uuidString)
+            let selectedNode = try body.getElementById(selectedID)
+            try selectedNode?.appendChild(newElement)
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
+        select(newElement.id())/*🤔*/
+    }
+    
+    func delete(_ element: Element) {
+        print("\(#function)ing...")
+        ReduxStore.dispatch(WillEditAction())
+        guard let parent = element.parent() else { return }
+        do {
+            try parent.removeChild(element)
+        } catch Exception.Error(let type, let message) {
+            print(type, message)
+        } catch {
+            print("error")
+        }
+        select(parent.id())/*🤔*/
     }
     
     func select(_ elementID: String) {
