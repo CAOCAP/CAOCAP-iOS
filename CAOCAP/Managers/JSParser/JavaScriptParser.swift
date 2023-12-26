@@ -45,25 +45,14 @@ final class JavaScriptParser {
         
         // Generate JavaScript code using acorn-walk
         let generateCodeFunction = """
-            let generatedCode = '';
-                
-                walk.simple(\(ast), {
-                    Program(node) {
-                        generatedCode += walk.base[node.type](node) + ';';
-                    },
-                    VariableDeclaration(node) {
-                        generatedCode += 'let ' + walk.base[node.type](node) + ';';
-                    },
-                    VariableDeclarator(node) {
-                        generatedCode += walk.base[node.type](node);
-                    },
+            let generatedCode = 'abc';
+                acorn.walk.simple(acorn.parse("let x = 10"), {
                     Literal(node) {
-                        generatedCode += walk.base[node.type](node);
-                    },
-                    // Add cases for other node types as needed
+                        generatedCode = node.value
+                        console.log(`Found a literal: ${node.value}`)
+                    }
                 });
-                
-            generatedCode;
+                generatedCode;
         """
 
         
