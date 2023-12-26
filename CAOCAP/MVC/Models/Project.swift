@@ -26,7 +26,7 @@ class Project {
     
     init() {
         do {
-            selectedElementID = AppConstants.bodyID
+            selectedElementID = AppConstants.bodyID/*🟨JS*/
             document = try SwiftSoup.parse(AppConstants.html)
         } catch Exception.Error(let type, let message) {
             print(type, message)
@@ -138,7 +138,7 @@ class Project {
         }
     }
     
-    func getSelectedElement() -> Element? {
+    func getSelectedElement() -> Element? {/*🟨JS*/
         if let selectedElementID = selectedElementID {
             do {
                 return try document?.body()?.getElementById(selectedElementID)
@@ -278,7 +278,6 @@ class Project {
             print("error")
         }
     }
-    
     
     func isSelectedElementHidden() -> Bool {
          return getSelectedElement()?.hasAttr("hidden") ?? false

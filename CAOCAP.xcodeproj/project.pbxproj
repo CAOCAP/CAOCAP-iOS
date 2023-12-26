@@ -102,6 +102,8 @@
 		21E148112A7F62C900B503C2 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 21E148102A7F62C900B503C2 /* FirebaseDatabase */; };
 		21E148132A7F639400B503C2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E148122A7F639400B503C2 /* User.swift */; };
 		21E148152A82031D00B503C2 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E148142A82031D00B503C2 /* Challenge.swift */; };
+		21F178492B3AC5C3007C14E5 /* JavaScriptParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F178482B3AC5C3007C14E5 /* JavaScriptParser.swift */; };
+		21F1784C2B3ACF64007C14E5 /* acorn.js in Resources */ = {isa = PBXBuildFile; fileRef = 21F1784B2B3ACF64007C14E5 /* acorn.js */; };
 		21FF62032AB263AB0003D064 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FF62022AB263AB0003D064 /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
@@ -192,6 +194,8 @@
 		21E1480C2A7F5F2000B503C2 /* FirebaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRepository.swift; sourceTree = "<group>"; };
 		21E148122A7F639400B503C2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		21E148142A82031D00B503C2 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
+		21F178482B3AC5C3007C14E5 /* JavaScriptParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptParser.swift; sourceTree = "<group>"; };
+		21F1784B2B3ACF64007C14E5 /* acorn.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = acorn.js; sourceTree = "<group>"; };
 		21FF62022AB263AB0003D064 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -358,6 +362,7 @@
 				21DBA0022A39E18C00DFAC66 /* StoreKitManager.swift */,
 				2175FBE12A648D0700F7E97F /* LottieManager.swift */,
 				2106C41C2A5F949400446620 /* HTMLParser.swift */,
+				21F1784A2B3ACF18007C14E5 /* JSParser */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -576,6 +581,15 @@
 			path = SwiftUI;
 			sourceTree = "<group>";
 		};
+		21F1784A2B3ACF18007C14E5 /* JSParser */ = {
+			isa = PBXGroup;
+			children = (
+				21F1784B2B3ACF64007C14E5 /* acorn.js */,
+				21F178482B3AC5C3007C14E5 /* JavaScriptParser.swift */,
+			);
+			path = JSParser;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -673,6 +687,7 @@
 				21C21C642A38DFAD00F40BE3 /* Ubuntu-Regular.ttf in Resources */,
 				218DA9D02A2B205800459C61 /* Main.storyboard in Resources */,
 				2175FBE02A648C9100F7E97F /* confetti.json in Resources */,
+				21F1784C2B3ACF64007C14E5 /* acorn.js in Resources */,
 				2106C4152A5C95C300446620 /* Theme.xcassets in Resources */,
 				21C21C662A38DFAD00F40BE3 /* Ubuntu-MediumItalic.ttf in Resources */,
 				21534D8D2A59924F00E8078B /* GoogleService-Info.plist in Resources */,
@@ -742,6 +757,7 @@
 				2178C1A42A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift in Sources */,
 				2178C1A22A4DA2AB00876BB6 /* SettingsTableViewCell.swift in Sources */,
 				214995282A5C342D008B9987 /* ReduxState.swift in Sources */,
+				21F178492B3AC5C3007C14E5 /* JavaScriptParser.swift in Sources */,
 				21AF3CBE2A6B2188002E96E3 /* HelpVC.swift in Sources */,
 				21E1480D2A7F5F2000B503C2 /* FirebaseRepository.swift in Sources */,
 				21AF3CD22A6B714A002E96E3 /* ProjectVideosVC.swift in Sources */,

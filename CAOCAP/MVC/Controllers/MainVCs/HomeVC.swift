@@ -23,6 +23,7 @@ class HomeVC: UIViewController, Storyboarded {
         super.viewDidLoad()
         appVersion.text = getVersion()
         setupStackView()
+        JavaScriptParser.shared.evaluateJS(with: "let x = 5;")
     }
     
     func setupStackView() {
