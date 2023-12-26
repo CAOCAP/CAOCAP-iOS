@@ -49,8 +49,8 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         addSubview(canvas)
         canvas.addGestureRecognizer(doubleTapZoom)
         canvas.isUserInteractionEnabled = true
-        canvasHeightConstraint = canvas.heightAnchor.constraint(equalToConstant: frame.height + 200) //TODO: use SnapKit
-        canvasWidthConstraint = canvas.widthAnchor.constraint(equalToConstant: frame.width + 200 ) //TODO: use SnapKit
+        canvasHeightConstraint = canvas.heightAnchor.constraint(equalToConstant: frame.height + 200)
+        canvasWidthConstraint = canvas.widthAnchor.constraint(equalToConstant: frame.width + 200 )
         canvasHeightConstraint.isActive = true
         canvasWidthConstraint.isActive = true
         canvas.snp.makeConstraints { make in
@@ -80,7 +80,7 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     
     func setCanvasPosition(for nodeView: UINodeView) {
         let element = nodeView.element
-        if element.tagName() == "body" {
+        if element.tagName() == "body" { /*🟨JS: this should be updated to start from a launch event*/
             nodeView.snp.makeConstraints { $0.center.equalToSuperview() }
         } else {
             guard let parent = element.parent(), let parentView = nodeTree[parent.id()] else { return }
@@ -134,7 +134,7 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         }
     }
     
-    func loadBody() {
+    func loadBody() { /*🟨JS: mindmap should start with an node to be Event-driven programming */
         print("\(#function)ing...")
         guard let body = project?.document?.body() else { return }
         clearCanvas()
@@ -150,7 +150,7 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         }
     }
     
-    func add(tag: String) {
+    func add(tag: String) { /*🟨JS*/
         print("\(#function)ing...")
         ReduxStore.dispatch(WillEditAction())
         guard let body = project?.document?.body(),
@@ -186,11 +186,9 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
     
     func select(_ elementID: String) {
         guard let previouslySelectedID = project?.selectedElementID else { return }
-        
         print("Previously Selected Node ID: \(previouslySelectedID)")
         ReduxStore.dispatch(UpdateSelectedElementAction(selectedID: elementID))
         print("Current Selected Node ID: \(elementID)")
-
         if let selectedNodeView = nodeTree[elementID] {
             selectedNodeView.layer.borderWidth = 2
         }
@@ -199,7 +197,7 @@ class UIMindMap: UIScrollView, UIScrollViewDelegate {
         }
     }
     
-    func updateSelectedNode(_ direction: Direction?) {
+    func updateSelectedNode(_ direction: Direction?) { /*🟨JS*/
         guard let direction = direction,
               let body = project?.document?.body(),
               let selectedID = project?.selectedElementID
