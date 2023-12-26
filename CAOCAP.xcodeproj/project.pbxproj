@@ -104,6 +104,7 @@
 		21E148152A82031D00B503C2 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E148142A82031D00B503C2 /* Challenge.swift */; };
 		21F178492B3AC5C3007C14E5 /* JavaScriptParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F178482B3AC5C3007C14E5 /* JavaScriptParser.swift */; };
 		21F1784C2B3ACF64007C14E5 /* acorn.js in Resources */ = {isa = PBXBuildFile; fileRef = 21F1784B2B3ACF64007C14E5 /* acorn.js */; };
+		21F1784E2B3B0455007C14E5 /* walk.js in Resources */ = {isa = PBXBuildFile; fileRef = 21F1784D2B3B0455007C14E5 /* walk.js */; };
 		21FF62032AB263AB0003D064 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FF62022AB263AB0003D064 /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
@@ -196,6 +197,7 @@
 		21E148142A82031D00B503C2 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		21F178482B3AC5C3007C14E5 /* JavaScriptParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptParser.swift; sourceTree = "<group>"; };
 		21F1784B2B3ACF64007C14E5 /* acorn.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = acorn.js; sourceTree = "<group>"; };
+		21F1784D2B3B0455007C14E5 /* walk.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = walk.js; sourceTree = "<group>"; };
 		21FF62022AB263AB0003D064 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -585,6 +587,7 @@
 			isa = PBXGroup;
 			children = (
 				21F1784B2B3ACF64007C14E5 /* acorn.js */,
+				21F1784D2B3B0455007C14E5 /* walk.js */,
 				21F178482B3AC5C3007C14E5 /* JavaScriptParser.swift */,
 			);
 			path = JSParser;
@@ -685,6 +688,7 @@
 				21C21C632A38DFAD00F40BE3 /* Ubuntu-LightItalic.ttf in Resources */,
 				21C21C672A38DFAD00F40BE3 /* Ubuntu-BoldItalic.ttf in Resources */,
 				21C21C642A38DFAD00F40BE3 /* Ubuntu-Regular.ttf in Resources */,
+				21F1784E2B3B0455007C14E5 /* walk.js in Resources */,
 				218DA9D02A2B205800459C61 /* Main.storyboard in Resources */,
 				2175FBE02A648C9100F7E97F /* confetti.json in Resources */,
 				21F1784C2B3ACF64007C14E5 /* acorn.js in Resources */,

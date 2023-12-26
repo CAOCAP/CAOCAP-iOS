@@ -12,15 +12,19 @@ final class JavaScriptParser {
     static let shared = JavaScriptParser()
     let context = JSContext()
     
-    func evaluateJS(with code: String) {/*🟨JS 🤯 this is working!*/
-        // Evaluate JavaScript code that generates the AST
-        
-        // Load Acorn's JavaScript source code
-        if let acornPath = Bundle.main.path(forResource: "acorn", ofType: "js") {
-            if let acornScript = try? String(contentsOfFile: acornPath) {
+    init() {
+        // Load Acorn+walk's JavaScript source code
+        if let acornPath = Bundle.main.path(forResource: "acorn", ofType: "js"),
+            let walkPath = Bundle.main.path(forResource: "walk", ofType: "js") {
+            if let acornScript = try? String(contentsOfFile: acornPath),
+                let walkScript = try? String(contentsOfFile: walkPath) {
                 context?.evaluateScript(acornScript)
+                context?.evaluateScript(walkScript)
             }
         }
+    }
+    
+    func parseJS(code: String) -> [String: Any]? {/*🟨JS 🤯 this is working!*/
         
         // JavaScript code to generate the AST
         let stringifyJS = "JSON.stringify(acorn.parse('\(code)'))"
@@ -31,9 +35,44 @@ final class JavaScriptParser {
         if let astData = astString?.toString().data(using: .utf8),
            let json = try? JSONSerialization.jsonObject(with: astData, options: []) {
             if let astDictionary = json as? [String: Any] {
-                print("AST: \(astDictionary)")
+                return astDictionary
             }
         }
+        return nil
+    }
+    
+    func generateJSCode(from ast: [String: Any]) -> String? {/*🟨JS this is not❗️ working!*/
+        
+        // Generate JavaScript code using acorn-walk
+        let generateCodeFunction = """
+            let generatedCode = '';
+                
+                walk.simple(\(ast), {
+                    Program(node) {
+                        generatedCode += walk.base[node.type](node) + ';';
+                    },
+                    VariableDeclaration(node) {
+                        generatedCode += 'let ' + walk.base[node.type](node) + ';';
+                    },
+                    VariableDeclarator(node) {
+                        generatedCode += walk.base[node.type](node);
+                    },
+                    Literal(node) {
+                        generatedCode += walk.base[node.type](node);
+                    },
+                    // Add cases for other node types as needed
+                });
+                
+            generatedCode;
+        """
+
+        
+        // Evaluating the code generation function within the context
+        if let generatedCode = context?.evaluateScript(generateCodeFunction) {
+            print("Generated JavaScript code: \(generatedCode.toString())")
+            return "good"
+        }
+        return nil
     }
     
 }
