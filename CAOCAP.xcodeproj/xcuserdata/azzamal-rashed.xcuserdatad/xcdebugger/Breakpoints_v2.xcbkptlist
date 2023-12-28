@@ -1697,6 +1697,21 @@
                   endingLineNumber = "35"
                   offsetFromSymbolStart = "452">
                </Location>
+               <Location
+                  uuid = "732776E5-51FA-438E-A40D-C6BF65A0B549 - 3429aceb444bed53"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.reduxReducer(action: ReSwift.Action, state: Swift.Optional&lt;CAOCAP.ReduxState&gt;) -&gt; CAOCAP.ReduxState"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/Redux/ReduxReducer.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "552">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -2105,6 +2120,36 @@
                   endingLineNumber = "30"
                   offsetFromSymbolStart = "228">
                </Location>
+               <Location
+                  uuid = "590EF96B-FFBB-42E4-A705-EDC89AE44D02 - 831fac90afb4dc79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.JavaScriptParser.parseJS(code: Swift.String) -&gt; Swift.Optional&lt;Any&gt;"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/Managers/JSParser/JavaScriptParser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "590EF96B-FFBB-42E4-A705-EDC89AE44D02 - f864995bd6c40bf0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.JavaScriptParser.parseJS(code: Swift.String) -&gt; Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/Managers/JSParser/JavaScriptParser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "144">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -2153,53 +2198,65 @@
                   endingLineNumber = "33"
                   offsetFromSymbolStart = "452">
                </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A930A95A-3C00-430D-813F-43002CC1501B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CAOCAP/Managers/JSParser/JavaScriptParser.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "parseJS(code:)"
-            landmarkType = "7">
-            <Locations>
                <Location
-                  uuid = "A930A95A-3C00-430D-813F-43002CC1501B - c1de5eb1a7d3899d"
+                  uuid = "6866ADE3-3F1C-495D-B2E7-3331D73D98D9 - 831fac90afb4dddc"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "CAOCAP.JavaScriptParser.evaluateJS(with: Swift.String) -&gt; ()"
+                  symbolName = "CAOCAP.JavaScriptParser.parseJS(code: Swift.String) -&gt; Swift.Optional&lt;Any&gt;"
                   moduleName = "CAOCAP"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/azzamal-rashed/Desktop/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/Managers/JSParser/JavaScriptParser.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "1384">
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "372">
                </Location>
                <Location
-                  uuid = "A930A95A-3C00-430D-813F-43002CC1501B - b8a294ea48743ee3"
+                  uuid = "6866ADE3-3F1C-495D-B2E7-3331D73D98D9 - 831fac90afb4dddc"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "CAOCAP.JavaScriptParser.parseJS(code: Swift.String) -&gt; Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;"
+                  symbolName = "CAOCAP.JavaScriptParser.parseJS(code: Swift.String) -&gt; Swift.Optional&lt;Any&gt;"
                   moduleName = "CAOCAP"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/azzamal-rashed/Desktop/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/Managers/JSParser/JavaScriptParser.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35"
-                  offsetFromSymbolStart = "616">
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "824">
+               </Location>
+               <Location
+                  uuid = "6866ADE3-3F1C-495D-B2E7-3331D73D98D9 - f864995bd6c40a55"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.JavaScriptParser.parseJS(code: Swift.String) -&gt; Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/Managers/JSParser/JavaScriptParser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "372">
+               </Location>
+               <Location
+                  uuid = "6866ADE3-3F1C-495D-B2E7-3331D73D98D9 - f864995bd6c40a55"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.JavaScriptParser.parseJS(code: Swift.String) -&gt; Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/Managers/JSParser/JavaScriptParser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "840">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2208,14 +2265,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E22088B0-795A-40B1-83E8-7679D684A739"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CAOCAP/Managers/JSParser/JavaScriptParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "parseJS(code:)"
             landmarkType = "7">
             <Locations>
@@ -2249,53 +2306,35 @@
                   endingLineNumber = "38"
                   offsetFromSymbolStart = "1640">
                </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FD48A3C6-0CC2-492D-BB31-B382009FD763"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CAOCAP/Managers/JSParser/JavaScriptParser.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "parseJS(code:)"
-            landmarkType = "7">
-            <Locations>
                <Location
-                  uuid = "FD48A3C6-0CC2-492D-BB31-B382009FD763 - c1de5eb1a7d389bc"
+                  uuid = "E22088B0-795A-40B1-83E8-7679D684A739 - 831fac90afb4ddfd"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "CAOCAP.JavaScriptParser.evaluateJS(with: Swift.String) -&gt; ()"
+                  symbolName = "CAOCAP.JavaScriptParser.parseJS(code: Swift.String) -&gt; Swift.Optional&lt;Any&gt;"
                   moduleName = "CAOCAP"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/azzamal-rashed/Desktop/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/Managers/JSParser/JavaScriptParser.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "1940">
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "836">
                </Location>
                <Location
-                  uuid = "FD48A3C6-0CC2-492D-BB31-B382009FD763 - b8a294ea48743e02"
+                  uuid = "E22088B0-795A-40B1-83E8-7679D684A739 - f864995bd6c40a74"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "CAOCAP.JavaScriptParser.parseJS(code: Swift.String) -&gt; Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;"
+                  symbolName = "CAOCAP.JavaScriptParser.parseJS(code: Swift.String) -&gt; Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;"
                   moduleName = "CAOCAP"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/azzamal-rashed/Desktop/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/Managers/JSParser/JavaScriptParser.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
-                  offsetFromSymbolStart = "1172">
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "852">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2310,8 +2349,8 @@
             filePath = "CAOCAP/Managers/JSParser/JavaScriptParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "generateJSCode(from:)"
             landmarkType = "7">
             <Locations>
@@ -2359,6 +2398,36 @@
                   startingLineNumber = "71"
                   endingLineNumber = "71"
                   offsetFromSymbolStart = "316">
+               </Location>
+               <Location
+                  uuid = "5015985F-7B47-445E-93AC-C89B7ABA5F0B - 504eb8604af34694"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.JavaScriptParser.generateJSCode(from: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/Managers/JSParser/JavaScriptParser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "5015985F-7B47-445E-93AC-C89B7ABA5F0B - 504eb8604af34694"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.JavaScriptParser.generateJSCode(from: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/Managers/JSParser/JavaScriptParser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "344">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -2437,8 +2506,8 @@
             filePath = "CAOCAP/Managers/JSParser/JavaScriptParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "generateJSCode(from:)"
             landmarkType = "7">
             <Locations>
@@ -2487,6 +2556,21 @@
                   endingLineNumber = "75"
                   offsetFromSymbolStart = "1120">
                </Location>
+               <Location
+                  uuid = "D267EE67-EE9F-4D27-9DA4-CCE46FF25F54 - 504eb8604af34918"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.JavaScriptParser.generateJSCode(from: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/Managers/JSParser/JavaScriptParser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "956">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -2526,16 +2610,48 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "2767B916-E71D-464E-B78D-60A3FAA65CCC"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CAOCAP/Managers/JSParser/JavaScriptParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "parseJS(code:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2767B916-E71D-464E-B78D-60A3FAA65CCC - 831fac90afb4dd43"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.JavaScriptParser.parseJS(code: Swift.String) -&gt; Swift.Optional&lt;Any&gt;"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/Managers/JSParser/JavaScriptParser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "896">
+               </Location>
+               <Location
+                  uuid = "2767B916-E71D-464E-B78D-60A3FAA65CCC - f864995bd6c40aca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.JavaScriptParser.parseJS(code: Swift.String) -&gt; Swift.Optional&lt;Swift.Dictionary&lt;Swift.AnyHashable, Any&gt;&gt;"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/Managers/JSParser/JavaScriptParser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "908">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2548,8 +2664,8 @@
             filePath = "CAOCAP/Managers/JSParser/JavaScriptParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "generateJSCode(from:)"
             landmarkType = "7">
             <Locations>
@@ -2613,6 +2729,21 @@
                   endingLineNumber = "73"
                   offsetFromSymbolStart = "1040">
                </Location>
+               <Location
+                  uuid = "7D3370D7-4D51-4594-AA1C-CCBBF7D86848 - 504eb8604af34956"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.JavaScriptParser.generateJSCode(from: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/Managers/JSParser/JavaScriptParser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "57"
+                  endingLineNumber = "57"
+                  offsetFromSymbolStart = "876">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -2626,8 +2757,8 @@
             filePath = "CAOCAP/Managers/JSParser/JavaScriptParser.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "generateJSCode(from:)"
             landmarkType = "7">
             <Locations>
@@ -2675,6 +2806,84 @@
                   startingLineNumber = "72"
                   endingLineNumber = "72"
                   offsetFromSymbolStart = "564">
+               </Location>
+               <Location
+                  uuid = "B6F59F39-3A4E-4238-9C4E-028687A5106E - 504eb8604af34975"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAP.JavaScriptParser.generateJSCode(from: Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "CAOCAP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAP/Managers/JSParser/JavaScriptParser.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "400">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6E3D2142-3F6D-432B-B19A-81904AB4DF02"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CAOCAPTests/CAOCAPTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "testParseJS()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6E3D2142-3F6D-432B-B19A-81904AB4DF02 - be5825b9ca0ec2c0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAPTests.CAOCAPTests.testExample() throws -&gt; ()"
+                  moduleName = "CAOCAPTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAPTests/CAOCAPTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "240">
+               </Location>
+               <Location
+                  uuid = "6E3D2142-3F6D-432B-B19A-81904AB4DF02 - be5825b9ca0ec2c0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAPTests.CAOCAPTests.testExample() throws -&gt; ()"
+                  moduleName = "CAOCAPTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAPTests/CAOCAPTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  uuid = "6E3D2142-3F6D-432B-B19A-81904AB4DF02 - be5825b9ca0ec2c0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CAOCAPTests.CAOCAPTests.testExample() throws -&gt; ()"
+                  moduleName = "CAOCAPTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/azzamal-rashed/Desktop/%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%20%D9%83%D9%88%D9%83%D8%A8/CAOCAP/CAOCAPTests/CAOCAPTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "264">
                </Location>
             </Locations>
          </BreakpointContent>

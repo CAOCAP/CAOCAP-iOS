@@ -24,19 +24,14 @@ final class JavaScriptParser {
         }
     }
     
-    func parseJS(code: String) -> [String: Any]? {/*🟨JS 🤯 this is working!*/
+    func parseJS(code: String) -> [AnyHashable : Any]? {/*🟨JS 🤯 this is working!*/
         
         // JavaScript code to generate the AST
-        let stringifyJS = "JSON.stringify(acorn.parse('\(code)'))"
+        let acornParseCode = "acorn.parse('\(code)')"
         
         // Evaluating JavaScript code
-        let astString = context?.evaluateScript(stringifyJS)
-        
-        if let astData = astString?.toString().data(using: .utf8),
-           let json = try? JSONSerialization.jsonObject(with: astData, options: []) {
-            if let astDictionary = json as? [String: Any] {
-                return astDictionary
-            }
+        if let astObject = context?.evaluateScript(acornParseCode).toDictionary() {
+                return astObject
         }
         return nil
     }
