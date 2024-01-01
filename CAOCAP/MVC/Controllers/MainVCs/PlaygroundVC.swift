@@ -52,7 +52,8 @@ class PlaygroundVC: UIViewController, Storyboarded {
     
     @IBOutlet weak var jsView: UIView!
     
-    var mindMap: UIMindMap!
+//    var mindMap: UIMindMap! 🟨JS
+    var flowChart: UIFlowChart!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,7 +63,8 @@ class PlaygroundVC: UIViewController, Storyboarded {
         contentTextField.isFirstResponder
         
         setupToolsViewGestureRecognizer()
-        setupMindMapLayout()
+//        setupMindMapLayout() 🟨JS
+        setupFlowChartLayout()
         setupMenuButtons()
     }
     
@@ -80,11 +82,20 @@ class PlaygroundVC: UIViewController, Storyboarded {
     }
     
     
-    func setupMindMapLayout() {
-        mindMap = UIMindMap(frame: view.frame)
-        mindMap.mindMapDelegate = self
-        view.insertSubview(mindMap, at: 0)
-        mindMap.snp.makeConstraints { make in
+//    func setupMindMapLayout() { 🟨JS
+//        mindMap = UIMindMap(frame: view.frame)
+//        mindMap.mindMapDelegate = self
+//        view.insertSubview(mindMap, at: 0)
+//        mindMap.snp.makeConstraints { make in
+//            make.edges.equalToSuperview()
+//        }
+//    }
+    
+    func setupFlowChartLayout() {
+        flowChart = UIFlowChart(frame: view.frame)
+        flowChart.flowChartDelegate = self
+        view.insertSubview(flowChart, at: 0)
+        flowChart.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }
@@ -232,7 +243,8 @@ class PlaygroundVC: UIViewController, Storyboarded {
     }
     
     @IBAction func didPressArrow(_ sender: UIButton) {
-        mindMap.updateSelectedNode(Direction(rawValue: sender.tag))
+//        mindMap.updateSelectedNode(Direction(rawValue: sender.tag)) 🟨JS
+        flowChart.updateSelectedNode(Direction(rawValue: sender.tag))
     }
     
     @IBAction func didPressAddElement(_ sender: UIButton) {
@@ -248,7 +260,8 @@ class PlaygroundVC: UIViewController, Storyboarded {
             "ul","br","hr",
         ]
         if sender.tag > 0 && sender.tag < htmlTags.count {
-            mindMap.add(tag: htmlTags[sender.tag])
+//            mindMap.add(tag: htmlTags[sender.tag]) 🟨JS
+            flowChart.add(tag: htmlTags[sender.tag])
         }
     }
     
@@ -372,7 +385,13 @@ extension PlaygroundVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
 }
 
 
-extension PlaygroundVC: UIMindMapDelegate {
+//extension PlaygroundVC: UIMindMapDelegate { 🟨JS
+//    func didRemoveNode() {
+//        loadWebView()
+//    }
+//}
+
+extension PlaygroundVC: UIFlowChartDelegate {
     func didRemoveNode() {
         loadWebView()
     }
@@ -426,7 +445,8 @@ extension PlaygroundVC: StoreSubscriber {
     func newState(state: ReduxState) {
         if project == nil {
             project = state.openedProject
-            mindMap.project = project
+//            mindMap.project = project 🟨JS
+            flowChart.project = project
         }
         
         
@@ -444,7 +464,8 @@ extension PlaygroundVC: StoreSubscriber {
 //        }
         
         loadWebView()/*🤔*/
-        mindMap.loadBody()
+//        mindMap.loadBody() 🟨JS
+        flowChart.loadStartEvent()
         
         projectTitle.text = project?.getDocumentTitle()
         

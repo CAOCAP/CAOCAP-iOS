@@ -19,10 +19,10 @@ class UIFlowChart: UICanvas {
     var nodeTree = [String: UINodeView]()
     var flowChartDelegate: UIFlowChartDelegate?
     
-    func draw(_ element: Element) {
-        print("\(#function)ing... \(element.tagName())")
-        let nodeView = UINodeView(element: element)
-        nodeTree[element.id()] = nodeView
+    func draw(_ event: String) { /* TODO: Fix this flowChart function❗️🙃*/
+        print("\(#function)ing... \(event)")
+        let nodeView = UINodeView(element: Element(Tag(event), "")) /*❗️🙃*/
+        nodeTree[event] = nodeView /*❗️🙃*/
         nodeView.delegate = self
         canvas.addSubview(nodeView)
         expandCanvas(width: 30, height: 30)
@@ -32,6 +32,7 @@ class UIFlowChart: UICanvas {
     }
     
     func setNodePosition(_ nodeView: UINodeView) {
+        /* TODO: Fix this flowChart function❗️🙃*/
         // TODO: set Node Position in FlowChart
         nodeView.snp.makeConstraints { $0.center.equalToSuperview() }
     }
@@ -49,23 +50,15 @@ class UIFlowChart: UICanvas {
         }
     }
     
-    func loadBody() { /*🟨JS: FlowChart should start with an "Event" node to be Event-driven programming */
+    func loadStartEvent() { /*🟨JS: FlowChart should start with an "Event" node to be Event-driven programming */
+        /* TODO: Fix this flowChart function❗️🙃*/
         print("\(#function)ing...")
-        guard let body = project?.document?.body() else { return }
         clearCanvas()
-        draw(body)
-        if !body.children().isEmpty() { load(children: body.children()) }
-    }
-    
-    func load(children: Elements) {
-        print("\(#function)ing...")
-        children.forEach { child in
-            draw(child)
-            if !child.children().isEmpty() { load(children: child.children()) }
-        }
+        draw("Start Event")
     }
     
     func add(tag: String) { /*🟨JS*/
+        /* TODO: Fix this flowChart function❗️🙃*/
         print("\(#function)ing...")
         ReduxStore.dispatch(WillEditAction())
         guard let body = project?.document?.body(),
@@ -85,7 +78,7 @@ class UIFlowChart: UICanvas {
         select(newElement.id())/*🤔*/
     }
     
-    func delete(_ element: Element) {
+    func delete(_ element: Element) { /* TODO: Fix this flowChart function❗️🙃*/
         print("\(#function)ing...")
         ReduxStore.dispatch(WillEditAction())
         guard let parent = element.parent() else { return }
@@ -155,7 +148,7 @@ extension UIFlowChart: UINodeViewDelegate {
         select(nodeID)
     }
     
-    func delete(nodeID: String) {
+    func delete(nodeID: String) { /* TODO: Fix this flowChart function❗️🙃*/
         print("\(#function)ing...")
         guard let body = project?.document?.body() else { return }
         do {
