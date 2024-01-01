@@ -1379,25 +1379,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="flH-sb-3DB">
-                                <rect key="frame" x="45" y="218.99999999999997" width="300" height="406.33333333333326"/>
+                                <rect key="frame" x="45" y="220.66666666666666" width="300" height="402.66666666666674"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DNV-ng-ZrQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="78.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="76.666666666666671"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, back user 👋🏼" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1v-jl-QoD">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="21"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User ID" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MkU-Vn-ajJ">
-                                                <rect key="frame" x="0.0" y="31" width="300" height="21"/>
+                                                <rect key="frame" x="0.0" y="30.333333333333343" width="300" height="20.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="〰️ Daily HTML Challenges 〰️" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bi2-bM-LGc">
-                                                <rect key="frame" x="0.0" y="62.000000000000007" width="300" height="16.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="60.666666666666657" width="300" height="16"/>
                                                 <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1439,7 +1439,7 @@
                                         </subviews>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vja-aJ-Ktr">
-                                        <rect key="frame" x="0.0" y="98.333333333333314" width="300" height="125"/>
+                                        <rect key="frame" x="0.0" y="96.666666666666657" width="300" height="125"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jSM-UI-Zbx">
                                                 <rect key="frame" x="0.0" y="35" width="300" height="90"/>
@@ -1604,7 +1604,7 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="TfI-cA-64I">
-                                                                        <rect key="frame" x="20.666666666666671" y="17" width="20" height="17.666666666666671"/>
+                                                                        <rect key="frame" x="20.666666666666671" y="18.666666666666686" width="20" height="15"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="20" id="tUe-v1-gGg"/>
                                                                         </constraints>
@@ -1649,7 +1649,7 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="LCW-nd-H7v">
-                                                                        <rect key="frame" x="20.666666666666657" y="17" width="20" height="17.666666666666671"/>
+                                                                        <rect key="frame" x="20.666666666666657" y="18.666666666666686" width="20" height="15"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="20" id="Ghm-TV-xt7"/>
                                                                         </constraints>
@@ -1694,7 +1694,7 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="hiX-sk-LoV">
-                                                                        <rect key="frame" x="20.666666666666657" y="17" width="20" height="17.666666666666671"/>
+                                                                        <rect key="frame" x="20.666666666666657" y="18.666666666666686" width="20" height="15"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="20" id="e8o-np-yNY"/>
                                                                         </constraints>
@@ -1770,7 +1770,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BIa-0x-zs6">
-                                        <rect key="frame" x="0.0" y="243.33333333333331" width="300" height="130"/>
+                                        <rect key="frame" x="0.0" y="241.66666666666663" width="300" height="130"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="0Yd-XL-GPB">
                                                 <rect key="frame" x="10" y="10" width="280" height="110"/>
@@ -1813,7 +1813,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0.0 (0)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JKa-FB-Hq1">
-                                        <rect key="frame" x="0.0" y="393.33333333333337" width="300" height="13"/>
+                                        <rect key="frame" x="0.0" y="391.66666666666674" width="300" height="11"/>
                                         <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="11"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -2284,17 +2284,17 @@
                                         <rect key="frame" x="10" y="10" width="330" height="239"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="URc-Dv-q52">
-                                                <rect key="frame" x="40.333333333333329" y="0.0" width="249.66666666666669" height="79"/>
+                                                <rect key="frame" x="39.666666666666671" y="0.0" width="250.66666666666663" height="79"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gift.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nAq-9u-soO">
-                                                        <rect key="frame" x="0.0" y="-3.5527136788005009e-15" width="249.66666666666666" height="34.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="-3.5527136788005009e-15" width="250.66666666666666" height="34.333333333333329"/>
                                                         <color key="tintColor" systemColor="systemYellowColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="fXU-Rg-CB1"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Dx-WM-JVg">
-                                                        <rect key="frame" x="0.0" y="40" width="249.66666666666666" height="39"/>
+                                                        <rect key="frame" x="0.0" y="40" width="250.66666666666666" height="39"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="39" id="BLd-g3-Ej1"/>
                                                         </constraints>
@@ -2322,7 +2322,7 @@ for free before purchasing.</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gI2-oI-jgF">
-                                                <rect key="frame" x="19.666666666666657" y="159" width="291" height="35"/>
+                                                <rect key="frame" x="19.333333333333343" y="159" width="291.33333333333326" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="1bD-E6-81r"/>
                                                 </constraints>
@@ -2400,23 +2400,23 @@ There are no other in-app purchases.</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="YWP-YE-S2g">
-                                <rect key="frame" x="40.333333333333343" y="244" width="309.33333333333326" height="133"/>
+                                <rect key="frame" x="34" y="244.66666666666663" width="322.33333333333337" height="132"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try CAOCAP Premium for free" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sby-h7-ijT">
-                                        <rect key="frame" x="0.0" y="0.0" width="309.33333333333331" height="27"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="322.33333333333331" height="26"/>
                                         <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="23"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5xS-rW-R7F">
-                                        <rect key="frame" x="62.333333333333343" y="42" width="185" height="20.333333333333329"/>
+                                        <rect key="frame" x="65" y="41.000000000000028" width="192" height="20.333333333333329"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.seal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="w3a-1e-jut">
                                                 <rect key="frame" x="0.0" y="-0.66666666666666785" width="22.333333333333332" height="21.666666666666664"/>
                                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infinite notes nesting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sds-tb-TwC">
-                                                <rect key="frame" x="27.333333333333329" y="0.0" width="157.66666666666669" height="20.333333333333332"/>
+                                                <rect key="frame" x="27.333333333333329" y="0.0" width="164.66666666666669" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -2424,14 +2424,14 @@ There are no other in-app purchases.</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3Pl-hB-hPM">
-                                        <rect key="frame" x="62.333333333333343" y="77.333333333333314" width="185" height="20.333333333333329"/>
+                                        <rect key="frame" x="65" y="76.333333333333343" width="192" height="20.333333333333329"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.seal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="N4t-Ro-UW8">
                                                 <rect key="frame" x="0.0" y="-0.66666666666666785" width="22.333333333333332" height="21.666666666666664"/>
                                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infinite notes nesting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFF-7m-dOx">
-                                                <rect key="frame" x="27.333333333333329" y="0.0" width="157.66666666666669" height="20.333333333333332"/>
+                                                <rect key="frame" x="27.333333333333329" y="0.0" width="164.66666666666669" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -2439,14 +2439,14 @@ There are no other in-app purchases.</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="y62-Da-IPW">
-                                        <rect key="frame" x="62.333333333333343" y="112.66666666666669" width="185" height="20.333333333333343"/>
+                                        <rect key="frame" x="65" y="111.66666666666666" width="192" height="20.333333333333343"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.seal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xcC-3B-0Bd">
                                                 <rect key="frame" x="0.0" y="-0.66666666666666785" width="22.333333333333332" height="21.666666666666664"/>
                                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infinite notes nesting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ead-7E-h5q">
-                                                <rect key="frame" x="27.333333333333329" y="0.0" width="157.66666666666669" height="20.333333333333332"/>
+                                                <rect key="frame" x="27.333333333333329" y="0.0" width="164.66666666666669" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -2456,16 +2456,16 @@ There are no other in-app purchases.</string>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAOCAP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oc4-se-ig7">
-                                <rect key="frame" x="71.333333333333329" y="147" width="207.66666666666669" height="58.333333333333343"/>
+                                <rect key="frame" x="73.333333333333329" y="147" width="203.66666666666669" height="56.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cHd-7R-8Lz">
-                                <rect key="frame" x="289" y="152" width="60" height="33.666666666666657"/>
+                                <rect key="frame" x="287" y="152" width="60" height="33.666666666666657"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdP-wg-Ru1">
-                                        <rect key="frame" x="10.666666666666686" y="2.333333333333341" width="38.666666666666664" height="29.333333333333329"/>
+                                        <rect key="frame" x="8" y="4.3333333333333428" width="43.666666666666664" height="25"/>
                                         <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -2555,13 +2555,13 @@ There are no other in-app purchases.</string>
                                 <rect key="frame" x="20" y="97" width="350" height="650"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's New?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brD-9X-WWC">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="35"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="33.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qgU-Wg-SHy">
-                                        <rect key="frame" x="0.0" y="55" width="350" height="100"/>
+                                        <rect key="frame" x="0.0" y="53.666666666666657" width="350" height="100"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="target" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="f60-pd-42p">
                                                 <rect key="frame" x="0.0" y="26" width="50" height="48.666666666666671"/>
@@ -2572,7 +2572,7 @@ There are no other in-app purchases.</string>
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="E7q-HG-5bz">
-                                                <rect key="frame" x="60" y="8.6666666666666572" width="290" height="83"/>
+                                                <rect key="frame" x="60" y="9.6666666666666856" width="290" height="81"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MindMap your HTML5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEQ-8H-bhV">
                                                         <rect key="frame" x="0.0" y="0.0" width="290" height="24"/>
@@ -2584,7 +2584,7 @@ There are no other in-app purchases.</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use MindMaps to visually organize your HTML elements structure and build simple HTML5 pages." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gO3-NR-ID5">
-                                                        <rect key="frame" x="0.0" y="27" width="290" height="56"/>
+                                                        <rect key="frame" x="0.0" y="27" width="290" height="54"/>
                                                         <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="16"/>
                                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2597,7 +2597,7 @@ There are no other in-app purchases.</string>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7f5-xg-nPk">
-                                        <rect key="frame" x="0.0" y="175" width="350" height="100"/>
+                                        <rect key="frame" x="0.0" y="173.66666666666669" width="350" height="100"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paintbrush.pointed.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ouq-0i-ca4">
                                                 <rect key="frame" x="0.0" y="25" width="50" height="50"/>
@@ -2608,7 +2608,7 @@ There are no other in-app purchases.</string>
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="d2m-lK-zUp">
-                                                <rect key="frame" x="60" y="0.0" width="290" height="100"/>
+                                                <rect key="frame" x="60" y="0.66666666666662877" width="290" height="99"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TailwindCSS integration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8O-Zk-pDS">
                                                         <rect key="frame" x="0.0" y="0.0" width="290" height="24"/>
@@ -2620,7 +2620,7 @@ There are no other in-app purchases.</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use TailwindCSS's utility classes to quickly style HTML elements, and create custom user interfaces without writing custom CSS." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Me-r8-wrS">
-                                                        <rect key="frame" x="0.0" y="27" width="290" height="73"/>
+                                                        <rect key="frame" x="0.0" y="27" width="290" height="72"/>
                                                         <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="16"/>
                                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2633,7 +2633,7 @@ There are no other in-app purchases.</string>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XNp-SY-Pul">
-                                        <rect key="frame" x="0.0" y="295" width="350" height="100"/>
+                                        <rect key="frame" x="0.0" y="293.66666666666669" width="350" height="100"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart.bar.xaxis" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="f2o-6Y-3TD">
                                                 <rect key="frame" x="0.0" y="26.666666666666664" width="50" height="46.999999999999993"/>
@@ -2644,7 +2644,7 @@ There are no other in-app purchases.</string>
                                                 </constraints>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="hEA-Du-ZsV">
-                                                <rect key="frame" x="60" y="8.6666666666666856" width="290" height="83"/>
+                                                <rect key="frame" x="60" y="9.6666666666666288" width="290" height="81"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Improved performance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8N-lC-12p">
                                                         <rect key="frame" x="0.0" y="0.0" width="290" height="24"/>
@@ -2656,7 +2656,7 @@ There are no other in-app purchases.</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 5.0.0 includes various performance improvements and bug fixes to enhance the user experience." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfV-zZ-jS0">
-                                                        <rect key="frame" x="0.0" y="27" width="290" height="56"/>
+                                                        <rect key="frame" x="0.0" y="27" width="290" height="54"/>
                                                         <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="16"/>
                                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                                         <nil key="highlightedColor"/>
@@ -2669,7 +2669,7 @@ There are no other in-app purchases.</string>
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1c-OI-869">
-                                        <rect key="frame" x="0.0" y="415" width="350" height="235"/>
+                                        <rect key="frame" x="0.0" y="413.66666666666669" width="350" height="236.33333333333331"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
@@ -2854,7 +2854,7 @@ There are no other in-app purchases.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="User" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PVA-xc-Hdu">
-                                                <rect key="frame" x="50.333333333333314" y="0.0" width="279.99999999999994" height="44.666666666666664"/>
+                                                <rect key="frame" x="50.333333333333314" y="0.0" width="280" height="44.666666666666664"/>
                                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="35"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="nickname"/>
@@ -3280,14 +3280,25 @@ There are no other in-app purchases.</string>
                                     <outlet property="delegate" destination="5BW-Ht-bvw" id="Frb-oF-VKA"/>
                                 </connections>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IUM-RU-K5F">
+                                <rect key="frame" x="20" y="739" width="350" height="32"/>
+                                <segments>
+                                    <segment title="Views"/>
+                                    <segment title="Controllers"/>
+                                    <segment title="Styles"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zit-VH-2F1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zit-VH-2F1" firstAttribute="bottom" secondItem="IUM-RU-K5F" secondAttribute="bottom" constant="40" id="7YO-ZP-SsX"/>
                             <constraint firstItem="ySQ-GG-gTL" firstAttribute="leading" secondItem="Vdk-zr-pP0" secondAttribute="leading" id="Ese-hz-NLZ"/>
+                            <constraint firstItem="IUM-RU-K5F" firstAttribute="leading" secondItem="zit-VH-2F1" secondAttribute="leading" constant="20" id="L1K-Mq-LoM"/>
                             <constraint firstItem="ySQ-GG-gTL" firstAttribute="top" secondItem="Vdk-zr-pP0" secondAttribute="top" id="bfX-W0-kNH"/>
                             <constraint firstAttribute="trailing" secondItem="ySQ-GG-gTL" secondAttribute="trailing" id="cl4-ZK-aq3"/>
                             <constraint firstAttribute="bottom" secondItem="ySQ-GG-gTL" secondAttribute="bottom" id="u3q-28-B1f"/>
+                            <constraint firstItem="IUM-RU-K5F" firstAttribute="centerX" secondItem="Vdk-zr-pP0" secondAttribute="centerX" id="wTh-uB-siD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="D3r-w4-ems"/>
@@ -3342,16 +3353,16 @@ There are no other in-app purchases.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="qAy-go-ZUH">
-                                <rect key="frame" x="20" y="97" width="350" height="82"/>
+                                <rect key="frame" x="20" y="97" width="350" height="81"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcJ-hI-1q7">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="28"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="27"/>
                                         <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="project title" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="I2x-HE-EGB">
-                                        <rect key="frame" x="0.0" y="42" width="350" height="40"/>
+                                        <rect key="frame" x="0.0" y="41" width="350" height="40"/>
                                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="SxE-pU-xXT"/>
@@ -3397,7 +3408,7 @@ There are no other in-app purchases.</string>
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="kg1-HM-vwv">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1027.3333333333333"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="1003.6666666666666"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HIU-v5-upj">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="292.66666666666669"/>
@@ -3434,7 +3445,7 @@ There are no other in-app purchases.</string>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFP-j9-YW2">
-                                                <rect key="frame" x="20" y="342.66666666666669" width="350" height="594.33333333333326"/>
+                                                <rect key="frame" x="20" y="342.66666666666674" width="350" height="572"/>
                                                 <string key="text">CAOCAP - MindMap Your HTML5
 
 CAOCAP is a powerful tool that helps you build simple and beautiful web apps using MindMaps. With CAOCAP, you can visually organize your HTML elements structure and create responsive and professional-looking web pages in no time.
@@ -3455,16 +3466,16 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xUb-hq-bgu">
-                                                <rect key="frame" x="111.33333333333333" y="987" width="167.66666666666669" height="40.333333333333258"/>
+                                                <rect key="frame" x="117.66666666666669" y="964.66666666666663" width="155" height="39"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ficruty" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVG-hr-EHN">
-                                                        <rect key="frame" x="61.000000000000014" y="0.0" width="45.666666666666671" height="17.666666666666668"/>
+                                                        <rect key="frame" x="55.666666666666671" y="0.0" width="43.666666666666671" height="17"/>
                                                         <fontDescription key="fontDescription" name="Ubuntu-LightItalic" family="Ubuntu" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Azzam Rashed Alrashed " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58h-sJ-DaY">
-                                                        <rect key="frame" x="0.0" y="22.666666666666629" width="167.66666666666666" height="17.666666666666671"/>
+                                                        <rect key="frame" x="0.0" y="22" width="155" height="17"/>
                                                         <fontDescription key="fontDescription" name="Ubuntu-LightItalic" family="Ubuntu" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>

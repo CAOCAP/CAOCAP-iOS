@@ -20,13 +20,13 @@ class ProjectFilesVC: UIViewController, Storyboarded {
 
 extension ProjectFilesVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         var configuration = cell.defaultContentConfiguration()
-        configuration.text = "file \(indexPath.row)"
+        configuration.text = "MainScreen"
         cell.contentConfiguration = configuration
         return cell
     }
