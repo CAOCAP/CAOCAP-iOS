@@ -1,5 +1,5 @@
 //
-//  ProjectsVC.swift
+//  ProjectsListVC.swift
 //  CAOCAP
 //
 //  Created by Azzam AL-Rashed on 10/06/2023.
@@ -13,7 +13,7 @@ class ProjectCell: UITableViewCell {
     @IBOutlet weak var lastUpdated: UILabel!
 }
 
-class ProjectsVC: UIViewController, Storyboarded {
+class ProjectsListVC: UIViewController, Storyboarded {
     var coordinator: MainCoordinator?
 
     @IBOutlet weak var tableView: UITableView!
@@ -25,7 +25,7 @@ class ProjectsVC: UIViewController, Storyboarded {
     }
 }
 
-extension ProjectsVC: UITableViewDelegate, UITableViewDataSource {
+extension ProjectsListVC: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 10

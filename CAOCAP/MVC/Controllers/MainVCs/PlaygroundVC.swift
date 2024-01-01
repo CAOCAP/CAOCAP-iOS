@@ -1,5 +1,5 @@
 //
-//  MindMapVC.swift
+//  PlaygroundVC.swift
 //  CAOCAP
 //
 //  Created by Azzam AL-Rashed on 03/06/2023.
@@ -11,7 +11,7 @@ import ReSwift
 import SnapKit
 import SwiftSoup
 
-class MindMapVC: UIViewController, Storyboarded {
+class PlaygroundVC: UIViewController, Storyboarded {
     
     var project: Project?
     var completeChallenges: [String]?
@@ -320,7 +320,7 @@ class MindMapVC: UIViewController, Storyboarded {
     
 }
 
-extension MindMapVC: UIColorPickerViewControllerDelegate {
+extension PlaygroundVC: UIColorPickerViewControllerDelegate {
     func colorPickerViewController(_ viewController: UIColorPickerViewController, didSelect color: UIColor, continuously: Bool) {
         guard !continuously else { return }
         guard let project = project else { return }
@@ -342,7 +342,7 @@ extension MindMapVC: UIColorPickerViewControllerDelegate {
     }
 }
 
-extension MindMapVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension PlaygroundVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return tailwindClassNames.count
@@ -372,13 +372,13 @@ extension MindMapVC: UICollectionViewDelegate, UICollectionViewDataSource, UICol
 }
 
 
-extension MindMapVC: UIMindMapDelegate {
+extension PlaygroundVC: UIMindMapDelegate {
     func didRemoveNode() {
         loadWebView()
     }
 }
 
-extension MindMapVC: UITextFieldDelegate {
+extension PlaygroundVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
     }
@@ -414,7 +414,7 @@ extension MindMapVC: UITextFieldDelegate {
     
 }
 
-extension MindMapVC: StoreSubscriber {
+extension PlaygroundVC: StoreSubscriber {
     override func viewWillAppear(_ animated: Bool) {
         ReduxStore.subscribe(self)
     }

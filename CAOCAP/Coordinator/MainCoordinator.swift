@@ -21,7 +21,7 @@ final class MainCoordinator: Coordinator {
         
         let homeVC = HomeVC.instantiate()
         let chartsVC = ChartsVC.instantiate()
-        let projectsVC = ProjectsVC.instantiate()
+        let projectsVC = ProjectsListVC.instantiate()
         let mainSettingsVC = MainSettingsVC.instantiate()
         
         homeVC.coordinator = self
@@ -38,7 +38,7 @@ final class MainCoordinator: Coordinator {
     
     func createNewProject() {
         ReduxStore.dispatch(CreateProjectAction(newProject: Project()))
-        let vc = MindMapVC.instantiate()
+        let vc = PlaygroundVC.instantiate()
         navigationController.present(vc, animated: true)
     }
     

@@ -17,6 +17,7 @@
 		21326ED02A530CAE00255570 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21326ECF2A530CAE00255570 /* UserDefaults.swift */; };
 		2133D70F2B3B628800A854F6 /* CAOCAPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2133D70E2B3B628800A854F6 /* CAOCAPTests.swift */; };
 		2133D7182B42EC1300A854F6 /* UICanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2133D7172B42EC1300A854F6 /* UICanvas.swift */; };
+		2133D71A2B42F05600A854F6 /* UIFlowChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2133D7192B42F05600A854F6 /* UIFlowChart.swift */; };
 		213DF5E02A5883D300679BB2 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 213DF5DF2A5883D300679BB2 /* SwiftSoup */; };
 		213DF5E32A5886B300679BB2 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 213DF5E22A5886B300679BB2 /* ReSwift */; };
 		213DF5E62A58A92F00679BB2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 213DF5E52A58A92F00679BB2 /* Lottie */; };
@@ -50,7 +51,7 @@
 		2186DB112A30DF4700773C5E /* UIMindMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2186DB102A30DF4700773C5E /* UIMindMap.swift */; };
 		218DA9C92A2B205800459C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218DA9C82A2B205800459C61 /* AppDelegate.swift */; };
 		218DA9CB2A2B205800459C61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218DA9CA2A2B205800459C61 /* SceneDelegate.swift */; };
-		218DA9CD2A2B205800459C61 /* MindMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218DA9CC2A2B205800459C61 /* MindMapVC.swift */; };
+		218DA9CD2A2B205800459C61 /* PlaygroundVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218DA9CC2A2B205800459C61 /* PlaygroundVC.swift */; };
 		218DA9D02A2B205800459C61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218DA9CE2A2B205800459C61 /* Main.storyboard */; };
 		218DA9D22A2B205900459C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 218DA9D12A2B205900459C61 /* Assets.xcassets */; };
 		218DA9D52A2B205900459C61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218DA9D32A2B205900459C61 /* LaunchScreen.storyboard */; };
@@ -80,7 +81,7 @@
 		21AF3CD02A6B7139002E96E3 /* ProjectImagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CCF2A6B7139002E96E3 /* ProjectImagesVC.swift */; };
 		21AF3CD22A6B714A002E96E3 /* ProjectVideosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CD12A6B714A002E96E3 /* ProjectVideosVC.swift */; };
 		21AF3CD52A6BE315002E96E3 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CD42A6BE315002E96E3 /* String+Extensions.swift */; };
-		21C21C492A34B5D800F40BE3 /* ProjectsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C21C482A34B5D800F40BE3 /* ProjectsVC.swift */; };
+		21C21C492A34B5D800F40BE3 /* ProjectsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C21C482A34B5D800F40BE3 /* ProjectsListVC.swift */; };
 		21C21C4B2A34B60200F40BE3 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C21C4A2A34B60200F40BE3 /* SettingsVC.swift */; };
 		21C21C4D2A34B61900F40BE3 /* PurchaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C21C4C2A34B61900F40BE3 /* PurchaseVC.swift */; };
 		21C21C4F2A34B62E00F40BE3 /* PaletteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C21C4E2A34B62E00F40BE3 /* PaletteVC.swift */; };
@@ -130,6 +131,7 @@
 		2133D70C2B3B628800A854F6 /* CAOCAPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CAOCAPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2133D70E2B3B628800A854F6 /* CAOCAPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAOCAPTests.swift; sourceTree = "<group>"; };
 		2133D7172B42EC1300A854F6 /* UICanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICanvas.swift; sourceTree = "<group>"; };
+		2133D7192B42F05600A854F6 /* UIFlowChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChart.swift; sourceTree = "<group>"; };
 		2147F5182A6F2001004245AE /* ISOLanguageCodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISOLanguageCodeCell.swift; sourceTree = "<group>"; };
 		214995232A5C3404008B9987 /* ReduxActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxActions.swift; sourceTree = "<group>"; };
 		214995252A5C3414008B9987 /* ReduxReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxReducer.swift; sourceTree = "<group>"; };
@@ -162,7 +164,7 @@
 		218DA9C52A2B205800459C61 /* CAOCAP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAOCAP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		218DA9C82A2B205800459C61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		218DA9CA2A2B205800459C61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		218DA9CC2A2B205800459C61 /* MindMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindMapVC.swift; sourceTree = "<group>"; };
+		218DA9CC2A2B205800459C61 /* PlaygroundVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundVC.swift; sourceTree = "<group>"; };
 		218DA9CF2A2B205800459C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		218DA9D12A2B205900459C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		218DA9D42A2B205900459C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -189,7 +191,7 @@
 		21AF3CCF2A6B7139002E96E3 /* ProjectImagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectImagesVC.swift; sourceTree = "<group>"; };
 		21AF3CD12A6B714A002E96E3 /* ProjectVideosVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectVideosVC.swift; sourceTree = "<group>"; };
 		21AF3CD42A6BE315002E96E3 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
-		21C21C482A34B5D800F40BE3 /* ProjectsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsVC.swift; sourceTree = "<group>"; };
+		21C21C482A34B5D800F40BE3 /* ProjectsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsListVC.swift; sourceTree = "<group>"; };
 		21C21C4A2A34B60200F40BE3 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		21C21C4C2A34B61900F40BE3 /* PurchaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseVC.swift; sourceTree = "<group>"; };
 		21C21C4E2A34B62E00F40BE3 /* PaletteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteVC.swift; sourceTree = "<group>"; };
@@ -454,7 +456,7 @@
 		21AF3CD32A6B717A002E96E3 /* ProjectVCs */ = {
 			isa = PBXGroup;
 			children = (
-				21C21C482A34B5D800F40BE3 /* ProjectsVC.swift */,
+				21C21C482A34B5D800F40BE3 /* ProjectsListVC.swift */,
 				21534D9E2A59E58100E8078B /* ProjectFilesVC.swift */,
 				21AF3CBF2A6B7096002E96E3 /* ProjectLanguageVC.swift */,
 				21AF3CC12A6B70B6002E96E3 /* ProjectTitleVC.swift */,
@@ -581,7 +583,7 @@
 			children = (
 				21DBA0002A38F4C800DFAC66 /* HomeVC.swift */,
 				21534D9A2A59CD2B00E8078B /* ChartsVC.swift */,
-				218DA9CC2A2B205800459C61 /* MindMapVC.swift */,
+				218DA9CC2A2B205800459C61 /* PlaygroundVC.swift */,
 				21AF3CD32A6B717A002E96E3 /* ProjectVCs */,
 				21E3A2092B0116060041A561 /* SettingsVCs */,
 			);
@@ -601,6 +603,7 @@
 			isa = PBXGroup;
 			children = (
 				2133D7172B42EC1300A854F6 /* UICanvas.swift */,
+				2133D7192B42F05600A854F6 /* UIFlowChart.swift */,
 				2186DB102A30DF4700773C5E /* UIMindMap.swift */,
 				210F19AD2A42DBE100D71A66 /* UINodeView.swift */,
 				210F19AF2A42DC9800D71A66 /* UIStroke.swift */,
@@ -803,7 +806,7 @@
 				212E2B1B2A745BBD00125C50 /* UIColor+Extensions.swift in Sources */,
 				21E148132A7F639400B503C2 /* User.swift in Sources */,
 				214995262A5C3414008B9987 /* ReduxReducer.swift in Sources */,
-				218DA9CD2A2B205800459C61 /* MindMapVC.swift in Sources */,
+				218DA9CD2A2B205800459C61 /* PlaygroundVC.swift in Sources */,
 				218DA9C92A2B205800459C61 /* AppDelegate.swift in Sources */,
 				2147F5192A6F2001004245AE /* ISOLanguageCodeCell.swift in Sources */,
 				21AF3CD02A6B7139002E96E3 /* ProjectImagesVC.swift in Sources */,
@@ -823,6 +826,7 @@
 				21AF3CBC2A6B2170002E96E3 /* SupportVC.swift in Sources */,
 				2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */,
 				21A861D82A78D2C4004D36A3 /* WhatsNewVC.swift in Sources */,
+				2133D71A2B42F05600A854F6 /* UIFlowChart.swift in Sources */,
 				21534D9F2A59E58100E8078B /* ProjectFilesVC.swift in Sources */,
 				21AF3CC82A6B70F1002E96E3 /* ProjectLinkVC.swift in Sources */,
 				21534D9B2A59CD2B00E8078B /* ChartsVC.swift in Sources */,
@@ -850,7 +854,7 @@
 				2186DB112A30DF4700773C5E /* UIMindMap.swift in Sources */,
 				21DBA0012A38F4C800DFAC66 /* HomeVC.swift in Sources */,
 				21AF3CB62A6B211E002E96E3 /* TermsOfUseVC.swift in Sources */,
-				21C21C492A34B5D800F40BE3 /* ProjectsVC.swift in Sources */,
+				21C21C492A34B5D800F40BE3 /* ProjectsListVC.swift in Sources */,
 				21C21C542A36145200F40BE3 /* Enumerations.swift in Sources */,
 				21AF3CC02A6B7096002E96E3 /* ProjectLanguageVC.swift in Sources */,
 				21534D8F2A59B26F00E8078B /* NavigationVC.swift in Sources */,

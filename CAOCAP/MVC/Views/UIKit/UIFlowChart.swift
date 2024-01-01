@@ -1,23 +1,23 @@
 //
-//  UIMindMap.swift
+//  UIFlowChart.swift
 //  CAOCAP
 //
-//  Created by Azzam AL-Rashed on 07/06/2023.
+//  Created by Azzam AL-Rashed on 01/01/2024.
 //
 
 import UIKit
 import SnapKit
 import SwiftSoup
 
-protocol UIMindMapDelegate {
+protocol UIFlowChartDelegate {
     func didRemoveNode()
 }
 
-class UIMindMap: UICanvas {
+class UIFlowChart: UICanvas {
     
     var project: Project?
     var nodeTree = [String: UINodeView]()
-    var mindMapDelegate: UIMindMapDelegate?
+    var flowChartDelegate: UIFlowChartDelegate?
     
     func draw(_ element: Element) {
         print("\(#function)ing... \(element.tagName())")
@@ -25,53 +25,15 @@ class UIMindMap: UICanvas {
         nodeTree[element.id()] = nodeView
         nodeView.delegate = self
         canvas.addSubview(nodeView)
-        expandCanvas(width: 30, height: 30) 
+        expandCanvas(width: 30, height: 30)
         /*👆🏼🤔 expanding with a constent number is not the best way for this*/
         setNodePosition(nodeView)
         drawNodeStrokes(nodeView)
     }
     
     func setNodePosition(_ nodeView: UINodeView) {
-        let element = nodeView.element
-        if element.tagName() == "body" {
-            nodeView.snp.makeConstraints { $0.center.equalToSuperview() }
-        } else {
-            guard let parent = element.parent(), let parentView = nodeTree[parent.id()] else { return }
-            do {
-                let elementSiblingIndex = try element.elementSiblingIndex()
-                //set nodeView constraints
-                let centerPosition = Int(parent.children().count/2)
-                if parent.children().count % 2 == 0 {
-                    // even number of children ( two near centre children )
-                    if elementSiblingIndex == centerPosition {
-                        //near centre right child
-                        nodeView.snp.makeConstraints { $0.centerX.equalTo(parentView.snp.centerX).offset(90)}
-                    } else if elementSiblingIndex == centerPosition - 1 {
-                        //near centre left child
-                        nodeView.snp.makeConstraints { $0.centerX.equalTo(parentView.snp.centerX).offset(-90)}
-                    } else {
-                        //push to the right or left| i am 0 of 4 -> 0 - 2 - 0.5 -> -2*180, i am 3 of 4 -> 3 - 2 - 0.5 -> 1*180
-                        let multiplier = Double(element.siblingIndex - centerPosition) - 0.5
-                        nodeView.snp.makeConstraints { $0.centerX.equalTo(parentView.snp.centerX).offset(180 * multiplier)}
-                    }
-                } else {
-                    // odd number of children ( one centered child )
-                    if elementSiblingIndex == centerPosition {
-                        //centered child
-                        nodeView.snp.makeConstraints { $0.centerX.equalTo(parentView.snp.centerX) }
-                    } else {
-                        //push to the right or left
-                        let multiplier = elementSiblingIndex - centerPosition
-                        nodeView.snp.makeConstraints { $0.centerX.equalTo(parentView.snp.centerX).offset(180 * multiplier) }
-                    }
-                }
-            } catch Exception.Error(let type, let message) {
-                print(type, message)
-            } catch {
-                print("error")
-            }
-            nodeView.snp.makeConstraints { $0.centerY.equalTo(parentView).offset(120)}
-        }
+        // TODO: set Node Position in FlowChart
+        nodeView.snp.makeConstraints { $0.center.equalToSuperview() }
     }
     
     func drawNodeStrokes(_ nodeView: UINodeView) {
@@ -87,7 +49,7 @@ class UIMindMap: UICanvas {
         }
     }
     
-    func loadBody() {
+    func loadBody() { /*🟨JS: FlowChart should start with an "Event" node to be Event-driven programming */
         print("\(#function)ing...")
         guard let body = project?.document?.body() else { return }
         clearCanvas()
@@ -103,7 +65,7 @@ class UIMindMap: UICanvas {
         }
     }
     
-    func add(tag: String) {
+    func add(tag: String) { /*🟨JS*/
         print("\(#function)ing...")
         ReduxStore.dispatch(WillEditAction())
         guard let body = project?.document?.body(),
@@ -150,7 +112,7 @@ class UIMindMap: UICanvas {
         }
     }
     
-    func updateSelectedNode(_ direction: Direction?) {
+    func updateSelectedNode(_ direction: Direction?) { /*🟨JS*/
         guard let direction = direction,
               let body = project?.document?.body(),
               let selectedID = project?.selectedElementID
@@ -187,7 +149,7 @@ class UIMindMap: UICanvas {
 }
 
 
-extension UIMindMap: UINodeViewDelegate {
+extension UIFlowChart: UINodeViewDelegate {
     func select(nodeID: String) {
         print("\(#function)ing...")
         select(nodeID)
@@ -200,7 +162,7 @@ extension UIMindMap: UINodeViewDelegate {
             if let element = try body.getElementById(nodeID) {
                 DispatchQueue.main.async {
                     self.delete(element)
-                    self.mindMapDelegate?.didRemoveNode()
+                    self.flowChartDelegate?.didRemoveNode()
                 }
             }
         } catch Exception.Error(let type, let message) {
@@ -211,5 +173,6 @@ extension UIMindMap: UINodeViewDelegate {
     }
     
 }
+
 
 
