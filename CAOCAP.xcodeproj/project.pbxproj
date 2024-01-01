@@ -16,6 +16,7 @@
 		212E2B1B2A745BBD00125C50 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 212E2B1A2A745BBD00125C50 /* UIColor+Extensions.swift */; };
 		21326ED02A530CAE00255570 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21326ECF2A530CAE00255570 /* UserDefaults.swift */; };
 		2133D70F2B3B628800A854F6 /* CAOCAPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2133D70E2B3B628800A854F6 /* CAOCAPTests.swift */; };
+		2133D7182B42EC1300A854F6 /* UICanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2133D7172B42EC1300A854F6 /* UICanvas.swift */; };
 		213DF5E02A5883D300679BB2 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 213DF5DF2A5883D300679BB2 /* SwiftSoup */; };
 		213DF5E32A5886B300679BB2 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 213DF5E22A5886B300679BB2 /* ReSwift */; };
 		213DF5E62A58A92F00679BB2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 213DF5E52A58A92F00679BB2 /* Lottie */; };
@@ -128,6 +129,7 @@
 		21326ECF2A530CAE00255570 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		2133D70C2B3B628800A854F6 /* CAOCAPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CAOCAPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2133D70E2B3B628800A854F6 /* CAOCAPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAOCAPTests.swift; sourceTree = "<group>"; };
+		2133D7172B42EC1300A854F6 /* UICanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICanvas.swift; sourceTree = "<group>"; };
 		2147F5182A6F2001004245AE /* ISOLanguageCodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISOLanguageCodeCell.swift; sourceTree = "<group>"; };
 		214995232A5C3404008B9987 /* ReduxActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxActions.swift; sourceTree = "<group>"; };
 		214995252A5C3414008B9987 /* ReduxReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxReducer.swift; sourceTree = "<group>"; };
@@ -598,6 +600,7 @@
 		21E3A2102B0119AE0041A561 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				2133D7172B42EC1300A854F6 /* UICanvas.swift */,
 				2186DB102A30DF4700773C5E /* UIMindMap.swift */,
 				210F19AD2A42DBE100D71A66 /* UINodeView.swift */,
 				210F19AF2A42DC9800D71A66 /* UIStroke.swift */,
@@ -861,6 +864,7 @@
 				21534D982A59B40A00E8078B /* MainCoordinator.swift in Sources */,
 				210F19AE2A42DBE100D71A66 /* UINodeView.swift in Sources */,
 				2106C41D2A5F949400446620 /* HTMLParser.swift in Sources */,
+				2133D7182B42EC1300A854F6 /* UICanvas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

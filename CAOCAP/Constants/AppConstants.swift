@@ -44,7 +44,6 @@ struct AppConstants {
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body id="\#(bodyID)"></body>
-    <script></script>
 </html>
 """#
 }
