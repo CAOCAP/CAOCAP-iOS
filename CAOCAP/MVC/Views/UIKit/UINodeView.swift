@@ -13,22 +13,31 @@ protocol UINodeViewDelegate {
     func delete(nodeID: String)
 }
 
+struct UINode {
+    let name: String
+    let id: String
+    let countChildren: Int
+    let element: Element?
+}
+
 class UINodeView: UIView, UIContextMenuInteractionDelegate {
-    let element: Element
+    let node: UINode
+//    let element: Element
     var delegate: UINodeViewDelegate?
-    init(element: Element) {
-        self.element = element
-        let tagName = element.tagName()
+    init(node: UINode) {
+        self.node = node
+//        self.element = element
+//        let tagName = element.tagName()
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalToConstant: 60).isActive = true  //TODO: use SnapKit
         widthAnchor.constraint(equalToConstant: 150).isActive = true  //TODO: use SnapKit
         layer.cornerRadius = 10
         layer.borderColor = UIColor.purple.cgColor
-        setBackgroundColor(tagName: tagName)
+        setBackgroundColor()
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 60))
         label.textAlignment = .center
-        label.text = tagName
+        label.text = node.name
         label.textColor = .white
         label.font = UIFont.ubuntu(.medium, size: 20)
         addSubview(label)
@@ -37,11 +46,11 @@ class UINodeView: UIView, UIContextMenuInteractionDelegate {
         addInteraction(UIContextMenuInteraction(delegate: self))
     }
     
-    func setBackgroundColor(tagName: String) {
-        switch tagName {
+    func setBackgroundColor() {
+        switch node.name {
         case "body":
             backgroundColor = .systemBlue
-        case "span","canvas","div","header","main","footer","article","section","aside","nav":
+        case "span","canvas","div","header","main","footer","article","section","aside","nav", "Start Event"/*❗️🙃*/:
             backgroundColor = .systemGreen
         case "button","a","input":
             backgroundColor = .systemPurple
@@ -63,9 +72,8 @@ class UINodeView: UIView, UIContextMenuInteractionDelegate {
     }
     
     @objc func didTap(gesture: UITapGestureRecognizer) {
-        let id = element.id()
-        print("did tap node:\(id)")
-        delegate?.select(nodeID: id)
+        print("did tap node:\(node.id)")
+        delegate?.select(nodeID: node.id)
     }
     
     func delete() {
@@ -76,9 +84,9 @@ class UINodeView: UIView, UIContextMenuInteractionDelegate {
     
     func contextMenuInteraction(_ interaction: UIContextMenuInteraction, configurationForMenuAtLocation location: CGPoint) -> UIContextMenuConfiguration? {
         return UIContextMenuConfiguration(actionProvider:  { _ in
-            guard self.element.tagName() != "body" else { return nil }
+            guard self.node.name != "body" else { return nil }
             return UIMenu(options: [.displayInline], children: [UIAction(title: "Remove", attributes: .destructive, handler: { _ in
-                self.delegate?.delete(nodeID: self.element.id())
+                self.delegate?.delete(nodeID: self.node.id)
             })])
             
         })

@@ -21,7 +21,7 @@ class UIFlowChart: UICanvas {
     
     func draw(_ event: String) { /* TODO: Fix this flowChart function❗️🙃*/
         print("\(#function)ing... \(event)")
-        let nodeView = UINodeView(element: Element(Tag(event), "")) /*❗️🙃*/
+        let nodeView = UINodeView(node: UINode(name: event, id: event, countChildren: 1, element: nil)) /*❗️🙃*/
         nodeTree[event] = nodeView /*❗️🙃*/
         nodeView.delegate = self
         canvas.addSubview(nodeView)
@@ -38,11 +38,12 @@ class UIFlowChart: UICanvas {
     }
     
     func drawNodeStrokes(_ nodeView: UINodeView) {
-        let element = nodeView.element
-        if !element.children().isEmpty() {
-            let nodeStroke = UIStroke(lines: element.children().count)
+        let countChildren = nodeView.node.countChildren
+        print("\(#function)ing... \(countChildren)")
+        if countChildren > 0 {
+            let nodeStroke = UIStroke(lines: countChildren)
             canvas.insertSubview(nodeStroke, at: 0)
-            nodeStroke.widthConstraint.constant = CGFloat(element.children().count * 180)
+            nodeStroke.widthConstraint.constant = CGFloat(countChildren * 180)
             nodeStroke.snp.makeConstraints { make in
                 make.centerX.equalTo(nodeView.snp.centerX)
                 make.top.equalTo(nodeView.snp.bottom)

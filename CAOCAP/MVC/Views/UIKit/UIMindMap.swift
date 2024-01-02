@@ -21,7 +21,7 @@ class UIMindMap: UICanvas {
     
     func draw(_ element: Element) {
         print("\(#function)ing... \(element.tagName())")
-        let nodeView = UINodeView(element: element)
+        let nodeView = UINodeView(node: UINode(name: element.tagName(), id: element.id(), countChildren: element.childNodeSize(), element: element))
         nodeTree[element.id()] = nodeView
         nodeView.delegate = self
         canvas.addSubview(nodeView)
@@ -32,7 +32,7 @@ class UIMindMap: UICanvas {
     }
     
     func setNodePosition(_ nodeView: UINodeView) {
-        let element = nodeView.element
+        guard let element = nodeView.node.element else { return }
         if element.tagName() == "body" {
             nodeView.snp.makeConstraints { $0.center.equalToSuperview() }
         } else {
@@ -75,11 +75,11 @@ class UIMindMap: UICanvas {
     }
     
     func drawNodeStrokes(_ nodeView: UINodeView) {
-        let element = nodeView.element
-        if !element.children().isEmpty() {
-            let nodeStroke = UIStroke(lines: element.children().count)
+        let countChildren = nodeView.node.countChildren
+        if countChildren < 1 {
+            let nodeStroke = UIStroke(lines: countChildren)
             canvas.insertSubview(nodeStroke, at: 0)
-            nodeStroke.widthConstraint.constant = CGFloat(element.children().count * 180)
+            nodeStroke.widthConstraint.constant = CGFloat(countChildren * 180)
             nodeStroke.snp.makeConstraints { make in
                 make.centerX.equalTo(nodeView.snp.centerX)
                 make.top.equalTo(nodeView.snp.bottom)
