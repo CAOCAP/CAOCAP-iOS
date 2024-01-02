@@ -22,12 +22,9 @@ struct UINode {
 
 class UINodeView: UIView, UIContextMenuInteractionDelegate {
     let node: UINode
-//    let element: Element
     var delegate: UINodeViewDelegate?
     init(node: UINode) {
         self.node = node
-//        self.element = element
-//        let tagName = element.tagName()
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalToConstant: 60).isActive = true  //TODO: use SnapKit

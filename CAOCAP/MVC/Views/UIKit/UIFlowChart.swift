@@ -56,6 +56,13 @@ class UIFlowChart: UICanvas {
         print("\(#function)ing...")
         clearCanvas()
         draw("Start Event")
+        if !true { load(children: "") }/*❗️🙃*/
+    }
+    
+    func load(children: String) {
+        print("\(#function)ing...")
+        /* TODO: Fix this flowChart function❗️🙃*/
+        
     }
     
     func add(tag: String) { /*🟨JS*/
