@@ -19,10 +19,10 @@ class UIMindMap: UICanvas {
     var nodeTree = [String: UINodeView]()
     var mindMapDelegate: UIMindMapDelegate?
     
-    func draw(_ element: Element) {
-        print("\(#function)ing... \(element.tagName())")
-        let nodeView = UINodeView(node: UINode(name: element.tagName(), id: element.id(), countChildren: element.childNodeSize(), element: element))
-        nodeTree[element.id()] = nodeView
+    func draw(_ node: UINode) {
+        print("\(#function)ing... \(node.name)")
+        let nodeView = UINodeView(node: node)
+        nodeTree[node.id] = nodeView
         nodeView.delegate = self
         canvas.addSubview(nodeView)
         expandCanvas(width: 30, height: 30) 
@@ -88,17 +88,19 @@ class UIMindMap: UICanvas {
     }
     
     func loadBody() {
+        /* TODO: Fix this mindmap function❗️🙃*/
         print("\(#function)ing...")
         guard let body = project?.document?.body() else { return }
         clearCanvas()
-        draw(body)
+        draw(UINode(name: body.tagName(), id: body.id(), countChildren: body.childNodeSize(), element: body))
         if !body.children().isEmpty() { load(children: body.children()) }
     }
     
     func load(children: Elements) {
+        /* TODO: Fix this mindmap function❗️🙃*/
         print("\(#function)ing...")
         children.forEach { child in
-            draw(child)
+            draw(UINode(name: child.tagName(), id: child.id(), countChildren: child.childNodeSize(), element: child))
             if !child.children().isEmpty() { load(children: child.children()) }
         }
     }

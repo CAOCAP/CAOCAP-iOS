@@ -69,6 +69,18 @@ class UICanvas: UIScrollView, UIScrollViewDelegate {
         /*🤔 🤔 🤔*/
     }
     
+//    func draw(_ node: UINode) {
+//        print("\(#function)ing... \(node.name)")
+//        let nodeView = UINodeView(node: node)
+//        nodeTree[node.id] = nodeView
+//        nodeView.delegate = self
+//        canvas.addSubview(nodeView)
+//        expandCanvas(width: 30, height: 30)
+//        /*👆🏼🤔 expanding with a constent number is not the best way for this*/
+//        setNodePosition(nodeView)
+//        drawNodeStrokes(nodeView)
+//    }
+    
     //MARK: - handle Zooming in/out
     lazy var doubleTapZoom: UITapGestureRecognizer = {
         let zoomingTap = UITapGestureRecognizer(target: self, action: #selector(handleZoomingTap))

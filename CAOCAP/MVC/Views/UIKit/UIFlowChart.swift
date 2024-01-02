@@ -19,10 +19,10 @@ class UIFlowChart: UICanvas {
     var nodeTree = [String: UINodeView]()
     var flowChartDelegate: UIFlowChartDelegate?
     
-    func draw(_ event: String) { /* TODO: Fix this flowChart function❗️🙃*/
-        print("\(#function)ing... \(event)")
-        let nodeView = UINodeView(node: UINode(name: event, id: event, countChildren: 1, element: nil)) /*❗️🙃*/
-        nodeTree[event] = nodeView /*❗️🙃*/
+    func draw(_ node: UINode) { 
+        print("\(#function)ing... \(node.name)")
+        let nodeView = UINodeView(node: node)
+        nodeTree[node.id] = nodeView
         nodeView.delegate = self
         canvas.addSubview(nodeView)
         expandCanvas(width: 30, height: 30)
@@ -55,11 +55,12 @@ class UIFlowChart: UICanvas {
         /* TODO: Fix this flowChart function❗️🙃*/
         print("\(#function)ing...")
         clearCanvas()
-        draw("Start Event")
-        if !true { load(children: "") }/*❗️🙃*/
+        let startNode = UINode(name: "Start Event", id: "Start Event", countChildren: 1, element: nil)
+        draw(startNode)
+        if !true { load(children: startNode) }/*❗️🙃*/
     }
     
-    func load(children: String) {
+    func load(children: UINode) {
         print("\(#function)ing...")
         /* TODO: Fix this flowChart function❗️🙃*/
         
