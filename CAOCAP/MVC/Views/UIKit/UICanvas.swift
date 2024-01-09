@@ -69,9 +69,9 @@ class UICanvas: UIScrollView, UIScrollViewDelegate {
         /*🤔 🤔 🤔*/
     }
     
-//    func draw(_ node: UINode) {
+//    func draw(_ node: CanvasNode) {
 //        print("\(#function)ing... \(node.name)")
-//        let nodeView = UINodeView(node: node)
+//        let nodeView = UICanvasNodeView(node: node)
 //        nodeTree[node.id] = nodeView
 //        nodeView.delegate = self
 //        canvas.addSubview(nodeView)

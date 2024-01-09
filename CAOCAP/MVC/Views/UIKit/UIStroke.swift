@@ -47,7 +47,12 @@ class UIStroke: UIView {
                     //near centre left line
                     xConstant = widthConstraint.constant/2 - 90
                 } else {
-                    //push to the right or left| i am 0 of 4 -> 0 - 2 + 0.5 -> -1.5*180, i am 3 of 4 -> 3 - 2 + 0.5 -> 1.5*180
+                    //push to the right or left|
+                    //i'm index 0 of 6 -> 0 - 3 + 0.5-> -2.5*180 = -450,
+                    //i'm index 1 of 6 -> 1 - 3 -> -1.5*180 = -270
+                    // ---------two near centre children-----------
+                    //i'm index 4 of 6 -> 4 - 3 + 0.5 -> 1.5*180 = 270,
+                    //i'm index 5 of 6 -> 5 - 3 + 0.5 -> 2.5*180 = 450
                     let multiplier = Double(index - centerPosition) + 0.5
                     xConstant = widthConstraint.constant/2 + multiplier * 180
                 }

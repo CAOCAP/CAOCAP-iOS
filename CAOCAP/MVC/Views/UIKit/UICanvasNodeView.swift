@@ -1,5 +1,5 @@
 //
-//  UINodeView.swift
+//  UICanvasNodeView.swift
 //  CAOCAP
 //
 //  Created by Azzam AL-Rashed on 21/06/2023.
@@ -8,22 +8,31 @@
 import UIKit
 import SwiftSoup
 
-protocol UINodeViewDelegate {
+protocol UICanvasNodeViewDelegate {
     func select(nodeID: String)
     func delete(nodeID: String)
 }
 
-struct UINode {
+class CanvasNode {
     let name: String
     let id: String
-    let countChildren: Int
-    let element: Element?
+    let parent: CanvasNode?
+    let children: [CanvasNode]
+    let element: Element? /*🟨JS*/
+    
+    init(name: String, id: String, parent: CanvasNode? = nil, children: [CanvasNode], element: Element? = nil) {
+        self.name = name
+        self.id = id
+        self.parent = parent
+        self.children = children
+        self.element = element
+    }
 }
 
-class UINodeView: UIView, UIContextMenuInteractionDelegate {
-    let node: UINode
-    var delegate: UINodeViewDelegate?
-    init(node: UINode) {
+class UICanvasNodeView: UIView, UIContextMenuInteractionDelegate {
+    let node: CanvasNode
+    var delegate: UICanvasNodeViewDelegate?
+    init(node: CanvasNode) {
         self.node = node
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false

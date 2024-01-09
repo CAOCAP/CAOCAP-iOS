@@ -52,8 +52,8 @@ class PlaygroundVC: UIViewController, Storyboarded {
     
     @IBOutlet weak var jsView: UIView!
     
-//    var mindMap: UIMindMap! 🟨JS
-    var flowChart: UIFlowChart!
+    var mindMap: UIMindMap!
+//    var flowChart: UIFlowChart! 🟨JS
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,8 +63,8 @@ class PlaygroundVC: UIViewController, Storyboarded {
         contentTextField.isFirstResponder
         
         setupToolsViewGestureRecognizer()
-//        setupMindMapLayout() 🟨JS
-        setupFlowChartLayout()
+        setupMindMapLayout()
+//        setupFlowChartLayout() 🟨JS
         setupMenuButtons()
     }
     
@@ -82,23 +82,23 @@ class PlaygroundVC: UIViewController, Storyboarded {
     }
     
     
-//    func setupMindMapLayout() { 🟨JS
-//        mindMap = UIMindMap(frame: view.frame)
-//        mindMap.mindMapDelegate = self
-//        view.insertSubview(mindMap, at: 0)
-//        mindMap.snp.makeConstraints { make in
-//            make.edges.equalToSuperview()
-//        }
-//    }
-    
-    func setupFlowChartLayout() {
-        flowChart = UIFlowChart(frame: view.frame)
-        flowChart.flowChartDelegate = self
-        view.insertSubview(flowChart, at: 0)
-        flowChart.snp.makeConstraints { make in
+    func setupMindMapLayout() {
+        mindMap = UIMindMap(frame: view.frame)
+        mindMap.mindMapDelegate = self
+        view.insertSubview(mindMap, at: 0)
+        mindMap.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }
+    
+//    func setupFlowChartLayout() { 🟨JS
+//        flowChart = UIFlowChart(frame: view.frame)
+//        flowChart.flowChartDelegate = self
+//        view.insertSubview(flowChart, at: 0)
+//        flowChart.snp.makeConstraints { make in
+//            make.edges.equalToSuperview()
+//        }
+//    }
     
     func setupToolsViewGestureRecognizer() {
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
@@ -243,8 +243,8 @@ class PlaygroundVC: UIViewController, Storyboarded {
     }
     
     @IBAction func didPressArrow(_ sender: UIButton) {
-//        mindMap.updateSelectedNode(Direction(rawValue: sender.tag)) 🟨JS
-        flowChart.updateSelectedNode(Direction(rawValue: sender.tag))
+        mindMap.updateSelectedNode(Direction(rawValue: sender.tag))
+//        flowChart.updateSelectedNode(Direction(rawValue: sender.tag)) 🟨JS
     }
     
     @IBAction func didPressAddElement(_ sender: UIButton) {
@@ -260,8 +260,8 @@ class PlaygroundVC: UIViewController, Storyboarded {
             "ul","br","hr",
         ]
         if sender.tag > 0 && sender.tag < htmlTags.count {
-//            mindMap.add(tag: htmlTags[sender.tag]) 🟨JS
-            flowChart.add(tag: htmlTags[sender.tag])
+            mindMap.add(tag: htmlTags[sender.tag])
+//            flowChart.add(tag: htmlTags[sender.tag]) 🟨JS
         }
     }
     
@@ -385,17 +385,17 @@ extension PlaygroundVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
 }
 
 
-//extension PlaygroundVC: UIMindMapDelegate { 🟨JS
-//    func didRemoveNode() {
-//        loadWebView()
-//    }
-//}
-
-extension PlaygroundVC: UIFlowChartDelegate {
+extension PlaygroundVC: UIMindMapDelegate {
     func didRemoveNode() {
         loadWebView()
     }
 }
+
+//extension PlaygroundVC: UIFlowChartDelegate { 🟨JS
+//    func didRemoveNode() {
+//        loadWebView()
+//    }
+//}
 
 extension PlaygroundVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -445,8 +445,8 @@ extension PlaygroundVC: StoreSubscriber {
     func newState(state: ReduxState) {
         if project == nil {
             project = state.openedProject
-//            mindMap.project = project 🟨JS
-            flowChart.project = project
+            mindMap.project = project
+//            flowChart.project = project 🟨JS
         }
         
         
@@ -464,8 +464,8 @@ extension PlaygroundVC: StoreSubscriber {
 //        }
         
         loadWebView()/*🤔*/
-//        mindMap.loadBody() 🟨JS
-        flowChart.loadStartEvent()
+        mindMap.loadBody()
+//        flowChart.loadStartEvent() 🟨JS
         
         projectTitle.text = project?.getDocumentTitle()
         

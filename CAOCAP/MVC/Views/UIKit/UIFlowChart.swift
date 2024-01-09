@@ -16,12 +16,12 @@ protocol UIFlowChartDelegate {
 class UIFlowChart: UICanvas {
     
     var project: Project?
-    var nodeTree = [String: UINodeView]()
+    var nodeTree = [String: UICanvasNodeView]()
     var flowChartDelegate: UIFlowChartDelegate?
     
-    func draw(_ node: UINode) { 
+    func draw(_ node: CanvasNode) { 
         print("\(#function)ing... \(node.name)")
-        let nodeView = UINodeView(node: node)
+        let nodeView = UICanvasNodeView(node: node)
         nodeTree[node.id] = nodeView
         nodeView.delegate = self
         canvas.addSubview(nodeView)
@@ -31,14 +31,59 @@ class UIFlowChart: UICanvas {
         drawNodeStrokes(nodeView)
     }
     
-    func setNodePosition(_ nodeView: UINodeView) {
+    func setNodePosition(_ nodeView: UICanvasNodeView) {
         /* TODO: Fix this flowChart function❗️🙃*/
-        // TODO: set Node Position in FlowChart
-        nodeView.snp.makeConstraints { $0.center.equalToSuperview() }
+        /*
+        let node = nodeView.node
+        if node.parent == nil {
+            nodeView.snp.makeConstraints { $0.center.equalToSuperview() }
+        } else {
+            guard let parent = node.parent, let parentView = nodeTree[parent.id] else { return }
+            do {
+                let elementSiblingIndex = try node.elementSiblingIndex()
+                //set nodeView constraints
+                let centerPosition = Int(parent.children.count/2)
+                if parent.children.count % 2 == 0 {
+                    // even number of children ( two near centre children )
+                    if elementSiblingIndex == centerPosition {
+                        //near centre right child
+                        nodeView.snp.makeConstraints { $0.centerX.equalTo(parentView.snp.centerX).offset(90)}
+                    } else if elementSiblingIndex == centerPosition - 1 {
+                        //near centre left child
+                        nodeView.snp.makeConstraints { $0.centerX.equalTo(parentView.snp.centerX).offset(-90)}
+                    } else {
+                        //push to the right or left|
+                        //i'm index 0 of 6 -> 0 - 3 + 0.5-> -2.5*180 = -450,
+                        //i'm index 1 of 6 -> 1 - 3 -> -1.5*180 = -270
+                        // ---------two near centre children-----------
+                        //i'm index 4 of 6 -> 4 - 3 + 0.5 -> 1.5*180 = 270,
+                        //i'm index 5 of 6 -> 5 - 3 + 0.5 -> 2.5*180 = 450
+                        let multiplier = Double(elementSiblingIndex - centerPosition) + 0.5
+                        nodeView.snp.makeConstraints { $0.centerX.equalTo(parentView.snp.centerX).offset(180 * multiplier)}
+                    }
+                } else {
+                    // odd number of children ( one centered child )
+                    if elementSiblingIndex == centerPosition {
+                        //centered child
+                        nodeView.snp.makeConstraints { $0.centerX.equalTo(parentView.snp.centerX) }
+                    } else {
+                        //push to the right or left
+                        let multiplier = elementSiblingIndex - centerPosition
+                        nodeView.snp.makeConstraints { $0.centerX.equalTo(parentView.snp.centerX).offset(180 * multiplier) }
+                    }
+                }
+            } catch Exception.Error(let type, let message) {
+                print(type, message)
+            } catch {
+                print("error")
+            }
+            nodeView.snp.makeConstraints { $0.centerY.equalTo(parentView).offset(120)}
+        }
+         */
     }
     
-    func drawNodeStrokes(_ nodeView: UINodeView) {
-        let countChildren = nodeView.node.countChildren
+    func drawNodeStrokes(_ nodeView: UICanvasNodeView) {
+        let countChildren = nodeView.node.children.count
         print("\(#function)ing... \(countChildren)")
         if countChildren > 0 {
             let nodeStroke = UIStroke(lines: countChildren)
@@ -55,15 +100,17 @@ class UIFlowChart: UICanvas {
         /* TODO: Fix this flowChart function❗️🙃*/
         print("\(#function)ing...")
         clearCanvas()
-        let startNode = UINode(name: "Start Event", id: "Start Event", countChildren: 1, element: nil)
+        let startNode = CanvasNode(name: "Start Event", id: "Start Event", children: [CanvasNode(name: "Action", id: "Action", children: [], element: nil)], element: nil)
         draw(startNode)
-        if !true { load(children: startNode) }/*❗️🙃*/
+        if !startNode.children.isEmpty { load(children: startNode.children) }
     }
     
-    func load(children: UINode) {
+    func load(children: [CanvasNode]) {  /*🟨JS*/
         print("\(#function)ing...")
-        /* TODO: Fix this flowChart function❗️🙃*/
-        
+        children.forEach { child in
+            draw(child)
+            if !child.children.isEmpty { load(children: child.children) }
+        }
     }
     
     func add(tag: String) { /*🟨JS*/
@@ -151,7 +198,7 @@ class UIFlowChart: UICanvas {
 }
 
 
-extension UIFlowChart: UINodeViewDelegate {
+extension UIFlowChart: UICanvasNodeViewDelegate {
     func select(nodeID: String) {
         print("\(#function)ing...")
         select(nodeID)
