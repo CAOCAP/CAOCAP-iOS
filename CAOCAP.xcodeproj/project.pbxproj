@@ -38,6 +38,7 @@
 		21534DA12A5A9B3B00E8078B /* TailwindCSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534DA02A5A9B3B00E8078B /* TailwindCSS.swift */; };
 		21534DA32A5A9ED000E8078B /* TailwindCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534DA22A5A9ED000E8078B /* TailwindCollectionViewCell.swift */; };
 		21534DA72A5B038D00E8078B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21534DA52A5AFF8F00E8078B /* AdSupport.framework */; };
+		215DE72B2B527BC100546394 /* ProjectWebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215DE72A2B527BC100546394 /* ProjectWebViewVC.swift */; };
 		2175FBDF2A648C9100F7E97F /* party.json in Resources */ = {isa = PBXBuildFile; fileRef = 2175FBDD2A648C9100F7E97F /* party.json */; };
 		2175FBE02A648C9100F7E97F /* confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 2175FBDE2A648C9100F7E97F /* confetti.json */; };
 		2175FBE22A648D0700F7E97F /* LottieManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2175FBE12A648D0700F7E97F /* LottieManager.swift */; };
@@ -149,6 +150,7 @@
 		21534DA02A5A9B3B00E8078B /* TailwindCSS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TailwindCSS.swift; sourceTree = "<group>"; };
 		21534DA22A5A9ED000E8078B /* TailwindCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TailwindCollectionViewCell.swift; sourceTree = "<group>"; };
 		21534DA52A5AFF8F00E8078B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		215DE72A2B527BC100546394 /* ProjectWebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectWebViewVC.swift; sourceTree = "<group>"; };
 		21640C492B38470000052966 /* Config-dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config-dev.xcconfig"; sourceTree = "<group>"; };
 		2175FBDD2A648C9100F7E97F /* party.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = party.json; sourceTree = "<group>"; };
 		2175FBDE2A648C9100F7E97F /* confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = confetti.json; sourceTree = "<group>"; };
@@ -458,6 +460,7 @@
 			children = (
 				21C21C482A34B5D800F40BE3 /* ProjectsListVC.swift */,
 				21534D9E2A59E58100E8078B /* ProjectFilesVC.swift */,
+				215DE72A2B527BC100546394 /* ProjectWebViewVC.swift */,
 				21AF3CBF2A6B7096002E96E3 /* ProjectLanguageVC.swift */,
 				21AF3CC12A6B70B6002E96E3 /* ProjectTitleVC.swift */,
 				21AF3CC32A6B70CC002E96E3 /* ProjectStyleVC.swift */,
@@ -824,6 +827,7 @@
 				21AF3CB82A6B213C002E96E3 /* PrivacyPolicyVC.swift in Sources */,
 				21AF3CCC2A6B7117002E96E3 /* ProjectBaseVC.swift in Sources */,
 				21AF3CBC2A6B2170002E96E3 /* SupportVC.swift in Sources */,
+				215DE72B2B527BC100546394 /* ProjectWebViewVC.swift in Sources */,
 				2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */,
 				21A861D82A78D2C4004D36A3 /* WhatsNewVC.swift in Sources */,
 				2133D71A2B42F05600A854F6 /* UIFlowChart.swift in Sources */,

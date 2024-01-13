@@ -1019,8 +1019,8 @@
             filePath = "CAOCAP/MVC/Models/Project.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "285"
-            endingLineNumber = "285"
+            startingLineNumber = "282"
+            endingLineNumber = "282"
             landmarkName = "Project"
             landmarkType = "3">
          </BreakpointContent>
@@ -1035,8 +1035,8 @@
             filePath = "CAOCAP/MVC/Models/Project.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "288"
-            endingLineNumber = "288"
+            startingLineNumber = "285"
+            endingLineNumber = "285"
             landmarkName = "setSelectedElementHidden(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -2898,8 +2898,8 @@
             filePath = "CAOCAP/MVC/Views/UIKit/UIMindMap.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "setNodePosition(_:)"
             landmarkType = "7">
             <Locations>

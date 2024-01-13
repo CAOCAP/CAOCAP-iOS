@@ -4,10 +4,7 @@
 //
 //  Created by Azzam AL-Rashed on 17/07/2023.
 //
-/*
- refactor goal: to make this class easer to understand and update
- 
- */
+
 
 import UIKit
 import SwiftSoup

@@ -25,7 +25,7 @@ class UIMindMap: UICanvas {
         nodeTree[node.id] = nodeView
         nodeView.delegate = self
         canvas.addSubview(nodeView)
-        expandCanvas(width: 30, height: 30) 
+        expandCanvas(width: 5, height: 5)
         /*👆🏼🤔 expanding with a constent number is not the best way for this*/
         setNodePosition(nodeView)
         drawNodeStrokes(nodeView)
@@ -34,7 +34,10 @@ class UIMindMap: UICanvas {
     func setNodePosition(_ nodeView: UICanvasNodeView) {
         guard let element = nodeView.node.element else { return }
         if element.tagName() == "body" {
-            nodeView.snp.makeConstraints { $0.center.equalToSuperview() }
+            nodeView.snp.makeConstraints {
+                $0.centerX.equalToSuperview()
+                $0.top.equalToSuperview().offset(400)
+            }
         } else {
             guard let parent = element.parent(), let parentView = nodeTree[parent.id()] else { return }
             do {
