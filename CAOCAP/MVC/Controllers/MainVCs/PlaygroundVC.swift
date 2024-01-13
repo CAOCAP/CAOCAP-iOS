@@ -259,7 +259,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
             "li","h1","p",
             "ul","br","hr",
         ]
-        if sender.tag > 0 && sender.tag < htmlTags.count {
+        if sender.tag < htmlTags.count {
             mindMap.add(tag: htmlTags[sender.tag])
 //            flowChart.add(tag: htmlTags[sender.tag]) 🟨JS
         }
