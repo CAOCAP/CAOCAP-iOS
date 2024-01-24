@@ -29,7 +29,7 @@ class MainSettingsVC: SettingsVC {
                     
                 })),
                  */
-                .staticCell(option: SettingsOption(title: "What's New?", icon: UIImage(systemName: "sparkles"), color: .systemYellow, label: "v5.0.0", handler: {
+                .staticCell(option: SettingsOption(title: "What's New?", icon: UIImage(systemName: "sparkles"), color: .systemYellow, label: "v5.0.1", handler: {
                     self.coordinator?.viewWhatsNewVC()
                     
                 })),
