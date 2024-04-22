@@ -106,6 +106,10 @@ class HomeVC: UIViewController, Storyboarded {
         coordinator?.viewPurchase()
     }
     
+    @IBAction func didPressFileButton(_ sender: Any) {
+        coordinator?.createNewProject()
+    }
+    
     @IBAction func didPressPaletteButton(_ sender: Any) {
         coordinator?.viewPalette()
     }

@@ -36,14 +36,14 @@ final class MainCoordinator: Coordinator {
         navigationController.pushViewController(navigationVC, animated: false)
     }
     
-    func createNewProject() {
-        ReduxStore.dispatch(CreateProjectAction(newProject: Project()))
-        let vc = PlaygroundVC.instantiate()
+    
+    func viewWorld() {
+        let vc = WorldVC.instantiate()
         navigationController.present(vc, animated: true)
     }
     
     
-    //MARK: Initial
+    //MARK: Home
     func viewPurchase() {
         let vc = PurchaseVC.instantiate()
         navigationController.present(vc, animated: true)
@@ -51,6 +51,12 @@ final class MainCoordinator: Coordinator {
     
     func viewPalette() {
         let vc = PaletteVC.instantiate()
+        navigationController.present(vc, animated: true)
+    }
+    
+    func createNewProject() {
+        ReduxStore.dispatch(CreateProjectAction(newProject: Project()))
+        let vc = PlaygroundVC.instantiate()
         navigationController.present(vc, animated: true)
     }
     

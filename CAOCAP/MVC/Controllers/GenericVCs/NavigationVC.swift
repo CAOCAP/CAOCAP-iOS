@@ -49,8 +49,8 @@ class NavigationVC: ContainerVC, Storyboarded {
         }
     }
     
-    @IBAction func didPressPlusButton(_ sender: UIButton) {
-        coordinator?.createNewProject()
+    @IBAction func didPressPowerButton(_ sender: UIButton) {
+        coordinator?.viewWorld()
     }
     
     
