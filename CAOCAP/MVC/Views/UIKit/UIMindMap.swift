@@ -24,7 +24,7 @@ class UIMindMap: UICanvas {
         print("\(#function)ing...")
         guard let body = project?.document?.body() else { return }
         clearCanvas()
-        draw(CanvasNode(element: body))
+        draw(body)
         if !body.children().isEmpty() { load(children: body.children()) }
     }
     
@@ -32,15 +32,15 @@ class UIMindMap: UICanvas {
         /* TODO: Fix this mindmap function❗️🙃*/
         print("\(#function)ing...")
         children.forEach { child in
-            draw(CanvasNode(element: child))
+            draw(child)
             if !child.children().isEmpty() { load(children: child.children()) }
         }
     }
     
-    func draw(_ node: CanvasNode) {
-        print("\(#function)ing... \(node.name)")
-        let nodeView = UICanvasNodeView(node: node)
-        nodeTree[node.id] = nodeView
+    func draw(_ element: Element) {
+        print("\(#function)ing... \(element.tagName())")
+        let nodeView = UICanvasNodeView(element: element)
+        nodeTree[element.id()] = nodeView
         nodeView.delegate = self
         canvas.addSubview(nodeView)
         expandCanvas(width: 5, height: 5)
@@ -50,7 +50,7 @@ class UIMindMap: UICanvas {
     }
     
     func setNodePosition(_ nodeView: UICanvasNodeView) {
-        let element = nodeView.node.element
+        let element = nodeView.element
         if element.tagName() == "body" {
             nodeView.snp.makeConstraints {
                 $0.centerX.equalToSuperview()
@@ -101,7 +101,7 @@ class UIMindMap: UICanvas {
     }
     
     func drawNodeStrokes(_ nodeView: UICanvasNodeView) {
-        let countChildren = nodeView.node.element.children().count
+        let countChildren = nodeView.element.children().count
         if countChildren > 0 {
             let nodeStroke = UIStroke(lines: countChildren)
             canvas.insertSubview(nodeStroke, at: 0)

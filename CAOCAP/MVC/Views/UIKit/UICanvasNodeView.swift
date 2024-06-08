@@ -13,24 +13,11 @@ protocol UICanvasNodeViewDelegate {
     func delete(nodeID: String)
 }
 
-class CanvasNode {
-    let name: String
-    let id: String
-    let element: Element
-    
-    //this is used for UIMindMap
-    init(element: Element) {
-        self.name = element.tagName()
-        self.id = element.id()
-        self.element = element
-    }
-}
-
 class UICanvasNodeView: UIView, UIContextMenuInteractionDelegate {
-    let node: CanvasNode
+    let element: Element
     var delegate: UICanvasNodeViewDelegate?
-    init(node: CanvasNode) {
-        self.node = node
+    init(element: Element) {
+        self.element = element
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
         heightAnchor.constraint(equalToConstant: 60).isActive = true  //TODO: use SnapKit
@@ -40,7 +27,7 @@ class UICanvasNodeView: UIView, UIContextMenuInteractionDelegate {
         setBackgroundColor()
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 60))
         label.textAlignment = .center
-        label.text = node.name
+        label.text = element.tagName()
         label.textColor = .white
         label.font = UIFont.ubuntu(.medium, size: 20)
         addSubview(label)
@@ -50,7 +37,7 @@ class UICanvasNodeView: UIView, UIContextMenuInteractionDelegate {
     }
     
     func setBackgroundColor() {
-        switch node.name {
+        switch element.tagName() {
         case "body":
             backgroundColor = .systemBlue
         case "span","canvas","div","header","main","footer","article","section","aside","nav":
@@ -75,8 +62,8 @@ class UICanvasNodeView: UIView, UIContextMenuInteractionDelegate {
     }
     
     @objc func didTap(gesture: UITapGestureRecognizer) {
-        print("did tap node:\(node.id)")
-        delegate?.select(nodeID: node.id)
+        print("did tap node:\(element.id())")
+        delegate?.select(nodeID: element.id())
     }
     
     func delete() {
@@ -87,9 +74,9 @@ class UICanvasNodeView: UIView, UIContextMenuInteractionDelegate {
     
     func contextMenuInteraction(_ interaction: UIContextMenuInteraction, configurationForMenuAtLocation location: CGPoint) -> UIContextMenuConfiguration? {
         return UIContextMenuConfiguration(actionProvider:  { _ in
-            guard self.node.name != "body" else { return nil }
+            guard self.element.tagName() != "body" else { return nil }
             return UIMenu(options: [.displayInline], children: [UIAction(title: "Remove", attributes: .destructive, handler: { _ in
-                self.delegate?.delete(nodeID: self.node.id)
+                self.delegate?.delete(nodeID: self.element.id())
             })])
             
         })
