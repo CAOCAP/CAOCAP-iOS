@@ -29,7 +29,6 @@ import Foundation
 
 struct AppConstants {
     
-    /*🟨JS*/
     static let bodyID = "_body_"
     static let html = #"""
 <!DOCTYPE html>

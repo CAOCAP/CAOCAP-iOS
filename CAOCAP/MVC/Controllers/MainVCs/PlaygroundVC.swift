@@ -53,7 +53,6 @@ class PlaygroundVC: UIViewController, Storyboarded {
     @IBOutlet weak var jsView: UIView!
     
     var mindMap: UIMindMap!
-//    var flowChart: UIFlowChart! 🟨JS
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +63,6 @@ class PlaygroundVC: UIViewController, Storyboarded {
         
         setupToolsViewGestureRecognizer()
         setupMindMapLayout()
-//        setupFlowChartLayout() 🟨JS
         setupMenuButtons()
     }
     
@@ -90,15 +88,6 @@ class PlaygroundVC: UIViewController, Storyboarded {
             make.edges.equalToSuperview()
         }
     }
-    
-//    func setupFlowChartLayout() { 🟨JS
-//        flowChart = UIFlowChart(frame: view.frame)
-//        flowChart.flowChartDelegate = self
-//        view.insertSubview(flowChart, at: 0)
-//        flowChart.snp.makeConstraints { make in
-//            make.edges.equalToSuperview()
-//        }
-//    }
     
     func setupToolsViewGestureRecognizer() {
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
@@ -244,7 +233,6 @@ class PlaygroundVC: UIViewController, Storyboarded {
     
     @IBAction func didPressArrow(_ sender: UIButton) {
         mindMap.updateSelectedNode(Direction(rawValue: sender.tag))
-//        flowChart.updateSelectedNode(Direction(rawValue: sender.tag)) 🟨JS
     }
     
     @IBAction func didPressAddElement(_ sender: UIButton) {
@@ -261,7 +249,6 @@ class PlaygroundVC: UIViewController, Storyboarded {
         ]
         if sender.tag < htmlTags.count {
             mindMap.add(tag: htmlTags[sender.tag])
-//            flowChart.add(tag: htmlTags[sender.tag]) 🟨JS
         }
     }
     
@@ -391,12 +378,6 @@ extension PlaygroundVC: UIMindMapDelegate {
     }
 }
 
-//extension PlaygroundVC: UIFlowChartDelegate { 🟨JS
-//    func didRemoveNode() {
-//        loadWebView()
-//    }
-//}
-
 extension PlaygroundVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
@@ -446,7 +427,6 @@ extension PlaygroundVC: StoreSubscriber {
         if project == nil {
             project = state.openedProject
             mindMap.project = project
-//            flowChart.project = project 🟨JS
         }
         
         
@@ -465,7 +445,6 @@ extension PlaygroundVC: StoreSubscriber {
         
         loadWebView()/*🤔*/
         mindMap.loadBody()
-//        flowChart.loadStartEvent() 🟨JS
         
         projectTitle.text = project?.getDocumentTitle()
         

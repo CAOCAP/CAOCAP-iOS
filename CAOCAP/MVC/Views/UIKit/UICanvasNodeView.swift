@@ -16,29 +16,14 @@ protocol UICanvasNodeViewDelegate {
 class CanvasNode {
     let name: String
     let id: String
-    let parent: CanvasNode?
-    let children: [CanvasNode]?
-    let element: Element? /*🟨JS*/
+    let element: Element
     
     //this is used for UIMindMap
     init(element: Element) {
         self.name = element.tagName()
         self.id = element.id()
-        self.parent = nil
-        self.children = nil
         self.element = element
     }
-    
-    //this is used for UIFlowChart
-    init(name: String, id: String, parent: CanvasNode? = nil, children: [CanvasNode] = []) {
-        self.name = name
-        self.id = id
-        self.parent = parent
-        self.children = children
-        self.element = nil
-    }
-    
-    
 }
 
 class UICanvasNodeView: UIView, UIContextMenuInteractionDelegate {
@@ -68,7 +53,7 @@ class UICanvasNodeView: UIView, UIContextMenuInteractionDelegate {
         switch node.name {
         case "body":
             backgroundColor = .systemBlue
-        case "span","canvas","div","header","main","footer","article","section","aside","nav", "Start Event"/*❗️🙃*/:
+        case "span","canvas","div","header","main","footer","article","section","aside","nav":
             backgroundColor = .systemGreen
         case "button","a","input":
             backgroundColor = .systemPurple

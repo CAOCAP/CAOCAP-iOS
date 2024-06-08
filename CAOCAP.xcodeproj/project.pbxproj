@@ -18,7 +18,6 @@
 		21326ED02A530CAE00255570 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21326ECF2A530CAE00255570 /* UserDefaults.swift */; };
 		2133D70F2B3B628800A854F6 /* CAOCAPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2133D70E2B3B628800A854F6 /* CAOCAPTests.swift */; };
 		2133D7182B42EC1300A854F6 /* UICanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2133D7172B42EC1300A854F6 /* UICanvas.swift */; };
-		2133D71A2B42F05600A854F6 /* UIFlowChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2133D7192B42F05600A854F6 /* UIFlowChart.swift */; };
 		213DF5E02A5883D300679BB2 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 213DF5DF2A5883D300679BB2 /* SwiftSoup */; };
 		213DF5E32A5886B300679BB2 /* ReSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 213DF5E22A5886B300679BB2 /* ReSwift */; };
 		213DF5E62A58A92F00679BB2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 213DF5E52A58A92F00679BB2 /* Lottie */; };
@@ -134,7 +133,6 @@
 		2133D70C2B3B628800A854F6 /* CAOCAPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CAOCAPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2133D70E2B3B628800A854F6 /* CAOCAPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAOCAPTests.swift; sourceTree = "<group>"; };
 		2133D7172B42EC1300A854F6 /* UICanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICanvas.swift; sourceTree = "<group>"; };
-		2133D7192B42F05600A854F6 /* UIFlowChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChart.swift; sourceTree = "<group>"; };
 		2147F5182A6F2001004245AE /* ISOLanguageCodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISOLanguageCodeCell.swift; sourceTree = "<group>"; };
 		214995232A5C3404008B9987 /* ReduxActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxActions.swift; sourceTree = "<group>"; };
 		214995252A5C3414008B9987 /* ReduxReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxReducer.swift; sourceTree = "<group>"; };
@@ -610,7 +608,6 @@
 			children = (
 				2133D7172B42EC1300A854F6 /* UICanvas.swift */,
 				2186DB102A30DF4700773C5E /* UIMindMap.swift */,
-				2133D7192B42F05600A854F6 /* UIFlowChart.swift */,
 				210F19AD2A42DBE100D71A66 /* UICanvasNodeView.swift */,
 				210F19AF2A42DC9800D71A66 /* UIStroke.swift */,
 			);
@@ -833,7 +830,6 @@
 				215DE72B2B527BC100546394 /* ProjectWebViewVC.swift in Sources */,
 				2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */,
 				21A861D82A78D2C4004D36A3 /* WhatsNewVC.swift in Sources */,
-				2133D71A2B42F05600A854F6 /* UIFlowChart.swift in Sources */,
 				21534D9F2A59E58100E8078B /* ProjectFilesVC.swift in Sources */,
 				21AF3CC82A6B70F1002E96E3 /* ProjectLinkVC.swift in Sources */,
 				21534D9B2A59CD2B00E8078B /* ChartsVC.swift in Sources */,

@@ -23,7 +23,7 @@ class Project {
     
     init() {
         do {
-            selectedElementID = AppConstants.bodyID/*🟨JS*/
+            selectedElementID = AppConstants.bodyID
             document = try SwiftSoup.parse(AppConstants.html)
         } catch Exception.Error(let type, let message) {
             print(type, message)
@@ -135,7 +135,7 @@ class Project {
         }
     }
     
-    func getSelectedElement() -> Element? {/*🟨JS*/
+    func getSelectedElement() -> Element? {
         if let selectedElementID = selectedElementID {
             do {
                 return try document?.body()?.getElementById(selectedElementID)

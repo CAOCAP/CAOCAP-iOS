@@ -50,7 +50,7 @@ class UIMindMap: UICanvas {
     }
     
     func setNodePosition(_ nodeView: UICanvasNodeView) {
-        guard let element = nodeView.node.element else { return }
+        let element = nodeView.node.element
         if element.tagName() == "body" {
             nodeView.snp.makeConstraints {
                 $0.centerX.equalToSuperview()
@@ -101,7 +101,7 @@ class UIMindMap: UICanvas {
     }
     
     func drawNodeStrokes(_ nodeView: UICanvasNodeView) {
-        guard let countChildren = nodeView.node.element?.children().count else { return }
+        let countChildren = nodeView.node.element.children().count
         if countChildren > 0 {
             let nodeStroke = UIStroke(lines: countChildren)
             canvas.insertSubview(nodeStroke, at: 0)
