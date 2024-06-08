@@ -17,16 +17,28 @@ class CanvasNode {
     let name: String
     let id: String
     let parent: CanvasNode?
-    let children: [CanvasNode]
+    let children: [CanvasNode]?
     let element: Element? /*🟨JS*/
     
-    init(name: String, id: String, parent: CanvasNode? = nil, children: [CanvasNode], element: Element? = nil) {
+    //this is used for UIMindMap
+    init(element: Element) {
+        self.name = element.tagName()
+        self.id = element.id()
+        self.parent = nil
+        self.children = nil
+        self.element = element
+    }
+    
+    //this is used for UIFlowChart
+    init(name: String, id: String, parent: CanvasNode? = nil, children: [CanvasNode] = []) {
         self.name = name
         self.id = id
         self.parent = parent
         self.children = children
-        self.element = element
+        self.element = nil
     }
+    
+    
 }
 
 class UICanvasNodeView: UIView, UIContextMenuInteractionDelegate {

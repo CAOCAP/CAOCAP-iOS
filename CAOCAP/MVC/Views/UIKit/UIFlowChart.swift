@@ -19,7 +19,26 @@ class UIFlowChart: UICanvas {
     var nodeTree = [String: UICanvasNodeView]()
     var flowChartDelegate: UIFlowChartDelegate?
     
-    func draw(_ node: CanvasNode) { 
+    func loadStartEvent() { /*🟨JS: FlowChart should start with an "Event" node to be Event-driven programming */
+        /* TODO: Fix this flowChart function❗️🙃*/
+        print("\(#function)ing...")
+        clearCanvas()
+        let startNode = CanvasNode(name: "Start Event", id: "Start Event", children: [CanvasNode(name: "Action", id: "Action")])
+        draw(startNode)
+        guard let startNodeChildren = startNode.children else { return }
+        if !startNodeChildren.isEmpty { load(children: startNodeChildren) }
+    }
+    
+    func load(children: [CanvasNode]) {  /*🟨JS*/
+        print("\(#function)ing...")
+        children.forEach { child in
+            draw(child)
+            guard let childChildren = child.children else { return }
+            if !childChildren.isEmpty { load(children: childChildren) }
+        }
+    }
+    
+    func draw(_ node: CanvasNode) {
         print("\(#function)ing... \(node.name)")
         let nodeView = UICanvasNodeView(node: node)
         nodeTree[node.id] = nodeView
@@ -83,7 +102,7 @@ class UIFlowChart: UICanvas {
     }
     
     func drawNodeStrokes(_ nodeView: UICanvasNodeView) {
-        let countChildren = nodeView.node.children.count
+        guard let countChildren = nodeView.node.children?.count else { return }
         print("\(#function)ing... \(countChildren)")
         if countChildren > 0 {
             let nodeStroke = UIStroke(lines: countChildren)
@@ -96,22 +115,6 @@ class UIFlowChart: UICanvas {
         }
     }
     
-    func loadStartEvent() { /*🟨JS: FlowChart should start with an "Event" node to be Event-driven programming */
-        /* TODO: Fix this flowChart function❗️🙃*/
-        print("\(#function)ing...")
-        clearCanvas()
-        let startNode = CanvasNode(name: "Start Event", id: "Start Event", children: [CanvasNode(name: "Action", id: "Action", children: [], element: nil)], element: nil)
-        draw(startNode)
-        if !startNode.children.isEmpty { load(children: startNode.children) }
-    }
-    
-    func load(children: [CanvasNode]) {  /*🟨JS*/
-        print("\(#function)ing...")
-        children.forEach { child in
-            draw(child)
-            if !child.children.isEmpty { load(children: child.children) }
-        }
-    }
     
     func add(tag: String) { /*🟨JS*/
         /* TODO: Fix this flowChart function❗️🙃*/

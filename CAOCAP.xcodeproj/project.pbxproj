@@ -609,8 +609,8 @@
 			isa = PBXGroup;
 			children = (
 				2133D7172B42EC1300A854F6 /* UICanvas.swift */,
-				2133D7192B42F05600A854F6 /* UIFlowChart.swift */,
 				2186DB102A30DF4700773C5E /* UIMindMap.swift */,
+				2133D7192B42F05600A854F6 /* UIFlowChart.swift */,
 				210F19AD2A42DBE100D71A66 /* UICanvasNodeView.swift */,
 				210F19AF2A42DC9800D71A66 /* UIStroke.swift */,
 			);

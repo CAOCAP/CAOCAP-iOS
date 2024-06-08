@@ -19,6 +19,24 @@ class UIMindMap: UICanvas {
     var nodeTree = [String: UICanvasNodeView]()
     var mindMapDelegate: UIMindMapDelegate?
     
+    func loadBody() {
+        /* TODO: Fix this mindmap function❗️🙃*/
+        print("\(#function)ing...")
+        guard let body = project?.document?.body() else { return }
+        clearCanvas()
+        draw(CanvasNode(element: body))
+        if !body.children().isEmpty() { load(children: body.children()) }
+    }
+    
+    func load(children: Elements) {
+        /* TODO: Fix this mindmap function❗️🙃*/
+        print("\(#function)ing...")
+        children.forEach { child in
+            draw(CanvasNode(element: child))
+            if !child.children().isEmpty() { load(children: child.children()) }
+        }
+    }
+    
     func draw(_ node: CanvasNode) {
         print("\(#function)ing... \(node.name)")
         let nodeView = UICanvasNodeView(node: node)
@@ -53,7 +71,7 @@ class UIMindMap: UICanvas {
                         //near centre left child
                         nodeView.snp.makeConstraints { $0.centerX.equalTo(parentView.snp.centerX).offset(-90)}
                     } else {
-                        //push to the right or left| 
+                        //push to the right or left|
                         //i'm index 0 of 6 -> 0 - 3 + 0.5-> -2.5*180 = -450,
                         //i'm index 1 of 6 -> 1 - 3 -> -1.5*180 = -270
                         // ---------two near centre children-----------
@@ -92,24 +110,6 @@ class UIMindMap: UICanvas {
                 make.centerX.equalTo(nodeView.snp.centerX)
                 make.top.equalTo(nodeView.snp.bottom)
             }
-        }
-    }
-    
-    func loadBody() {
-        /* TODO: Fix this mindmap function❗️🙃*/
-        print("\(#function)ing...")
-        guard let body = project?.document?.body() else { return }
-        clearCanvas()
-        draw(CanvasNode(name: body.tagName(), id: body.id(), children: []/*❗️🙃*/, element: body))
-        if !body.children().isEmpty() { load(children: body.children()) }
-    }
-    
-    func load(children: Elements) {
-        /* TODO: Fix this mindmap function❗️🙃*/
-        print("\(#function)ing...")
-        children.forEach { child in
-            draw(CanvasNode(name: child.tagName(), id: child.id(), children: []/*❗️🙃*/, element: child))
-            if !child.children().isEmpty() { load(children: child.children()) }
         }
     }
     
