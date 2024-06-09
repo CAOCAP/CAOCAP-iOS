@@ -50,9 +50,17 @@ class UICanvas: UIScrollView, UIScrollViewDelegate {
         }
     }
     
-    func expandCanvas(width: CGFloat, height: CGFloat) {
-        canvasWidthConstraint.constant += width
-        canvasHeightConstraint.constant += height
+    func expandCanvasIfNeeded() {
+        canvas.layoutIfNeeded()
+        canvas.subviews.forEach { view in
+            if view.frame.maxY > canvasHeightConstraint.constant{
+                canvasHeightConstraint.constant += 50
+            }
+            
+            if view.frame.maxX > canvasWidthConstraint.constant || view.frame.minX < 0 {
+                canvasWidthConstraint.constant += 50
+            }
+        }
     }
     
     func clearCanvas() {
@@ -69,17 +77,6 @@ class UICanvas: UIScrollView, UIScrollViewDelegate {
         /*🤔 🤔 🤔*/
     }
     
-//    func draw(_ node: CanvasNode) {
-//        print("\(#function)ing... \(node.name)")
-//        let nodeView = UICanvasNodeView(node: node)
-//        nodeTree[node.id] = nodeView
-//        nodeView.delegate = self
-//        canvas.addSubview(nodeView)
-//        expandCanvas(width: 30, height: 30)
-//        /*👆🏼🤔 expanding with a constent number is not the best way for this*/
-//        setNodePosition(nodeView)
-//        drawNodeStrokes(nodeView)
-//    }
     
     //MARK: - handle Zooming in/out
     lazy var doubleTapZoom: UITapGestureRecognizer = {
