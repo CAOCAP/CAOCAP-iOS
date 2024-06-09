@@ -98,6 +98,7 @@
 		21C21C682A38DFAD00F40BE3 /* Ubuntu-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21C21C5F2A38DFAD00F40BE3 /* Ubuntu-Italic.ttf */; };
 		21C21C692A38DFAD00F40BE3 /* Ubuntu-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21C21C602A38DFAD00F40BE3 /* Ubuntu-Light.ttf */; };
 		21C21C6A2A38DFAD00F40BE3 /* UFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 21C21C612A38DFAD00F40BE3 /* UFL.txt */; };
+		21CB66F42C15F0540062D7AD /* UIScrollView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21CB66F32C15F0540062D7AD /* UIScrollView+Extensions.swift */; };
 		21DBA0012A38F4C800DFAC66 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DBA0002A38F4C800DFAC66 /* HomeVC.swift */; };
 		21DBA0032A39E18C00DFAC66 /* StoreKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DBA0022A39E18C00DFAC66 /* StoreKitManager.swift */; };
 		21DBA0052A39EC5500DFAC66 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DBA0042A39EC5500DFAC66 /* UIFont+Extensions.swift */; };
@@ -208,6 +209,7 @@
 		21C21C5F2A38DFAD00F40BE3 /* Ubuntu-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Italic.ttf"; sourceTree = "<group>"; };
 		21C21C602A38DFAD00F40BE3 /* Ubuntu-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Light.ttf"; sourceTree = "<group>"; };
 		21C21C612A38DFAD00F40BE3 /* UFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UFL.txt; sourceTree = "<group>"; };
+		21CB66F32C15F0540062D7AD /* UIScrollView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extensions.swift"; sourceTree = "<group>"; };
 		21DBA0002A38F4C800DFAC66 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		21DBA0022A39E18C00DFAC66 /* StoreKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitManager.swift; sourceTree = "<group>"; };
 		21DBA0042A39EC5500DFAC66 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 			isa = PBXGroup;
 			children = (
 				2186DB0C2A30946900773C5E /* UIView+Extensions.swift */,
+				21CB66F32C15F0540062D7AD /* UIScrollView+Extensions.swift */,
 				212E2B1A2A745BBD00125C50 /* UIColor+Extensions.swift */,
 				21DBA0042A39EC5500DFAC66 /* UIFont+Extensions.swift */,
 				21AF3CD42A6BE315002E96E3 /* String+Extensions.swift */,
@@ -851,6 +854,7 @@
 				21DBA0052A39EC5500DFAC66 /* UIFont+Extensions.swift in Sources */,
 				2186DB0D2A30946900773C5E /* UIView+Extensions.swift in Sources */,
 				21AF3CCE2A6B7128002E96E3 /* ProjectFontsVC.swift in Sources */,
+				21CB66F42C15F0540062D7AD /* UIScrollView+Extensions.swift in Sources */,
 				21DBA0032A39E18C00DFAC66 /* StoreKitManager.swift in Sources */,
 				21326ED02A530CAE00255570 /* UserDefaults.swift in Sources */,
 				21C21C4B2A34B60200F40BE3 /* SettingsVC.swift in Sources */,

@@ -130,7 +130,7 @@ class UIMindMap: UICanvas {
         } catch {
             print("error")
         }
-        select(newElement.id())/*🤔*/
+        select(newElement.id())
     }
     
     func delete(_ element: Element) {
@@ -144,7 +144,7 @@ class UIMindMap: UICanvas {
         } catch {
             print("error")
         }
-        select(parent.id())/*🤔*/
+        select(parent.id())
     }
     
     func select(_ elementID: String) {
@@ -154,6 +154,8 @@ class UIMindMap: UICanvas {
         print("Current Selected Node ID: \(elementID)")
         if let selectedNodeView = nodeTree[elementID] {
             selectedNodeView.layer.borderWidth = 2
+            zoom(to: zoomRect(scale: 1.5, center: CGPoint(x: selectedNodeView.frame.midX, y: selectedNodeView.frame.midY)), animated: true)
+            
         }
         if let previousNodeView = nodeTree[previouslySelectedID] {
             previousNodeView.layer.borderWidth = 0

@@ -70,10 +70,9 @@ class UICanvas: UIScrollView, UIScrollViewDelegate {
     
     func centerCanvas() {
         print("\(#function)ing...")
-        let centerOffsetX = (contentSize.width - frame.size.width) / 2
-        let centerOffsetY = (contentSize.height - frame.size.height) / 2
-        let centerPoint = CGPoint(x: centerOffsetX, y: centerOffsetY)
-        setContentOffset(centerPoint, animated: true)
+        let centerPoint = CGPoint(x: canvasWidthConstraint.constant / 4,
+                                  y: canvasHeightConstraint.constant / 4)
+        zoom(toPoint: centerPoint, scale: 0.5, animated: true)
         /*🤔 🤔 🤔*/
     }
     
