@@ -50,7 +50,7 @@ class NavigationVC: ContainerVC, Storyboarded {
     }
     
     @IBAction func didPressPowerButton(_ sender: UIButton) {
-        coordinator?.viewWorld()
+        coordinator?.createNewProject()
     }
     
     
