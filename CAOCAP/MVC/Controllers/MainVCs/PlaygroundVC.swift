@@ -27,6 +27,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
     
     @IBOutlet weak var toolsView: UIView!
     @IBOutlet weak var toolsViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var toolsPageControl: UIPageControl!
     
     @IBOutlet weak var htmlView: UIView!
     @IBOutlet weak var htmlKeyboard: UIStackView!
@@ -34,15 +35,12 @@ class PlaygroundVC: UIViewController, Storyboarded {
     @IBOutlet weak var attributesView: UIView!
     @IBOutlet weak var attributesStackView: UIStackView!
     @IBOutlet weak var attributesSegmentedControl: UISegmentedControl!
-    
     @IBOutlet weak var contentTextField: UITextField!
     @IBOutlet var textDecorationButtons: [UIButton]!
     @IBOutlet weak var textAlignmentSegmentedControl: UISegmentedControl!
-    
     @IBOutlet weak var typeButton: UIButton!
     @IBOutlet weak var semanticButton: UIButton!
     @IBOutlet weak var listStyleButton: UIButton!
-    
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var sourceTextField: UITextField!
     @IBOutlet weak var backgroundColorWell: UIColorWell!
@@ -150,19 +148,33 @@ class PlaygroundVC: UIViewController, Storyboarded {
         }
     }
     
-    var keyboardSwipeIndex = 0
-    @objc func handleKeyboardSwipe(sender: UISwipeGestureRecognizer) {
+    var keyboardIndex = 1
+    var keyboardPreviousIndex = 1
+    func animateToKeyboard(at index: Int) {
+        keyboardPreviousIndex = keyboardIndex
+        keyboardIndex = index
+        if keyboardIndex < 0 { keyboardIndex = 2 } else if keyboardIndex > 2 { keyboardIndex = 0 }
         let keyboardViews = [jsView, htmlView, attributesView]
+        keyboardViews.forEach { $0?.isHidden = true }
+        keyboardViews[keyboardIndex]?.isHidden = false
+    }
+    
+    @IBAction func didPressToolsPageControl(_ sender: UIPageControl) {
+        if sender.currentPage != keyboardIndex {
+            animateToKeyboard(at: sender.currentPage)
+        }
+    }
+    
+    
+    @objc func handleKeyboardSwipe(sender: UISwipeGestureRecognizer) {
         if sender.state == .ended {
             switch sender.direction {
             case .right:
-                if keyboardSwipeIndex > 0 { keyboardSwipeIndex -= 1 } else { keyboardSwipeIndex = 2 }
-                keyboardViews.forEach { $0?.isHidden = true }
-                keyboardViews[keyboardSwipeIndex]?.isHidden = false
+                animateToKeyboard(at: keyboardIndex - 1)
+                toolsPageControl.currentPage = keyboardIndex
             case .left:
-                if keyboardSwipeIndex < 2 { keyboardSwipeIndex += 1 } else { keyboardSwipeIndex = 0 }
-                keyboardViews.forEach { $0?.isHidden = true }
-                keyboardViews[keyboardSwipeIndex]?.isHidden = false
+                animateToKeyboard(at: keyboardIndex + 1)
+                toolsPageControl.currentPage = keyboardIndex
             case .up:
                 if toolsViewHeightConstraint.constant == 40 {
                     //only show 6,7 { h=107 }
