@@ -29,10 +29,12 @@ class PlaygroundVC: UIViewController, Storyboarded {
     @IBOutlet weak var toolsViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var toolsPageControl: UIPageControl!
     
-    @IBOutlet weak var htmlView: UIView!
-    @IBOutlet weak var htmlKeyboard: UIStackView!
+    var keyboardViews = [UIView]()
     
-    @IBOutlet weak var attributesView: UIView!
+    @IBOutlet weak var structureKeyboardView: UIView!
+    @IBOutlet weak var structureStackView: UIStackView!
+    
+    @IBOutlet weak var attributesKeyboardView: UIView!
     @IBOutlet weak var attributesStackView: UIStackView!
     @IBOutlet weak var attributesSegmentedControl: UISegmentedControl!
     @IBOutlet weak var contentTextField: UITextField!
@@ -48,11 +50,14 @@ class PlaygroundVC: UIViewController, Storyboarded {
     @IBOutlet weak var hiddenSwitch: UISwitch!
     @IBOutlet weak var tailwindCollectionView: UICollectionView!
     
-    @IBOutlet weak var jsView: UIView!
+    @IBOutlet weak var logicKeyboardView: UIView!
+    @IBOutlet weak var logicStackView: UIStackView!
     
-    var keyboardViews = [UIView]()
+    var mindmaps = [UIMindMap]()
     
-    var mindMap: UIMindMap!
+    var structureMindMap: UIMindMap!
+    var attributesMindMap: UIMindMap!
+    var logicMindMap: UIMindMap!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,12 +86,22 @@ class PlaygroundVC: UIViewController, Storyboarded {
     
     
     func setupMindMapLayout() {
-        mindMap = UIMindMap(frame: view.frame)
-        mindMap.mindMapDelegate = self
-        view.insertSubview(mindMap, at: 0)
-        mindMap.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+        structureMindMap = UIMindMap(frame: view.frame)
+        attributesMindMap = UIMindMap(frame: view.frame)
+        logicMindMap = UIMindMap(frame: view.frame)
+        mindmaps = [logicMindMap, structureMindMap, attributesMindMap]
+        mindmaps.forEach { mindmap in
+            view.insertSubview(mindmap, at: 0)
+            mindmap.mindMapDelegate = self
+            mindmap.isHidden = true
+            mindmap.alpha = 0
+            mindmap.snp.makeConstraints { make in
+                make.edges.equalToSuperview()
+            }
         }
+        structureMindMap.alpha = 1
+        structureMindMap.isHidden = false
+        
     }
     
     func setupToolsViewLayout() {
@@ -103,7 +118,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
         toolsView.addGestureRecognizer(upSwipe)
         toolsView.addGestureRecognizer(downSwipe)
         
-        keyboardViews = [jsView, htmlView, attributesView]
+        keyboardViews = [logicKeyboardView, structureKeyboardView, attributesKeyboardView]
             
         keyboardViews.forEach { view in
             toolsView.addSubview(view)
@@ -167,13 +182,15 @@ class PlaygroundVC: UIViewController, Storyboarded {
         var animationDirection = keyboardIndex > keyboardPreviousIndex
         if keyboardIndex < 0 { keyboardIndex = 2 } else if keyboardIndex > 2 { keyboardIndex = 0 }
         let currentKeyboard = keyboardViews[keyboardIndex], previousKeyboard = keyboardViews[keyboardPreviousIndex]
-        currentKeyboard.isHidden = false
+        let currentMindMap = mindmaps[keyboardIndex], previousMindMap = mindmaps[keyboardPreviousIndex]
+        currentKeyboard.isHidden = false; currentMindMap.isHidden = false
         currentKeyboard.frame.origin.x = animationDirection ? self.view.frame.width : -self.view.frame.width
         UIView.animate(withDuration: 0.3) {
+            currentMindMap.alpha = 1; previousMindMap.alpha = 0
             currentKeyboard.center.x = previousKeyboard.center.x
             previousKeyboard.frame.origin.x = animationDirection ? -self.view.frame.width : self.view.frame.width
         } completion: { _ in
-            previousKeyboard.isHidden = true
+            previousKeyboard.isHidden = true; previousMindMap.isHidden = true
         }
 
 
@@ -184,7 +201,6 @@ class PlaygroundVC: UIViewController, Storyboarded {
             animateToKeyboard(at: sender.currentPage)
         }
     }
-    
     
     @objc func handleKeyboardSwipe(sender: UISwipeGestureRecognizer) {
         if sender.state == .ended {
@@ -200,7 +216,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
                     //only show 6,7 { h=107 }
                     toolsViewHeightConstraint.constant = 107
                     for n in 6...7 {
-                        let view = htmlKeyboard.arrangedSubviews[n]
+                        let view = structureStackView.arrangedSubviews[n]
                         view.alpha = 1
                         view.isHidden = false
                     }
@@ -209,7 +225,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
                     toolsViewHeightConstraint.constant = 255
                     for n in 0...5 {
                         if [3,4].contains(n) { continue }
-                        let view = htmlKeyboard.arrangedSubviews[n]
+                        let view = structureStackView.arrangedSubviews[n]
                         view.alpha = 1
                         view.isHidden = false
                     }
@@ -218,7 +234,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
                     webViewWidthConstraint.constant = 120
                     toolsViewHeightConstraint.constant = 329
                     for n in 3...4 {
-                        let view = htmlKeyboard.arrangedSubviews[n]
+                        let view = structureStackView.arrangedSubviews[n]
                         view.alpha = 1
                         view.isHidden = false
                     }
@@ -228,7 +244,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
                     //hide all { h=40 }
                     toolsViewHeightConstraint.constant = 40
                     for n in 6...7 {
-                        let view = htmlKeyboard.arrangedSubviews[n]
+                        let view = structureStackView.arrangedSubviews[n]
                         view.alpha = 0
                         view.isHidden = true
                     }
@@ -236,7 +252,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
                     //only show 6,7 { h=107 }
                     toolsViewHeightConstraint.constant = 107
                     for n in 0...5 {
-                        let view = htmlKeyboard.arrangedSubviews[n]
+                        let view = structureStackView.arrangedSubviews[n]
                         view.alpha = 0
                         view.isHidden = true
                     }
@@ -245,7 +261,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
                     webViewWidthConstraint.constant = 160
                     toolsViewHeightConstraint.constant = 255
                     for n in 3...4 {
-                        let view = htmlKeyboard.arrangedSubviews[n]
+                        let view = structureStackView.arrangedSubviews[n]
                         view.alpha = 0
                         view.isHidden = true
                     }
@@ -264,7 +280,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
     }
     
     @IBAction func didPressArrow(_ sender: UIButton) {
-        mindMap.updateSelectedNode(Direction(rawValue: sender.tag))
+        structureMindMap.updateSelectedNode(Direction(rawValue: sender.tag))
     }
     
     @IBAction func didPressAddElement(_ sender: UIButton) {
@@ -280,7 +296,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
             "ul","br","hr",
         ]
         if sender.tag < htmlTags.count {
-            mindMap.add(tag: htmlTags[sender.tag])
+            structureMindMap.add(tag: htmlTags[sender.tag])
         }
     }
     
@@ -443,7 +459,6 @@ extension PlaygroundVC: UITextFieldDelegate {
         tailwindCollectionView.reloadData()
     }
     
-    
 }
 
 extension PlaygroundVC: StoreSubscriber {
@@ -458,7 +473,7 @@ extension PlaygroundVC: StoreSubscriber {
     func newState(state: ReduxState) {
         if project == nil {
             project = state.openedProject
-            mindMap.project = project
+            structureMindMap.project = project
         }
         
         
@@ -476,7 +491,7 @@ extension PlaygroundVC: StoreSubscriber {
 //        }
         
         loadWebView()/*🤔*/
-        mindMap.loadBody()
+        structureMindMap.loadBody()
         
         projectTitle.text = project?.getDocumentTitle()
         

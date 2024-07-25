@@ -354,22 +354,23 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="attributesKeyboardView" destination="cvx-Yu-rkX" id="4yD-nO-D5S"/>
                         <outlet property="attributesSegmentedControl" destination="wJ2-e6-4tK" id="sKH-0L-BUq"/>
                         <outlet property="attributesStackView" destination="5RH-dU-Kyu" id="U7y-hI-3US"/>
-                        <outlet property="attributesView" destination="cvx-Yu-rkX" id="4yD-nO-D5S"/>
                         <outlet property="backgroundColorWell" destination="cjN-Wi-5tG" id="cfO-vt-kbz"/>
                         <outlet property="contentTextField" destination="AQP-7q-nL4" id="jlM-99-tQU"/>
                         <outlet property="hiddenSwitch" destination="So9-LD-V30" id="PaI-ON-18C"/>
-                        <outlet property="htmlKeyboard" destination="Grg-nX-Or3" id="C8P-4U-C4K"/>
-                        <outlet property="htmlView" destination="nAS-jS-Vj6" id="blM-uo-0Mj"/>
                         <outlet property="idTextField" destination="yIc-pL-0pm" id="nrT-2x-DWr"/>
-                        <outlet property="jsView" destination="ubS-XK-Ard" id="zxy-9v-H6b"/>
                         <outlet property="listStyleButton" destination="lLq-gC-Eht" id="YjG-pj-WDy"/>
+                        <outlet property="logicKeyboardView" destination="ubS-XK-Ard" id="zxy-9v-H6b"/>
+                        <outlet property="logicStackView" destination="3eM-WT-0wx" id="emW-rL-uea"/>
                         <outlet property="projectTitle" destination="Dpt-m0-Ea9" id="f9Z-Lc-8qH"/>
                         <outlet property="redoButton" destination="22A-CW-8eM" id="Enz-y8-Wsk"/>
                         <outlet property="resizeIcon" destination="6CB-c1-YZ5" id="P1s-Q6-bk3"/>
                         <outlet property="semanticButton" destination="Phq-b0-Fg0" id="7hk-BT-umz"/>
                         <outlet property="sourceTextField" destination="kwg-JH-yKt" id="LQ2-Ey-QyK"/>
+                        <outlet property="structureKeyboardView" destination="nAS-jS-Vj6" id="blM-uo-0Mj"/>
+                        <outlet property="structureStackView" destination="Grg-nX-Or3" id="C8P-4U-C4K"/>
                         <outlet property="tailwindCollectionView" destination="Bdm-L9-t3A" id="uAC-xx-4OR"/>
                         <outlet property="textAlignmentSegmentedControl" destination="aaK-GC-HN0" id="obH-Cl-WdX"/>
                         <outlet property="textColorWell" destination="tSp-fW-p7T" id="0iY-FJ-ojV"/>
