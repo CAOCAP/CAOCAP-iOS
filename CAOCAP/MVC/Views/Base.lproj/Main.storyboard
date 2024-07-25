@@ -157,7 +157,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="HCA-IB-AaJ">
-                                <rect key="frame" x="330" y="57" width="40" height="160"/>
+                                <rect key="frame" x="330" y="57" width="40" height="120"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qci-87-zc2">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -205,7 +205,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7o1-rE-Qsa">
-                                        <rect key="frame" x="0.0" y="120" width="40" height="40"/>
+                                        <rect key="frame" x="0.0" y="80" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="Azl-Yr-Mf7"/>
                                             <constraint firstAttribute="height" constant="40" id="DBm-oK-Mde"/>
@@ -220,6 +220,11 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="L8S-vQ-irU"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfp-2z-eXU">
                                 <rect key="frame" x="20" y="495" width="45" height="30"/>
@@ -1863,6 +1868,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpg-LF-Slc">
                                                 <rect key="frame" x="0.0" y="0.0" width="81.666666666666671" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <buttonConfiguration key="configuration" style="tinted" image="paintpalette" catalog="system">
                                                     <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
@@ -1887,7 +1893,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Se3-lA-1P6">
-                                                <rect key="frame" x="226.66666666666671" y="0.0" width="73.333333333333343" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="35"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <buttonConfiguration key="configuration" style="tinted" image="crown" catalog="system">
                                                     <color key="baseForegroundColor" systemColor="systemYellowColor"/>
@@ -1901,6 +1907,12 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="35" id="yRD-d2-tdp"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="hpg-LF-Slc"/>
+                                                <exclude reference="xyY-2N-eLS"/>
+                                            </mask>
+                                        </variation>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Myt-dz-Lvf">
                                         <rect key="frame" x="0.0" y="445.66666666666674" width="300" height="34.333333333333314"/>
@@ -3058,7 +3070,7 @@ There are no other in-app purchases.</string>
                                 <rect key="frame" x="20" y="745" width="350" height="60"/>
                                 <subviews>
                                     <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apd-Ak-UPb">
-                                        <rect key="frame" x="9.9999999999999964" y="25" width="59.666666666666657" height="30"/>
+                                        <rect key="frame" x="10" y="25" width="104.66666666666667" height="30"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="1Kt-kg-h4g"/>
@@ -3073,7 +3085,7 @@ There are no other in-app purchases.</string>
                                         <blurEffect style="regular"/>
                                     </visualEffectView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Tw-eB-3UN">
-                                        <rect key="frame" x="14.666666666666664" y="53" width="49.999999999999993" height="2"/>
+                                        <rect key="frame" x="37.333333333333336" y="53" width="50.000000000000007" height="2"/>
                                         <color key="backgroundColor" systemColor="labelColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="KJO-8f-WMc"/>
@@ -3089,17 +3101,17 @@ There are no other in-app purchases.</string>
                                         <rect key="frame" x="10" y="12" width="330" height="36"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Syk-wr-5OI">
-                                                <rect key="frame" x="0.0" y="0.0" width="59.666666666666664" height="36"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="36"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="hHO-lO-43H">
-                                                        <rect key="frame" x="16.666666666666664" y="5" width="26" height="26"/>
+                                                        <rect key="frame" x="39.333333333333329" y="5" width="26" height="26"/>
                                                         <color key="tintColor" systemColor="labelColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="hHO-lO-43H" secondAttribute="height" multiplier="1:1" id="0Hl-Xh-zmh"/>
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6p-o0-dWL">
-                                                        <rect key="frame" x="0.0" y="0.0" width="59.666666666666664" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="36"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain"/>
                                                         <connections>
@@ -3147,10 +3159,10 @@ There are no other in-app purchases.</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pd9-KX-8a1">
-                                                <rect key="frame" x="135.33333333333334" y="0.0" width="59.333333333333343" height="36"/>
+                                                <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="36"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZn-T4-FXi">
-                                                        <rect key="frame" x="3" y="-2" width="53.333333333333336" height="40"/>
+                                                        <rect key="frame" x="25.666666666666689" y="-2" width="53.333333333333343" height="40"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="power" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7r7-Cp-lhS">
                                                                 <rect key="frame" x="16.666666666666657" y="10.333333333333332" width="20" height="19.33333333333335"/>
@@ -3223,17 +3235,17 @@ There are no other in-app purchases.</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qup-0d-xTZ">
-                                                <rect key="frame" x="270.33333333333331" y="0.0" width="59.666666666666686" height="36"/>
+                                                <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="36"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gear" translatesAutoresizingMaskIntoConstraints="NO" id="qRm-u9-aDP">
-                                                        <rect key="frame" x="17" y="5" width="26" height="26"/>
+                                                        <rect key="frame" x="39.333333333333343" y="5" width="26" height="26"/>
                                                         <color key="tintColor" systemColor="labelColor"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="qRm-u9-aDP" secondAttribute="height" multiplier="1:1" id="ZIG-Cv-CNs"/>
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfS-rz-52Z">
-                                                        <rect key="frame" x="0.0" y="0.0" width="59.666666666666664" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="36"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain"/>
                                                         <connections>
@@ -3252,6 +3264,12 @@ There are no other in-app purchases.</string>
                                                 </constraints>
                                             </view>
                                         </subviews>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="PnO-AX-rEq"/>
+                                                <exclude reference="yA8-nf-BsP"/>
+                                            </mask>
+                                        </variation>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="separatorColor"/>
