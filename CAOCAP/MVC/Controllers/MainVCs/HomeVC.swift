@@ -15,15 +15,63 @@ class HomeVC: UIViewController, Storyboarded {
     
     var user: User?
     
+    @IBOutlet weak var welcomingLabel: UILabel!
     @IBOutlet weak var uidLabel: UILabel!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var appVersion: UILabel!
+    @IBOutlet weak var purchaseButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         appVersion.text = getVersion()
         setupStackView()
+        fetchProSubscriptionStatus()
     }
+    
+    func setupProSubscriptionStatus() {
+        if UserDefaults.standard.isSubscribed {
+            welcomingLabel.text = "Welcome, back pro user 👑👋🏼"
+            purchaseButton.isHidden = true
+        } else {
+            welcomingLabel.text = "Welcome, back user 👋🏼"
+            purchaseButton.isHidden = false
+        }
+    }
+    
+    func fetchProSubscriptionStatus() {
+        setupProSubscriptionStatus()
+        Task {
+            // Start with the assumption that the user has no subscription
+            var hasNoSubscription = true
+            
+            for await result in Transaction.currentEntitlements {
+                if case .verified(let transaction) = result {
+                    // Check if the current transaction is still valid
+                    if isTransactionValid(transaction) {
+                        // If valid, mark as subscribed
+                        hasNoSubscription = false
+                        
+                    } else {
+                        // If not valid, mark as not subscribed
+                        
+                    }
+                }
+            }
+            
+            UserDefaults.standard.isSubscribed = !hasNoSubscription
+            setupProSubscriptionStatus()
+        }
+    }
+
+    private func isTransactionValid(_ transaction: Transaction) -> Bool {
+        // Implement your logic to determine if the transaction is still valid
+        // For example, check the expiration date for subscriptions
+        guard let expirationDate = transaction.expirationDate else {
+            return false
+        }
+        return expirationDate > Date()
+    }
+    
     
     func setupStackView() {
         var squares = [UIView]()
@@ -144,6 +192,10 @@ extension HomeVC: StoreSubscriber {
 
         if let commits = state.commitHistory {
             print(commits)
+        }
+        
+        if state.isSubscribed {
+            setupProSubscriptionStatus()
         }
     }
 }

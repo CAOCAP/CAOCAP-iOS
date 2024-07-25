@@ -20,7 +20,7 @@ class IntroVC: UIViewController {
     }
     
     @IBAction func didPressStart(_ sender: Any) {
-        UserDefaults.standard.introCompleted()
+        UserDefaults.standard.introCompleted = true
         dismiss(animated: true)
     }
     

@@ -1965,8 +1965,10 @@
                     <navigationItem key="navigationItem" id="7Zh-z8-o07"/>
                     <connections>
                         <outlet property="appVersion" destination="JKa-FB-Hq1" id="kgb-n2-Rpb"/>
+                        <outlet property="purchaseButton" destination="Se3-lA-1P6" id="rwL-UV-oOV"/>
                         <outlet property="stackView" destination="0Yd-XL-GPB" id="0T8-yy-F0Z"/>
                         <outlet property="uidLabel" destination="MkU-Vn-ajJ" id="Rdi-IX-GKR"/>
+                        <outlet property="welcomingLabel" destination="b1v-jl-QoD" id="CHq-6B-GeX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aBE-Ww-O05" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2388,14 +2390,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpaceSketchBG" translatesAutoresizingMaskIntoConstraints="NO" id="nI9-kf-bgl">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="581"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="516"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ro8-9s-LdZ">
-                                <rect key="frame" x="20" y="531" width="350" height="259"/>
+                                <rect key="frame" x="20" y="466" width="350" height="324"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="NxR-mB-WD8">
-                                        <rect key="frame" x="10" y="10" width="330" height="239"/>
+                                        <rect key="frame" x="10" y="10" width="330" height="304"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="URc-Dv-q52">
                                                 <rect key="frame" x="39.666666666666671" y="0.0" width="250.66666666666663" height="79"/>
@@ -2420,23 +2422,40 @@ for free before purchasing.</string>
                                                     </label>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CxC-Q8-Btp">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgf-Mm-K8h">
                                                 <rect key="frame" x="0.0" y="94" width="330" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="dJK-hI-crZ"/>
+                                                    <constraint firstAttribute="width" priority="750" constant="360" id="mPL-ze-YKw"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="$4.99/month">
+                                                    <fontDescription key="titleFontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="22"/>
+                                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                                    <color key="baseBackgroundColor" name="AccentColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didPressMonthly:" destination="fhq-Ws-50g" eventType="touchUpInside" id="Kba-9b-C9V"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CxC-Q8-Btp">
+                                                <rect key="frame" x="0.0" y="159" width="330" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" priority="750" constant="360" id="HYT-Mu-cIl"/>
                                                     <constraint firstAttribute="height" constant="50" id="uPb-Xq-ysA"/>
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="14.99$/month">
-                                                    <fontDescription key="titleFontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="30"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="$49.99/year">
+                                                    <fontDescription key="titleFontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="22"/>
+                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
                                                     <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="didPressPurchaseButton:" destination="fhq-Ws-50g" eventType="touchUpInside" id="3F0-by-Jfe"/>
+                                                    <action selector="didPressYearly:" destination="fhq-Ws-50g" eventType="touchUpInside" id="q89-sI-8mj"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gI2-oI-jgF">
-                                                <rect key="frame" x="19.333333333333343" y="159" width="291.33333333333326" height="35"/>
+                                                <rect key="frame" x="19.333333333333343" y="224" width="291.33333333333326" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="1bD-E6-81r"/>
                                                 </constraints>
@@ -2447,7 +2466,7 @@ There are no other in-app purchases.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="r8B-sz-be6">
-                                                <rect key="frame" x="4.6666666666666572" y="209" width="321" height="30"/>
+                                                <rect key="frame" x="86" y="274" width="158" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="to5-0A-bY1">
                                                         <rect key="frame" x="0.0" y="0.0" width="158" height="30"/>
@@ -2484,6 +2503,11 @@ There are no other in-app purchases.</string>
                                                         </connections>
                                                     </button>
                                                 </subviews>
+                                                <variation key="default">
+                                                    <mask key="subviews">
+                                                        <exclude reference="GwP-ea-gQF"/>
+                                                    </mask>
+                                                </variation>
                                             </stackView>
                                         </subviews>
                                     </stackView>
@@ -2514,7 +2538,7 @@ There are no other in-app purchases.</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="YWP-YE-S2g">
-                                <rect key="frame" x="34" y="244.66666666666663" width="322.33333333333337" height="132"/>
+                                <rect key="frame" x="34" y="212" width="322.33333333333331" height="132"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try CAOCAP Premium for free" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sby-h7-ijT">
                                         <rect key="frame" x="0.0" y="0.0" width="322.33333333333331" height="26"/>
@@ -2523,7 +2547,7 @@ There are no other in-app purchases.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5xS-rW-R7F">
-                                        <rect key="frame" x="65" y="41.000000000000028" width="192" height="20.333333333333329"/>
+                                        <rect key="frame" x="65" y="41" width="192" height="20.333333333333329"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.seal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="w3a-1e-jut">
                                                 <rect key="frame" x="0.0" y="-0.66666666666666785" width="22.333333333333332" height="21.666666666666664"/>
@@ -2538,7 +2562,7 @@ There are no other in-app purchases.</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3Pl-hB-hPM">
-                                        <rect key="frame" x="65" y="76.333333333333343" width="192" height="20.333333333333329"/>
+                                        <rect key="frame" x="65" y="76.333333333333314" width="192" height="20.333333333333329"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.seal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="N4t-Ro-UW8">
                                                 <rect key="frame" x="0.0" y="-0.66666666666666785" width="22.333333333333332" height="21.666666666666664"/>
@@ -2553,7 +2577,7 @@ There are no other in-app purchases.</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="y62-Da-IPW">
-                                        <rect key="frame" x="65" y="111.66666666666666" width="192" height="20.333333333333343"/>
+                                        <rect key="frame" x="65" y="111.66666666666669" width="192" height="20.333333333333343"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.seal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xcC-3B-0Bd">
                                                 <rect key="frame" x="0.0" y="-0.66666666666666785" width="22.333333333333332" height="21.666666666666664"/>

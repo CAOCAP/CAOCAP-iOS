@@ -18,6 +18,8 @@ import SwiftSoup
 
 // MARK: User Actions
 struct AuthUserAction: Action { let user: User }
+struct SubscribeAction: Action { let subscriptionStatus: Bool }
+
 struct ReceivedCommitHistoryAction: Action { let commits: [String] }
 
 // MARK: Daily Challenges
