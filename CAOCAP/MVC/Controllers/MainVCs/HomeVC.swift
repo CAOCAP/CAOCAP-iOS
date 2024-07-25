@@ -8,6 +8,7 @@
 import UIKit
 import ReSwift
 import SwiftUI
+import StoreKit
 import Popovers
 
 class HomeVC: UIViewController, Storyboarded {
@@ -44,7 +45,7 @@ class HomeVC: UIViewController, Storyboarded {
             // Start with the assumption that the user has no subscription
             var hasNoSubscription = true
             
-            for await result in Transaction.currentEntitlements {
+            for await result in StoreKit.Transaction.currentEntitlements {
                 if case .verified(let transaction) = result {
                     // Check if the current transaction is still valid
                     if isTransactionValid(transaction) {
@@ -63,7 +64,7 @@ class HomeVC: UIViewController, Storyboarded {
         }
     }
 
-    private func isTransactionValid(_ transaction: Transaction) -> Bool {
+    private func isTransactionValid(_ transaction: StoreKit.Transaction) -> Bool {
         // Implement your logic to determine if the transaction is still valid
         // For example, check the expiration date for subscriptions
         guard let expirationDate = transaction.expirationDate else {
