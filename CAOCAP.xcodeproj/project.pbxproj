@@ -63,8 +63,6 @@
 		21A861D82A78D2C4004D36A3 /* WhatsNewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21A861D72A78D2C4004D36A3 /* WhatsNewVC.swift */; };
 		21AF3CA52A67E44B002E96E3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 21AF3CA42A67E44B002E96E3 /* SnapKit */; };
 		21AF3CA72A6843A9002E96E3 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CA62A6843A9002E96E3 /* RealmRepository.swift */; };
-		21AF3CAA2A6844C1002E96E3 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 21AF3CA92A6844C1002E96E3 /* Realm */; };
-		21AF3CAC2A6844C1002E96E3 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 21AF3CAB2A6844C1002E96E3 /* RealmSwift */; };
 		21AF3CB02A68565C002E96E3 /* RealmProjectModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CAF2A68565C002E96E3 /* RealmProjectModels.swift */; };
 		21AF3CB22A6B20DF002E96E3 /* CreditsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CB12A6B20DF002E96E3 /* CreditsVC.swift */; };
 		21AF3CB42A6B20FD002E96E3 /* AboutUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AF3CB32A6B20FD002E96E3 /* AboutUsVC.swift */; };
@@ -113,6 +111,8 @@
 		21F1784C2B3ACF64007C14E5 /* acorn.js in Resources */ = {isa = PBXBuildFile; fileRef = 21F1784B2B3ACF64007C14E5 /* acorn.js */; };
 		21F1784E2B3B0455007C14E5 /* walk.js in Resources */ = {isa = PBXBuildFile; fileRef = 21F1784D2B3B0455007C14E5 /* walk.js */; };
 		21FF62032AB263AB0003D064 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FF62022AB263AB0003D064 /* AppConstants.swift */; };
+		ECB40BCD2C51125300818E9C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECB40BCC2C51125300818E9C /* RealmSwift */; };
+		ECB40BCE2C5113B500818E9C /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = ECB40BCC2C51125300818E9C /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +124,20 @@
 			remoteInfo = CAOCAP;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ECB40BCF2C5113B500818E9C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				ECB40BCE2C5113B500818E9C /* RealmSwift in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2106C4142A5C95C300446620 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
@@ -238,6 +252,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECB40BCD2C51125300818E9C /* RealmSwift in Frameworks */,
 				21E148112A7F62C900B503C2 /* FirebaseDatabase in Frameworks */,
 				219339812A7E3FAA002FDE05 /* Popovers in Frameworks */,
 				213DF5E32A5886B300679BB2 /* ReSwift in Frameworks */,
@@ -247,9 +262,7 @@
 				2106C41A2A5C997A00446620 /* FirebaseCrashlytics in Frameworks */,
 				213DF5E02A5883D300679BB2 /* SwiftSoup in Frameworks */,
 				21E1480F2A7F62BE00B503C2 /* FirebaseAuth in Frameworks */,
-				21AF3CAA2A6844C1002E96E3 /* Realm in Frameworks */,
 				213DF5E62A58A92F00679BB2 /* Lottie in Frameworks */,
-				21AF3CAC2A6844C1002E96E3 /* RealmSwift in Frameworks */,
 				21534DA72A5B038D00E8078B /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -678,6 +691,7 @@
 				218DA9C22A2B205800459C61 /* Frameworks */,
 				218DA9C32A2B205800459C61 /* Resources */,
 				2106C41B2A5C9B1700446620 /* ShellScript */,
+				ECB40BCF2C5113B500818E9C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -692,11 +706,10 @@
 				2106C4172A5C997A00446620 /* FirebaseAnalytics */,
 				2106C4192A5C997A00446620 /* FirebaseCrashlytics */,
 				21AF3CA42A67E44B002E96E3 /* SnapKit */,
-				21AF3CA92A6844C1002E96E3 /* Realm */,
-				21AF3CAB2A6844C1002E96E3 /* RealmSwift */,
 				219339802A7E3FAA002FDE05 /* Popovers */,
 				21E1480E2A7F62BE00B503C2 /* FirebaseAuth */,
 				21E148102A7F62C900B503C2 /* FirebaseDatabase */,
+				ECB40BCC2C51125300818E9C /* RealmSwift */,
 			);
 			productName = CAOCAP;
 			productReference = 218DA9C52A2B205800459C61 /* CAOCAP.app */;
@@ -737,8 +750,8 @@
 				213DF5E42A58A92F00679BB2 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 				2106C4162A5C997A00446620 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				21AF3CA32A67E44B002E96E3 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				21AF3CA82A6844C1002E96E3 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				2193397F2A7E3FAA002FDE05 /* XCRemoteSwiftPackageReference "Popovers" */,
+				ECB40BCB2C51125300818E9C /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 218DA9C62A2B205800459C61 /* Products */;
 			projectDirPath = "";
@@ -1089,7 +1102,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon dev";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = Accent;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1100,7 +1113,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1178,7 +1191,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon dev";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = Accent;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CAOCAP/App/Info.plist;
@@ -1188,7 +1201,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1325,7 +1338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = Accent;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1336,7 +1349,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1357,7 +1370,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = Accent;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CAOCAP/App/Info.plist;
@@ -1367,7 +1380,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1469,20 +1482,20 @@
 				minimumVersion = 5.6.0;
 			};
 		};
-		21AF3CA82A6844C1002E96E3 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/realm-swift.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.41.1;
-			};
-		};
 		21C21C502A34B7C400F40BE3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 6.5.0;
+			};
+		};
+		ECB40BCB2C51125300818E9C /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.52.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1523,16 +1536,6 @@
 			package = 21AF3CA32A67E44B002E96E3 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		21AF3CA92A6844C1002E96E3 /* Realm */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 21AF3CA82A6844C1002E96E3 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = Realm;
-		};
-		21AF3CAB2A6844C1002E96E3 /* RealmSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 21AF3CA82A6844C1002E96E3 /* XCRemoteSwiftPackageReference "realm-swift" */;
-			productName = RealmSwift;
-		};
 		21C21C512A34B7C400F40BE3 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 21C21C502A34B7C400F40BE3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
@@ -1547,6 +1550,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2106C4162A5C997A00446620 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
+		};
+		ECB40BCC2C51125300818E9C /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECB40BCB2C51125300818E9C /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

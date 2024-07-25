@@ -50,6 +50,8 @@ class PlaygroundVC: UIViewController, Storyboarded {
     
     @IBOutlet weak var jsView: UIView!
     
+    var keyboardViews = [UIView]()
+    
     var mindMap: UIMindMap!
     
     override func viewDidLoad() {
@@ -59,7 +61,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
         resizeIcon.addGestureRecognizer(resizeGR)
         contentTextField.isFirstResponder
         
-        setupToolsViewGestureRecognizer()
+        setupToolsViewLayout()
         setupMindMapLayout()
         setupMenuButtons()
     }
@@ -87,7 +89,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
         }
     }
     
-    func setupToolsViewGestureRecognizer() {
+    func setupToolsViewLayout() {
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
         let upSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
@@ -100,6 +102,16 @@ class PlaygroundVC: UIViewController, Storyboarded {
         toolsView.addGestureRecognizer(leftSwipe)
         toolsView.addGestureRecognizer(upSwipe)
         toolsView.addGestureRecognizer(downSwipe)
+        
+        keyboardViews = [jsView, htmlView, attributesView]
+            
+        keyboardViews.forEach { view in
+            toolsView.addSubview(view)
+            print("&&&", toolsView.frame.origin)
+            view.snp.makeConstraints { make in
+                make.width.height.equalToSuperview()
+            }
+        }
     }
     
     func setupMenuButtons() {
@@ -132,8 +144,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
         case .began, .changed:
             let touchPoint = sender.location(in: view).x - 20
             if touchPoint > 60 && touchPoint < 240 {
-                webViewWidthConstraint.constant =
-                touchPoint
+                webViewWidthConstraint.constant = touchPoint
             }
         default:
             if webViewWidthConstraint.constant < 90 {
@@ -153,10 +164,19 @@ class PlaygroundVC: UIViewController, Storyboarded {
     func animateToKeyboard(at index: Int) {
         keyboardPreviousIndex = keyboardIndex
         keyboardIndex = index
+        var animationDirection = keyboardIndex > keyboardPreviousIndex
         if keyboardIndex < 0 { keyboardIndex = 2 } else if keyboardIndex > 2 { keyboardIndex = 0 }
-        let keyboardViews = [jsView, htmlView, attributesView]
-        keyboardViews.forEach { $0?.isHidden = true }
-        keyboardViews[keyboardIndex]?.isHidden = false
+        let currentKeyboard = keyboardViews[keyboardIndex], previousKeyboard = keyboardViews[keyboardPreviousIndex]
+        currentKeyboard.isHidden = false
+        currentKeyboard.frame.origin.x = animationDirection ? self.view.frame.width : -self.view.frame.width
+        UIView.animate(withDuration: 0.3) {
+            currentKeyboard.center.x = previousKeyboard.center.x
+            previousKeyboard.frame.origin.x = animationDirection ? -self.view.frame.width : self.view.frame.width
+        } completion: { _ in
+            previousKeyboard.isHidden = true
+        }
+
+
     }
     
     @IBAction func didPressToolsPageControl(_ sender: UIPageControl) {
