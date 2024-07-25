@@ -1,19 +1,19 @@
 //
-//  ProjectWebViewVC.swift
+//  CodePreviewVC.swift
 //  CAOCAP
 //
-//  Created by Azzam AL-Rashed on 13/01/2024.
+//  Created by الشيخ عزام on 19/01/1446 AH.
 //
 
 import UIKit
-import WebKit
 import ReSwift
 import SwiftSoup
 
-class ProjectWebViewVC: UIViewController, Storyboarded {
+class CodePreviewVC: UIViewController, Storyboarded {
 
     var project: Project?
-    @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var projectTitle: UILabel!
+    @IBOutlet weak var projectCode: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +21,11 @@ class ProjectWebViewVC: UIViewController, Storyboarded {
         // Do any additional setup after loading the view.
     }
     
-    func loadWebView() {
-        guard let document = project?.document else { return }
+    func loadProjectCode() {
+        guard let project = project, let document = project.document else { return }
         do {
-            let htmlCode = try document.outerHtml()
-            print("loadWebView:", htmlCode)
-            webView.loadHTMLString( htmlCode, baseURL: nil)
+            projectTitle.text = project.getDocumentTitle()
+            projectCode.text = try document.outerHtml()
         } catch Exception.Error(let type, let message) {
             print(type, message)
         } catch {
@@ -36,7 +35,7 @@ class ProjectWebViewVC: UIViewController, Storyboarded {
 
 }
 
-extension ProjectWebViewVC: StoreSubscriber {
+extension CodePreviewVC: StoreSubscriber {
     override func viewWillAppear(_ animated: Bool) {
         ReduxStore.subscribe(self)
     }
@@ -48,7 +47,7 @@ extension ProjectWebViewVC: StoreSubscriber {
     func newState(state: ReduxState) {
         if project == nil {
             project = state.openedProject
-            loadWebView()
+            loadProjectCode()
         }
     }
 }

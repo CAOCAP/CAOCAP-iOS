@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="L4k-5f-aIV">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -158,7 +157,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="HCA-IB-AaJ">
-                                <rect key="frame" x="330" y="57" width="40" height="120"/>
+                                <rect key="frame" x="330" y="57" width="40" height="160"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qci-87-zc2">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -203,6 +202,21 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <segue destination="5BW-Ht-bvw" kind="show" id="mGC-YE-eIx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7o1-rE-Qsa">
+                                        <rect key="frame" x="0.0" y="120" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="Azl-Yr-Mf7"/>
+                                            <constraint firstAttribute="height" constant="40" id="DBm-oK-Mde"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="chevron.compact.up" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="newspaper.circle.fill" catalog="system">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="oGE-lX-jph" kind="show" id="mGc-He-G68"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -381,10 +395,10 @@
                         <outlet property="undoButton" destination="XtZ-wd-Acw" id="aQX-aa-Wiy"/>
                         <outlet property="webView" destination="diV-kw-ft4" id="wqi-9k-wgq"/>
                         <outlet property="webViewWidthConstraint" destination="aQZ-nU-jP4" id="Yy4-Bk-1F7"/>
-                        <outletCollection property="textDecorationButtons" destination="fmE-Qw-ssS" collectionClass="NSMutableArray" id="sly-v4-zBt"/>
-                        <outletCollection property="textDecorationButtons" destination="X2n-Ys-Tlk" collectionClass="NSMutableArray" id="enF-a5-3eV"/>
-                        <outletCollection property="textDecorationButtons" destination="ZV8-uH-QYI" collectionClass="NSMutableArray" id="JoW-fn-Rlu"/>
-                        <outletCollection property="textDecorationButtons" destination="MfZ-Ui-vOP" collectionClass="NSMutableArray" id="Yc9-Qq-1h2"/>
+                        <outletCollection property="textDecorationButtons" destination="X2n-Ys-Tlk" collectionClass="NSMutableArray" id="aAM-q8-bPk"/>
+                        <outletCollection property="textDecorationButtons" destination="fmE-Qw-ssS" collectionClass="NSMutableArray" id="Q6i-37-4MD"/>
+                        <outletCollection property="textDecorationButtons" destination="MfZ-Ui-vOP" collectionClass="NSMutableArray" id="syK-v2-xz9"/>
+                        <outletCollection property="textDecorationButtons" destination="ZV8-uH-QYI" collectionClass="NSMutableArray" id="yus-fy-BoS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -2488,7 +2502,7 @@ There are no other in-app purchases.</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="YWP-YE-S2g">
-                                <rect key="frame" x="34" y="244.66666666666663" width="322.33333333333331" height="132"/>
+                                <rect key="frame" x="34" y="244.66666666666663" width="322.33333333333337" height="132"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try CAOCAP Premium for free" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sby-h7-ijT">
                                         <rect key="frame" x="0.0" y="0.0" width="322.33333333333331" height="26"/>
@@ -3387,10 +3401,10 @@ There are no other in-app purchases.</string>
             </objects>
             <point key="canvasLocation" x="-2172" y="129"/>
         </scene>
-        <!--Project Web ViewVC-->
+        <!--Full Screen Web ViewVC-->
         <scene sceneID="nWQ-Hj-hYx">
             <objects>
-                <viewController storyboardIdentifier="ProjectWebViewVC" id="lAf-h8-W40" customClass="ProjectWebViewVC" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProjectWebViewVC" id="lAf-h8-W40" customClass="FullScreenWebViewVC" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hmj-ch-n1d">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3460,6 +3474,7 @@ There are no other in-app purchases.</string>
                     </view>
                     <navigationItem key="navigationItem" id="jtB-bq-LBz"/>
                     <connections>
+                        <outlet property="projectTitle" destination="Y3y-5e-haH" id="isE-Hl-JNv"/>
                         <outlet property="webView" destination="clc-5A-tBb" id="7sb-I7-prF"/>
                     </connections>
                 </viewController>
@@ -3927,6 +3942,110 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
             </objects>
             <point key="canvasLocation" x="-2363" y="-3105"/>
         </scene>
+        <!--Code PreviewVC-->
+        <scene sceneID="2WG-Kx-Xdx">
+            <objects>
+                <viewController storyboardIdentifier="CodePreviewVC" id="oGE-lX-jph" customClass="CodePreviewVC" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GWi-uX-8wh">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wkq-ZX-hDu">
+                                <rect key="frame" x="0.0" y="79" width="390" height="765"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORu-vE-ICU">
+                                        <rect key="frame" x="10" y="10" width="370" height="745"/>
+                                        <mutableString key="text">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;title&gt;webview&lt;/title&gt;
+        &lt;meta charset="UTF-8" /&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;script src="https://unpkg.com/react@18/umd/react.development.js"&gt;&lt;/script&gt;
+        &lt;script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"&gt;&lt;/script&gt;
+        &lt;script src="https://unpkg.com/redux@4.2.1/dist/redux.js"&gt;&lt;/script&gt;
+        &lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body id="\#(bodyID)"&gt;&lt;/body&gt;
+&lt;/html&gt;</mutableString>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ORu-vE-ICU" firstAttribute="top" secondItem="wkq-ZX-hDu" secondAttribute="top" constant="10" id="Uw0-aF-wHg"/>
+                                    <constraint firstAttribute="bottom" secondItem="ORu-vE-ICU" secondAttribute="bottom" constant="10" id="jEO-zK-Ryf"/>
+                                    <constraint firstAttribute="trailing" secondItem="ORu-vE-ICU" secondAttribute="trailing" constant="10" id="mEY-06-Fl8"/>
+                                    <constraint firstItem="ORu-vE-ICU" firstAttribute="leading" secondItem="wkq-ZX-hDu" secondAttribute="leading" constant="10" id="ymh-6U-ZQl"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMn-sP-FgQ">
+                                <rect key="frame" x="0.0" y="47" width="390" height="32"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3Xa-DX-9NR">
+                                        <rect key="frame" x="10" y="5" width="370" height="22"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newspaper" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bId-rD-nka">
+                                                <rect key="frame" x="0.0" y="0.33333333333333215" width="22" height="21.666666666666668"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="bId-rD-nka" secondAttribute="height" multiplier="1:1" id="j88-UV-HLn"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="webview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvC-3i-NeF">
+                                                <rect key="frame" x="30" y="0.0" width="340" height="22"/>
+                                                <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="3Xa-DX-9NR" firstAttribute="top" secondItem="ZMn-sP-FgQ" secondAttribute="top" constant="5" id="8Md-4g-Usg"/>
+                                    <constraint firstItem="3Xa-DX-9NR" firstAttribute="centerX" secondItem="ZMn-sP-FgQ" secondAttribute="centerX" id="cG0-q6-TSR"/>
+                                    <constraint firstAttribute="height" constant="32" id="fjb-UO-2We"/>
+                                    <constraint firstItem="3Xa-DX-9NR" firstAttribute="centerY" secondItem="ZMn-sP-FgQ" secondAttribute="centerY" id="gwp-Q7-5C6"/>
+                                    <constraint firstItem="3Xa-DX-9NR" firstAttribute="leading" secondItem="ZMn-sP-FgQ" secondAttribute="leading" constant="10" id="m3S-GS-sct"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nl2-BY-vYB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZMn-sP-FgQ" firstAttribute="leading" secondItem="Nl2-BY-vYB" secondAttribute="leading" id="1Pu-s4-EoH"/>
+                            <constraint firstAttribute="trailing" secondItem="wkq-ZX-hDu" secondAttribute="trailing" id="4uf-2h-2T7"/>
+                            <constraint firstItem="wkq-ZX-hDu" firstAttribute="top" secondItem="ZMn-sP-FgQ" secondAttribute="bottom" id="8VN-sr-z2t"/>
+                            <constraint firstAttribute="bottom" secondItem="wkq-ZX-hDu" secondAttribute="bottom" id="Esl-kQ-BVj"/>
+                            <constraint firstItem="ZMn-sP-FgQ" firstAttribute="centerX" secondItem="GWi-uX-8wh" secondAttribute="centerX" id="QYC-1X-wuV"/>
+                            <constraint firstItem="wkq-ZX-hDu" firstAttribute="leading" secondItem="GWi-uX-8wh" secondAttribute="leading" id="tVv-li-7Fs"/>
+                            <constraint firstItem="ZMn-sP-FgQ" firstAttribute="top" secondItem="Nl2-BY-vYB" secondAttribute="top" id="zUQ-Y7-507"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vzm-HC-zV7"/>
+                    <connections>
+                        <outlet property="projectCode" destination="ORu-vE-ICU" id="6rL-Gq-RMr"/>
+                        <outlet property="projectTitle" destination="gvC-3i-NeF" id="Qh9-nz-jg2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FTI-Zm-C7A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4706.1538461538457" y="138.6255924170616"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Bookmark" width="384" height="384"/>
@@ -3976,6 +4095,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
         <image name="iron-badge" width="2562" height="1847"/>
         <image name="italic" catalog="system" width="115" height="128"/>
         <image name="newspaper" catalog="system" width="128" height="111"/>
+        <image name="newspaper.circle.fill" catalog="system" width="128" height="123"/>
         <image name="paintbrush.pointed" catalog="system" width="128" height="118"/>
         <image name="paintbrush.pointed.fill" catalog="system" width="128" height="118"/>
         <image name="paintpalette" catalog="system" width="128" height="105"/>
