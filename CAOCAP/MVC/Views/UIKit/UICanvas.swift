@@ -9,25 +9,18 @@ import UIKit
 
 class UICanvas: UIScrollView, UIScrollViewDelegate {
     
+    let canvas = UIView()
     var canvasHeightConstraint = NSLayoutConstraint()
     var canvasWidthConstraint = NSLayoutConstraint()
-    
-    let canvas: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.cornerRadius = 10
-        view.backgroundColor = UIColor(patternImage: UIImage(named: "dot")!)
-        return view
-    }()
 
-    override init(frame: CGRect) {
+    init(frame: CGRect, color: UIColor) {
         super.init(frame: frame)
         delegate = self
         translatesAutoresizingMaskIntoConstraints = false
         minimumZoomScale = 0.3
         maximumZoomScale = 3.0
         zoomScale = 0.5
-        setupCanvas()
+        setupCanvas(color: color)
         contentInset = UIEdgeInsets(top: 200, left: 100, bottom: 200 , right: 100)
         contentOffset = CGPoint(x: -50, y: -150)
         layoutIfNeeded()
@@ -37,8 +30,11 @@ class UICanvas: UIScrollView, UIScrollViewDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupCanvas() {
+    func setupCanvas(color: UIColor) {
         addSubview(canvas)
+        canvas.translatesAutoresizingMaskIntoConstraints = false
+        canvas.layer.cornerRadius = 10
+        canvas.backgroundColor = UIColor(patternImage: UIImage(named: "dot")!, tintColor: color)
         canvas.addGestureRecognizer(doubleTapZoom)
         canvas.isUserInteractionEnabled = true
         canvasHeightConstraint = canvas.heightAnchor.constraint(equalToConstant: frame.height + 200)

@@ -16,6 +16,7 @@ class MainSettingsVC: SettingsVC {
         sections = [
             Section(title: "Main", options: [
                 
+                 /*
                 .staticCell(option: SettingsOption(title: "Language", icon: UIImage(systemName: "globe"), color: .systemPink, label: "English", handler: {
                     print("did press")
                     
@@ -28,7 +29,8 @@ class MainSettingsVC: SettingsVC {
                     print("did press")
                     
                 })),
-                 
+                 */
+                
                 .staticCell(option: SettingsOption(title: "What's New?", icon: UIImage(systemName: "sparkles"), color: .systemYellow, label: "v5.0.2", handler: {
                     self.coordinator?.viewWhatsNewVC()
                     
@@ -51,6 +53,7 @@ class MainSettingsVC: SettingsVC {
                 })),
             ]),
             
+            /*
             Section(title: "contact", options: [
                 .staticCell(option: SettingsOption(title: "Help", icon: UIImage(systemName: "questionmark.circle.fill"), color: .systemTeal, handler: {
                     self.coordinator?.viewHelp()
@@ -66,8 +69,11 @@ class MainSettingsVC: SettingsVC {
                 })),
             ]),
              
+             */
+            
             Section(title: "Info", options: [
                 
+                /*
                 .staticCell(option:SettingsOption(title: "Privacy Policy", icon: UIImage(systemName: "lock.shield.fill"), color: .systemGray, handler: {
                     self.coordinator?.viewPrivacyPolicy()
                     
@@ -76,6 +82,7 @@ class MainSettingsVC: SettingsVC {
                     self.coordinator?.viewTermsOfUse()
                     
                 })),
+                 */
                  
                 .staticCell(option:SettingsOption(title: "About Us", icon: UIImage(systemName: "info.circle.fill"), color: .systemGray2, handler: {
                     self.coordinator?.viewAboutUs()

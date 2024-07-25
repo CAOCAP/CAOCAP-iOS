@@ -32,13 +32,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     fileprivate func checkIntroStatus() {
-        if !UserDefaults.standard.didUserCompleteIntro() {
+        if !UserDefaults.standard.introCompleted {
             let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
             let introVC = storyboard.instantiateViewController(withIdentifier: "IntroVC")
             window?.makeKeyAndVisible()
             window?.rootViewController?.present(introVC, animated: true, completion: nil)
         }
     }
+    
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
