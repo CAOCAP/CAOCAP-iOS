@@ -424,6 +424,9 @@
                                         <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
                                         <color key="baseForegroundColor" systemColor="systemGreenColor"/>
                                     </buttonConfiguration>
+                                    <connections>
+                                        <action selector="didPressAddEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xkx-9H-jWH"/>
+                                    </connections>
                                 </button>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="P5i-60-ifm">
                                     <rect key="frame" x="0.0" y="74" width="330" height="67"/>
@@ -435,6 +438,9 @@
                                                 <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
                                                 <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
                                             </buttonConfiguration>
+                                            <connections>
+                                                <action selector="didPressAddCondition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bhg-mf-Ac3"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Td1-6D-WBO">
                                             <rect key="frame" x="169" y="0.0" width="161" height="67"/>
@@ -443,6 +449,9 @@
                                                 <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
                                                 <color key="baseForegroundColor" systemColor="systemBlueColor"/>
                                             </buttonConfiguration>
+                                            <connections>
+                                                <action selector="didPressAddAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MhY-hL-iz1"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -453,6 +462,9 @@
                                         <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
                                         <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
                                     </buttonConfiguration>
+                                    <connections>
+                                        <action selector="didPressAddValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7DO-Yw-rgc"/>
+                                    </connections>
                                 </button>
                             </subviews>
                         </stackView>
@@ -3356,25 +3368,14 @@ There are no other in-app purchases.</string>
                                     <outlet property="delegate" destination="5BW-Ht-bvw" id="Frb-oF-VKA"/>
                                 </connections>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="IUM-RU-K5F">
-                                <rect key="frame" x="20" y="739" width="350" height="32"/>
-                                <segments>
-                                    <segment title="Views"/>
-                                    <segment title="Controllers"/>
-                                    <segment title="Styles"/>
-                                </segments>
-                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zit-VH-2F1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="zit-VH-2F1" firstAttribute="bottom" secondItem="IUM-RU-K5F" secondAttribute="bottom" constant="40" id="7YO-ZP-SsX"/>
                             <constraint firstItem="ySQ-GG-gTL" firstAttribute="leading" secondItem="Vdk-zr-pP0" secondAttribute="leading" id="Ese-hz-NLZ"/>
-                            <constraint firstItem="IUM-RU-K5F" firstAttribute="leading" secondItem="zit-VH-2F1" secondAttribute="leading" constant="20" id="L1K-Mq-LoM"/>
                             <constraint firstItem="ySQ-GG-gTL" firstAttribute="top" secondItem="Vdk-zr-pP0" secondAttribute="top" id="bfX-W0-kNH"/>
                             <constraint firstAttribute="trailing" secondItem="ySQ-GG-gTL" secondAttribute="trailing" id="cl4-ZK-aq3"/>
                             <constraint firstAttribute="bottom" secondItem="ySQ-GG-gTL" secondAttribute="bottom" id="u3q-28-B1f"/>
-                            <constraint firstItem="IUM-RU-K5F" firstAttribute="centerX" secondItem="Vdk-zr-pP0" secondAttribute="centerX" id="wTh-uB-siD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="D3r-w4-ems"/>

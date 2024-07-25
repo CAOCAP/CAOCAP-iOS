@@ -64,7 +64,6 @@ class PlaygroundVC: UIViewController, Storyboarded {
         
         let resizeGR = UIPanGestureRecognizer(target: self, action: #selector(handleResizingWebView(sender:)))
         resizeIcon.addGestureRecognizer(resizeGR)
-        contentTextField.isFirstResponder
         
         setupToolsViewLayout()
         setupMindMapLayout()
@@ -86,9 +85,9 @@ class PlaygroundVC: UIViewController, Storyboarded {
     
     
     func setupMindMapLayout() {
-        structureMindMap = UIMindMap(frame: view.frame)
-        attributesMindMap = UIMindMap(frame: view.frame)
-        logicMindMap = UIMindMap(frame: view.frame)
+        structureMindMap = UIMindMap(frame: view.frame, color: .systemBlue)
+        attributesMindMap = UIMindMap(frame: view.frame, color: .systemPurple)
+        logicMindMap = UIMindMap(frame: view.frame, color: .systemGreen)
         mindmaps = [logicMindMap, structureMindMap, attributesMindMap]
         mindmaps.forEach { mindmap in
             view.insertSubview(mindmap, at: 0)
@@ -279,8 +278,24 @@ class PlaygroundVC: UIViewController, Storyboarded {
         dismiss(animated: true)
     }
     
+    @IBAction func didPressUndo(_ sender: UIButton) {
+        print("\(#function)ing...")
+        ReduxStore.dispatch(UndoAction())
+    }
+    
+    @IBAction func didPressRedo(_ sender: UIButton) {
+        print("\(#function)ing...")
+        ReduxStore.dispatch(RedoAction())
+    }
+    
     @IBAction func didPressArrow(_ sender: UIButton) {
-        structureMindMap.updateSelectedNode(Direction(rawValue: sender.tag))
+        if !structureMindMap.isHidden {
+            structureMindMap.updateSelectedNode(Direction(rawValue: sender.tag))
+        } else if !attributesMindMap.isHidden {
+            attributesMindMap.updateSelectedNode(Direction(rawValue: sender.tag))
+        } else {
+            logicMindMap.updateSelectedNode(Direction(rawValue: sender.tag))
+        }
     }
     
     @IBAction func didPressAddElement(_ sender: UIButton) {
@@ -300,14 +315,24 @@ class PlaygroundVC: UIViewController, Storyboarded {
         }
     }
     
-    @IBAction func didPressUndo(_ sender: UIButton) {
+    @IBAction func didPressAddEvent(_ sender: UIButton) {
         print("\(#function)ing...")
-        ReduxStore.dispatch(UndoAction())
+        
     }
     
-    @IBAction func didPressRedo(_ sender: UIButton) {
+    @IBAction func didPressAddAction(_ sender: UIButton) {
         print("\(#function)ing...")
-        ReduxStore.dispatch(RedoAction())
+        
+    }
+    
+    @IBAction func didPressAddCondition(_ sender: UIButton) {
+        print("\(#function)ing...")
+        
+    }
+    
+    @IBAction func didPressAddValue(_ sender: UIButton) {
+        print("\(#function)ing...")
+        
     }
     
     @IBAction func didChangeAttributesViewSegmentedControl(_ sender: UISegmentedControl) {
