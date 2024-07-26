@@ -17,8 +17,11 @@ class PlaygroundVC: UIViewController, Storyboarded {
     var completeChallenges: [String]?
     var tailwindClassNames = TailwindCSS.all
     
-    @IBOutlet weak var projectTitle: UILabel!
+    var viewFinderIsOn = false
+    @IBOutlet var viewFinderViews: [UIView]!
+    
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var projectTitle: UILabel!
     @IBOutlet weak var resizeIcon: UIImageView!
     @IBOutlet weak var webViewWidthConstraint: NSLayoutConstraint!
     
@@ -276,6 +279,25 @@ class PlaygroundVC: UIViewController, Storyboarded {
     
     @IBAction func didPressCloseButton(_ sender: Any) {
         dismiss(animated: true)
+    }
+    
+    
+    @IBAction func didPressViewfinderButton(_ sender: UIButton) {
+        if viewFinderIsOn {
+            sender.setImage(UIImage(systemName: "viewfinder.circle.fill"), for: .normal)
+            self.viewFinderViews.forEach { $0.isHidden = false }
+            UIView.animate(withDuration: 1) {
+                self.viewFinderViews.forEach { $0.alpha = 1 }
+            }
+        } else {
+            sender.setImage(UIImage(systemName: "viewfinder.circle"), for: .normal)
+            UIView.animate(withDuration: 1) {
+                self.viewFinderViews.forEach { $0.alpha = 0 }
+            } completion: { _ in
+                self.viewFinderViews.forEach { $0.isHidden = true }
+            }
+        }
+        viewFinderIsOn.toggle()
     }
     
     @IBAction func didPressUndo(_ sender: UIButton) {
