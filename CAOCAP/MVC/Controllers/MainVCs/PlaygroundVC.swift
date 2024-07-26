@@ -32,8 +32,18 @@ class PlaygroundVC: UIViewController, Storyboarded {
     @IBOutlet weak var toolsViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var toolsPageControl: UIPageControl!
     
-    var keyboardViews = [UIView]()
     
+    var mindmaps = [UIMindMap]()
+    
+    var htmlMindMap: UIMindMap!
+    var cssMindMap: UIMindMap!
+    var jsMindMap: UIMindMap!
+    
+    var htmlKeyboardViews = [UIView]()
+    var cssKeyboardViews = [UIView]()
+    var jsKeyboardViews = [UIView]()
+    
+    //MARK: HTML Keyboard
     @IBOutlet weak var structureKeyboardView: UIView!
     @IBOutlet weak var structureStackView: UIStackView!
     
@@ -53,14 +63,14 @@ class PlaygroundVC: UIViewController, Storyboarded {
     @IBOutlet weak var hiddenSwitch: UISwitch!
     @IBOutlet weak var tailwindCollectionView: UICollectionView!
     
+    //MARK: CSS Keyboard
+    @IBOutlet weak var selectorsKeyboardView: UIView!
+    @IBOutlet weak var selectorsStackView: UIStackView!
+    
+    //MARK: JS Keyboard
     @IBOutlet weak var logicKeyboardView: UIView!
     @IBOutlet weak var logicStackView: UIStackView!
     
-    var mindmaps = [UIMindMap]()
-    
-    var structureMindMap: UIMindMap!
-    var attributesMindMap: UIMindMap!
-    var logicMindMap: UIMindMap!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,10 +98,10 @@ class PlaygroundVC: UIViewController, Storyboarded {
     
     
     func setupMindMapLayout() {
-        structureMindMap = UIMindMap(frame: view.frame, color: .systemBlue)
-        attributesMindMap = UIMindMap(frame: view.frame, color: .systemPurple)
-        logicMindMap = UIMindMap(frame: view.frame, color: .systemGreen)
-        mindmaps = [logicMindMap, structureMindMap, attributesMindMap]
+        htmlMindMap = UIMindMap(frame: view.frame, color: .systemBlue)
+        cssMindMap = UIMindMap(frame: view.frame, color: .systemPurple)
+        jsMindMap = UIMindMap(frame: view.frame, color: .systemGreen)
+        mindmaps = [jsMindMap, htmlMindMap, cssMindMap]
         mindmaps.forEach { mindmap in
             view.insertSubview(mindmap, at: 0)
             mindmap.mindMapDelegate = self
@@ -101,8 +111,8 @@ class PlaygroundVC: UIViewController, Storyboarded {
                 make.edges.equalToSuperview()
             }
         }
-        structureMindMap.alpha = 1
-        structureMindMap.isHidden = false
+        htmlMindMap.alpha = 1
+        htmlMindMap.isHidden = false
         
     }
     
@@ -120,13 +130,16 @@ class PlaygroundVC: UIViewController, Storyboarded {
         toolsView.addGestureRecognizer(upSwipe)
         toolsView.addGestureRecognizer(downSwipe)
         
-        keyboardViews = [logicKeyboardView, structureKeyboardView, attributesKeyboardView]
+        htmlKeyboardViews = [structureKeyboardView, attributesKeyboardView]
+        cssKeyboardViews = [selectorsKeyboardView]
+        jsKeyboardViews = [logicKeyboardView]
             
-        keyboardViews.forEach { view in
-            toolsView.addSubview(view)
-            print("&&&", toolsView.frame.origin)
-            view.snp.makeConstraints { make in
-                make.width.height.equalToSuperview()
+        [htmlKeyboardViews,cssKeyboardViews,jsKeyboardViews].forEach { keyboardViews in
+            keyboardViews.forEach { view in
+                toolsView.addSubview(view)
+                view.snp.makeConstraints { make in
+                    make.width.height.equalToSuperview()
+                }
             }
         }
     }
@@ -176,26 +189,35 @@ class PlaygroundVC: UIViewController, Storyboarded {
         }
     }
     
-    var keyboardIndex = 1
-    var keyboardPreviousIndex = 1
+    var mindmapPreviousIndex = 1
+    @IBAction func didChangeMindMapsSegmentedControl(_ sender: UISegmentedControl) {
+        let currentMindMap = mindmaps[sender.selectedSegmentIndex], previousMindMap = mindmaps[mindmapPreviousIndex]
+        mindmapPreviousIndex = sender.selectedSegmentIndex
+        currentMindMap.isHidden = false
+        UIView.animate(withDuration: 0.3) {
+            currentMindMap.alpha = 1; previousMindMap.alpha = 0
+        } completion: { _ in
+            previousMindMap.isHidden = true
+        }
+        
+    }
+    
+    var keyboardIndex = 0
+    var keyboardPreviousIndex = 0
     func animateToKeyboard(at index: Int) {
         keyboardPreviousIndex = keyboardIndex
         keyboardIndex = index
         var animationDirection = keyboardIndex > keyboardPreviousIndex
-        if keyboardIndex < 0 { keyboardIndex = 2 } else if keyboardIndex > 2 { keyboardIndex = 0 }
-        let currentKeyboard = keyboardViews[keyboardIndex], previousKeyboard = keyboardViews[keyboardPreviousIndex]
-        let currentMindMap = mindmaps[keyboardIndex], previousMindMap = mindmaps[keyboardPreviousIndex]
-        currentKeyboard.isHidden = false; currentMindMap.isHidden = false
+        if keyboardIndex < 0 { keyboardIndex = htmlKeyboardViews.count - 1 } else if keyboardIndex > htmlKeyboardViews.count - 1 { keyboardIndex = 0 }
+        let currentKeyboard = htmlKeyboardViews[keyboardIndex], previousKeyboard = htmlKeyboardViews[keyboardPreviousIndex]
+        currentKeyboard.isHidden = false
         currentKeyboard.frame.origin.x = animationDirection ? self.view.frame.width : -self.view.frame.width
         UIView.animate(withDuration: 0.3) {
-            currentMindMap.alpha = 1; previousMindMap.alpha = 0
             currentKeyboard.center.x = previousKeyboard.center.x
             previousKeyboard.frame.origin.x = animationDirection ? -self.view.frame.width : self.view.frame.width
         } completion: { _ in
-            previousKeyboard.isHidden = true; previousMindMap.isHidden = true
+            previousKeyboard.isHidden = true
         }
-
-
     }
     
     @IBAction func didPressToolsPageControl(_ sender: UIPageControl) {
@@ -311,12 +333,12 @@ class PlaygroundVC: UIViewController, Storyboarded {
     }
     
     @IBAction func didPressArrow(_ sender: UIButton) {
-        if !structureMindMap.isHidden {
-            structureMindMap.updateSelectedNode(Direction(rawValue: sender.tag))
-        } else if !attributesMindMap.isHidden {
-            attributesMindMap.updateSelectedNode(Direction(rawValue: sender.tag))
+        if !htmlMindMap.isHidden {
+            htmlMindMap.updateSelectedNode(Direction(rawValue: sender.tag))
+        } else if !cssMindMap.isHidden {
+            cssMindMap.updateSelectedNode(Direction(rawValue: sender.tag))
         } else {
-            logicMindMap.updateSelectedNode(Direction(rawValue: sender.tag))
+            jsMindMap.updateSelectedNode(Direction(rawValue: sender.tag))
         }
     }
     
@@ -333,7 +355,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
             "ul","br","hr",
         ]
         if sender.tag < htmlTags.count {
-            structureMindMap.add(tag: htmlTags[sender.tag])
+            htmlMindMap.add(tag: htmlTags[sender.tag])
         }
     }
     
@@ -520,7 +542,7 @@ extension PlaygroundVC: StoreSubscriber {
     func newState(state: ReduxState) {
         if project == nil {
             project = state.openedProject
-            structureMindMap.project = project
+            htmlMindMap.project = project
         }
         
         
@@ -538,7 +560,7 @@ extension PlaygroundVC: StoreSubscriber {
 //        }
         
         loadWebView()/*🤔*/
-        structureMindMap.loadBody()
+        htmlMindMap.loadBody()
         
         projectTitle.text = project?.getDocumentTitle()
         
