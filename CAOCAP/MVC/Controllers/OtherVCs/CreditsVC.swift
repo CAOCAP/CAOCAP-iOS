@@ -17,7 +17,7 @@ class CreditsVC: UIViewController, Storyboarded, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var tableView: UITableView!
     var credits = [
-        /*
+        
         Credits(title: "C-Squad", contributors: [
             (name: "Azzam Al-Rashed", profession: "Software Engineer", url: "https://twitter.com/azzam_rar"),
             (name: "Meshal Al-Fiez", profession: "Digital Artist", url: nil),
@@ -28,10 +28,8 @@ class CreditsVC: UIViewController, Storyboarded, UITableViewDelegate, UITableVie
             (name: "Muhammad Al-Mujtaba", profession: "Software Engineer", url: nil),
             (name: "Faisal Al-Thuwaini", profession: "Digital Artist", url: "https://www.linkedin.com/in/faisal-al-thuwaini"),
             (name: "Saleh Al-Thini", profession: "Software Engineer", url: "https://twitter.com/salehalthini"),
-            (name: "Ibrahim Al-Jumaiah", profession: nil, url: nil),
-            (name: "Ahmed Al-Helali", profession: "Software Engineer", url: "https://twitter.com/ahmed__alhelali"),
         ]),
-         */
+         
         
         Credits(title: "Special Thanks", contributors: [
             (name: "Mom", profession: nil, url: nil),

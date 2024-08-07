@@ -10,7 +10,6 @@
 		2106C4152A5C95C300446620 /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2106C4142A5C95C300446620 /* Theme.xcassets */; };
 		2106C4182A5C997A00446620 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2106C4172A5C997A00446620 /* FirebaseAnalytics */; };
 		2106C41A2A5C997A00446620 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2106C4192A5C997A00446620 /* FirebaseCrashlytics */; };
-		2106C41D2A5F949400446620 /* HTMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2106C41C2A5F949400446620 /* HTMLParser.swift */; };
 		210F19AE2A42DBE100D71A66 /* UICanvasNodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210F19AD2A42DBE100D71A66 /* UICanvasNodeView.swift */; };
 		210F19B02A42DC9800D71A66 /* UIStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210F19AF2A42DC9800D71A66 /* UIStroke.swift */; };
 		21183D072BD72380001AECAF /* WorldVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21183D062BD72380001AECAF /* WorldVC.swift */; };
@@ -106,9 +105,6 @@
 		21E148112A7F62C900B503C2 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 21E148102A7F62C900B503C2 /* FirebaseDatabase */; };
 		21E148132A7F639400B503C2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E148122A7F639400B503C2 /* User.swift */; };
 		21E148152A82031D00B503C2 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E148142A82031D00B503C2 /* Challenge.swift */; };
-		21F178492B3AC5C3007C14E5 /* JavaScriptParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F178482B3AC5C3007C14E5 /* JavaScriptParser.swift */; };
-		21F1784C2B3ACF64007C14E5 /* acorn.js in Resources */ = {isa = PBXBuildFile; fileRef = 21F1784B2B3ACF64007C14E5 /* acorn.js */; };
-		21F1784E2B3B0455007C14E5 /* walk.js in Resources */ = {isa = PBXBuildFile; fileRef = 21F1784D2B3B0455007C14E5 /* walk.js */; };
 		21FF62032AB263AB0003D064 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FF62022AB263AB0003D064 /* AppConstants.swift */; };
 		EC7B11832C5223D40020ECE4 /* CodePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7B11822C5223D40020ECE4 /* CodePreviewVC.swift */; };
 		ECB40BCD2C51125300818E9C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECB40BCC2C51125300818E9C /* RealmSwift */; };
@@ -141,7 +137,6 @@
 
 /* Begin PBXFileReference section */
 		2106C4142A5C95C300446620 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
-		2106C41C2A5F949400446620 /* HTMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLParser.swift; sourceTree = "<group>"; };
 		210F19AD2A42DBE100D71A66 /* UICanvasNodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICanvasNodeView.swift; sourceTree = "<group>"; };
 		210F19AF2A42DC9800D71A66 /* UIStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStroke.swift; sourceTree = "<group>"; };
 		21183D062BD72380001AECAF /* WorldVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldVC.swift; sourceTree = "<group>"; };
@@ -233,9 +228,6 @@
 		21E1480C2A7F5F2000B503C2 /* FirebaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRepository.swift; sourceTree = "<group>"; };
 		21E148122A7F639400B503C2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		21E148142A82031D00B503C2 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
-		21F178482B3AC5C3007C14E5 /* JavaScriptParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JavaScriptParser.swift; sourceTree = "<group>"; };
-		21F1784B2B3ACF64007C14E5 /* acorn.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = acorn.js; sourceTree = "<group>"; };
-		21F1784D2B3B0455007C14E5 /* walk.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = walk.js; sourceTree = "<group>"; };
 		21FF62022AB263AB0003D064 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		EC7B11822C5223D40020ECE4 /* CodePreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePreviewVC.swift; sourceTree = "<group>"; };
 		EC7B11842C524EFF0020ECE4 /* Subscriptions.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Subscriptions.storekit; sourceTree = "<group>"; };
@@ -427,8 +419,6 @@
 			children = (
 				2196065E2AA82E700099FC14 /* KeyboardManager.swift */,
 				2175FBE12A648D0700F7E97F /* LottieManager.swift */,
-				2106C41C2A5F949400446620 /* HTMLParser.swift */,
-				21F1784A2B3ACF18007C14E5 /* JSParser */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -654,16 +644,6 @@
 			path = SwiftUI;
 			sourceTree = "<group>";
 		};
-		21F1784A2B3ACF18007C14E5 /* JSParser */ = {
-			isa = PBXGroup;
-			children = (
-				21F1784B2B3ACF64007C14E5 /* acorn.js */,
-				21F1784D2B3B0455007C14E5 /* walk.js */,
-				21F178482B3AC5C3007C14E5 /* JavaScriptParser.swift */,
-			);
-			path = JSParser;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -790,10 +770,8 @@
 				21C21C672A38DFAD00F40BE3 /* Ubuntu-BoldItalic.ttf in Resources */,
 				21C21C642A38DFAD00F40BE3 /* Ubuntu-Regular.ttf in Resources */,
 				211FEA4E2C2FC752000150FD /* intro.mp4 in Resources */,
-				21F1784E2B3B0455007C14E5 /* walk.js in Resources */,
 				218DA9D02A2B205800459C61 /* Main.storyboard in Resources */,
 				2175FBE02A648C9100F7E97F /* confetti.json in Resources */,
-				21F1784C2B3ACF64007C14E5 /* acorn.js in Resources */,
 				2106C4152A5C95C300446620 /* Theme.xcassets in Resources */,
 				21C21C662A38DFAD00F40BE3 /* Ubuntu-MediumItalic.ttf in Resources */,
 				21534D8D2A59924F00E8078B /* GoogleService-Info.plist in Resources */,
@@ -874,7 +852,6 @@
 				2178C1A42A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift in Sources */,
 				2178C1A22A4DA2AB00876BB6 /* SettingsTableViewCell.swift in Sources */,
 				214995282A5C342D008B9987 /* ReduxState.swift in Sources */,
-				21F178492B3AC5C3007C14E5 /* JavaScriptParser.swift in Sources */,
 				21AF3CBE2A6B2188002E96E3 /* HelpVC.swift in Sources */,
 				21E1480D2A7F5F2000B503C2 /* FirebaseRepository.swift in Sources */,
 				21AF3CD22A6B714A002E96E3 /* ProjectVideosVC.swift in Sources */,
@@ -906,7 +883,6 @@
 				21AF3CC42A6B70CC002E96E3 /* ProjectStyleVC.swift in Sources */,
 				21534D982A59B40A00E8078B /* MainCoordinator.swift in Sources */,
 				210F19AE2A42DBE100D71A66 /* UICanvasNodeView.swift in Sources */,
-				2106C41D2A5F949400446620 /* HTMLParser.swift in Sources */,
 				2133D7182B42EC1300A854F6 /* UICanvas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
