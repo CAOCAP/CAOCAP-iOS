@@ -41,11 +41,11 @@ class PlaygroundVC: UIViewController, Storyboarded {
     @IBOutlet weak var toolsViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var toolsPageControl: UIPageControl!
     
-    /// Array to hold the MindMaps for HTML, CSS, and JS.
-    var mindmaps = [UIMindMap]()
+    /// Array to hold the Canvas for HTML, CSS, and JS.
+    var canvases = [UICanvas]()
     var htmlMindMap: UIMindMap!
     var cssMindMap: UIMindMap!
-    var jsMindMap: UIMindMap!
+    var jsFlowChart: UIFlowChart!
     
     /// Arrays to hold the keyboard views for HTML, CSS, and JS.
     var htmlKeyboardViews = [UIView]()
@@ -89,7 +89,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
         resizeIcon.addGestureRecognizer(resizeGR)
         
         setupToolsViewLayout()
-        setupMindMapLayout()
+        setupCanvasesLayout()
         setupMenuButtons()
     }
     
@@ -109,19 +109,21 @@ class PlaygroundVC: UIViewController, Storyboarded {
     }
     
     
-    // MARK: - Mind Map Setup
-    /// Set up the layout and configuration of the mind maps
-    func setupMindMapLayout() {
+    // MARK: - Canvases Setup
+    /// Set up the layout and configuration of the Canvases
+    func setupCanvasesLayout() {
         htmlMindMap = UIMindMap(frame: view.frame, color: .systemBlue)
         cssMindMap = UIMindMap(frame: view.frame, color: .systemPurple)
-        jsMindMap = UIMindMap(frame: view.frame, color: .systemGreen)
-        mindmaps = [jsMindMap, htmlMindMap, cssMindMap]
-        mindmaps.forEach { mindmap in
-            view.insertSubview(mindmap, at: 0)
-            mindmap.mindMapDelegate = self
-            mindmap.isHidden = true
-            mindmap.alpha = 0
-            mindmap.snp.makeConstraints { make in
+        jsFlowChart = UIFlowChart(frame: view.frame, color: .systemGreen)
+        canvases = [jsFlowChart, htmlMindMap, cssMindMap]
+        htmlMindMap.mindMapDelegate = self
+        cssMindMap.mindMapDelegate = self
+        jsFlowChart.flowChartDelegate = self
+        canvases.forEach { canvas in
+            view.insertSubview(canvas, at: 0)
+            canvas.isHidden = true
+            canvas.alpha = 0
+            canvas.snp.makeConstraints { make in
                 make.edges.equalToSuperview()
             }
         }
@@ -228,7 +230,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
     ///
     /// - Parameter sender: The segmented control that triggers this function.
     @IBAction func didChangeMindMapsSegmentedControl(_ sender: UISegmentedControl) {
-        let currentMindMap = mindmaps[sender.selectedSegmentIndex], previousMindMap = mindmaps[mindmapPreviousIndex]
+        let currentMindMap = canvases[sender.selectedSegmentIndex], previousMindMap = canvases[mindmapPreviousIndex]
         mindmapPreviousIndex = sender.selectedSegmentIndex
         currentMindMap.isHidden = false
         UIView.animate(withDuration: 0.3) {
@@ -407,7 +409,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
         } else if !cssMindMap.isHidden {
             cssMindMap.updateSelectedNode(Direction(rawValue: sender.tag))
         } else {
-            jsMindMap.updateSelectedNode(Direction(rawValue: sender.tag))
+            jsFlowChart.updateSelectedNode(Direction(rawValue: sender.tag))
         }
     }
     
@@ -609,7 +611,16 @@ extension PlaygroundVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
 extension PlaygroundVC: UIMindMapDelegate {
     
     /// Handles the removal of a node in the MindMap.
-    func didRemoveNode() {
+    func didRemoveMindMapNode() {
+        loadWebView()
+    }
+}
+
+// MARK: - UIFlowChartDelegate
+extension PlaygroundVC: UIFlowChartDelegate {
+    
+    /// Handles the removal of a node in the FlowChart.
+    func didRemoveFlowChartNode() {
         loadWebView()
     }
 }

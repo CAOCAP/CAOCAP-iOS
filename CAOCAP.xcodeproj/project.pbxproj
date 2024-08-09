@@ -10,8 +10,8 @@
 		2106C4152A5C95C300446620 /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2106C4142A5C95C300446620 /* Theme.xcassets */; };
 		2106C4182A5C997A00446620 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2106C4172A5C997A00446620 /* FirebaseAnalytics */; };
 		2106C41A2A5C997A00446620 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2106C4192A5C997A00446620 /* FirebaseCrashlytics */; };
-		210F19AE2A42DBE100D71A66 /* UICanvasNodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210F19AD2A42DBE100D71A66 /* UICanvasNodeView.swift */; };
-		210F19B02A42DC9800D71A66 /* UIStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210F19AF2A42DC9800D71A66 /* UIStroke.swift */; };
+		210F19AE2A42DBE100D71A66 /* UIMindMapNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210F19AD2A42DBE100D71A66 /* UIMindMapNode.swift */; };
+		210F19B02A42DC9800D71A66 /* UIMindMapStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210F19AF2A42DC9800D71A66 /* UIMindMapStroke.swift */; };
 		21183D072BD72380001AECAF /* WorldVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21183D062BD72380001AECAF /* WorldVC.swift */; };
 		211FEA4E2C2FC752000150FD /* intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 211FEA4D2C2FC752000150FD /* intro.mp4 */; };
 		211FEA502C2FC84E000150FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211FEA4F2C2FC84E000150FD /* ViewController.swift */; };
@@ -109,6 +109,9 @@
 		EC7B11832C5223D40020ECE4 /* CodePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7B11822C5223D40020ECE4 /* CodePreviewVC.swift */; };
 		ECB40BCD2C51125300818E9C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECB40BCC2C51125300818E9C /* RealmSwift */; };
 		ECB40BCE2C5113B500818E9C /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = ECB40BCC2C51125300818E9C /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		ECCA419D2C6696EA0076A4EA /* UIFlowChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA419C2C6696EA0076A4EA /* UIFlowChart.swift */; };
+		ECCA419F2C6697BF0076A4EA /* UIFlowChartNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA419E2C6697BF0076A4EA /* UIFlowChartNode.swift */; };
+		ECCA41A32C6698A30076A4EA /* UIFlowChartStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA41A22C6698A30076A4EA /* UIFlowChartStroke.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,8 +140,8 @@
 
 /* Begin PBXFileReference section */
 		2106C4142A5C95C300446620 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
-		210F19AD2A42DBE100D71A66 /* UICanvasNodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICanvasNodeView.swift; sourceTree = "<group>"; };
-		210F19AF2A42DC9800D71A66 /* UIStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStroke.swift; sourceTree = "<group>"; };
+		210F19AD2A42DBE100D71A66 /* UIMindMapNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMindMapNode.swift; sourceTree = "<group>"; };
+		210F19AF2A42DC9800D71A66 /* UIMindMapStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIMindMapStroke.swift; sourceTree = "<group>"; };
 		21183D062BD72380001AECAF /* WorldVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldVC.swift; sourceTree = "<group>"; };
 		211FEA4D2C2FC752000150FD /* intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = intro.mp4; sourceTree = "<group>"; };
 		211FEA4F2C2FC84E000150FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -231,6 +234,9 @@
 		21FF62022AB263AB0003D064 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		EC7B11822C5223D40020ECE4 /* CodePreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePreviewVC.swift; sourceTree = "<group>"; };
 		EC7B11842C524EFF0020ECE4 /* Subscriptions.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Subscriptions.storekit; sourceTree = "<group>"; };
+		ECCA419C2C6696EA0076A4EA /* UIFlowChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChart.swift; sourceTree = "<group>"; };
+		ECCA419E2C6697BF0076A4EA /* UIFlowChartNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChartNode.swift; sourceTree = "<group>"; };
+		ECCA41A22C6698A30076A4EA /* UIFlowChartStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChartStroke.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -629,9 +635,8 @@
 			isa = PBXGroup;
 			children = (
 				2133D7172B42EC1300A854F6 /* UICanvas.swift */,
-				2186DB102A30DF4700773C5E /* UIMindMap.swift */,
-				210F19AD2A42DBE100D71A66 /* UICanvasNodeView.swift */,
-				210F19AF2A42DC9800D71A66 /* UIStroke.swift */,
+				ECCA41A02C6698540076A4EA /* FlowChart */,
+				ECCA41A12C66986B0076A4EA /* MindMap */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -642,6 +647,26 @@
 				21534D9C2A59CD8600E8078B /* UIDashboardView.swift */,
 			);
 			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		ECCA41A02C6698540076A4EA /* FlowChart */ = {
+			isa = PBXGroup;
+			children = (
+				ECCA419C2C6696EA0076A4EA /* UIFlowChart.swift */,
+				ECCA419E2C6697BF0076A4EA /* UIFlowChartNode.swift */,
+				ECCA41A22C6698A30076A4EA /* UIFlowChartStroke.swift */,
+			);
+			path = FlowChart;
+			sourceTree = "<group>";
+		};
+		ECCA41A12C66986B0076A4EA /* MindMap */ = {
+			isa = PBXGroup;
+			children = (
+				2186DB102A30DF4700773C5E /* UIMindMap.swift */,
+				210F19AD2A42DBE100D71A66 /* UIMindMapNode.swift */,
+				210F19AF2A42DC9800D71A66 /* UIMindMapStroke.swift */,
+			);
+			path = MindMap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -825,6 +850,7 @@
 				218DA9C92A2B205800459C61 /* AppDelegate.swift in Sources */,
 				2147F5192A6F2001004245AE /* ISOLanguageCodeCell.swift in Sources */,
 				21AF3CD02A6B7139002E96E3 /* ProjectImagesVC.swift in Sources */,
+				ECCA419D2C6696EA0076A4EA /* UIFlowChart.swift in Sources */,
 				2178C19D2A4D92A300876BB6 /* ProjectSettingsVC.swift in Sources */,
 				2175FBE22A648D0700F7E97F /* LottieManager.swift in Sources */,
 				21AF3CB02A68565C002E96E3 /* RealmProjectModels.swift in Sources */,
@@ -873,16 +899,18 @@
 				21C21C492A34B5D800F40BE3 /* ProjectsListVC.swift in Sources */,
 				21C21C542A36145200F40BE3 /* Enumerations.swift in Sources */,
 				21AF3CC02A6B7096002E96E3 /* ProjectLanguageVC.swift in Sources */,
+				ECCA41A32C6698A30076A4EA /* UIFlowChartStroke.swift in Sources */,
 				21534D8F2A59B26F00E8078B /* NavigationVC.swift in Sources */,
 				214995242A5C3404008B9987 /* ReduxActions.swift in Sources */,
 				21534D942A59B38B00E8078B /* Coordinator.swift in Sources */,
 				21FF62032AB263AB0003D064 /* AppConstants.swift in Sources */,
 				21534DA32A5A9ED000E8078B /* TailwindCollectionViewCell.swift in Sources */,
 				21AF3CBA2A6B2159002E96E3 /* SendFeedbackVC.swift in Sources */,
-				210F19B02A42DC9800D71A66 /* UIStroke.swift in Sources */,
+				210F19B02A42DC9800D71A66 /* UIMindMapStroke.swift in Sources */,
 				21AF3CC42A6B70CC002E96E3 /* ProjectStyleVC.swift in Sources */,
 				21534D982A59B40A00E8078B /* MainCoordinator.swift in Sources */,
-				210F19AE2A42DBE100D71A66 /* UICanvasNodeView.swift in Sources */,
+				210F19AE2A42DBE100D71A66 /* UIMindMapNode.swift in Sources */,
+				ECCA419F2C6697BF0076A4EA /* UIFlowChartNode.swift in Sources */,
 				2133D7182B42EC1300A854F6 /* UICanvas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

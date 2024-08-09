@@ -1,5 +1,5 @@
 //
-//  UICanvasNodeView.swift
+//  UIMindMapNode.swift
 //  CAOCAP
 //
 //  Created by Azzam AL-Rashed on 21/06/2023.
@@ -9,7 +9,7 @@ import UIKit
 import SwiftSoup
 
 /// Protocol for handling node view interactions.
-protocol UICanvasNodeViewDelegate {
+protocol UIMindMapNodeDelegate {
     /// Called when a node is selected. The delegate should update the UI or handle the selection.
     func select(nodeID: String)
     
@@ -18,9 +18,10 @@ protocol UICanvasNodeViewDelegate {
 }
 
 /// A view for displaying a node in the mind map, with support for context menus.
-class UICanvasNodeView: UIView, UIContextMenuInteractionDelegate {
+class UIMindMapNode: UIView, UIContextMenuInteractionDelegate {
+    
     let element: Element
-    var delegate: UICanvasNodeViewDelegate?
+    var delegate: UIMindMapNodeDelegate?
     
     /// Initializes the view with the specified HTML element.
     ///
@@ -46,8 +47,10 @@ class UICanvasNodeView: UIView, UIContextMenuInteractionDelegate {
     }
     
     private func setupConstraints() {
-        heightAnchor.constraint(equalToConstant: 60).isActive = true  // TODO: use SnapKit
-        widthAnchor.constraint(equalToConstant: 150).isActive = true  // TODO: use SnapKit
+        snp.makeConstraints { make in
+            make.height.equalTo(60)
+            make.width.equalTo(150)
+        }
     }
     
     

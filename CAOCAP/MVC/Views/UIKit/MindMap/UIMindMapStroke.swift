@@ -1,5 +1,5 @@
 //
-//  UIStroke.swift
+//  UIMindMapStroke.swift
 //  CAOCAP
 //
 //  Created by Azzam AL-Rashed on 21/06/2023.
@@ -7,8 +7,8 @@
 
 import UIKit
 
-/// A custom view for drawing a series of strokes.
-class UIStroke: UIView {
+/// A custom view for drawing a series of strokes between mindmap nodes..
+class UIMindMapStroke: UIView {
     
     // MARK: - Properties
     var lines = 0
