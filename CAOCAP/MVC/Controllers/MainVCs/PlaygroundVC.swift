@@ -75,14 +75,17 @@ class PlaygroundVC: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set up gesture recognizer for resizing the web view
         let resizeGR = UIPanGestureRecognizer(target: self, action: #selector(handleResizingWebView(sender:)))
         resizeIcon.addGestureRecognizer(resizeGR)
-        
+
         setupToolsViewLayout()
         setupMindMapLayout()
         setupMenuButtons()
     }
     
+    // MARK: - WebView
+    /// Load the project's web content into the web view
     func loadWebView() {
         guard let document = project?.document else { return }
         do {
@@ -97,6 +100,8 @@ class PlaygroundVC: UIViewController, Storyboarded {
     }
     
     
+    // MARK: - Mind Map Setup
+    /// Set up the layout and configuration of the mind maps
     func setupMindMapLayout() {
         htmlMindMap = UIMindMap(frame: view.frame, color: .systemBlue)
         cssMindMap = UIMindMap(frame: view.frame, color: .systemPurple)
@@ -116,6 +121,9 @@ class PlaygroundVC: UIViewController, Storyboarded {
         
     }
     
+    
+    // MARK: - Tools View Setup
+    /// Set up the layout and swipe gestures for the tools view
     func setupToolsViewLayout() {
         let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
         let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
@@ -144,6 +152,9 @@ class PlaygroundVC: UIViewController, Storyboarded {
         }
     }
     
+    
+    // MARK: - Menu Buttons
+    /// Set up the menu buttons
     func setupMenuButtons() {
         //TODO: clean/refactor /replace with popovers menu 🛠️
         var typeArray = [
@@ -169,6 +180,9 @@ class PlaygroundVC: UIViewController, Storyboarded {
         listStyleButton.menu = UIMenu(title: "", options: .displayInline, children: listStyleArray)
     }
     
+    
+    // MARK: - WebView Gesture Handling
+    /// Handle resizing of the web view
     @objc func handleResizingWebView(sender: UIPanGestureRecognizer) {
         switch sender.state {
         case .began, .changed:
@@ -188,7 +202,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
             }
         }
     }
-    
+
     var mindmapPreviousIndex = 1
     @IBAction func didChangeMindMapsSegmentedControl(_ sender: UISegmentedControl) {
         let currentMindMap = mindmaps[sender.selectedSegmentIndex], previousMindMap = mindmaps[mindmapPreviousIndex]
@@ -202,6 +216,8 @@ class PlaygroundVC: UIViewController, Storyboarded {
         
     }
     
+    
+    // MARK: - Animate Keyboard Transition
     var keyboardIndex = 0
     var keyboardPreviousIndex = 0
     func animateToKeyboard(at index: Int) {
@@ -220,12 +236,14 @@ class PlaygroundVC: UIViewController, Storyboarded {
         }
     }
     
+    // MARK: - Keyboard Swipe Handling
     @IBAction func didPressToolsPageControl(_ sender: UIPageControl) {
         if sender.currentPage != keyboardIndex {
             animateToKeyboard(at: sender.currentPage)
         }
     }
     
+    // MARK: - Keyboard Swipe Handling
     @objc func handleKeyboardSwipe(sender: UISwipeGestureRecognizer) {
         if sender.state == .ended {
             switch sender.direction {
@@ -304,6 +322,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
     }
     
     
+    // MARK: - ViewFinder
     @IBAction func didPressViewfinderButton(_ sender: UIButton) {
         if viewFinderIsOn {
             sender.setImage(UIImage(systemName: "viewfinder.circle.fill"), for: .normal)
@@ -322,6 +341,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
         viewFinderIsOn.toggle()
     }
     
+    // MARK: - Undo/Redo Button Actions
     @IBAction func didPressUndo(_ sender: UIButton) {
         print("\(#function)ing...")
         ReduxStore.dispatch(UndoAction())
@@ -332,6 +352,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
         ReduxStore.dispatch(RedoAction())
     }
     
+    // MARK: - Arrow Button Actions
     @IBAction func didPressArrow(_ sender: UIButton) {
         if !htmlMindMap.isHidden {
             htmlMindMap.updateSelectedNode(Direction(rawValue: sender.tag))
@@ -437,6 +458,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
     
 }
 
+// MARK: - UIColorPickerViewControllerDelegate
 extension PlaygroundVC: UIColorPickerViewControllerDelegate {
     func colorPickerViewController(_ viewController: UIColorPickerViewController, didSelect color: UIColor, continuously: Bool) {
         guard !continuously else { return }
@@ -459,6 +481,7 @@ extension PlaygroundVC: UIColorPickerViewControllerDelegate {
     }
 }
 
+// MARK: - UICollectionViewDelegate
 extension PlaygroundVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -489,12 +512,14 @@ extension PlaygroundVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
 }
 
 
+// MARK: - UIMindMapDelegate
 extension PlaygroundVC: UIMindMapDelegate {
     func didRemoveNode() {
         loadWebView()
     }
 }
 
+// MARK: - UITextFieldDelegate
 extension PlaygroundVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
