@@ -635,6 +635,7 @@
 			isa = PBXGroup;
 			children = (
 				2133D7172B42EC1300A854F6 /* UICanvas.swift */,
+				ECCA41A42C66AE270076A4EA /* CodeBlock */,
 				ECCA41A02C6698540076A4EA /* FlowChart */,
 				ECCA41A12C66986B0076A4EA /* MindMap */,
 			);
@@ -667,6 +668,13 @@
 				210F19AF2A42DC9800D71A66 /* UIMindMapStroke.swift */,
 			);
 			path = MindMap;
+			sourceTree = "<group>";
+		};
+		ECCA41A42C66AE270076A4EA /* CodeBlock */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CodeBlock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
