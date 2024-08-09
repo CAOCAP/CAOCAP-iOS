@@ -13,37 +13,46 @@ import SwiftSoup
 
 class PlaygroundVC: UIViewController, Storyboarded {
     
+    /// The current project being edited in the playground.
     var project: Project?
+    
+    /// List of completed challenges for the project.
     var completeChallenges: [String]?
+    
+    /// Array of all available Tailwind CSS class names.
     var tailwindClassNames = TailwindCSS.all
     
+    /// Boolean flag to determine if the ViewFinder is currently on.
     var viewFinderIsOn = false
     @IBOutlet var viewFinderViews: [UIView]!
     
+    /// The web view used to preview the project's HTML content.
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var projectTitle: UILabel!
     @IBOutlet weak var resizeIcon: UIImageView!
     @IBOutlet weak var webViewWidthConstraint: NSLayoutConstraint!
     
+    /// Undo/Redo button outlets.
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var redoButton: UIButton!
     
+    /// Tools view that contains the keyboard and other tools.
     @IBOutlet weak var toolsView: UIView!
     @IBOutlet weak var toolsViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var toolsPageControl: UIPageControl!
     
-    
+    /// Array to hold the MindMaps for HTML, CSS, and JS.
     var mindmaps = [UIMindMap]()
-    
     var htmlMindMap: UIMindMap!
     var cssMindMap: UIMindMap!
     var jsMindMap: UIMindMap!
     
+    /// Arrays to hold the keyboard views for HTML, CSS, and JS.
     var htmlKeyboardViews = [UIView]()
     var cssKeyboardViews = [UIView]()
     var jsKeyboardViews = [UIView]()
     
-    //MARK: HTML Keyboard
+    //MARK: HTML Keyboard Outlets
     @IBOutlet weak var structureKeyboardView: UIView!
     @IBOutlet weak var structureStackView: UIStackView!
     
@@ -63,11 +72,11 @@ class PlaygroundVC: UIViewController, Storyboarded {
     @IBOutlet weak var hiddenSwitch: UISwitch!
     @IBOutlet weak var tailwindCollectionView: UICollectionView!
     
-    //MARK: CSS Keyboard
+    //MARK: CSS Keyboard Outlets
     @IBOutlet weak var selectorsKeyboardView: UIView!
     @IBOutlet weak var selectorsStackView: UIStackView!
     
-    //MARK: JS Keyboard
+    //MARK: JS Keyboard Outlets
     @IBOutlet weak var logicKeyboardView: UIView!
     @IBOutlet weak var logicStackView: UIStackView!
     
@@ -78,7 +87,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
         // Set up gesture recognizer for resizing the web view
         let resizeGR = UIPanGestureRecognizer(target: self, action: #selector(handleResizingWebView(sender:)))
         resizeIcon.addGestureRecognizer(resizeGR)
-
+        
         setupToolsViewLayout()
         setupMindMapLayout()
         setupMenuButtons()
@@ -141,7 +150,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
         htmlKeyboardViews = [structureKeyboardView, attributesKeyboardView]
         cssKeyboardViews = [selectorsKeyboardView]
         jsKeyboardViews = [logicKeyboardView]
-            
+        
         [htmlKeyboardViews,cssKeyboardViews,jsKeyboardViews].forEach { keyboardViews in
             keyboardViews.forEach { view in
                 toolsView.addSubview(view)
@@ -154,7 +163,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
     
     
     // MARK: - Menu Buttons
-    /// Set up the menu buttons
+    /// Set up the menu buttons for type, semantic, and list style options.
     func setupMenuButtons() {
         //TODO: clean/refactor /replace with popovers menu 🛠️
         var typeArray = [
@@ -182,7 +191,13 @@ class PlaygroundVC: UIViewController, Storyboarded {
     
     
     // MARK: - WebView Gesture Handling
-    /// Handle resizing of the web view
+    
+    /// Handle the resizing of the web view when a pan gesture is detected.
+    ///
+    /// This function adjusts the width of the web view based on the user's touch location.
+    /// It ensures the web view width stays within a specified range.
+    ///
+    /// - Parameter sender: The pan gesture recognizer that triggers this function.
     @objc func handleResizingWebView(sender: UIPanGestureRecognizer) {
         switch sender.state {
         case .began, .changed:
@@ -202,8 +217,16 @@ class PlaygroundVC: UIViewController, Storyboarded {
             }
         }
     }
-
+    
+    // MARK: - Animate MindMap Transition
+    
     var mindmapPreviousIndex = 1
+    
+    /// Handle changes in the MindMaps segmented control.
+    ///
+    /// This function animates the transition between different mind maps when the segmented control is changed.
+    ///
+    /// - Parameter sender: The segmented control that triggers this function.
     @IBAction func didChangeMindMapsSegmentedControl(_ sender: UISegmentedControl) {
         let currentMindMap = mindmaps[sender.selectedSegmentIndex], previousMindMap = mindmaps[mindmapPreviousIndex]
         mindmapPreviousIndex = sender.selectedSegmentIndex
@@ -218,8 +241,15 @@ class PlaygroundVC: UIViewController, Storyboarded {
     
     
     // MARK: - Animate Keyboard Transition
+    
     var keyboardIndex = 0
     var keyboardPreviousIndex = 0
+    
+    /// Animate the transition between different custom keyboards.
+    ///
+    /// This function handles the sliding animation between different keyboards, depending on the selected index.
+    ///
+    /// - Parameter index: The index of the keyboard to transition to.
     func animateToKeyboard(at index: Int) {
         keyboardPreviousIndex = keyboardIndex
         keyboardIndex = index
@@ -237,13 +267,23 @@ class PlaygroundVC: UIViewController, Storyboarded {
     }
     
     // MARK: - Keyboard Swipe Handling
+    
+    /// Handle page control changes for the custom keyboard views.
+    ///
+    /// This function animates the transition to the selected page in the page control.
+    ///
+    /// - Parameter sender: The page control that triggers this function.
     @IBAction func didPressToolsPageControl(_ sender: UIPageControl) {
         if sender.currentPage != keyboardIndex {
             animateToKeyboard(at: sender.currentPage)
         }
     }
     
-    // MARK: - Keyboard Swipe Handling
+    /// Handle swipe gestures for navigating between custom keyboard views.
+    ///
+    /// This function allows the user to swipe left, right, up, or down to change the keyboard view or adjust the tools view height.
+    ///
+    /// - Parameter sender: The swipe gesture recognizer that triggers this function.
     @objc func handleKeyboardSwipe(sender: UISwipeGestureRecognizer) {
         if sender.state == .ended {
             switch sender.direction {
@@ -317,12 +357,15 @@ class PlaygroundVC: UIViewController, Storyboarded {
         }
     }
     
+    // MARK: - Close Button
+    /// Dismisses the current view controller.
     @IBAction func didPressCloseButton(_ sender: Any) {
         dismiss(animated: true)
     }
     
     
     // MARK: - ViewFinder
+    /// Toggles the ViewFinder feature on or off.
     @IBAction func didPressViewfinderButton(_ sender: UIButton) {
         if viewFinderIsOn {
             sender.setImage(UIImage(systemName: "viewfinder.circle.fill"), for: .normal)
@@ -342,17 +385,22 @@ class PlaygroundVC: UIViewController, Storyboarded {
     }
     
     // MARK: - Undo/Redo Button Actions
+    /// Dispatches an undo action to the Redux store.
     @IBAction func didPressUndo(_ sender: UIButton) {
         print("\(#function)ing...")
         ReduxStore.dispatch(UndoAction())
     }
     
+    /// Dispatches a redo action to the Redux store.
     @IBAction func didPressRedo(_ sender: UIButton) {
         print("\(#function)ing...")
         ReduxStore.dispatch(RedoAction())
     }
     
     // MARK: - Arrow Button Actions
+    /// Handles arrow button presses to update the selected node in the appropriate MindMap.
+    ///
+    /// - Parameter sender: The button that triggered this action. The button's tag determines the direction.
     @IBAction func didPressArrow(_ sender: UIButton) {
         if !htmlMindMap.isHidden {
             htmlMindMap.updateSelectedNode(Direction(rawValue: sender.tag))
@@ -363,8 +411,13 @@ class PlaygroundVC: UIViewController, Storyboarded {
         }
     }
     
+    // MARK: - HTML Keyboard Button Actions
+    /// Adds an HTML element to the current MindMap.
+    ///
+    /// - Parameter sender: The button that triggered this action. The button's tag determines the HTML element to add.
     @IBAction func didPressAddElement(_ sender: UIButton) {
         print("\(#function)ing...")
+        // TODO: Consider externalizing the HTML tags array for better reusability.
         let htmlTags = [
             "span","canvas","div",
             "button","a","input",
@@ -380,26 +433,38 @@ class PlaygroundVC: UIViewController, Storyboarded {
         }
     }
     
+    // MARK: - JavaScript Keyboard Button Actions
+    
+    /// Handles the addition of an event node in the JS MindMap.
     @IBAction func didPressAddEvent(_ sender: UIButton) {
         print("\(#function)ing...")
-        
+        // TODO: Implement event node addition logic.
     }
     
+    /// Handles the addition of an action node in the JS MindMap.
     @IBAction func didPressAddAction(_ sender: UIButton) {
         print("\(#function)ing...")
-        
+        // TODO: Implement action node addition logic.
     }
     
+    /// Handles the addition of a condition node in the JS MindMap.
     @IBAction func didPressAddCondition(_ sender: UIButton) {
         print("\(#function)ing...")
-        
+        // TODO: Implement condition node addition logic.
     }
     
+    /// Handles the addition of a value node in the JS MindMap.
     @IBAction func didPressAddValue(_ sender: UIButton) {
         print("\(#function)ing...")
-        
+        // TODO: Implement value node addition logic.
     }
     
+    
+    // MARK: - AttributesView Handling
+    
+    /// Changes the view displayed based on the selected segment in the AttributesView segmented control.
+    ///
+    /// - Parameter sender: The segmented control that triggered this action.
     @IBAction func didChangeAttributesViewSegmentedControl(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
@@ -417,10 +482,18 @@ class PlaygroundVC: UIViewController, Storyboarded {
         }
     }
     
+    /// Toggles the text decoration on or off for a given button.
+    ///
+    /// - Parameters:
+    ///   - button: The button representing the text decoration.
+    ///   - turnOn: A boolean value indicating whether to turn the decoration on or off.
     func toggleTextDecoration(button: UIButton, turnOn: Bool) {
         button.tintColor = turnOn ? .systemBlue : .label
     }
     
+    /// Toggles the text decoration for the selected element based on the button pressed.
+    ///
+    /// - Parameter sender: The button that triggered this action.
     @IBAction func didPressTextDecoration(_ sender: UIButton) {
         print("\(#function)ing...")
         guard let project = project else { return }
@@ -432,6 +505,9 @@ class PlaygroundVC: UIViewController, Storyboarded {
         
     }
     
+    /// Changes the text alignment of the selected element based on the selected segment in the segmented control.
+    ///
+    /// - Parameter sender: The segmented control that triggered this action.
     @IBAction func didChangeTextAlignmentSegmentedControl(_ sender: UISegmentedControl) {
         guard let project = project else { return }
         let selectedAlignment = TailwindCSS.textAlign[sender.selectedSegmentIndex]
@@ -440,7 +516,11 @@ class PlaygroundVC: UIViewController, Storyboarded {
         }))
     }
     
+    
     var selectedColorWell: UIColorWell?
+    /// Presents the color picker for selecting text or background color.
+    ///
+    /// - Parameter sender: The button that triggered this action.
     @IBAction func didPressSelectColorButton(_ sender: UIButton) {
         selectedColorWell = sender.tag == 0 ? textColorWell : backgroundColorWell
         let colorPickerVC = UIColorPickerViewController()
@@ -448,6 +528,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
         present(colorPickerVC, animated: true)
     }
     
+    /// Toggles the visibility of the selected element.
     @IBAction func didChangeHiddenSwitch(_ sender: UISwitch) {
         guard let project = project else { return }
         ReduxStore.dispatch(UpdateAction(handler: {
@@ -460,6 +541,13 @@ class PlaygroundVC: UIViewController, Storyboarded {
 
 // MARK: - UIColorPickerViewControllerDelegate
 extension PlaygroundVC: UIColorPickerViewControllerDelegate {
+    
+    /// Handles the color selection in the color picker view controller.
+    ///
+    /// - Parameters:
+    ///   - viewController: The color picker view controller.
+    ///   - color: The selected color.
+    ///   - continuously: A boolean value indicating whether the color selection is continuous.
     func colorPickerViewController(_ viewController: UIColorPickerViewController, didSelect color: UIColor, continuously: Bool) {
         guard !continuously else { return }
         guard let project = project else { return }
@@ -484,24 +572,29 @@ extension PlaygroundVC: UIColorPickerViewControllerDelegate {
 // MARK: - UICollectionViewDelegate
 extension PlaygroundVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    /// Returns the number of sections in the collection view.
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return tailwindClassNames.count
     }
     
+    /// Returns the number of items in a given section.
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return tailwindClassNames[section].array.count
     }
     
+    /// Configures and returns the cell for the given index path.
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tailwindCell", for: indexPath) as? TailwindCollectionViewCell else { return UICollectionViewCell() }
         cell.configure(title: tailwindClassNames[indexPath.section].array[indexPath.row])
         return cell
     }
     
+    /// Returns the size for the item at the specified index path.
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: (collectionView.frame.width/2) - 20, height: 30)
     }
     
+    /// Handles the selection of an item in the collection view.
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let project = project else { return }
         ReduxStore.dispatch(UpdateAction(handler: {
@@ -514,6 +607,8 @@ extension PlaygroundVC: UICollectionViewDelegate, UICollectionViewDataSource, UI
 
 // MARK: - UIMindMapDelegate
 extension PlaygroundVC: UIMindMapDelegate {
+    
+    /// Handles the removal of a node in the MindMap.
     func didRemoveNode() {
         loadWebView()
     }
@@ -521,10 +616,18 @@ extension PlaygroundVC: UIMindMapDelegate {
 
 // MARK: - UITextFieldDelegate
 extension PlaygroundVC: UITextFieldDelegate {
+    
+    /// Handles the return key press event on the text field.
+    ///
+    /// - Parameter textField: The text field whose return button was pressed.
+    /// - Returns: A boolean value indicating whether the text field should process the return button press.
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         view.endEditing(true)
     }
     
+    /// Handles the event when a HTML element text content editing ends.
+    ///
+    /// - Parameter sender: The text field that triggered the event.
     @IBAction func didEndEditingTextContent(_ sender: UITextField) {
         guard let project = project, let text = sender.text else { return }
         ReduxStore.dispatch(UpdateAction(handler: {
@@ -532,6 +635,9 @@ extension PlaygroundVC: UITextFieldDelegate {
         }))
     }
     
+    /// Handles the event when a HTML element source editing ends.
+    ///
+    /// - Parameter sender: The text field that triggered the event.
     @IBAction func didEndEditingElementSource(_ sender: UITextField) {
         guard let project = project, let text = sender.text else { return }
         ReduxStore.dispatch(UpdateAction(handler: {
@@ -539,6 +645,9 @@ extension PlaygroundVC: UITextFieldDelegate {
         }))
     }
     
+    /// Filters the Tailwind classes based on the search query.
+    ///
+    /// - Parameter sender: The text field that triggered the event.
     @IBAction func editingTailwindSearch(_ sender: UITextField) {
         guard let searchQuery = sender.text else { return }
         tailwindClassNames = TailwindCSS.all // TODO: refactor this ugly code 🫣
@@ -556,88 +665,153 @@ extension PlaygroundVC: UITextFieldDelegate {
 }
 
 extension PlaygroundVC: StoreSubscriber {
+    
+    /// Subscribes to the Redux store when the view appears.
     override func viewWillAppear(_ animated: Bool) {
         ReduxStore.subscribe(self)
     }
     
+    /// Unsubscribes from the Redux store when the view disappears.
     override func viewWillDisappear(_ animated: Bool) {
         ReduxStore.unsubscribe(self)
     }
     
+    /// Updates the UI based on the new state from the Redux store.
+    ///
+    /// - Parameter state: The new state from the Redux store.
     func newState(state: ReduxState) {
-        if project == nil {
-            project = state.openedProject
-            htmlMindMap.project = project
-        }
         
-        
-        
-//        if let dailyChallenges = state.dailyChallenges {
-        for challenge in state.dailyChallenges {
-                if challenge.isComplete { continue }
-                if let docString = state.openedProject?.getOuterHtml() {
-                    if docString.contains(challenge.regex) {
-                        view.presentConfettiAnimation()
-                        challenge.isComplete = true
-                    }
-                }
-            }
-//        }
+        updateProjectIfNeeded(from: state)
+        handleDailyChallenges(with: state)
         
         loadWebView()/*🤔*/
         htmlMindMap.loadBody()
         
+        refreshUIForCurrentProject()
+        
+    }
+    
+    // MARK: - Helper Functions
+    
+    /// Updates the project reference if it is not already set.
+    ///
+    /// - Parameter state: The new state from the Redux store.
+    private func updateProjectIfNeeded(from state: ReduxState) {
+        if project == nil {
+            project = state.openedProject
+            htmlMindMap.project = project
+        }
+    }
+    
+    /// Refreshes the UI elements to reflect the current project's state.
+    private func refreshUIForCurrentProject() {
         projectTitle.text = project?.getDocumentTitle()
         
+        updateContentTextField()
+        updateTextDecorationButtons()
+        updateTextAlignmentSegmentedControl()
+        updateTypeButton()
+        updateListStyleButton()
+        updateSemanticButton()
+        updateSourceTextField()
+        updateIDTextField()
+        updateColorWells()
+        updateHiddenSwitch()
+    }
+
+    /// Updates the content text field with the selected element's text.
+    private func updateContentTextField() {
         if let selectedElementText = project?.getSelectedElement()?.ownText() {
             contentTextField.text = selectedElementText
         }
-        
+    }
+    
+    /// Updates the text decoration buttons based on the selected element's decorations.
+    private func updateTextDecorationButtons() {
         if let selectedElementTextDecorations = project?.getSelectedElementTextDecorations() {
             textDecorationButtons.enumerated().forEach { (index, button) in
                 let decoration = TextDecoration.allCases[index]
                 toggleTextDecoration(button: button, turnOn: selectedElementTextDecorations.contains(decoration))
             }
         }
-        
-        if let selectedElementTextAlignment = project?.getSelectedElementTextAlignment() {
-            if let index = TailwindCSS.textAlign.firstIndex(of: selectedElementTextAlignment) {
-                textAlignmentSegmentedControl.selectedSegmentIndex = index
-            }
+    }
+
+    /// Updates the segmented control for text alignment based on the selected element's alignment.
+    private func updateTextAlignmentSegmentedControl() {
+        if let selectedElementTextAlignment = project?.getSelectedElementTextAlignment(),
+           let index = TailwindCSS.textAlign.firstIndex(of: selectedElementTextAlignment) {
+            textAlignmentSegmentedControl.selectedSegmentIndex = index
         } else {
             textAlignmentSegmentedControl.selectedSegmentIndex = 0
         }
-        
+    }
+
+    /// Updates the type button with the selected element's type.
+    private func updateTypeButton() {
         if let selectedElementType = project?.getSelectedElementType() {
             typeButton.setTitle(selectedElementType, for: .normal)
         }
-        
+    }
+
+    /// Updates the list style button with the selected element's list style.
+    private func updateListStyleButton() {
         if let selectedElementListStyle = project?.getSelectedElementListStyle() {
             listStyleButton.setTitle(selectedElementListStyle, for: .normal)
         }
-        
+    }
+
+    /// Updates the semantic button with the selected element's semantic type.
+    private func updateSemanticButton() {
         if let selectedElementSemantic = project?.getSelectedElementSemantic() {
             semanticButton.setTitle(selectedElementSemantic, for: .normal)
         }
-        
+    }
+
+    /// Updates the source text field with the selected element's source.
+    private func updateSourceTextField() {
         if let selectedElementSource = project?.getSelectedElementSource() {
             sourceTextField.text = selectedElementSource
         }
-        
+    }
+
+    /// Updates the ID text field's placeholder with the selected element's ID.
+    private func updateIDTextField() {
         idTextField.placeholder = project?.selectedElementID
-        
+    }
+
+    /// Updates the color wells based on the selected element's background and text colors.
+    ///
+    /// - Note: The color wells are currently commented out for future implementation.
+    private func updateColorWells() {
         // TODO: update the backgroundColorWell & textColorWell selected color
         if let backgroundColor = project?.getSelectedElementBackgroundColor() {
-            //            backgroundColorWell.selectedColor = backgroundColor
+            // backgroundColorWell.selectedColor = backgroundColor
         }
         
         if let textColor = project?.getSelectedElementTextColor() {
-            //            textColorWell.selectedColor = textColor
+            // textColorWell.selectedColor = textColor
         }
-        
+    }
+
+    /// Updates the state of the hidden switch based on the selected element's hidden property.
+    private func updateHiddenSwitch() {
         if let isHidden = project?.isSelectedElementHidden() {
             hiddenSwitch.isOn = isHidden
         }
-        
+    }
+    
+    // MARK: - Daily Challenge Completion Handling
+    /// Handles daily challenges completion and triggers animations if necessary.
+    private func handleDailyChallenges(with state: ReduxState) {
+        guard let openedProject = state.openedProject else { return }
+
+        for challenge in state.dailyChallenges {
+            if challenge.isComplete { continue }
+            
+            if let docString = openedProject.getOuterHtml(), docString.contains(challenge.regex) {
+                view.presentConfettiAnimation()
+                challenge.isComplete = true
+            }
+        }
     }
 }
