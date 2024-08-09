@@ -8,35 +8,64 @@
 import UIKit
 import SwiftSoup
 
+/// Protocol for handling node view interactions.
 protocol UICanvasNodeViewDelegate {
+    /// Called when a node is selected. The delegate should update the UI or handle the selection.
     func select(nodeID: String)
+    
+    /// Called when a node is to be deleted. The delegate should manage node removal.
     func delete(nodeID: String)
 }
 
+/// A view for displaying a node in the mind map, with support for context menus.
 class UICanvasNodeView: UIView, UIContextMenuInteractionDelegate {
     let element: Element
     var delegate: UICanvasNodeViewDelegate?
+    
+    /// Initializes the view with the specified HTML element.
+    ///
+    /// - Parameter element: The HTML element represented by this view.
     init(element: Element) {
         self.element = element
         super.init(frame: .zero)
+        setupView()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setupView() {
         translatesAutoresizingMaskIntoConstraints = false
-        heightAnchor.constraint(equalToConstant: 60).isActive = true  //TODO: use SnapKit
-        widthAnchor.constraint(equalToConstant: 150).isActive = true  //TODO: use SnapKit
+        setupConstraints()
         layer.cornerRadius = 10
         layer.borderColor = UIColor.purple.cgColor
         setBackgroundColor()
+        setupLabel()
+        setupGestures()
+    }
+    
+    private func setupConstraints() {
+        heightAnchor.constraint(equalToConstant: 60).isActive = true  // TODO: use SnapKit
+        widthAnchor.constraint(equalToConstant: 150).isActive = true  // TODO: use SnapKit
+    }
+    
+    
+    private func setupLabel() {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 60))
         label.textAlignment = .center
         label.text = element.tagName()
         label.textColor = .white
         label.font = UIFont.ubuntu(.medium, size: 20)
         addSubview(label)
-        
-        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTap(gesture:))))
+    }
+    
+    private func setupGestures() {
+        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTap)))
         addInteraction(UIContextMenuInteraction(delegate: self))
     }
     
-    func setBackgroundColor() {
+    private func setBackgroundColor() {
         switch element.tagName() {
         case "body":
             backgroundColor = .systemBlue
@@ -57,20 +86,20 @@ class UICanvasNodeView: UIView, UIContextMenuInteractionDelegate {
         }
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
+    /// Handles tap gestures to select the node.
     @objc func didTap(gesture: UITapGestureRecognizer) {
         print("did tap node:\(element.id())")
         delegate?.select(nodeID: element.id())
     }
     
+    /// Removes the view from its superview.
     func delete() {
         DispatchQueue.main.async {
             self.removeFromSuperview()
         }
     }
+    
+    // MARK: - Context Menu Interaction
     
     func contextMenuInteraction(_ interaction: UIContextMenuInteraction, configurationForMenuAtLocation location: CGPoint) -> UIContextMenuConfiguration? {
         return UIContextMenuConfiguration(actionProvider:  { _ in
@@ -82,8 +111,8 @@ class UICanvasNodeView: UIView, UIContextMenuInteractionDelegate {
         })
     }
     
-    
-    //MARK: - Stolen from https://kylebashour.com/posts/context-menu-guide
+    // MARK: - Context Menu Preview
+    /// https://kylebashour.com/posts/context-menu-guide
     // improved UI behaviour
     private func makeTargetedPreview(for configuration: UIContextMenuConfiguration) -> UITargetedPreview? {
         let visiblePath = UIBezierPath(roundedRect: bounds, cornerRadius: 16)

@@ -7,12 +7,19 @@
 
 import UIKit
 
+/// A custom view for drawing a series of strokes.
 class UIStroke: UIView {
+    
+    // MARK: - Properties
     var lines = 0
     var color = UIColor.label
     var heightConstraint = NSLayoutConstraint()
     var widthConstraint = NSLayoutConstraint()
     
+    // MARK: - Initializers
+    /// Initializes the stroke view with the specified number of lines.
+    ///
+    /// - Parameter lines: The number of lines to draw. Defaults to 0.
     init(lines: Int = 0) {
         super.init(frame: .zero)
         translatesAutoresizingMaskIntoConstraints = false
@@ -27,6 +34,8 @@ class UIStroke: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+    
+    // MARK: - Drawing
     
     override func draw(_ rect: CGRect) {
         let path = UIBezierPath()
