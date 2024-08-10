@@ -112,6 +112,10 @@
 		ECCA419D2C6696EA0076A4EA /* UIFlowChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA419C2C6696EA0076A4EA /* UIFlowChart.swift */; };
 		ECCA419F2C6697BF0076A4EA /* UIFlowChartNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA419E2C6697BF0076A4EA /* UIFlowChartNode.swift */; };
 		ECCA41A32C6698A30076A4EA /* UIFlowChartStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA41A22C6698A30076A4EA /* UIFlowChartStroke.swift */; };
+		ECCA94772C6777BB0076AA6B /* HTMLToolsKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94762C6777BB0076AA6B /* HTMLToolsKit.swift */; };
+		ECCA94792C6777D60076AA6B /* JSToolsKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94782C6777D60076AA6B /* JSToolsKit.swift */; };
+		ECCA947B2C6777E40076AA6B /* CSSToolsKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA947A2C6777E40076AA6B /* CSSToolsKit.swift */; };
+		ECCA947D2C6778200076AA6B /* ToolsKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA947C2C6778200076AA6B /* ToolsKitVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -237,6 +241,10 @@
 		ECCA419C2C6696EA0076A4EA /* UIFlowChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChart.swift; sourceTree = "<group>"; };
 		ECCA419E2C6697BF0076A4EA /* UIFlowChartNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChartNode.swift; sourceTree = "<group>"; };
 		ECCA41A22C6698A30076A4EA /* UIFlowChartStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChartStroke.swift; sourceTree = "<group>"; };
+		ECCA94762C6777BB0076AA6B /* HTMLToolsKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLToolsKit.swift; sourceTree = "<group>"; };
+		ECCA94782C6777D60076AA6B /* JSToolsKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSToolsKit.swift; sourceTree = "<group>"; };
+		ECCA947A2C6777E40076AA6B /* CSSToolsKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSSToolsKit.swift; sourceTree = "<group>"; };
+		ECCA947C2C6778200076AA6B /* ToolsKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsKitVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -616,6 +624,7 @@
 				218DA9CC2A2B205800459C61 /* PlaygroundVC.swift */,
 				215DE72A2B527BC100546394 /* FullScreenWebViewVC.swift */,
 				EC7B11822C5223D40020ECE4 /* CodePreviewVC.swift */,
+				ECCA94752C67778D0076AA6B /* ToolKitVCs */,
 				21AF3CD32A6B717A002E96E3 /* ProjectVCs */,
 				21E3A2092B0116060041A561 /* SettingsVCs */,
 			);
@@ -675,6 +684,17 @@
 			children = (
 			);
 			path = CodeBlock;
+			sourceTree = "<group>";
+		};
+		ECCA94752C67778D0076AA6B /* ToolKitVCs */ = {
+			isa = PBXGroup;
+			children = (
+				ECCA947C2C6778200076AA6B /* ToolsKitVC.swift */,
+				ECCA94762C6777BB0076AA6B /* HTMLToolsKit.swift */,
+				ECCA94782C6777D60076AA6B /* JSToolsKit.swift */,
+				ECCA947A2C6777E40076AA6B /* CSSToolsKit.swift */,
+			);
+			path = ToolKitVCs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -863,6 +883,7 @@
 				2175FBE22A648D0700F7E97F /* LottieManager.swift in Sources */,
 				21AF3CB02A68565C002E96E3 /* RealmProjectModels.swift in Sources */,
 				21534D9D2A59CD8600E8078B /* UIDashboardView.swift in Sources */,
+				ECCA94772C6777BB0076AA6B /* HTMLToolsKit.swift in Sources */,
 				21E148152A82031D00B503C2 /* Challenge.swift in Sources */,
 				21AF3CB42A6B20FD002E96E3 /* AboutUsVC.swift in Sources */,
 				21AF3CA72A6843A9002E96E3 /* RealmRepository.swift in Sources */,
@@ -908,6 +929,7 @@
 				21C21C542A36145200F40BE3 /* Enumerations.swift in Sources */,
 				21AF3CC02A6B7096002E96E3 /* ProjectLanguageVC.swift in Sources */,
 				ECCA41A32C6698A30076A4EA /* UIFlowChartStroke.swift in Sources */,
+				ECCA947D2C6778200076AA6B /* ToolsKitVC.swift in Sources */,
 				21534D8F2A59B26F00E8078B /* NavigationVC.swift in Sources */,
 				214995242A5C3404008B9987 /* ReduxActions.swift in Sources */,
 				21534D942A59B38B00E8078B /* Coordinator.swift in Sources */,
@@ -915,6 +937,8 @@
 				21534DA32A5A9ED000E8078B /* TailwindCollectionViewCell.swift in Sources */,
 				21AF3CBA2A6B2159002E96E3 /* SendFeedbackVC.swift in Sources */,
 				210F19B02A42DC9800D71A66 /* UIMindMapStroke.swift in Sources */,
+				ECCA947B2C6777E40076AA6B /* CSSToolsKit.swift in Sources */,
+				ECCA94792C6777D60076AA6B /* JSToolsKit.swift in Sources */,
 				21AF3CC42A6B70CC002E96E3 /* ProjectStyleVC.swift in Sources */,
 				21534D982A59B40A00E8078B /* MainCoordinator.swift in Sources */,
 				210F19AE2A42DBE100D71A66 /* UIMindMapNode.swift in Sources */,
