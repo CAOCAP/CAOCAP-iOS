@@ -492,7 +492,6 @@
 		21AF3CD32A6B717A002E96E3 /* ProjectVCs */ = {
 			isa = PBXGroup;
 			children = (
-				21C21C482A34B5D800F40BE3 /* ProjectsListVC.swift */,
 				21534D9E2A59E58100E8078B /* ProjectFilesVC.swift */,
 				21AF3CBF2A6B7096002E96E3 /* ProjectLanguageVC.swift */,
 				21AF3CC12A6B70B6002E96E3 /* ProjectTitleVC.swift */,
@@ -621,11 +620,8 @@
 				21DBA0002A38F4C800DFAC66 /* HomeVC.swift */,
 				21183D062BD72380001AECAF /* WorldVC.swift */,
 				21534D9A2A59CD2B00E8078B /* ChartsVC.swift */,
-				218DA9CC2A2B205800459C61 /* PlaygroundVC.swift */,
-				215DE72A2B527BC100546394 /* FullScreenWebViewVC.swift */,
-				EC7B11822C5223D40020ECE4 /* CodePreviewVC.swift */,
-				ECCA94752C67778D0076AA6B /* ToolKitVCs */,
-				21AF3CD32A6B717A002E96E3 /* ProjectVCs */,
+				21C21C482A34B5D800F40BE3 /* ProjectsListVC.swift */,
+				ECCA94812C67916A0076AA6B /* PlaygroundVCs */,
 				21E3A2092B0116060041A561 /* SettingsVCs */,
 			);
 			path = MainVCs;
@@ -690,11 +686,47 @@
 			isa = PBXGroup;
 			children = (
 				ECCA947C2C6778200076AA6B /* ToolsKitVC.swift */,
-				ECCA94762C6777BB0076AA6B /* HTMLToolsKit.swift */,
-				ECCA94782C6777D60076AA6B /* JSToolsKit.swift */,
-				ECCA947A2C6777E40076AA6B /* CSSToolsKit.swift */,
+				ECCA947E2C6791210076AA6B /* HTML */,
+				ECCA947F2C6791270076AA6B /* CSS */,
+				ECCA94802C67912C0076AA6B /* JS */,
 			);
 			path = ToolKitVCs;
+			sourceTree = "<group>";
+		};
+		ECCA947E2C6791210076AA6B /* HTML */ = {
+			isa = PBXGroup;
+			children = (
+				ECCA94762C6777BB0076AA6B /* HTMLToolsKit.swift */,
+			);
+			path = HTML;
+			sourceTree = "<group>";
+		};
+		ECCA947F2C6791270076AA6B /* CSS */ = {
+			isa = PBXGroup;
+			children = (
+				ECCA947A2C6777E40076AA6B /* CSSToolsKit.swift */,
+			);
+			path = CSS;
+			sourceTree = "<group>";
+		};
+		ECCA94802C67912C0076AA6B /* JS */ = {
+			isa = PBXGroup;
+			children = (
+				ECCA94782C6777D60076AA6B /* JSToolsKit.swift */,
+			);
+			path = JS;
+			sourceTree = "<group>";
+		};
+		ECCA94812C67916A0076AA6B /* PlaygroundVCs */ = {
+			isa = PBXGroup;
+			children = (
+				218DA9CC2A2B205800459C61 /* PlaygroundVC.swift */,
+				EC7B11822C5223D40020ECE4 /* CodePreviewVC.swift */,
+				215DE72A2B527BC100546394 /* FullScreenWebViewVC.swift */,
+				21AF3CD32A6B717A002E96E3 /* ProjectVCs */,
+				ECCA94752C67778D0076AA6B /* ToolKitVCs */,
+			);
+			path = PlaygroundVCs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

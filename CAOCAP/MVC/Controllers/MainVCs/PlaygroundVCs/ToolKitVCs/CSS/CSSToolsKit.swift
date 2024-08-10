@@ -8,6 +8,8 @@
 import UIKit
 
 class CSSToolsKit: ToolsKitVC {
-
-
+    
+    override func newState(state: ReduxState) {
+        super.newState(state: state)
+    }
 }
