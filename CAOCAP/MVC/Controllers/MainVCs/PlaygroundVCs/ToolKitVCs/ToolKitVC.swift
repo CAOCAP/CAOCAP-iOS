@@ -34,7 +34,7 @@ class ToolKitVC: UIViewController, StoreSubscriber, Storyboarded {
     ///
     /// - Parameter state: The new state from the Redux store.
     func newState(state: ReduxState) {
-        
+        updateProjectIfNeeded(from: state)
     }
     
     // MARK: - Helper Functions

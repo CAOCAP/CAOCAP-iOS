@@ -3664,9 +3664,6 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                     <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
                                                     <color key="baseForegroundColor" systemColor="systemBlueColor"/>
                                                 </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="didPressAddValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JG7-Ia-Xvt"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -3812,6 +3809,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
                                                                     <action selector="didEndEditingElementSource:" destination="egu-Ix-0st" eventType="editingDidEnd" id="TaA-0B-71v"/>
+                                                                    <outlet property="delegate" destination="egu-Ix-0st" id="UGt-IK-hcE"/>
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dMf-FZ-Mdf">
@@ -3856,7 +3854,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
                                                                     <action selector="didEndEditingTextContent:" destination="egu-Ix-0st" eventType="editingDidEnd" id="rVe-eU-NrA"/>
-                                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="9bh-JD-rGp"/>
+                                                                    <outlet property="delegate" destination="egu-Ix-0st" id="I5m-al-yzM"/>
                                                                 </connections>
                                                             </textField>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DKx-Dj-bak">
@@ -4060,6 +4058,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
                                                             <action selector="editingTailwindSearch:" destination="egu-Ix-0st" eventType="editingDidEnd" id="CZl-Wy-cfE"/>
+                                                            <outlet property="delegate" destination="egu-Ix-0st" id="goi-b1-AiK"/>
                                                         </connections>
                                                     </textField>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DED-s3-hlc">
@@ -4115,8 +4114,8 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             </collectionViewCell>
                                                         </cells>
                                                         <connections>
-                                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="gSt-Jw-6TW"/>
-                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="0NR-64-pvn"/>
+                                                            <outlet property="dataSource" destination="egu-Ix-0st" id="Lr5-AL-AYB"/>
+                                                            <outlet property="delegate" destination="egu-Ix-0st" id="5A4-JQ-Xkp"/>
                                                         </connections>
                                                     </collectionView>
                                                 </subviews>
@@ -4532,9 +4531,6 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                     <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
                                                     <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
                                                 </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="didPressAddCondition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="deA-YN-aJt"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5A-OW-YHf">
                                                 <rect key="frame" x="0.0" y="111" width="330" height="104"/>
@@ -4543,9 +4539,6 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                     <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
                                                     <color key="baseForegroundColor" systemColor="systemBlueColor"/>
                                                 </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="didPressAddAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VvQ-I8-HcR"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -4637,9 +4630,6 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                     <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
                                                     <color key="baseForegroundColor" systemColor="systemGreenColor"/>
                                                 </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="didPressAddEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uP6-Ph-zQ7"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -4731,9 +4721,6 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                     <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
                                                     <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
                                                 </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="didPressAddValue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zCs-hP-0Br"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
