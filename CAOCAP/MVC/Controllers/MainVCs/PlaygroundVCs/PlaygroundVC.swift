@@ -190,30 +190,30 @@ class PlaygroundVC: UIViewController, Storyboarded {
     }
     
     
-    // MARK: - Animate Keyboard Transition
+    // MARK: - Animate ToolKit Transition
     
-    var keyboardIndex = 0
-    var keyboardPreviousIndex = 0
+    var toolKitIndex = 1
+    var previousToolKitIndex = 1
     
-    /// Animate the transition between different custom keyboards.
+    /// Animate the transition between different ToolKits.
     ///
-    /// This function handles the sliding animation between different keyboards, depending on the selected index.
+    /// This function handles the sliding animation between different ToolKit, depending on the selected index.
     ///
-    /// - Parameter index: The index of the keyboard to transition to.
-    func animateToKeyboard(at index: Int) {
-//        keyboardPreviousIndex = keyboardIndex TODO: - 
-//        keyboardIndex = index
-//        var animationDirection = keyboardIndex > keyboardPreviousIndex
-//        if keyboardIndex < 0 { keyboardIndex = htmlToolKitVCs.count - 1 } else if keyboardIndex > htmlToolKitVCs.count - 1 { keyboardIndex = 0 }
-//        let currentKeyboard = htmlToolKitVCs[keyboardIndex], previousKeyboard = htmlToolKitVCs[keyboardPreviousIndex]
-//        currentKeyboard.isHidden = false
-//        currentKeyboard.frame.origin.x = animationDirection ? self.view.frame.width : -self.view.frame.width
-//        UIView.animate(withDuration: 0.3) {
-//            currentKeyboard.center.x = previousKeyboard.center.x
-//            previousKeyboard.frame.origin.x = animationDirection ? -self.view.frame.width : self.view.frame.width
-//        } completion: { _ in
-//            previousKeyboard.isHidden = true
-//        }
+    /// - Parameter index: The index of the ToolKit to transition to.
+    func animateToToolKit(at index: Int) {
+        previousToolKitIndex = toolKitIndex
+        toolKitIndex = index
+        var animationDirection = toolKitIndex > previousToolKitIndex
+        if toolKitIndex < 0 { toolKitIndex = htmlToolKitVCs.count - 1 } else if toolKitIndex > htmlToolKitVCs.count - 1 { toolKitIndex = 0 }
+        let currentToolKitVC = htmlToolKitVCs[toolKitIndex], previousToolKitVC = htmlToolKitVCs[previousToolKitIndex]
+        currentToolKitVC.view.isHidden = false
+        currentToolKitVC.view.frame.origin.x = animationDirection ? self.view.frame.width : -self.view.frame.width
+        UIView.animate(withDuration: 0.3) {
+            currentToolKitVC.view.center.x = previousToolKitVC.view.center.x
+            previousToolKitVC.view.frame.origin.x = animationDirection ? -self.view.frame.width : self.view.frame.width
+        } completion: { _ in
+            previousToolKitVC.view.isHidden = true
+        }
     }
     
     // MARK: - Keyboard Swipe Handling
@@ -224,8 +224,8 @@ class PlaygroundVC: UIViewController, Storyboarded {
     ///
     /// - Parameter sender: The page control that triggers this function.
     @IBAction func didPressToolsPageControl(_ sender: UIPageControl) {
-        if sender.currentPage != keyboardIndex {
-            animateToKeyboard(at: sender.currentPage)
+        if sender.currentPage != toolKitIndex {
+            animateToToolKit(at: sender.currentPage)
         }
     }
     
@@ -238,11 +238,11 @@ class PlaygroundVC: UIViewController, Storyboarded {
         if sender.state == .ended {
             switch sender.direction {
             case .right:
-                animateToKeyboard(at: keyboardIndex - 1)
-                toolsPageControl.currentPage = keyboardIndex
+                animateToToolKit(at: toolKitIndex - 1)
+                toolsPageControl.currentPage = toolKitIndex
             case .left:
-                animateToKeyboard(at: keyboardIndex + 1)
-                toolsPageControl.currentPage = keyboardIndex
+                animateToToolKit(at: toolKitIndex + 1)
+                toolsPageControl.currentPage = toolKitIndex
             case .up:
                 if toolsViewHeightConstraint.constant == 40 {
                     //only show 6,7 { h=107 }

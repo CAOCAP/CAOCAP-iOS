@@ -364,8 +364,8 @@
                                     <constraint firstAttribute="height" constant="255" id="gtC-Vm-74s"/>
                                 </constraints>
                             </view>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="wqA-La-Huu">
-                                <rect key="frame" x="146" y="795" width="98" height="25.666666666666629"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="wqA-La-Huu">
+                                <rect key="frame" x="137.33333333333334" y="795" width="115.66666666666666" height="25.666666666666629"/>
                                 <color key="pageIndicatorTintColor" systemColor="placeholderTextColor"/>
                                 <color key="currentPageIndicatorTintColor" systemColor="labelColor"/>
                                 <connections>
@@ -3624,7 +3624,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         <viewControllerLayoutGuide type="top" id="2Rx-0I-vVs"/>
                         <viewControllerLayoutGuide type="bottom" id="BZ1-JO-Xf0"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Jr5-ea-yjk">
+                    <view key="view" hidden="YES" contentMode="scaleToFill" id="Jr5-ea-yjk">
                         <rect key="frame" x="0.0" y="0.0" width="360" height="255"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -3718,7 +3718,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         <viewControllerLayoutGuide type="top" id="z5u-tO-Unh"/>
                         <viewControllerLayoutGuide type="bottom" id="4o1-tx-sRh"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ain-vx-MIT">
+                    <view key="view" hidden="YES" contentMode="scaleToFill" id="Ain-vx-MIT">
                         <rect key="frame" x="0.0" y="0.0" width="360" height="255"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -4190,7 +4190,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         <viewControllerLayoutGuide type="top" id="eeO-Ut-ica"/>
                         <viewControllerLayoutGuide type="bottom" id="i22-oG-myM"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ou6-3z-cH3">
+                    <view key="view" hidden="YES" contentMode="scaleToFill" id="ou6-3z-cH3">
                         <rect key="frame" x="0.0" y="0.0" width="360" height="255"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -4281,7 +4281,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         <viewControllerLayoutGuide type="top" id="6OW-vn-0LP"/>
                         <viewControllerLayoutGuide type="bottom" id="Oci-mI-9z0"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KKW-1Y-P2f">
+                    <view key="view" hidden="YES" contentMode="scaleToFill" id="KKW-1Y-P2f">
                         <rect key="frame" x="0.0" y="0.0" width="360" height="255"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -4372,7 +4372,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         <viewControllerLayoutGuide type="top" id="P68-mv-7hB"/>
                         <viewControllerLayoutGuide type="bottom" id="8rr-pw-9UU"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="sVi-Jr-wEn">
+                    <view key="view" hidden="YES" contentMode="scaleToFill" id="sVi-Jr-wEn">
                         <rect key="frame" x="0.0" y="0.0" width="360" height="255"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -4492,7 +4492,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         <viewControllerLayoutGuide type="top" id="9q4-Zr-cmb"/>
                         <viewControllerLayoutGuide type="bottom" id="YG4-nW-WDt"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Aup-Bp-D8g">
+                    <view key="view" hidden="YES" contentMode="scaleToFill" id="Aup-Bp-D8g">
                         <rect key="frame" x="0.0" y="0.0" width="360" height="255"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -4597,7 +4597,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         <viewControllerLayoutGuide type="top" id="oF8-0m-zdp"/>
                         <viewControllerLayoutGuide type="bottom" id="n9J-bO-Sic"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ezo-eq-feS">
+                    <view key="view" hidden="YES" contentMode="scaleToFill" id="ezo-eq-feS">
                         <rect key="frame" x="0.0" y="0.0" width="360" height="255"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -4691,7 +4691,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         <viewControllerLayoutGuide type="top" id="Lve-hA-6nV"/>
                         <viewControllerLayoutGuide type="bottom" id="2Xw-N2-ggk"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="xhY-Yk-7Iq">
+                    <view key="view" hidden="YES" contentMode="scaleToFill" id="xhY-Yk-7Iq">
                         <rect key="frame" x="0.0" y="0.0" width="360" height="255"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
