@@ -1,32 +1,32 @@
 //
-//  UIFlowChart.swift
+//  UICodeBlock.swift
 //  CAOCAP
 //
-//  Created by الشيخ عزام on 09/08/2024.
+//  Created by الشيخ عزام on 11/08/2024.
 //
 
 import UIKit
 import SnapKit
 
-/// A protocol for handling events related to the flow chart.
-protocol UIFlowChartDelegate {
-    /// Called when a node is removed from the flow chart
-    func didRemoveFlowChartNode()
+/// A protocol for handling events related to the code block.
+protocol UICodeBlockDelegate {
+    /// Called when a node is removed from the code block
+    func didRemoveCodeBlockNode()
 }
 
-/// A custom view for displaying and managing a flow chart on a canvas.
-class UIFlowChart: UICanvas {
+/// A custom view for displaying and managing a code block on a canvas.
+class UICodeBlock: UICanvas {
     
     
     // MARK: - Properties
     var project: Project?
     var nodeTree = [String: UIFlowChartNode]()
-    var flowChartDelegate: UIFlowChartDelegate?
+    var codeBlockDelegate: UICodeBlockDelegate?
     
     
     // MARK: - Load and Display Elements
     
-    // Loads and displays the main event element of the project's document on the canvas.
+    // Loads and displays the root selector of the project's document on the canvas.
     func loadEvent() {
         print("\(#function)ing...")
         //TODO: - loadEvent()
@@ -92,9 +92,9 @@ class UIFlowChart: UICanvas {
 }
 
 
-// MARK: - UIFlowChartNodeDelegate
+// MARK: - UIMindMapNodeDelegate
 
-extension UIFlowChart: UIFlowChartNodeDelegate {
+extension UICodeBlock: UIFlowChartNodeDelegate {
     /// Handles node selection by delegating to the `select` method.
     /// - Parameter nodeID: The ID of the node to select.
     func select(nodeID: String) {

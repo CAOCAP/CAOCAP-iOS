@@ -116,6 +116,9 @@
 		ECCA94792C6777D60076AA6B /* JSToolsKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94782C6777D60076AA6B /* JSToolsKit.swift */; };
 		ECCA947B2C6777E40076AA6B /* CSSToolsKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA947A2C6777E40076AA6B /* CSSToolsKit.swift */; };
 		ECCA947D2C6778200076AA6B /* ToolsKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA947C2C6778200076AA6B /* ToolsKitVC.swift */; };
+		ECCA94832C68D9180076AA6B /* UICodeBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94822C68D9180076AA6B /* UICodeBlock.swift */; };
+		ECCA94852C68D9E00076AA6B /* UICodeBlockNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94842C68D9E00076AA6B /* UICodeBlockNode.swift */; };
+		ECCA94872C68D9F70076AA6B /* UICodeBlockStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94862C68D9F70076AA6B /* UICodeBlockStroke.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -245,6 +248,9 @@
 		ECCA94782C6777D60076AA6B /* JSToolsKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSToolsKit.swift; sourceTree = "<group>"; };
 		ECCA947A2C6777E40076AA6B /* CSSToolsKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSSToolsKit.swift; sourceTree = "<group>"; };
 		ECCA947C2C6778200076AA6B /* ToolsKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsKitVC.swift; sourceTree = "<group>"; };
+		ECCA94822C68D9180076AA6B /* UICodeBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICodeBlock.swift; sourceTree = "<group>"; };
+		ECCA94842C68D9E00076AA6B /* UICodeBlockNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICodeBlockNode.swift; sourceTree = "<group>"; };
+		ECCA94862C68D9F70076AA6B /* UICodeBlockStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICodeBlockStroke.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -678,6 +684,9 @@
 		ECCA41A42C66AE270076A4EA /* CodeBlock */ = {
 			isa = PBXGroup;
 			children = (
+				ECCA94822C68D9180076AA6B /* UICodeBlock.swift */,
+				ECCA94842C68D9E00076AA6B /* UICodeBlockNode.swift */,
+				ECCA94862C68D9F70076AA6B /* UICodeBlockStroke.swift */,
 			);
 			path = CodeBlock;
 			sourceTree = "<group>";
@@ -919,6 +928,7 @@
 				21E148152A82031D00B503C2 /* Challenge.swift in Sources */,
 				21AF3CB42A6B20FD002E96E3 /* AboutUsVC.swift in Sources */,
 				21AF3CA72A6843A9002E96E3 /* RealmRepository.swift in Sources */,
+				ECCA94852C68D9E00076AA6B /* UICodeBlockNode.swift in Sources */,
 				21534DA12A5A9B3B00E8078B /* TailwindCSS.swift in Sources */,
 				2149952A2A5C34C9008B9987 /* ReduxStore.swift in Sources */,
 				21AF3CC62A6B70E4002E96E3 /* ProjectMetaVC.swift in Sources */,
@@ -928,6 +938,7 @@
 				21AF3CBC2A6B2170002E96E3 /* SupportVC.swift in Sources */,
 				215DE72B2B527BC100546394 /* FullScreenWebViewVC.swift in Sources */,
 				2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */,
+				ECCA94872C68D9F70076AA6B /* UICodeBlockStroke.swift in Sources */,
 				21A861D82A78D2C4004D36A3 /* WhatsNewVC.swift in Sources */,
 				21534D9F2A59E58100E8078B /* ProjectFilesVC.swift in Sources */,
 				21AF3CC82A6B70F1002E96E3 /* ProjectLinkVC.swift in Sources */,
@@ -975,6 +986,7 @@
 				21534D982A59B40A00E8078B /* MainCoordinator.swift in Sources */,
 				210F19AE2A42DBE100D71A66 /* UIMindMapNode.swift in Sources */,
 				ECCA419F2C6697BF0076A4EA /* UIFlowChartNode.swift in Sources */,
+				ECCA94832C68D9180076AA6B /* UICodeBlock.swift in Sources */,
 				2133D7182B42EC1300A854F6 /* UICanvas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,44 +1,15 @@
 //
-//  UIFlowChartNode.swift
+//  UICodeBlockNode.swift
 //  CAOCAP
 //
-//  Created by الشيخ عزام on 09/08/2024.
+//  Created by الشيخ عزام on 11/08/2024.
 //
 
 import UIKit
 
-enum FlowChartNodeType {
-    case event, action, condition, value
-    
-    var description: String {
-        switch self {
-        case .event:
-            return "Event"
-        case .action:
-            return "Action"
-        case .condition:
-            return "Condition"
-        case .value:
-            return "Value"
-        }
-    }
-    
-    var backgroundColor: UIColor {
-        switch self {
-        case .event:
-            return .blue
-        case .action:
-            return .green
-        case .condition:
-            return .orange
-        case .value:
-            return .purple
-        }
-    }
-}
 
 /// Protocol for handling node view interactions.
-protocol UIFlowChartNodeDelegate {
+protocol UICodeBlockNodeDelegate {
     /// Called when a node is selected. The delegate should update the UI or handle the selection.
     func select(nodeID: String)
     
@@ -47,18 +18,17 @@ protocol UIFlowChartNodeDelegate {
 }
 
 
-class UIFlowChartNode: UIView, UIContextMenuInteractionDelegate {
+class UICodeBlockNode: UIView, UIContextMenuInteractionDelegate {
+    // TODO: - UICodeBlockNode
     
     // Properties for the node type and the label displaying the type description
-    let nodeType: FlowChartNodeType
-    var delegate: UIFlowChartNodeDelegate?
+    var delegate: UICodeBlockNodeDelegate?
     private var label: UILabel!
     
-    /// Initializes the view with the specified JS element.
+    /// Initializes the view with the specified CSS element.
     ///
-    /// - Parameter element: The JS element represented by this view.
+    /// - Parameter element: The CSS element represented by this view.
     init(nodeType: FlowChartNodeType) {
-        self.nodeType = nodeType
         super.init(frame: .zero)
         setupView()
     }
@@ -72,7 +42,7 @@ class UIFlowChartNode: UIView, UIContextMenuInteractionDelegate {
         setupConstraints()
         layer.cornerRadius = 10
         layer.borderColor = UIColor.purple.cgColor
-        backgroundColor = nodeType.backgroundColor
+        backgroundColor = .blue
         setupLabel()
         setupGestures()
     }
@@ -87,7 +57,7 @@ class UIFlowChartNode: UIView, UIContextMenuInteractionDelegate {
     private func setupLabel() {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 60))
         label.textAlignment = .center
-        label.text = nodeType.description
+        label.text = "Root"
         label.textColor = .white
         label.font = UIFont.ubuntu(.medium, size: 20)
         addSubview(label)
@@ -100,7 +70,7 @@ class UIFlowChartNode: UIView, UIContextMenuInteractionDelegate {
     
     /// Handles tap gestures to select the node.
     @objc func didTap(gesture: UITapGestureRecognizer) {
-        print("did tap node:\(nodeType.description)")
+        print("did tap node:")
         // TODO: - didTap(gesture: UITapGestureRecognizer)
     }
     
@@ -118,7 +88,7 @@ class UIFlowChartNode: UIView, UIContextMenuInteractionDelegate {
         return UIContextMenuConfiguration(actionProvider:  { _ in
             return UIMenu(options: [.displayInline], children: [UIAction(title: "Remove", attributes: .destructive, handler: { _ in
                 // TODO: - this should use the ID of the node
-                self.delegate?.delete(nodeID: self.nodeType.description)
+                self.delegate?.delete(nodeID: "Root")
             })])
             
         })
@@ -142,4 +112,7 @@ class UIFlowChartNode: UIView, UIContextMenuInteractionDelegate {
     func contextMenuInteraction(_ interaction: UIContextMenuInteraction, previewForDismissingMenuWithConfiguration configuration: UIContextMenuConfiguration) -> UITargetedPreview? {
         return makeTargetedPreview(for: configuration)
     }
+    
+    
+    
 }
