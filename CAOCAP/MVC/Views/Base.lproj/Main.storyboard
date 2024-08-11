@@ -317,7 +317,7 @@
                                             <segment title="CSS"/>
                                         </segments>
                                         <connections>
-                                            <action selector="didChangeMindMapsSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="esF-a2-dbP"/>
+                                            <action selector="didChangeCanvasSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="j7j-qK-fbV"/>
                                         </connections>
                                     </segmentedControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="swv-AQ-sZO">
@@ -393,6 +393,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="canvasSegmentedControl" destination="amZ-ML-ctf" id="jEs-lX-jlk"/>
                         <outlet property="projectTitle" destination="Dpt-m0-Ea9" id="f9Z-Lc-8qH"/>
                         <outlet property="redoButton" destination="22A-CW-8eM" id="Enz-y8-Wsk"/>
                         <outlet property="resizeIcon" destination="6CB-c1-YZ5" id="P1s-Q6-bk3"/>

@@ -33,6 +33,8 @@ class PlaygroundVC: UIViewController, Storyboarded {
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var redoButton: UIButton!
     
+    @IBOutlet weak var canvasSegmentedControl: UISegmentedControl!
+    
     /// Tools view that contains the keyboard and other tools.
     @IBOutlet weak var toolsView: UIView!
     @IBOutlet weak var toolsViewHeightConstraint: NSLayoutConstraint!
@@ -46,19 +48,19 @@ class PlaygroundVC: UIViewController, Storyboarded {
     
     /// Arrays to hold the ToolKit VCs for HTML, CSS, and JS.
     
-    var htmlToolKitVCs = [ToolKitVC]()
+    var htmlToolKitCollection: ToolKitCollection!
     let componentsToolKit = ComponentsToolKit.instantiate()
     let structureToolKit = StructureToolKit.instantiate()
     let attributesToolKit = AttributesToolKit.instantiate()
     
     
-    var cssToolKitVCs = [ToolKitVC]()
+    var cssToolKitCollection: ToolKitCollection!
     let selectorsToolKit = SelectorsToolKit.instantiate()
     let propertiesToolKit = PropertiesToolKit.instantiate()
     let styleToolKit = StyleToolKit.instantiate()
     
     
-    var jsToolKitVCs = [ToolKitVC]()
+    var jsToolKitCollection: ToolKitCollection!
     let eventsToolKit = EventsToolKit.instantiate()
     let conActToolKit = ConActToolKit.instantiate()
     let valueToolKit = ValueToolKit.instantiate()
@@ -132,12 +134,12 @@ class PlaygroundVC: UIViewController, Storyboarded {
         toolsView.addGestureRecognizer(downSwipe)
         
         structureToolKit.mindMap = mindMap
-        htmlToolKitVCs = [componentsToolKit, structureToolKit, attributesToolKit]
-        cssToolKitVCs = [selectorsToolKit, propertiesToolKit, styleToolKit]
-        jsToolKitVCs = [eventsToolKit, conActToolKit, valueToolKit]
+        htmlToolKitCollection = ToolKitCollection(viewControllers:  [componentsToolKit, structureToolKit, attributesToolKit])
+        cssToolKitCollection = ToolKitCollection(viewControllers: [selectorsToolKit, propertiesToolKit, styleToolKit])
+        jsToolKitCollection = ToolKitCollection(viewControllers: [eventsToolKit, conActToolKit, valueToolKit])
 
-        [htmlToolKitVCs,cssToolKitVCs,jsToolKitVCs].forEach { toolKitVCs in
-            toolKitVCs.forEach { toolKitVC in
+        [htmlToolKitCollection,cssToolKitCollection,jsToolKitCollection].forEach { toolKitCollection in
+            toolKitCollection?.viewControllers.forEach { toolKitVC in
                 addChild(toolKitVC)
                 toolKitVC.didMove(toParent: self)
                 toolsView.addSubview(toolKitVC.view)
@@ -178,44 +180,52 @@ class PlaygroundVC: UIViewController, Storyboarded {
         }
     }
     
-    // MARK: - Animate MindMap Transition
+    // MARK: - Animate Canvas Transition
     
-    var mindmapPreviousIndex = 1
     
-    /// Handle changes in the MindMaps segmented control.
+    /// Handle changes in the Canvas segmented control.
     ///
-    /// This function animates the transition between different mind maps when the segmented control is changed.
+    /// This function animates the transition between different canvases when the segmented control is changed.
     ///
     /// - Parameter sender: The segmented control that triggers this function.
-    @IBAction func didChangeMindMapsSegmentedControl(_ sender: UISegmentedControl) {
-        let currentMindMap = canvases[sender.selectedSegmentIndex], previousMindMap = canvases[mindmapPreviousIndex]
-        mindmapPreviousIndex = sender.selectedSegmentIndex
-        currentMindMap.isHidden = false
+    var previousCanvasIndex = 1
+    @IBAction func didChangeCanvasSegmentedControl(_ sender: UISegmentedControl) {
+        let toolkitCollections = [jsToolKitCollection,htmlToolKitCollection,cssToolKitCollection]
+        guard let currentToolKitCollection = toolkitCollections[sender.selectedSegmentIndex],
+              let previousToolKitCollection = toolkitCollections[previousCanvasIndex] else { return }
+        let currentCanvas = canvases[sender.selectedSegmentIndex], previousCanvas = canvases[previousCanvasIndex]
+        previousCanvasIndex = sender.selectedSegmentIndex
+        toolsPageControl.currentPage = currentToolKitCollection.currentIndex
+        currentToolKitCollection.viewControllers[currentToolKitCollection.currentIndex].view.isHidden =  false
+        previousToolKitCollection.viewControllers[previousToolKitCollection.currentIndex].view.isHidden = true
+        currentCanvas.isHidden = false
         UIView.animate(withDuration: 0.3) {
-            currentMindMap.alpha = 1; previousMindMap.alpha = 0
+            currentCanvas.alpha = 1; previousCanvas.alpha = 0
         } completion: { _ in
-            previousMindMap.isHidden = true
+            previousCanvas.isHidden = true
         }
         
     }
     
     
     // MARK: - Animate ToolKit Transition
-    
-    var toolKitIndex = 1
-    var previousToolKitIndex = 1
-    
     /// Animate the transition between different ToolKits.
     ///
     /// This function handles the sliding animation between different ToolKit, depending on the selected index.
     ///
     /// - Parameter index: The index of the ToolKit to transition to.
     func animateToToolKit(at index: Int) {
-        previousToolKitIndex = toolKitIndex
-        toolKitIndex = index
-        var animationDirection = toolKitIndex > previousToolKitIndex
-        if toolKitIndex < 0 { toolKitIndex = htmlToolKitVCs.count - 1 } else if toolKitIndex > htmlToolKitVCs.count - 1 { toolKitIndex = 0 }
-        let currentToolKitVC = htmlToolKitVCs[toolKitIndex], previousToolKitVC = htmlToolKitVCs[previousToolKitIndex]
+        guard let currentToolKitCollection = [jsToolKitCollection,htmlToolKitCollection,cssToolKitCollection][canvasSegmentedControl.selectedSegmentIndex] else { return }
+        currentToolKitCollection.previousIndex = currentToolKitCollection.currentIndex
+        currentToolKitCollection.currentIndex = index
+        var animationDirection = currentToolKitCollection.currentIndex > currentToolKitCollection.previousIndex
+        if currentToolKitCollection.currentIndex < 0 {
+            currentToolKitCollection.currentIndex = currentToolKitCollection.viewControllers.count - 1
+        } else if currentToolKitCollection.currentIndex > currentToolKitCollection.viewControllers.count - 1 {
+            currentToolKitCollection.currentIndex = 0
+        }
+        toolsPageControl.currentPage = currentToolKitCollection.currentIndex
+        let currentToolKitVC = currentToolKitCollection.viewControllers[currentToolKitCollection.currentIndex], previousToolKitVC = currentToolKitCollection.viewControllers[currentToolKitCollection.previousIndex]
         currentToolKitVC.view.isHidden = false
         currentToolKitVC.view.frame.origin.x = animationDirection ? self.view.frame.width : -self.view.frame.width
         UIView.animate(withDuration: 0.3) {
@@ -234,7 +244,8 @@ class PlaygroundVC: UIViewController, Storyboarded {
     ///
     /// - Parameter sender: The page control that triggers this function.
     @IBAction func didPressToolsPageControl(_ sender: UIPageControl) {
-        if sender.currentPage != toolKitIndex {
+        guard let currentToolKitCollection = [jsToolKitCollection,htmlToolKitCollection,cssToolKitCollection][canvasSegmentedControl.selectedSegmentIndex] else { return }
+        if sender.currentPage != currentToolKitCollection.currentIndex {
             animateToToolKit(at: sender.currentPage)
         }
     }
@@ -247,12 +258,9 @@ class PlaygroundVC: UIViewController, Storyboarded {
     @objc func handleKeyboardSwipe(sender: UISwipeGestureRecognizer) {
         if sender.state == .ended {
             switch sender.direction {
-            case .right:
-                animateToToolKit(at: toolKitIndex - 1)
-                toolsPageControl.currentPage = toolKitIndex
-            case .left:
-                animateToToolKit(at: toolKitIndex + 1)
-                toolsPageControl.currentPage = toolKitIndex
+            case .right, .left:
+                guard let currentIndex = [jsToolKitCollection,htmlToolKitCollection,cssToolKitCollection][canvasSegmentedControl.selectedSegmentIndex]?.currentIndex else { return }
+                animateToToolKit(at: sender.direction == .right ? currentIndex - 1 : currentIndex + 1)
             case .up:
                 if toolsViewHeightConstraint.constant == 40 {
                     toolsViewHeightConstraint.constant = 107

@@ -8,6 +8,18 @@
 import UIKit
 import ReSwift
 
+class ToolKitCollection {
+    
+    var currentIndex = 1
+    var previousIndex = 1
+    let viewControllers: [ToolKitVC]
+    
+    init(viewControllers: [ToolKitVC]) {
+        self.viewControllers = viewControllers
+    }
+    
+}
+
 class ToolKitVC: UIViewController, StoreSubscriber, Storyboarded {
 
     
