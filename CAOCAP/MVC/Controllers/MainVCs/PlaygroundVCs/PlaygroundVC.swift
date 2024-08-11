@@ -180,7 +180,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
         }
     }
     
-    // MARK: - Animate Canvas Transition
+    // MARK: - Animate Canvas & toolkitCollection Transition
     
     
     /// Handle changes in the Canvas segmented control.
@@ -196,12 +196,21 @@ class PlaygroundVC: UIViewController, Storyboarded {
         let currentCanvas = canvases[sender.selectedSegmentIndex], previousCanvas = canvases[previousCanvasIndex]
         previousCanvasIndex = sender.selectedSegmentIndex
         toolsPageControl.currentPage = currentToolKitCollection.currentIndex
-        currentToolKitCollection.viewControllers[currentToolKitCollection.currentIndex].view.isHidden =  false
-        previousToolKitCollection.viewControllers[previousToolKitCollection.currentIndex].view.isHidden = true
+        guard let currentToolKitView = currentToolKitCollection.viewControllers[currentToolKitCollection.currentIndex].view,
+              let previousToolKitView = previousToolKitCollection.viewControllers[previousToolKitCollection.currentIndex].view else { return }
+        currentToolKitView.isHidden =  false
+        currentToolKitView.frame.origin.y = self.view.frame.height
         currentCanvas.isHidden = false
-        UIView.animate(withDuration: 0.3) {
+        
+        UIView.animate(withDuration: 0.2) {
+            currentToolKitView.frame.origin.y = previousToolKitView.frame.origin.y
+        }
+        
+        UIView.animate(withDuration: 0.4) {
+            previousToolKitView.frame.origin.y = self.view.frame.height
             currentCanvas.alpha = 1; previousCanvas.alpha = 0
         } completion: { _ in
+            previousToolKitView.isHidden = true
             previousCanvas.isHidden = true
         }
         
