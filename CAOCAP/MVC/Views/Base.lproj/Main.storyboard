@@ -3237,7 +3237,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         <subviews>
                             <view contentMode="scaleToFill" id="JV7-BQ-HBg">
                                 <rect key="frame" x="0.0" y="0.0" width="360" height="255"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ELE-h1-6Fp">
                                         <rect key="frame" x="140" y="10" width="80" height="4"/>
@@ -3630,7 +3630,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         <subviews>
                             <view contentMode="scaleToFill" id="BcG-wx-hZR">
                                 <rect key="frame" x="0.0" y="0.0" width="360" height="255"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1UO-Ji-1bM">
                                         <rect key="frame" x="140" y="10" width="80" height="4"/>
@@ -3724,7 +3724,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         <subviews>
                             <view contentMode="scaleToFill" id="kwJ-iI-BW1">
                                 <rect key="frame" x="0.0" y="0.0" width="360" height="255"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F5W-Md-RKQ">
                                         <rect key="frame" x="140" y="10" width="80" height="4"/>
@@ -4196,7 +4196,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         <subviews>
                             <view contentMode="scaleToFill" id="Ku9-Lu-IgM">
                                 <rect key="frame" x="0.0" y="0.0" width="360" height="255"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l3L-kG-YzL">
                                         <rect key="frame" x="140" y="10" width="80" height="4"/>
@@ -4287,7 +4287,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         <subviews>
                             <view contentMode="scaleToFill" id="YM1-C1-67V">
                                 <rect key="frame" x="0.0" y="0.0" width="360" height="255"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9RN-N9-ynr">
                                         <rect key="frame" x="140" y="10" width="80" height="4"/>
@@ -4378,7 +4378,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         <subviews>
                             <view contentMode="scaleToFill" id="ukn-Ps-PYp">
                                 <rect key="frame" x="0.0" y="0.0" width="360" height="255"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7m-u3-fvO">
                                         <rect key="frame" x="140" y="10" width="80" height="4"/>
@@ -4498,7 +4498,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         <subviews>
                             <view contentMode="scaleToFill" id="F97-Ms-6Vk">
                                 <rect key="frame" x="0.0" y="0.0" width="360" height="255"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yCt-bf-KTm">
                                         <rect key="frame" x="140" y="10" width="80" height="4"/>
@@ -4603,7 +4603,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         <subviews>
                             <view contentMode="scaleToFill" id="Ep7-Ux-bAV">
                                 <rect key="frame" x="0.0" y="0.0" width="360" height="255"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oL2-qK-0uP">
                                         <rect key="frame" x="140" y="10" width="80" height="4"/>
@@ -4697,7 +4697,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         <subviews>
                             <view contentMode="scaleToFill" id="Mel-1p-AvI">
                                 <rect key="frame" x="0.0" y="0.0" width="360" height="255"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l1b-Vx-D8X">
                                         <rect key="frame" x="140" y="10" width="80" height="4"/>
