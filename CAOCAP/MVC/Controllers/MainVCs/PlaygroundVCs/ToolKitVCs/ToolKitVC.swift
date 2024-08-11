@@ -1,5 +1,5 @@
 //
-//  ToolsKitVC.swift
+//  ToolKitVC.swift
 //  CAOCAP
 //
 //  Created by الشيخ عزام on 10/08/2024.
@@ -8,7 +8,7 @@
 import UIKit
 import ReSwift
 
-class ToolsKitVC: UIViewController, StoreSubscriber {
+class ToolKitVC: UIViewController, StoreSubscriber {
 
     override func viewDidLoad() {
         super.viewDidLoad()
