@@ -20,16 +20,18 @@ class UIStyleSheet: UICanvas {
     
     // MARK: - Properties
     var project: Project?
-    var nodeTree = [String: UIFlowChartNode]()
+    var nodeTree = [String: UIStyleSheetNode]()
     var styleSheetDelegate: UIStyleSheetDelegate?
     
     
     // MARK: - Load and Display Elements
     
     // Loads and displays the root selector of the project's document on the canvas.
-    func loadEvent() {
+    func loadSelector() {
         print("\(#function)ing...")
-        //TODO: - loadEvent()
+        //TODO: - loadSelector()
+        clearCanvas()
+        draw()
     }
     
     /// Recursively loads and displays the children of the given element.
@@ -46,18 +48,29 @@ class UIStyleSheet: UICanvas {
     func draw() {
         print("\(#function)ing...")
         //TODO: - draw(_ element: Element)
+        let nodeView = UIStyleSheetNode()
+        nodeTree["root"] = nodeView
+        nodeView.delegate = self
+        canvas.addSubview(nodeView)
+        setNodePosition(nodeView)
+        drawNodeStrokes(nodeView)
+        expandCanvasIfNeeded()
     }
     
     /// Sets the position constraints for a node view on the canvas.
     /// - Parameter nodeView: The node view to position.
-    func setNodePosition(_ nodeView: UIFlowChartNode) {
+    func setNodePosition(_ nodeView: UIStyleSheetNode) {
         print("\(#function)ing...")
         //TODO: - setNodePosition(_ nodeView: UIFlowChartNode)
+        nodeView.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalToSuperview().offset(400)
+        }
     }
     
     /// Draws connection strokes between nodes on the canvas.
     /// - Parameter nodeView: The node view for which to draw strokes.
-    func drawNodeStrokes(_ nodeView: UIFlowChartNode) {
+    func drawNodeStrokes(_ nodeView: UIStyleSheetNode) {
         print("\(#function)ing...")
         //TODO: - drawNodeStrokes(_ nodeView: UIFlowChartNode)
     }
@@ -92,9 +105,9 @@ class UIStyleSheet: UICanvas {
 }
 
 
-// MARK: - UIMindMapNodeDelegate
+// MARK: - UIStyleSheetNodeDelegate
 
-extension UIStyleSheet: UIFlowChartNodeDelegate {
+extension UIStyleSheet: UIStyleSheetNodeDelegate {
     /// Handles node selection by delegating to the `select` method.
     /// - Parameter nodeID: The ID of the node to select.
     func select(nodeID: String) {

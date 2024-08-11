@@ -42,7 +42,7 @@ class UIStyleSheetNode: UIView, UIContextMenuInteractionDelegate {
         setupConstraints()
         layer.cornerRadius = 10
         layer.borderColor = UIColor.purple.cgColor
-        backgroundColor = .blue
+        backgroundColor = .systemBlue
         setupLabel()
         setupGestures()
     }
@@ -57,7 +57,7 @@ class UIStyleSheetNode: UIView, UIContextMenuInteractionDelegate {
     private func setupLabel() {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 60))
         label.textAlignment = .center
-        label.text = "Root"
+        label.text = "root"
         label.textColor = .white
         label.font = UIFont.ubuntu(.medium, size: 20)
         addSubview(label)

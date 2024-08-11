@@ -30,6 +30,8 @@ class UIFlowChart: UICanvas {
     func loadEvent() {
         print("\(#function)ing...")
         //TODO: - loadEvent()
+        clearCanvas()
+        draw()
     }
     
     /// Recursively loads and displays the children of the given element.
@@ -46,6 +48,13 @@ class UIFlowChart: UICanvas {
     func draw() {
         print("\(#function)ing...")
         //TODO: - draw(_ element: Element)
+        let nodeView = UIFlowChartNode(nodeType: .event)
+        nodeTree[nodeView.nodeType.description] = nodeView
+        nodeView.delegate = self
+        canvas.addSubview(nodeView)
+        setNodePosition(nodeView)
+        drawNodeStrokes(nodeView)
+        expandCanvasIfNeeded()
     }
     
     /// Sets the position constraints for a node view on the canvas.
@@ -53,6 +62,10 @@ class UIFlowChart: UICanvas {
     func setNodePosition(_ nodeView: UIFlowChartNode) {
         print("\(#function)ing...")
         //TODO: - setNodePosition(_ nodeView: UIFlowChartNode)
+        nodeView.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalToSuperview().offset(400)
+        }
     }
     
     /// Draws connection strokes between nodes on the canvas.

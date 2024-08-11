@@ -13,26 +13,26 @@ enum FlowChartNodeType {
     var description: String {
         switch self {
         case .event:
-            return "Event"
+            return "event"
         case .action:
-            return "Action"
+            return "action"
         case .condition:
-            return "Condition"
+            return "condition"
         case .value:
-            return "Value"
+            return "value"
         }
     }
     
     var backgroundColor: UIColor {
         switch self {
         case .event:
-            return .blue
+            return .systemBlue
         case .action:
-            return .green
+            return .systemGreen
         case .condition:
-            return .orange
+            return .systemOrange
         case .value:
-            return .purple
+            return .systemPink
         }
     }
 }

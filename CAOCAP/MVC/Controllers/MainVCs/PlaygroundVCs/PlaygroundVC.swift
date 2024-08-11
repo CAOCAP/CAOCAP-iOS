@@ -44,7 +44,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
     /// Array to hold the Canvas for HTML, CSS, and JS.
     var canvases = [UICanvas]()
     var htmlMindMap: UIMindMap!
-    var cssMindMap: UIMindMap!
+    var cssStyleSheet: UIStyleSheet!
     var jsFlowChart: UIFlowChart!
     
     /// Arrays to hold the keyboard views for HTML, CSS, and JS.
@@ -113,11 +113,11 @@ class PlaygroundVC: UIViewController, Storyboarded {
     /// Set up the layout and configuration of the Canvases
     func setupCanvasesLayout() {
         htmlMindMap = UIMindMap(frame: view.frame, color: .systemBlue)
-        cssMindMap = UIMindMap(frame: view.frame, color: .systemPurple)
+        cssStyleSheet = UIStyleSheet(frame: view.frame, color: .systemPurple)
         jsFlowChart = UIFlowChart(frame: view.frame, color: .systemGreen)
-        canvases = [jsFlowChart, htmlMindMap, cssMindMap]
+        canvases = [jsFlowChart, htmlMindMap, cssStyleSheet]
         htmlMindMap.mindMapDelegate = self
-        cssMindMap.mindMapDelegate = self
+        cssStyleSheet.styleSheetDelegate = self
         jsFlowChart.flowChartDelegate = self
         canvases.forEach { canvas in
             view.insertSubview(canvas, at: 0)
@@ -406,8 +406,8 @@ class PlaygroundVC: UIViewController, Storyboarded {
     @IBAction func didPressArrow(_ sender: UIButton) {
         if !htmlMindMap.isHidden {
             htmlMindMap.updateSelectedNode(Direction(rawValue: sender.tag))
-        } else if !cssMindMap.isHidden {
-            cssMindMap.updateSelectedNode(Direction(rawValue: sender.tag))
+        } else if !cssStyleSheet.isHidden {
+            cssStyleSheet.updateSelectedNode(Direction(rawValue: sender.tag))
         } else {
             jsFlowChart.updateSelectedNode(Direction(rawValue: sender.tag))
         }
@@ -625,6 +625,16 @@ extension PlaygroundVC: UIFlowChartDelegate {
     }
 }
 
+// MARK: - UIStyleSheetDelegate
+extension PlaygroundVC: UIStyleSheetDelegate {
+    
+    /// Handles the removal of a node in the StyleSheet.
+    func didRemoveStyleSheetNode() {
+        loadWebView()
+    }
+}
+
+
 // MARK: - UITextFieldDelegate
 extension PlaygroundVC: UITextFieldDelegate {
     
@@ -697,6 +707,8 @@ extension PlaygroundVC: StoreSubscriber {
         
         loadWebView()/*🤔*/
         htmlMindMap.loadBody()
+        cssStyleSheet.loadSelector()
+        jsFlowChart.loadEvent()
         
         refreshUIForCurrentProject()
         
