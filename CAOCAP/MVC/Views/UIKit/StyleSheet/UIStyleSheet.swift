@@ -1,5 +1,5 @@
 //
-//  UICodeBlock.swift
+//  UIStyleSheet.swift
 //  CAOCAP
 //
 //  Created by الشيخ عزام on 11/08/2024.
@@ -8,20 +8,20 @@
 import UIKit
 import SnapKit
 
-/// A protocol for handling events related to the code block.
-protocol UICodeBlockDelegate {
-    /// Called when a node is removed from the code block
-    func didRemoveCodeBlockNode()
+/// A protocol for handling events related to the style sheet
+protocol UIStyleSheetDelegate {
+    /// Called when a node is removed from the style sheet
+    func didRemoveStyleSheetNode()
 }
 
-/// A custom view for displaying and managing a code block on a canvas.
-class UICodeBlock: UICanvas {
+/// A custom view for displaying and managing a style sheet on a canvas.
+class UIStyleSheet: UICanvas {
     
     
     // MARK: - Properties
     var project: Project?
     var nodeTree = [String: UIFlowChartNode]()
-    var codeBlockDelegate: UICodeBlockDelegate?
+    var styleSheetDelegate: UIStyleSheetDelegate?
     
     
     // MARK: - Load and Display Elements
@@ -94,7 +94,7 @@ class UICodeBlock: UICanvas {
 
 // MARK: - UIMindMapNodeDelegate
 
-extension UICodeBlock: UIFlowChartNodeDelegate {
+extension UIStyleSheet: UIFlowChartNodeDelegate {
     /// Handles node selection by delegating to the `select` method.
     /// - Parameter nodeID: The ID of the node to select.
     func select(nodeID: String) {

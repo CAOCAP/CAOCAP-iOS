@@ -1,5 +1,5 @@
 //
-//  UICodeBlockNode.swift
+//  UIStyleSheetNode.swift
 //  CAOCAP
 //
 //  Created by الشيخ عزام on 11/08/2024.
@@ -9,7 +9,7 @@ import UIKit
 
 
 /// Protocol for handling node view interactions.
-protocol UICodeBlockNodeDelegate {
+protocol UIStyleSheetNodeDelegate {
     /// Called when a node is selected. The delegate should update the UI or handle the selection.
     func select(nodeID: String)
     
@@ -18,17 +18,17 @@ protocol UICodeBlockNodeDelegate {
 }
 
 
-class UICodeBlockNode: UIView, UIContextMenuInteractionDelegate {
-    // TODO: - UICodeBlockNode
+class UIStyleSheetNode: UIView, UIContextMenuInteractionDelegate {
+    // TODO: - UIStyleSheetNode
     
     // Properties for the node type and the label displaying the type description
-    var delegate: UICodeBlockNodeDelegate?
+    var delegate: UIStyleSheetNodeDelegate?
     private var label: UILabel!
     
     /// Initializes the view with the specified CSS element.
     ///
     /// - Parameter element: The CSS element represented by this view.
-    init(nodeType: FlowChartNodeType) {
+    init() {
         super.init(frame: .zero)
         setupView()
     }
