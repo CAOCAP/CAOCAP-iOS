@@ -7,6 +7,13 @@
 
 import UIKit
 
+enum SizeType {
+    case none
+    case small
+    case medium
+    case large
+}
+
 class StructureToolKit: ToolKitVC {
     
     
@@ -46,4 +53,33 @@ class StructureToolKit: ToolKitVC {
         }
     }
     
+    // MARK: - HTML Keyboard Button Layout
+    
+    func keyboardLayout(size: SizeType) {
+        let maxIndex = structureStackView.arrangedSubviews.count - 1
+        var filteredRows = [UIView]()
+        switch size {
+        case .none:
+            //hide all
+            structureStackView.arrangedSubviews.forEach { row in
+                row.isHidden = true
+            }
+        case .small:
+            // only show 6,7
+            structureStackView.arrangedSubviews.enumerated().forEach { index, row in
+                row.isHidden = ![6,7].contains(index)
+            }
+        case .medium:
+            //show all but not 3,4
+            structureStackView.arrangedSubviews.enumerated().forEach { index, row in
+                row.isHidden = [3,4].contains(index)
+            }
+        case .large:
+            //show all
+            structureStackView.arrangedSubviews.forEach { row in
+                row.isHidden = false
+            }
+        }
+        
+    }
 }

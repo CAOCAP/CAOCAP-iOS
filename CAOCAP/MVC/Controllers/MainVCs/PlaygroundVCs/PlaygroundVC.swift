@@ -255,58 +255,27 @@ class PlaygroundVC: UIViewController, Storyboarded {
                 toolsPageControl.currentPage = toolKitIndex
             case .up:
                 if toolsViewHeightConstraint.constant == 40 {
-                    //only show 6,7 { h=107 }
                     toolsViewHeightConstraint.constant = 107
-//                    for n in 6...7 { TODO: -
-//                        let view = structureStackView.arrangedSubviews[n]
-//                        view.alpha = 1
-//                        view.isHidden = false
-//                    }
+                    structureToolKit.keyboardLayout(size: .small)
                 } else if toolsViewHeightConstraint.constant == 107 {
-                    //show all but not 3,4 { h=255 }
                     toolsViewHeightConstraint.constant = 255
-//                    for n in 0...5 { TODO: -
-//                        if [3,4].contains(n) { continue }
-//                        let view = structureStackView.arrangedSubviews[n]
-//                        view.alpha = 1
-//                        view.isHidden = false
-//                    }
+                    structureToolKit.keyboardLayout(size: .medium)
                 } else if toolsViewHeightConstraint.constant == 255 {
-                    //show all { h=329 }
                     webViewWidthConstraint.constant = 120
                     toolsViewHeightConstraint.constant = 329
-//                    for n in 3...4 { TODO: -
-//                        let view = structureStackView.arrangedSubviews[n]
-//                        view.alpha = 1
-//                        view.isHidden = false
-//                    }
+                    structureToolKit.keyboardLayout(size: .large)
                 }
             case .down:
                 if toolsViewHeightConstraint.constant == 107 {
-                    //hide all { h=40 }
                     toolsViewHeightConstraint.constant = 40
-//                    for n in 6...7 { TODO: -
-//                        let view = structureStackView.arrangedSubviews[n]
-//                        view.alpha = 0
-//                        view.isHidden = true
-//                    }
+                    structureToolKit.keyboardLayout(size: .none)
                 } else if toolsViewHeightConstraint.constant == 255 {
-                    //only show 6,7 { h=107 }
                     toolsViewHeightConstraint.constant = 107
-//                    for n in 0...5 { TODO: -
-//                        let view = structureStackView.arrangedSubviews[n]
-//                        view.alpha = 0
-//                        view.isHidden = true
-//                    }
+                    structureToolKit.keyboardLayout(size: .small)
                 } else if toolsViewHeightConstraint.constant == 329 {
-                    //show all but not 3,4 { h=255 }
                     webViewWidthConstraint.constant = 160
                     toolsViewHeightConstraint.constant = 255
-//                    for n in 3...4 { TODO: -
-//                        let view = structureStackView.arrangedSubviews[n]
-//                        view.alpha = 0
-//                        view.isHidden = true
-//                    }
+                    structureToolKit.keyboardLayout(size: .medium)
                 }
             default:
                 break
