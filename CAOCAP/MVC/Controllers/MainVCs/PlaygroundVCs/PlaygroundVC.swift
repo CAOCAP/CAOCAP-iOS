@@ -45,9 +45,17 @@ class PlaygroundVC: UIViewController, Storyboarded {
     var jsFlowChart: UIFlowChart!
     
     /// Arrays to hold the keyboard views for HTML, CSS, and JS.
-    var htmlToolKitVCs = [ComponentsToolKit(), StructureToolKit(), AttributesToolKit()]
-    var cssToolKitVCs = [SelectorsToolKit(), PropertiesToolKit(), StyleToolKit()]
-    var jsToolKitVCs = [EventsToolKit(), ConActToolKit(), ValueToolKit()]
+    var htmlToolKitVCs = [ComponentsToolKit.instantiate(),
+                          StructureToolKit.instantiate(),
+                          AttributesToolKit.instantiate()]
+    
+    var cssToolKitVCs = [SelectorsToolKit.instantiate(),
+                         PropertiesToolKit.instantiate(),
+                         StyleToolKit.instantiate()]
+    
+    var jsToolKitVCs = [EventsToolKit.instantiate(),
+                        ConActToolKit.instantiate(),
+                        ValueToolKit.instantiate()]
     
     
     override func viewDidLoad() {
@@ -117,19 +125,17 @@ class PlaygroundVC: UIViewController, Storyboarded {
         toolsView.addGestureRecognizer(upSwipe)
         toolsView.addGestureRecognizer(downSwipe)
         
-//        htmlKeyboardViews = [structureKeyboardView, attributesKeyboardView] TODO: -
-//        cssKeyboardViews = [selectorsKeyboardView] TODO: -
-//        jsKeyboardViews = [logicKeyboardView] TODO: - 
-        
-//    TODO: -
-//        [htmlKeyboardViews,cssKeyboardViews,jsKeyboardViews].forEach { keyboardViews in
-//            keyboardViews.forEach { view in
-//                toolsView.addSubview(view)
-//                view.snp.makeConstraints { make in
-//                    make.width.height.equalToSuperview()
-//                }
-//            }
-//        }
+
+        [htmlToolKitVCs,cssToolKitVCs,jsToolKitVCs].forEach { toolKitVCs in
+            toolKitVCs.forEach { toolKitVC in
+                addChild(toolKitVC)
+                toolKitVC.didMove(toParent: self)
+                toolsView.addSubview(toolKitVC.view)
+                toolKitVC.view.snp.makeConstraints { make in
+                    make.width.height.equalToSuperview()
+                }
+            }
+        }
     }
     
     

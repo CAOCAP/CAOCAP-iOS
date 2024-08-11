@@ -9,9 +9,6 @@ import UIKit
 
 class AttributesToolKit: ToolKitVC {
     
-    /// The current project being edited in the playground.
-    var project: Project?
-    
     /// Array of all available Tailwind CSS class names.
     var tailwindClassNames = TailwindCSS.all
     
@@ -40,23 +37,6 @@ class AttributesToolKit: ToolKitVC {
     
     override func newState(state: ReduxState) {
         super.newState(state: state)
-        updateProjectIfNeeded(from: state)
-        refreshUIForCurrentProject()
-    }
-    
-    // MARK: - Helper Functions
-    
-    /// Updates the project reference if it is not already set.
-    ///
-    /// - Parameter state: The new state from the Redux store.
-    private func updateProjectIfNeeded(from state: ReduxState) {
-        if project == nil {
-            project = state.openedProject
-        }
-    }
-    
-    /// Refreshes the UI elements to reflect the current project's state.
-    private func refreshUIForCurrentProject() {
         updateContentTextField()
         updateTextDecorationButtons()
         updateTextAlignmentSegmentedControl()

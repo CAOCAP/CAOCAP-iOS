@@ -8,8 +8,12 @@
 import UIKit
 import ReSwift
 
-class ToolKitVC: UIViewController, StoreSubscriber {
+class ToolKitVC: UIViewController, StoreSubscriber, Storyboarded {
 
+    
+    /// The current project being edited in the playground.
+    var project: Project?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,6 +35,17 @@ class ToolKitVC: UIViewController, StoreSubscriber {
     /// - Parameter state: The new state from the Redux store.
     func newState(state: ReduxState) {
         
+    }
+    
+    // MARK: - Helper Functions
+    
+    /// Updates the project reference if it is not already set.
+    ///
+    /// - Parameter state: The new state from the Redux store.
+    private func updateProjectIfNeeded(from state: ReduxState) {
+        if project == nil {
+            project = state.openedProject
+        }
     }
 
 }

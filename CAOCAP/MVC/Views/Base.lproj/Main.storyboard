@@ -3226,7 +3226,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
         <!--Structure Tool Kit-->
         <scene sceneID="xLM-T4-sX8">
             <objects>
-                <viewController id="cQG-Tx-a6N" customClass="StructureToolKit" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StructureToolKit" id="cQG-Tx-a6N" customClass="StructureToolKit" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LyN-jt-DoM"/>
                         <viewControllerLayoutGuide type="bottom" id="mF8-cr-Xyy"/>
@@ -3275,7 +3275,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <color key="baseForegroundColor" systemColor="systemGreenColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nsf-xd-By7"/>
+                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="vfD-cE-61z"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhP-7H-lNZ">
@@ -3286,7 +3286,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <color key="baseForegroundColor" systemColor="systemGreenColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xyW-73-qDf"/>
+                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="x91-3p-49P"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Twe-Hb-lJN">
@@ -3297,7 +3297,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <color key="baseForegroundColor" systemColor="systemGreenColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kAy-re-T2q"/>
+                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="1xf-Uz-SFU"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -3313,7 +3313,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fpY-I3-HV2"/>
+                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="Vpz-pS-QAG"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m44-ZL-qop">
@@ -3324,7 +3324,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4CH-ue-eUW"/>
+                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="F44-vj-L7h"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQZ-if-dFn">
@@ -3335,7 +3335,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ipb-X8-BCA"/>
+                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="neA-x7-Hec"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -3351,7 +3351,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <color key="baseForegroundColor" systemColor="systemTealColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b3g-5u-hHJ"/>
+                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="afP-TC-v7w"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="di4-bQ-Vrv">
@@ -3362,7 +3362,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <color key="baseForegroundColor" systemColor="systemTealColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PbA-Vf-iM2"/>
+                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="8Wy-a8-k6L"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgt-Qt-6vZ">
@@ -3373,7 +3373,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <color key="baseForegroundColor" systemColor="systemTealColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hgc-Du-X6h"/>
+                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="icB-fu-8Ix"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -3389,7 +3389,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <color key="baseForegroundColor" systemColor="systemTealColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8oZ-Sd-nsm"/>
+                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="0ha-T2-17T"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7u-IF-A80">
@@ -3400,7 +3400,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <color key="baseForegroundColor" systemColor="systemTealColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M67-U9-Mof"/>
+                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="Fa1-XS-hFf"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHu-te-Xkh">
@@ -3411,7 +3411,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <color key="baseForegroundColor" systemColor="systemTealColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KOj-Fc-C8O"/>
+                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="fxw-ar-ebj"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -3427,7 +3427,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <color key="baseForegroundColor" systemColor="systemTealColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zah-o5-gYf"/>
+                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="FWe-wU-i0O"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0u-Zl-Oci">
@@ -3438,7 +3438,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <color key="baseForegroundColor" systemColor="systemTealColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wdw-e6-bTj"/>
+                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="swF-Uu-HC8"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkX-an-Nkz">
@@ -3449,7 +3449,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <color key="baseForegroundColor" systemColor="systemTealColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KKf-dV-iGf"/>
+                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="SCg-0f-Ctw"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -3465,7 +3465,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <color key="baseForegroundColor" systemColor="systemYellowColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y2A-ZF-fM2"/>
+                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="3ps-Sf-qF0"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5t-Qt-44v">
@@ -3476,7 +3476,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <color key="baseForegroundColor" systemColor="systemYellowColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uj6-uD-2vc"/>
+                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="sgI-MP-K1E"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1DP-2k-cka">
@@ -3487,7 +3487,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <color key="baseForegroundColor" systemColor="systemYellowColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0KV-V0-Q8F"/>
+                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="tUI-Cg-i1x"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -3503,7 +3503,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hvs-uC-LMl"/>
+                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="aI8-iw-W5G"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8o-Bn-LnH">
@@ -3514,7 +3514,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vzF-Ta-SnZ"/>
+                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="sma-Uh-anQ"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNQ-MN-I87">
@@ -3525,7 +3525,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HUa-vY-1cf"/>
+                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="qiu-Tu-JD7"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -3541,7 +3541,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vbo-76-Kkh"/>
+                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="gzM-QH-Nf9"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08f-2f-32k">
@@ -3552,7 +3552,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dMk-84-i84"/>
+                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="QkQ-UI-XWZ"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3N-Ng-jwg">
@@ -3563,7 +3563,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="didPressAddElement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kNd-Qe-eI9"/>
+                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="0z8-n8-GOo"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -3608,6 +3608,9 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         </subviews>
                     </view>
                     <size key="freeformSize" width="360" height="255"/>
+                    <connections>
+                        <outlet property="structureStackView" destination="LrX-Cx-pco" id="zzc-2y-NGv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSO-Bl-eE3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3616,7 +3619,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
         <!--Components Tool Kit-->
         <scene sceneID="5Mo-MA-YjO">
             <objects>
-                <viewController id="aSz-ou-Oxi" customClass="ComponentsToolKit" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ComponentsToolKit" id="aSz-ou-Oxi" customClass="ComponentsToolKit" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2Rx-0I-vVs"/>
                         <viewControllerLayoutGuide type="bottom" id="BZ1-JO-Xf0"/>
@@ -3710,7 +3713,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
         <!--Attributes Tool Kit-->
         <scene sceneID="H2Y-te-g6b">
             <objects>
-                <viewController id="egu-Ix-0st" customClass="AttributesToolKit" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AttributesToolKit" id="egu-Ix-0st" customClass="AttributesToolKit" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="z5u-tO-Unh"/>
                         <viewControllerLayoutGuide type="bottom" id="4o1-tx-sRh"/>
@@ -3759,14 +3762,14 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                     <segment title="" image="newspaper" catalog="system"/>
                                                 </segments>
                                                 <connections>
-                                                    <action selector="didChangeAttributesViewSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="n9w-Mb-kwh"/>
+                                                    <action selector="didChangeAttributesViewSegmentedControl:" destination="egu-Ix-0st" eventType="valueChanged" id="BQi-BH-wJN"/>
                                                 </connections>
                                             </segmentedControl>
                                             <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="am6-N7-L9D">
                                                 <rect key="frame" x="0.0" y="35" width="330" height="0.0"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="VzE-qf-3T9">
-                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="182"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="253.66666666666666"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JJd-rC-Qif">
                                                                 <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
@@ -3794,7 +3797,6 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             </stackView>
                                                             <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="59z-Oo-aAs">
                                                                 <rect key="frame" x="0.0" y="37" width="330" height="27.666666666666671"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <color key="tintColor" systemColor="labelColor"/>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="gray" title="list style">
@@ -3802,18 +3804,18 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                                 </buttonConfiguration>
                                                             </button>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="source URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W6B-cu-eGY">
-                                                                <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
+                                                                <rect key="frame" x="0.0" y="71.666666666666671" width="330" height="34"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="34" id="xhj-WL-wu5"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
-                                                                    <action selector="didEndEditingElementSource:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="cNf-XO-Tvx"/>
+                                                                    <action selector="didEndEditingElementSource:" destination="egu-Ix-0st" eventType="editingDidEnd" id="TaA-0B-71v"/>
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dMf-FZ-Mdf">
-                                                                <rect key="frame" x="0.0" y="41" width="330" height="34"/>
+                                                                <rect key="frame" x="0.0" y="112.66666666666666" width="330" height="34"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="34" id="IjG-4z-ZZu"/>
                                                                 </constraints>
@@ -3821,19 +3823,13 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Br2-5m-8fR">
-                                                                <rect key="frame" x="0.0" y="82" width="330" height="100"/>
+                                                                <rect key="frame" x="0.0" y="153.66666666666666" width="330" height="100"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="100" id="KDx-KA-ESw"/>
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
-                                                        <variation key="default">
-                                                            <mask key="subviews">
-                                                                <exclude reference="JJd-rC-Qif"/>
-                                                                <exclude reference="59z-Oo-aAs"/>
-                                                            </mask>
-                                                        </variation>
                                                     </stackView>
                                                 </subviews>
                                                 <constraints>
@@ -3859,7 +3855,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
-                                                                    <action selector="didEndEditingTextContent:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="sOi-Jz-S9T"/>
+                                                                    <action selector="didEndEditingTextContent:" destination="egu-Ix-0st" eventType="editingDidEnd" id="rVe-eU-NrA"/>
                                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="9bh-JD-rGp"/>
                                                                 </connections>
                                                             </textField>
@@ -3872,7 +3868,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="gray" image="bold" catalog="system"/>
                                                                         <connections>
-                                                                            <action selector="didPressTextDecoration:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lH3-n0-oao"/>
+                                                                            <action selector="didPressTextDecoration:" destination="egu-Ix-0st" eventType="touchUpInside" id="yXi-cy-ESj"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goG-YX-1c6">
@@ -3881,7 +3877,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="gray" image="italic" catalog="system"/>
                                                                         <connections>
-                                                                            <action selector="didPressTextDecoration:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CSu-gc-3Ul"/>
+                                                                            <action selector="didPressTextDecoration:" destination="egu-Ix-0st" eventType="touchUpInside" id="U1J-a3-d8v"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKU-UI-z3L">
@@ -3890,7 +3886,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="gray" image="underline" catalog="system"/>
                                                                         <connections>
-                                                                            <action selector="didPressTextDecoration:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mBy-Ia-RDx"/>
+                                                                            <action selector="didPressTextDecoration:" destination="egu-Ix-0st" eventType="touchUpInside" id="CYh-is-PIm"/>
                                                                         </connections>
                                                                     </button>
                                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LL7-ZO-tYs">
@@ -3899,7 +3895,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="gray" image="strikethrough" catalog="system"/>
                                                                         <connections>
-                                                                            <action selector="didPressTextDecoration:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sgm-5K-rS6"/>
+                                                                            <action selector="didPressTextDecoration:" destination="egu-Ix-0st" eventType="touchUpInside" id="nH7-gm-lfe"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -3912,7 +3908,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                                     <segment title="" image="text.alignright" catalog="system"/>
                                                                 </segments>
                                                                 <connections>
-                                                                    <action selector="didChangeTextAlignmentSegmentedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="4el-zJ-Xss"/>
+                                                                    <action selector="didChangeTextAlignmentSegmentedControl:" destination="egu-Ix-0st" eventType="valueChanged" id="Yec-Ac-DIR"/>
                                                                 </connections>
                                                             </segmentedControl>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T0I-al-vah">
@@ -3942,7 +3938,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain"/>
                                                                         <connections>
-                                                                            <action selector="didPressSelectColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9QT-sI-Ug7"/>
+                                                                            <action selector="didPressSelectColorButton:" destination="egu-Ix-0st" eventType="touchUpInside" id="uN6-6F-maw"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -3986,7 +3982,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain"/>
                                                                         <connections>
-                                                                            <action selector="didPressSelectColorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qtD-6b-htF"/>
+                                                                            <action selector="didPressSelectColorButton:" destination="egu-Ix-0st" eventType="touchUpInside" id="NcS-VT-Ktc"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -4018,7 +4014,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Asa-cc-MHL">
                                                                                 <rect key="frame" x="261" y="0.0" width="51" height="40"/>
                                                                                 <connections>
-                                                                                    <action selector="didChangeHiddenSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="bO0-yE-cZS"/>
+                                                                                    <action selector="didChangeHiddenSwitch:" destination="egu-Ix-0st" eventType="valueChanged" id="NYF-hl-YGg"/>
                                                                                 </connections>
                                                                             </switch>
                                                                         </subviews>
@@ -4063,7 +4059,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
-                                                            <action selector="editingTailwindSearch:" destination="BYZ-38-t0r" eventType="editingChanged" id="uP8-15-hKS"/>
+                                                            <action selector="editingTailwindSearch:" destination="egu-Ix-0st" eventType="editingDidEnd" id="CZl-Wy-cfE"/>
                                                         </connections>
                                                     </textField>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DED-s3-hlc">
@@ -4162,15 +4158,34 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         </subviews>
                     </view>
                     <size key="freeformSize" width="360" height="255"/>
+                    <connections>
+                        <outlet property="attributesSegmentedControl" destination="6Eo-sl-Bkf" id="6un-j5-5sI"/>
+                        <outlet property="attributesStackView" destination="gvp-qI-ygt" id="UCd-Jb-u0N"/>
+                        <outlet property="backgroundColorWell" destination="oVS-Cr-7rc" id="9c8-Br-4GF"/>
+                        <outlet property="contentTextField" destination="iIJ-zi-gUO" id="6dW-rC-dHo"/>
+                        <outlet property="hiddenSwitch" destination="Asa-cc-MHL" id="lb4-Ag-mjs"/>
+                        <outlet property="idTextField" destination="dMf-FZ-Mdf" id="9vu-Yi-bgh"/>
+                        <outlet property="listStyleButton" destination="59z-Oo-aAs" id="j82-8Q-JCW"/>
+                        <outlet property="semanticButton" destination="2sE-i2-jPh" id="zag-hQ-U1f"/>
+                        <outlet property="sourceTextField" destination="W6B-cu-eGY" id="3rn-z8-dLV"/>
+                        <outlet property="tailwindCollectionView" destination="DED-s3-hlc" id="mUH-FG-umG"/>
+                        <outlet property="textAlignmentSegmentedControl" destination="9Lb-Ma-48Z" id="QSe-Eb-epc"/>
+                        <outlet property="textColorWell" destination="olm-io-i4f" id="ckl-GA-4tD"/>
+                        <outlet property="typeButton" destination="SsE-DK-7jc" id="apk-XM-Ww7"/>
+                        <outletCollection property="textDecorationButtons" destination="zMG-53-qak" collectionClass="NSMutableArray" id="2jX-WV-SR9"/>
+                        <outletCollection property="textDecorationButtons" destination="goG-YX-1c6" collectionClass="NSMutableArray" id="ey2-K6-OyK"/>
+                        <outletCollection property="textDecorationButtons" destination="yKU-UI-z3L" collectionClass="NSMutableArray" id="okP-a7-zKb"/>
+                        <outletCollection property="textDecorationButtons" destination="LL7-ZO-tYs" collectionClass="NSMutableArray" id="em2-U2-WSb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2lA-Nl-T3r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2386" y="-48"/>
+            <point key="canvasLocation" x="-2386.1538461538462" y="-48.696682464454973"/>
         </scene>
         <!--Properties Tool Kit-->
         <scene sceneID="t2P-dW-YLM">
             <objects>
-                <viewController id="3Ka-9Z-mWW" customClass="PropertiesToolKit" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PropertiesToolKit" id="3Ka-9Z-mWW" customClass="PropertiesToolKit" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eeO-Ut-ica"/>
                         <viewControllerLayoutGuide type="bottom" id="i22-oG-myM"/>
@@ -4261,7 +4276,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
         <!--Style Tool Kit-->
         <scene sceneID="STh-0d-uCk">
             <objects>
-                <viewController id="WBx-of-SSM" customClass="StyleToolKit" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StyleToolKit" id="WBx-of-SSM" customClass="StyleToolKit" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6OW-vn-0LP"/>
                         <viewControllerLayoutGuide type="bottom" id="Oci-mI-9z0"/>
@@ -4352,7 +4367,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
         <!--Selectors Tool Kit-->
         <scene sceneID="rq5-1K-gm2">
             <objects>
-                <viewController id="w6R-NL-K99" customClass="SelectorsToolKit" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectorsToolKit" id="w6R-NL-K99" customClass="SelectorsToolKit" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="P68-mv-7hB"/>
                         <viewControllerLayoutGuide type="bottom" id="8rr-pw-9UU"/>
@@ -4472,7 +4487,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
         <!--Con Act Tool Kit-->
         <scene sceneID="SSN-OQ-dd4">
             <objects>
-                <viewController id="CWC-gh-X8V" customClass="ConActToolKit" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConActToolKit" id="CWC-gh-X8V" customClass="ConActToolKit" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9q4-Zr-cmb"/>
                         <viewControllerLayoutGuide type="bottom" id="YG4-nW-WDt"/>
@@ -4577,7 +4592,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
         <!--Events Tool Kit-->
         <scene sceneID="3CR-vZ-aZ4">
             <objects>
-                <viewController id="Xyv-Po-gxl" customClass="EventsToolKit" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventsToolKit" id="Xyv-Po-gxl" customClass="EventsToolKit" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oF8-0m-zdp"/>
                         <viewControllerLayoutGuide type="bottom" id="n9J-bO-Sic"/>
@@ -4671,7 +4686,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
         <!--Value Tool Kit-->
         <scene sceneID="gni-4T-13i">
             <objects>
-                <viewController id="8y6-VJ-BN1" customClass="ValueToolKit" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ValueToolKit" id="8y6-VJ-BN1" customClass="ValueToolKit" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lve-hA-6nV"/>
                         <viewControllerLayoutGuide type="bottom" id="2Xw-N2-ggk"/>
