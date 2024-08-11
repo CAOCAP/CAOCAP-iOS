@@ -9,11 +9,6 @@ import UIKit
 
 class SelectorsToolKit: ToolKitVC {
     
-    
-    //MARK: CSS Keyboard Outlets
-    @IBOutlet weak var selectorsKeyboardView: UIView!
-    @IBOutlet weak var selectorsStackView: UIStackView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     

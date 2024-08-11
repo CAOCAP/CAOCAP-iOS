@@ -40,22 +40,28 @@ class PlaygroundVC: UIViewController, Storyboarded {
     
     /// Array to hold the Canvas for HTML, CSS, and JS.
     var canvases = [UICanvas]()
-    var htmlMindMap: UIMindMap!
-    var cssStyleSheet: UIStyleSheet!
-    var jsFlowChart: UIFlowChart!
+    var mindMap: UIMindMap! // HTML
+    var styleSheet: UIStyleSheet! // CSS
+    var flowChart: UIFlowChart! // JS
     
-    /// Arrays to hold the keyboard views for HTML, CSS, and JS.
-    var htmlToolKitVCs = [ComponentsToolKit.instantiate(),
-                          StructureToolKit.instantiate(),
-                          AttributesToolKit.instantiate()]
+    /// Arrays to hold the ToolKit VCs for HTML, CSS, and JS.
     
-    var cssToolKitVCs = [SelectorsToolKit.instantiate(),
-                         PropertiesToolKit.instantiate(),
-                         StyleToolKit.instantiate()]
+    var htmlToolKitVCs = [ToolKitVC]()
+    let componentsToolKit = ComponentsToolKit.instantiate()
+    let structureToolKit = StructureToolKit.instantiate()
+    let attributesToolKit = AttributesToolKit.instantiate()
     
-    var jsToolKitVCs = [EventsToolKit.instantiate(),
-                        ConActToolKit.instantiate(),
-                        ValueToolKit.instantiate()]
+    
+    var cssToolKitVCs = [ToolKitVC]()
+    let selectorsToolKit = SelectorsToolKit.instantiate()
+    let propertiesToolKit = PropertiesToolKit.instantiate()
+    let styleToolKit = StyleToolKit.instantiate()
+    
+    
+    var jsToolKitVCs = [ToolKitVC]()
+    let eventsToolKit = EventsToolKit.instantiate()
+    let conActToolKit = ConActToolKit.instantiate()
+    let valueToolKit = ValueToolKit.instantiate()
     
     
     override func viewDidLoad() {
@@ -65,8 +71,8 @@ class PlaygroundVC: UIViewController, Storyboarded {
         let resizeGR = UIPanGestureRecognizer(target: self, action: #selector(handleResizingWebView(sender:)))
         resizeIcon.addGestureRecognizer(resizeGR)
         
-        setupToolsViewLayout()
         setupCanvasesLayout()
+        setupToolsViewLayout()
     }
     
     // MARK: - WebView
@@ -88,13 +94,13 @@ class PlaygroundVC: UIViewController, Storyboarded {
     // MARK: - Canvases Setup
     /// Set up the layout and configuration of the Canvases
     func setupCanvasesLayout() {
-        htmlMindMap = UIMindMap(frame: view.frame, color: .systemBlue)
-        cssStyleSheet = UIStyleSheet(frame: view.frame, color: .systemPurple)
-        jsFlowChart = UIFlowChart(frame: view.frame, color: .systemGreen)
-        canvases = [jsFlowChart, htmlMindMap, cssStyleSheet]
-        htmlMindMap.mindMapDelegate = self
-        cssStyleSheet.styleSheetDelegate = self
-        jsFlowChart.flowChartDelegate = self
+        mindMap = UIMindMap(frame: view.frame, color: .systemBlue)
+        styleSheet = UIStyleSheet(frame: view.frame, color: .systemPurple)
+        flowChart = UIFlowChart(frame: view.frame, color: .systemGreen)
+        canvases = [flowChart, mindMap, styleSheet]
+        mindMap.mindMapDelegate = self
+        styleSheet.styleSheetDelegate = self
+        flowChart.flowChartDelegate = self
         canvases.forEach { canvas in
             view.insertSubview(canvas, at: 0)
             canvas.isHidden = true
@@ -103,8 +109,8 @@ class PlaygroundVC: UIViewController, Storyboarded {
                 make.edges.equalToSuperview()
             }
         }
-        htmlMindMap.alpha = 1
-        htmlMindMap.isHidden = false
+        mindMap.alpha = 1
+        mindMap.isHidden = false
         
     }
     
@@ -125,6 +131,10 @@ class PlaygroundVC: UIViewController, Storyboarded {
         toolsView.addGestureRecognizer(upSwipe)
         toolsView.addGestureRecognizer(downSwipe)
         
+        structureToolKit.mindMap = mindMap
+        htmlToolKitVCs = [componentsToolKit, structureToolKit, attributesToolKit]
+        cssToolKitVCs = [selectorsToolKit, propertiesToolKit, styleToolKit]
+        jsToolKitVCs = [eventsToolKit, conActToolKit, valueToolKit]
 
         [htmlToolKitVCs,cssToolKitVCs,jsToolKitVCs].forEach { toolKitVCs in
             toolKitVCs.forEach { toolKitVC in
@@ -352,12 +362,12 @@ class PlaygroundVC: UIViewController, Storyboarded {
     ///
     /// - Parameter sender: The button that triggered this action. The button's tag determines the direction.
     @IBAction func didPressArrow(_ sender: UIButton) {
-        if !htmlMindMap.isHidden {
-            htmlMindMap.updateSelectedNode(Direction(rawValue: sender.tag))
-        } else if !cssStyleSheet.isHidden {
-            cssStyleSheet.updateSelectedNode(Direction(rawValue: sender.tag))
+        if !mindMap.isHidden {
+            mindMap.updateSelectedNode(Direction(rawValue: sender.tag))
+        } else if !styleSheet.isHidden {
+            styleSheet.updateSelectedNode(Direction(rawValue: sender.tag))
         } else {
-            jsFlowChart.updateSelectedNode(Direction(rawValue: sender.tag))
+            flowChart.updateSelectedNode(Direction(rawValue: sender.tag))
         }
     }
     
@@ -417,9 +427,9 @@ extension PlaygroundVC: StoreSubscriber {
         handleDailyChallenges(with: state)
         
         loadWebView()/*🤔*/
-        htmlMindMap.loadBody()
-        cssStyleSheet.loadSelector()
-        jsFlowChart.loadEvent()
+        mindMap.loadBody()
+        styleSheet.loadSelector()
+        flowChart.loadEvent()
         
         
         projectTitle.text = project?.getDocumentTitle()
@@ -433,9 +443,9 @@ extension PlaygroundVC: StoreSubscriber {
     private func updateProjectIfNeeded(from state: ReduxState) {
         if project == nil {
             project = state.openedProject
-            htmlMindMap.project = project
-            cssStyleSheet.project = project
-            jsFlowChart.project = project
+            mindMap.project = project
+            styleSheet.project = project
+            flowChart.project = project
         }
     }
     

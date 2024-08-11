@@ -9,8 +9,10 @@ import UIKit
 
 class StructureToolKit: ToolKitVC {
     
-    //MARK: HTML Keyboard Outlets
-    @IBOutlet weak var structureKeyboardView: UIView!
+    
+    var mindMap: UIMindMap!
+    
+    //MARK: Outlets
     @IBOutlet weak var structureStackView: UIStackView!
     
     override func viewDidLoad() {
@@ -40,7 +42,7 @@ class StructureToolKit: ToolKitVC {
             "ul","br","hr",
         ]
         if sender.tag < htmlTags.count {
-//            htmlMindMap.add(tag: htmlTags[sender.tag]) TODO: -
+            mindMap.add(tag: htmlTags[sender.tag]) 
         }
     }
     

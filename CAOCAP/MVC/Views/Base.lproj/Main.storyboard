@@ -4282,11 +4282,11 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         <viewControllerLayoutGuide type="bottom" id="Oci-mI-9z0"/>
                     </layoutGuides>
                     <view key="view" hidden="YES" contentMode="scaleToFill" id="KKW-1Y-P2f">
-                        <rect key="frame" x="0.0" y="0.0" width="360" height="255"/>
+                        <rect key="frame" x="0.0" y="0.0" width="360" height="254"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="YM1-C1-67V">
-                                <rect key="frame" x="0.0" y="0.0" width="360" height="255"/>
+                                <rect key="frame" x="0.0" y="0.0" width="360" height="254"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9RN-N9-ynr">
@@ -4303,7 +4303,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view alpha="0.85000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pM4-2L-KDg">
-                                        <rect key="frame" x="0.0" y="0.0" width="360" height="255"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="254"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -4312,10 +4312,10 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="drx-mk-2j6">
-                                        <rect key="frame" x="15" y="20" width="330" height="215"/>
+                                        <rect key="frame" x="15" y="20" width="330" height="214"/>
                                         <subviews>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01r-gR-mLf">
-                                                <rect key="frame" x="0.0" y="0.0" width="330" height="215"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="214"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="values">
                                                     <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -4358,11 +4358,11 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                             </view>
                         </subviews>
                     </view>
-                    <size key="freeformSize" width="360" height="255"/>
+                    <size key="freeformSize" width="360" height="254"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FoU-zl-CsT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2386" y="223"/>
+            <point key="canvasLocation" x="-2386.1538461538462" y="222.86729857819904"/>
         </scene>
         <!--Selectors Tool Kit-->
         <scene sceneID="rq5-1K-gm2">

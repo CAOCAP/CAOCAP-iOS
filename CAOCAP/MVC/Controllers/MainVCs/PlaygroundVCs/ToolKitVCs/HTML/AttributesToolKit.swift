@@ -13,7 +13,6 @@ class AttributesToolKit: ToolKitVC {
     var tailwindClassNames = TailwindCSS.all
     
     //MARK: Outlets
-    @IBOutlet weak var attributesKeyboardView: UIView!
     @IBOutlet weak var attributesStackView: UIStackView!
     @IBOutlet weak var attributesSegmentedControl: UISegmentedControl!
     @IBOutlet weak var contentTextField: UITextField!
