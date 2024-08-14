@@ -107,6 +107,7 @@
 		21E148152A82031D00B503C2 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E148142A82031D00B503C2 /* Challenge.swift */; };
 		21FF62032AB263AB0003D064 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FF62022AB263AB0003D064 /* AppConstants.swift */; };
 		EC7B11832C5223D40020ECE4 /* CodePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7B11822C5223D40020ECE4 /* CodePreviewVC.swift */; };
+		EC9B891A2C6C400A00FD516F /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9B89192C6C400A00FD516F /* HelperFunctions.swift */; };
 		ECB40BCD2C51125300818E9C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECB40BCC2C51125300818E9C /* RealmSwift */; };
 		ECB40BCE2C5113B500818E9C /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = ECB40BCC2C51125300818E9C /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		ECCA419D2C6696EA0076A4EA /* UIFlowChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA419C2C6696EA0076A4EA /* UIFlowChart.swift */; };
@@ -247,6 +248,7 @@
 		21FF62022AB263AB0003D064 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		EC7B11822C5223D40020ECE4 /* CodePreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePreviewVC.swift; sourceTree = "<group>"; };
 		EC7B11842C524EFF0020ECE4 /* Subscriptions.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Subscriptions.storekit; sourceTree = "<group>"; };
+		EC9B89192C6C400A00FD516F /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		ECCA419C2C6696EA0076A4EA /* UIFlowChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChart.swift; sourceTree = "<group>"; };
 		ECCA419E2C6697BF0076A4EA /* UIFlowChartNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChartNode.swift; sourceTree = "<group>"; };
 		ECCA41A22C6698A30076A4EA /* UIFlowChartStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChartStroke.swift; sourceTree = "<group>"; };
@@ -388,6 +390,7 @@
 		21534D882A598F7300E8078B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				EC9B89192C6C400A00FD516F /* HelperFunctions.swift */,
 				2186DB0C2A30946900773C5E /* UIView+Extensions.swift */,
 				21CB66F32C15F0540062D7AD /* UIScrollView+Extensions.swift */,
 				212E2B1A2A745BBD00125C50 /* UIColor+Extensions.swift */,
@@ -961,6 +964,7 @@
 				ECCA94872C68D9F70076AA6B /* UIStyleSheetStroke.swift in Sources */,
 				21A861D82A78D2C4004D36A3 /* WhatsNewVC.swift in Sources */,
 				ECCA94892C68E5B20076AA6B /* AttributesToolKit.swift in Sources */,
+				EC9B891A2C6C400A00FD516F /* HelperFunctions.swift in Sources */,
 				21534D9F2A59E58100E8078B /* ProjectFilesVC.swift in Sources */,
 				ECCA948D2C68E7460076AA6B /* PropertiesToolKit.swift in Sources */,
 				21AF3CC82A6B70F1002E96E3 /* ProjectLinkVC.swift in Sources */,

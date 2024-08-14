@@ -26,9 +26,9 @@ enum FlowChartNodeType {
     var backgroundColor: UIColor {
         switch self {
         case .event:
-            return .systemBlue
-        case .action:
             return .systemGreen
+        case .action:
+            return .systemBlue
         case .condition:
             return .systemOrange
         case .value:

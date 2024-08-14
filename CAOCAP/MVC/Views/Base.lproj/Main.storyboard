@@ -541,7 +541,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="flH-sb-3DB">
-                                <rect key="frame" x="45" y="184.33333333333334" width="300" height="475.66666666666663"/>
+                                <rect key="frame" x="45" y="184.66666666666663" width="300" height="475"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DNV-ng-ZrQ">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="75.666666666666671"/>
@@ -553,13 +553,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="MkU-Vn-ajJ">
-                                                <rect key="frame" x="0.0" y="30.333333333333314" width="300" height="19.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="30.333333333333343" width="300" height="19.333333333333329"/>
                                                 <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="〰️ Daily HTML Challenges 〰️" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bi2-bM-LGc">
-                                                <rect key="frame" x="0.0" y="59.666666666666657" width="300" height="16"/>
+                                                <rect key="frame" x="0.0" y="59.666666666666686" width="300" height="16"/>
                                                 <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -739,7 +739,7 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="TfI-cA-64I">
-                                                                        <rect key="frame" x="20.666666666666671" y="18.333333333333314" width="20" height="15"/>
+                                                                        <rect key="frame" x="20.666666666666671" y="18.333333333333371" width="20" height="15"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="20" id="tUe-v1-gGg"/>
                                                                         </constraints>
@@ -784,7 +784,7 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="LCW-nd-H7v">
-                                                                        <rect key="frame" x="20.666666666666657" y="18.333333333333314" width="20" height="15"/>
+                                                                        <rect key="frame" x="20.666666666666657" y="18.333333333333371" width="20" height="15"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="20" id="Ghm-TV-xt7"/>
                                                                         </constraints>
@@ -829,7 +829,7 @@
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="3" translatesAutoresizingMaskIntoConstraints="NO" id="hiX-sk-LoV">
-                                                                        <rect key="frame" x="20.666666666666657" y="18.333333333333314" width="20" height="15"/>
+                                                                        <rect key="frame" x="20.666666666666657" y="18.333333333333371" width="20" height="15"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="20" id="e8o-np-yNY"/>
                                                                         </constraints>
@@ -947,14 +947,48 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7YE-o0-JlD">
-                                        <rect key="frame" x="0.0" y="390.66666666666663" width="300" height="35"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Se3-lA-1P6">
+                                        <rect key="frame" x="0.0" y="390.66666666666674" width="300" height="34.333333333333314"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <buttonConfiguration key="configuration" style="tinted" image="crown" catalog="system">
+                                            <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                            <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didPressPurchaseButton:" destination="gTz-hA-32a" eventType="touchUpInside" id="5n3-zp-Q1q"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyY-2N-eLS">
+                                        <rect key="frame" x="0.0" y="445" width="300" height="34.333333333333314"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <buttonConfiguration key="configuration" style="tinted" image="globe" catalog="system">
+                                            <color key="baseForegroundColor" systemColor="systemBlueColor"/>
+                                            <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didPressExploreButton:" destination="gTz-hA-32a" eventType="touchUpInside" id="A2g-h5-4Hx"/>
+                                        </connections>
+                                    </button>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="f66-oM-JYI">
+                                        <rect key="frame" x="0.0" y="435" width="300" height="35"/>
                                         <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afb-6L-oNZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="127.66666666666667" height="35"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="message.fill" catalog="system">
+                                                    <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didPressJoinCommunity:" destination="gTz-hA-32a" eventType="touchUpInside" id="jy0-e6-3SJ"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpg-LF-Slc">
-                                                <rect key="frame" x="0.0" y="0.0" width="81.666666666666671" height="35"/>
+                                                <rect key="frame" x="99.666666666666657" y="0.0" width="82" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <buttonConfiguration key="configuration" style="tinted" image="paintpalette" catalog="system">
+                                                <buttonConfiguration key="configuration" style="tinted" image="paintpalette.fill" catalog="system">
                                                     <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
                                                     <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
                                                 </buttonConfiguration>
@@ -962,39 +996,21 @@
                                                     <action selector="didPressPaletteButton:" destination="gTz-hA-32a" eventType="touchUpInside" id="JvZ-EF-BoA"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyY-2N-eLS">
-                                                <rect key="frame" x="101.66666666666666" y="0.0" width="105" height="35"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="xyY-2N-eLS" secondAttribute="height" multiplier="3:1" id="VwQ-PP-bLa"/>
-                                                </constraints>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JO-eg-2OZ">
+                                                <rect key="frame" x="147.66666666666663" y="0.0" width="152.33333333333337" height="35"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <buttonConfiguration key="configuration" style="tinted" image="plus" catalog="system">
-                                                    <color key="baseForegroundColor" systemColor="systemBlueColor"/>
-                                                    <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
-                                                </buttonConfiguration>
+                                                <buttonConfiguration key="configuration" style="tinted" image="airplane" catalog="system"/>
                                                 <connections>
-                                                    <action selector="didPressFileButton:" destination="gTz-hA-32a" eventType="touchUpInside" id="A2g-h5-4Hx"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Se3-lA-1P6">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="35"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <buttonConfiguration key="configuration" style="tinted" image="crown" catalog="system">
-                                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
-                                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="didPressPurchaseButton:" destination="gTz-hA-32a" eventType="touchUpInside" id="5n3-zp-Q1q"/>
+                                                    <action selector="didPressTestFlight:" destination="gTz-hA-32a" eventType="touchUpInside" id="yJC-C4-NXQ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="yRD-d2-tdp"/>
+                                            <constraint firstAttribute="height" constant="35" id="9eV-aY-XTa"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="subviews">
                                                 <exclude reference="hpg-LF-Slc"/>
-                                                <exclude reference="xyY-2N-eLS"/>
                                             </mask>
                                         </variation>
                                     </stackView>
@@ -1011,7 +1027,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XcN-AH-et0">
-                                        <rect key="frame" x="0.0" y="445.66666666666663" width="300" height="30"/>
+                                        <rect key="frame" x="0.0" y="445" width="300" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made in Saudi Arabia, Hail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwv-ki-0k0">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="11"/>
@@ -1031,6 +1047,7 @@
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="EbA-Dl-Z3k"/>
+                                        <exclude reference="xyY-2N-eLS"/>
                                         <exclude reference="Myt-dz-Lvf"/>
                                     </mask>
                                 </variation>
@@ -1059,6 +1076,7 @@
                     <navigationItem key="navigationItem" id="7Zh-z8-o07"/>
                     <connections>
                         <outlet property="appVersion" destination="JKa-FB-Hq1" id="kgb-n2-Rpb"/>
+                        <outlet property="proStackView" destination="f66-oM-JYI" id="XJt-C8-mwr"/>
                         <outlet property="purchaseButton" destination="Se3-lA-1P6" id="rwL-UV-oOV"/>
                         <outlet property="stackView" destination="0Yd-XL-GPB" id="0T8-yy-F0Z"/>
                         <outlet property="uidLabel" destination="MkU-Vn-ajJ" id="Rdi-IX-GKR"/>
@@ -1491,17 +1509,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpaceSketchBG" translatesAutoresizingMaskIntoConstraints="NO" id="nI9-kf-bgl">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="505"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="510"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ro8-9s-LdZ">
-                                <rect key="frame" x="20" y="455" width="350" height="335"/>
+                                <rect key="frame" x="20" y="460" width="350" height="330"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="NxR-mB-WD8">
-                                        <rect key="frame" x="10" y="10" width="330" height="315"/>
+                                        <rect key="frame" x="10" y="10" width="330" height="310"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="URc-Dv-q52">
-                                                <rect key="frame" x="7" y="0.0" width="316" height="90"/>
+                                                <rect key="frame" x="20" y="0.0" width="290" height="85"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gift.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nAq-9u-soO">
                                                         <rect key="frame" x="0.0" y="-3.5527136788005009e-15" width="316" height="34.333333333333329"/>
@@ -1510,19 +1528,43 @@
                                                             <constraint firstAttribute="height" constant="35" id="fXU-Rg-CB1"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Experience all Pro features with a free 1-week trial." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Dx-WM-JVg">
-                                                        <rect key="frame" x="0.0" y="40" width="316" height="50"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👑" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Dx-WM-JVg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="290" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="BLd-g3-Ej1"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="40"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Support us by becoming a Pro User" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGy-Uq-wN5">
+                                                        <rect key="frame" x="0.0" y="55" width="290" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="Rr1-8B-6lV"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Experience all Pro features with a free 1-week trial." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCA-th-2tn">
+                                                        <rect key="frame" x="0.0" y="110" width="316" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="zuP-1N-4Tb"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
+                                                <variation key="default">
+                                                    <mask key="subviews">
+                                                        <exclude reference="nAq-9u-soO"/>
+                                                        <exclude reference="oCA-th-2tn"/>
+                                                    </mask>
+                                                </variation>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgf-Mm-K8h">
-                                                <rect key="frame" x="0.0" y="105" width="330" height="50"/>
+                                                <rect key="frame" x="0.0" y="100" width="330" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="dJK-hI-crZ"/>
                                                     <constraint firstAttribute="width" priority="750" constant="360" id="mPL-ze-YKw"/>
@@ -1530,15 +1572,15 @@
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="$4.99/month">
                                                     <fontDescription key="titleFontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="22"/>
-                                                    <color key="baseForegroundColor" name="AccentColor"/>
-                                                    <color key="baseBackgroundColor" name="AccentColor"/>
+                                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="didPressMonthly:" destination="fhq-Ws-50g" eventType="touchUpInside" id="Kba-9b-C9V"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CxC-Q8-Btp">
-                                                <rect key="frame" x="0.0" y="170" width="330" height="50"/>
+                                                <rect key="frame" x="0.0" y="165" width="330" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" priority="750" constant="360" id="HYT-Mu-cIl"/>
                                                     <constraint firstAttribute="height" constant="50" id="uPb-Xq-ysA"/>
@@ -1554,7 +1596,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gI2-oI-jgF">
-                                                <rect key="frame" x="19.333333333333343" y="235" width="291.33333333333326" height="35"/>
+                                                <rect key="frame" x="19.333333333333343" y="230" width="291.33333333333326" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="1bD-E6-81r"/>
                                                 </constraints>
@@ -1565,7 +1607,7 @@ There are no other in-app purchases.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="r8B-sz-be6">
-                                                <rect key="frame" x="86" y="285" width="158" height="30"/>
+                                                <rect key="frame" x="86" y="280" width="158" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="to5-0A-bY1">
                                                         <rect key="frame" x="0.0" y="0.0" width="158" height="30"/>
@@ -1637,22 +1679,68 @@ There are no other in-app purchases.</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="YWP-YE-S2g">
-                                <rect key="frame" x="58.333333333333343" y="203.33333333333331" width="273.33333333333326" height="167.33333333333331"/>
+                                <rect key="frame" x="60" y="203.33333333333334" width="270" height="91.000000000000028"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try CAOCAP Pro for Free!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sby-h7-ijT">
-                                        <rect key="frame" x="0.0" y="0.0" width="273.33333333333331" height="26"/>
-                                        <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="23"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3Pl-hB-hPM">
-                                        <rect key="frame" x="13.999999999999986" y="41" width="245.33333333333331" height="20.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="270" height="20.333333333333332"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.seal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="N4t-Ro-UW8">
                                                 <rect key="frame" x="0.0" y="-0.66666666666666785" width="22.333333333333332" height="21.666666666666664"/>
                                                 <color key="tintColor" systemColor="systemYellowColor"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HTML, CSS, JS Code Preview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFF-7m-dOx">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Support the development team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFF-7m-dOx">
+                                                <rect key="frame" x="27.333333333333329" y="0.0" width="242.66666666666669" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Dkm-sY-BwX">
+                                        <rect key="frame" x="11" y="35.333333333333314" width="248" height="20.333333333333329"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.seal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ETm-kD-sHr">
+                                                <rect key="frame" x="0.0" y="-0.66666666666666785" width="22.333333333333332" height="21.666666666666664"/>
+                                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Access to TestFlight versions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H6H-yI-CDS">
+                                                <rect key="frame" x="27.333333333333329" y="0.0" width="220.66666666666669" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try CAOCAP Pro for Free!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sby-h7-ijT">
+                                        <rect key="frame" x="22.333333333333343" y="0.0" width="273.33333333333326" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ADB-Ri-jFQ">
+                                        <rect key="frame" x="18" y="70.666666666666657" width="234" height="20.333333333333329"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.seal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MaI-zW-pfw">
+                                                <rect key="frame" x="0.0" y="-0.66666666666666785" width="22.333333333333332" height="21.666666666666664"/>
+                                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Join WhatsApp community" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXZ-by-Oaz">
+                                                <rect key="frame" x="27.333333333333329" y="0.0" width="206.66666666666669" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="pBp-HM-34o">
+                                        <rect key="frame" x="13.999999999999986" y="76.333333333333343" width="245.33333333333331" height="20.333333333333329"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.seal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2Zv-EN-mAC">
+                                                <rect key="frame" x="0.0" y="-0.66666666666666785" width="22.333333333333332" height="21.666666666666664"/>
+                                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HTML, CSS, JS Code Preview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uzn-8x-08G">
                                                 <rect key="frame" x="27.333333333333343" y="0.0" width="218" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -1661,7 +1749,7 @@ There are no other in-app purchases.</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5xS-rW-R7F">
-                                        <rect key="frame" x="14.999999999999986" y="76.333333333333343" width="243.66666666666663" height="20.333333333333329"/>
+                                        <rect key="frame" x="14.999999999999986" y="111.66666666666666" width="243.66666666666663" height="20.333333333333343"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.seal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="w3a-1e-jut">
                                                 <rect key="frame" x="0.0" y="-0.66666666666666785" width="22.333333333333332" height="21.666666666666664"/>
@@ -1676,7 +1764,7 @@ There are no other in-app purchases.</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="y62-Da-IPW">
-                                        <rect key="frame" x="34.999999999999986" y="111.66666666666666" width="203.66666666666663" height="20.333333333333343"/>
+                                        <rect key="frame" x="34.999999999999986" y="146.99999999999997" width="203.66666666666663" height="20.333333333333343"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.seal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xcC-3B-0Bd">
                                                 <rect key="frame" x="0.0" y="-0.66666666666666785" width="22.333333333333332" height="21.666666666666664"/>
@@ -1691,7 +1779,7 @@ There are no other in-app purchases.</string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="1F4-2Y-Mws">
-                                        <rect key="frame" x="40.666666666666657" y="146.99999999999997" width="192" height="20.333333333333343"/>
+                                        <rect key="frame" x="40.666666666666657" y="182.33333333333334" width="192" height="20.333333333333343"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.seal" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="LPk-sz-gVw">
                                                 <rect key="frame" x="0.0" y="-0.66666666666666785" width="22.333333333333332" height="21.666666666666664"/>
@@ -1706,6 +1794,15 @@ There are no other in-app purchases.</string>
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="Sby-h7-ijT"/>
+                                        <exclude reference="pBp-HM-34o"/>
+                                        <exclude reference="5xS-rW-R7F"/>
+                                        <exclude reference="y62-Da-IPW"/>
+                                        <exclude reference="1F4-2Y-Mws"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAOCAP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oc4-se-ig7">
                                 <rect key="frame" x="73.333333333333329" y="126.99999999999999" width="203.66666666666669" height="56.333333333333329"/>
@@ -3262,316 +3359,344 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="LrX-Cx-pco">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2Ka-bk-Eqj">
                                         <rect key="frame" x="15" y="20" width="330" height="215"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hfk-lL-HGs">
-                                                <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="dox-1h-aTu">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="SWQ-Ke-HT8"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="Components"/>
+                                                    <segment title="Elements"/>
+                                                </segments>
+                                            </segmentedControl>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcj-Q7-Yh5">
+                                                <rect key="frame" x="0.0" y="40" width="330" height="175"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nlj-Gl-45N">
-                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="30"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Span">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                            <color key="baseForegroundColor" systemColor="systemGreenColor"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="vfD-cE-61z"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhP-7H-lNZ">
-                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="30"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Canvas">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                            <color key="baseForegroundColor" systemColor="systemGreenColor"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="x91-3p-49P"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Twe-Hb-lJN">
-                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="30"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Div">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                            <color key="baseForegroundColor" systemColor="systemGreenColor"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="1xf-Uz-SFU"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ifU-Qj-wa9">
-                                                <rect key="frame" x="0.0" y="37" width="330" height="30"/>
-                                                <subviews>
-                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3b-bZ-x0q">
-                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="30"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Button">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                            <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="Vpz-pS-QAG"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m44-ZL-qop">
-                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="30"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="A">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                            <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="F44-vj-L7h"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQZ-if-dFn">
-                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="30"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Input">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                            <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="neA-x7-Hec"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VxD-3Z-ETc">
-                                                <rect key="frame" x="0.0" y="74" width="330" height="30"/>
-                                                <subviews>
-                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JnX-6U-7u9">
-                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="30"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Text Area">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="afP-TC-v7w"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="di4-bQ-Vrv">
-                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="30"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Form">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="8Wy-a8-k6L"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgt-Qt-6vZ">
-                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="30"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Label">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="icB-fu-8Ix"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VK3-LM-Are">
-                                                <rect key="frame" x="0.0" y="107.66666666666667" width="330" height="0.0"/>
-                                                <subviews>
-                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jrp-6K-nlT">
-                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="0.0"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Option">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="0ha-T2-17T"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7u-IF-A80">
-                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="0.0"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Legend">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="Fa1-XS-hFf"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHu-te-Xkh">
-                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="0.0"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Select">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="fxw-ar-ebj"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="puV-uI-YRq">
-                                                <rect key="frame" x="0.0" y="107.66666666666667" width="330" height="0.0"/>
-                                                <subviews>
-                                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjh-t3-5GV">
-                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="0.0"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Field Set">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="FWe-wU-i0O"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0u-Zl-Oci">
-                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="0.0"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Opt-Group">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="swF-Uu-HC8"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkX-an-Nkz">
-                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="0.0"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Output">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="SCg-0f-Ctw"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HK8-7G-CtM">
-                                                <rect key="frame" x="0.0" y="111" width="330" height="30"/>
-                                                <subviews>
-                                                    <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWV-1X-ODb">
-                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="30"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Video">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                            <color key="baseForegroundColor" systemColor="systemYellowColor"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="3ps-Sf-qF0"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5t-Qt-44v">
-                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="30"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Image">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                            <color key="baseForegroundColor" systemColor="systemYellowColor"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="sgI-MP-K1E"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1DP-2k-cka">
-                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="30"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Audio">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                            <color key="baseForegroundColor" systemColor="systemYellowColor"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="tUI-Cg-i1x"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ibT-pr-WTa">
-                                                <rect key="frame" x="0.0" y="148" width="330" height="30"/>
-                                                <subviews>
-                                                    <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9K-ad-kHH">
-                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="30"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="LI">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
-                                                            <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="aI8-iw-W5G"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8o-Bn-LnH">
-                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="30"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="H">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
-                                                            <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="sma-Uh-anQ"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNQ-MN-I87">
-                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="30"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="P">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
-                                                            <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="qiu-Tu-JD7"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CAr-a9-XpM">
-                                                <rect key="frame" x="0.0" y="185" width="330" height="30"/>
-                                                <subviews>
-                                                    <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxm-oV-DN7">
-                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="30"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="UL">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
-                                                            <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="gzM-QH-Nf9"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08f-2f-32k">
-                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="30"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="BR">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
-                                                            <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="QkQ-UI-XWZ"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3N-Ng-jwg">
-                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="30"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="filled" title="HR">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
-                                                            <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="0z8-n8-GOo"/>
-                                                        </connections>
-                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="LrX-Cx-pco">
+                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="326"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hfk-lL-HGs">
+                                                                <rect key="frame" x="0.0" y="0.0" width="330" height="30"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nlj-Gl-45N">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="161" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="gray" title="Span">
+                                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                                            <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="vfD-cE-61z"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Twe-Hb-lJN">
+                                                                        <rect key="frame" x="169" y="0.0" width="161" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="gray" title="Div">
+                                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                                            <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="1xf-Uz-SFU"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ifU-Qj-wa9">
+                                                                <rect key="frame" x="0.0" y="37" width="330" height="30"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3b-bZ-x0q">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="gray" title="Button">
+                                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                                            <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="Vpz-pS-QAG"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m44-ZL-qop">
+                                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="gray" title="A">
+                                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                                            <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="F44-vj-L7h"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQZ-if-dFn">
+                                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="gray" title="Input">
+                                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                                            <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="neA-x7-Hec"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HK8-7G-CtM">
+                                                                <rect key="frame" x="0.0" y="74" width="330" height="30"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWV-1X-ODb">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="gray" title="Video">
+                                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                                            <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="3ps-Sf-qF0"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5t-Qt-44v">
+                                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="gray" title="Image">
+                                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                                            <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="sgI-MP-K1E"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1DP-2k-cka">
+                                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="gray" title="Audio">
+                                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                                            <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="tUI-Cg-i1x"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ibT-pr-WTa">
+                                                                <rect key="frame" x="0.0" y="111" width="330" height="30"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9K-ad-kHH">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="filled" title="LI">
+                                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
+                                                                            <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="aI8-iw-W5G"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8o-Bn-LnH">
+                                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="filled" title="H">
+                                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
+                                                                            <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="sma-Uh-anQ"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNQ-MN-I87">
+                                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="filled" title="P">
+                                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
+                                                                            <color key="baseBackgroundColor" systemColor="systemGray3Color"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="qiu-Tu-JD7"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CAr-a9-XpM">
+                                                                <rect key="frame" x="0.0" y="148" width="330" height="30"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxm-oV-DN7">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="filled" title="UL">
+                                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
+                                                                            <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="gzM-QH-Nf9"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08f-2f-32k">
+                                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="filled" title="BR">
+                                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
+                                                                            <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="QkQ-UI-XWZ"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3N-Ng-jwg">
+                                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="filled" title="HR">
+                                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="15"/>
+                                                                            <color key="baseBackgroundColor" systemColor="systemGrayColor"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="0z8-n8-GOo"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="z4t-rD-Ath"/>
+                                                                </constraints>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VxD-3Z-ETc">
+                                                                <rect key="frame" x="0.0" y="185" width="330" height="30"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JnX-6U-7u9">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="gray" title="Text Area">
+                                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="afP-TC-v7w"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="di4-bQ-Vrv">
+                                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="gray" title="Form">
+                                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="8Wy-a8-k6L"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgt-Qt-6vZ">
+                                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="gray" title="Label">
+                                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="icB-fu-8Ix"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VK3-LM-Are">
+                                                                <rect key="frame" x="0.0" y="222" width="330" height="30"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jrp-6K-nlT">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="gray" title="Option">
+                                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="0ha-T2-17T"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y7u-IF-A80">
+                                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="gray" title="Legend">
+                                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="Fa1-XS-hFf"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHu-te-Xkh">
+                                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="gray" title="Select">
+                                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="fxw-ar-ebj"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="puV-uI-YRq">
+                                                                <rect key="frame" x="0.0" y="259" width="330" height="30"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjh-t3-5GV">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="gray" title="Field Set">
+                                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="FWe-wU-i0O"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0u-Zl-Oci">
+                                                                        <rect key="frame" x="112.66666666666666" y="0.0" width="104.66666666666666" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="gray" title="Opt-Group">
+                                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="swF-Uu-HC8"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkX-an-Nkz">
+                                                                        <rect key="frame" x="225.33333333333334" y="0.0" width="104.66666666666666" height="30"/>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="gray" title="Output">
+                                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                                            <color key="baseForegroundColor" systemColor="systemTealColor"/>
+                                                                        </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="SCg-0f-Ctw"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhP-7H-lNZ">
+                                                                <rect key="frame" x="0.0" y="296" width="330" height="30"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="gray" title="Canvas">
+                                                                    <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                                    <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="didPressAddElement:" destination="cQG-Tx-a6N" eventType="touchUpInside" id="x91-3p-49P"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="z4t-rD-Ath"/>
+                                                    <constraint firstItem="LrX-Cx-pco" firstAttribute="bottom" secondItem="z46-ui-v3k" secondAttribute="bottom" constant="215" id="T4X-U4-bn4"/>
+                                                    <constraint firstItem="LrX-Cx-pco" firstAttribute="top" secondItem="z46-ui-v3k" secondAttribute="top" id="Xm1-Zm-BCb"/>
+                                                    <constraint firstItem="Rvy-uv-Xln" firstAttribute="trailing" secondItem="LrX-Cx-pco" secondAttribute="trailing" id="dDX-77-gfb"/>
+                                                    <constraint firstItem="LrX-Cx-pco" firstAttribute="leading" secondItem="Rvy-uv-Xln" secondAttribute="leading" id="u8H-Vv-rtf"/>
                                                 </constraints>
-                                            </stackView>
+                                                <viewLayoutGuide key="contentLayoutGuide" id="z46-ui-v3k"/>
+                                                <viewLayoutGuide key="frameLayoutGuide" id="Rvy-uv-Xln"/>
+                                            </scrollView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -3579,12 +3704,12 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="AQr-Iy-uIW" secondAttribute="trailing" id="00l-dY-ckq"/>
                                     <constraint firstAttribute="bottom" secondItem="AQr-Iy-uIW" secondAttribute="bottom" id="2Oi-dh-Hr2"/>
-                                    <constraint firstItem="LrX-Cx-pco" firstAttribute="centerX" secondItem="JV7-BQ-HBg" secondAttribute="centerX" id="3ai-IP-TMh"/>
+                                    <constraint firstItem="2Ka-bk-Eqj" firstAttribute="centerY" secondItem="JV7-BQ-HBg" secondAttribute="centerY" id="C4R-ep-3Qt"/>
                                     <constraint firstItem="ELE-h1-6Fp" firstAttribute="centerX" secondItem="JV7-BQ-HBg" secondAttribute="centerX" id="Gh7-dd-lNq"/>
-                                    <constraint firstItem="LrX-Cx-pco" firstAttribute="top" secondItem="JV7-BQ-HBg" secondAttribute="top" constant="20" id="QFa-CN-nMW"/>
-                                    <constraint firstAttribute="trailing" secondItem="LrX-Cx-pco" secondAttribute="trailing" constant="15" id="QoH-Jf-8MT"/>
+                                    <constraint firstItem="2Ka-bk-Eqj" firstAttribute="centerX" secondItem="JV7-BQ-HBg" secondAttribute="centerX" id="NkI-Vd-ydD"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Ka-bk-Eqj" secondAttribute="trailing" constant="15" id="Ya9-ng-Krh"/>
+                                    <constraint firstItem="2Ka-bk-Eqj" firstAttribute="top" secondItem="JV7-BQ-HBg" secondAttribute="top" constant="20" id="drX-eJ-1K4"/>
                                     <constraint firstItem="AQr-Iy-uIW" firstAttribute="leading" secondItem="JV7-BQ-HBg" secondAttribute="leading" id="e2s-t1-69l"/>
-                                    <constraint firstItem="LrX-Cx-pco" firstAttribute="centerY" secondItem="JV7-BQ-HBg" secondAttribute="centerY" id="k8v-ZQ-t55"/>
                                     <constraint firstItem="ELE-h1-6Fp" firstAttribute="top" secondItem="JV7-BQ-HBg" secondAttribute="top" constant="10" id="sTq-8v-1lI"/>
                                     <constraint firstItem="AQr-Iy-uIW" firstAttribute="top" secondItem="JV7-BQ-HBg" secondAttribute="top" id="zYW-J2-2uq"/>
                                 </constraints>
@@ -3615,7 +3740,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSO-Bl-eE3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3000" y="-48"/>
+            <point key="canvasLocation" x="-3000" y="-48.696682464454973"/>
         </scene>
         <!--Components Tool Kit-->
         <scene sceneID="5Mo-MA-YjO">
@@ -3655,17 +3780,40 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="PRI-aM-5kv">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PRI-aM-5kv">
                                         <rect key="frame" x="15" y="20" width="330" height="215"/>
                                         <subviews>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTd-z9-NFk">
-                                                <rect key="frame" x="0.0" y="0.0" width="330" height="215"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Components">
-                                                    <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                    <color key="baseForegroundColor" systemColor="systemBlueColor"/>
-                                                </buttonConfiguration>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vno-ZD-ooO">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="THX-7l-X9R">
+                                                        <rect key="frame" x="0.0" y="0.0" width="277.66666666666669" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="34" id="gC8-7B-RYF"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IP-f0-wrI">
+                                                        <rect key="frame" x="282.66666666666669" y="0.0" width="47.333333333333314" height="34"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" image="doc.fill.badge.plus" catalog="system"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ddl-Y6-re7">
+                                                <rect key="frame" x="0.0" y="44" width="330" height="171"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <button key="tableFooterView" opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="QTd-z9-NFk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="gray" title="Components">
+                                                        <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                        <color key="baseForegroundColor" systemColor="systemBlueColor"/>
+                                                    </buttonConfiguration>
+                                                </button>
+                                            </tableView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -4050,7 +4198,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9of-Vn-FpI">
                                                 <rect key="frame" x="0.0" y="215" width="330" height="39"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="class" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fg1-4s-Frs">
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fg1-4s-Frs">
                                                         <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="W1N-qc-jdf"/>
@@ -4220,15 +4368,15 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="DCn-78-ac1">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DCn-78-ac1">
                                         <rect key="frame" x="15" y="20" width="330" height="215"/>
                                         <subviews>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoK-SS-xNV">
                                                 <rect key="frame" x="0.0" y="0.0" width="330" height="215"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="properties">
+                                                <buttonConfiguration key="configuration" style="gray" title="Properties">
                                                     <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                    <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                                    <color key="baseForegroundColor" systemColor="systemIndigoColor"/>
                                                 </buttonConfiguration>
                                             </button>
                                         </subviews>
@@ -4311,15 +4459,25 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="drx-mk-2j6">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="drx-mk-2j6">
                                         <rect key="frame" x="15" y="20" width="330" height="214"/>
                                         <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZlJ-0K-pOd">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="xeN-C1-7tC"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="" image="slider.horizontal.3" catalog="system"/>
+                                                    <segment title="" image="paintbrush.pointed" catalog="system"/>
+                                                </segments>
+                                            </segmentedControl>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01r-gR-mLf">
-                                                <rect key="frame" x="0.0" y="0.0" width="330" height="214"/>
+                                                <rect key="frame" x="0.0" y="40" width="330" height="174"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="values">
+                                                <buttonConfiguration key="configuration" style="gray" title="Style">
                                                     <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                    <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                                    <color key="baseForegroundColor" systemColor="systemMintColor"/>
                                                 </buttonConfiguration>
                                             </button>
                                         </subviews>
@@ -4402,46 +4560,51 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="6B0-Ug-mh8">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6B0-Ug-mh8">
                                         <rect key="frame" x="15" y="20" width="330" height="215"/>
                                         <subviews>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4H-iJ-zfr">
-                                                <rect key="frame" x="0.0" y="0.0" width="330" height="67"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Class">
-                                                    <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                    <color key="baseForegroundColor" systemColor="systemGreenColor"/>
-                                                </buttonConfiguration>
-                                            </button>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="mig-wW-hgT">
-                                                <rect key="frame" x="0.0" y="74" width="330" height="67"/>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="GVg-IV-XvA">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Xx1-WU-Fcj"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="Class"/>
+                                                    <segment title="Element"/>
+                                                    <segment title="ID"/>
+                                                </segments>
+                                            </segmentedControl>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3DA-6c-wFh">
+                                                <rect key="frame" x="0.0" y="40" width="330" height="34"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfx-MF-ORF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="161" height="67"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VlA-QD-NoU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="277.66666666666669" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="34" id="3zY-qf-UFn"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyC-C6-XEh">
+                                                        <rect key="frame" x="282.66666666666669" y="0.0" width="47.333333333333314" height="34"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Root">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                            <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
-                                                        </buttonConfiguration>
+                                                        <buttonConfiguration key="configuration" style="gray" image="doc.fill.badge.plus" catalog="system"/>
                                                     </button>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="diC-aN-Mfh">
-                                                        <rect key="frame" x="169" y="0.0" width="161" height="67"/>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3bx-Nq-apt">
+                                                <rect key="frame" x="0.0" y="84" width="330" height="131"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAG-Mu-Xax">
+                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="131"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="ID">
+                                                        <buttonConfiguration key="configuration" style="gray" title="Selectors">
                                                             <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                            <color key="baseForegroundColor" systemColor="systemBlueColor"/>
+                                                            <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
                                                         </buttonConfiguration>
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAG-Mu-Xax">
-                                                <rect key="frame" x="0.0" y="148" width="330" height="67"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Element">
-                                                    <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                    <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
-                                                </buttonConfiguration>
-                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -4522,25 +4685,57 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="GJ0-3k-iMJ">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GJ0-3k-iMJ">
                                         <rect key="frame" x="15" y="20" width="330" height="215"/>
                                         <subviews>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzq-uA-yvm">
-                                                <rect key="frame" x="0.0" y="0.0" width="330" height="104"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Condition">
-                                                    <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                    <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
-                                                </buttonConfiguration>
-                                            </button>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5A-OW-YHf">
-                                                <rect key="frame" x="0.0" y="111" width="330" height="104"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Action">
-                                                    <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                    <color key="baseForegroundColor" systemColor="systemBlueColor"/>
-                                                </buttonConfiguration>
-                                            </button>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="KPa-Dx-ken">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="gGh-Rj-AWz"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="Conditions"/>
+                                                    <segment title="Actions"/>
+                                                    <segment title="Values"/>
+                                                </segments>
+                                            </segmentedControl>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r7s-Px-RpC">
+                                                <rect key="frame" x="0.0" y="40" width="330" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="eoI-ta-KU3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="v11-iO-yMc">
+                                                <rect key="frame" x="0.0" y="84" width="330" height="131"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzq-uA-yvm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="103.33333333333333" height="131"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="Condition">
+                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                            <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5A-OW-YHf">
+                                                        <rect key="frame" x="113.33333333333334" y="0.0" width="103.33333333333334" height="131"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="Action">
+                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                            <color key="baseForegroundColor" systemColor="systemBlueColor"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFA-Cp-tVV">
+                                                        <rect key="frame" x="226.66666666666666" y="0.0" width="103.33333333333334" height="131"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="Values">
+                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                            <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
+                                                        </buttonConfiguration>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -4621,11 +4816,19 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="6Ls-Vb-Mb2">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6Ls-Vb-Mb2">
                                         <rect key="frame" x="15" y="20" width="330" height="215"/>
                                         <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="biB-ji-0iG">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="Qhi-MZ-v8Z"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbA-jv-Q9D">
-                                                <rect key="frame" x="0.0" y="0.0" width="330" height="215"/>
+                                                <rect key="frame" x="0.0" y="44" width="330" height="171"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="Events">
                                                     <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -4712,11 +4915,21 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="oPn-K7-4Gi">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oPn-K7-4Gi">
                                         <rect key="frame" x="15" y="20" width="330" height="215"/>
                                         <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="b1f-wI-KHk">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Gbm-Iu-Vxz"/>
+                                                </constraints>
+                                                <segments>
+                                                    <segment title="" image="slider.horizontal.3" catalog="system"/>
+                                                    <segment title="" image="paintbrush.pointed" catalog="system"/>
+                                                </segments>
+                                            </segmentedControl>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyO-g3-hBe">
-                                                <rect key="frame" x="0.0" y="0.0" width="330" height="215"/>
+                                                <rect key="frame" x="0.0" y="40" width="330" height="175"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="Values">
                                                     <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
@@ -4775,6 +4988,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
         <image name="Plant-E" width="134" height="280"/>
         <image name="Plant-S" width="122" height="218"/>
         <image name="SpaceSketchBG" width="1661" height="2214"/>
+        <image name="airplane" catalog="system" width="128" height="115"/>
         <image name="altIcon" width="1024" height="1024"/>
         <image name="altIcon 0" width="1024" height="1024"/>
         <image name="altIcon 1" width="1024" height="1024"/>
@@ -4803,9 +5017,11 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
         <image name="clock.arrow.circlepath" catalog="system" width="128" height="112"/>
         <image name="crown" catalog="system" width="128" height="92"/>
         <image name="diamond-badge" width="2671" height="1848"/>
+        <image name="doc.fill.badge.plus" catalog="system" width="120" height="128"/>
         <image name="folder.circle.fill" catalog="system" width="128" height="123"/>
         <image name="gear.circle.fill" catalog="system" width="128" height="123"/>
         <image name="gift.fill" catalog="system" width="128" height="125"/>
+        <image name="globe" catalog="system" width="128" height="123"/>
         <image name="globe.europe.africa" catalog="system" width="128" height="123"/>
         <image name="globe.europe.africa.fill" catalog="system" width="128" height="123"/>
         <image name="gold-badge" width="2564" height="1844"/>
@@ -4813,14 +5029,15 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
         <image name="info.circle" catalog="system" width="128" height="123"/>
         <image name="iron-badge" width="2562" height="1847"/>
         <image name="italic" catalog="system" width="115" height="128"/>
+        <image name="message.fill" catalog="system" width="128" height="114"/>
         <image name="newspaper" catalog="system" width="128" height="111"/>
         <image name="newspaper.circle.fill" catalog="system" width="128" height="123"/>
         <image name="paintbrush.pointed" catalog="system" width="128" height="118"/>
         <image name="paintbrush.pointed.fill" catalog="system" width="128" height="118"/>
         <image name="paintpalette" catalog="system" width="128" height="105"/>
+        <image name="paintpalette.fill" catalog="system" width="128" height="105"/>
         <image name="photo.on.rectangle.fill" catalog="system" width="128" height="102"/>
         <image name="play.rectangle" catalog="system" width="128" height="93"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="power" catalog="system" width="127" height="128"/>
         <image name="side-resize" width="600" height="600"/>
         <image name="slider.horizontal.3" catalog="system" width="128" height="99"/>
@@ -4873,6 +5090,12 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -42,7 +42,7 @@ class UIStyleSheetNode: UIView, UIContextMenuInteractionDelegate {
         setupConstraints()
         layer.cornerRadius = 10
         layer.borderColor = UIColor.purple.cgColor
-        backgroundColor = .systemBlue
+        backgroundColor = .systemPurple
         setupLabel()
         setupGestures()
     }

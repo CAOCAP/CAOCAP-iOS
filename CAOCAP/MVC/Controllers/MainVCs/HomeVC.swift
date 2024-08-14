@@ -21,6 +21,7 @@ class HomeVC: UIViewController, Storyboarded {
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var appVersion: UILabel!
     @IBOutlet weak var purchaseButton: UIButton!
+    @IBOutlet weak var proStackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +34,11 @@ class HomeVC: UIViewController, Storyboarded {
         if UserDefaults.standard.isSubscribed {
             welcomingLabel.text = "Welcome, back pro user 👑👋🏼"
             purchaseButton.isHidden = true
+            proStackView.isHidden = false
         } else {
             welcomingLabel.text = "Welcome, back user 👋🏼"
             purchaseButton.isHidden = false
+            proStackView.isHidden = true
         }
     }
     
@@ -155,15 +158,21 @@ class HomeVC: UIViewController, Storyboarded {
         coordinator?.viewPurchase()
     }
     
-    @IBAction func didPressFileButton(_ sender: Any) {
-        coordinator?.createNewProject()
+    @IBAction func didPressExploreButton(_ sender: Any) {
+        coordinator?.viewWorld()
     }
     
     @IBAction func didPressPaletteButton(_ sender: Any) {
         coordinator?.viewPalette()
     }
     
+    @IBAction func didPressJoinCommunity(_ sender: Any) {
+        openURLInSafari(urlString: "https://chat.whatsapp.com/HGjW7xsdQY9EsKsF8ncZw6")
+    }
     
+    @IBAction func didPressTestFlight(_ sender: Any) {
+        openURLInSafari(urlString: "https://testflight.apple.com/join/7QU881hQ")
+    }
     
 }
 
