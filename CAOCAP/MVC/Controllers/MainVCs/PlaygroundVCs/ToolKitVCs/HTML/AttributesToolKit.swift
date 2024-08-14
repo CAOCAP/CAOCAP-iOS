@@ -14,7 +14,6 @@ class AttributesToolKit: ToolKitVC {
     
     //MARK: Outlets
     @IBOutlet weak var attributesStackView: UIStackView!
-    @IBOutlet weak var attributesSegmentedControl: UISegmentedControl!
     @IBOutlet weak var contentTextField: UITextField!
     @IBOutlet var textDecorationButtons: [UIButton]!
     @IBOutlet weak var textAlignmentSegmentedControl: UISegmentedControl!
@@ -130,6 +129,28 @@ class AttributesToolKit: ToolKitVC {
     }
     
     
+    /// Changes the view displayed based on the selected segment in the AttributesView segmented control.
+    ///
+    /// - Parameter sender: The segmented control that triggered this action.
+    @IBAction func didChangeAttributesViewSegmentedControl(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            attributesStackView.arrangedSubviews[1].isHidden = false
+            attributesStackView.arrangedSubviews[2].isHidden = true
+            attributesStackView.arrangedSubviews[3].isHidden = true
+        case 1:
+            attributesStackView.arrangedSubviews[1].isHidden = true
+            attributesStackView.arrangedSubviews[2].isHidden = false
+            attributesStackView.arrangedSubviews[3].isHidden = true
+        default:
+            attributesStackView.arrangedSubviews[1].isHidden = true
+            attributesStackView.arrangedSubviews[2].isHidden = true
+            attributesStackView.arrangedSubviews[3].isHidden = false
+        }
+    }
+    
+    
+    
     // MARK: - Menu Buttons
     /// Set up the menu buttons for type, semantic, and list style options.
     func setupMenuButtons() {
@@ -157,28 +178,6 @@ class AttributesToolKit: ToolKitVC {
         listStyleButton.menu = UIMenu(title: "", options: .displayInline, children: listStyleArray)
     }
     
-    
-    // MARK: - AttributesView Handling
-    
-    /// Changes the view displayed based on the selected segment in the AttributesView segmented control.
-    ///
-    /// - Parameter sender: The segmented control that triggered this action.
-    @IBAction func didChangeAttributesViewSegmentedControl(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
-        case 0:
-            attributesStackView.arrangedSubviews[1].isHidden = false
-            attributesStackView.arrangedSubviews[2].isHidden = true
-            attributesStackView.arrangedSubviews[3].isHidden = true
-        case 1:
-            attributesStackView.arrangedSubviews[1].isHidden = true
-            attributesStackView.arrangedSubviews[2].isHidden = false
-            attributesStackView.arrangedSubviews[3].isHidden = true
-        default:
-            attributesStackView.arrangedSubviews[1].isHidden = true
-            attributesStackView.arrangedSubviews[2].isHidden = true
-            attributesStackView.arrangedSubviews[3].isHidden = false
-        }
-    }
     
     
     /// Toggles the text decoration on or off for a given button.

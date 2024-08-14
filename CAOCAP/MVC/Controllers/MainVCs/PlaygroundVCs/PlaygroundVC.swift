@@ -273,26 +273,20 @@ class PlaygroundVC: UIViewController, Storyboarded {
             case .up:
                 if toolsViewHeightConstraint.constant == 40 {
                     toolsViewHeightConstraint.constant = 107
-                    structureToolKit.keyboardLayout(size: .small)
                 } else if toolsViewHeightConstraint.constant == 107 {
                     toolsViewHeightConstraint.constant = 255
-                    structureToolKit.keyboardLayout(size: .medium)
                 } else if toolsViewHeightConstraint.constant == 255 {
                     webViewWidthConstraint.constant = 120
                     toolsViewHeightConstraint.constant = 329
-                    structureToolKit.keyboardLayout(size: .large)
                 }
             case .down:
                 if toolsViewHeightConstraint.constant == 107 {
                     toolsViewHeightConstraint.constant = 40
-                    structureToolKit.keyboardLayout(size: .none)
                 } else if toolsViewHeightConstraint.constant == 255 {
                     toolsViewHeightConstraint.constant = 107
-                    structureToolKit.keyboardLayout(size: .small)
                 } else if toolsViewHeightConstraint.constant == 329 {
                     webViewWidthConstraint.constant = 160
                     toolsViewHeightConstraint.constant = 255
-                    structureToolKit.keyboardLayout(size: .medium)
                 }
             default:
                 break

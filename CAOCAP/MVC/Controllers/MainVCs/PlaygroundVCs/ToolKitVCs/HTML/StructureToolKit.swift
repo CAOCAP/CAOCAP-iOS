@@ -31,6 +31,21 @@ class StructureToolKit: ToolKitVC {
         super.newState(state: state)
     }
     
+    
+    /// Changes the view displayed based on the selected segment in the StructureView segmented control.
+    ///
+    /// - Parameter sender: The segmented control that triggered this action.
+    @IBAction func didChangeStructureViewSegmentedControl(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            structureStackView.arrangedSubviews[1].isHidden = false
+            structureStackView.arrangedSubviews[2].isHidden = true
+        default:
+            structureStackView.arrangedSubviews[1].isHidden = true
+            structureStackView.arrangedSubviews[2].isHidden = false
+        }
+    }
+    
     // MARK: - HTML Keyboard Button Actions
     /// Adds an HTML element to the current MindMap.
     ///
@@ -53,33 +68,5 @@ class StructureToolKit: ToolKitVC {
         }
     }
     
-    // MARK: - HTML Keyboard Button Layout
     
-    func keyboardLayout(size: SizeType) {
-        let maxIndex = structureStackView.arrangedSubviews.count - 1
-        var filteredRows = [UIView]()
-        switch size {
-        case .none:
-            //hide all
-            structureStackView.arrangedSubviews.forEach { row in
-                row.isHidden = true
-            }
-        case .small:
-            // only show 6,7
-            structureStackView.arrangedSubviews.enumerated().forEach { index, row in
-                row.isHidden = ![6,7].contains(index)
-            }
-        case .medium:
-            //show all but not 3,4
-            structureStackView.arrangedSubviews.enumerated().forEach { index, row in
-                row.isHidden = [3,4].contains(index)
-            }
-        case .large:
-            //show all
-            structureStackView.arrangedSubviews.forEach { row in
-                row.isHidden = false
-            }
-        }
-        
-    }
 }

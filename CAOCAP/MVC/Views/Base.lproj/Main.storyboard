@@ -3371,7 +3371,30 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                     <segment title="Components"/>
                                                     <segment title="Elements"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="didChangeStructureViewSegmentedControl:" destination="cQG-Tx-a6N" eventType="valueChanged" id="umc-ys-KJm"/>
+                                                </connections>
                                             </segmentedControl>
+                                            <collectionView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8X5-Jv-g60">
+                                                <rect key="frame" x="0.0" y="35" width="330" height="0.0"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Epg-XY-deQ">
+                                                    <size key="itemSize" width="128" height="128"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="pWj-PM-uGa">
+                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="3h6-br-m13">
+                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </collectionViewCellContentView>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcj-Q7-Yh5">
                                                 <rect key="frame" x="0.0" y="40" width="330" height="175"/>
                                                 <subviews>
@@ -3689,7 +3712,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                     </stackView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="LrX-Cx-pco" firstAttribute="bottom" secondItem="z46-ui-v3k" secondAttribute="bottom" constant="215" id="T4X-U4-bn4"/>
+                                                    <constraint firstItem="LrX-Cx-pco" firstAttribute="bottom" secondItem="z46-ui-v3k" secondAttribute="bottom" id="T4X-U4-bn4"/>
                                                     <constraint firstItem="LrX-Cx-pco" firstAttribute="top" secondItem="z46-ui-v3k" secondAttribute="top" id="Xm1-Zm-BCb"/>
                                                     <constraint firstItem="Rvy-uv-Xln" firstAttribute="trailing" secondItem="LrX-Cx-pco" secondAttribute="trailing" id="dDX-77-gfb"/>
                                                     <constraint firstItem="LrX-Cx-pco" firstAttribute="leading" secondItem="Rvy-uv-Xln" secondAttribute="leading" id="u8H-Vv-rtf"/>
@@ -3735,7 +3758,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                     </view>
                     <size key="freeformSize" width="360" height="255"/>
                     <connections>
-                        <outlet property="structureStackView" destination="LrX-Cx-pco" id="zzc-2y-NGv"/>
+                        <outlet property="structureStackView" destination="2Ka-bk-Eqj" id="N1P-i4-wWG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSO-Bl-eE3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -4307,7 +4330,6 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                     </view>
                     <size key="freeformSize" width="360" height="255"/>
                     <connections>
-                        <outlet property="attributesSegmentedControl" destination="6Eo-sl-Bkf" id="6un-j5-5sI"/>
                         <outlet property="attributesStackView" destination="gvp-qI-ygt" id="UCd-Jb-u0N"/>
                         <outlet property="backgroundColorWell" destination="oVS-Cr-7rc" id="9c8-Br-4GF"/>
                         <outlet property="contentTextField" destination="iIJ-zi-gUO" id="6dW-rC-dHo"/>
