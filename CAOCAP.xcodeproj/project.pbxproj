@@ -108,6 +108,8 @@
 		21FF62032AB263AB0003D064 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FF62022AB263AB0003D064 /* AppConstants.swift */; };
 		EC7B11832C5223D40020ECE4 /* CodePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7B11822C5223D40020ECE4 /* CodePreviewVC.swift */; };
 		EC9B891A2C6C400A00FD516F /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9B89192C6C400A00FD516F /* HelperFunctions.swift */; };
+		EC9B891C2C6D79C400FD516F /* ComponentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9B891B2C6D79C400FD516F /* ComponentTableViewCell.swift */; };
+		EC9B891E2C6D7E6700FD516F /* DaisyUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9B891D2C6D7E6700FD516F /* DaisyUI.swift */; };
 		ECB40BCD2C51125300818E9C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECB40BCC2C51125300818E9C /* RealmSwift */; };
 		ECB40BCE2C5113B500818E9C /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = ECB40BCC2C51125300818E9C /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		ECCA419D2C6696EA0076A4EA /* UIFlowChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA419C2C6696EA0076A4EA /* UIFlowChart.swift */; };
@@ -249,6 +251,8 @@
 		EC7B11822C5223D40020ECE4 /* CodePreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePreviewVC.swift; sourceTree = "<group>"; };
 		EC7B11842C524EFF0020ECE4 /* Subscriptions.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Subscriptions.storekit; sourceTree = "<group>"; };
 		EC9B89192C6C400A00FD516F /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		EC9B891B2C6D79C400FD516F /* ComponentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentTableViewCell.swift; sourceTree = "<group>"; };
+		EC9B891D2C6D7E6700FD516F /* DaisyUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaisyUI.swift; sourceTree = "<group>"; };
 		ECCA419C2C6696EA0076A4EA /* UIFlowChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChart.swift; sourceTree = "<group>"; };
 		ECCA419E2C6697BF0076A4EA /* UIFlowChartNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChartNode.swift; sourceTree = "<group>"; };
 		ECCA41A22C6698A30076A4EA /* UIFlowChartStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChartStroke.swift; sourceTree = "<group>"; };
@@ -574,6 +578,7 @@
 			children = (
 				21FF62022AB263AB0003D064 /* AppConstants.swift */,
 				21534DA02A5A9B3B00E8078B /* TailwindCSS.swift */,
+				EC9B891D2C6D7E6700FD516F /* DaisyUI.swift */,
 				21C21C532A36145200F40BE3 /* Enumerations.swift */,
 			);
 			path = Constants;
@@ -595,6 +600,7 @@
 				2178C1A12A4DA2AB00876BB6 /* SettingsTableViewCell.swift */,
 				2178C1A32A4DB2FD00876BB6 /* SettingsSwitchTableViewCell.swift */,
 				2147F5182A6F2001004245AE /* ISOLanguageCodeCell.swift */,
+				EC9B891B2C6D79C400FD516F /* ComponentTableViewCell.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -982,6 +988,7 @@
 				21AF3CC22A6B70B6002E96E3 /* ProjectTitleVC.swift in Sources */,
 				21C21C4D2A34B61900F40BE3 /* PurchaseVC.swift in Sources */,
 				21183D072BD72380001AECAF /* WorldVC.swift in Sources */,
+				EC9B891C2C6D79C400FD516F /* ComponentTableViewCell.swift in Sources */,
 				2196065F2AA82E700099FC14 /* KeyboardManager.swift in Sources */,
 				218DA9CB2A2B205800459C61 /* SceneDelegate.swift in Sources */,
 				21DBA0052A39EC5500DFAC66 /* UIFont+Extensions.swift in Sources */,
@@ -1011,6 +1018,7 @@
 				ECCA947B2C6777E40076AA6B /* SelectorsToolKit.swift in Sources */,
 				ECCA94792C6777D60076AA6B /* EventsToolKit.swift in Sources */,
 				21AF3CC42A6B70CC002E96E3 /* ProjectStyleVC.swift in Sources */,
+				EC9B891E2C6D7E6700FD516F /* DaisyUI.swift in Sources */,
 				21534D982A59B40A00E8078B /* MainCoordinator.swift in Sources */,
 				210F19AE2A42DBE100D71A66 /* UIMindMapNode.swift in Sources */,
 				ECCA419F2C6697BF0076A4EA /* UIFlowChartNode.swift in Sources */,
@@ -1217,7 +1225,7 @@
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CAOCAP/App/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "CAØCAP";
+				INFOPLIST_KEY_CFBundleDisplayName = CAOCAP;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1228,7 +1236,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0.4;
+				MARKETING_VERSION = 5.0.5;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Ficruty.caocap-dev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1305,7 +1313,7 @@
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CAOCAP/App/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "CAØCAP";
+				INFOPLIST_KEY_CFBundleDisplayName = CAOCAP;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1316,7 +1324,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0.4;
+				MARKETING_VERSION = 5.0.5;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Ficruty.caocap-dev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1453,7 +1461,7 @@
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CAOCAP/App/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "CAØCAP";
+				INFOPLIST_KEY_CFBundleDisplayName = CAOCAP;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1464,7 +1472,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0.4;
+				MARKETING_VERSION = 5.0.5;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ficruty.caocap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1484,7 +1492,7 @@
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CAOCAP/App/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "CAØCAP";
+				INFOPLIST_KEY_CFBundleDisplayName = CAOCAP;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1495,7 +1503,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0.4;
+				MARKETING_VERSION = 5.0.5;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ficruty.caocap;
 				PRODUCT_NAME = "$(TARGET_NAME)";

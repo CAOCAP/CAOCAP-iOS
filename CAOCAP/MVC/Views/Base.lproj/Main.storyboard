@@ -3828,7 +3828,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                 <rect key="frame" x="0.0" y="44" width="330" height="171"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <button key="tableFooterView" opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="QTd-z9-NFk">
-                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="33"/>
+                                                    <rect key="frame" x="0.0" y="128" width="330" height="33"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="gray" title="Components">
@@ -3836,6 +3836,47 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                         <color key="baseForegroundColor" systemColor="systemBlueColor"/>
                                                     </buttonConfiguration>
                                                 </button>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ComponentTableViewCell" rowHeight="50" id="uv1-MV-djY" customClass="ComponentTableViewCell" customModule="CAOCAP" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="50" width="330" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uv1-MV-djY" id="Xxm-u3-QjH">
+                                                            <rect key="frame" x="0.0" y="0.0" width="330" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j4W-3K-cIL">
+                                                                    <rect key="frame" x="5" y="5" width="320" height="40"/>
+                                                                    <subviews>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vNF-td-P18">
+                                                                            <rect key="frame" x="5" y="5" width="310" height="30"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwQ-UJ-cc9">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="310" height="30"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                    <nil key="textColor"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                            </subviews>
+                                                                        </stackView>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" systemColor="separatorColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="vNF-td-P18" firstAttribute="centerX" secondItem="j4W-3K-cIL" secondAttribute="centerX" id="6ab-5d-lcS"/>
+                                                                        <constraint firstItem="vNF-td-P18" firstAttribute="centerY" secondItem="j4W-3K-cIL" secondAttribute="centerY" id="7CI-Q0-gCM"/>
+                                                                        <constraint firstItem="vNF-td-P18" firstAttribute="top" secondItem="j4W-3K-cIL" secondAttribute="top" constant="5" id="7Ty-NF-lxW"/>
+                                                                        <constraint firstItem="vNF-td-P18" firstAttribute="leading" secondItem="j4W-3K-cIL" secondAttribute="leading" constant="5" id="WWA-y5-osU"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="j4W-3K-cIL" firstAttribute="centerX" secondItem="Xxm-u3-QjH" secondAttribute="centerX" id="Cqg-sr-jXS"/>
+                                                                <constraint firstItem="j4W-3K-cIL" firstAttribute="leading" secondItem="Xxm-u3-QjH" secondAttribute="leading" constant="5" id="P2y-TP-HDs"/>
+                                                                <constraint firstItem="j4W-3K-cIL" firstAttribute="top" secondItem="Xxm-u3-QjH" secondAttribute="top" constant="5" id="Wfb-z0-RfF"/>
+                                                                <constraint firstItem="j4W-3K-cIL" firstAttribute="centerY" secondItem="Xxm-u3-QjH" secondAttribute="centerY" id="dZq-qu-kda"/>
+                                                            </constraints>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
                                             </tableView>
                                         </subviews>
                                     </stackView>
