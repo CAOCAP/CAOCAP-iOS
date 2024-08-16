@@ -9,11 +9,7 @@ import UIKit
 
 class AttributesToolKit: ToolKitVC {
     
-    /// Array of all available Tailwind CSS class names.
-    var tailwindClassNames = TailwindCSS.all
-    
     //MARK: Outlets
-    @IBOutlet weak var attributesStackView: UIStackView!
     @IBOutlet weak var contentTextField: UITextField!
     @IBOutlet var textDecorationButtons: [UIButton]!
     @IBOutlet weak var textAlignmentSegmentedControl: UISegmentedControl!
@@ -25,7 +21,6 @@ class AttributesToolKit: ToolKitVC {
     @IBOutlet weak var backgroundColorWell: UIColorWell!
     @IBOutlet weak var textColorWell: UIColorWell!
     @IBOutlet weak var hiddenSwitch: UISwitch!
-    @IBOutlet weak var tailwindCollectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -125,27 +120,6 @@ class AttributesToolKit: ToolKitVC {
     private func updateHiddenSwitch() {
         if let isHidden = project?.isSelectedElementHidden() {
             hiddenSwitch.isOn = isHidden
-        }
-    }
-    
-    
-    /// Changes the view displayed based on the selected segment in the AttributesView segmented control.
-    ///
-    /// - Parameter sender: The segmented control that triggered this action.
-    @IBAction func didChangeAttributesViewSegmentedControl(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
-        case 0:
-            attributesStackView.arrangedSubviews[1].isHidden = false
-            attributesStackView.arrangedSubviews[2].isHidden = true
-            attributesStackView.arrangedSubviews[3].isHidden = true
-        case 1:
-            attributesStackView.arrangedSubviews[1].isHidden = true
-            attributesStackView.arrangedSubviews[2].isHidden = false
-            attributesStackView.arrangedSubviews[3].isHidden = true
-        default:
-            attributesStackView.arrangedSubviews[1].isHidden = true
-            attributesStackView.arrangedSubviews[2].isHidden = true
-            attributesStackView.arrangedSubviews[3].isHidden = false
         }
     }
     
@@ -265,40 +239,7 @@ extension AttributesToolKit: UIColorPickerViewControllerDelegate {
     }
 }
 
-// MARK: - UICollectionViewDelegate
-extension AttributesToolKit: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
-    /// Returns the number of sections in the collection view.
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return tailwindClassNames.count
-    }
-    
-    /// Returns the number of items in a given section.
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return tailwindClassNames[section].array.count
-    }
-    
-    /// Configures and returns the cell for the given index path.
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tailwindCell", for: indexPath) as? TailwindCollectionViewCell else { return UICollectionViewCell() }
-        cell.configure(title: tailwindClassNames[indexPath.section].array[indexPath.row])
-        return cell
-    }
-    
-    /// Returns the size for the item at the specified index path.
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (collectionView.frame.width/2) - 20, height: 30)
-    }
-    
-    /// Handles the selection of an item in the collection view.
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let project = project else { return }
-        ReduxStore.dispatch(UpdateAction(handler: {
-            project.toggleSelectedElement(className: self.tailwindClassNames[indexPath.section].array[indexPath.row])
-        }))
-    }
-    
-}
+
 
 // MARK: - UITextFieldDelegate
 extension AttributesToolKit: UITextFieldDelegate {
@@ -329,23 +270,6 @@ extension AttributesToolKit: UITextFieldDelegate {
         ReduxStore.dispatch(UpdateAction(handler: {
             project.setSelectedElement(source: text)
         }))
-    }
-    
-    /// Filters the Tailwind classes based on the search query.
-    ///
-    /// - Parameter sender: The text field that triggered the event.
-    @IBAction func editingTailwindSearch(_ sender: UITextField) {
-        guard let searchQuery = sender.text else { return }
-        tailwindClassNames = TailwindCSS.all // TODO: refactor this ugly code 🫣
-        if !searchQuery.isEmpty {
-            var filteredClassNames = [String]()
-            for classNameSet in tailwindClassNames {
-                filteredClassNames += classNameSet.array.filter { $0.contains(searchQuery)}
-            }
-            tailwindClassNames = [(name: .none, array: filteredClassNames)]
-        }
-        
-        tailwindCollectionView.reloadData()
     }
     
 }

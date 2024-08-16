@@ -37,7 +37,7 @@
 		21534D9D2A59CD8600E8078B /* UIDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534D9C2A59CD8600E8078B /* UIDashboardView.swift */; };
 		21534D9F2A59E58100E8078B /* ProjectFilesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534D9E2A59E58100E8078B /* ProjectFilesVC.swift */; };
 		21534DA12A5A9B3B00E8078B /* TailwindCSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534DA02A5A9B3B00E8078B /* TailwindCSS.swift */; };
-		21534DA32A5A9ED000E8078B /* TailwindCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534DA22A5A9ED000E8078B /* TailwindCollectionViewCell.swift */; };
+		21534DA32A5A9ED000E8078B /* LibraryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21534DA22A5A9ED000E8078B /* LibraryCollectionViewCell.swift */; };
 		21534DA72A5B038D00E8078B /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21534DA52A5AFF8F00E8078B /* AdSupport.framework */; };
 		215DE72B2B527BC100546394 /* FullScreenWebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215DE72A2B527BC100546394 /* FullScreenWebViewVC.swift */; };
 		2175FBDF2A648C9100F7E97F /* party.json in Resources */ = {isa = PBXBuildFile; fileRef = 2175FBDD2A648C9100F7E97F /* party.json */; };
@@ -106,6 +106,7 @@
 		21E148132A7F639400B503C2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E148122A7F639400B503C2 /* User.swift */; };
 		21E148152A82031D00B503C2 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E148142A82031D00B503C2 /* Challenge.swift */; };
 		21FF62032AB263AB0003D064 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FF62022AB263AB0003D064 /* AppConstants.swift */; };
+		EC65ECC62C6F581400858FCF /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65ECC52C6F581400858FCF /* Typealias.swift */; };
 		EC7B11832C5223D40020ECE4 /* CodePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7B11822C5223D40020ECE4 /* CodePreviewVC.swift */; };
 		EC9B891A2C6C400A00FD516F /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9B89192C6C400A00FD516F /* HelperFunctions.swift */; };
 		EC9B891C2C6D79C400FD516F /* ComponentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9B891B2C6D79C400FD516F /* ComponentTableViewCell.swift */; };
@@ -183,7 +184,7 @@
 		21534D9C2A59CD8600E8078B /* UIDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDashboardView.swift; sourceTree = "<group>"; };
 		21534D9E2A59E58100E8078B /* ProjectFilesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFilesVC.swift; sourceTree = "<group>"; };
 		21534DA02A5A9B3B00E8078B /* TailwindCSS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TailwindCSS.swift; sourceTree = "<group>"; };
-		21534DA22A5A9ED000E8078B /* TailwindCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TailwindCollectionViewCell.swift; sourceTree = "<group>"; };
+		21534DA22A5A9ED000E8078B /* LibraryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCollectionViewCell.swift; sourceTree = "<group>"; };
 		21534DA52A5AFF8F00E8078B /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		215DE72A2B527BC100546394 /* FullScreenWebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenWebViewVC.swift; sourceTree = "<group>"; };
 		21640C492B38470000052966 /* Config-dev.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config-dev.xcconfig"; sourceTree = "<group>"; };
@@ -250,6 +251,7 @@
 		21E148122A7F639400B503C2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		21E148142A82031D00B503C2 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		21FF62022AB263AB0003D064 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		EC65ECC52C6F581400858FCF /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		EC7B11822C5223D40020ECE4 /* CodePreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePreviewVC.swift; sourceTree = "<group>"; };
 		EC7B11842C524EFF0020ECE4 /* Subscriptions.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Subscriptions.storekit; sourceTree = "<group>"; };
 		EC9B89192C6C400A00FD516F /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
@@ -586,6 +588,7 @@
 				21534DA02A5A9B3B00E8078B /* TailwindCSS.swift */,
 				EC9B891D2C6D7E6700FD516F /* DaisyUI.swift */,
 				21C21C532A36145200F40BE3 /* Enumerations.swift */,
+				EC65ECC52C6F581400858FCF /* Typealias.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -614,7 +617,7 @@
 		21E3A20B2B01176B0041A561 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				21534DA22A5A9ED000E8078B /* TailwindCollectionViewCell.swift */,
+				21534DA22A5A9ED000E8078B /* LibraryCollectionViewCell.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -1026,8 +1029,9 @@
 				21534D8F2A59B26F00E8078B /* NavigationVC.swift in Sources */,
 				214995242A5C3404008B9987 /* ReduxActions.swift in Sources */,
 				21534D942A59B38B00E8078B /* Coordinator.swift in Sources */,
+				EC65ECC62C6F581400858FCF /* Typealias.swift in Sources */,
 				21FF62032AB263AB0003D064 /* AppConstants.swift in Sources */,
-				21534DA32A5A9ED000E8078B /* TailwindCollectionViewCell.swift in Sources */,
+				21534DA32A5A9ED000E8078B /* LibraryCollectionViewCell.swift in Sources */,
 				21AF3CBA2A6B2159002E96E3 /* SendFeedbackVC.swift in Sources */,
 				ECCA94932C68E87D0076AA6B /* ValueToolKit.swift in Sources */,
 				210F19B02A42DC9800D71A66 /* UIMindMapStroke.swift in Sources */,

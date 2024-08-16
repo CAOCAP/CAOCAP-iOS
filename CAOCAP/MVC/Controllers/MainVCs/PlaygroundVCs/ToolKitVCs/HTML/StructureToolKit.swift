@@ -19,8 +19,6 @@ class StructureToolKit: ToolKitVC {
     
     var mindMap: UIMindMap!
     
-    //MARK: Outlets
-    @IBOutlet weak var structureStackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,20 +29,6 @@ class StructureToolKit: ToolKitVC {
         super.newState(state: state)
     }
     
-    
-    /// Changes the view displayed based on the selected segment in the StructureView segmented control.
-    ///
-    /// - Parameter sender: The segmented control that triggered this action.
-    @IBAction func didChangeStructureViewSegmentedControl(_ sender: UISegmentedControl) {
-        switch sender.selectedSegmentIndex {
-        case 0:
-            structureStackView.arrangedSubviews[1].isHidden = false
-            structureStackView.arrangedSubviews[2].isHidden = true
-        default:
-            structureStackView.arrangedSubviews[1].isHidden = true
-            structureStackView.arrangedSubviews[2].isHidden = false
-        }
-    }
     
     // MARK: - HTML Keyboard Button Actions
     /// Adds an HTML element to the current MindMap.
@@ -69,4 +53,23 @@ class StructureToolKit: ToolKitVC {
     }
     
     
+}
+
+extension StructureToolKit: UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Components"
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
 }

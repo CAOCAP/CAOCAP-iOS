@@ -239,8 +239,21 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRl-En-F0M">
+                                <rect key="frame" x="337.66666666666669" y="415" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GRl-En-F0M" secondAttribute="height" multiplier="1:1" id="NfR-kN-MWH"/>
+                                    <constraint firstAttribute="width" constant="40" id="zPd-yJ-D3I"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="chevron.compact.up" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="sparkles" catalog="system"/>
+                                <connections>
+                                    <segue destination="IXb-8m-kDA" kind="show" id="nBR-Ba-awC"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9Me-nt-eKL">
-                                <rect key="frame" x="15" y="465" width="360" height="60"/>
+                                <rect key="frame" x="10" y="465" width="370" height="60"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LwB-kw-BnD">
                                         <rect key="frame" x="0.0" y="0.0" width="115" height="60"/>
@@ -310,7 +323,7 @@
                                         </subviews>
                                     </stackView>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="amZ-ML-ctf">
-                                        <rect key="frame" x="123" y="0.0" width="184" height="61"/>
+                                        <rect key="frame" x="123" y="0.0" width="194" height="61"/>
                                         <segments>
                                             <segment title="JS"/>
                                             <segment title="HTML"/>
@@ -321,7 +334,7 @@
                                         </connections>
                                     </segmentedControl>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="swv-AQ-sZO">
-                                        <rect key="frame" x="315" y="0.0" width="45" height="60"/>
+                                        <rect key="frame" x="325" y="0.0" width="45" height="60"/>
                                         <subviews>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22A-CW-8eM">
                                                 <rect key="frame" x="0.0" y="0.0" width="45" height="27.666666666666668"/>
@@ -375,8 +388,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="9Me-nt-eKL" secondAttribute="trailing" constant="15" id="5v9-Ka-P9V"/>
+                            <constraint firstAttribute="trailing" secondItem="9Me-nt-eKL" secondAttribute="trailing" constant="10" id="5v9-Ka-P9V"/>
                             <constraint firstItem="pAm-8E-NFz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="8w1-qL-zwv"/>
+                            <constraint firstItem="9Me-nt-eKL" firstAttribute="top" secondItem="GRl-En-F0M" secondAttribute="bottom" constant="10" id="DDZ-ia-LcV"/>
                             <constraint firstItem="pAm-8E-NFz" firstAttribute="top" secondItem="llD-Vb-u92" secondAttribute="bottom" constant="10" id="GKK-SU-lJs"/>
                             <constraint firstItem="zkr-ys-dhB" firstAttribute="top" secondItem="9Me-nt-eKL" secondAttribute="bottom" constant="10" id="JmA-E7-zdq"/>
                             <constraint firstAttribute="trailing" secondItem="HCA-IB-AaJ" secondAttribute="trailing" constant="10" id="MH7-vv-10e"/>
@@ -386,6 +400,7 @@
                             <constraint firstItem="wqA-La-Huu" firstAttribute="top" secondItem="zkr-ys-dhB" secondAttribute="bottom" constant="5" id="aLd-2G-dN0"/>
                             <constraint firstItem="wqA-La-Huu" firstAttribute="centerX" secondItem="zkr-ys-dhB" secondAttribute="centerX" id="dUW-xe-iy5"/>
                             <constraint firstItem="HCA-IB-AaJ" firstAttribute="top" secondItem="llD-Vb-u92" secondAttribute="bottom" constant="10" id="ftl-YN-8R3"/>
+                            <constraint firstItem="GRl-En-F0M" firstAttribute="centerX" secondItem="swv-AQ-sZO" secondAttribute="centerX" id="mEP-bw-hzP"/>
                             <constraint firstItem="zkr-ys-dhB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rPW-xy-xDc"/>
                         </constraints>
                     </view>
@@ -3372,11 +3387,11 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                     <segment title="Elements"/>
                                                 </segments>
                                                 <connections>
-                                                    <action selector="didChangeStructureViewSegmentedControl:" destination="cQG-Tx-a6N" eventType="valueChanged" id="umc-ys-KJm"/>
+                                                    <action selector="didChangeToolKitSegmentedControl:" destination="cQG-Tx-a6N" eventType="valueChanged" id="Rh1-YT-QqA"/>
                                                 </connections>
                                             </segmentedControl>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WSa-Re-ago">
-                                                <rect key="frame" x="0.0" y="40" width="330" height="175"/>
+                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="WSa-Re-ago">
+                                                <rect key="frame" x="0.0" y="35" width="330" height="44"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cUA-Ub-YbS">
                                                         <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
@@ -3388,6 +3403,9 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="cQG-Tx-a6N" id="wQa-Xg-sAv"/>
+                                                                </connections>
                                                             </textField>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kxc-Lc-xJG">
                                                                 <rect key="frame" x="282.66666666666669" y="0.0" width="47.333333333333314" height="34"/>
@@ -3397,7 +3415,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                         </subviews>
                                                     </stackView>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="A7Q-xm-hFP">
-                                                        <rect key="frame" x="0.0" y="44" width="330" height="131"/>
+                                                        <rect key="frame" x="0.0" y="44" width="330" height="0.0"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <prototypes>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ComponentTableViewCell" rowHeight="50" id="F66-Cz-h6D" customClass="ComponentTableViewCell" customModule="CAOCAP" customModuleProvider="target">
@@ -3407,19 +3425,19 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                                     <rect key="frame" x="0.0" y="0.0" width="330" height="50"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YB7-7h-yuw">
+                                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YB7-7h-yuw">
                                                                             <rect key="frame" x="5" y="5" width="320" height="40"/>
                                                                             <subviews>
-                                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cJv-yu-cQw">
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cJv-yu-cQw">
                                                                                     <rect key="frame" x="5" y="5" width="310" height="30"/>
                                                                                     <subviews>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cg-1w-iDm">
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cg-1w-iDm">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="210" height="30"/>
                                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                             <nil key="textColor"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
-                                                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gi-vV-VEG">
+                                                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Gi-vV-VEG">
                                                                                             <rect key="frame" x="215" y="0.0" width="45" height="30"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="width" constant="45" id="IIx-77-QrX"/>
@@ -3430,7 +3448,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                                                                 <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
                                                                                             </buttonConfiguration>
                                                                                         </button>
-                                                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEa-fu-diE">
+                                                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEa-fu-diE">
                                                                                             <rect key="frame" x="265" y="0.0" width="45" height="30"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="width" constant="45" id="toy-97-FVA"/>
@@ -3467,11 +3485,15 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                                 </tableViewCellContentView>
                                                             </tableViewCell>
                                                         </prototypes>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="cQG-Tx-a6N" id="MfY-9T-RCN"/>
+                                                            <outlet property="delegate" destination="cQG-Tx-a6N" id="TeA-wa-7BH"/>
+                                                        </connections>
                                                     </tableView>
                                                 </subviews>
                                             </stackView>
-                                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcj-Q7-Yh5">
-                                                <rect key="frame" x="0.0" y="215" width="330" height="0.0"/>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcj-Q7-Yh5">
+                                                <rect key="frame" x="0.0" y="40" width="330" height="175"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="LrX-Cx-pco">
                                                         <rect key="frame" x="0.0" y="0.0" width="330" height="326"/>
@@ -3833,7 +3855,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                     </view>
                     <size key="freeformSize" width="360" height="255"/>
                     <connections>
-                        <outlet property="structureStackView" destination="2Ka-bk-Eqj" id="N1P-i4-wWG"/>
+                        <outlet property="toolKitStackView" destination="2Ka-bk-Eqj" id="Rie-ea-Ytq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RSO-Bl-eE3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3892,7 +3914,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                     <segment title="" image="number" catalog="system"/>
                                                 </segments>
                                                 <connections>
-                                                    <action selector="didChangeStructureViewSegmentedControl:" destination="cQG-Tx-a6N" eventType="valueChanged" id="6FO-Gt-GBK"/>
+                                                    <action selector="didChangeToolKitSegmentedControl:" destination="aSz-ou-Oxi" eventType="valueChanged" id="9aB-vN-ul0"/>
                                                 </connections>
                                             </segmentedControl>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FLx-u1-Kcj">
@@ -3906,8 +3928,8 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
-                                                            <action selector="editingTailwindSearch:" destination="egu-Ix-0st" eventType="editingDidEnd" id="axm-Jh-uML"/>
-                                                            <outlet property="delegate" destination="egu-Ix-0st" id="b2i-0R-mMt"/>
+                                                            <action selector="didEndEditingUILibrarySearch:" destination="aSz-ou-Oxi" eventType="editingDidEnd" id="LBW-OQ-Nww"/>
+                                                            <outlet property="delegate" destination="aSz-ou-Oxi" id="NuD-pC-WyV"/>
                                                         </connections>
                                                     </textField>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x4N-Hh-pWh">
@@ -3920,7 +3942,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="10"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tailwindCell" id="7zs-Ej-BSE" customClass="TailwindCollectionViewCell" customModule="CAOCAP" customModuleProvider="target">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LibraryCollectionViewCell" id="7zs-Ej-BSE" customClass="LibraryCollectionViewCell" customModule="CAOCAP" customModuleProvider="target">
                                                                 <rect key="frame" x="10" y="0.0" width="107" height="35"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="CVC-Cu-reB">
@@ -3963,8 +3985,8 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                             </collectionViewCell>
                                                         </cells>
                                                         <connections>
-                                                            <outlet property="dataSource" destination="egu-Ix-0st" id="HWd-qF-QKE"/>
-                                                            <outlet property="delegate" destination="egu-Ix-0st" id="IWB-VG-VLk"/>
+                                                            <outlet property="dataSource" destination="aSz-ou-Oxi" id="lgR-Hm-8P2"/>
+                                                            <outlet property="delegate" destination="aSz-ou-Oxi" id="VvZ-y4-8iR"/>
                                                         </connections>
                                                     </collectionView>
                                                 </subviews>
@@ -3982,6 +4004,10 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="didEndEditingClassNameSearch:" destination="aSz-ou-Oxi" eventType="editingDidEnd" id="IG7-n8-cs5"/>
+                                                                    <outlet property="delegate" destination="aSz-ou-Oxi" id="RCJ-XU-tMd"/>
+                                                                </connections>
                                                             </textField>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPl-1W-Ua5">
                                                                 <rect key="frame" x="283" y="0.0" width="47" height="34"/>
@@ -4050,6 +4076,10 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                                 </tableViewCellContentView>
                                                             </tableViewCell>
                                                         </prototypes>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="aSz-ou-Oxi" id="LFp-i3-Jqx"/>
+                                                            <outlet property="delegate" destination="aSz-ou-Oxi" id="N9y-rb-Ps6"/>
+                                                        </connections>
                                                     </tableView>
                                                 </subviews>
                                             </stackView>
@@ -4066,6 +4096,10 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="didEndEditingIdSearch:" destination="aSz-ou-Oxi" eventType="editingDidEnd" id="3Xt-lL-Cga"/>
+                                                                    <outlet property="delegate" destination="aSz-ou-Oxi" id="fDN-dc-86d"/>
+                                                                </connections>
                                                             </textField>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5LO-6i-bRd">
                                                                 <rect key="frame" x="283" y="0.0" width="47" height="34"/>
@@ -4134,6 +4168,10 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                                 </tableViewCellContentView>
                                                             </tableViewCell>
                                                         </prototypes>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="aSz-ou-Oxi" id="Imf-WM-tUE"/>
+                                                            <outlet property="delegate" destination="aSz-ou-Oxi" id="t7B-cX-EA8"/>
+                                                        </connections>
                                                     </tableView>
                                                 </subviews>
                                             </stackView>
@@ -4174,6 +4212,10 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         </subviews>
                     </view>
                     <size key="freeformSize" width="360" height="255"/>
+                    <connections>
+                        <outlet property="toolKitStackView" destination="4AU-IJ-Rbu" id="7lS-3M-2yB"/>
+                        <outlet property="uiLibraryCollectionView" destination="x4N-Hh-pWh" id="MXw-go-Yr1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6wp-nC-hrZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4231,7 +4273,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                     <segment title="" image="paintbrush" catalog="system"/>
                                                 </segments>
                                                 <connections>
-                                                    <action selector="didChangeAttributesViewSegmentedControl:" destination="egu-Ix-0st" eventType="valueChanged" id="BQi-BH-wJN"/>
+                                                    <action selector="didChangeToolKitSegmentedControl:" destination="egu-Ix-0st" eventType="valueChanged" id="uOr-u7-iPR"/>
                                                 </connections>
                                             </segmentedControl>
                                             <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="am6-N7-L9D">
@@ -4281,7 +4323,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
                                                                     <action selector="didEndEditingElementSource:" destination="egu-Ix-0st" eventType="editingDidEnd" id="TaA-0B-71v"/>
-                                                                    <outlet property="delegate" destination="egu-Ix-0st" id="UGt-IK-hcE"/>
+                                                                    <outlet property="delegate" destination="egu-Ix-0st" id="hqF-yw-7kk"/>
                                                                 </connections>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dMf-FZ-Mdf">
@@ -4291,6 +4333,9 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                                 <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="egu-Ix-0st" id="Ynu-xB-1i7"/>
+                                                                </connections>
                                                             </textField>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Br2-5m-8fR">
                                                                 <rect key="frame" x="0.0" y="153.66666666666666" width="330" height="100"/>
@@ -4326,7 +4371,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
                                                                     <action selector="didEndEditingTextContent:" destination="egu-Ix-0st" eventType="editingDidEnd" id="rVe-eU-NrA"/>
-                                                                    <outlet property="delegate" destination="egu-Ix-0st" id="I5m-al-yzM"/>
+                                                                    <outlet property="delegate" destination="egu-Ix-0st" id="QXj-v3-EfZ"/>
                                                                 </connections>
                                                             </textField>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DKx-Dj-bak">
@@ -4574,7 +4619,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                     </view>
                     <size key="freeformSize" width="360" height="255"/>
                     <connections>
-                        <outlet property="attributesStackView" destination="gvp-qI-ygt" id="UCd-Jb-u0N"/>
+                        <outlet property="backgroundColorWell" destination="la9-OH-utI" id="P8m-Il-Cfj"/>
                         <outlet property="contentTextField" destination="iIJ-zi-gUO" id="6dW-rC-dHo"/>
                         <outlet property="hiddenSwitch" destination="Asa-cc-MHL" id="lb4-Ag-mjs"/>
                         <outlet property="idTextField" destination="dMf-FZ-Mdf" id="9vu-Yi-bgh"/>
@@ -4582,6 +4627,8 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         <outlet property="semanticButton" destination="2sE-i2-jPh" id="zag-hQ-U1f"/>
                         <outlet property="sourceTextField" destination="W6B-cu-eGY" id="3rn-z8-dLV"/>
                         <outlet property="textAlignmentSegmentedControl" destination="9Lb-Ma-48Z" id="QSe-Eb-epc"/>
+                        <outlet property="textColorWell" destination="T2V-vG-siH" id="HTL-49-XvL"/>
+                        <outlet property="toolKitStackView" destination="gvp-qI-ygt" id="p5L-4p-lp0"/>
                         <outlet property="typeButton" destination="SsE-DK-7jc" id="apk-XM-Ww7"/>
                         <outletCollection property="textDecorationButtons" destination="zMG-53-qak" collectionClass="NSMutableArray" id="2jX-WV-SR9"/>
                         <outletCollection property="textDecorationButtons" destination="goG-YX-1c6" collectionClass="NSMutableArray" id="ey2-K6-OyK"/>
@@ -4734,8 +4781,19 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                     <segment title="" image="slider.horizontal.3" catalog="system"/>
                                                     <segment title="" image="paintbrush.pointed" catalog="system"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="didChangeToolKitSegmentedControl:" destination="WBx-of-SSM" eventType="valueChanged" id="Y9D-sA-GcS"/>
+                                                </connections>
                                             </segmentedControl>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01r-gR-mLf">
+                                            <button hidden="YES" opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01r-gR-mLf">
+                                                <rect key="frame" x="0.0" y="35" width="330" height="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Style">
+                                                    <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                    <color key="baseForegroundColor" systemColor="systemIndigoColor"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRH-Og-Vcz">
                                                 <rect key="frame" x="0.0" y="40" width="330" height="174"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="gray" title="Style">
@@ -4780,10 +4838,32 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         </subviews>
                     </view>
                     <size key="freeformSize" width="360" height="254"/>
+                    <connections>
+                        <outlet property="toolKitStackView" destination="drx-mk-2j6" id="6Gl-eT-g7E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FoU-zl-CsT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2386.1538461538462" y="222.86729857819904"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VXg-OF-XIf">
+            <objects>
+                <viewController id="IXb-8m-kDA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pjc-hV-Zoh"/>
+                        <viewControllerLayoutGuide type="bottom" id="LHD-dI-UR9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dVg-kZ-mbU">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yVj-OD-gjf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qsQ-8D-Opj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2971" y="1006"/>
         </scene>
         <!--Selectors Tool Kit-->
         <scene sceneID="rq5-1K-gm2">
@@ -4833,39 +4913,284 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                 </constraints>
                                                 <segments>
                                                     <segment title="Class"/>
-                                                    <segment title="Element"/>
+                                                    <segment title="Tag"/>
                                                     <segment title="ID"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="didChangeToolKitSegmentedControl:" destination="w6R-NL-K99" eventType="valueChanged" id="WhT-aj-3bA"/>
+                                                </connections>
                                             </segmentedControl>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="3DA-6c-wFh">
-                                                <rect key="frame" x="0.0" y="40" width="330" height="34"/>
+                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kjK-9h-bJv">
+                                                <rect key="frame" x="0.0" y="35" width="330" height="44"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VlA-QD-NoU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="277.66666666666669" height="34"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="34" id="3zY-qf-UFn"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyC-C6-XEh">
-                                                        <rect key="frame" x="282.66666666666669" y="0.0" width="47.333333333333314" height="34"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" image="doc.fill.badge.plus" catalog="system"/>
-                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="aFh-r5-O3b">
+                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Class" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sAA-FT-2Pg">
+                                                                <rect key="frame" x="0.0" y="0.0" width="278" height="34"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="34" id="UEe-dd-CEx"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="w6R-NL-K99" id="dii-uE-xv6"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ftu-pK-z1f">
+                                                                <rect key="frame" x="283" y="0.0" width="47" height="34"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="gray" image="plus" catalog="system"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gkf-dP-VjL">
+                                                        <rect key="frame" x="0.0" y="44" width="330" height="0.0"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <prototypes>
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="kPJ-WK-LRv" customClass="ComponentTableViewCell" customModule="CAOCAP" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="50" width="330" height="50"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kPJ-WK-LRv" id="XtK-vo-xqz">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="50"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IGQ-qF-ZI1">
+                                                                            <rect key="frame" x="5" y="5" width="320" height="40"/>
+                                                                            <subviews>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HwC-qw-HLQ">
+                                                                                    <rect key="frame" x="5" y="5" width="310" height="30"/>
+                                                                                    <subviews>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ps8-C5-btb">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
+                                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                            <nil key="textColor"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                        </label>
+                                                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coe-ZV-i92">
+                                                                                            <rect key="frame" x="265" y="0.0" width="45" height="30"/>
+                                                                                            <constraints>
+                                                                                                <constraint firstAttribute="width" constant="45" id="Cs4-MN-r4l"/>
+                                                                                            </constraints>
+                                                                                            <state key="normal" title="Button"/>
+                                                                                            <buttonConfiguration key="configuration" style="tinted" image="trash.circle.fill" catalog="system">
+                                                                                                <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                                                                                <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                                                                            </buttonConfiguration>
+                                                                                        </button>
+                                                                                    </subviews>
+                                                                                </stackView>
+                                                                            </subviews>
+                                                                            <color key="backgroundColor" systemColor="separatorColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstItem="HwC-qw-HLQ" firstAttribute="centerY" secondItem="IGQ-qF-ZI1" secondAttribute="centerY" id="FxL-l8-SEC"/>
+                                                                                <constraint firstItem="HwC-qw-HLQ" firstAttribute="leading" secondItem="IGQ-qF-ZI1" secondAttribute="leading" constant="5" id="ICX-x0-6V9"/>
+                                                                                <constraint firstItem="HwC-qw-HLQ" firstAttribute="centerX" secondItem="IGQ-qF-ZI1" secondAttribute="centerX" id="XHf-bF-ua5"/>
+                                                                                <constraint firstItem="HwC-qw-HLQ" firstAttribute="top" secondItem="IGQ-qF-ZI1" secondAttribute="top" constant="5" id="mgF-7Q-adc"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="10"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="IGQ-qF-ZI1" firstAttribute="centerX" secondItem="XtK-vo-xqz" secondAttribute="centerX" id="0jk-jd-qLH"/>
+                                                                        <constraint firstItem="IGQ-qF-ZI1" firstAttribute="leading" secondItem="XtK-vo-xqz" secondAttribute="leading" constant="5" id="6hm-7n-Z4q"/>
+                                                                        <constraint firstItem="IGQ-qF-ZI1" firstAttribute="centerY" secondItem="XtK-vo-xqz" secondAttribute="centerY" id="9ib-Em-t9E"/>
+                                                                        <constraint firstItem="IGQ-qF-ZI1" firstAttribute="top" secondItem="XtK-vo-xqz" secondAttribute="top" constant="5" id="xWK-BF-aHE"/>
+                                                                    </constraints>
+                                                                </tableViewCellContentView>
+                                                            </tableViewCell>
+                                                        </prototypes>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="w6R-NL-K99" id="lTW-KX-AEU"/>
+                                                            <outlet property="delegate" destination="w6R-NL-K99" id="kRK-Fg-dPK"/>
+                                                        </connections>
+                                                    </tableView>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3bx-Nq-apt">
-                                                <rect key="frame" x="0.0" y="84" width="330" height="131"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="R6r-Cl-bHq">
+                                                <rect key="frame" x="0.0" y="40" width="330" height="175"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAG-Mu-Xax">
-                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="131"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Selectors">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                            <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
-                                                        </buttonConfiguration>
-                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zeD-AQ-Ngm">
+                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tag" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pQ6-Bo-ONU">
+                                                                <rect key="frame" x="0.0" y="0.0" width="278" height="34"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="34" id="HIW-1P-LrS"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="w6R-NL-K99" id="eng-sx-tN7"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9D9-km-hJ3">
+                                                                <rect key="frame" x="283" y="0.0" width="47" height="34"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="gray" image="plus" catalog="system"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kra-nn-MGb">
+                                                        <rect key="frame" x="0.0" y="44" width="330" height="131"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <prototypes>
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="aV5-89-ffL" customClass="ComponentTableViewCell" customModule="CAOCAP" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="50" width="330" height="50"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aV5-89-ffL" id="7bI-m2-XZB">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="50"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3C2-k2-ayb">
+                                                                            <rect key="frame" x="5" y="5" width="320" height="40"/>
+                                                                            <subviews>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DQA-PL-LXe">
+                                                                                    <rect key="frame" x="5" y="5" width="310" height="30"/>
+                                                                                    <subviews>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAJ-AI-v2W">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
+                                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                            <nil key="textColor"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                        </label>
+                                                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gax-Zp-em0">
+                                                                                            <rect key="frame" x="265" y="0.0" width="45" height="30"/>
+                                                                                            <constraints>
+                                                                                                <constraint firstAttribute="width" constant="45" id="Lci-tA-kkb"/>
+                                                                                            </constraints>
+                                                                                            <state key="normal" title="Button"/>
+                                                                                            <buttonConfiguration key="configuration" style="tinted" image="trash.circle.fill" catalog="system">
+                                                                                                <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                                                                                <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                                                                            </buttonConfiguration>
+                                                                                        </button>
+                                                                                    </subviews>
+                                                                                </stackView>
+                                                                            </subviews>
+                                                                            <color key="backgroundColor" systemColor="separatorColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstItem="DQA-PL-LXe" firstAttribute="centerX" secondItem="3C2-k2-ayb" secondAttribute="centerX" id="KOR-UQ-vur"/>
+                                                                                <constraint firstItem="DQA-PL-LXe" firstAttribute="top" secondItem="3C2-k2-ayb" secondAttribute="top" constant="5" id="b1i-t2-RZk"/>
+                                                                                <constraint firstItem="DQA-PL-LXe" firstAttribute="centerY" secondItem="3C2-k2-ayb" secondAttribute="centerY" id="nzT-jW-5sR"/>
+                                                                                <constraint firstItem="DQA-PL-LXe" firstAttribute="leading" secondItem="3C2-k2-ayb" secondAttribute="leading" constant="5" id="sIo-Ll-SaZ"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="10"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="3C2-k2-ayb" firstAttribute="centerY" secondItem="7bI-m2-XZB" secondAttribute="centerY" id="4xu-mh-4S5"/>
+                                                                        <constraint firstItem="3C2-k2-ayb" firstAttribute="top" secondItem="7bI-m2-XZB" secondAttribute="top" constant="5" id="Aii-lg-GJP"/>
+                                                                        <constraint firstItem="3C2-k2-ayb" firstAttribute="centerX" secondItem="7bI-m2-XZB" secondAttribute="centerX" id="cJk-93-xyD"/>
+                                                                        <constraint firstItem="3C2-k2-ayb" firstAttribute="leading" secondItem="7bI-m2-XZB" secondAttribute="leading" constant="5" id="lOy-qv-qhg"/>
+                                                                    </constraints>
+                                                                </tableViewCellContentView>
+                                                            </tableViewCell>
+                                                        </prototypes>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="w6R-NL-K99" id="rl0-iS-1yG"/>
+                                                            <outlet property="delegate" destination="w6R-NL-K99" id="S2h-J3-Frt"/>
+                                                        </connections>
+                                                    </tableView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ani-tc-Hx1">
+                                                <rect key="frame" x="0.0" y="215" width="330" height="44"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Mzx-hw-Tb1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="er9-NA-min">
+                                                                <rect key="frame" x="0.0" y="0.0" width="278" height="34"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="34" id="XM2-mL-x1G"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="w6R-NL-K99" id="9Fw-M2-5H7"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgT-cS-cg7">
+                                                                <rect key="frame" x="283" y="0.0" width="47" height="34"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="gray" image="plus" catalog="system"/>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1m2-Kc-YmS">
+                                                        <rect key="frame" x="0.0" y="44" width="330" height="0.0"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <prototypes>
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="Bv2-x1-URV" customClass="ComponentTableViewCell" customModule="CAOCAP" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="50" width="330" height="50"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bv2-x1-URV" id="Kw3-zl-XgD">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="50"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dce-ea-yxV">
+                                                                            <rect key="frame" x="5" y="5" width="320" height="40"/>
+                                                                            <subviews>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Eu4-nv-fv5">
+                                                                                    <rect key="frame" x="5" y="5" width="310" height="30"/>
+                                                                                    <subviews>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcQ-yy-meI">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
+                                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                            <nil key="textColor"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                        </label>
+                                                                                        <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIR-co-r2Q">
+                                                                                            <rect key="frame" x="265" y="0.0" width="45" height="30"/>
+                                                                                            <constraints>
+                                                                                                <constraint firstAttribute="width" constant="45" id="04S-IE-6cc"/>
+                                                                                            </constraints>
+                                                                                            <state key="normal" title="Button"/>
+                                                                                            <buttonConfiguration key="configuration" style="tinted" image="trash.circle.fill" catalog="system">
+                                                                                                <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                                                                                <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                                                                            </buttonConfiguration>
+                                                                                        </button>
+                                                                                    </subviews>
+                                                                                </stackView>
+                                                                            </subviews>
+                                                                            <color key="backgroundColor" systemColor="separatorColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstItem="Eu4-nv-fv5" firstAttribute="centerY" secondItem="Dce-ea-yxV" secondAttribute="centerY" id="coM-CA-XHJ"/>
+                                                                                <constraint firstItem="Eu4-nv-fv5" firstAttribute="leading" secondItem="Dce-ea-yxV" secondAttribute="leading" constant="5" id="kgT-4G-Myn"/>
+                                                                                <constraint firstItem="Eu4-nv-fv5" firstAttribute="top" secondItem="Dce-ea-yxV" secondAttribute="top" constant="5" id="l6J-DW-9KW"/>
+                                                                                <constraint firstItem="Eu4-nv-fv5" firstAttribute="centerX" secondItem="Dce-ea-yxV" secondAttribute="centerX" id="zAb-NI-i40"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="10"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="Dce-ea-yxV" firstAttribute="centerY" secondItem="Kw3-zl-XgD" secondAttribute="centerY" id="89x-H9-aIT"/>
+                                                                        <constraint firstItem="Dce-ea-yxV" firstAttribute="leading" secondItem="Kw3-zl-XgD" secondAttribute="leading" constant="5" id="8Jd-tN-ALa"/>
+                                                                        <constraint firstItem="Dce-ea-yxV" firstAttribute="centerX" secondItem="Kw3-zl-XgD" secondAttribute="centerX" id="ewi-pv-KFd"/>
+                                                                        <constraint firstItem="Dce-ea-yxV" firstAttribute="top" secondItem="Kw3-zl-XgD" secondAttribute="top" constant="5" id="zXj-aY-YMz"/>
+                                                                    </constraints>
+                                                                </tableViewCellContentView>
+                                                            </tableViewCell>
+                                                        </prototypes>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="w6R-NL-K99" id="hpD-HE-zaz"/>
+                                                            <outlet property="delegate" destination="w6R-NL-K99" id="qR0-BR-Hk6"/>
+                                                        </connections>
+                                                    </tableView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -4905,6 +5230,9 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         </subviews>
                     </view>
                     <size key="freeformSize" width="360" height="255"/>
+                    <connections>
+                        <outlet property="toolKitStackView" destination="6B0-Ug-mh8" id="dZA-XC-nI2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNx-FT-FhC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4961,42 +5289,218 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                     <segment title="Actions"/>
                                                     <segment title="Values"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="didChangeToolKitSegmentedControl:" destination="CWC-gh-X8V" eventType="valueChanged" id="Mao-ca-7ka"/>
+                                                </connections>
                                             </segmentedControl>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r7s-Px-RpC">
-                                                <rect key="frame" x="0.0" y="40" width="330" height="34"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="34" id="eoI-ta-KU3"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="v11-iO-yMc">
-                                                <rect key="frame" x="0.0" y="84" width="330" height="131"/>
+                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jHG-gU-Zvu">
+                                                <rect key="frame" x="0.0" y="35" width="330" height="44"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzq-uA-yvm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="103.33333333333333" height="131"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Condition">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                            <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
-                                                        </buttonConfiguration>
-                                                    </button>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5A-OW-YHf">
-                                                        <rect key="frame" x="113.33333333333334" y="0.0" width="103.33333333333334" height="131"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Action">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                            <color key="baseForegroundColor" systemColor="systemBlueColor"/>
-                                                        </buttonConfiguration>
-                                                    </button>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFA-Cp-tVV">
-                                                        <rect key="frame" x="226.66666666666666" y="0.0" width="103.33333333333334" height="131"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray" title="Values">
-                                                            <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
-                                                            <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
-                                                        </buttonConfiguration>
-                                                    </button>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for Condition" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ozu-k9-3gl">
+                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="34" id="oRN-4R-cTX"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="CWC-gh-X8V" id="jOg-I0-kvD"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Q6X-Ja-s0u">
+                                                        <rect key="frame" x="0.0" y="44" width="330" height="0.0"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <prototypes>
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="Ul9-Al-n5L" customClass="ComponentTableViewCell" customModule="CAOCAP" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="50" width="330" height="50"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ul9-Al-n5L" id="JKC-9Y-Xlz">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="50"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EIQ-WP-myn">
+                                                                            <rect key="frame" x="5" y="5" width="320" height="40"/>
+                                                                            <subviews>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="S44-q5-1de">
+                                                                                    <rect key="frame" x="5" y="5" width="310" height="30"/>
+                                                                                    <subviews>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSR-Up-lnM">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="310" height="30"/>
+                                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                            <nil key="textColor"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                        </label>
+                                                                                    </subviews>
+                                                                                </stackView>
+                                                                            </subviews>
+                                                                            <color key="backgroundColor" systemColor="separatorColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstItem="S44-q5-1de" firstAttribute="leading" secondItem="EIQ-WP-myn" secondAttribute="leading" constant="5" id="8Kd-qJ-e3X"/>
+                                                                                <constraint firstItem="S44-q5-1de" firstAttribute="top" secondItem="EIQ-WP-myn" secondAttribute="top" constant="5" id="DKR-aP-gOb"/>
+                                                                                <constraint firstItem="S44-q5-1de" firstAttribute="centerX" secondItem="EIQ-WP-myn" secondAttribute="centerX" id="Hse-uo-XFF"/>
+                                                                                <constraint firstItem="S44-q5-1de" firstAttribute="centerY" secondItem="EIQ-WP-myn" secondAttribute="centerY" id="UEQ-t3-NJa"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="10"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="EIQ-WP-myn" firstAttribute="top" secondItem="JKC-9Y-Xlz" secondAttribute="top" constant="5" id="1fg-7e-izs"/>
+                                                                        <constraint firstItem="EIQ-WP-myn" firstAttribute="leading" secondItem="JKC-9Y-Xlz" secondAttribute="leading" constant="5" id="KXQ-Tv-dpc"/>
+                                                                        <constraint firstItem="EIQ-WP-myn" firstAttribute="centerY" secondItem="JKC-9Y-Xlz" secondAttribute="centerY" id="Vrt-eE-l4t"/>
+                                                                        <constraint firstItem="EIQ-WP-myn" firstAttribute="centerX" secondItem="JKC-9Y-Xlz" secondAttribute="centerX" id="yGM-ec-3sC"/>
+                                                                    </constraints>
+                                                                </tableViewCellContentView>
+                                                            </tableViewCell>
+                                                        </prototypes>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="CWC-gh-X8V" id="sgW-RM-Tey"/>
+                                                            <outlet property="delegate" destination="CWC-gh-X8V" id="LBA-IN-1wJ"/>
+                                                        </connections>
+                                                    </tableView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GeN-eW-5jk">
+                                                <rect key="frame" x="0.0" y="40" width="330" height="175"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for Action" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AsI-Go-daL">
+                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="34" id="YfU-95-ecf"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="CWC-gh-X8V" id="ZhE-vX-1QY"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KfM-xi-Zs1">
+                                                        <rect key="frame" x="0.0" y="44" width="330" height="131"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <prototypes>
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="Qil-ms-aIa" customClass="ComponentTableViewCell" customModule="CAOCAP" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="50" width="330" height="50"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qil-ms-aIa" id="udV-zh-53e">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="50"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oig-Rb-wjd">
+                                                                            <rect key="frame" x="5" y="5" width="320" height="40"/>
+                                                                            <subviews>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="zQg-JJ-1eT">
+                                                                                    <rect key="frame" x="5" y="5" width="310" height="30"/>
+                                                                                    <subviews>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCa-JG-2FA">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="310" height="30"/>
+                                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                            <nil key="textColor"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                        </label>
+                                                                                    </subviews>
+                                                                                </stackView>
+                                                                            </subviews>
+                                                                            <color key="backgroundColor" systemColor="separatorColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstItem="zQg-JJ-1eT" firstAttribute="top" secondItem="Oig-Rb-wjd" secondAttribute="top" constant="5" id="4PR-fQ-UQU"/>
+                                                                                <constraint firstItem="zQg-JJ-1eT" firstAttribute="centerY" secondItem="Oig-Rb-wjd" secondAttribute="centerY" id="Lvb-Tg-ar0"/>
+                                                                                <constraint firstItem="zQg-JJ-1eT" firstAttribute="leading" secondItem="Oig-Rb-wjd" secondAttribute="leading" constant="5" id="VAU-R7-im6"/>
+                                                                                <constraint firstItem="zQg-JJ-1eT" firstAttribute="centerX" secondItem="Oig-Rb-wjd" secondAttribute="centerX" id="szn-sR-EpY"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="10"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="Oig-Rb-wjd" firstAttribute="centerY" secondItem="udV-zh-53e" secondAttribute="centerY" id="8yB-JU-b4Z"/>
+                                                                        <constraint firstItem="Oig-Rb-wjd" firstAttribute="leading" secondItem="udV-zh-53e" secondAttribute="leading" constant="5" id="C94-sR-hqx"/>
+                                                                        <constraint firstItem="Oig-Rb-wjd" firstAttribute="top" secondItem="udV-zh-53e" secondAttribute="top" constant="5" id="MVk-6R-BQw"/>
+                                                                        <constraint firstItem="Oig-Rb-wjd" firstAttribute="centerX" secondItem="udV-zh-53e" secondAttribute="centerX" id="mQI-qR-TCu"/>
+                                                                    </constraints>
+                                                                </tableViewCellContentView>
+                                                            </tableViewCell>
+                                                        </prototypes>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="CWC-gh-X8V" id="LBZ-Fr-jB2"/>
+                                                            <outlet property="delegate" destination="CWC-gh-X8V" id="EYb-Ye-ahW"/>
+                                                        </connections>
+                                                    </tableView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IOa-t1-ay7">
+                                                <rect key="frame" x="0.0" y="215" width="330" height="44"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for Value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HjL-Y8-JET">
+                                                        <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="34" id="TvU-vj-lTh"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="CWC-gh-X8V" id="R6d-ko-8e4"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fQK-VO-aI7">
+                                                        <rect key="frame" x="0.0" y="44" width="330" height="0.0"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <prototypes>
+                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="55J-CN-zC7" customClass="ComponentTableViewCell" customModule="CAOCAP" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="50" width="330" height="50"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="55J-CN-zC7" id="uZF-XD-6U5">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="330" height="50"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <subviews>
+                                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHV-ef-43M">
+                                                                            <rect key="frame" x="5" y="5" width="320" height="40"/>
+                                                                            <subviews>
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="NAB-4P-3dW">
+                                                                                    <rect key="frame" x="5" y="5" width="310" height="30"/>
+                                                                                    <subviews>
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ns0-Vz-LkU">
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="310" height="30"/>
+                                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                            <nil key="textColor"/>
+                                                                                            <nil key="highlightedColor"/>
+                                                                                        </label>
+                                                                                    </subviews>
+                                                                                </stackView>
+                                                                            </subviews>
+                                                                            <color key="backgroundColor" systemColor="separatorColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstItem="NAB-4P-3dW" firstAttribute="centerX" secondItem="gHV-ef-43M" secondAttribute="centerX" id="DYw-JL-s8X"/>
+                                                                                <constraint firstItem="NAB-4P-3dW" firstAttribute="leading" secondItem="gHV-ef-43M" secondAttribute="leading" constant="5" id="KtK-F8-Y9f"/>
+                                                                                <constraint firstItem="NAB-4P-3dW" firstAttribute="centerY" secondItem="gHV-ef-43M" secondAttribute="centerY" id="eR4-71-NW8"/>
+                                                                                <constraint firstItem="NAB-4P-3dW" firstAttribute="top" secondItem="gHV-ef-43M" secondAttribute="top" constant="5" id="gt0-Am-kfX"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                    <real key="value" value="10"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                    </subviews>
+                                                                    <constraints>
+                                                                        <constraint firstItem="gHV-ef-43M" firstAttribute="centerX" secondItem="uZF-XD-6U5" secondAttribute="centerX" id="Ta2-Vy-jz6"/>
+                                                                        <constraint firstItem="gHV-ef-43M" firstAttribute="top" secondItem="uZF-XD-6U5" secondAttribute="top" constant="5" id="hG9-pV-RYd"/>
+                                                                        <constraint firstItem="gHV-ef-43M" firstAttribute="leading" secondItem="uZF-XD-6U5" secondAttribute="leading" constant="5" id="opN-X5-WnO"/>
+                                                                        <constraint firstItem="gHV-ef-43M" firstAttribute="centerY" secondItem="uZF-XD-6U5" secondAttribute="centerY" id="rhB-hT-pD2"/>
+                                                                    </constraints>
+                                                                </tableViewCellContentView>
+                                                            </tableViewCell>
+                                                        </prototypes>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="CWC-gh-X8V" id="Jwr-9d-0Ik"/>
+                                                            <outlet property="delegate" destination="CWC-gh-X8V" id="uhd-q6-E5d"/>
+                                                        </connections>
+                                                    </tableView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
@@ -5036,6 +5540,9 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         </subviews>
                     </view>
                     <size key="freeformSize" width="360" height="255"/>
+                    <connections>
+                        <outlet property="toolKitStackView" destination="GJ0-3k-iMJ" id="Qhs-kh-lEw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FdW-Jb-QZM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5089,6 +5596,9 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="Xyv-Po-gxl" id="vcN-ds-x0A"/>
+                                                </connections>
                                             </textField>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbA-jv-Q9D">
                                                 <rect key="frame" x="0.0" y="44" width="330" height="171"/>
@@ -5190,7 +5700,18 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                     <segment title="" image="slider.horizontal.3" catalog="system"/>
                                                     <segment title="" image="paintbrush.pointed" catalog="system"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="didChangeToolKitSegmentedControl:" destination="8y6-VJ-BN1" eventType="valueChanged" id="q2D-jb-Ksp"/>
+                                                </connections>
                                             </segmentedControl>
+                                            <button hidden="YES" opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmj-vL-SRQ">
+                                                <rect key="frame" x="0.0" y="35" width="330" height="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Values">
+                                                    <fontDescription key="titleFontDescription" name="Ubuntu-Medium" family="Ubuntu" pointSize="14"/>
+                                                    <color key="baseForegroundColor" systemColor="systemTealColor"/>
+                                                </buttonConfiguration>
+                                            </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyO-g3-hBe">
                                                 <rect key="frame" x="0.0" y="40" width="330" height="175"/>
                                                 <state key="normal" title="Button"/>
@@ -5236,6 +5757,9 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         </subviews>
                     </view>
                     <size key="freeformSize" width="360" height="255"/>
+                    <connections>
+                        <outlet property="toolKitStackView" destination="oPn-K7-4Gi" id="cVr-68-PGs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R0e-kF-QPa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5309,6 +5833,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
         <image name="power" catalog="system" width="127" height="128"/>
         <image name="side-resize" width="600" height="600"/>
         <image name="slider.horizontal.3" catalog="system" width="128" height="99"/>
+        <image name="sparkles" catalog="system" width="115" height="128"/>
         <image name="strikethrough" catalog="system" width="128" height="101"/>
         <image name="target" catalog="system" width="128" height="123"/>
         <image name="text.aligncenter" catalog="system" width="128" height="99"/>
@@ -5323,7 +5848,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
             <color red="0.0" green="0.65499997138977051" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="AccentColor">
-            <color red="0.0" green="0.49399998784065247" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -5366,9 +5891,6 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
         </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

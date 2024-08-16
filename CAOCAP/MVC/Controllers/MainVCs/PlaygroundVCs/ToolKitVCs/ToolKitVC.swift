@@ -26,6 +26,9 @@ class ToolKitVC: UIViewController, StoreSubscriber, Storyboarded {
     /// The current project being edited in the playground.
     var project: Project?
     
+    //MARK: Outlets
+    @IBOutlet weak var toolKitStackView: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -57,6 +60,16 @@ class ToolKitVC: UIViewController, StoreSubscriber, Storyboarded {
     private func updateProjectIfNeeded(from state: ReduxState) {
         if project == nil {
             project = state.openedProject
+        }
+    }
+
+    
+    /// Changes the view displayed based on the selected segment in the AttributesView segmented control.
+    ///
+    /// - Parameter sender: The segmented control that triggered this action.
+    @IBAction func didChangeToolKitSegmentedControl(_ sender: UISegmentedControl) {
+        toolKitStackView.arrangedSubviews.enumerated().forEach { index, view in
+            if index != 0 { view.isHidden = index != (sender.selectedSegmentIndex + 1) }
         }
     }
 

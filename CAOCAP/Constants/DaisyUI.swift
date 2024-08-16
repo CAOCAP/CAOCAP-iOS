@@ -8,6 +8,8 @@
 import Foundation
 
 enum Daisy: String {
+    case none
+    
     // Colors
     case background = "Background"
     case gradient = "Gradient"
@@ -25,7 +27,7 @@ enum Daisy: String {
     case decorationColors = "Decoration Colors"
     
     // Utility
-    
+    // TODO: - I think the list is not complete
     case glass = "Glass"
     
     // Actions
@@ -98,83 +100,82 @@ enum Daisy: String {
     case window = "Window"
 }
 
-typealias DaisySet = (name: Daisy, array: [String])
-
 
 struct DaisyUI {
     
-    static let all: [DaisySet] = [
-            (name: .background, array: background),
-            (name: .textColors, array: textColors),
-            (name: .placeholderColors, array: placeholderColors),
-            (name: .borderColors, array: borderColors),
-            (name: .ringColors, array: ringColors),
-            (name: .divideColors, array: divideColors),
-            (name: .outlineColors, array: outlineColors),
-            (name: .fillColors, array: fillColors),
-            (name: .caretColors, array: caretColors),
-            (name: .strokeColors, array: strokeColors),
-            (name: .accentColors, array: accentColors),
-            (name: .shadowColors, array: shadowColors),
-            (name: .decorationColors, array: decorationColors),
-            (name: .glass, array: glass),
-
-            (name: .button, array: button),
-            (name: .dropdown, array: dropdown),
-            (name: .modal, array: modal),
-            (name: .swap, array: swap),
-            (name: .themeController, array: themeController),
-            (name: .collapse, array: collapse),
-            (name: .avatar, array: avatar),
-            (name: .badge, array: badge),
-            (name: .card, array: card),
-            (name: .carousel, array: carousel),
-            (name: .chatBubble, array: chatBubble),
-            (name: .countdown, array: countdown),
-            (name: .diff, array: diff),
-            (name: .kbd, array: kbd),
-            (name: .stat, array: stat),
-            (name: .table, array: table),
-            (name: .timeline, array: timeline),
-            (name: .breadcrumbs, array: breadcrumbs),
-            (name: .interactionStates, array: interactionStates),
-            (name: .bottomNavigation, array: bottomNavigation),
-            (name: .link, array: link),
-            (name: .menu, array: menu),
-            (name: .navbar, array: navbar),
-            (name: .steps, array: steps),
-            (name: .tab, array: tab),
-            (name: .alert, array: alert),
-            (name: .loading, array: loading),
-            (name: .progress, array: progress),
-            (name: .radialProgress, array: radialProgress),
-            (name: .skeleton, array: skeleton),
-            (name: .toast, array: toast),
-            (name: .tooltip, array: tooltip),
-            (name: .formControl, array: formControl),
-            (name: .checkbox, array: checkbox),
-            (name: .fileInput, array: fileInput),
-            (name: .radio, array: radio),
-            (name: .range, array: range),
-            (name: .rating, array: rating),
-            (name: .select, array: select),
-            (name: .textInput, array: textInput),
-            (name: .textarea, array: textarea),
-            (name: .toggle, array: toggle),
-            (name: .artboard, array: artboard),
-            (name: .divider, array: divider),
-            (name: .drawer, array: drawer),
-            (name: .footer, array: footer),
-            (name: .hero, array: hero),
-            (name: .indicator, array: indicator),
-            (name: .join, array: join),
-            (name: .mask, array: mask),
-            (name: .stack, array: stack),
-            (name: .browser, array: browser),
-            (name: .code, array: code),
-            (name: .phone, array: phone),
-            (name: .window, array: window)
-        ]
+    static let all: [ClassNameTuple] = [
+        (name: .Daisy(.background), array: background),
+        (name: .Daisy(.gradient), array: gradients),
+        (name: .Daisy(.textColors), array: textColors),
+        (name: .Daisy(.placeholderColors), array: placeholderColors),
+        (name: .Daisy(.borderColors), array: borderColors),
+        (name: .Daisy(.ringColors), array: ringColors),
+        (name: .Daisy(.divideColors), array: divideColors),
+        (name: .Daisy(.outlineColors), array: outlineColors),
+        (name: .Daisy(.fillColors), array: fillColors),
+        (name: .Daisy(.caretColors), array: caretColors),
+        (name: .Daisy(.strokeColors), array: strokeColors),
+        (name: .Daisy(.accentColors), array: accentColors),
+        (name: .Daisy(.shadowColors), array: shadowColors),
+        (name: .Daisy(.decorationColors), array: decorationColors),
+        (name: .Daisy(.glass), array: glass),
+        
+        (name: .Daisy(.button), array: button),
+        (name: .Daisy(.dropdown), array: dropdown),
+        (name: .Daisy(.modal), array: modal),
+        (name: .Daisy(.swap), array: swap),
+        (name: .Daisy(.themeController), array: themeController),
+        (name: .Daisy(.collapse), array: collapse),
+        (name: .Daisy(.avatar), array: avatar),
+        (name: .Daisy(.badge), array: badge),
+        (name: .Daisy(.card), array: card),
+        (name: .Daisy(.carousel), array: carousel),
+        (name: .Daisy(.chatBubble), array: chatBubble),
+        (name: .Daisy(.countdown), array: countdown),
+        (name: .Daisy(.diff), array: diff),
+        (name: .Daisy(.kbd), array: kbd),
+        (name: .Daisy(.stat), array: stat),
+        (name: .Daisy(.table), array: table),
+        (name: .Daisy(.timeline), array: timeline),
+        (name: .Daisy(.breadcrumbs), array: breadcrumbs),
+        (name: .Daisy(.interactionStates), array: interactionStates),
+        (name: .Daisy(.bottomNavigation), array: bottomNavigation),
+        (name: .Daisy(.link), array: link),
+        (name: .Daisy(.menu), array: menu),
+        (name: .Daisy(.navbar), array: navbar),
+        (name: .Daisy(.steps), array: steps),
+        (name: .Daisy(.tab), array: tab),
+        (name: .Daisy(.alert), array: alert),
+        (name: .Daisy(.loading), array: loading),
+        (name: .Daisy(.progress), array: progress),
+        (name: .Daisy(.radialProgress), array: radialProgress),
+        (name: .Daisy(.skeleton), array: skeleton),
+        (name: .Daisy(.toast), array: toast),
+        (name: .Daisy(.tooltip), array: tooltip),
+        (name: .Daisy(.formControl), array: formControl),
+        (name: .Daisy(.checkbox), array: checkbox),
+        (name: .Daisy(.fileInput), array: fileInput),
+        (name: .Daisy(.radio), array: radio),
+        (name: .Daisy(.range), array: range),
+        (name: .Daisy(.rating), array: rating),
+        (name: .Daisy(.select), array: select),
+        (name: .Daisy(.textInput), array: textInput),
+        (name: .Daisy(.textarea), array: textarea),
+        (name: .Daisy(.toggle), array: toggle),
+        (name: .Daisy(.artboard), array: artboard),
+        (name: .Daisy(.divider), array: divider),
+        (name: .Daisy(.drawer), array: drawer),
+        (name: .Daisy(.footer), array: footer),
+        (name: .Daisy(.hero), array: hero),
+        (name: .Daisy(.indicator), array: indicator),
+        (name: .Daisy(.join), array: join),
+        (name: .Daisy(.mask), array: mask),
+        (name: .Daisy(.stack), array: stack),
+        (name: .Daisy(.browser), array: browser),
+        (name: .Daisy(.code), array: code),
+        (name: .Daisy(.phone), array: phone),
+        (name: .Daisy(.window), array: window)
+    ]
     
     // MARK: Colors
     
@@ -323,7 +324,7 @@ struct DaisyUI {
     
     /* navbar */
     static let navbar = ["navbar", "navbar-start", "navbar-center", "navbar-end"]
-        
+    
     /* steps */
     static let steps = ["steps", "step", "step-primary", "step-secondary", "step-accent", "step-info", "step-success", "step-warning", "step-error", "steps-vertical", "steps-horizontal"]
     
