@@ -49,7 +49,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
     /// Arrays to hold the ToolKit VCs for HTML, CSS, and JS.
     
     var htmlToolKitCollection: ToolKitCollection!
-    let componentsToolKit = ComponentsToolKit.instantiate()
+    let classNamesToolKit = ClassNamesToolKit.instantiate()
     let structureToolKit = StructureToolKit.instantiate()
     let attributesToolKit = AttributesToolKit.instantiate()
     
@@ -134,7 +134,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
         toolsView.addGestureRecognizer(downSwipe)
         
         structureToolKit.mindMap = mindMap
-        htmlToolKitCollection = ToolKitCollection(viewControllers:  [componentsToolKit, structureToolKit, attributesToolKit])
+        htmlToolKitCollection = ToolKitCollection(viewControllers:  [classNamesToolKit, structureToolKit, attributesToolKit])
         cssToolKitCollection = ToolKitCollection(viewControllers: [selectorsToolKit, propertiesToolKit, styleToolKit])
         jsToolKitCollection = ToolKitCollection(viewControllers: [eventsToolKit, conActToolKit, valueToolKit])
 

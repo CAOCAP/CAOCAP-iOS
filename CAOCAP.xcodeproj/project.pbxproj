@@ -110,6 +110,8 @@
 		EC9B891A2C6C400A00FD516F /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9B89192C6C400A00FD516F /* HelperFunctions.swift */; };
 		EC9B891C2C6D79C400FD516F /* ComponentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9B891B2C6D79C400FD516F /* ComponentTableViewCell.swift */; };
 		EC9B891E2C6D7E6700FD516F /* DaisyUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9B891D2C6D7E6700FD516F /* DaisyUI.swift */; };
+		EC9B89202C6F000500FD516F /* Space.sks in Resources */ = {isa = PBXBuildFile; fileRef = EC9B891F2C6F000500FD516F /* Space.sks */; };
+		EC9B89232C6F00BC00FD516F /* SpaceScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9B89222C6F00BC00FD516F /* SpaceScene.swift */; };
 		ECB40BCD2C51125300818E9C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECB40BCC2C51125300818E9C /* RealmSwift */; };
 		ECB40BCE2C5113B500818E9C /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = ECB40BCC2C51125300818E9C /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		ECCA419D2C6696EA0076A4EA /* UIFlowChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA419C2C6696EA0076A4EA /* UIFlowChart.swift */; };
@@ -123,7 +125,7 @@
 		ECCA94852C68D9E00076AA6B /* UIStyleSheetNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94842C68D9E00076AA6B /* UIStyleSheetNode.swift */; };
 		ECCA94872C68D9F70076AA6B /* UIStyleSheetStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94862C68D9F70076AA6B /* UIStyleSheetStroke.swift */; };
 		ECCA94892C68E5B20076AA6B /* AttributesToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94882C68E5B20076AA6B /* AttributesToolKit.swift */; };
-		ECCA948B2C68E66B0076AA6B /* ComponentsToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA948A2C68E66B0076AA6B /* ComponentsToolKit.swift */; };
+		ECCA948B2C68E66B0076AA6B /* ClassNamesToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA948A2C68E66B0076AA6B /* ClassNamesToolKit.swift */; };
 		ECCA948D2C68E7460076AA6B /* PropertiesToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA948C2C68E7460076AA6B /* PropertiesToolKit.swift */; };
 		ECCA948F2C68E7FF0076AA6B /* ConActToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA948E2C68E7FF0076AA6B /* ConActToolKit.swift */; };
 		ECCA94912C68E8610076AA6B /* StyleToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94902C68E8600076AA6B /* StyleToolKit.swift */; };
@@ -253,6 +255,8 @@
 		EC9B89192C6C400A00FD516F /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		EC9B891B2C6D79C400FD516F /* ComponentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentTableViewCell.swift; sourceTree = "<group>"; };
 		EC9B891D2C6D7E6700FD516F /* DaisyUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaisyUI.swift; sourceTree = "<group>"; };
+		EC9B891F2C6F000500FD516F /* Space.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Space.sks; sourceTree = "<group>"; };
+		EC9B89222C6F00BC00FD516F /* SpaceScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceScene.swift; sourceTree = "<group>"; };
 		ECCA419C2C6696EA0076A4EA /* UIFlowChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChart.swift; sourceTree = "<group>"; };
 		ECCA419E2C6697BF0076A4EA /* UIFlowChartNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChartNode.swift; sourceTree = "<group>"; };
 		ECCA41A22C6698A30076A4EA /* UIFlowChartStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChartStroke.swift; sourceTree = "<group>"; };
@@ -264,7 +268,7 @@
 		ECCA94842C68D9E00076AA6B /* UIStyleSheetNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStyleSheetNode.swift; sourceTree = "<group>"; };
 		ECCA94862C68D9F70076AA6B /* UIStyleSheetStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStyleSheetStroke.swift; sourceTree = "<group>"; };
 		ECCA94882C68E5B20076AA6B /* AttributesToolKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributesToolKit.swift; sourceTree = "<group>"; };
-		ECCA948A2C68E66B0076AA6B /* ComponentsToolKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentsToolKit.swift; sourceTree = "<group>"; };
+		ECCA948A2C68E66B0076AA6B /* ClassNamesToolKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNamesToolKit.swift; sourceTree = "<group>"; };
 		ECCA948C2C68E7460076AA6B /* PropertiesToolKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesToolKit.swift; sourceTree = "<group>"; };
 		ECCA948E2C68E7FF0076AA6B /* ConActToolKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConActToolKit.swift; sourceTree = "<group>"; };
 		ECCA94902C68E8600076AA6B /* StyleToolKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleToolKit.swift; sourceTree = "<group>"; };
@@ -376,6 +380,7 @@
 			children = (
 				218DA9D12A2B205900459C61 /* Assets.xcassets */,
 				2106C4142A5C95C300446620 /* Theme.xcassets */,
+				EC9B891F2C6F000500FD516F /* Space.sks */,
 				21C21C562A38DD7D00F40BE3 /* Fonts */,
 				211FEA4C2C2FC729000150FD /* Videos */,
 				214995222A5C33AC008B9987 /* Lottie */,
@@ -420,6 +425,7 @@
 				218DA9CE2A2B205800459C61 /* Main.storyboard */,
 				218DA9D32A2B205900459C61 /* LaunchScreen.storyboard */,
 				21E3A2102B0119AE0041A561 /* UIKit */,
+				EC9B89212C6F008100FD516F /* SpriteKit */,
 				21E3A2112B0119D40041A561 /* SwiftUI */,
 			);
 			path = Views;
@@ -682,6 +688,14 @@
 			path = SwiftUI;
 			sourceTree = "<group>";
 		};
+		EC9B89212C6F008100FD516F /* SpriteKit */ = {
+			isa = PBXGroup;
+			children = (
+				EC9B89222C6F00BC00FD516F /* SpaceScene.swift */,
+			);
+			path = SpriteKit;
+			sourceTree = "<group>";
+		};
 		ECCA41A02C6698540076A4EA /* FlowChart */ = {
 			isa = PBXGroup;
 			children = (
@@ -726,7 +740,7 @@
 		ECCA947E2C6791210076AA6B /* HTML */ = {
 			isa = PBXGroup;
 			children = (
-				ECCA948A2C68E66B0076AA6B /* ComponentsToolKit.swift */,
+				ECCA948A2C68E66B0076AA6B /* ClassNamesToolKit.swift */,
 				ECCA94762C6777BB0076AA6B /* StructureToolKit.swift */,
 				ECCA94882C68E5B20076AA6B /* AttributesToolKit.swift */,
 			);
@@ -892,6 +906,7 @@
 				21C21C642A38DFAD00F40BE3 /* Ubuntu-Regular.ttf in Resources */,
 				211FEA4E2C2FC752000150FD /* intro.mp4 in Resources */,
 				218DA9D02A2B205800459C61 /* Main.storyboard in Resources */,
+				EC9B89202C6F000500FD516F /* Space.sks in Resources */,
 				2175FBE02A648C9100F7E97F /* confetti.json in Resources */,
 				2106C4152A5C95C300446620 /* Theme.xcassets in Resources */,
 				21C21C662A38DFAD00F40BE3 /* Ubuntu-MediumItalic.ttf in Resources */,
@@ -954,12 +969,13 @@
 				21534D9D2A59CD8600E8078B /* UIDashboardView.swift in Sources */,
 				ECCA94772C6777BB0076AA6B /* StructureToolKit.swift in Sources */,
 				21E148152A82031D00B503C2 /* Challenge.swift in Sources */,
-				ECCA948B2C68E66B0076AA6B /* ComponentsToolKit.swift in Sources */,
+				ECCA948B2C68E66B0076AA6B /* ClassNamesToolKit.swift in Sources */,
 				21AF3CB42A6B20FD002E96E3 /* AboutUsVC.swift in Sources */,
 				21AF3CA72A6843A9002E96E3 /* RealmRepository.swift in Sources */,
 				ECCA94852C68D9E00076AA6B /* UIStyleSheetNode.swift in Sources */,
 				21534DA12A5A9B3B00E8078B /* TailwindCSS.swift in Sources */,
 				2149952A2A5C34C9008B9987 /* ReduxStore.swift in Sources */,
+				EC9B89232C6F00BC00FD516F /* SpaceScene.swift in Sources */,
 				21AF3CC62A6B70E4002E96E3 /* ProjectMetaVC.swift in Sources */,
 				21534D962A59B3B300E8078B /* Storyboarded.swift in Sources */,
 				21AF3CB82A6B213C002E96E3 /* PrivacyPolicyVC.swift in Sources */,

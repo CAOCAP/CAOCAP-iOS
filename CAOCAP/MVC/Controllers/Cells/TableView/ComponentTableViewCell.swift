@@ -15,7 +15,7 @@ class ComponentTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    public func configure(with option: SettingsOption) {
+    public func configure(with option: String) { // TODO: - 
         
     }
 

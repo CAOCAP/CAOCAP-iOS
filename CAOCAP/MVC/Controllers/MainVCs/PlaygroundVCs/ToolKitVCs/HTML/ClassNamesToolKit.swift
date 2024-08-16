@@ -1,5 +1,5 @@
 //
-//  ComponentsToolKit.swift
+//  ClassNamesToolKit.swift
 //  CAOCAP
 //
 //  Created by الشيخ عزام on 11/08/2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ComponentsToolKit: ToolKitVC {
+class ClassNamesToolKit: ToolKitVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,7 @@ class ComponentsToolKit: ToolKitVC {
     }
 }
 
-extension ComponentsToolKit: UITableViewDelegate, UITableViewDataSource {
+extension ClassNamesToolKit: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -34,8 +34,8 @@ extension ComponentsToolKit: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingsTableViewCell.identifier, for: indexPath) as? SettingsTableViewCell else { return UITableViewCell() }
-        cell.configure(with: option)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingsTableViewCell.identifier, for: indexPath) as? ComponentTableViewCell else { return UITableViewCell() }
+        cell.configure(with: "test")
         return cell
     }
     
