@@ -162,6 +162,10 @@ class HomeVC: UIViewController, Storyboarded {
         coordinator?.viewWorld()
     }
     
+    @IBAction func didPressStoreButton(_ sender: Any) {
+        coordinator?.viewStore()
+    }
+    
     @IBAction func didPressPaletteButton(_ sender: Any) {
         coordinator?.viewPalette()
     }

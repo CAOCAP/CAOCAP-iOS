@@ -37,15 +37,20 @@ final class MainCoordinator: Coordinator {
     }
     
     
+    
+    //MARK: Home
+    func viewPurchase() {
+        let vc = PurchaseVC.instantiate()
+        navigationController.present(vc, animated: true)
+    }
+    
     func viewWorld() {
         let vc = WorldVC.instantiate()
         navigationController.present(vc, animated: true)
     }
     
-    
-    //MARK: Home
-    func viewPurchase() {
-        let vc = PurchaseVC.instantiate()
+    func viewStore() {
+        let vc = StoreVC.instantiate()
         navigationController.present(vc, animated: true)
     }
     

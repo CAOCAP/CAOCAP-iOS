@@ -252,6 +252,19 @@
                                     <segue destination="IXb-8m-kDA" kind="show" id="nBR-Ba-awC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1G-P9-FH7">
+                                <rect key="frame" x="10" y="415" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="e1G-P9-FH7" secondAttribute="height" multiplier="1:1" id="0au-iN-fam"/>
+                                    <constraint firstAttribute="width" constant="40" id="f5S-PP-f65"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="chevron.compact.up" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="tinted" image="storefront" catalog="system">
+                                    <color key="baseForegroundColor" systemColor="systemPinkColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                </buttonConfiguration>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9Me-nt-eKL">
                                 <rect key="frame" x="10" y="465" width="370" height="60"/>
                                 <subviews>
@@ -396,10 +409,12 @@
                             <constraint firstAttribute="trailing" secondItem="HCA-IB-AaJ" secondAttribute="trailing" constant="10" id="MH7-vv-10e"/>
                             <constraint firstItem="a3B-Dj-KG8" firstAttribute="top" secondItem="zkr-ys-dhB" secondAttribute="bottom" constant="20" id="OXH-cu-SoH"/>
                             <constraint firstItem="9Me-nt-eKL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OfU-id-XRt"/>
+                            <constraint firstItem="e1G-P9-FH7" firstAttribute="leading" secondItem="9Me-nt-eKL" secondAttribute="leading" id="STc-gj-iCw"/>
                             <constraint firstAttribute="trailing" secondItem="zkr-ys-dhB" secondAttribute="trailing" constant="15" id="WGa-mC-wSX"/>
                             <constraint firstItem="wqA-La-Huu" firstAttribute="top" secondItem="zkr-ys-dhB" secondAttribute="bottom" constant="5" id="aLd-2G-dN0"/>
                             <constraint firstItem="wqA-La-Huu" firstAttribute="centerX" secondItem="zkr-ys-dhB" secondAttribute="centerX" id="dUW-xe-iy5"/>
                             <constraint firstItem="HCA-IB-AaJ" firstAttribute="top" secondItem="llD-Vb-u92" secondAttribute="bottom" constant="10" id="ftl-YN-8R3"/>
+                            <constraint firstItem="e1G-P9-FH7" firstAttribute="bottom" secondItem="GRl-En-F0M" secondAttribute="bottom" id="gLN-Iq-WKh"/>
                             <constraint firstItem="GRl-En-F0M" firstAttribute="centerX" secondItem="swv-AQ-sZO" secondAttribute="centerX" id="mEP-bw-hzP"/>
                             <constraint firstItem="zkr-ys-dhB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rPW-xy-xDc"/>
                         </constraints>
@@ -1009,22 +1024,39 @@
                                             <action selector="didPressPurchaseButton:" destination="gTz-hA-32a" eventType="touchUpInside" id="5n3-zp-Q1q"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyY-2N-eLS">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Qsu-Ht-2e8">
                                         <rect key="frame" x="0.0" y="445" width="300" height="34.333333333333314"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <buttonConfiguration key="configuration" style="tinted" image="globe" catalog="system">
-                                            <color key="baseForegroundColor" systemColor="systemBlueColor"/>
-                                            <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="didPressExploreButton:" destination="gTz-hA-32a" eventType="touchUpInside" id="A2g-h5-4Hx"/>
-                                        </connections>
-                                    </button>
-                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="f66-oM-JYI">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyY-2N-eLS">
+                                                <rect key="frame" x="0.0" y="0.0" width="142.66666666666666" height="34.333333333333336"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="globe" catalog="system">
+                                                    <color key="baseForegroundColor" systemColor="systemBlueColor"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didPressExploreButton:" destination="gTz-hA-32a" eventType="touchUpInside" id="A2g-h5-4Hx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tr-5X-9Jg">
+                                                <rect key="frame" x="157.66666666666663" y="0.0" width="142.33333333333337" height="34.333333333333336"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="chevron.compact.up" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="storefront" catalog="system">
+                                                    <color key="baseForegroundColor" systemColor="systemPinkColor"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didPressStoreButton:" destination="gTz-hA-32a" eventType="touchUpInside" id="zy3-ab-myM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="f66-oM-JYI">
                                         <rect key="frame" x="0.0" y="489.33333333333326" width="300" height="35"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afb-6L-oNZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="127.66666666666667" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="142.66666666666666" height="35"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <buttonConfiguration key="configuration" style="tinted" image="message.fill" catalog="system">
                                                     <color key="baseForegroundColor" systemColor="systemGreenColor"/>
@@ -1047,9 +1079,13 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JO-eg-2OZ">
-                                                <rect key="frame" x="147.66666666666663" y="0.0" width="152.33333333333337" height="35"/>
+                                                <rect key="frame" x="157.66666666666663" y="0.0" width="142.33333333333337" height="35"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <buttonConfiguration key="configuration" style="tinted" image="airplane" catalog="system"/>
+                                                <state key="normal" image="airplane" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="airplane" catalog="system">
+                                                    <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="didPressTestFlight:" destination="gTz-hA-32a" eventType="touchUpInside" id="yJC-C4-NXQ"/>
                                                 </connections>
@@ -1906,6 +1942,38 @@ There are no other in-app purchases.</string>
             </objects>
             <point key="canvasLocation" x="-3003" y="-2325"/>
         </scene>
+        <!--StoreVC-->
+        <scene sceneID="0pn-NO-fw4">
+            <objects>
+                <viewController storyboardIdentifier="StoreVC" id="YuS-Di-WqT" customClass="StoreVC" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="suT-3d-WWt"/>
+                        <viewControllerLayoutGuide type="bottom" id="HKK-LK-5m7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gxX-DO-dYU">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpaceSketchBG" translatesAutoresizingMaskIntoConstraints="NO" id="AXW-9N-jPS">
+                                <rect key="frame" x="0.0" y="47" width="390" height="510"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AXW-9N-jPS" secondAttribute="height" multiplier="13:17" id="N3b-9x-FSw"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AXW-9N-jPS" firstAttribute="top" secondItem="suT-3d-WWt" secondAttribute="bottom" id="5JR-AL-XAh"/>
+                            <constraint firstItem="AXW-9N-jPS" firstAttribute="leading" secondItem="gxX-DO-dYU" secondAttribute="leading" id="8dJ-eJ-ghA"/>
+                            <constraint firstAttribute="trailing" secondItem="AXW-9N-jPS" secondAttribute="trailing" id="wqd-lq-hzN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vrr-3e-GAl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2238" y="-2325"/>
+        </scene>
         <!--Main SettingsVC-->
         <scene sceneID="50w-kj-1TB">
             <objects>
@@ -2676,7 +2744,7 @@ There are no other in-app purchases.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pYZ-H1-2tI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2315" y="-1600"/>
+            <point key="canvasLocation" x="-2238" y="-1600"/>
         </scene>
         <!--Project FilesVC-->
         <scene sceneID="Spa-sn-UJb">
@@ -5869,6 +5937,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
         <image name="slider.horizontal.3" catalog="system" width="128" height="99"/>
         <image name="sparkles" catalog="system" width="115" height="128"/>
         <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
+        <image name="storefront" catalog="system" width="128" height="111"/>
         <image name="strikethrough" catalog="system" width="128" height="101"/>
         <image name="target" catalog="system" width="128" height="123"/>
         <image name="text.aligncenter" catalog="system" width="128" height="99"/>
@@ -5926,6 +5995,9 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
         </systemColor>
         <systemColor name="systemMintColor">
             <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
