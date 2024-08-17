@@ -132,6 +132,7 @@
 		ECCA94912C68E8610076AA6B /* StyleToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94902C68E8600076AA6B /* StyleToolKit.swift */; };
 		ECCA94932C68E87D0076AA6B /* ValueToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94922C68E87D0076AA6B /* ValueToolKit.swift */; };
 		ECF48ED22C705A2D008808B0 /* StoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF48ED12C705A2D008808B0 /* StoreVC.swift */; };
+		ECF48ED52C70989C008808B0 /* OpenAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECF48ED42C70989C008808B0 /* OpenAI-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -277,6 +278,7 @@
 		ECCA94902C68E8600076AA6B /* StyleToolKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleToolKit.swift; sourceTree = "<group>"; };
 		ECCA94922C68E87D0076AA6B /* ValueToolKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueToolKit.swift; sourceTree = "<group>"; };
 		ECF48ED12C705A2D008808B0 /* StoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreVC.swift; sourceTree = "<group>"; };
+		ECF48ED42C70989C008808B0 /* OpenAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenAI-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,6 +334,7 @@
 				218DA9CA2A2B205800459C61 /* SceneDelegate.swift */,
 				EC7B11842C524EFF0020ECE4 /* Subscriptions.storekit */,
 				218DA9D62A2B205900459C61 /* Info.plist */,
+				ECF48ED42C70989C008808B0 /* OpenAI-Info.plist */,
 				21534D8C2A59924F00E8078B /* GoogleService-Info.plist */,
 				21640C492B38470000052966 /* Config-dev.xcconfig */,
 			);
@@ -910,6 +913,7 @@
 				21C21C572A38DD8D00F40BE3 /* monogamma.otf in Resources */,
 				2175FBDF2A648C9100F7E97F /* party.json in Resources */,
 				21C21C6A2A38DFAD00F40BE3 /* UFL.txt in Resources */,
+				ECF48ED52C70989C008808B0 /* OpenAI-Info.plist in Resources */,
 				21C21C622A38DFAD00F40BE3 /* Ubuntu-Medium.ttf in Resources */,
 				218DA9D52A2B205900459C61 /* LaunchScreen.storyboard in Resources */,
 				21C21C692A38DFAD00F40BE3 /* Ubuntu-Light.ttf in Resources */,
