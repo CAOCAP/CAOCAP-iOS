@@ -133,6 +133,7 @@
 		ECCA94932C68E87D0076AA6B /* ValueToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94922C68E87D0076AA6B /* ValueToolKit.swift */; };
 		ECF48ED22C705A2D008808B0 /* StoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF48ED12C705A2D008808B0 /* StoreVC.swift */; };
 		ECF48ED52C70989C008808B0 /* OpenAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECF48ED42C70989C008808B0 /* OpenAI-Info.plist */; };
+		ECF48ED72C709A51008808B0 /* OpenAIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF48ED62C709A51008808B0 /* OpenAIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -279,6 +280,7 @@
 		ECCA94922C68E87D0076AA6B /* ValueToolKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueToolKit.swift; sourceTree = "<group>"; };
 		ECF48ED12C705A2D008808B0 /* StoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreVC.swift; sourceTree = "<group>"; };
 		ECF48ED42C70989C008808B0 /* OpenAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenAI-Info.plist"; sourceTree = "<group>"; };
+		ECF48ED62C709A51008808B0 /* OpenAIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -469,6 +471,7 @@
 		2189F32D2AFFA17A00FEB125 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				ECF48ED62C709A51008808B0 /* OpenAIManager.swift */,
 				2196065E2AA82E700099FC14 /* KeyboardManager.swift */,
 				2175FBE12A648D0700F7E97F /* LottieManager.swift */,
 			);
@@ -969,6 +972,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21534D912A59B2E200E8078B /* ContainerVC.swift in Sources */,
+				ECF48ED72C709A51008808B0 /* OpenAIManager.swift in Sources */,
 				EC7B11832C5223D40020ECE4 /* CodePreviewVC.swift in Sources */,
 				21C21C4F2A34B62E00F40BE3 /* PaletteVC.swift in Sources */,
 				21AF3CB22A6B20DF002E96E3 /* CreditsVC.swift in Sources */,
