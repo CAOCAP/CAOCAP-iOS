@@ -8,7 +8,6 @@
 import UIKit
 
 class CoCaptainVC: UIViewController, Storyboarded {
-    var coordinator: MainCoordinator?
     
     @IBOutlet weak var promptTextField: UITextField!
     @IBOutlet weak var resultTextView: UITextView!

@@ -14,7 +14,6 @@ class ProjectCell: UITableViewCell {
 }
 
 class ProjectsListVC: UIViewController, Storyboarded {
-    var coordinator: MainCoordinator?
 
     @IBOutlet weak var tableView: UITableView!
     

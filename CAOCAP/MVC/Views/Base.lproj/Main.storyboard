@@ -4951,10 +4951,10 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
             </objects>
             <point key="canvasLocation" x="-2386.1538461538462" y="222.86729857819904"/>
         </scene>
-        <!--View Controller-->
+        <!--Co CaptainVC-->
         <scene sceneID="VXg-OF-XIf">
             <objects>
-                <viewController id="IXb-8m-kDA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CoCaptainVC" id="IXb-8m-kDA" customClass="CoCaptainVC" customModule="CAOCAP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pjc-hV-Zoh"/>
                         <viewControllerLayoutGuide type="bottom" id="LHD-dI-UR9"/>
@@ -4981,6 +4981,9 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                         <rect key="frame" x="287.33333333333331" y="0.0" width="50.666666666666686" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="tinted" image="paperplane.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="generateButtonTapped:" destination="IXb-8m-kDA" eventType="touchUpInside" id="C4M-f1-xLn"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -5007,6 +5010,10 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yVj-OD-gjf"/>
+                    <connections>
+                        <outlet property="promptTextField" destination="MwP-uo-agp" id="MT1-xG-N8u"/>
+                        <outlet property="resultTextView" destination="euU-8I-uwQ" id="gGF-R9-YVT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qsQ-8D-Opj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

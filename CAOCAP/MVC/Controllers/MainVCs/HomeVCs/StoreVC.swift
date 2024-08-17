@@ -8,7 +8,6 @@
 import UIKit
 
 class StoreVC: UIViewController, Storyboarded {
-    var coordinator: MainCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()

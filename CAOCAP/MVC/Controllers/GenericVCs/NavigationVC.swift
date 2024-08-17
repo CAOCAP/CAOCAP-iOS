@@ -8,7 +8,6 @@
 import UIKit
 
 class NavigationVC: ContainerVC, Storyboarded {
-    var coordinator: MainCoordinator?
 
     @IBOutlet weak var indicatorView: UIView!
     @IBOutlet weak var glowView: UIView!
@@ -50,7 +49,7 @@ class NavigationVC: ContainerVC, Storyboarded {
     }
     
     @IBAction func didPressPowerButton(_ sender: UIButton) {
-        coordinator?.createNewProject()
+        coordinator.createNewProject()
     }
     
     

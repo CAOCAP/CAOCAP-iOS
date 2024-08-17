@@ -135,6 +135,8 @@
 		ECF48ED52C70989C008808B0 /* OpenAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECF48ED42C70989C008808B0 /* OpenAI-Info.plist */; };
 		ECF48ED72C709A51008808B0 /* OpenAIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF48ED62C709A51008808B0 /* OpenAIManager.swift */; };
 		ECF48ED92C70A1F2008808B0 /* CoCaptainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF48ED82C70A1F2008808B0 /* CoCaptainVC.swift */; };
+		ECF48EDB2C70A921008808B0 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF48EDA2C70A921008808B0 /* UIViewController+Extensions.swift */; };
+		ECF48EDE2C70B5C3008808B0 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = ECF48EDD2C70B5C3008808B0 /* OpenAI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -283,6 +285,7 @@
 		ECF48ED42C70989C008808B0 /* OpenAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenAI-Info.plist"; sourceTree = "<group>"; };
 		ECF48ED62C709A51008808B0 /* OpenAIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIManager.swift; sourceTree = "<group>"; };
 		ECF48ED82C70A1F2008808B0 /* CoCaptainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoCaptainVC.swift; sourceTree = "<group>"; };
+		ECF48EDA2C70A921008808B0 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -297,6 +300,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECF48EDE2C70B5C3008808B0 /* OpenAI in Frameworks */,
 				ECB40BCD2C51125300818E9C /* RealmSwift in Frameworks */,
 				21E148112A7F62C900B503C2 /* FirebaseDatabase in Frameworks */,
 				219339812A7E3FAA002FDE05 /* Popovers in Frameworks */,
@@ -411,6 +415,7 @@
 			isa = PBXGroup;
 			children = (
 				EC9B89192C6C400A00FD516F /* HelperFunctions.swift */,
+				ECF48EDA2C70A921008808B0 /* UIViewController+Extensions.swift */,
 				2186DB0C2A30946900773C5E /* UIView+Extensions.swift */,
 				21CB66F32C15F0540062D7AD /* UIScrollView+Extensions.swift */,
 				212E2B1A2A745BBD00125C50 /* UIColor+Extensions.swift */,
@@ -850,6 +855,7 @@
 				21E1480E2A7F62BE00B503C2 /* FirebaseAuth */,
 				21E148102A7F62C900B503C2 /* FirebaseDatabase */,
 				ECB40BCC2C51125300818E9C /* RealmSwift */,
+				ECF48EDD2C70B5C3008808B0 /* OpenAI */,
 			);
 			productName = CAOCAP;
 			productReference = 218DA9C52A2B205800459C61 /* CAOCAP.app */;
@@ -892,6 +898,7 @@
 				21AF3CA32A67E44B002E96E3 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				2193397F2A7E3FAA002FDE05 /* XCRemoteSwiftPackageReference "Popovers" */,
 				ECB40BCB2C51125300818E9C /* XCRemoteSwiftPackageReference "realm-swift" */,
+				ECF48EDC2C70B5C3008808B0 /* XCRemoteSwiftPackageReference "OpenAI" */,
 			);
 			productRefGroup = 218DA9C62A2B205800459C61 /* Products */;
 			projectDirPath = "";
@@ -1045,6 +1052,7 @@
 				ECF48ED22C705A2D008808B0 /* StoreVC.swift in Sources */,
 				21DBA0012A38F4C800DFAC66 /* HomeVC.swift in Sources */,
 				21AF3CB62A6B211E002E96E3 /* TermsOfUseVC.swift in Sources */,
+				ECF48EDB2C70A921008808B0 /* UIViewController+Extensions.swift in Sources */,
 				21C21C492A34B5D800F40BE3 /* ProjectsListVC.swift in Sources */,
 				21C21C542A36145200F40BE3 /* Enumerations.swift in Sources */,
 				21AF3CC02A6B7096002E96E3 /* ProjectLanguageVC.swift in Sources */,
@@ -1660,6 +1668,14 @@
 				minimumVersion = 10.52.2;
 			};
 		};
+		ECF48EDC2C70B5C3008808B0 /* XCRemoteSwiftPackageReference "OpenAI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MacPaw/OpenAI.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1717,6 +1733,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = ECB40BCB2C51125300818E9C /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		ECF48EDD2C70B5C3008808B0 /* OpenAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECF48EDC2C70B5C3008808B0 /* XCRemoteSwiftPackageReference "OpenAI" */;
+			productName = OpenAI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

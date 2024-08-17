@@ -13,7 +13,6 @@ struct Credits {
 }
 
 class CreditsVC: UIViewController, Storyboarded, UITableViewDelegate, UITableViewDataSource {
-    var coordinator: MainCoordinator?
     
     @IBOutlet weak var tableView: UITableView!
     var credits = [

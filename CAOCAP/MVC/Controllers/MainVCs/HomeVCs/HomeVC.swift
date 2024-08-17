@@ -12,7 +12,6 @@ import StoreKit
 import Popovers
 
 class HomeVC: UIViewController, Storyboarded {
-    var coordinator: MainCoordinator?
     
     var user: User?
     
@@ -155,19 +154,19 @@ class HomeVC: UIViewController, Storyboarded {
     
     
     @IBAction func didPressPurchaseButton(_ sender: Any) {
-        coordinator?.viewPurchase()
+        coordinator.viewPurchase()
     }
     
     @IBAction func didPressExploreButton(_ sender: Any) {
-        coordinator?.viewWorld()
+        coordinator.viewWorld()
     }
     
     @IBAction func didPressStoreButton(_ sender: Any) {
-        coordinator?.viewStore()
+        coordinator.viewStore()
     }
     
     @IBAction func didPressPaletteButton(_ sender: Any) {
-        coordinator?.viewPalette()
+        coordinator.viewPalette()
     }
     
     @IBAction func didPressJoinCommunity(_ sender: Any) {

@@ -12,7 +12,7 @@ import SnapKit
 import SwiftSoup
 
 class PlaygroundVC: UIViewController, Storyboarded {
-    var coordinator: MainCoordinator?
+    
     
     /// The current project being edited in the playground.
     var project: Project?
@@ -65,7 +65,6 @@ class PlaygroundVC: UIViewController, Storyboarded {
     let eventsToolKit = EventsToolKit.instantiate()
     let conActToolKit = ConActToolKit.instantiate()
     let valueToolKit = ValueToolKit.instantiate()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -326,11 +325,13 @@ class PlaygroundVC: UIViewController, Storyboarded {
     }
     
     @IBAction func didPressCoCaptain(_ sender: UIButton) {
-        coordinator?.viewCoCaptain()
+        let vc = CoCaptainVC.instantiate()
+        self.present(vc, animated: true)
     }
     
     @IBAction func didPressStore(_ sender: UIButton) {
-        coordinator?.viewStore()
+        let vc = StoreVC.instantiate()
+        self.present(vc, animated: true)
     }
     
     // MARK: - Undo/Redo Button Actions
