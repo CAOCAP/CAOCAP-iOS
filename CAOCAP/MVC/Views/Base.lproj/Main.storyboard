@@ -249,7 +249,7 @@
                                 <state key="normal" image="chevron.compact.up" catalog="system"/>
                                 <buttonConfiguration key="configuration" style="tinted" image="sparkles" catalog="system"/>
                                 <connections>
-                                    <segue destination="IXb-8m-kDA" kind="show" id="nBR-Ba-awC"/>
+                                    <action selector="didPressCoCaptain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yqq-ah-Jak"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1G-P9-FH7">
@@ -264,6 +264,9 @@
                                     <color key="baseForegroundColor" systemColor="systemPinkColor"/>
                                     <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="didPressStore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ccr-fJ-Dua"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9Me-nt-eKL">
                                 <rect key="frame" x="10" y="465" width="370" height="60"/>

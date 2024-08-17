@@ -12,6 +12,7 @@ import SnapKit
 import SwiftSoup
 
 class PlaygroundVC: UIViewController, Storyboarded {
+    var coordinator: MainCoordinator?
     
     /// The current project being edited in the playground.
     var project: Project?
@@ -322,6 +323,14 @@ class PlaygroundVC: UIViewController, Storyboarded {
             }
         }
         viewFinderIsOn.toggle()
+    }
+    
+    @IBAction func didPressCoCaptain(_ sender: UIButton) {
+        coordinator?.viewStore()
+    }
+    
+    @IBAction func didPressStore(_ sender: UIButton) {
+        coordinator?.viewStore()
     }
     
     // MARK: - Undo/Redo Button Actions

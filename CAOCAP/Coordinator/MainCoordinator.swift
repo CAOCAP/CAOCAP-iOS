@@ -23,11 +23,13 @@ final class MainCoordinator: Coordinator {
         let chartsVC = ChartsVC.instantiate()
         let projectsVC = ProjectsListVC.instantiate()
         let mainSettingsVC = MainSettingsVC.instantiate()
+        let playgroundVC = PlaygroundVC.instantiate()
         
         homeVC.coordinator = self
         chartsVC.coordinator = self
         projectsVC.coordinator = self
         mainSettingsVC.coordinator = self
+        playgroundVC.coordinator = self
         
         
         navigationVC.coordinator = self
