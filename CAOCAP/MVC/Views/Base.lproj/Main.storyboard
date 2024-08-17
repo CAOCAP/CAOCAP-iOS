@@ -4962,7 +4962,49 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                     <view key="view" contentMode="scaleToFill" id="dVg-kZ-mbU">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Co-Captain" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7J3-t5-tty">
+                                <rect key="frame" x="151.33333333333334" y="67" width="87.666666666666657" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9pa-Mb-N1a">
+                                <rect key="frame" x="26" y="726.66666666666663" width="338" height="34.333333333333371"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MwP-uo-agp">
+                                        <rect key="frame" x="0.0" y="0.0" width="277.33333333333331" height="34.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXn-RK-ORZ">
+                                        <rect key="frame" x="287.33333333333331" y="0.0" width="50.666666666666686" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" image="paperplane.fill" catalog="system"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="euU-8I-uwQ">
+                                <rect key="frame" x="36" y="137.33333333333331" width="318" height="569.33333333333348"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="euU-8I-uwQ" firstAttribute="centerX" secondItem="dVg-kZ-mbU" secondAttribute="centerX" id="33c-9h-wyF"/>
+                            <constraint firstItem="9pa-Mb-N1a" firstAttribute="top" secondItem="euU-8I-uwQ" secondAttribute="bottom" constant="20" id="4Jp-Kt-gEA"/>
+                            <constraint firstItem="7J3-t5-tty" firstAttribute="centerX" secondItem="dVg-kZ-mbU" secondAttribute="centerX" id="G1g-JN-WsW"/>
+                            <constraint firstItem="9pa-Mb-N1a" firstAttribute="centerX" secondItem="dVg-kZ-mbU" secondAttribute="centerX" id="KJl-qx-zEt"/>
+                            <constraint firstItem="euU-8I-uwQ" firstAttribute="centerY" secondItem="dVg-kZ-mbU" secondAttribute="centerY" id="OZs-eR-yRR"/>
+                            <constraint firstItem="9pa-Mb-N1a" firstAttribute="leading" secondItem="dVg-kZ-mbU" secondAttribute="leadingMargin" constant="10" id="Vsg-J2-q2R"/>
+                            <constraint firstItem="7J3-t5-tty" firstAttribute="top" secondItem="dVg-kZ-mbU" secondAttribute="topMargin" constant="20" id="er5-ZW-VY7"/>
+                            <constraint firstItem="euU-8I-uwQ" firstAttribute="top" secondItem="7J3-t5-tty" secondAttribute="bottom" constant="50" id="vGj-eS-g08"/>
+                            <constraint firstItem="euU-8I-uwQ" firstAttribute="leading" secondItem="dVg-kZ-mbU" secondAttribute="leadingMargin" constant="20" id="ysx-8f-OhJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yVj-OD-gjf"/>
                 </viewController>
@@ -5931,6 +5973,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
         <image name="paintbrush.pointed.fill" catalog="system" width="128" height="118"/>
         <image name="paintpalette" catalog="system" width="128" height="105"/>
         <image name="paintpalette.fill" catalog="system" width="128" height="105"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="119"/>
         <image name="pencil.circle.fill" catalog="system" width="128" height="123"/>
         <image name="photo.on.rectangle.fill" catalog="system" width="128" height="102"/>
         <image name="play.rectangle" catalog="system" width="128" height="93"/>

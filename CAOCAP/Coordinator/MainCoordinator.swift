@@ -56,6 +56,11 @@ final class MainCoordinator: Coordinator {
         navigationController.present(vc, animated: true)
     }
     
+    func viewCoCaptain() {
+        let vc = CoCaptainVC.instantiate()
+        navigationController.present(vc, animated: true)
+    }
+    
     func viewPalette() {
         let vc = PaletteVC.instantiate()
         navigationController.present(vc, animated: true)

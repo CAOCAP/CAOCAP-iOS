@@ -134,6 +134,7 @@
 		ECF48ED22C705A2D008808B0 /* StoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF48ED12C705A2D008808B0 /* StoreVC.swift */; };
 		ECF48ED52C70989C008808B0 /* OpenAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECF48ED42C70989C008808B0 /* OpenAI-Info.plist */; };
 		ECF48ED72C709A51008808B0 /* OpenAIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF48ED62C709A51008808B0 /* OpenAIManager.swift */; };
+		ECF48ED92C70A1F2008808B0 /* CoCaptainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF48ED82C70A1F2008808B0 /* CoCaptainVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -281,6 +282,7 @@
 		ECF48ED12C705A2D008808B0 /* StoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreVC.swift; sourceTree = "<group>"; };
 		ECF48ED42C70989C008808B0 /* OpenAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenAI-Info.plist"; sourceTree = "<group>"; };
 		ECF48ED62C709A51008808B0 /* OpenAIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIManager.swift; sourceTree = "<group>"; };
+		ECF48ED82C70A1F2008808B0 /* CoCaptainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoCaptainVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -781,6 +783,7 @@
 			isa = PBXGroup;
 			children = (
 				218DA9CC2A2B205800459C61 /* PlaygroundVC.swift */,
+				ECF48ED82C70A1F2008808B0 /* CoCaptainVC.swift */,
 				EC7B11822C5223D40020ECE4 /* CodePreviewVC.swift */,
 				215DE72A2B527BC100546394 /* FullScreenWebViewVC.swift */,
 				21AF3CD32A6B717A002E96E3 /* ProjectVCs */,
@@ -992,6 +995,7 @@
 				ECCA94772C6777BB0076AA6B /* StructureToolKit.swift in Sources */,
 				21E148152A82031D00B503C2 /* Challenge.swift in Sources */,
 				ECCA948B2C68E66B0076AA6B /* ClassNamesToolKit.swift in Sources */,
+				ECF48ED92C70A1F2008808B0 /* CoCaptainVC.swift in Sources */,
 				21AF3CB42A6B20FD002E96E3 /* AboutUsVC.swift in Sources */,
 				21AF3CA72A6843A9002E96E3 /* RealmRepository.swift in Sources */,
 				ECCA94852C68D9E00076AA6B /* UIStyleSheetNode.swift in Sources */,

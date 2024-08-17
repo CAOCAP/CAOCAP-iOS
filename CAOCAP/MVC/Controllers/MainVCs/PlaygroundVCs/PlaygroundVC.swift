@@ -326,7 +326,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
     }
     
     @IBAction func didPressCoCaptain(_ sender: UIButton) {
-        coordinator?.viewStore()
+        coordinator?.viewCoCaptain()
     }
     
     @IBAction func didPressStore(_ sender: UIButton) {
