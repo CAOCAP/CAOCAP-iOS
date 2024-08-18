@@ -8,44 +8,45 @@
 import UIKit
 
 final class MainCoordinator: Coordinator {
-    var childCoordinators = [Coordinator]()
-    var navigationController: UINavigationController
+    static let shared = MainCoordinator()
     
-    init(_ navigationController: UINavigationController) {
-        self.navigationController = navigationController
-    }
+    var childCoordinators = [Coordinator]()
+    var navigationController = UINavigationController()
+    
+    internal init() {}
     
     //MARK: Initial View Controller
     func start() {
         let navigationVC = NavigationVC.instantiate()
         
-        let homeVC = HomeVC.instantiate()
-        let chartsVC = ChartsVC.instantiate()
-        let projectsVC = ProjectsListVC.instantiate()
-        let mainSettingsVC = MainSettingsVC.instantiate()
-        
-        homeVC.coordinator = self
-        chartsVC.coordinator = self
-        projectsVC.coordinator = self
-        mainSettingsVC.coordinator = self
-        
-        
-        navigationVC.coordinator = self
-        navigationVC.viewControllers = [homeVC, chartsVC, projectsVC, mainSettingsVC]
+        navigationVC.viewControllers = [HomeVC.instantiate(),
+                                        ChartsVC.instantiate(),
+                                        ProjectsListVC.instantiate(),
+                                        MainSettingsVC.instantiate()]
         
         navigationController.pushViewController(navigationVC, animated: false)
     }
     
+    
+    
+    //MARK: Home
+    func viewPurchase() {
+        let vc = PurchaseVC.instantiate()
+        navigationController.present(vc, animated: true)
+    }
     
     func viewWorld() {
         let vc = WorldVC.instantiate()
         navigationController.present(vc, animated: true)
     }
     
+    func viewStore() {
+        let vc = StoreVC.instantiate()
+        navigationController.present(vc, animated: true)
+    }
     
-    //MARK: Home
-    func viewPurchase() {
-        let vc = PurchaseVC.instantiate()
+    func viewCoCaptain() {
+        let vc = CoCaptainVC.instantiate()
         navigationController.present(vc, animated: true)
     }
     

@@ -11,7 +11,6 @@ import MapKit
 
 
 class WorldVC: UIViewController, Storyboarded {
-    var coordinator: MainCoordinator?
 
     @IBOutlet weak var mapView: MKMapView!
     

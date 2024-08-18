@@ -9,18 +9,24 @@ import UIKit
 import SnapKit
 import SwiftSoup
 
+/// A protocol for handling events related to the mind map.
 protocol UIMindMapDelegate {
-    func didRemoveNode()
+    /// Called when a node is removed from the mind map.
+    func didRemoveMindMapNode()
 }
 
+/// A custom view for displaying and managing a mind map on a canvas.
 class UIMindMap: UICanvas {
     
+    // MARK: - Properties
     var project: Project?
-    var nodeTree = [String: UICanvasNodeView]()
+    var nodeTree = [String: UIMindMapNode]()
     var mindMapDelegate: UIMindMapDelegate?
     
+    // MARK: - Load and Display Elements
+    
+    /// Loads and displays the HTML body element of the project's document on the canvas.
     func loadBody() {
-        /* TODO: Fix this mindmap function❗️🙃*/
         print("\(#function)ing...")
         guard let body = project?.document?.body() else { return }
         clearCanvas()
@@ -28,8 +34,9 @@ class UIMindMap: UICanvas {
         if !body.children().isEmpty() { load(children: body.children()) }
     }
     
+    /// Recursively loads and displays the children of the given element.
+    /// - Parameter children: The children elements to load and display.
     func load(children: Elements) {
-        /* TODO: Fix this mindmap function❗️🙃*/
         print("\(#function)ing...")
         children.forEach { child in
             draw(child)
@@ -37,9 +44,13 @@ class UIMindMap: UICanvas {
         }
     }
     
+    // MARK: - Draw Elements
+    
+    /// Draws a node for the given element and adds it to the canvas.
+    /// - Parameter element: The element to draw on the canvas.
     func draw(_ element: Element) {
         print("\(#function)ing... \(element.tagName())")
-        let nodeView = UICanvasNodeView(element: element)
+        let nodeView = UIMindMapNode(element: element)
         nodeTree[element.id()] = nodeView
         nodeView.delegate = self
         canvas.addSubview(nodeView)
@@ -48,7 +59,9 @@ class UIMindMap: UICanvas {
         expandCanvasIfNeeded()
     }
     
-    func setNodePosition(_ nodeView: UICanvasNodeView) {
+    /// Sets the position constraints for a node view on the canvas.
+    /// - Parameter nodeView: The node view to position.
+    func setNodePosition(_ nodeView: UIMindMapNode) {
         let element = nodeView.element
         if element.tagName() == "body" {
             nodeView.snp.makeConstraints {
@@ -100,10 +113,12 @@ class UIMindMap: UICanvas {
         
     }
     
-    func drawNodeStrokes(_ nodeView: UICanvasNodeView) {
+    /// Draws connection strokes between nodes on the canvas.
+    /// - Parameter nodeView: The node view for which to draw strokes.
+    func drawNodeStrokes(_ nodeView: UIMindMapNode) {
         let countChildren = nodeView.element.children().count
         if countChildren > 0 {
-            let nodeStroke = UIStroke(lines: countChildren)
+            let nodeStroke = UIMindMapStroke(lines: countChildren)
             canvas.insertSubview(nodeStroke, at: 0)
             nodeStroke.widthConstraint.constant = CGFloat(countChildren * 180)
             nodeStroke.snp.makeConstraints { make in
@@ -113,6 +128,10 @@ class UIMindMap: UICanvas {
         }
     }
     
+    // MARK: - Add, Delete, and Select Nodes
+    
+    /// Adds a new node with the specified tag to the mind map.
+    /// - Parameter tag: The tag for the new node.
     func add(tag: String) {
         print("\(#function)ing...")
         ReduxStore.dispatch(WillEditAction())
@@ -133,6 +152,8 @@ class UIMindMap: UICanvas {
         select(newElement.id())
     }
     
+    /// Deletes the specified element from the mind map.
+    /// - Parameter element: The element to delete.
     func delete(_ element: Element) {
         print("\(#function)ing...")
         ReduxStore.dispatch(WillEditAction())
@@ -147,6 +168,8 @@ class UIMindMap: UICanvas {
         select(parent.id())
     }
     
+    /// Selects a node by its ID and zooms to it.
+    /// - Parameter elementID: The ID of the element to select.
     func select(_ elementID: String) {
         guard let previouslySelectedID = project?.selectedElementID else { return }
         print("Previously Selected Node ID: \(previouslySelectedID)")
@@ -162,6 +185,8 @@ class UIMindMap: UICanvas {
         }
     }
     
+    /// Updates the selected node based on the provided direction.
+    /// - Parameter direction: The direction to move in (left, up, down, right).
     func updateSelectedNode(_ direction: Direction?) {
         guard let direction = direction,
               let body = project?.document?.body(),
@@ -198,13 +223,18 @@ class UIMindMap: UICanvas {
     
 }
 
+// MARK: - UIMindMapNodeDelegate
 
-extension UIMindMap: UICanvasNodeViewDelegate {
+extension UIMindMap: UIMindMapNodeDelegate {
+    /// Handles node selection by delegating to the `select` method.
+    /// - Parameter nodeID: The ID of the node to select.
     func select(nodeID: String) {
         print("\(#function)ing...")
         select(nodeID)
     }
     
+    /// Handles node deletion by delegating to the `delete` method and notifying the delegate.
+    /// - Parameter nodeID: The ID of the node to delete.
     func delete(nodeID: String) {
         print("\(#function)ing...")
         guard let body = project?.document?.body() else { return }
@@ -212,7 +242,7 @@ extension UIMindMap: UICanvasNodeViewDelegate {
             if let element = try body.getElementById(nodeID) {
                 DispatchQueue.main.async {
                     self.delete(element)
-                    self.mindMapDelegate?.didRemoveNode()
+                    self.mindMapDelegate?.didRemoveMindMapNode()
                 }
             }
         } catch Exception.Error(let type, let message) {

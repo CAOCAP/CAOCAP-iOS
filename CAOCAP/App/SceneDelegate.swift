@@ -20,12 +20,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         //MARK: Coordinator Setup
-        let navController = UINavigationController()
-        coordinator = MainCoordinator(navController)
-        coordinator?.start()
+        coordinator = MainCoordinator.shared
+        if let coordinator = coordinator { coordinator.start() }
         
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = navController
+        window?.rootViewController = MainCoordinator.shared.navigationController
         window?.makeKeyAndVisible()
         
 //        checkIntroStatus()
