@@ -69,8 +69,8 @@ class PlaygroundVC: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Start the Node.js server in a background thread
-        NodeJSManager.shared.startNodeServerInBackground()
+        // Start the Node.js with Babel server in a background thread
+//        NodeJSManager.shared.startNodeServerWithBabelInBackground() // TODO: - this is crashing the app
         
         // Set up gesture recognizer for resizing the web view
         let resizeGR = UIPanGestureRecognizer(target: self, action: #selector(handleResizingWebView(sender:)))

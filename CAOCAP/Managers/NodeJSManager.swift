@@ -68,4 +68,34 @@ class NodeJSManager {
         // Start the thread
         nodejsThread.start()
     }
+    
+    func startNodeServerWithBabelInBackground() {
+        guard let babelStandalonePath = Bundle.main.path(forResource: "babel", ofType: "js", inDirectory: "NodeScripts"),  // Notice it's now "js" not "min.js"
+              let transpilePath = Bundle.main.path(forResource: "babel_transpile", ofType: "js", inDirectory: "NodeScripts") else {
+            print("Error: Could not find Babel Standalone or transpile script.")
+            return
+        }
+
+        do {
+            let babelStandaloneCode = try String(contentsOfFile: babelStandalonePath)
+            let transpileCode = try String(contentsOfFile: transpilePath)
+
+            let combinedCode = """
+            \(babelStandaloneCode)
+            global.Babel = Babel;
+            \(transpileCode)
+            """
+
+            let nodeArguments = ["node", "-e", combinedCode]
+
+            let nodejsThread = Thread {
+                self.startNodeJS(withArguments: nodeArguments)
+            }
+
+            nodejsThread.stackSize = 2 * 1024 * 1024  // 2MB of stack space
+            nodejsThread.start()
+        } catch {
+            print("Error: Could not load JavaScript files: \(error)")
+        }
+    }
 }
