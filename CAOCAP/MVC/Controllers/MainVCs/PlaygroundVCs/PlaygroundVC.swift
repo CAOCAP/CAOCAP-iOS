@@ -69,6 +69,9 @@ class PlaygroundVC: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Start the Node.js server in a background thread
+        NodeJSManager.shared.startNodeServerInBackground()
+        
         // Set up gesture recognizer for resizing the web view
         let resizeGR = UIPanGestureRecognizer(target: self, action: #selector(handleResizingWebView(sender:)))
         resizeIcon.addGestureRecognizer(resizeGR)
