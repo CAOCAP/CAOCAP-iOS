@@ -131,6 +131,9 @@
 		ECCA948F2C68E7FF0076AA6B /* ConActToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA948E2C68E7FF0076AA6B /* ConActToolKit.swift */; };
 		ECCA94912C68E8610076AA6B /* StyleToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94902C68E8600076AA6B /* StyleToolKit.swift */; };
 		ECCA94932C68E87D0076AA6B /* ValueToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94922C68E87D0076AA6B /* ValueToolKit.swift */; };
+		ECDB65B22C72FA8D00F63CDF /* NodeJSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB65B12C72FA8D00F63CDF /* NodeJSManager.swift */; };
+		ECDB65B42C72FABC00F63CDF /* NodeMobile.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECDB65B32C72FABC00F63CDF /* NodeMobile.xcframework */; };
+		ECDB65B52C72FABC00F63CDF /* NodeMobile.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ECDB65B32C72FABC00F63CDF /* NodeMobile.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ECF48ED22C705A2D008808B0 /* StoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF48ED12C705A2D008808B0 /* StoreVC.swift */; };
 		ECF48ED52C70989C008808B0 /* OpenAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECF48ED42C70989C008808B0 /* OpenAI-Info.plist */; };
 		ECF48ED72C709A51008808B0 /* OpenAIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF48ED62C709A51008808B0 /* OpenAIManager.swift */; };
@@ -157,6 +160,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				ECB40BCE2C5113B500818E9C /* RealmSwift in Embed Frameworks */,
+				ECDB65B52C72FABC00F63CDF /* NodeMobile.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +285,8 @@
 		ECCA948E2C68E7FF0076AA6B /* ConActToolKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConActToolKit.swift; sourceTree = "<group>"; };
 		ECCA94902C68E8600076AA6B /* StyleToolKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleToolKit.swift; sourceTree = "<group>"; };
 		ECCA94922C68E87D0076AA6B /* ValueToolKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueToolKit.swift; sourceTree = "<group>"; };
+		ECDB65B12C72FA8D00F63CDF /* NodeJSManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeJSManager.swift; sourceTree = "<group>"; };
+		ECDB65B32C72FABC00F63CDF /* NodeMobile.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NodeMobile.xcframework; path = "../../Downloads/nodejs-mobile-v18.17.2-ios/NodeMobile.xcframework"; sourceTree = "<group>"; };
 		ECF48ED12C705A2D008808B0 /* StoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreVC.swift; sourceTree = "<group>"; };
 		ECF48ED42C70989C008808B0 /* OpenAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenAI-Info.plist"; sourceTree = "<group>"; };
 		ECF48ED62C709A51008808B0 /* OpenAIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIManager.swift; sourceTree = "<group>"; };
@@ -307,6 +313,7 @@
 				213DF5E32A5886B300679BB2 /* ReSwift in Frameworks */,
 				21AF3CA52A67E44B002E96E3 /* SnapKit in Frameworks */,
 				21C21C522A34B7C400F40BE3 /* IQKeyboardManagerSwift in Frameworks */,
+				ECDB65B42C72FABC00F63CDF /* NodeMobile.xcframework in Frameworks */,
 				2106C4182A5C997A00446620 /* FirebaseAnalytics in Frameworks */,
 				2106C41A2A5C997A00446620 /* FirebaseCrashlytics in Frameworks */,
 				213DF5E02A5883D300679BB2 /* SwiftSoup in Frameworks */,
@@ -450,6 +457,7 @@
 		21534DA42A5AFF8E00E8078B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ECDB65B32C72FABC00F63CDF /* NodeMobile.xcframework */,
 				21534DA52A5AFF8F00E8078B /* AdSupport.framework */,
 			);
 			name = Frameworks;
@@ -478,6 +486,7 @@
 		2189F32D2AFFA17A00FEB125 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				ECDB65B12C72FA8D00F63CDF /* NodeJSManager.swift */,
 				ECF48ED62C709A51008808B0 /* OpenAIManager.swift */,
 				2196065E2AA82E700099FC14 /* KeyboardManager.swift */,
 				2175FBE12A648D0700F7E97F /* LottieManager.swift */,
@@ -1025,6 +1034,7 @@
 				21AF3CC82A6B70F1002E96E3 /* ProjectLinkVC.swift in Sources */,
 				21534D9B2A59CD2B00E8078B /* ChartsVC.swift in Sources */,
 				211FEA502C2FC84E000150FD /* ViewController.swift in Sources */,
+				ECDB65B22C72FA8D00F63CDF /* NodeJSManager.swift in Sources */,
 				21AF3CD52A6BE315002E96E3 /* String+Extensions.swift in Sources */,
 				2184CCFA2A522E6200B39882 /* IntroVC.swift in Sources */,
 				21AF3CCA2A6B7107002E96E3 /* ProjectScriptVC.swift in Sources */,
