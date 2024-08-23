@@ -45,57 +45,29 @@ class NodeJSManager {
     
     /// Starts a simple Node.js HTTP server on a background thread
     func startNodeServerInBackground() {
-        let nodeArguments = [
-            "node",
-            "-e",
-            """
-            var http = require('http');
-            var versions_server = http.createServer((request, response) => {
-                response.end('Versions: ' + JSON.stringify(process.versions));
-            });
-            versions_server.listen(3000);
-            """
-        ]
-        
-        // Run Node.js server in a background thread to keep the UI responsive
-        let nodejsThread = Thread {
-            self.startNodeJS(withArguments: nodeArguments)
-        }
-        
-        // Set stack size for Node.js thread
-        nodejsThread.stackSize = 2 * 1024 * 1024  // 2MB of stack space
-        
-        // Start the thread
-        nodejsThread.start()
-    }
-    
-    func startNodeServerWithBabelInBackground() {
-        guard let babelStandalonePath = Bundle.main.path(forResource: "babel", ofType: "js", inDirectory: "NodeScripts"),  // Notice it's now "js" not "min.js"
-              let transpilePath = Bundle.main.path(forResource: "babel_transpile", ofType: "js", inDirectory: "NodeScripts") else {
-            print("Error: Could not find Babel Standalone or transpile script.")
+        guard let transpilePath = Bundle.main.path(forResource: "main", ofType: "js", inDirectory: "NodeScripts") else {
+            print("Error: Could not find main.js file.")
             return
         }
-
+        
         do {
-            let babelStandaloneCode = try String(contentsOfFile: babelStandalonePath)
-            let transpileCode = try String(contentsOfFile: transpilePath)
-
-            let combinedCode = """
-            \(babelStandaloneCode)
-            global.Babel = Babel;
-            \(transpileCode)
-            """
-
-            let nodeArguments = ["node", "-e", combinedCode]
-
+            let mainJSCode = try String(contentsOfFile: transpilePath)
+            
+            let nodeArguments = ["node", "-e", mainJSCode]
+            
+            // Run Node.js server in a background thread to keep the UI responsive
             let nodejsThread = Thread {
                 self.startNodeJS(withArguments: nodeArguments)
             }
-
+            
+            // Set stack size for Node.js thread
             nodejsThread.stackSize = 2 * 1024 * 1024  // 2MB of stack space
+            
+            // Start the thread
             nodejsThread.start()
         } catch {
             print("Error: Could not load JavaScript files: \(error)")
         }
+        
     }
 }
