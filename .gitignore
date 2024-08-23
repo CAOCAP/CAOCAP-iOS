@@ -2,6 +2,9 @@
 OpenAI-info.plist
 GoogleService-Info.plist
 
+### NodeMobile Specific ###
+libnode/NodeMobile.xcframework/
+
 ### macOS Specific ###
 # System-generated files and directories on macOS
 .DS_Store

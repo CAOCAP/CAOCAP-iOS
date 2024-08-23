@@ -2331,7 +2331,7 @@ There are no other in-app purchases.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="User" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PVA-xc-Hdu">
-                                                <rect key="frame" x="50.333333333333314" y="0.0" width="280" height="44.666666666666664"/>
+                                                <rect key="frame" x="50.333333333333314" y="0.0" width="279.99999999999994" height="44.666666666666664"/>
                                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="35"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="nickname"/>

@@ -37,7 +37,7 @@ class OpenAIManager {
     ///   - prompt: The text prompt to send to the OpenAI API for generating a completion.
     ///   - completion: A closure that is called with the API's response, which is either a generated completion string or `nil` in case of an error.
     func generateCompletion(for prompt: String, completion: @escaping (String?) -> Void) {
-        let query = CompletionsQuery(model: ., prompt: prompt, temperature: 0, maxTokens: 100, topP: 1, frequencyPenalty: 0, presencePenalty: 0, stop: ["\\n"])
+        let query = CompletionsQuery(model: .gpt3_5Turbo, prompt: prompt, temperature: 0, maxTokens: 100, topP: 1, frequencyPenalty: 0, presencePenalty: 0, stop: ["\\n"])
         
         openAI.completions(query: query) { result in
             switch result {
