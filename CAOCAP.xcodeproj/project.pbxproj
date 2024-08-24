@@ -116,6 +116,8 @@
 		EC9B89232C6F00BC00FD516F /* SpaceScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9B89222C6F00BC00FD516F /* SpaceScene.swift */; };
 		ECB40BCD2C51125300818E9C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECB40BCC2C51125300818E9C /* RealmSwift */; };
 		ECB40BCE2C5113B500818E9C /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = ECB40BCC2C51125300818E9C /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		ECC44E322C7987FF0040D587 /* NodeMobile.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC44E312C7987FF0040D587 /* NodeMobile.xcframework */; };
+		ECC44E332C7987FF0040D587 /* NodeMobile.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ECC44E312C7987FF0040D587 /* NodeMobile.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ECCA419D2C6696EA0076A4EA /* UIFlowChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA419C2C6696EA0076A4EA /* UIFlowChart.swift */; };
 		ECCA419F2C6697BF0076A4EA /* UIFlowChartNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA419E2C6697BF0076A4EA /* UIFlowChartNode.swift */; };
 		ECCA41A32C6698A30076A4EA /* UIFlowChartStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA41A22C6698A30076A4EA /* UIFlowChartStroke.swift */; };
@@ -133,8 +135,6 @@
 		ECCA94912C68E8610076AA6B /* StyleToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94902C68E8600076AA6B /* StyleToolKit.swift */; };
 		ECCA94932C68E87D0076AA6B /* ValueToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94922C68E87D0076AA6B /* ValueToolKit.swift */; };
 		ECDB65B22C72FA8D00F63CDF /* NodeJSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB65B12C72FA8D00F63CDF /* NodeJSManager.swift */; };
-		ECDB65B42C72FABC00F63CDF /* NodeMobile.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECDB65B32C72FABC00F63CDF /* NodeMobile.xcframework */; };
-		ECDB65B52C72FABC00F63CDF /* NodeMobile.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ECDB65B32C72FABC00F63CDF /* NodeMobile.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ECDB80962C73056000F63CDF /* NodeScripts in Resources */ = {isa = PBXBuildFile; fileRef = ECDB80952C73056000F63CDF /* NodeScripts */; };
 		ECF48ED22C705A2D008808B0 /* StoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF48ED12C705A2D008808B0 /* StoreVC.swift */; };
 		ECF48ED52C70989C008808B0 /* OpenAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ECF48ED42C70989C008808B0 /* OpenAI-Info.plist */; };
@@ -162,7 +162,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				ECB40BCE2C5113B500818E9C /* RealmSwift in Embed Frameworks */,
-				ECDB65B52C72FABC00F63CDF /* NodeMobile.xcframework in Embed Frameworks */,
+				ECC44E332C7987FF0040D587 /* NodeMobile.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +272,7 @@
 		EC9B891D2C6D7E6700FD516F /* DaisyUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaisyUI.swift; sourceTree = "<group>"; };
 		EC9B891F2C6F000500FD516F /* Space.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Space.sks; sourceTree = "<group>"; };
 		EC9B89222C6F00BC00FD516F /* SpaceScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceScene.swift; sourceTree = "<group>"; };
+		ECC44E312C7987FF0040D587 /* NodeMobile.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NodeMobile.xcframework; path = "../nodejs-mobile-v18.17.2-ios/NodeMobile.xcframework"; sourceTree = "<group>"; };
 		ECCA419C2C6696EA0076A4EA /* UIFlowChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChart.swift; sourceTree = "<group>"; };
 		ECCA419E2C6697BF0076A4EA /* UIFlowChartNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChartNode.swift; sourceTree = "<group>"; };
 		ECCA41A22C6698A30076A4EA /* UIFlowChartStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChartStroke.swift; sourceTree = "<group>"; };
@@ -289,7 +290,6 @@
 		ECCA94902C68E8600076AA6B /* StyleToolKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleToolKit.swift; sourceTree = "<group>"; };
 		ECCA94922C68E87D0076AA6B /* ValueToolKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueToolKit.swift; sourceTree = "<group>"; };
 		ECDB65B12C72FA8D00F63CDF /* NodeJSManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeJSManager.swift; sourceTree = "<group>"; };
-		ECDB65B32C72FABC00F63CDF /* NodeMobile.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NodeMobile.xcframework; path = "../../Downloads/nodejs-mobile-v18.17.2-ios/NodeMobile.xcframework"; sourceTree = "<group>"; };
 		ECDB80952C73056000F63CDF /* NodeScripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NodeScripts; sourceTree = "<group>"; };
 		ECF48ED12C705A2D008808B0 /* StoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreVC.swift; sourceTree = "<group>"; };
 		ECF48ED42C70989C008808B0 /* OpenAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenAI-Info.plist"; sourceTree = "<group>"; };
@@ -317,7 +317,7 @@
 				213DF5E32A5886B300679BB2 /* ReSwift in Frameworks */,
 				21AF3CA52A67E44B002E96E3 /* SnapKit in Frameworks */,
 				21C21C522A34B7C400F40BE3 /* IQKeyboardManagerSwift in Frameworks */,
-				ECDB65B42C72FABC00F63CDF /* NodeMobile.xcframework in Frameworks */,
+				ECC44E322C7987FF0040D587 /* NodeMobile.xcframework in Frameworks */,
 				2106C4182A5C997A00446620 /* FirebaseAnalytics in Frameworks */,
 				2106C41A2A5C997A00446620 /* FirebaseCrashlytics in Frameworks */,
 				213DF5E02A5883D300679BB2 /* SwiftSoup in Frameworks */,
@@ -462,7 +462,7 @@
 		21534DA42A5AFF8E00E8078B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ECDB65B32C72FABC00F63CDF /* NodeMobile.xcframework */,
+				ECC44E312C7987FF0040D587 /* NodeMobile.xcframework */,
 				21534DA52A5AFF8F00E8078B /* AdSupport.framework */,
 			);
 			name = Frameworks;
