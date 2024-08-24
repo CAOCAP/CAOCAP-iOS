@@ -1,9 +1,6 @@
 # Ignore the OpenAI and GoogleService file to keep it out of version control
-OpenAI-info.plist
+OpenAI-Info.plist
 GoogleService-Info.plist
-
-### NodeMobile Specific ###
-libnode/NodeMobile.xcframework/
 
 ### macOS Specific ###
 # System-generated files and directories on macOS
@@ -28,6 +25,7 @@ Temporary Items
 
 ### Xcode Specific ###
 # User-specific settings and project data that shouldn't be tracked
+.DS_Store
 xcuserdata/
 *.xcscmblueprint
 *.xccheckout
