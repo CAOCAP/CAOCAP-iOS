@@ -38,7 +38,7 @@ class UICanvas: UIScrollView, UIScrollViewDelegate {
     /// Configures the scroll view properties and layout.
     private func setupScrollView() {
         translatesAutoresizingMaskIntoConstraints = false
-        minimumZoomScale = 0.3
+        minimumZoomScale = 0.03
         maximumZoomScale = 3.0
         zoomScale = 0.5
         contentInset = UIEdgeInsets(top: 200, left: 100, bottom: 200, right: 100)
@@ -71,7 +71,7 @@ class UICanvas: UIScrollView, UIScrollViewDelegate {
     func expandCanvasIfNeeded() {
         canvas.layoutIfNeeded()
         canvas.subviews.forEach { view in
-            if view.frame.maxY > canvasHeightConstraint.constant{
+            if view.frame.maxY > canvasHeightConstraint.constant - 300 {
                 canvasHeightConstraint.constant += 50
             }
             
@@ -142,7 +142,15 @@ class UICanvas: UIScrollView, UIScrollViewDelegate {
     ///
     /// - Parameter scrollView: The scroll view that has zoomed.
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
-        // TODO: Consider centering the canvas after zooming if needed.
+        // Calculate the horizontal and vertical offsets to center the content in the scroll view
+        // if the content is smaller than the scroll view's visible area after zooming.
+        // If the content is larger, the offset is set to 0, keeping the content aligned to the edges.
+        let offsetX = max((scrollView.bounds.width - scrollView.contentSize.width) * 0.5, 0)
+        let offsetY = max((scrollView.bounds.height - scrollView.contentSize.height) * 0.5, 0)
+        
+        // Set the contentInset property to apply the calculated offsets,
+        // ensuring the content remains centered within the scroll view.
+        scrollView.contentInset = UIEdgeInsets(top: offsetY, left: offsetX, bottom: 0, right: 0)
     }
     
 }

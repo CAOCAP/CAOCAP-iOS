@@ -177,7 +177,8 @@ class UIMindMap: UICanvas {
         print("Current Selected Node ID: \(elementID)")
         if let selectedNodeView = nodeTree[elementID] {
             selectedNodeView.layer.borderWidth = 2
-            zoom(to: zoomRect(scale: 1.5, center: CGPoint(x: selectedNodeView.frame.midX, y: selectedNodeView.frame.midY)), animated: true)
+            print("canvas.frame.size:", canvas.frame.size)
+            zoom(to: zoomRect(scale:  1.5, center: CGPoint(x: selectedNodeView.frame.midX, y: selectedNodeView.frame.midY + 50)), animated: true)
             
         }
         if let previousNodeView = nodeTree[previouslySelectedID] {
