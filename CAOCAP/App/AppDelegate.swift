@@ -6,6 +6,10 @@
 //
 
 import UIKit
+import FirebaseAppCheck
+import FirebaseCore
+//import FirebaseAppCheck
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,8 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         RealmRepository.shared.configuration()
         FirebaseRepository.shared.configuration()
         let _ = KeyboardManager.shared
+//        let providFactory = AppCheckDebugProviderFactory()
+//        AppCheck.setAppCheckProviderFactory(providFactory)
         
-        return true
+       // FirebaseApp.configure()
+        
+                return true
     }
 
     // MARK: UISceneSession Lifecycle

@@ -2331,7 +2331,7 @@ There are no other in-app purchases.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="User" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PVA-xc-Hdu">
-                                                <rect key="frame" x="50.333333333333314" y="0.0" width="279.99999999999994" height="44.666666666666664"/>
+                                                <rect key="frame" x="50.333333333333314" y="0.0" width="280" height="44.666666666666664"/>
                                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="35"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="nickname"/>
@@ -3976,11 +3976,11 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         <viewControllerLayoutGuide type="bottom" id="BZ1-JO-Xf0"/>
                     </layoutGuides>
                     <view key="view" hidden="YES" contentMode="scaleToFill" id="Jr5-ea-yjk">
-                        <rect key="frame" x="0.0" y="0.0" width="360" height="255"/>
+                        <rect key="frame" x="0.0" y="0.0" width="360" height="253"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="BcG-wx-hZR">
-                                <rect key="frame" x="0.0" y="0.0" width="360" height="255"/>
+                                <rect key="frame" x="0.0" y="0.0" width="360" height="253"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1UO-Ji-1bM">
@@ -3997,7 +3997,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view alpha="0.85000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTQ-R8-Or8">
-                                        <rect key="frame" x="0.0" y="0.0" width="360" height="255"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="253"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -4006,7 +4006,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4AU-IJ-Rbu">
-                                        <rect key="frame" x="15" y="34" width="330" height="187"/>
+                                        <rect key="frame" x="15" y="34" width="330" height="185"/>
                                         <subviews>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="YJx-xv-sLL">
                                                 <rect key="frame" x="0.0" y="0.0" width="330" height="31"/>
@@ -4097,7 +4097,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fLO-gK-qTB">
-                                                <rect key="frame" x="0.0" y="40" width="330" height="147"/>
+                                                <rect key="frame" x="0.0" y="40" width="330" height="145"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GwO-ji-2Fb">
                                                         <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
@@ -4122,7 +4122,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                         </subviews>
                                                     </stackView>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RBd-YM-1xz">
-                                                        <rect key="frame" x="0.0" y="44" width="330" height="103"/>
+                                                        <rect key="frame" x="0.0" y="44" width="330" height="101"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <prototypes>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="g9D-li-hVh" customClass="ComponentTableViewCell" customModule="CAOCAP" customModuleProvider="target">
@@ -4189,7 +4189,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                                                 </subviews>
                                             </stackView>
                                             <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="u4s-uU-E3G">
-                                                <rect key="frame" x="0.0" y="187" width="330" height="44"/>
+                                                <rect key="frame" x="0.0" y="185" width="330" height="44"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vVa-4I-UW2">
                                                         <rect key="frame" x="0.0" y="0.0" width="330" height="34"/>
@@ -4316,7 +4316,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                             </view>
                         </subviews>
                     </view>
-                    <size key="freeformSize" width="360" height="255"/>
+                    <size key="freeformSize" width="360" height="253"/>
                     <connections>
                         <outlet property="toolKitStackView" destination="4AU-IJ-Rbu" id="7lS-3M-2yB"/>
                         <outlet property="uiLibraryCollectionView" destination="x4N-Hh-pWh" id="MXw-go-Yr1"/>
@@ -4324,7 +4324,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6wp-nC-hrZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3626" y="-48"/>
+            <point key="canvasLocation" x="-3626.1538461538462" y="-48.696682464454973"/>
         </scene>
         <!--Attributes Tool Kit-->
         <scene sceneID="H2Y-te-g6b">
@@ -6005,7 +6005,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
             <color red="0.0" green="0.65499997138977051" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="AccentColor">
-            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.49399998784065247" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
