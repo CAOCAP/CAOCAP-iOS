@@ -9,6 +9,7 @@ import Foundation
 import Firebase
 import FirebaseAuth
 import FirebaseDatabase
+import FirebaseAppCheck
 
 // MARK: - Firebase References
 fileprivate let database: DatabaseReference = Database.database().reference()
@@ -21,7 +22,10 @@ final class FirebaseRepository {
     
     
     func configuration() {
+        let providFactory = AppCheckDebugProviderFactory()
+        AppCheck.setAppCheckProviderFactory(providFactory)
         FirebaseApp.configure()
+      
         anonymousAuth()
     }
     

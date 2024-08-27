@@ -21,6 +21,7 @@ final class MainCoordinator: Coordinator {
         
         navigationVC.viewControllers = [HomeVC.instantiate(),
                                         ChartsVC.instantiate(),
+                                       // ChartsCo.instantiate(),
                                         ProjectsListVC.instantiate(),
                                         MainSettingsVC.instantiate()]
         

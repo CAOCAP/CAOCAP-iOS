@@ -20,3 +20,13 @@ class ChartsVC: ContainerVC, Storyboarded {
     }
 
 }
+//class ChartsCo: ContainerVC, Storyboarded {
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        
+//        viewControllers = [UIHostingController(rootView: Co_CaptainAI())]
+//        
+//    }
+//
+//}

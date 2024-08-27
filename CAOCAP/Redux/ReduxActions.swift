@@ -42,3 +42,4 @@ struct UpdateAction: Action { let handler: ()->Void }  // call this action befor
 struct WillEditAction: Action {}
 struct UndoAction: Action {}
 struct RedoAction: Action {}
+struct CoCaptan : Action {}
