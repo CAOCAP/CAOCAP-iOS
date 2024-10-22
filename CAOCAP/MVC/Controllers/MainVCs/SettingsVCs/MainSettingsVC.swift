@@ -16,7 +16,7 @@ class MainSettingsVC: SettingsVC {
         sections = [
             Section(title: "Main", options: [
                 
-                 /*
+                 
                 .staticCell(option: SettingsOption(title: "Language", icon: UIImage(systemName: "globe"), color: .systemPink, label: "English", handler: {
                     print("did press")
                     
@@ -29,7 +29,7 @@ class MainSettingsVC: SettingsVC {
                     print("did press")
                     
                 })),
-                 */
+                 
                 
                 .staticCell(option: SettingsOption(title: "What's New?", icon: UIImage(systemName: "sparkles"), color: .systemYellow, label: "v5.0.2", handler: {
                     self.coordinator.viewWhatsNewVC()
@@ -53,41 +53,36 @@ class MainSettingsVC: SettingsVC {
                 })),
             ]),
             
-            /*
+            
             Section(title: "contact", options: [
                 .staticCell(option: SettingsOption(title: "Help", icon: UIImage(systemName: "questionmark.circle.fill"), color: .systemTeal, handler: {
-                    guard let coordinator = self.coordinator else { return }
-                    coordinator.viewHelp()
+                    self.coordinator.viewHelp()
                     
                 })),
                 .staticCell(option: SettingsOption(title: "Support", icon: UIImage(systemName: "message.fill"), color: .systemMint, handler: {
-                    guard let coordinator = self.coordinator else { return }
-                    coordinator.viewSupport()
+                    self.coordinator.viewSupport()
                     
                 })),
                 .staticCell(option: SettingsOption(title: "Send Feedback", icon: UIImage(systemName: "paperplane.fill"), color: .systemGreen, handler: {
-                    guard let coordinator = self.coordinator else { return }
-                    coordinator.viewSendFeedback()
+                    self.coordinator.viewSendFeedback()
                     
                 })),
             ]),
              
-             */
+             
             
             Section(title: "Info", options: [
                 
-                /*
+                
                 .staticCell(option:SettingsOption(title: "Privacy Policy", icon: UIImage(systemName: "lock.shield.fill"), color: .systemGray, handler: {
-                    guard let coordinator = self.coordinator else { return }
-                    coordinator.viewPrivacyPolicy()
+                    self.coordinator.viewPrivacyPolicy()
                     
                 })),
                 .staticCell(option:SettingsOption(title: "Terms Of Use", icon: UIImage(systemName: "doc.on.clipboard.fill"), color: .systemGray, handler: {
-                    guard let coordinator = self.coordinator else { return }
-                    coordinator.viewTermsOfUse()
+                    self.coordinator.viewTermsOfUse()
                     
                 })),
-                 */
+                 
                  
                 .staticCell(option:SettingsOption(title: "About Us", icon: UIImage(systemName: "info.circle.fill"), color: .systemGray2, handler: {
                     self.coordinator.viewAboutUs()
