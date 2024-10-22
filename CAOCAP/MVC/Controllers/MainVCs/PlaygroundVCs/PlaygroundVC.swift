@@ -332,6 +332,16 @@ class PlaygroundVC: UIViewController, Storyboarded {
         self.present(vc, animated: true)
     }
     
+    @IBAction func didPressPublish(_ sender: UIButton) {
+        //TODO: present the PublishVC
+        let vc = PublishVC.instantiate()
+        self.present(vc, animated: true)
+    }
+    
+    @IBAction func didPressSave(_ sender: UIButton) {
+        //TODO: present a VC
+    }
+    
     @IBAction func didPressStore(_ sender: UIButton) {
         let vc = StoreVC.instantiate()
         self.present(vc, animated: true)

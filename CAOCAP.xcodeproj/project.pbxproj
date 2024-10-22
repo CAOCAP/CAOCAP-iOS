@@ -106,7 +106,7 @@
 		21E148132A7F639400B503C2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E148122A7F639400B503C2 /* User.swift */; };
 		21E148152A82031D00B503C2 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E148142A82031D00B503C2 /* Challenge.swift */; };
 		21FF62032AB263AB0003D064 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FF62022AB263AB0003D064 /* AppConstants.swift */; };
-		37E5A1252C74E77200F0C158 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E5A1242C74E77200F0C158 /* Test.swift */; };
+		EC1A79472CC7EB4D00731014 /* PublishVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A79462CC7EB4D00731014 /* PublishVC.swift */; };
 		EC65ECC62C6F581400858FCF /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65ECC52C6F581400858FCF /* Typealias.swift */; };
 		EC7B11832C5223D40020ECE4 /* CodePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7B11822C5223D40020ECE4 /* CodePreviewVC.swift */; };
 		EC9B891A2C6C400A00FD516F /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9B89192C6C400A00FD516F /* HelperFunctions.swift */; };
@@ -263,7 +263,7 @@
 		21E148122A7F639400B503C2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		21E148142A82031D00B503C2 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		21FF62022AB263AB0003D064 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
-		37E5A1242C74E77200F0C158 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		EC1A79462CC7EB4D00731014 /* PublishVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishVC.swift; sourceTree = "<group>"; };
 		EC65ECC52C6F581400858FCF /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
 		EC7B11822C5223D40020ECE4 /* CodePreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePreviewVC.swift; sourceTree = "<group>"; };
 		EC7B11842C524EFF0020ECE4 /* Subscriptions.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Subscriptions.storekit; sourceTree = "<group>"; };
@@ -454,7 +454,6 @@
 				21E3A2102B0119AE0041A561 /* UIKit */,
 				EC9B89212C6F008100FD516F /* SpriteKit */,
 				21E3A2112B0119D40041A561 /* SwiftUI */,
-				37E5A1242C74E77200F0C158 /* Test.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -804,6 +803,7 @@
 			children = (
 				218DA9CC2A2B205800459C61 /* PlaygroundVC.swift */,
 				ECF48ED82C70A1F2008808B0 /* CoCaptainVC.swift */,
+				EC1A79462CC7EB4D00731014 /* PublishVC.swift */,
 				EC7B11822C5223D40020ECE4 /* CodePreviewVC.swift */,
 				215DE72A2B527BC100546394 /* FullScreenWebViewVC.swift */,
 				21AF3CD32A6B717A002E96E3 /* ProjectVCs */,
@@ -1002,7 +1002,6 @@
 				EC7B11832C5223D40020ECE4 /* CodePreviewVC.swift in Sources */,
 				21C21C4F2A34B62E00F40BE3 /* PaletteVC.swift in Sources */,
 				21AF3CB22A6B20DF002E96E3 /* CreditsVC.swift in Sources */,
-				37E5A1252C74E77200F0C158 /* Test.swift in Sources */,
 				212E2B1B2A745BBD00125C50 /* UIColor+Extensions.swift in Sources */,
 				21E148132A7F639400B503C2 /* User.swift in Sources */,
 				214995262A5C3414008B9987 /* ReduxReducer.swift in Sources */,
@@ -1033,6 +1032,7 @@
 				21AF3CBC2A6B2170002E96E3 /* SupportVC.swift in Sources */,
 				215DE72B2B527BC100546394 /* FullScreenWebViewVC.swift in Sources */,
 				2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */,
+				EC1A79472CC7EB4D00731014 /* PublishVC.swift in Sources */,
 				ECCA94872C68D9F70076AA6B /* UIStyleSheetStroke.swift in Sources */,
 				21A861D82A78D2C4004D36A3 /* WhatsNewVC.swift in Sources */,
 				ECCA94892C68E5B20076AA6B /* AttributesToolKit.swift in Sources */,
