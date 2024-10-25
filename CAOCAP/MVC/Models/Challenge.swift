@@ -10,10 +10,10 @@ import Foundation
 class Challenge {
     let title: String
     let description: String
-    let regex: Regex<(Substring, Substring, Substring)>
+    let regex: Regex<AnyRegexOutput>
     var isComplete: Bool
     
-    init(title: String, description: String, regex: Regex<(Substring, Substring, Substring)>, isComplete: Bool = false) {
+    init(title: String, description: String, regex: Regex<AnyRegexOutput>, isComplete: Bool = false) {
         self.title = title
         self.description = description
         self.regex = regex

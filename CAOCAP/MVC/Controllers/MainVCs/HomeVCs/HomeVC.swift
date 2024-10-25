@@ -14,6 +14,7 @@ import Popovers
 class HomeVC: UIViewController, Storyboarded {
     
     var user: User?
+    var challenges: [Challenge]?
     
     @IBOutlet weak var welcomingLabel: UILabel!
     @IBOutlet weak var uidLabel: UILabel!
@@ -78,7 +79,7 @@ class HomeVC: UIViewController, Storyboarded {
     
     func setupStackView() {
         var squares = [UIView]()
-        let commitHistory = UserDefaults.standard.getCommitHistory()
+        let commitHistory = UserDefaults.standard.getCommitHistory() //TODO: this should be comming from firebase 🙄
         
         for _ in 0...16 {
             let stack = UIStackView()
@@ -96,7 +97,7 @@ class HomeVC: UIViewController, Storyboarded {
             stackView.addArrangedSubview(stack)
         }
         squares.reverse()
-        for commit in commitHistory {
+        for commit in commitHistory { //MARK: WOW this is smart 🤩 I like the logic
             if let numberOfDays = Calendar.current.dateComponents([.day], from: commit, to: .now).day {
                 if numberOfDays >= 0 && numberOfDays < squares.count {
                     let square = squares[numberOfDays]
@@ -124,10 +125,11 @@ class HomeVC: UIViewController, Storyboarded {
     
     
     @IBAction func didPressChallenge(_ sender: UIButton) {
-        let challenges = ["set a new web page title", "change <body> background color", "add an image with a source URL"]
+        guard let challenges = challenges, challenges.count > sender.tag else { return }
+        
         var popover = Popover {
             Templates.Container {
-                Text(challenges[sender.tag])
+                Text(challenges[sender.tag].description)
                     .frame(maxWidth: 150)
                     .lineLimit(5)
                     .scaledToFill()
@@ -200,11 +202,10 @@ extension HomeVC: StoreSubscriber {
             user = state.user
             guard let uid = user?.uid else { return }
             uidLabel.text = uid
-            FirebaseRepository.shared.getCommits(uid: uid)
         }
-
-        if let commits = state.commitHistory {
-            print(commits)
+        
+        if challenges == nil {
+            challenges = state.dailyChallenges
         }
         
         if state.isSubscribed {

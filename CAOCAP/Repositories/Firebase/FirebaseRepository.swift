@@ -36,6 +36,8 @@ final class FirebaseRepository {
         }
     }
     
+    //MARK: - Getting and Setting commit history from Firebase
+    //TODO: (this is incomplete)
     func commit(uid: String, value: String) {
         database.child("users").child(uid).setValue(["commit": value])
     }
