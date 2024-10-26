@@ -18,6 +18,7 @@ class HomeVC: UIViewController, Storyboarded {
     
     @IBOutlet weak var welcomingLabel: UILabel!
     @IBOutlet weak var uidLabel: UILabel!
+    @IBOutlet var badgeCounters: [UILabel]!
     @IBOutlet weak var badgesStackView: UIStackView!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var appVersion: UILabel!

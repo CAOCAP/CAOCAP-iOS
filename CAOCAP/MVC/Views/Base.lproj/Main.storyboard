@@ -1194,6 +1194,9 @@
                         <outlet property="stackView" destination="0Yd-XL-GPB" id="0T8-yy-F0Z"/>
                         <outlet property="uidLabel" destination="MkU-Vn-ajJ" id="Rdi-IX-GKR"/>
                         <outlet property="welcomingLabel" destination="b1v-jl-QoD" id="CHq-6B-GeX"/>
+                        <outletCollection property="badgeCounters" destination="hiX-sk-LoV" collectionClass="NSMutableArray" id="h2s-jI-zma"/>
+                        <outletCollection property="badgeCounters" destination="LCW-nd-H7v" collectionClass="NSMutableArray" id="kXd-7q-Rke"/>
+                        <outletCollection property="badgeCounters" destination="TfI-cA-64I" collectionClass="NSMutableArray" id="4Ks-Vl-SO6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aBE-Ww-O05" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -6062,7 +6065,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
             <color red="0.0" green="0.65499997138977051" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="AccentColor">
-            <color red="0.0" green="0.49399998784065247" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
