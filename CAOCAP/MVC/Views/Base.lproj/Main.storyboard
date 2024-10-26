@@ -1188,6 +1188,7 @@
                     <navigationItem key="navigationItem" id="7Zh-z8-o07"/>
                     <connections>
                         <outlet property="appVersion" destination="JKa-FB-Hq1" id="kgb-n2-Rpb"/>
+                        <outlet property="badgesStackView" destination="EtJ-Ej-QN5" id="LQU-u1-f1A"/>
                         <outlet property="proStackView" destination="f66-oM-JYI" id="XJt-C8-mwr"/>
                         <outlet property="purchaseButton" destination="Se3-lA-1P6" id="rwL-UV-oOV"/>
                         <outlet property="stackView" destination="0Yd-XL-GPB" id="0T8-yy-F0Z"/>

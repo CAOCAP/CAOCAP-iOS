@@ -18,6 +18,7 @@ class HomeVC: UIViewController, Storyboarded {
     
     @IBOutlet weak var welcomingLabel: UILabel!
     @IBOutlet weak var uidLabel: UILabel!
+    @IBOutlet weak var badgesStackView: UIStackView!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var appVersion: UILabel!
     @IBOutlet weak var purchaseButton: UIButton!
@@ -204,12 +205,19 @@ extension HomeVC: StoreSubscriber {
             uidLabel.text = uid
         }
         
-        if challenges == nil {
-            challenges = state.dailyChallenges
-        }
+        handleDailyChallenges(state.dailyChallenges)
+        
         
         if state.isSubscribed {
             setupProSubscriptionStatus()
+        }
+    }
+    
+    private func handleDailyChallenges(_ dailyChallenges: [Challenge]) {
+        if challenges == nil { challenges = dailyChallenges }
+
+        challenges?.enumerated().forEach { (index, challenge) in
+            badgesStackView.arrangedSubviews.reversed()[index].alpha = challenge.isComplete ? 1 : 0.3
         }
     }
 }
