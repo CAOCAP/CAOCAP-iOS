@@ -230,7 +230,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
         guard let currentToolKitCollection = [jsToolKitCollection,htmlToolKitCollection,cssToolKitCollection][canvasSegmentedControl.selectedSegmentIndex] else { return }
         currentToolKitCollection.previousIndex = currentToolKitCollection.currentIndex
         currentToolKitCollection.currentIndex = index
-        var animationDirection = currentToolKitCollection.currentIndex > currentToolKitCollection.previousIndex
+        let animationDirection = currentToolKitCollection.currentIndex > currentToolKitCollection.previousIndex
         if currentToolKitCollection.currentIndex < 0 {
             currentToolKitCollection.currentIndex = currentToolKitCollection.viewControllers.count - 1
         } else if currentToolKitCollection.currentIndex > currentToolKitCollection.viewControllers.count - 1 {

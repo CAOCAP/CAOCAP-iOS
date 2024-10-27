@@ -218,7 +218,14 @@ extension HomeVC: StoreSubscriber {
         if challenges == nil { challenges = dailyChallenges }
 
         challenges?.enumerated().forEach { (index, challenge) in
-            badgesStackView.arrangedSubviews.reversed()[index].alpha = challenge.isComplete ? 1 : 0.3
+            if challenge.isComplete {
+                badgeCounters[index].text = "1"
+                badgesStackView.arrangedSubviews.reversed()[index].alpha = 1
+            } else {
+                badgeCounters[index].text = "0"
+                badgesStackView.arrangedSubviews.reversed()[index].alpha = 0.3
+            }
+            
         }
     }
 }

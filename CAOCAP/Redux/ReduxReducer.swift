@@ -33,7 +33,6 @@ func reduxReducer(action: Action, state: ReduxState?) -> ReduxState {
         state.commitHistory = action.commits
         
     case let action as ChallengeCompletedAction:
-        state.dailyChallenges
         state.completeChallenges?.append(action.challenge)
         
     case _ as CreateProjectAction,
@@ -93,7 +92,7 @@ func projectReducer(action: Action, state: ReduxState?) -> ReduxState {
 
 
 func documentReducer(action: Action, state: ReduxState?) -> ReduxState {
-    var state = state ?? ReduxState()
+    let state = state ?? ReduxState()
     
     switch action {
     case let action as UpdateProjectLangAction:

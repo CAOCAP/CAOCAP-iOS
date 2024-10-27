@@ -102,17 +102,25 @@ class AttributesToolKit: ToolKitVC {
         idTextField.placeholder = project?.selectedElementID
     }
 
-    /// Updates the color wells based on the selected element's background and text colors.
+    /// Updates the color wells for background and text colors based on the selected element’s properties.
     ///
-    /// - Note: The color wells are currently commented out for future implementation.
+    /// This function retrieves the selected element's background and text colors, extracts the hex color codes,
+    /// and updates `backgroundColorWell` and `textColorWell` accordingly.
     private func updateColorWells() {
-        // TODO: update the backgroundColorWell & textColorWell selected color
-        if let backgroundColor = project?.getSelectedElementBackgroundColor() {
-            // backgroundColorWell.selectedColor = backgroundColor
+        // Update background color well
+        if let bgColorClassName = project?.getSelectedElementBackgroundColor(),
+           let backgroundColor = UIColor.color(from: bgColorClassName) {
+            backgroundColorWell.selectedColor = backgroundColor
+        }  else {
+            backgroundColorWell.selectedColor = .none
         }
         
-        if let textColor = project?.getSelectedElementTextColor() {
-            // textColorWell.selectedColor = textColor
+        // Update text color well
+        if let textColorClassName = project?.getSelectedElementTextColor(),
+           let textColor = UIColor.color(from: textColorClassName) {
+            textColorWell.selectedColor = textColor
+        } else {
+            textColorWell.selectedColor = .none
         }
     }
 
