@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="L4k-5f-aIV">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -11,6 +12,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Ubuntu-Bold.ttf">
+            <string>Ubuntu-Bold</string>
+        </array>
         <array key="Ubuntu-LightItalic.ttf">
             <string>Ubuntu-LightItalic</string>
         </array>
@@ -2818,25 +2822,69 @@ There are no other in-app purchases.</string>
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpaceSketchBG" translatesAutoresizingMaskIntoConstraints="NO" id="vSH-0S-HO2">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpaceSketchBG" translatesAutoresizingMaskIntoConstraints="NO" id="vSH-0S-HO2">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🎉" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5j1-oH-xHg">
-                                <rect key="frame" x="149" y="371.33333333333331" width="92" height="101.66666666666669"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="85"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="l6i-88-enF">
+                                <rect key="frame" x="30" y="173.33333333333334" width="330" height="497.66666666666663"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TbF-eG-KwN">
+                                        <rect key="frame" x="0.0" y="0.0" width="330" height="186.33333333333334"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've published your web app!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXa-DC-keB">
+                                                <rect key="frame" x="24.333333333333343" y="0.0" width="281.66666666666663" height="76.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="34"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations! Your web app has successfully launched. Now the world can explore what you've created!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1h-fc-mWB">
+                                                <rect key="frame" x="5" y="96.333333333333343" width="320" height="90"/>
+                                                <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="20"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🎉" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5j1-oH-xHg">
+                                        <rect key="frame" x="0.0" y="220.33333333333334" width="330" height="101.66666666666666"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="85"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✨ 10 Launch Points" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njo-ZH-M6P">
+                                        <rect key="frame" x="0.0" y="356" width="330" height="22.666666666666686"/>
+                                        <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="20"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nJv-Lq-fOU">
+                                        <rect key="frame" x="0.0" y="412.66666666666663" width="330" height="85"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zAx-R6-aAb">
+                                                <rect key="frame" x="0.0" y="0.0" width="330" height="38.666666666666664"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Open Web App">
+                                                    <fontDescription key="titleFontDescription" name="Ubuntu-Bold" family="Ubuntu" pointSize="22"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZY6-cF-aYZ">
+                                                <rect key="frame" x="0.0" y="46.666666666666629" width="330" height="38.333333333333343"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="Learn More"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5j1-oH-xHg" firstAttribute="centerY" secondItem="eF3-uH-qXm" secondAttribute="centerY" id="2tq-If-O4e"/>
+                            <constraint firstItem="l6i-88-enF" firstAttribute="centerX" secondItem="eF3-uH-qXm" secondAttribute="centerX" id="3s0-m9-sK9"/>
                             <constraint firstItem="vSH-0S-HO2" firstAttribute="top" secondItem="eF3-uH-qXm" secondAttribute="top" id="FjC-cx-Cqg"/>
+                            <constraint firstItem="l6i-88-enF" firstAttribute="leading" secondItem="eF3-uH-qXm" secondAttribute="leading" constant="30" id="WRz-rG-atd"/>
                             <constraint firstAttribute="trailing" secondItem="vSH-0S-HO2" secondAttribute="trailing" id="Yqr-uW-Ndq"/>
                             <constraint firstAttribute="bottom" secondItem="vSH-0S-HO2" secondAttribute="bottom" id="ipr-0X-spH"/>
                             <constraint firstItem="vSH-0S-HO2" firstAttribute="leading" secondItem="eF3-uH-qXm" secondAttribute="leading" id="msi-vH-b1c"/>
-                            <constraint firstItem="5j1-oH-xHg" firstAttribute="centerX" secondItem="eF3-uH-qXm" secondAttribute="centerX" id="rkg-h7-FWC"/>
+                            <constraint firstItem="l6i-88-enF" firstAttribute="centerY" secondItem="eF3-uH-qXm" secondAttribute="centerY" id="pkf-iV-KEE"/>
                         </constraints>
                     </view>
                 </viewController>
