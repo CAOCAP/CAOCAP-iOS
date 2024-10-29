@@ -34,7 +34,8 @@ class PlaygroundVC: UIViewController, Storyboarded {
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var redoButton: UIButton!
     
-    @IBOutlet weak var canvasSegmentedControl: UISegmentedControl!
+    @IBOutlet var ProgrammingLanguageButtonViews: [UIView]!
+    
     
     /// Tools view that contains the keyboard and other tools.
     @IBOutlet weak var toolsView: UIView!
@@ -192,12 +193,19 @@ class PlaygroundVC: UIViewController, Storyboarded {
     ///
     /// - Parameter sender: The segmented control that triggers this function.
     var previousCanvasIndex = 1
-    @IBAction func didChangeCanvasSegmentedControl(_ sender: UISegmentedControl) {
+    var currentCanvasIndex = 1
+    @IBAction func didChangeProgrammingLanguage(_ sender: UIButton) {
         let toolkitCollections = [jsToolKitCollection,htmlToolKitCollection,cssToolKitCollection]
-        guard let currentToolKitCollection = toolkitCollections[sender.selectedSegmentIndex],
+        currentCanvasIndex = sender.tag
+        guard let currentToolKitCollection = toolkitCollections[currentCanvasIndex],
               let previousToolKitCollection = toolkitCollections[previousCanvasIndex] else { return }
-        let currentCanvas = canvases[sender.selectedSegmentIndex], previousCanvas = canvases[previousCanvasIndex]
-        previousCanvasIndex = sender.selectedSegmentIndex
+        let currentCanvas = canvases[currentCanvasIndex],
+            previousCanvas = canvases[previousCanvasIndex]
+        
+        let currentProgrammingLanguageButtonView = ProgrammingLanguageButtonViews[currentCanvasIndex],
+            previousProgrammingLanguageButtonView = ProgrammingLanguageButtonViews[previousCanvasIndex],
+        
+        previousCanvasIndex = currentCanvasIndex
         toolsPageControl.currentPage = currentToolKitCollection.currentIndex
         guard let currentToolKitView = currentToolKitCollection.viewControllers[currentToolKitCollection.currentIndex].view,
               let previousToolKitView = previousToolKitCollection.viewControllers[previousToolKitCollection.currentIndex].view else { return }
@@ -207,6 +215,9 @@ class PlaygroundVC: UIViewController, Storyboarded {
         
         UIView.animate(withDuration: 0.2) {
             currentToolKitView.frame.origin.y = previousToolKitView.frame.origin.y
+            currentProgrammingLanguageButtonView.alpha = 1
+            previousProgrammingLanguageButtonView.alpha = 0.3
+            
         }
         
         UIView.animate(withDuration: 0.4) {
@@ -227,7 +238,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
     ///
     /// - Parameter index: The index of the ToolKit to transition to.
     func animateToToolKit(at index: Int) {
-        guard let currentToolKitCollection = [jsToolKitCollection,htmlToolKitCollection,cssToolKitCollection][canvasSegmentedControl.selectedSegmentIndex] else { return }
+        guard let currentToolKitCollection = [jsToolKitCollection,htmlToolKitCollection,cssToolKitCollection][currentCanvasIndex] else { return }
         currentToolKitCollection.previousIndex = currentToolKitCollection.currentIndex
         currentToolKitCollection.currentIndex = index
         let animationDirection = currentToolKitCollection.currentIndex > currentToolKitCollection.previousIndex
@@ -256,7 +267,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
     ///
     /// - Parameter sender: The page control that triggers this function.
     @IBAction func didPressToolsPageControl(_ sender: UIPageControl) {
-        guard let currentToolKitCollection = [jsToolKitCollection,htmlToolKitCollection,cssToolKitCollection][canvasSegmentedControl.selectedSegmentIndex] else { return }
+        guard let currentToolKitCollection = [jsToolKitCollection,htmlToolKitCollection,cssToolKitCollection][currentCanvasIndex] else { return }
         if sender.currentPage != currentToolKitCollection.currentIndex {
             animateToToolKit(at: sender.currentPage)
         }
@@ -271,7 +282,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
         if sender.state == .ended {
             switch sender.direction {
             case .right, .left:
-                guard let currentIndex = [jsToolKitCollection,htmlToolKitCollection,cssToolKitCollection][canvasSegmentedControl.selectedSegmentIndex]?.currentIndex else { return }
+                guard let currentIndex = [jsToolKitCollection,htmlToolKitCollection,cssToolKitCollection][currentCanvasIndex]?.currentIndex else { return }
                 animateToToolKit(at: sender.direction == .right ? currentIndex - 1 : currentIndex + 1)
             case .up:
                 if toolsViewHeightConstraint.constant == 40 {
