@@ -349,14 +349,6 @@ class PlaygroundVC: UIViewController, Storyboarded {
         self.present(vc, animated: true)
     }
     
-    @IBAction func didPressSave(_ sender: UIButton) {
-        //TODO: present a VC
-    }
-    
-    @IBAction func didPressStore(_ sender: UIButton) {
-        let vc = StoreVC.instantiate()
-        self.present(vc, animated: true)
-    }
     
     // MARK: - Undo/Redo Button Actions
     /// Dispatches an undo action to the Redux store.

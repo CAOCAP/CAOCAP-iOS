@@ -429,64 +429,33 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lkm-gV-mPV">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aYn-zy-Cvp">
                                         <rect key="frame" x="123" y="0.0" width="194" height="60"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="X4M-GW-XE7">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svT-AA-xSw">
                                                 <rect key="frame" x="0.0" y="0.0" width="93" height="60"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1G-P9-FH7">
-                                                        <rect key="frame" x="0.0" y="0.0" width="93" height="26"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="chevron.compact.up" catalog="system"/>
-                                                        <buttonConfiguration key="configuration" style="tinted" image="storefront" catalog="system">
-                                                            <color key="baseForegroundColor" systemColor="systemPinkColor"/>
-                                                            <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressStore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ccr-fJ-Dua"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emU-Zp-7tO">
-                                                        <rect key="frame" x="0.0" y="34" width="93" height="26"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="chevron.compact.up" catalog="system"/>
-                                                        <buttonConfiguration key="configuration" style="tinted" image="sdcard" catalog="system">
-                                                            <color key="baseForegroundColor" systemColor="systemYellowColor"/>
-                                                            <color key="baseBackgroundColor" systemColor="systemYellowColor"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FJ4-aR-GPT"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aYn-zy-Cvp">
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="chevron.compact.up" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="externaldrive.badge.icloud" catalog="system">
+                                                    <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didPressPublish:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M8Y-eI-T8d"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRl-En-F0M">
                                                 <rect key="frame" x="101" y="0.0" width="93" height="60"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRl-En-F0M">
-                                                        <rect key="frame" x="0.0" y="0.0" width="93" height="26"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="chevron.compact.up" catalog="system"/>
-                                                        <buttonConfiguration key="configuration" style="tinted" image="sparkles" catalog="system"/>
-                                                        <connections>
-                                                            <action selector="didPressCoCaptain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yqq-ah-Jak"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svT-AA-xSw">
-                                                        <rect key="frame" x="0.0" y="34" width="93" height="26"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="chevron.compact.up" catalog="system"/>
-                                                        <buttonConfiguration key="configuration" style="tinted" image="externaldrive.badge.icloud" catalog="system">
-                                                            <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
-                                                            <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressPublish:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M8Y-eI-T8d"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="chevron.compact.up" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="sparkles" catalog="system">
+                                                    <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didPressCoCaptain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yqq-ah-Jak"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="swv-AQ-sZO">
@@ -575,7 +544,6 @@
                         <outletCollection property="viewFinderViews" destination="9Me-nt-eKL" collectionClass="NSMutableArray" id="hyl-Ec-EpF"/>
                         <outletCollection property="viewFinderViews" destination="zkr-ys-dhB" collectionClass="NSMutableArray" id="aFU-Cj-gEx"/>
                         <outletCollection property="viewFinderViews" destination="wqA-La-Huu" collectionClass="NSMutableArray" id="YHs-y3-uAk"/>
-                        <outletCollection property="viewFinderViews" destination="lkm-gV-mPV" collectionClass="NSMutableArray" id="cg6-Cm-rZH"/>
                         <outletCollection property="ProgrammingLanguageButtonViews" destination="W2K-xe-LS4" collectionClass="NSMutableArray" id="Jaz-3f-UiX"/>
                         <outletCollection property="ProgrammingLanguageButtonViews" destination="6f5-hW-qIw" collectionClass="NSMutableArray" id="p8y-eb-Dj6"/>
                         <outletCollection property="ProgrammingLanguageButtonViews" destination="NCs-1B-63i" collectionClass="NSMutableArray" id="QZt-EG-Ivi"/>
@@ -6207,7 +6175,6 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
         <image name="play.rectangle" catalog="system" width="128" height="93"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="power" catalog="system" width="127" height="128"/>
-        <image name="sdcard" catalog="system" width="115" height="128"/>
         <image name="side-resize" width="600" height="600"/>
         <image name="slider.horizontal.3" catalog="system" width="128" height="99"/>
         <image name="sparkles" catalog="system" width="115" height="128"/>
