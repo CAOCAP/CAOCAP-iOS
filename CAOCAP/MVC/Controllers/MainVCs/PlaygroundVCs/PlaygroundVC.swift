@@ -191,44 +191,63 @@ class PlaygroundVC: UIViewController, Storyboarded {
     ///
     /// This function animates the transition between different canvases when the segmented control is changed.
     ///
-    /// - Parameter sender: The segmented control that triggers this function.
-    var previousCanvasIndex = 1
-    var currentCanvasIndex = 1
+    /// - Parameter sender: The button that triggers this function, representing a programming language.
+    var previousCanvasIndex = 1  // Index of the previously selected canvas
+    var currentCanvasIndex = 1   // Index of the currently selected canvas
+
     @IBAction func didChangeProgrammingLanguage(_ sender: UIButton) {
-        let toolkitCollections = [jsToolKitCollection,htmlToolKitCollection,cssToolKitCollection]
+        // Define the collection of toolkits for each programming language (JavaScript, HTML, CSS)
+        let toolkitCollections = [jsToolKitCollection, htmlToolKitCollection, cssToolKitCollection]
+        
+        // Update previous and current canvas indices based on the sender's tag
+        previousCanvasIndex = currentCanvasIndex
         currentCanvasIndex = sender.tag
+
+        // Retrieve the toolkit collections for the current and previous canvases
         guard let currentToolKitCollection = toolkitCollections[currentCanvasIndex],
               let previousToolKitCollection = toolkitCollections[previousCanvasIndex] else { return }
+        
+        // Retrieve the canvases for the current and previous selections
         let currentCanvas = canvases[currentCanvasIndex],
             previousCanvas = canvases[previousCanvasIndex]
         
+        // Retrieve the button views for the programming languages associated with the current and previous canvases
         let currentProgrammingLanguageButtonView = ProgrammingLanguageButtonViews[currentCanvasIndex],
-            previousProgrammingLanguageButtonView = ProgrammingLanguageButtonViews[previousCanvasIndex],
+            previousProgrammingLanguageButtonView = ProgrammingLanguageButtonViews[previousCanvasIndex]
         
-        previousCanvasIndex = currentCanvasIndex
+        // Update the page control to reflect the current toolkit's page index
         toolsPageControl.currentPage = currentToolKitCollection.currentIndex
+        
+        // Retrieve the views for the current and previous toolkits, ensuring they exist
         guard let currentToolKitView = currentToolKitCollection.viewControllers[currentToolKitCollection.currentIndex].view,
               let previousToolKitView = previousToolKitCollection.viewControllers[previousToolKitCollection.currentIndex].view else { return }
-        currentToolKitView.isHidden =  false
+        
+        // Prepare current toolkit view for display by unhiding it and setting its initial position
+        currentToolKitView.isHidden = false
         currentToolKitView.frame.origin.y = self.view.frame.height
+        
+        // Unhide the current canvas
         currentCanvas.isHidden = false
         
+        // Animate the transition for the toolkit views and button view opacity
         UIView.animate(withDuration: 0.2) {
+            // Move the current toolkit view into view and adjust button opacities
             currentToolKitView.frame.origin.y = previousToolKitView.frame.origin.y
             currentProgrammingLanguageButtonView.alpha = 1
             previousProgrammingLanguageButtonView.alpha = 0.3
-            
         }
         
+        // Continue the animation with a fade transition for the canvases and hide the previous toolkit view
         UIView.animate(withDuration: 0.4) {
             previousToolKitView.frame.origin.y = self.view.frame.height
-            currentCanvas.alpha = 1; previousCanvas.alpha = 0
+            currentCanvas.alpha = 1
+            previousCanvas.alpha = 0
         } completion: { _ in
+            // Hide the previous toolkit view after the animation completes
             previousToolKitView.isHidden = true
-            previousCanvas.isHidden = true
         }
-        
     }
+
     
     
     // MARK: - Animate ToolKit Transition
