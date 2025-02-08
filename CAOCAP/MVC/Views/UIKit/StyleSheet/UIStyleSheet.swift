@@ -49,7 +49,7 @@ class UIStyleSheet: UICanvas {
         print("\(#function)ing...")
         //TODO: - draw(_ element: Element)
         let nodeView = UIStyleSheetNode()
-        nodeTree["root"] = nodeView
+        nodeTree["styles"] = nodeView
         nodeView.delegate = self
         canvas.addSubview(nodeView)
         setNodePosition(nodeView)

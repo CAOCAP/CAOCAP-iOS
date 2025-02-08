@@ -57,7 +57,7 @@ class UIStyleSheetNode: UIView, UIContextMenuInteractionDelegate {
     private func setupLabel() {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 60))
         label.textAlignment = .center
-        label.text = "root"
+        label.text = "styles"
         label.textColor = .white
         label.font = UIFont.ubuntu(.medium, size: 20)
         addSubview(label)
@@ -88,7 +88,7 @@ class UIStyleSheetNode: UIView, UIContextMenuInteractionDelegate {
         return UIContextMenuConfiguration(actionProvider:  { _ in
             return UIMenu(options: [.displayInline], children: [UIAction(title: "Remove", attributes: .destructive, handler: { _ in
                 // TODO: - this should use the ID of the node
-                self.delegate?.delete(nodeID: "Root")
+                self.delegate?.delete(nodeID: "styles")
             })])
             
         })

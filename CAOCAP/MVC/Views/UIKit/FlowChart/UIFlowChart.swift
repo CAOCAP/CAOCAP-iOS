@@ -27,9 +27,8 @@ class UIFlowChart: UICanvas {
     // MARK: - Load and Display Elements
     
     // Loads and displays the main event element of the project's document on the canvas.
-    func loadEvent() {
+    func loadProgram() {
         print("\(#function)ing...")
-        //TODO: - loadEvent()
         clearCanvas()
         draw()
     }
@@ -48,7 +47,7 @@ class UIFlowChart: UICanvas {
     func draw() {
         print("\(#function)ing...")
         //TODO: - draw(_ element: Element)
-        let nodeView = UIFlowChartNode(nodeType: .event)
+        let nodeView = UIFlowChartNode(nodeType: .program)
         nodeTree[nodeView.nodeType.description] = nodeView
         nodeView.delegate = self
         canvas.addSubview(nodeView)

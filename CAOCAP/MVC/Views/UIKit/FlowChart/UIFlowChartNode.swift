@@ -8,16 +8,19 @@
 import UIKit
 
 enum FlowChartNodeType {
-    case event, action, condition, value
+//    case event, action, condition, value
+    case program, event, trigger, process, value
     
     var description: String {
         switch self {
+        case .program:
+            return "program"
         case .event:
             return "event"
-        case .action:
-            return "action"
-        case .condition:
-            return "condition"
+        case .trigger:
+            return "trigger"
+        case .process:
+            return "process"
         case .value:
             return "value"
         }
@@ -25,11 +28,13 @@ enum FlowChartNodeType {
     
     var backgroundColor: UIColor {
         switch self {
-        case .event:
+        case .program:
             return .systemGreen
-        case .action:
+        case .event:
             return .systemBlue
-        case .condition:
+        case .trigger:
+            return .systemGray
+        case .process:
             return .systemOrange
         case .value:
             return .systemPink

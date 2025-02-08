@@ -118,6 +118,8 @@
 		EC9B89232C6F00BC00FD516F /* SpaceScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9B89222C6F00BC00FD516F /* SpaceScene.swift */; };
 		ECB40BCD2C51125300818E9C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECB40BCC2C51125300818E9C /* RealmSwift */; };
 		ECB40BCE2C5113B500818E9C /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = ECB40BCC2C51125300818E9C /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		ECB547C82D5778DD00E835DE /* StyleSheetModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB547C72D5778DA00E835DE /* StyleSheetModels.swift */; };
+		ECB547CA2D5778E600E835DE /* FlowChartModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB547C92D5778E400E835DE /* FlowChartModels.swift */; };
 		ECCA419D2C6696EA0076A4EA /* UIFlowChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA419C2C6696EA0076A4EA /* UIFlowChart.swift */; };
 		ECCA419F2C6697BF0076A4EA /* UIFlowChartNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA419E2C6697BF0076A4EA /* UIFlowChartNode.swift */; };
 		ECCA41A32C6698A30076A4EA /* UIFlowChartStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA41A22C6698A30076A4EA /* UIFlowChartStroke.swift */; };
@@ -273,6 +275,8 @@
 		EC9B891D2C6D7E6700FD516F /* DaisyUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaisyUI.swift; sourceTree = "<group>"; };
 		EC9B891F2C6F000500FD516F /* Space.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Space.sks; sourceTree = "<group>"; };
 		EC9B89222C6F00BC00FD516F /* SpaceScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceScene.swift; sourceTree = "<group>"; };
+		ECB547C72D5778DA00E835DE /* StyleSheetModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleSheetModels.swift; sourceTree = "<group>"; };
+		ECB547C92D5778E400E835DE /* FlowChartModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowChartModels.swift; sourceTree = "<group>"; };
 		ECCA419C2C6696EA0076A4EA /* UIFlowChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChart.swift; sourceTree = "<group>"; };
 		ECCA419E2C6697BF0076A4EA /* UIFlowChartNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChartNode.swift; sourceTree = "<group>"; };
 		ECCA41A22C6698A30076A4EA /* UIFlowChartStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChartStroke.swift; sourceTree = "<group>"; };
@@ -387,6 +391,8 @@
 				21E148122A7F639400B503C2 /* User.swift */,
 				2175FBE32A657D1500F7E97F /* Project.swift */,
 				21E148142A82031D00B503C2 /* Challenge.swift */,
+				ECB547C72D5778DA00E835DE /* StyleSheetModels.swift */,
+				ECB547C92D5778E400E835DE /* FlowChartModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1073,6 +1079,7 @@
 				ECF48EDB2C70A921008808B0 /* UIViewController+Extensions.swift in Sources */,
 				21C21C492A34B5D800F40BE3 /* ProjectsListVC.swift in Sources */,
 				21C21C542A36145200F40BE3 /* Enumerations.swift in Sources */,
+				ECB547C82D5778DD00E835DE /* StyleSheetModels.swift in Sources */,
 				21AF3CC02A6B7096002E96E3 /* ProjectLanguageVC.swift in Sources */,
 				ECCA41A32C6698A30076A4EA /* UIFlowChartStroke.swift in Sources */,
 				ECCA947D2C6778200076AA6B /* ToolKitVC.swift in Sources */,
@@ -1085,6 +1092,7 @@
 				21AF3CBA2A6B2159002E96E3 /* SendFeedbackVC.swift in Sources */,
 				ECCA94932C68E87D0076AA6B /* ValueToolKit.swift in Sources */,
 				210F19B02A42DC9800D71A66 /* UIMindMapStroke.swift in Sources */,
+				ECB547CA2D5778E600E835DE /* FlowChartModels.swift in Sources */,
 				ECCA947B2C6777E40076AA6B /* SelectorsToolKit.swift in Sources */,
 				ECCA94792C6777D60076AA6B /* EventsToolKit.swift in Sources */,
 				21AF3CC42A6B70CC002E96E3 /* ProjectStyleVC.swift in Sources */,
@@ -1290,7 +1298,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon dev";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = Accent;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1379,7 +1387,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon dev";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = Accent;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CAOCAP/App/Info.plist;
@@ -1526,7 +1534,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = Accent;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1558,7 +1566,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = Accent;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CAOCAP/App/Info.plist;

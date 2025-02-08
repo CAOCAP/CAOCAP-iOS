@@ -141,7 +141,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
         htmlToolKitCollection = ToolKitCollection(viewControllers:  [classNamesToolKit, structureToolKit, attributesToolKit])
         cssToolKitCollection = ToolKitCollection(viewControllers: [selectorsToolKit, propertiesToolKit, styleToolKit])
         jsToolKitCollection = ToolKitCollection(viewControllers: [eventsToolKit, conActToolKit, valueToolKit])
-
+        
         [htmlToolKitCollection,cssToolKitCollection,jsToolKitCollection].forEach { toolKitCollection in
             toolKitCollection?.viewControllers.forEach { toolKitVC in
                 addChild(toolKitVC)
@@ -194,15 +194,18 @@ class PlaygroundVC: UIViewController, Storyboarded {
     /// - Parameter sender: The button that triggers this function, representing a programming language.
     var previousCanvasIndex = 1  // Index of the previously selected canvas
     var currentCanvasIndex = 1   // Index of the currently selected canvas
-
+    
     @IBAction func didChangeProgrammingLanguage(_ sender: UIButton) {
-        // Define the collection of toolkits for each programming language (JavaScript, HTML, CSS)
-        let toolkitCollections = [jsToolKitCollection, htmlToolKitCollection, cssToolKitCollection]
+        // exit function if the user taps on the same button
+        if currentCanvasIndex == sender.tag { return }
         
         // Update previous and current canvas indices based on the sender's tag
         previousCanvasIndex = currentCanvasIndex
         currentCanvasIndex = sender.tag
-
+        
+        // Define the collection of toolkits for each programming language (JavaScript, HTML, CSS)
+        let toolkitCollections = [jsToolKitCollection, htmlToolKitCollection, cssToolKitCollection]
+        
         // Retrieve the toolkit collections for the current and previous canvases
         guard let currentToolKitCollection = toolkitCollections[currentCanvasIndex],
               let previousToolKitCollection = toolkitCollections[previousCanvasIndex] else { return }
@@ -247,7 +250,7 @@ class PlaygroundVC: UIViewController, Storyboarded {
             previousToolKitView.isHidden = true
         }
     }
-
+    
     
     
     // MARK: - Animate ToolKit Transition
@@ -363,7 +366,6 @@ class PlaygroundVC: UIViewController, Storyboarded {
     }
     
     @IBAction func didPressPublish(_ sender: UIButton) {
-        //TODO: present the PublishVC
         let vc = PublishVC.instantiate()
         self.present(vc, animated: true)
     }
@@ -454,7 +456,7 @@ extension PlaygroundVC: StoreSubscriber {
         loadWebView()/*🤔*/
         mindMap.loadBody()
         styleSheet.loadSelector()
-        flowChart.loadEvent()
+        flowChart.loadProgram()
         
         
         projectTitle.text = project?.getDocumentTitle()
@@ -479,7 +481,7 @@ extension PlaygroundVC: StoreSubscriber {
     /// Handles daily challenges completion and triggers animations if necessary.
     private func handleDailyChallenges(with state: ReduxState) {
         guard let openedProject = state.openedProject else { return }
-
+        
         for challenge in state.dailyChallenges {
             if challenge.isComplete { continue }
             
