@@ -57,14 +57,14 @@ class PlaygroundVC: UIViewController, Storyboarded {
     
     
     var cssToolKitCollection: ToolKitCollection!
-    let selectorsToolKit = SelectorsToolKit.instantiate()
     let propertiesToolKit = PropertiesToolKit.instantiate()
+    let selectorsToolKit = SelectorsToolKit.instantiate()
     let styleToolKit = StyleToolKit.instantiate()
     
     
     var jsToolKitCollection: ToolKitCollection!
-    let eventsToolKit = EventsToolKit.instantiate()
     let conActToolKit = ConActToolKit.instantiate()
+    let eventsToolKit = EventsToolKit.instantiate()
     let valueToolKit = ValueToolKit.instantiate()
     
     override func viewDidLoad() {
@@ -139,8 +139,8 @@ class PlaygroundVC: UIViewController, Storyboarded {
         
         structureToolKit.mindMap = mindMap
         htmlToolKitCollection = ToolKitCollection(viewControllers:  [classNamesToolKit, structureToolKit, attributesToolKit])
-        cssToolKitCollection = ToolKitCollection(viewControllers: [selectorsToolKit, propertiesToolKit, styleToolKit])
-        jsToolKitCollection = ToolKitCollection(viewControllers: [eventsToolKit, conActToolKit, valueToolKit])
+        cssToolKitCollection = ToolKitCollection(viewControllers: [propertiesToolKit, selectorsToolKit, styleToolKit])
+        jsToolKitCollection = ToolKitCollection(viewControllers: [conActToolKit, eventsToolKit, valueToolKit])
         
         [htmlToolKitCollection,cssToolKitCollection,jsToolKitCollection].forEach { toolKitCollection in
             toolKitCollection?.viewControllers.forEach { toolKitVC in
