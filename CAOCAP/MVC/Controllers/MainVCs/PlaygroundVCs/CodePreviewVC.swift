@@ -19,6 +19,7 @@ class CodePreviewVC: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideKeyboardWhenTappedAround()
         setupTextView()
     }
     

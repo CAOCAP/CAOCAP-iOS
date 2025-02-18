@@ -5,6 +5,7 @@
 //  Created by Azzam AL-Rashed on 06/09/2023.
 //
 
+import UIKit
 import IQKeyboardManagerSwift
 
 /// `KeyboardManager` is a singleton class that manages the configuration of the IQKeyboardManager library,
@@ -36,5 +37,35 @@ final class KeyboardManager {
     /// This provides flexibility if you need to refresh or update the settings during runtime.
     func reconfigure() {
         configureKeyboardManager()
+    }
+}
+
+
+extension UIViewController {
+    
+    //this dismiss Keyboard
+    func hideKeyboardWhenTappedAround() {
+        NotificationCenter.default.addObserver(self,selector: #selector(setKeyboardDistance),name: UIResponder.keyboardWillShowNotification,object: nil)
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    //this solves the keyboard distance from the TextField issue
+    @objc func setKeyboardDistance(_ notification: Notification) {
+        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let keyboardHeight = keyboardRectangle.height
+            if keyboardHeight > 300 {
+                IQKeyboardManager.shared.keyboardDistanceFromTextField = 26
+            } else {
+                IQKeyboardManager.shared.keyboardDistanceFromTextField = 60
+            }
+        }
     }
 }
