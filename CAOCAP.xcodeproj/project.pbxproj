@@ -118,6 +118,7 @@
 		EC9B89232C6F00BC00FD516F /* SpaceScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9B89222C6F00BC00FD516F /* SpaceScene.swift */; };
 		ECB40BCD2C51125300818E9C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECB40BCC2C51125300818E9C /* RealmSwift */; };
 		ECB40BCE2C5113B500818E9C /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = ECB40BCC2C51125300818E9C /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		ECB547CD2D64A9F300E835DE /* STTextView in Frameworks */ = {isa = PBXBuildFile; productRef = ECB547CC2D64A9F300E835DE /* STTextView */; };
 		ECCA419D2C6696EA0076A4EA /* UIFlowChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA419C2C6696EA0076A4EA /* UIFlowChart.swift */; };
 		ECCA419F2C6697BF0076A4EA /* UIFlowChartNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA419E2C6697BF0076A4EA /* UIFlowChartNode.swift */; };
 		ECCA41A32C6698A30076A4EA /* UIFlowChartStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA41A22C6698A30076A4EA /* UIFlowChartStroke.swift */; };
@@ -312,6 +313,7 @@
 			files = (
 				ECF48EDE2C70B5C3008808B0 /* OpenAI in Frameworks */,
 				ECB40BCD2C51125300818E9C /* RealmSwift in Frameworks */,
+				ECB547CD2D64A9F300E835DE /* STTextView in Frameworks */,
 				21E148112A7F62C900B503C2 /* FirebaseDatabase in Frameworks */,
 				219339812A7E3FAA002FDE05 /* Popovers in Frameworks */,
 				213DF5E32A5886B300679BB2 /* ReSwift in Frameworks */,
@@ -871,6 +873,7 @@
 				21E148102A7F62C900B503C2 /* FirebaseDatabase */,
 				ECB40BCC2C51125300818E9C /* RealmSwift */,
 				ECF48EDD2C70B5C3008808B0 /* OpenAI */,
+				ECB547CC2D64A9F300E835DE /* STTextView */,
 			);
 			productName = CAOCAP;
 			productReference = 218DA9C52A2B205800459C61 /* CAOCAP.app */;
@@ -914,6 +917,7 @@
 				2193397F2A7E3FAA002FDE05 /* XCRemoteSwiftPackageReference "Popovers" */,
 				ECB40BCB2C51125300818E9C /* XCRemoteSwiftPackageReference "realm-swift" */,
 				ECF48EDC2C70B5C3008808B0 /* XCRemoteSwiftPackageReference "OpenAI" */,
+				ECB547CB2D64A9F300E835DE /* XCRemoteSwiftPackageReference "STTextView" */,
 			);
 			productRefGroup = 218DA9C62A2B205800459C61 /* Products */;
 			projectDirPath = "";
@@ -1686,6 +1690,14 @@
 				minimumVersion = 10.52.2;
 			};
 		};
+		ECB547CB2D64A9F300E835DE /* XCRemoteSwiftPackageReference "STTextView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/STTextView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		ECF48EDC2C70B5C3008808B0 /* XCRemoteSwiftPackageReference "OpenAI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MacPaw/OpenAI.git";
@@ -1751,6 +1763,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = ECB40BCB2C51125300818E9C /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
+		};
+		ECB547CC2D64A9F300E835DE /* STTextView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECB547CB2D64A9F300E835DE /* XCRemoteSwiftPackageReference "STTextView" */;
+			productName = STTextView;
 		};
 		ECF48EDD2C70B5C3008808B0 /* OpenAI */ = {
 			isa = XCSwiftPackageProductDependency;

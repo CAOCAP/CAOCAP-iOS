@@ -1,5 +1,5 @@
 {
-  "originHash" : "365f291b1ed71888f14e096d8b5e64d95842198d7d25505cbba3007a1b9c6d53",
+  "originHash" : "60b5e656a3a522c615ea731d479ab3ec855ad5e1f5b79c2ca31a6ae29e2c5bb1",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -17,6 +17,15 @@
       "state" : {
         "revision" : "3b62f154d00019ae29a71e9738800bb6f18b236d",
         "version" : "10.19.2"
+      }
+    },
+    {
+      "identity" : "coretextswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/krzyzanowskim/CoreTextSwift",
+      "state" : {
+        "revision" : "833177201d6421e6322296f39fce6ff6ae52618a",
+        "version" : "0.2.0"
       }
     },
     {
@@ -179,6 +188,24 @@
       "state" : {
         "revision" : "2842e6e84e82eb9a8dac0100ca90d9444b0307f4",
         "version" : "5.7.1"
+      }
+    },
+    {
+      "identity" : "sttextkitplus",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/krzyzanowskim/STTextKitPlus",
+      "state" : {
+        "revision" : "446d6d431b163840ac5cc844ca5cf4704886c30e",
+        "version" : "0.1.8"
+      }
+    },
+    {
+      "identity" : "sttextview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/krzyzanowskim/STTextView",
+      "state" : {
+        "revision" : "d30b176bced4ae934181e811b1b6ef4a4cd53d30",
+        "version" : "2.0.0"
       }
     },
     {

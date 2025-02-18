@@ -2440,7 +2440,7 @@ There are no other in-app purchases.</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="User" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PVA-xc-Hdu">
-                                                <rect key="frame" x="50.333333333333314" y="0.0" width="280" height="44.666666666666664"/>
+                                                <rect key="frame" x="50.333333333333314" y="0.0" width="279.99999999999994" height="44.666666666666664"/>
                                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                                 <fontDescription key="fontDescription" name="Monogamma-Regular" family="Monogamma-Regular" pointSize="35"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="nickname"/>
@@ -3533,34 +3533,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wkq-ZX-hDu">
                                 <rect key="frame" x="0.0" y="79" width="390" height="765"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORu-vE-ICU">
-                                        <rect key="frame" x="10" y="10" width="370" height="745"/>
-                                        <string key="text">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-    &lt;head&gt;
-        &lt;title&gt;webview&lt;/title&gt;
-        &lt;meta charset="UTF-8" /&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-        &lt;script src="https://unpkg.com/react@18/umd/react.development.js"&gt;&lt;/script&gt;
-        &lt;script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"&gt;&lt;/script&gt;
-        &lt;script src="https://unpkg.com/redux@4.2.1/dist/redux.js"&gt;&lt;/script&gt;
-        &lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
-    &lt;/head&gt;
-    &lt;body id="\#(bodyID)"&gt;&lt;/body&gt;
-&lt;/html&gt;</string>
-                                        <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="ORu-vE-ICU" firstAttribute="top" secondItem="wkq-ZX-hDu" secondAttribute="top" constant="10" id="Uw0-aF-wHg"/>
-                                    <constraint firstAttribute="bottom" secondItem="ORu-vE-ICU" secondAttribute="bottom" constant="10" id="jEO-zK-Ryf"/>
-                                    <constraint firstAttribute="trailing" secondItem="ORu-vE-ICU" secondAttribute="trailing" constant="10" id="mEY-06-Fl8"/>
-                                    <constraint firstItem="ORu-vE-ICU" firstAttribute="leading" secondItem="wkq-ZX-hDu" secondAttribute="leading" constant="10" id="ymh-6U-ZQl"/>
-                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMn-sP-FgQ">
                                 <rect key="frame" x="0.0" y="47" width="390" height="32"/>
@@ -3618,7 +3591,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
                     </view>
                     <navigationItem key="navigationItem" id="Vzm-HC-zV7"/>
                     <connections>
-                        <outlet property="projectCode" destination="ORu-vE-ICU" id="6rL-Gq-RMr"/>
+                        <outlet property="projectCodeView" destination="wkq-ZX-hDu" id="gBG-Cr-Phi"/>
                         <outlet property="projectTitle" destination="gvC-3i-NeF" id="Qh9-nz-jg2"/>
                     </connections>
                 </viewController>
@@ -6194,7 +6167,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
             <color red="0.0" green="0.65499997138977051" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="AccentColor">
-            <color red="0.0" green="0.49399998784065247" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
