@@ -27,7 +27,7 @@ class HomeVC: UIViewController, Storyboarded {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        appVersion.text = getVersion()
+        appVersion.text = AppInfo.version
         setupStackView()
         fetchProSubscriptionStatus()
     }
@@ -146,14 +146,6 @@ class HomeVC: UIViewController, Storyboarded {
         popover.attributes.presentation.transition = .offset(x: 0, y: 30).combined(with: .opacity)
         popover.attributes.dismissal.transition = .offset(x: 0, y: 30).combined(with: .opacity)
         present(popover)
-    }
-    
-    func getVersion() -> String {
-        guard let dictionary = Bundle.main.infoDictionary,
-              let version = dictionary["CFBundleShortVersionString"] as? String,
-              let build = dictionary["CFBundleVersion"] as? String
-        else { return "0.0.0 (0)" }
-        return "\(version) (\(build))"
     }
     
     

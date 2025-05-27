@@ -58,10 +58,13 @@ Carthage/Build/
 ### Firebase Specific ###
 # Firebase configuration files and node modules
 .idea
-**/node_modules/*
 **/.firebaserc
 .runtimeconfig.json
 .firebase/
+
+### Node Modules Specific ###
+**/node_modules/*
+/NodeMobile.xcframework/
 
 ### Fastlane Specific ###
 # Fastlane-generated files, such as reports and screenshots

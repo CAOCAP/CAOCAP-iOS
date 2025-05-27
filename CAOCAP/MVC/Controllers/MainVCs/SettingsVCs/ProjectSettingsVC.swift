@@ -35,6 +35,7 @@ class ProjectSettingsVC: SettingsVC {
                     
                 })),
                 
+                /*
                 .staticCell(option: SettingsOption(title: "Style", icon: UIImage(systemName: "character.cursor.ibeam"), color: .systemGray, handler: {
                     let vc = ProjectStyleVC()
                     self.present(vc, animated: true)
@@ -60,10 +61,10 @@ class ProjectSettingsVC: SettingsVC {
                     self.present(vc, animated: true)
                     
                 })),
-                 
+                 */
             ]),
             
-            
+            /*
             Section(title: "Assets", options: [
                 .staticCell(option: SettingsOption(title: "Fonts", icon: UIImage(systemName: "textformat"), color: .systemBlue, handler: {
                     let vc = ProjectFontsVC()
@@ -107,7 +108,7 @@ class ProjectSettingsVC: SettingsVC {
                     
                 })),
             ]),
-             
+             */
         ]
              
         tableView.reloadData()

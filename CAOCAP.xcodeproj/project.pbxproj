@@ -107,9 +107,10 @@
 		21E148152A82031D00B503C2 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E148142A82031D00B503C2 /* Challenge.swift */; };
 		21FF62032AB263AB0003D064 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FF62022AB263AB0003D064 /* AppConstants.swift */; };
 		EC1A79472CC7EB4D00731014 /* PublishVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A79462CC7EB4D00731014 /* PublishVC.swift */; };
+		EC35042B2DE518C90029E66A /* NodeMobile.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3504292DE517D10029E66A /* NodeMobile.xcframework */; };
+		EC35042C2DE518C90029E66A /* NodeMobile.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC3504292DE517D10029E66A /* NodeMobile.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EC35042E2DE582A80029E66A /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC35042D2DE582A30029E66A /* AppInfo.swift */; };
 		EC65ECC62C6F581400858FCF /* Typealias.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC65ECC52C6F581400858FCF /* Typealias.swift */; };
-		EC6B90F32CE308010082D808 /* NodeMobile.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC6B90F22CE308010082D808 /* NodeMobile.xcframework */; };
-		EC6B90F42CE308010082D808 /* NodeMobile.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EC6B90F22CE308010082D808 /* NodeMobile.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EC7B11832C5223D40020ECE4 /* CodePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7B11822C5223D40020ECE4 /* CodePreviewVC.swift */; };
 		EC9B891A2C6C400A00FD516F /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9B89192C6C400A00FD516F /* HelperFunctions.swift */; };
 		EC9B891C2C6D79C400FD516F /* ComponentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9B891B2C6D79C400FD516F /* ComponentTableViewCell.swift */; };
@@ -163,7 +164,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				ECB40BCE2C5113B500818E9C /* RealmSwift in Embed Frameworks */,
-				EC6B90F42CE308010082D808 /* NodeMobile.xcframework in Embed Frameworks */,
+				EC35042C2DE518C90029E66A /* NodeMobile.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,8 +266,9 @@
 		21E148142A82031D00B503C2 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		21FF62022AB263AB0003D064 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		EC1A79462CC7EB4D00731014 /* PublishVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishVC.swift; sourceTree = "<group>"; };
+		EC3504292DE517D10029E66A /* NodeMobile.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = NodeMobile.xcframework; sourceTree = "<group>"; };
+		EC35042D2DE582A30029E66A /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		EC65ECC52C6F581400858FCF /* Typealias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealias.swift; sourceTree = "<group>"; };
-		EC6B90F22CE308010082D808 /* NodeMobile.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NodeMobile.xcframework; path = "../../nodejs-mobile-v18/NodeMobile.xcframework"; sourceTree = "<group>"; };
 		EC7B11822C5223D40020ECE4 /* CodePreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodePreviewVC.swift; sourceTree = "<group>"; };
 		EC7B11842C524EFF0020ECE4 /* Subscriptions.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Subscriptions.storekit; sourceTree = "<group>"; };
 		EC9B89192C6C400A00FD516F /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
@@ -319,10 +321,10 @@
 				213DF5E32A5886B300679BB2 /* ReSwift in Frameworks */,
 				21AF3CA52A67E44B002E96E3 /* SnapKit in Frameworks */,
 				21C21C522A34B7C400F40BE3 /* IQKeyboardManagerSwift in Frameworks */,
-				EC6B90F32CE308010082D808 /* NodeMobile.xcframework in Frameworks */,
 				2106C4182A5C997A00446620 /* FirebaseAnalytics in Frameworks */,
 				2106C41A2A5C997A00446620 /* FirebaseCrashlytics in Frameworks */,
 				213DF5E02A5883D300679BB2 /* SwiftSoup in Frameworks */,
+				EC35042B2DE518C90029E66A /* NodeMobile.xcframework in Frameworks */,
 				21E1480F2A7F62BE00B503C2 /* FirebaseAuth in Frameworks */,
 				213DF5E62A58A92F00679BB2 /* Lottie in Frameworks */,
 				21534DA72A5B038D00E8078B /* AdSupport.framework in Frameworks */,
@@ -351,6 +353,7 @@
 		2149951C2A5C3209008B9987 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				EC35042D2DE582A30029E66A /* AppInfo.swift */,
 				218DA9C82A2B205800459C61 /* AppDelegate.swift */,
 				218DA9CA2A2B205800459C61 /* SceneDelegate.swift */,
 				EC7B11842C524EFF0020ECE4 /* Subscriptions.storekit */,
@@ -463,8 +466,8 @@
 		21534DA42A5AFF8E00E8078B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EC6B90F22CE308010082D808 /* NodeMobile.xcframework */,
 				21534DA52A5AFF8F00E8078B /* AdSupport.framework */,
+				EC3504292DE517D10029E66A /* NodeMobile.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1098,6 +1101,7 @@
 				ECCA419F2C6697BF0076A4EA /* UIFlowChartNode.swift in Sources */,
 				ECCA94832C68D9180076AA6B /* UIStyleSheet.swift in Sources */,
 				2133D7182B42EC1300A854F6 /* UICanvas.swift in Sources */,
+				EC35042E2DE582A80029E66A /* AppInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1294,7 +1298,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon dev";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = Accent;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1383,7 +1387,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon dev";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = Accent;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CAOCAP/App/Info.plist;
@@ -1530,7 +1534,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = Accent;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1562,7 +1566,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = Accent;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CAOCAP/App/Info.plist;

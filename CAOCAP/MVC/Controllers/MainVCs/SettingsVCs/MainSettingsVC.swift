@@ -16,7 +16,7 @@ class MainSettingsVC: SettingsVC {
         sections = [
             Section(title: "Main", options: [
                 
-                 
+                 /*
                 .staticCell(option: SettingsOption(title: "Language", icon: UIImage(systemName: "globe"), color: .systemPink, label: "English", handler: {
                     print("did press")
                     
@@ -29,9 +29,9 @@ class MainSettingsVC: SettingsVC {
                     print("did press")
                     
                 })),
-                 
+                 */
                 
-                .staticCell(option: SettingsOption(title: "What's New?", icon: UIImage(systemName: "sparkles"), color: .systemYellow, label: "v5.0.2", handler: {
+                .staticCell(option: SettingsOption(title: "What's New?", icon: UIImage(systemName: "sparkles"), color: .systemYellow, label: AppInfo.version, handler: {
                     self.coordinator.viewWhatsNewVC()
                     
                 })),
@@ -46,14 +46,18 @@ class MainSettingsVC: SettingsVC {
                 })),
                 .staticCell(option: SettingsOption(title: "Share App", icon: UIImage(systemName: "square.and.arrow.up.fill"), color: .systemCyan, handler: {
                     guard let productURL = URL(string: "https://apps.apple.com/app/id1447742145") else { return }
-                    let shareSheetVC = UIActivityViewController(activityItems: [
-                        productURL
-                    ], applicationActivities: nil)
+                    let shareSheetVC = UIActivityViewController(activityItems: [productURL], applicationActivities: nil)
+                    // iPad fix: provide anchor point
+                    if let popover = shareSheetVC.popoverPresentationController {
+                        popover.sourceView = self.view // or a specific view like the button or cell
+                        popover.sourceRect = CGRect(x: self.view.bounds.midX, y: self.view.bounds.midY, width: 0, height: 0)
+                        popover.permittedArrowDirections = [] // optional: hide the arrow
+                    }
                     self.present(shareSheetVC, animated: true)
                 })),
             ]),
             
-            
+            /*
             Section(title: "contact", options: [
                 .staticCell(option: SettingsOption(title: "Help", icon: UIImage(systemName: "questionmark.circle.fill"), color: .systemTeal, handler: {
                     self.coordinator.viewHelp()
@@ -68,12 +72,12 @@ class MainSettingsVC: SettingsVC {
                     
                 })),
             ]),
-             
+             */
              
             
             Section(title: "Info", options: [
                 
-                
+                /*
                 .staticCell(option:SettingsOption(title: "Privacy Policy", icon: UIImage(systemName: "lock.shield.fill"), color: .systemGray, handler: {
                     self.coordinator.viewPrivacyPolicy()
                     
@@ -82,7 +86,7 @@ class MainSettingsVC: SettingsVC {
                     self.coordinator.viewTermsOfUse()
                     
                 })),
-                 
+                 */
                  
                 .staticCell(option:SettingsOption(title: "About Us", icon: UIImage(systemName: "info.circle.fill"), color: .systemGray2, handler: {
                     self.coordinator.viewAboutUs()
