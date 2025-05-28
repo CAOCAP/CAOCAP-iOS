@@ -104,7 +104,6 @@
 		21E1480F2A7F62BE00B503C2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 21E1480E2A7F62BE00B503C2 /* FirebaseAuth */; };
 		21E148112A7F62C900B503C2 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 21E148102A7F62C900B503C2 /* FirebaseDatabase */; };
 		21E148132A7F639400B503C2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E148122A7F639400B503C2 /* User.swift */; };
-		21E148152A82031D00B503C2 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21E148142A82031D00B503C2 /* Challenge.swift */; };
 		21FF62032AB263AB0003D064 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FF62022AB263AB0003D064 /* AppConstants.swift */; };
 		EC1A79472CC7EB4D00731014 /* PublishVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC1A79462CC7EB4D00731014 /* PublishVC.swift */; };
 		EC35042B2DE518C90029E66A /* NodeMobile.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC3504292DE517D10029E66A /* NodeMobile.xcframework */; };
@@ -120,22 +119,6 @@
 		ECB40BCD2C51125300818E9C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = ECB40BCC2C51125300818E9C /* RealmSwift */; };
 		ECB40BCE2C5113B500818E9C /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = ECB40BCC2C51125300818E9C /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		ECB547CD2D64A9F300E835DE /* STTextView in Frameworks */ = {isa = PBXBuildFile; productRef = ECB547CC2D64A9F300E835DE /* STTextView */; };
-		ECCA419D2C6696EA0076A4EA /* UIFlowChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA419C2C6696EA0076A4EA /* UIFlowChart.swift */; };
-		ECCA419F2C6697BF0076A4EA /* UIFlowChartNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA419E2C6697BF0076A4EA /* UIFlowChartNode.swift */; };
-		ECCA41A32C6698A30076A4EA /* UIFlowChartStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA41A22C6698A30076A4EA /* UIFlowChartStroke.swift */; };
-		ECCA94772C6777BB0076AA6B /* StructureToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94762C6777BB0076AA6B /* StructureToolKit.swift */; };
-		ECCA94792C6777D60076AA6B /* EventsToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94782C6777D60076AA6B /* EventsToolKit.swift */; };
-		ECCA947B2C6777E40076AA6B /* SelectorsToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA947A2C6777E40076AA6B /* SelectorsToolKit.swift */; };
-		ECCA947D2C6778200076AA6B /* ToolKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA947C2C6778200076AA6B /* ToolKitVC.swift */; };
-		ECCA94832C68D9180076AA6B /* UIStyleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94822C68D9180076AA6B /* UIStyleSheet.swift */; };
-		ECCA94852C68D9E00076AA6B /* UIStyleSheetNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94842C68D9E00076AA6B /* UIStyleSheetNode.swift */; };
-		ECCA94872C68D9F70076AA6B /* UIStyleSheetStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94862C68D9F70076AA6B /* UIStyleSheetStroke.swift */; };
-		ECCA94892C68E5B20076AA6B /* AttributesToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94882C68E5B20076AA6B /* AttributesToolKit.swift */; };
-		ECCA948B2C68E66B0076AA6B /* ClassNamesToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA948A2C68E66B0076AA6B /* ClassNamesToolKit.swift */; };
-		ECCA948D2C68E7460076AA6B /* PropertiesToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA948C2C68E7460076AA6B /* PropertiesToolKit.swift */; };
-		ECCA948F2C68E7FF0076AA6B /* ConActToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA948E2C68E7FF0076AA6B /* ConActToolKit.swift */; };
-		ECCA94912C68E8610076AA6B /* StyleToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94902C68E8600076AA6B /* StyleToolKit.swift */; };
-		ECCA94932C68E87D0076AA6B /* ValueToolKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCA94922C68E87D0076AA6B /* ValueToolKit.swift */; };
 		ECDB65B22C72FA8D00F63CDF /* NodeJSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDB65B12C72FA8D00F63CDF /* NodeJSManager.swift */; };
 		ECDB80962C73056000F63CDF /* NodeScripts in Resources */ = {isa = PBXBuildFile; fileRef = ECDB80952C73056000F63CDF /* NodeScripts */; };
 		ECF48ED22C705A2D008808B0 /* StoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF48ED12C705A2D008808B0 /* StoreVC.swift */; };
@@ -263,7 +246,6 @@
 		21DBA0042A39EC5500DFAC66 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		21E1480C2A7F5F2000B503C2 /* FirebaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRepository.swift; sourceTree = "<group>"; };
 		21E148122A7F639400B503C2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		21E148142A82031D00B503C2 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		21FF62022AB263AB0003D064 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		EC1A79462CC7EB4D00731014 /* PublishVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishVC.swift; sourceTree = "<group>"; };
 		EC3504292DE517D10029E66A /* NodeMobile.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = NodeMobile.xcframework; sourceTree = "<group>"; };
@@ -276,22 +258,6 @@
 		EC9B891D2C6D7E6700FD516F /* DaisyUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaisyUI.swift; sourceTree = "<group>"; };
 		EC9B891F2C6F000500FD516F /* Space.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Space.sks; sourceTree = "<group>"; };
 		EC9B89222C6F00BC00FD516F /* SpaceScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceScene.swift; sourceTree = "<group>"; };
-		ECCA419C2C6696EA0076A4EA /* UIFlowChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChart.swift; sourceTree = "<group>"; };
-		ECCA419E2C6697BF0076A4EA /* UIFlowChartNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChartNode.swift; sourceTree = "<group>"; };
-		ECCA41A22C6698A30076A4EA /* UIFlowChartStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFlowChartStroke.swift; sourceTree = "<group>"; };
-		ECCA94762C6777BB0076AA6B /* StructureToolKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructureToolKit.swift; sourceTree = "<group>"; };
-		ECCA94782C6777D60076AA6B /* EventsToolKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsToolKit.swift; sourceTree = "<group>"; };
-		ECCA947A2C6777E40076AA6B /* SelectorsToolKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorsToolKit.swift; sourceTree = "<group>"; };
-		ECCA947C2C6778200076AA6B /* ToolKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolKitVC.swift; sourceTree = "<group>"; };
-		ECCA94822C68D9180076AA6B /* UIStyleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStyleSheet.swift; sourceTree = "<group>"; };
-		ECCA94842C68D9E00076AA6B /* UIStyleSheetNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStyleSheetNode.swift; sourceTree = "<group>"; };
-		ECCA94862C68D9F70076AA6B /* UIStyleSheetStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStyleSheetStroke.swift; sourceTree = "<group>"; };
-		ECCA94882C68E5B20076AA6B /* AttributesToolKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributesToolKit.swift; sourceTree = "<group>"; };
-		ECCA948A2C68E66B0076AA6B /* ClassNamesToolKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNamesToolKit.swift; sourceTree = "<group>"; };
-		ECCA948C2C68E7460076AA6B /* PropertiesToolKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesToolKit.swift; sourceTree = "<group>"; };
-		ECCA948E2C68E7FF0076AA6B /* ConActToolKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConActToolKit.swift; sourceTree = "<group>"; };
-		ECCA94902C68E8600076AA6B /* StyleToolKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleToolKit.swift; sourceTree = "<group>"; };
-		ECCA94922C68E87D0076AA6B /* ValueToolKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueToolKit.swift; sourceTree = "<group>"; };
 		ECDB65B12C72FA8D00F63CDF /* NodeJSManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeJSManager.swift; sourceTree = "<group>"; };
 		ECDB80952C73056000F63CDF /* NodeScripts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NodeScripts; sourceTree = "<group>"; };
 		ECF48ED12C705A2D008808B0 /* StoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreVC.swift; sourceTree = "<group>"; };
@@ -391,7 +357,6 @@
 			children = (
 				21E148122A7F639400B503C2 /* User.swift */,
 				2175FBE32A657D1500F7E97F /* Project.swift */,
-				21E148142A82031D00B503C2 /* Challenge.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -709,8 +674,6 @@
 			isa = PBXGroup;
 			children = (
 				2133D7172B42EC1300A854F6 /* UICanvas.swift */,
-				ECCA41A42C66AE270076A4EA /* StyleSheet */,
-				ECCA41A02C6698540076A4EA /* FlowChart */,
 				ECCA41A12C66986B0076A4EA /* MindMap */,
 			);
 			path = UIKit;
@@ -732,16 +695,6 @@
 			path = SpriteKit;
 			sourceTree = "<group>";
 		};
-		ECCA41A02C6698540076A4EA /* FlowChart */ = {
-			isa = PBXGroup;
-			children = (
-				ECCA419C2C6696EA0076A4EA /* UIFlowChart.swift */,
-				ECCA419E2C6697BF0076A4EA /* UIFlowChartNode.swift */,
-				ECCA41A22C6698A30076A4EA /* UIFlowChartStroke.swift */,
-			);
-			path = FlowChart;
-			sourceTree = "<group>";
-		};
 		ECCA41A12C66986B0076A4EA /* MindMap */ = {
 			isa = PBXGroup;
 			children = (
@@ -750,57 +703,6 @@
 				210F19AF2A42DC9800D71A66 /* UIMindMapStroke.swift */,
 			);
 			path = MindMap;
-			sourceTree = "<group>";
-		};
-		ECCA41A42C66AE270076A4EA /* StyleSheet */ = {
-			isa = PBXGroup;
-			children = (
-				ECCA94822C68D9180076AA6B /* UIStyleSheet.swift */,
-				ECCA94842C68D9E00076AA6B /* UIStyleSheetNode.swift */,
-				ECCA94862C68D9F70076AA6B /* UIStyleSheetStroke.swift */,
-			);
-			path = StyleSheet;
-			sourceTree = "<group>";
-		};
-		ECCA94752C67778D0076AA6B /* ToolKitVCs */ = {
-			isa = PBXGroup;
-			children = (
-				ECCA947C2C6778200076AA6B /* ToolKitVC.swift */,
-				ECCA947E2C6791210076AA6B /* HTML */,
-				ECCA947F2C6791270076AA6B /* CSS */,
-				ECCA94802C67912C0076AA6B /* JS */,
-			);
-			path = ToolKitVCs;
-			sourceTree = "<group>";
-		};
-		ECCA947E2C6791210076AA6B /* HTML */ = {
-			isa = PBXGroup;
-			children = (
-				ECCA948A2C68E66B0076AA6B /* ClassNamesToolKit.swift */,
-				ECCA94762C6777BB0076AA6B /* StructureToolKit.swift */,
-				ECCA94882C68E5B20076AA6B /* AttributesToolKit.swift */,
-			);
-			path = HTML;
-			sourceTree = "<group>";
-		};
-		ECCA947F2C6791270076AA6B /* CSS */ = {
-			isa = PBXGroup;
-			children = (
-				ECCA947A2C6777E40076AA6B /* SelectorsToolKit.swift */,
-				ECCA948C2C68E7460076AA6B /* PropertiesToolKit.swift */,
-				ECCA94902C68E8600076AA6B /* StyleToolKit.swift */,
-			);
-			path = CSS;
-			sourceTree = "<group>";
-		};
-		ECCA94802C67912C0076AA6B /* JS */ = {
-			isa = PBXGroup;
-			children = (
-				ECCA94782C6777D60076AA6B /* EventsToolKit.swift */,
-				ECCA948E2C68E7FF0076AA6B /* ConActToolKit.swift */,
-				ECCA94922C68E87D0076AA6B /* ValueToolKit.swift */,
-			);
-			path = JS;
 			sourceTree = "<group>";
 		};
 		ECCA94812C67916A0076AA6B /* PlaygroundVCs */ = {
@@ -812,7 +714,6 @@
 				EC7B11822C5223D40020ECE4 /* CodePreviewVC.swift */,
 				215DE72A2B527BC100546394 /* FullScreenWebViewVC.swift */,
 				21AF3CD32A6B717A002E96E3 /* ProjectVCs */,
-				ECCA94752C67778D0076AA6B /* ToolKitVCs */,
 			);
 			path = PlaygroundVCs;
 			sourceTree = "<group>";
@@ -1016,19 +917,13 @@
 				218DA9C92A2B205800459C61 /* AppDelegate.swift in Sources */,
 				2147F5192A6F2001004245AE /* ISOLanguageCodeCell.swift in Sources */,
 				21AF3CD02A6B7139002E96E3 /* ProjectImagesVC.swift in Sources */,
-				ECCA419D2C6696EA0076A4EA /* UIFlowChart.swift in Sources */,
 				2178C19D2A4D92A300876BB6 /* ProjectSettingsVC.swift in Sources */,
 				2175FBE22A648D0700F7E97F /* LottieManager.swift in Sources */,
 				21AF3CB02A68565C002E96E3 /* RealmProjectModels.swift in Sources */,
-				ECCA94912C68E8610076AA6B /* StyleToolKit.swift in Sources */,
 				21534D9D2A59CD8600E8078B /* UIDashboardView.swift in Sources */,
-				ECCA94772C6777BB0076AA6B /* StructureToolKit.swift in Sources */,
-				21E148152A82031D00B503C2 /* Challenge.swift in Sources */,
-				ECCA948B2C68E66B0076AA6B /* ClassNamesToolKit.swift in Sources */,
 				ECF48ED92C70A1F2008808B0 /* CoCaptainVC.swift in Sources */,
 				21AF3CB42A6B20FD002E96E3 /* AboutUsVC.swift in Sources */,
 				21AF3CA72A6843A9002E96E3 /* RealmRepository.swift in Sources */,
-				ECCA94852C68D9E00076AA6B /* UIStyleSheetNode.swift in Sources */,
 				21534DA12A5A9B3B00E8078B /* TailwindCSS.swift in Sources */,
 				2149952A2A5C34C9008B9987 /* ReduxStore.swift in Sources */,
 				EC9B89232C6F00BC00FD516F /* SpaceScene.swift in Sources */,
@@ -1040,12 +935,9 @@
 				215DE72B2B527BC100546394 /* FullScreenWebViewVC.swift in Sources */,
 				2178C19F2A4D981D00876BB6 /* MainSettingsVC.swift in Sources */,
 				EC1A79472CC7EB4D00731014 /* PublishVC.swift in Sources */,
-				ECCA94872C68D9F70076AA6B /* UIStyleSheetStroke.swift in Sources */,
 				21A861D82A78D2C4004D36A3 /* WhatsNewVC.swift in Sources */,
-				ECCA94892C68E5B20076AA6B /* AttributesToolKit.swift in Sources */,
 				EC9B891A2C6C400A00FD516F /* HelperFunctions.swift in Sources */,
 				21534D9F2A59E58100E8078B /* ProjectFilesVC.swift in Sources */,
-				ECCA948D2C68E7460076AA6B /* PropertiesToolKit.swift in Sources */,
 				21AF3CC82A6B70F1002E96E3 /* ProjectLinkVC.swift in Sources */,
 				21534D9B2A59CD2B00E8078B /* ChartsVC.swift in Sources */,
 				211FEA502C2FC84E000150FD /* ViewController.swift in Sources */,
@@ -1068,7 +960,6 @@
 				21DBA0052A39EC5500DFAC66 /* UIFont+Extensions.swift in Sources */,
 				2186DB0D2A30946900773C5E /* UIView+Extensions.swift in Sources */,
 				21AF3CCE2A6B7128002E96E3 /* ProjectFontsVC.swift in Sources */,
-				ECCA948F2C68E7FF0076AA6B /* ConActToolKit.swift in Sources */,
 				21CB66F42C15F0540062D7AD /* UIScrollView+Extensions.swift in Sources */,
 				21326ED02A530CAE00255570 /* UserDefaults.swift in Sources */,
 				21C21C4B2A34B60200F40BE3 /* SettingsVC.swift in Sources */,
@@ -1081,8 +972,6 @@
 				21C21C492A34B5D800F40BE3 /* ProjectsListVC.swift in Sources */,
 				21C21C542A36145200F40BE3 /* Enumerations.swift in Sources */,
 				21AF3CC02A6B7096002E96E3 /* ProjectLanguageVC.swift in Sources */,
-				ECCA41A32C6698A30076A4EA /* UIFlowChartStroke.swift in Sources */,
-				ECCA947D2C6778200076AA6B /* ToolKitVC.swift in Sources */,
 				21534D8F2A59B26F00E8078B /* NavigationVC.swift in Sources */,
 				214995242A5C3404008B9987 /* ReduxActions.swift in Sources */,
 				21534D942A59B38B00E8078B /* Coordinator.swift in Sources */,
@@ -1090,16 +979,11 @@
 				21FF62032AB263AB0003D064 /* AppConstants.swift in Sources */,
 				21534DA32A5A9ED000E8078B /* LibraryCollectionViewCell.swift in Sources */,
 				21AF3CBA2A6B2159002E96E3 /* SendFeedbackVC.swift in Sources */,
-				ECCA94932C68E87D0076AA6B /* ValueToolKit.swift in Sources */,
 				210F19B02A42DC9800D71A66 /* UIMindMapStroke.swift in Sources */,
-				ECCA947B2C6777E40076AA6B /* SelectorsToolKit.swift in Sources */,
-				ECCA94792C6777D60076AA6B /* EventsToolKit.swift in Sources */,
 				21AF3CC42A6B70CC002E96E3 /* ProjectStyleVC.swift in Sources */,
 				EC9B891E2C6D7E6700FD516F /* DaisyUI.swift in Sources */,
 				21534D982A59B40A00E8078B /* MainCoordinator.swift in Sources */,
 				210F19AE2A42DBE100D71A66 /* UIMindMapNode.swift in Sources */,
-				ECCA419F2C6697BF0076A4EA /* UIFlowChartNode.swift in Sources */,
-				ECCA94832C68D9180076AA6B /* UIStyleSheet.swift in Sources */,
 				2133D7182B42EC1300A854F6 /* UICanvas.swift in Sources */,
 				EC35042E2DE582A80029E66A /* AppInfo.swift in Sources */,
 			);
@@ -1298,7 +1182,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon dev";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = Accent;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1314,7 +1198,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0.5;
+				MARKETING_VERSION = 6.0.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Ficruty.caocap-dev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1387,7 +1271,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon dev";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = Accent;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CAOCAP/App/Info.plist;
@@ -1402,7 +1286,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0.5;
+				MARKETING_VERSION = 6.0.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Ficruty.caocap-dev";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1534,7 +1418,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = Accent;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1550,7 +1434,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0.5;
+				MARKETING_VERSION = 6.0.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ficruty.caocap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1566,7 +1450,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = Accent;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6QYT6GJB4Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CAOCAP/App/Info.plist;
@@ -1581,7 +1465,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0.5;
+				MARKETING_VERSION = 6.0.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Ficruty.caocap;
 				PRODUCT_NAME = "$(TARGET_NAME)";

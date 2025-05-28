@@ -22,9 +22,6 @@ struct SubscribeAction: Action { let subscriptionStatus: Bool }
 
 struct ReceivedCommitHistoryAction: Action { let commits: [String] }
 
-// MARK: Daily Challenges
-struct ChallengeCompletedAction: Action { let challenge: Challenge }
-
 // MARK: Project Actions
 struct CreateProjectAction: Action { let newProject: Project } 
 struct DeleteProjectAction: Action {}

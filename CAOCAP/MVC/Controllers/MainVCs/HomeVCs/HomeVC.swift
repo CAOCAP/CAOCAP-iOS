@@ -14,12 +14,10 @@ import Popovers
 class HomeVC: UIViewController, Storyboarded {
     
     var user: User?
-    var challenges: [Challenge]?
     
     @IBOutlet weak var welcomingLabel: UILabel!
     @IBOutlet weak var uidLabel: UILabel!
     @IBOutlet var badgeCounters: [UILabel]!
-    @IBOutlet weak var badgesStackView: UIStackView!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var appVersion: UILabel!
     @IBOutlet weak var purchaseButton: UIButton!
@@ -125,30 +123,6 @@ class HomeVC: UIViewController, Storyboarded {
     }
     
     
-    
-    @IBAction func didPressChallenge(_ sender: UIButton) {
-        guard let challenges = challenges, challenges.count > sender.tag else { return }
-        
-        var popover = Popover {
-            Templates.Container {
-                Text(challenges[sender.tag].description)
-                    .frame(maxWidth: 150)
-                    .lineLimit(5)
-                    .scaledToFill()
-                    .minimumScaleFactor(0.5)
-                    .multilineTextAlignment(.center)
-            }
-        }
-        popover.attributes.sourceFrame = { [weak sender] in sender.windowFrame() }
-        popover.attributes.screenEdgePadding.horizontal = 5
-        popover.attributes.position = .absolute(originAnchor: .bottom, popoverAnchor: .top)
-        popover.attributes.presentation.animation = .spring(response: 0.6, dampingFraction: 0.4, blendDuration: 1)
-        popover.attributes.presentation.transition = .offset(x: 0, y: 30).combined(with: .opacity)
-        popover.attributes.dismissal.transition = .offset(x: 0, y: 30).combined(with: .opacity)
-        present(popover)
-    }
-    
-    
     @IBAction func didPressPurchaseButton(_ sender: Any) {
         coordinator.viewPurchase()
     }
@@ -198,26 +172,10 @@ extension HomeVC: StoreSubscriber {
             uidLabel.text = uid
         }
         
-        handleDailyChallenges(state.dailyChallenges)
-        
         
         if state.isSubscribed {
             setupProSubscriptionStatus()
         }
     }
     
-    private func handleDailyChallenges(_ dailyChallenges: [Challenge]) {
-        if challenges == nil { challenges = dailyChallenges }
-
-        challenges?.enumerated().forEach { (index, challenge) in
-            if challenge.isComplete {
-                badgeCounters[index].text = "1"
-                badgesStackView.arrangedSubviews.reversed()[index].alpha = 1
-            } else {
-                badgeCounters[index].text = "0"
-                badgesStackView.arrangedSubviews.reversed()[index].alpha = 0.3
-            }
-            
-        }
-    }
 }

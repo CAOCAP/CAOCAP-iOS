@@ -13,12 +13,8 @@ import SwiftSoup
 
 class PlaygroundVC: UIViewController, Storyboarded {
     
-    
     /// The current project being edited in the playground.
     var project: Project?
-    
-    /// List of completed challenges for the project.
-    var completeChallenges: [String]?
     
     /// Boolean flag to determine if the ViewFinder is currently on.
     var viewFinderIsOn = false
@@ -34,38 +30,12 @@ class PlaygroundVC: UIViewController, Storyboarded {
     @IBOutlet weak var undoButton: UIButton!
     @IBOutlet weak var redoButton: UIButton!
     
-    @IBOutlet var ProgrammingLanguageButtonViews: [UIView]!
-    
     
     /// Tools view that contains the keyboard and other tools.
     @IBOutlet weak var toolsView: UIView!
     @IBOutlet weak var toolsViewHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var toolsPageControl: UIPageControl!
     
-    /// Array to hold the Canvas for HTML, CSS, and JS.
-    var canvases = [UICanvas]()
-    var mindMap: UIMindMap! // HTML
-    var styleSheet: UIStyleSheet! // CSS
-    var flowChart: UIFlowChart! // JS
-    
-    /// Arrays to hold the ToolKit VCs for HTML, CSS, and JS.
-    
-    var htmlToolKitCollection: ToolKitCollection!
-    let classNamesToolKit = ClassNamesToolKit.instantiate()
-    let structureToolKit = StructureToolKit.instantiate()
-    let attributesToolKit = AttributesToolKit.instantiate()
-    
-    
-    var cssToolKitCollection: ToolKitCollection!
-    let propertiesToolKit = PropertiesToolKit.instantiate()
-    let selectorsToolKit = SelectorsToolKit.instantiate()
-    let styleToolKit = StyleToolKit.instantiate()
-    
-    
-    var jsToolKitCollection: ToolKitCollection!
-    let conActToolKit = ConActToolKit.instantiate()
-    let eventsToolKit = EventsToolKit.instantiate()
-    let valueToolKit = ValueToolKit.instantiate()
+    var mindMap: UIMindMap!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,8 +47,10 @@ class PlaygroundVC: UIViewController, Storyboarded {
         let resizeGR = UIPanGestureRecognizer(target: self, action: #selector(handleResizingWebView(sender:)))
         resizeIcon.addGestureRecognizer(resizeGR)
         
-        setupCanvasesLayout()
-        setupToolsViewLayout()
+        mindMap = UIMindMap(frame: view.frame, color: .systemBlue)
+        mindMap.mindMapDelegate = self
+        view.insertSubview(mindMap, at: 0)
+        mindMap.snp.makeConstraints { $0.edges.equalToSuperview() }
     }
     
     // MARK: - WebView
@@ -95,65 +67,6 @@ class PlaygroundVC: UIViewController, Storyboarded {
             print("error")
         }
     }
-    
-    
-    // MARK: - Canvases Setup
-    /// Set up the layout and configuration of the Canvases
-    func setupCanvasesLayout() {
-        mindMap = UIMindMap(frame: view.frame, color: .systemBlue)
-        styleSheet = UIStyleSheet(frame: view.frame, color: .systemPurple)
-        flowChart = UIFlowChart(frame: view.frame, color: .systemGreen)
-        canvases = [flowChart, mindMap, styleSheet]
-        mindMap.mindMapDelegate = self
-        styleSheet.styleSheetDelegate = self
-        flowChart.flowChartDelegate = self
-        canvases.forEach { canvas in
-            view.insertSubview(canvas, at: 0)
-            canvas.isHidden = true
-            canvas.alpha = 0
-            canvas.snp.makeConstraints { make in
-                make.edges.equalToSuperview()
-            }
-        }
-        mindMap.alpha = 1
-        mindMap.isHidden = false
-        
-    }
-    
-    
-    // MARK: - Tools View Setup
-    /// Set up the layout and swipe gestures for the tools view
-    func setupToolsViewLayout() {
-        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
-        let upSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
-        let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleKeyboardSwipe(sender:)))
-        rightSwipe.direction = .right
-        leftSwipe.direction = .left
-        upSwipe.direction = .up
-        downSwipe.direction = .down
-        toolsView.addGestureRecognizer(rightSwipe)
-        toolsView.addGestureRecognizer(leftSwipe)
-        toolsView.addGestureRecognizer(upSwipe)
-        toolsView.addGestureRecognizer(downSwipe)
-        
-        structureToolKit.mindMap = mindMap
-        htmlToolKitCollection = ToolKitCollection(viewControllers:  [classNamesToolKit, structureToolKit, attributesToolKit])
-        cssToolKitCollection = ToolKitCollection(viewControllers: [propertiesToolKit, selectorsToolKit, styleToolKit])
-        jsToolKitCollection = ToolKitCollection(viewControllers: [conActToolKit, eventsToolKit, valueToolKit])
-        
-        [htmlToolKitCollection,cssToolKitCollection,jsToolKitCollection].forEach { toolKitCollection in
-            toolKitCollection?.viewControllers.forEach { toolKitVC in
-                addChild(toolKitVC)
-                toolKitVC.didMove(toParent: self)
-                toolsView.addSubview(toolKitVC.view)
-                toolKitVC.view.snp.makeConstraints { make in
-                    make.width.height.equalToSuperview()
-                }
-            }
-        }
-    }
-    
     
     
     // MARK: - WebView Gesture Handling
@@ -184,154 +97,6 @@ class PlaygroundVC: UIViewController, Storyboarded {
         }
     }
     
-    // MARK: - Animate Canvas & toolkitCollection Transition
-    
-    
-    /// Handle changes in the Canvas segmented control.
-    ///
-    /// This function animates the transition between different canvases when the segmented control is changed.
-    ///
-    /// - Parameter sender: The button that triggers this function, representing a programming language.
-    var previousCanvasIndex = 1  // Index of the previously selected canvas
-    var currentCanvasIndex = 1   // Index of the currently selected canvas
-    
-    @IBAction func didChangeProgrammingLanguage(_ sender: UIButton) {
-        // exit function if the user taps on the same button
-        if currentCanvasIndex == sender.tag { return }
-        
-        // Update previous and current canvas indices based on the sender's tag
-        previousCanvasIndex = currentCanvasIndex
-        currentCanvasIndex = sender.tag
-        
-        // Define the collection of toolkits for each programming language (JavaScript, HTML, CSS)
-        let toolkitCollections = [jsToolKitCollection, htmlToolKitCollection, cssToolKitCollection]
-        
-        // Retrieve the toolkit collections for the current and previous canvases
-        guard let currentToolKitCollection = toolkitCollections[currentCanvasIndex],
-              let previousToolKitCollection = toolkitCollections[previousCanvasIndex] else { return }
-        
-        // Retrieve the canvases for the current and previous selections
-        let currentCanvas = canvases[currentCanvasIndex],
-            previousCanvas = canvases[previousCanvasIndex]
-        
-        // Retrieve the button views for the programming languages associated with the current and previous canvases
-        let currentProgrammingLanguageButtonView = ProgrammingLanguageButtonViews[currentCanvasIndex],
-            previousProgrammingLanguageButtonView = ProgrammingLanguageButtonViews[previousCanvasIndex]
-        
-        // Update the page control to reflect the current toolkit's page index
-        toolsPageControl.currentPage = currentToolKitCollection.currentIndex
-        
-        // Retrieve the views for the current and previous toolkits, ensuring they exist
-        guard let currentToolKitView = currentToolKitCollection.viewControllers[currentToolKitCollection.currentIndex].view,
-              let previousToolKitView = previousToolKitCollection.viewControllers[previousToolKitCollection.currentIndex].view else { return }
-        
-        // Prepare current toolkit view for display by unhiding it and setting its initial position
-        currentToolKitView.isHidden = false
-        currentToolKitView.frame.origin.y = self.view.frame.height
-        
-        // Unhide the current canvas
-        currentCanvas.isHidden = false
-        
-        // Animate the transition for the toolkit views and button view opacity
-        UIView.animate(withDuration: 0.2) {
-            // Move the current toolkit view into view and adjust button opacities
-            currentToolKitView.frame.origin.y = previousToolKitView.frame.origin.y
-            currentProgrammingLanguageButtonView.alpha = 1
-            previousProgrammingLanguageButtonView.alpha = 0.3
-        }
-        
-        // Continue the animation with a fade transition for the canvases and hide the previous toolkit view
-        UIView.animate(withDuration: 0.4) {
-            previousToolKitView.frame.origin.y = self.view.frame.height
-            currentCanvas.alpha = 1
-            previousCanvas.alpha = 0
-        } completion: { _ in
-            // Hide the previous toolkit view after the animation completes
-            previousToolKitView.isHidden = true
-        }
-    }
-    
-    
-    
-    // MARK: - Animate ToolKit Transition
-    /// Animate the transition between different ToolKits.
-    ///
-    /// This function handles the sliding animation between different ToolKit, depending on the selected index.
-    ///
-    /// - Parameter index: The index of the ToolKit to transition to.
-    func animateToToolKit(at index: Int) {
-        guard let currentToolKitCollection = [jsToolKitCollection,htmlToolKitCollection,cssToolKitCollection][currentCanvasIndex] else { return }
-        currentToolKitCollection.previousIndex = currentToolKitCollection.currentIndex
-        currentToolKitCollection.currentIndex = index
-        let animationDirection = currentToolKitCollection.currentIndex > currentToolKitCollection.previousIndex
-        if currentToolKitCollection.currentIndex < 0 {
-            currentToolKitCollection.currentIndex = currentToolKitCollection.viewControllers.count - 1
-        } else if currentToolKitCollection.currentIndex > currentToolKitCollection.viewControllers.count - 1 {
-            currentToolKitCollection.currentIndex = 0
-        }
-        toolsPageControl.currentPage = currentToolKitCollection.currentIndex
-        let currentToolKitVC = currentToolKitCollection.viewControllers[currentToolKitCollection.currentIndex], previousToolKitVC = currentToolKitCollection.viewControllers[currentToolKitCollection.previousIndex]
-        currentToolKitVC.view.isHidden = false
-        currentToolKitVC.view.frame.origin.x = animationDirection ? self.view.frame.width : -self.view.frame.width
-        UIView.animate(withDuration: 0.3) {
-            currentToolKitVC.view.center.x = previousToolKitVC.view.center.x
-            previousToolKitVC.view.frame.origin.x = animationDirection ? -self.view.frame.width : self.view.frame.width
-        } completion: { _ in
-            previousToolKitVC.view.isHidden = true
-        }
-    }
-    
-    // MARK: - Keyboard Swipe Handling
-    
-    /// Handle page control changes for the custom keyboard views.
-    ///
-    /// This function animates the transition to the selected page in the page control.
-    ///
-    /// - Parameter sender: The page control that triggers this function.
-    @IBAction func didPressToolsPageControl(_ sender: UIPageControl) {
-        guard let currentToolKitCollection = [jsToolKitCollection,htmlToolKitCollection,cssToolKitCollection][currentCanvasIndex] else { return }
-        if sender.currentPage != currentToolKitCollection.currentIndex {
-            animateToToolKit(at: sender.currentPage)
-        }
-    }
-    
-    /// Handle swipe gestures for navigating between custom keyboard views.
-    ///
-    /// This function allows the user to swipe left, right, up, or down to change the keyboard view or adjust the tools view height.
-    ///
-    /// - Parameter sender: The swipe gesture recognizer that triggers this function.
-    @objc func handleKeyboardSwipe(sender: UISwipeGestureRecognizer) {
-        if sender.state == .ended {
-            switch sender.direction {
-            case .right, .left:
-                guard let currentIndex = [jsToolKitCollection,htmlToolKitCollection,cssToolKitCollection][currentCanvasIndex]?.currentIndex else { return }
-                animateToToolKit(at: sender.direction == .right ? currentIndex - 1 : currentIndex + 1)
-            case .up:
-                if toolsViewHeightConstraint.constant == 40 {
-                    toolsViewHeightConstraint.constant = 107
-                } else if toolsViewHeightConstraint.constant == 107 {
-                    toolsViewHeightConstraint.constant = 255
-                } else if toolsViewHeightConstraint.constant == 255 {
-                    webViewWidthConstraint.constant = 120
-                    toolsViewHeightConstraint.constant = 329
-                }
-            case .down:
-                if toolsViewHeightConstraint.constant == 107 {
-                    toolsViewHeightConstraint.constant = 40
-                } else if toolsViewHeightConstraint.constant == 255 {
-                    toolsViewHeightConstraint.constant = 107
-                } else if toolsViewHeightConstraint.constant == 329 {
-                    webViewWidthConstraint.constant = 160
-                    toolsViewHeightConstraint.constant = 255
-                }
-            default:
-                break
-            }
-            UIView.animate(withDuration: 0.15) {
-                self.view.layoutIfNeeded()
-            }
-        }
-    }
     
     // MARK: - Close Button
     /// Dismisses the current view controller.
@@ -385,17 +150,11 @@ class PlaygroundVC: UIViewController, Storyboarded {
     }
     
     // MARK: - Arrow Button Actions
-    /// Handles arrow button presses to update the selected node in the appropriate MindMap.
+    /// Handles arrow button presses to update the selected node in the  MindMap.
     ///
     /// - Parameter sender: The button that triggered this action. The button's tag determines the direction.
     @IBAction func didPressArrow(_ sender: UIButton) {
-        if !mindMap.isHidden {
-            mindMap.updateSelectedNode(Direction(rawValue: sender.tag))
-        } else if !styleSheet.isHidden {
-            styleSheet.updateSelectedNode(Direction(rawValue: sender.tag))
-        } else {
-            flowChart.updateSelectedNode(Direction(rawValue: sender.tag))
-        }
+        mindMap.updateSelectedNode(Direction(rawValue: sender.tag))
     }
     
     
@@ -412,26 +171,6 @@ extension PlaygroundVC: UIMindMapDelegate {
         loadWebView()
     }
 }
-
-// MARK: - UIFlowChartDelegate
-extension PlaygroundVC: UIFlowChartDelegate {
-    
-    /// Handles the removal of a node in the FlowChart.
-    func didRemoveFlowChartNode() {
-        loadWebView()
-    }
-}
-
-// MARK: - UIStyleSheetDelegate
-extension PlaygroundVC: UIStyleSheetDelegate {
-    
-    /// Handles the removal of a node in the StyleSheet.
-    func didRemoveStyleSheetNode() {
-        loadWebView()
-    }
-}
-
-
 
 extension PlaygroundVC: StoreSubscriber {
     
@@ -451,12 +190,9 @@ extension PlaygroundVC: StoreSubscriber {
     func newState(state: ReduxState) {
         
         updateProjectIfNeeded(from: state)
-        handleDailyChallenges(with: state)
         
         loadWebView()/*🤔*/
         mindMap.loadBody()
-        styleSheet.loadSelector()
-        flowChart.loadProgram()
         
         
         projectTitle.text = project?.getDocumentTitle()
@@ -471,24 +207,7 @@ extension PlaygroundVC: StoreSubscriber {
         if project == nil {
             project = state.openedProject
             mindMap.project = project
-            styleSheet.project = project
-            flowChart.project = project
         }
     }
     
-    
-    // MARK: - Daily Challenge Completion Handling
-    /// Handles daily challenges completion and triggers animations if necessary.
-    private func handleDailyChallenges(with state: ReduxState) {
-        guard let openedProject = state.openedProject else { return }
-        
-        for challenge in state.dailyChallenges {
-            if challenge.isComplete { continue }
-            
-            if let docString = openedProject.getOuterHtml(), docString.contains(challenge.regex) {
-                view.presentConfettiAnimation()
-                challenge.isComplete = true
-            }
-        }
-    }
 }

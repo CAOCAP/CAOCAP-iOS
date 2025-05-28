@@ -32,8 +32,6 @@ func reduxReducer(action: Action, state: ReduxState?) -> ReduxState {
     case let action as ReceivedCommitHistoryAction:
         state.commitHistory = action.commits
         
-    case let action as ChallengeCompletedAction:
-        state.completeChallenges?.append(action.challenge)
         
     case _ as CreateProjectAction,
          _ as OpenProjectAction,
