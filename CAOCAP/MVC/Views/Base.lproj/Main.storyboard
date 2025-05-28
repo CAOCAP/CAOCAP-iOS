@@ -164,7 +164,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HCA-IB-AaJ">
-                                <rect key="frame" x="340" y="57" width="40" height="321"/>
+                                <rect key="frame" x="340" y="57" width="40" height="280"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qci-87-zc2">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
@@ -241,134 +241,49 @@
                                             <action selector="didPressViewfinderButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KwS-yu-ijg"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dC-n5-vyR">
-                                        <rect key="frame" x="7.6666666666666856" y="200" width="25" height="1"/>
-                                        <color key="backgroundColor" systemColor="separatorColor"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCb-lN-hNw">
+                                        <rect key="frame" x="0.0" y="200" width="40" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="F3a-zd-qY3"/>
-                                            <constraint firstAttribute="width" constant="25" id="trR-BY-5BY"/>
+                                            <constraint firstAttribute="height" constant="40" id="XWO-8l-6VX"/>
+                                            <constraint firstAttribute="width" constant="40" id="ZeZ-nU-ZTJ"/>
                                         </constraints>
-                                    </view>
-                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W2K-xe-LS4">
-                                        <rect key="frame" x="0.0" y="201" width="40" height="40"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="JS" translatesAutoresizingMaskIntoConstraints="NO" id="AUH-pe-DWW">
-                                                <rect key="frame" x="5" y="5" width="30" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="AUH-pe-DWW" secondAttribute="height" multiplier="1:1" id="4ky-Rj-z1x"/>
-                                                </constraints>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVx-eF-rw0">
-                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="40" id="1bg-nH-lLS"/>
-                                                    <constraint firstAttribute="height" constant="40" id="ZP1-n5-PrH"/>
-                                                </constraints>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="chevron.compact.up" catalog="system"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="didChangeProgrammingLanguage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5lT-XP-gTo"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="chevron.compact.up" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="link.circle.fill" catalog="system">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didPressPublish:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xXc-AB-8jM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fb9-nx-x7h">
+                                        <rect key="frame" x="0.0" y="240" width="40" height="40"/>
                                         <constraints>
-                                            <constraint firstItem="wVx-eF-rw0" firstAttribute="top" secondItem="W2K-xe-LS4" secondAttribute="top" id="2yX-NM-k2W"/>
-                                            <constraint firstItem="AUH-pe-DWW" firstAttribute="top" secondItem="W2K-xe-LS4" secondAttribute="top" constant="5" id="5HC-sp-np4"/>
-                                            <constraint firstItem="wVx-eF-rw0" firstAttribute="centerX" secondItem="W2K-xe-LS4" secondAttribute="centerX" id="9U6-cc-VFH"/>
-                                            <constraint firstAttribute="width" secondItem="W2K-xe-LS4" secondAttribute="height" multiplier="1:1" id="Kjl-Cz-fsS"/>
-                                            <constraint firstAttribute="width" constant="40" id="aUg-xT-719"/>
-                                            <constraint firstItem="AUH-pe-DWW" firstAttribute="centerY" secondItem="W2K-xe-LS4" secondAttribute="centerY" id="qbb-MI-LLy"/>
-                                            <constraint firstItem="AUH-pe-DWW" firstAttribute="centerX" secondItem="W2K-xe-LS4" secondAttribute="centerX" id="uOY-sk-jK2"/>
-                                            <constraint firstAttribute="trailing" secondItem="wVx-eF-rw0" secondAttribute="trailing" id="wTa-kt-6Et"/>
-                                            <constraint firstItem="wVx-eF-rw0" firstAttribute="centerY" secondItem="W2K-xe-LS4" secondAttribute="centerY" id="xug-U1-B2R"/>
+                                            <constraint firstAttribute="width" constant="40" id="FCB-mx-8OP"/>
+                                            <constraint firstAttribute="height" constant="40" id="jMj-1H-adF"/>
                                         </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6f5-hW-qIw">
-                                        <rect key="frame" x="0.0" y="241" width="40" height="40"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HTML" translatesAutoresizingMaskIntoConstraints="NO" id="QQ1-G4-2LT">
-                                                <rect key="frame" x="5" y="5" width="30" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="QQ1-G4-2LT" secondAttribute="height" multiplier="1:1" id="12n-eB-tPw"/>
-                                                </constraints>
-                                            </imageView>
-                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGg-IW-Ho4">
-                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="40" id="DCF-3A-69G"/>
-                                                    <constraint firstAttribute="height" constant="40" id="lUz-HH-KKJ"/>
-                                                </constraints>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="chevron.compact.up" catalog="system"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="didChangeProgrammingLanguage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Enf-oS-W6F"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="xGg-IW-Ho4" firstAttribute="top" secondItem="6f5-hW-qIw" secondAttribute="top" id="21B-8F-z8m"/>
-                                            <constraint firstItem="xGg-IW-Ho4" firstAttribute="centerY" secondItem="6f5-hW-qIw" secondAttribute="centerY" id="5jM-8n-fiJ"/>
-                                            <constraint firstAttribute="trailing" secondItem="xGg-IW-Ho4" secondAttribute="trailing" id="6hH-LH-dNu"/>
-                                            <constraint firstItem="QQ1-G4-2LT" firstAttribute="centerY" secondItem="6f5-hW-qIw" secondAttribute="centerY" id="7gG-1l-Ump"/>
-                                            <constraint firstAttribute="width" constant="40" id="Ol4-7R-GIJ"/>
-                                            <constraint firstItem="QQ1-G4-2LT" firstAttribute="centerX" secondItem="6f5-hW-qIw" secondAttribute="centerX" id="jMN-vR-szn"/>
-                                            <constraint firstItem="QQ1-G4-2LT" firstAttribute="top" secondItem="6f5-hW-qIw" secondAttribute="top" constant="5" id="puQ-nK-wrV"/>
-                                            <constraint firstItem="xGg-IW-Ho4" firstAttribute="centerX" secondItem="6f5-hW-qIw" secondAttribute="centerX" id="qLJ-RB-aRM"/>
-                                            <constraint firstAttribute="width" secondItem="6f5-hW-qIw" secondAttribute="height" multiplier="1:1" id="rEm-ip-e5U"/>
-                                        </constraints>
-                                    </view>
-                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NCs-1B-63i">
-                                        <rect key="frame" x="0.0" y="281" width="40" height="40"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CSS" translatesAutoresizingMaskIntoConstraints="NO" id="2Ra-86-e8v">
-                                                <rect key="frame" x="5" y="5" width="30" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="2Ra-86-e8v" secondAttribute="height" multiplier="1:1" id="hRw-yF-C8F"/>
-                                                </constraints>
-                                            </imageView>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ve6-Og-LOF">
-                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="40" id="Thn-QB-6bZ"/>
-                                                    <constraint firstAttribute="height" constant="40" id="qD4-jl-gq1"/>
-                                                </constraints>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="chevron.compact.up" catalog="system"/>
-                                                <buttonConfiguration key="configuration" style="plain"/>
-                                                <connections>
-                                                    <action selector="didChangeProgrammingLanguage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="asD-oy-El7"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="2Ra-86-e8v" firstAttribute="centerY" secondItem="NCs-1B-63i" secondAttribute="centerY" id="36h-FX-CJl"/>
-                                            <constraint firstItem="ve6-Og-LOF" firstAttribute="centerY" secondItem="NCs-1B-63i" secondAttribute="centerY" id="EOH-Bg-hRz"/>
-                                            <constraint firstItem="2Ra-86-e8v" firstAttribute="top" secondItem="NCs-1B-63i" secondAttribute="top" constant="5" id="MPS-jG-p1Y"/>
-                                            <constraint firstAttribute="width" constant="40" id="eIV-Ia-SGR"/>
-                                            <constraint firstItem="ve6-Og-LOF" firstAttribute="top" secondItem="NCs-1B-63i" secondAttribute="top" id="h2C-Lb-hnd"/>
-                                            <constraint firstItem="ve6-Og-LOF" firstAttribute="centerX" secondItem="NCs-1B-63i" secondAttribute="centerX" id="kKr-kC-ATC"/>
-                                            <constraint firstAttribute="trailing" secondItem="ve6-Og-LOF" secondAttribute="trailing" id="lOh-hQ-Zgt"/>
-                                            <constraint firstItem="2Ra-86-e8v" firstAttribute="centerX" secondItem="NCs-1B-63i" secondAttribute="centerX" id="nFr-8d-bbm"/>
-                                            <constraint firstAttribute="width" secondItem="NCs-1B-63i" secondAttribute="height" multiplier="1:1" id="orH-yC-cmj"/>
-                                        </constraints>
-                                    </view>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="chevron.compact.up" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="paperplane.circle.fill" catalog="system">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didPressCoCaptain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R1x-SL-jzX"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9Me-nt-eKL">
-                                <rect key="frame" x="10" y="465" width="370" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9Me-nt-eKL">
+                                <rect key="frame" x="10" y="495" width="370" height="30"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LwB-kw-BnD">
-                                        <rect key="frame" x="0.0" y="0.0" width="115" height="60"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LwB-kw-BnD">
+                                        <rect key="frame" x="0.0" y="0.0" width="195" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mfp-2z-eXU">
-                                                <rect key="frame" x="0.0" y="0.0" width="30" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="dNB-UU-UGL"/>
+                                                    <constraint firstAttribute="height" constant="30" id="48d-QL-X0e"/>
+                                                    <constraint firstAttribute="width" constant="45" id="Dyi-mY-37t"/>
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="chevron.compact.up" catalog="system"/>
@@ -380,43 +295,32 @@
                                                     <action selector="didPressArrow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ujh-u6-SBi"/>
                                                 </connections>
                                             </button>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="e8H-lK-kiM">
-                                                <rect key="frame" x="35" y="0.0" width="45" height="60"/>
-                                                <subviews>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URk-NW-Nke">
-                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="27.666666666666668"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="chevron.compact.up" catalog="system"/>
-                                                        <buttonConfiguration key="configuration" style="tinted" image="chevron.compact.up" catalog="system">
-                                                            <color key="baseForegroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressArrow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JFs-Vi-thf"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJi-El-CrY">
-                                                        <rect key="frame" x="0.0" y="32.666666666666686" width="45" height="27.333333333333329"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="chevron.compact.up" catalog="system"/>
-                                                        <buttonConfiguration key="configuration" style="tinted" image="chevron.compact.down" catalog="system">
-                                                            <color key="baseForegroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="didPressArrow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KJy-Cx-Pua"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="45" id="4VZ-hl-68Z"/>
-                                                </constraints>
-                                            </stackView>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URk-NW-Nke">
+                                                <rect key="frame" x="50" y="0.0" width="45" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="chevron.compact.up" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="chevron.compact.up" catalog="system">
+                                                    <color key="baseForegroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didPressArrow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JFs-Vi-thf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJi-El-CrY">
+                                                <rect key="frame" x="100" y="0.0" width="45" height="30"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="chevron.compact.up" catalog="system"/>
+                                                <buttonConfiguration key="configuration" style="tinted" image="chevron.compact.down" catalog="system">
+                                                    <color key="baseForegroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="baseBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didPressArrow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KJy-Cx-Pua"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPI-46-O5d">
-                                                <rect key="frame" x="85" y="0.0" width="30" height="60"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="dKw-Bh-pJM"/>
-                                                </constraints>
+                                                <rect key="frame" x="150" y="0.0" width="45" height="30"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="chevron.compact.up" catalog="system"/>
                                                 <buttonConfiguration key="configuration" style="tinted" image="chevron.compact.right" catalog="system">
@@ -429,40 +333,11 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aYn-zy-Cvp">
-                                        <rect key="frame" x="123" y="0.0" width="194" height="60"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svT-AA-xSw">
-                                                <rect key="frame" x="0.0" y="0.0" width="194" height="26"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="chevron.compact.up" catalog="system"/>
-                                                <buttonConfiguration key="configuration" style="tinted" image="externaldrive.badge.icloud" catalog="system">
-                                                    <color key="baseForegroundColor" systemColor="systemGreenColor"/>
-                                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="didPressPublish:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M8Y-eI-T8d"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRl-En-F0M">
-                                                <rect key="frame" x="0.0" y="34" width="194" height="26"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="chevron.compact.up" catalog="system"/>
-                                                <buttonConfiguration key="configuration" style="tinted" image="sparkles" catalog="system">
-                                                    <color key="baseForegroundColor" systemColor="systemPurpleColor"/>
-                                                    <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="didPressCoCaptain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yqq-ah-Jak"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="swv-AQ-sZO">
-                                        <rect key="frame" x="325" y="0.0" width="45" height="60"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="swv-AQ-sZO">
+                                        <rect key="frame" x="275" y="0.0" width="95" height="30"/>
                                         <subviews>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22A-CW-8eM">
-                                                <rect key="frame" x="0.0" y="0.0" width="45" height="27.666666666666668"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="chevron.compact.up" catalog="system"/>
                                                 <buttonConfiguration key="configuration" style="tinted" image="arrow.uturn.forward" catalog="system">
@@ -474,7 +349,11 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XtZ-wd-Acw">
-                                                <rect key="frame" x="0.0" y="32.666666666666686" width="45" height="27.333333333333329"/>
+                                                <rect key="frame" x="50" y="0.0" width="45" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="rGY-3J-FzJ"/>
+                                                    <constraint firstAttribute="width" constant="45" id="s7j-zZ-iud"/>
+                                                </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="chevron.compact.up" catalog="system"/>
                                                 <buttonConfiguration key="configuration" style="tinted" image="arrow.uturn.backward" catalog="system">
@@ -486,14 +365,8 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="45" id="XpM-9T-BE0"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="URc-m0-CP7"/>
-                                </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zkr-ys-dhB">
                                 <rect key="frame" x="15" y="535" width="360" height="255"/>
@@ -544,9 +417,6 @@
                         <outletCollection property="viewFinderViews" destination="9Me-nt-eKL" collectionClass="NSMutableArray" id="hyl-Ec-EpF"/>
                         <outletCollection property="viewFinderViews" destination="zkr-ys-dhB" collectionClass="NSMutableArray" id="aFU-Cj-gEx"/>
                         <outletCollection property="viewFinderViews" destination="wqA-La-Huu" collectionClass="NSMutableArray" id="YHs-y3-uAk"/>
-                        <outletCollection property="ProgrammingLanguageButtonViews" destination="W2K-xe-LS4" collectionClass="NSMutableArray" id="Jaz-3f-UiX"/>
-                        <outletCollection property="ProgrammingLanguageButtonViews" destination="6f5-hW-qIw" collectionClass="NSMutableArray" id="p8y-eb-Dj6"/>
-                        <outletCollection property="ProgrammingLanguageButtonViews" destination="NCs-1B-63i" collectionClass="NSMutableArray" id="QZt-EG-Ivi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -6087,11 +5957,8 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
     </scenes>
     <resources>
         <image name="Bookmark" width="384" height="384"/>
-        <image name="CSS" width="480" height="480"/>
         <image name="Gear" width="96" height="96"/>
         <image name="Grid" width="844" height="842"/>
-        <image name="HTML" width="480" height="480"/>
-        <image name="JS" width="480" height="480"/>
         <image name="Plant-A" width="210" height="279"/>
         <image name="Plant-B" width="183" height="264"/>
         <image name="Plant-E" width="134" height="280"/>
@@ -6127,7 +5994,6 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
         <image name="crown" catalog="system" width="128" height="92"/>
         <image name="diamond-badge" width="2671" height="1848"/>
         <image name="doc.fill.badge.plus" catalog="system" width="120" height="128"/>
-        <image name="externaldrive.badge.icloud" catalog="system" width="128" height="86"/>
         <image name="folder.circle.fill" catalog="system" width="128" height="123"/>
         <image name="gear.circle.fill" catalog="system" width="128" height="123"/>
         <image name="gift.fill" catalog="system" width="128" height="125"/>
@@ -6139,6 +6005,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
         <image name="info.circle" catalog="system" width="128" height="123"/>
         <image name="iron-badge" width="2562" height="1847"/>
         <image name="italic" catalog="system" width="115" height="128"/>
+        <image name="link.circle.fill" catalog="system" width="128" height="123"/>
         <image name="list.bullet.rectangle.portrait" catalog="system" width="115" height="128"/>
         <image name="message.fill" catalog="system" width="128" height="114"/>
         <image name="newspaper" catalog="system" width="128" height="111"/>
@@ -6149,6 +6016,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
         <image name="paintbrush.pointed.fill" catalog="system" width="128" height="118"/>
         <image name="paintpalette" catalog="system" width="128" height="105"/>
         <image name="paintpalette.fill" catalog="system" width="128" height="105"/>
+        <image name="paperplane.circle.fill" catalog="system" width="128" height="123"/>
         <image name="paperplane.fill" catalog="system" width="128" height="119"/>
         <image name="pencil.circle.fill" catalog="system" width="128" height="123"/>
         <image name="photo.on.rectangle.fill" catalog="system" width="128" height="102"/>
@@ -6157,7 +6025,6 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
         <image name="power" catalog="system" width="127" height="128"/>
         <image name="side-resize" width="600" height="600"/>
         <image name="slider.horizontal.3" catalog="system" width="128" height="99"/>
-        <image name="sparkles" catalog="system" width="115" height="128"/>
         <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
         <image name="storefront" catalog="system" width="128" height="111"/>
         <image name="strikethrough" catalog="system" width="128" height="101"/>
@@ -6174,7 +6041,7 @@ Start building beautiful and responsive web apps with CAOCAP!</string>
             <color red="0.0" green="0.65499997138977051" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="AccentColor">
-            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.49399998784065247" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

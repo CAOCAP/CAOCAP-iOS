@@ -40,24 +40,14 @@ extension ClassNamesToolKit: UITextFieldDelegate {
         view.endEditing(true)
     }
     
-    /// Handles the event when a HTML element text content editing ends.
-    ///
-    /// - Parameter sender: The text field that triggered the event.
     @IBAction func didEndEditingClassNameSearch(_ sender: UITextField) {
         guard let project = project, let text = sender.text else { return }
-        ReduxStore.dispatch(UpdateAction(handler: {
-            project.setSelectedElementText(content: text)
-        }))
+        //TODO: didEndEditingClassNameSearch
     }
     
-    /// Handles the event when a HTML element source editing ends.
-    ///
-    /// - Parameter sender: The text field that triggered the event.
     @IBAction func didEndEditingIdSearch(_ sender: UITextField) {
         guard let project = project, let text = sender.text else { return }
-        ReduxStore.dispatch(UpdateAction(handler: {
-            project.setSelectedElement(source: text)
-        }))
+        //TODO: didEndEditingIdSearch
     }
     
     /// Filters the Tailwind classes based on the search query.
